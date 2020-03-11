@@ -276,10 +276,7 @@ Public Class PatchingManager
 
             Case ScriptType.Armips
                 Dim createText As String =
-$"SAG_FILEPATH equ ""{romfile}""
-SAG_FILEPOS equ 0x0
-SAG_IMPORTPATH equ ""{romfile}""
-.Open SAG_IMPORTPATH, SAG_FILEPOS
+$".Open ""{romfile}"", 0
 {script.Script}
 .Close"
 
