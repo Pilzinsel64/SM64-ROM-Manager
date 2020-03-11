@@ -96,8 +96,9 @@ Namespace Levels
                                 customBGStart = startAddr
                                 customBGEnd = endAddr - &H140
                             Case &H7 'Global Object Bank
-                                If startAddr = rommgr.GlobalObjectBank.CurSeg.RomStart AndAlso
-                                   endAddr = rommgr.GlobalObjectBank.CurSeg.RomEnd Then
+                                If rommgr.GlobalObjectBank IsNot Nothing AndAlso
+                                    startAddr = rommgr.GlobalObjectBank.CurSeg.RomStart AndAlso
+                                    endAddr = rommgr.GlobalObjectBank.CurSeg.RomEnd Then
                                     lvl.EnableGlobalObjectBank = True
                                     lvl.LastGobCmdSegLoad = c
                                 End If
