@@ -35,6 +35,7 @@ Public Class RomManager
     Private ReadOnly levelIDsToReset As New List(Of UShort)
     Private ReadOnly myTextGroups As New List(Of Text.TextGroup)
     Private myGameName As String = Nothing
+    Private isNewROM As Boolean = False
 
     'P r o p e r t i e s
 
@@ -58,7 +59,11 @@ Public Class RomManager
             Dim ver As RomVersion
 
             If Not loadedVersion Then
-                ver = LoadVersion()
+                If isNewROM Then
+                    ver = myProgramVersion
+                Else
+                    ver = LoadVersion()
+                End If
                 loadedVersion = True
             Else
                 ver = myProgramVersion
@@ -628,6 +633,7 @@ Public Class RomManager
         If filelength = 8 * 1024 * 1024 Then
             CreateROM()
             PrepairROM()
+            isNewROM = True
         End If
 
         Dim br As New BinaryRom(Me, FileAccess.Read)
