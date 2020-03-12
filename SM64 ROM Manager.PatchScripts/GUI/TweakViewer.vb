@@ -54,10 +54,6 @@ Public Class TweakViewer
 
         hasUpdates = syncFiles.Any
 
-        'If hasUpdates AndAlso Not syncFiles.Where(Function(n) n.SyncAction <> TweakDatabaseSyncAction.RemovedFile).Any Then
-        '    hasUpdates = False
-        'End If
-
         If hasUpdates Then
             WarningBox_TweakUpdates.Visible = True
         End If

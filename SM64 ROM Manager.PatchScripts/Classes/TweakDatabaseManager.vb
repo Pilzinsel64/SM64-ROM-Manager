@@ -33,6 +33,7 @@ Public Class TweakDatabaseManager
         Dim checkOutFolder As Func(Of String, Task) = Nothing
         Dim resTopFolder As WebDavResource = Nothing
         Dim checkedFiles As New List(Of String)
+        Dim responseSuccessfull As Boolean = False
 
         checkOutFolder =
             Async Function(remotePath As String) As Task
@@ -40,9 +41,10 @@ Public Class TweakDatabaseManager
 
                 If resTopFolder Is Nothing AndAlso response.IsSuccessful AndAlso response.Resources.Any Then
                     resTopFolder = response.Resources(0)
+                    responseSuccessfull = True
                 End If
 
-                If response.Resources.Count > 1 Then
+                If responseSuccessfull AndAlso response.Resources.Count > 1 Then
                     For i As Integer = 1 To response.Resources.Count - 1
                         Dim res As WebDavResource = response.Resources(i)
                         Dim isFolder As Boolean = res.Uri.EndsWith("/")
@@ -55,7 +57,7 @@ Public Class TweakDatabaseManager
                             Dim remoteFile As String = String.Empty
 
                             'Get remote file path
-                            remoteFile = res.Uri '.Substring(Path.GetDirectoryName(resTopFolder.Uri).Length)
+                            remoteFile = res.Uri
 
                             'Get local file path
                             localFile = Path.Combine(localPath, Uri.UnescapeDataString(res.Uri.Substring(resTopFolder.Uri.Length)).Replace("/", "\"))
@@ -83,20 +85,22 @@ Public Class TweakDatabaseManager
         Await checkOutFolder(Preferences.CategoryPaths(TweakDatabaseCategories.Reviewed))
 
         'Find all old files to remove
-        Dim allLocalFiles As String() = Directory.GetFiles(localPath, "*", SearchOption.AllDirectories)
-        For Each lf As String In allLocalFiles
-            Dim isKnown As Boolean = False
+        If responseSuccessfull Then
+            Dim allLocalFiles As String() = Directory.GetFiles(localPath, "*", SearchOption.AllDirectories)
+            For Each lf As String In allLocalFiles
+                Dim isKnown As Boolean = False
 
-            For Each checkedFile As String In checkedFiles
-                If Not isKnown AndAlso checkedFile = lf Then
-                    isKnown = True
+                For Each checkedFile As String In checkedFiles
+                    If Not isKnown AndAlso checkedFile = lf Then
+                        isKnown = True
+                    End If
+                Next
+
+                If Not isKnown Then
+                    syncFiles.Add(New TweakDatabaseSyncFile(TweakDatabaseSyncAction.RemovedFile, lf, String.Empty))
                 End If
             Next
-
-            If Not isKnown Then
-                syncFiles.Add(New TweakDatabaseSyncFile(TweakDatabaseSyncAction.RemovedFile, lf, String.Empty))
-            End If
-        Next
+        End If
 
         Return syncFiles
     End Function
