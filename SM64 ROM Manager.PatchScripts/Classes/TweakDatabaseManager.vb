@@ -38,7 +38,7 @@ Public Class TweakDatabaseManager
             Async Function(remotePath As String) As Task
                 Dim response As PropfindResponse = Await client.Propfind(remotePath)
 
-                If resTopFolder Is Nothing AndAlso response.Resources.Any Then
+                If resTopFolder Is Nothing AndAlso response.IsSuccessful AndAlso response.Resources.Any Then
                     resTopFolder = response.Resources(0)
                 End If
 
