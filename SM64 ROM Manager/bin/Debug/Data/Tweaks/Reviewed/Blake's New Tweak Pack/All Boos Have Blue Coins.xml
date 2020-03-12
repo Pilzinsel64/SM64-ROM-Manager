@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="All Boos Have Blue Coins" description="Tweak by jesusyoshi" version="1.0.0.0">
+  <patch name="New Script" description="" type="0" references="">6719C: 00 00 00 00</patch>
+</m64tweak>

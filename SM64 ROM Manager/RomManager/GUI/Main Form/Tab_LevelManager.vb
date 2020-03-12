@@ -496,7 +496,7 @@ Public Class Tab_LevelManager
 
             'Load Area Settings
             ComboBox_LM_TerrainTyp.SelectedIndex = infos.terrainType
-            ComboBox_LM_Music.SelectedIndex = infos.bgMusic
+            ComboBox_LM_Music.SelectedIndex = Math.Min(ComboBox_LM_Music.Items.Count - 1, infos.bgMusic)
             ComboBox_LM_CameraPreset.SelectedIndex = GetCameraPresetIndexOfType(infos.camPreset)
             ComboBox_LM_EnvironmentEffects.SelectedIndex = GetEnvironmentIndexOfType(infos.envEffect)
 
@@ -633,6 +633,10 @@ Public Class Tab_LevelManager
 
     Private Sub Controls_HandleToSaveLevelSettings() Handles ObjectBankSelectorBox_D.SelectedComboIndexChanged, ObjectBankSelectorBox_C.SelectedComboIndexChanged, ObjectBankSelectorBox_9.SelectedComboIndexChanged, NUD_LM_DefaultPositionYRotation.ValueChanged, NUD_LM_DefaultPositionAreaID.ValueChanged, SwitchButton_LM_ActSelector.ValueChanged, SwitchButton_LM_HardcodedCameraSettings.ValueChanged, SwitchButton_UseGlobalObjectBank.ValueChanged
         SaveLevelSettings()
+    End Sub
+
+    Private Sub SwitchButton_UseGlobalObjectBank_ValueChanged() Handles SwitchButton_UseGlobalObjectBank.ValueChanged
+        ObjectBankSelectorBox_9.Enabled = Not SwitchButton_UseGlobalObjectBank.Value
     End Sub
 
     Private Sub LM_SaveGameBackground() Handles ComboBox_LM_LevelBG.SelectedIndexChanged
@@ -843,10 +847,6 @@ Public Class Tab_LevelManager
 
     Private Sub ButtonItem1_Click(sender As Object, e As EventArgs) Handles ButtonItem1.Click
         Controller.ChangeLevelCustomName(CurrentLevelIndex)
-    End Sub
-
-    Private Sub Controls_HandleToSaveLevelSettings(sender As Object, e As EventArgs) Handles SwitchButton_LM_HardcodedCameraSettings.ValueChanged, SwitchButton_LM_ActSelector.ValueChanged, NUD_LM_DefaultPositionYRotation.ValueChanged, NUD_LM_DefaultPositionAreaID.ValueChanged, SwitchButton_UseGlobalObjectBank.ValueChanged
-
     End Sub
 
     Private Sub GroupBox_LM_Areas_EnabledChanged(sender As Object, e As EventArgs) Handles GroupBox_LM_Areas.EnabledChanged

@@ -31,17 +31,9 @@ Namespace Music
 
         'M e t h o d s
 
-        Public Sub Read(Romfile As String)
-            Dim fs As New FileStream(Romfile, FileMode.Open, FileAccess.Read)
-            Read(fs)
-            fs.Close()
-        End Sub
+        Public Sub Read(rommgr As RomManager)
+            Dim s As BinaryData = rommgr.GetBinaryRom(FileAccess.Read)
 
-        Public Sub Read(s As Stream)
-            Read(New BinaryStreamData(s))
-        End Sub
-
-        Public Sub Read(s As BinaryData)
             s.Position = &H1210002
             Dim musicCount As Int16 = s.ReadInt16
 
@@ -49,7 +41,10 @@ Namespace Music
             Dim tNInstList() As InstrumentSetList = ReadNInsts(s, &H7F0000, musicCount)
 
             'Read Sequence Names
-            Dim tNames() As String = ReadSequenceNames(s, &H7F1000, musicCount)
+            Dim tNames() As String = ReadSequenceNames(rommgr)
+            If Not tNames.Any Then
+                tNames = ReadSequenceNames(s, &H7F1000, musicCount)
+            End If
 
             'Read Sequences
             Me.Clear()
@@ -62,19 +57,13 @@ Namespace Music
             s.Position = &HD213E
             Dim t002 = s.ReadUInt16
             EnableMusicHack = t001 = &H807C And t002 = &H0
+
+            s.Close()
         End Sub
 
-        Public Sub Write(Romfile As String, ByRef lastPosition As Integer)
-            Dim fs As New FileStream(Romfile, FileMode.Open, FileAccess.ReadWrite)
-            Write(fs, lastPosition)
-            fs.Close()
-        End Sub
+        Public Sub Write(rommgr As RomManager, ByRef lastPosition As Integer)
+            Dim s As BinaryData = rommgr.GetBinaryRom(FileAccess.ReadWrite)
 
-        Public Sub Write(s As Stream, ByRef lastPosition As Integer)
-            Write(New BinaryStreamData(s), lastPosition)
-        End Sub
-
-        Public Sub Write(s As BinaryData, ByRef lastPosition As Integer)
             'Enable/Disable Music Hack
             If NeedToSaveMusicHackSettings Then
                 s.Position = &HD213A
@@ -101,7 +90,7 @@ Namespace Music
 
             'Write Music Names
             If NeedToSaveSequenceNames Then
-                WriteSequenceNames(s, &H7F1000, arrMe)
+                WriteSequenceNames(rommgr, arrMe)
             End If
 
             'Write NInsts
@@ -117,6 +106,8 @@ Namespace Music
             NeedToSaveNInsts = False
             NeedToSaveSequenceNames = False
             NeedToSaveMusicHackSettings = False
+
+            s.Close()
         End Sub
 
         'S h a r e d   M e t h o d s
@@ -154,6 +145,10 @@ Namespace Music
             Return tNames.ToArray
         End Function
 
+        Private Shared Function ReadSequenceNames(rommgr As RomManager) As String()
+            Return rommgr.RomConfig.MusicConfig.SqeuenceNames.ToArray
+        End Function
+
         Private Shared Function ReadSequences(s As BinaryData, TableStart As Integer, Count As Integer, tNInstList As InstrumentSetList(), tNames As String()) As MusicSequence()
             s.Position = TableStart + 4
             Dim tSequences As New List(Of MusicSequence)
@@ -175,17 +170,8 @@ Namespace Music
             Return tSequences.ToArray
         End Function
 
-        Public Shared Sub Prepaire(Romfile As String)
-            Dim fs As New FileStream(Romfile, FileMode.Open, FileAccess.ReadWrite)
-            Prepaire(fs)
-            fs.Close()
-        End Sub
-
-        Public Shared Sub Prepaire(s As Stream)
-            Prepaire(New BinaryStreamData(s))
-        End Sub
-
-        Public Shared Sub Prepaire(s As BinaryData)
+        Public Shared Sub Prepaire(rommgr As RomManager)
+            Dim s As BinaryData = rommgr.GetBinaryRom(FileAccess.ReadWrite)
 
             s.Position = &H7B0863
             Dim musicCount As Byte = s.ReadByte
@@ -238,7 +224,7 @@ Namespace Music
             WriteSequences(s, addrMusicStart, tSequences, True)
 
             'Write new sequence names
-            WriteSequenceNames(s, &H7F1000, tSequences)
+            WriteSequenceNames(rommgr, tSequences)
 
             'Write NInsts
             WriteNInst(s, &H7F0000, tSequences)
@@ -294,13 +280,12 @@ Namespace Music
                 s.Write(CUInt(&HBD00))
             End If
 
+            s.Close()
         End Sub
 
-        Private Shared Sub WriteSequenceNames(s As BinaryData, TableStart As Integer, sequences As MusicSequence())
-            s.Position = TableStart
-            For Each ms As MusicSequence In sequences
-                s.Write(ms.Name)
-            Next
+        Private Shared Sub WriteSequenceNames(rommgr As RomManager, sequences As MusicSequence())
+            rommgr.RomConfig.MusicConfig.SqeuenceNames.Clear()
+            rommgr.RomConfig.MusicConfig.SqeuenceNames.AddRange(sequences.Select(Function(n) n.Name))
         End Sub
 
         Private Shared Sub WriteNInst(s As BinaryData, TableStart As Integer, sequences As MusicSequence())

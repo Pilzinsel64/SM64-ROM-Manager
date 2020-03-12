@@ -79,6 +79,7 @@ Public Class CustomBankManager
                     ButtonItem_ImportCollision.Enabled = hasCollision
                     ButtonItem_RemoveCollision.Enabled = hasCollision
                     ButtonItem_ShowCollision.Enabled = hasCollision
+                    ButtonItem_CopyCollisionPointer.Enabled = hasCollision
                     CM_Object.Popup(Cursor.Position)
                 End If
             End Sub
@@ -120,11 +121,11 @@ Public Class CustomBankManager
                     obj.Model = resMdl?.mdl
                     RemoveKnownMaps(obj)
                 ElseIf resMdl?.hasCollision Then
-                    obj.Model.Collision = obj.Model.Collision
                     RemoveKnownCollisionMap(obj)
+                    obj.Model.Collision = resMdl?.mdl.Collision
                 ElseIf resMdl?.hasVisualMap Then
-                    obj.Model.Fast3DBuffer = obj.Model.Fast3DBuffer
                     RemoveKnownVisualMap(obj)
+                    obj.Model.Fast3DBuffer = resMdl?.mdl.Fast3DBuffer
                 End If
                 Return True
             End If
@@ -142,7 +143,9 @@ Public Class CustomBankManager
     End Sub
 
     Private Sub RemoveKnownCollisionMap(curObj As CustomObject)
-        knownCollisionMaps.RemoveIfContainsKey(curObj.Model.Collision)
+        If curObj.Model.Collision IsNot Nothing Then
+            knownCollisionMaps.RemoveIfContainsKey(curObj.Model.Collision)
+        End If
     End Sub
 
     Private Sub RemoveKnownMaps(curObj As CustomObject)

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Change Color of Sign Text" description="Toggles the color of sign text&#xD;&#xA;Note: Changes sign text not NPC text" version="1.0.0.0">
+  <patch name="New Script" description="" type="0" references="">9436A: [8, "Text Color", hex]</patch>
+</m64tweak>

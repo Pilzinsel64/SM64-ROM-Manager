@@ -1019,6 +1019,7 @@ Namespace LevelEditor
             For i As Integer = 0 To list.Items.Count - 1
                 If i = index Then
                     list.Items(i).Selected = True
+                    list.EnsureVisible(i)
                 ElseIf deselectAllOtherItems Then
                     list.Items(i).Selected = False
                 End If

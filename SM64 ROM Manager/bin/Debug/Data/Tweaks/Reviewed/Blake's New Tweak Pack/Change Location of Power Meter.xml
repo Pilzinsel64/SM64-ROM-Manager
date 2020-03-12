@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Change Location of Power Meter" description="Original ASM File by jesusyoshi.&#xD;&#xA;Tweak Version by Blakeoramo." version="1.0.0.0">
+  <patch name="" description="" type="0" references="">9E688: 3C 01 80 33 34 08 00 73 A4 28 25 F2 34 08 00 CE A4 28 25 F4 00 00 00 00 3C 10 80 33 82 10 25 F0 24 01 00 01 12 01 00 09 00
+9E68F: [8, "Set X Pos)", hex]
+9E697: [8, "Set Y Pos", hex]
+9E69B: F4 10 00 00 1B 00 00 00 00
+//Keeps Power Meter on Screen at all times</patch>
+</m64tweak>

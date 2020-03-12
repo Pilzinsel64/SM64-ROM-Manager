@@ -1,6 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>This is an updated version of Kaze's code which lets the lives counter go below 0 (effectively making lives do nothing) and removes the life counter from the HUD properly.
-</description><patch>5B10: 24 08 00 01
-5B98: 24 0E 00 01
-98118: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-9EDB0: 00 00 
-9813C: 3C 08 80 34</patch></m64tweak>

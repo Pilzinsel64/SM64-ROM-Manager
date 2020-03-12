@@ -56,6 +56,7 @@ Partial Class TweakScriptEditor
         Me.ButtonItem_RunInTestMode = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem_CheckForErrors = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem_ShowObjectCatalog = New DevComponents.DotNetBar.ButtonItem()
+        Me.CheckBoxX_ArmipsScript = New DevComponents.DotNetBar.Controls.CheckBoxX()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -66,51 +67,34 @@ Partial Class TweakScriptEditor
         '
         'TextBoxX_ScriptDescription
         '
-        resources.ApplyResources(Me.TextBoxX_ScriptDescription, "TextBoxX_ScriptDescription")
         Me.TextBoxX_ScriptDescription.BackColor = System.Drawing.Color.White
         '
         '
         '
         Me.TextBoxX_ScriptDescription.Border.Class = "TextBoxBorder"
         Me.TextBoxX_ScriptDescription.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX_ScriptDescription.ButtonCustom.DisplayPosition = CType(resources.GetObject("TextBoxX_ScriptDescription.ButtonCustom.DisplayPosition"), Integer)
-        Me.TextBoxX_ScriptDescription.ButtonCustom.Image = CType(resources.GetObject("TextBoxX_ScriptDescription.ButtonCustom.Image"), System.Drawing.Image)
-        Me.TextBoxX_ScriptDescription.ButtonCustom.Text = resources.GetString("TextBoxX_ScriptDescription.ButtonCustom.Text")
-        Me.TextBoxX_ScriptDescription.ButtonCustom.Tooltip = resources.GetString("TextBoxX_ScriptDescription.ButtonCustom.Tooltip")
-        Me.TextBoxX_ScriptDescription.ButtonCustom2.DisplayPosition = CType(resources.GetObject("TextBoxX_ScriptDescription.ButtonCustom2.DisplayPosition"), Integer)
-        Me.TextBoxX_ScriptDescription.ButtonCustom2.Image = CType(resources.GetObject("TextBoxX_ScriptDescription.ButtonCustom2.Image"), System.Drawing.Image)
-        Me.TextBoxX_ScriptDescription.ButtonCustom2.Text = resources.GetString("TextBoxX_ScriptDescription.ButtonCustom2.Text")
-        Me.TextBoxX_ScriptDescription.ButtonCustom2.Tooltip = resources.GetString("TextBoxX_ScriptDescription.ButtonCustom2.Tooltip")
         Me.TextBoxX_ScriptDescription.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX_ScriptDescription.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.TextBoxX_ScriptDescription, "TextBoxX_ScriptDescription")
         Me.TextBoxX_ScriptDescription.Name = "TextBoxX_ScriptDescription"
         Me.TextBoxX_ScriptDescription.PreventEnterBeep = True
         '
         'TextBoxX_ScriptName
         '
-        resources.ApplyResources(Me.TextBoxX_ScriptName, "TextBoxX_ScriptName")
         Me.TextBoxX_ScriptName.BackColor = System.Drawing.Color.White
         '
         '
         '
         Me.TextBoxX_ScriptName.Border.Class = "TextBoxBorder"
         Me.TextBoxX_ScriptName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX_ScriptName.ButtonCustom.DisplayPosition = CType(resources.GetObject("TextBoxX_ScriptName.ButtonCustom.DisplayPosition"), Integer)
-        Me.TextBoxX_ScriptName.ButtonCustom.Image = CType(resources.GetObject("TextBoxX_ScriptName.ButtonCustom.Image"), System.Drawing.Image)
-        Me.TextBoxX_ScriptName.ButtonCustom.Text = resources.GetString("TextBoxX_ScriptName.ButtonCustom.Text")
-        Me.TextBoxX_ScriptName.ButtonCustom.Tooltip = resources.GetString("TextBoxX_ScriptName.ButtonCustom.Tooltip")
-        Me.TextBoxX_ScriptName.ButtonCustom2.DisplayPosition = CType(resources.GetObject("TextBoxX_ScriptName.ButtonCustom2.DisplayPosition"), Integer)
-        Me.TextBoxX_ScriptName.ButtonCustom2.Image = CType(resources.GetObject("TextBoxX_ScriptName.ButtonCustom2.Image"), System.Drawing.Image)
-        Me.TextBoxX_ScriptName.ButtonCustom2.Text = resources.GetString("TextBoxX_ScriptName.ButtonCustom2.Text")
-        Me.TextBoxX_ScriptName.ButtonCustom2.Tooltip = resources.GetString("TextBoxX_ScriptName.ButtonCustom2.Tooltip")
         Me.TextBoxX_ScriptName.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX_ScriptName.ForeColor = System.Drawing.Color.Black
+        resources.ApplyResources(Me.TextBoxX_ScriptName, "TextBoxX_ScriptName")
         Me.TextBoxX_ScriptName.Name = "TextBoxX_ScriptName"
         Me.TextBoxX_ScriptName.PreventEnterBeep = True
         '
         'CheckBoxX_TweakScript
         '
-        resources.ApplyResources(Me.CheckBoxX_TweakScript, "CheckBoxX_TweakScript")
         '
         '
         '
@@ -120,39 +104,41 @@ Partial Class TweakScriptEditor
         Me.CheckBoxX_TweakScript.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBoxX_TweakScript.CheckValue = "Y"
         Me.CheckBoxX_TweakScript.FocusCuesEnabled = False
+        resources.ApplyResources(Me.CheckBoxX_TweakScript, "CheckBoxX_TweakScript")
         Me.CheckBoxX_TweakScript.Name = "CheckBoxX_TweakScript"
         Me.CheckBoxX_TweakScript.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         '
         'Panel1
         '
-        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.CheckBoxX_ArmipsScript)
         Me.Panel1.Controls.Add(Me.CheckBoxX_CSharpScript)
         Me.Panel1.Controls.Add(Me.CheckBoxX_VBScript)
         Me.Panel1.Controls.Add(Me.CheckBoxX_TweakScript)
+        resources.ApplyResources(Me.Panel1, "Panel1")
         Me.Panel1.Name = "Panel1"
         '
         'CheckBoxX_CSharpScript
         '
-        resources.ApplyResources(Me.CheckBoxX_CSharpScript, "CheckBoxX_CSharpScript")
         '
         '
         '
         Me.CheckBoxX_CSharpScript.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.CheckBoxX_CSharpScript.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
         Me.CheckBoxX_CSharpScript.FocusCuesEnabled = False
+        resources.ApplyResources(Me.CheckBoxX_CSharpScript, "CheckBoxX_CSharpScript")
         Me.CheckBoxX_CSharpScript.Name = "CheckBoxX_CSharpScript"
         Me.CheckBoxX_CSharpScript.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         '
         'CheckBoxX_VBScript
         '
-        resources.ApplyResources(Me.CheckBoxX_VBScript, "CheckBoxX_VBScript")
         '
         '
         '
         Me.CheckBoxX_VBScript.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.CheckBoxX_VBScript.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
         Me.CheckBoxX_VBScript.FocusCuesEnabled = False
+        resources.ApplyResources(Me.CheckBoxX_VBScript, "CheckBoxX_VBScript")
         Me.CheckBoxX_VBScript.Name = "CheckBoxX_VBScript"
         Me.CheckBoxX_VBScript.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         '
@@ -179,10 +165,10 @@ Partial Class TweakScriptEditor
         '
         'Panel3
         '
-        resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.Controls.Add(Me.TableLayoutPanel2)
         Me.Panel3.Controls.Add(Me.ItemListBox1)
+        resources.ApplyResources(Me.Panel3, "Panel3")
         Me.Panel3.Name = "Panel3"
         '
         'TableLayoutPanel2
@@ -195,10 +181,10 @@ Partial Class TweakScriptEditor
         '
         'ButtonX3
         '
-        resources.ApplyResources(Me.ButtonX3, "ButtonX3")
         Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonX3.FocusCuesEnabled = False
+        resources.ApplyResources(Me.ButtonX3, "ButtonX3")
         Me.ButtonX3.Name = "ButtonX3"
         Me.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ButtonX3.Symbol = "57669"
@@ -208,8 +194,8 @@ Partial Class TweakScriptEditor
         '
         'ButtonX4
         '
-        resources.ApplyResources(Me.ButtonX4, "ButtonX4")
         Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        resources.ApplyResources(Me.ButtonX4, "ButtonX4")
         Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonX4.FocusCuesEnabled = False
         Me.ButtonX4.Name = "ButtonX4"
@@ -228,14 +214,6 @@ Partial Class TweakScriptEditor
         '
         Me.TextBoxX_ReferenceName.Border.Class = "TextBoxBorder"
         Me.TextBoxX_ReferenceName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX_ReferenceName.ButtonCustom.DisplayPosition = CType(resources.GetObject("TextBoxX_ReferenceName.ButtonCustom.DisplayPosition"), Integer)
-        Me.TextBoxX_ReferenceName.ButtonCustom.Image = CType(resources.GetObject("TextBoxX_ReferenceName.ButtonCustom.Image"), System.Drawing.Image)
-        Me.TextBoxX_ReferenceName.ButtonCustom.Text = resources.GetString("TextBoxX_ReferenceName.ButtonCustom.Text")
-        Me.TextBoxX_ReferenceName.ButtonCustom.Tooltip = resources.GetString("TextBoxX_ReferenceName.ButtonCustom.Tooltip")
-        Me.TextBoxX_ReferenceName.ButtonCustom2.DisplayPosition = CType(resources.GetObject("TextBoxX_ReferenceName.ButtonCustom2.DisplayPosition"), Integer)
-        Me.TextBoxX_ReferenceName.ButtonCustom2.Image = CType(resources.GetObject("TextBoxX_ReferenceName.ButtonCustom2.Image"), System.Drawing.Image)
-        Me.TextBoxX_ReferenceName.ButtonCustom2.Text = resources.GetString("TextBoxX_ReferenceName.ButtonCustom2.Text")
-        Me.TextBoxX_ReferenceName.ButtonCustom2.Tooltip = resources.GetString("TextBoxX_ReferenceName.ButtonCustom2.Tooltip")
         Me.TextBoxX_ReferenceName.DisabledBackColor = System.Drawing.Color.White
         Me.TextBoxX_ReferenceName.ForeColor = System.Drawing.Color.Black
         Me.TextBoxX_ReferenceName.Name = "TextBoxX_ReferenceName"
@@ -243,19 +221,17 @@ Partial Class TweakScriptEditor
         '
         'LayoutControl1
         '
-        resources.ApplyResources(Me.LayoutControl1, "LayoutControl1")
         Me.LayoutControl1.BackColor = System.Drawing.Color.Transparent
         Me.LayoutControl1.Controls.Add(Me.TextBoxX_ScriptName)
         Me.LayoutControl1.Controls.Add(Me.TextBoxX_ScriptDescription)
         Me.LayoutControl1.Controls.Add(Me.Panel1)
         Me.LayoutControl1.Controls.Add(Me.Panel3)
+        resources.ApplyResources(Me.LayoutControl1, "LayoutControl1")
         Me.LayoutControl1.Name = "LayoutControl1"
         '
         '
         '
         Me.LayoutControl1.RootGroup.Items.AddRange(New DevComponents.DotNetBar.Layout.LayoutItemBase() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4})
-        Me.LayoutControl1.RootGroup.Text = resources.GetString("resource.Text")
-        Me.LayoutControl1.RootGroup.Tooltip = resources.GetString("resource.Tooltip")
         '
         'LayoutControlItem1
         '
@@ -304,10 +280,10 @@ Partial Class TweakScriptEditor
         '
         'Panel4
         '
-        resources.ApplyResources(Me.Panel4, "Panel4")
         Me.Panel4.BackColor = System.Drawing.Color.Transparent
         Me.Panel4.Controls.Add(Me.LayoutControl1)
         Me.Panel4.Controls.Add(Me.Panel2)
+        resources.ApplyResources(Me.Panel4, "Panel4")
         Me.Panel4.Name = "Panel4"
         '
         'Bar1
@@ -326,73 +302,85 @@ Partial Class TweakScriptEditor
         '
         'ButtonItem5
         '
-        resources.ApplyResources(Me.ButtonItem5, "ButtonItem5")
         Me.ButtonItem5.Name = "ButtonItem5"
         Me.ButtonItem5.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem_NewTemplate, Me.ButtonItem_SaveToFile, Me.ButtonItem_LoadFromFile})
+        resources.ApplyResources(Me.ButtonItem5, "ButtonItem5")
         '
         'ButtonItem_NewTemplate
         '
-        resources.ApplyResources(Me.ButtonItem_NewTemplate, "ButtonItem_NewTemplate")
         Me.ButtonItem_NewTemplate.Name = "ButtonItem_NewTemplate"
         Me.ButtonItem_NewTemplate.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1, Me.ButtonItem2})
+        resources.ApplyResources(Me.ButtonItem_NewTemplate, "ButtonItem_NewTemplate")
         '
         'ButtonItem1
         '
-        resources.ApplyResources(Me.ButtonItem1, "ButtonItem1")
         Me.ButtonItem1.GlobalItem = False
         Me.ButtonItem1.Name = "ButtonItem1"
+        resources.ApplyResources(Me.ButtonItem1, "ButtonItem1")
         '
         'ButtonItem2
         '
-        resources.ApplyResources(Me.ButtonItem2, "ButtonItem2")
         Me.ButtonItem2.GlobalItem = False
         Me.ButtonItem2.Name = "ButtonItem2"
+        resources.ApplyResources(Me.ButtonItem2, "ButtonItem2")
         '
         'ButtonItem_SaveToFile
         '
-        resources.ApplyResources(Me.ButtonItem_SaveToFile, "ButtonItem_SaveToFile")
         Me.ButtonItem_SaveToFile.BeginGroup = True
         Me.ButtonItem_SaveToFile.GlobalItem = False
         Me.ButtonItem_SaveToFile.Image = Global.SM64_ROM_Manager.PatchScripts.MyIcons.icons8_save_16px_1
         Me.ButtonItem_SaveToFile.Name = "ButtonItem_SaveToFile"
+        resources.ApplyResources(Me.ButtonItem_SaveToFile, "ButtonItem_SaveToFile")
         '
         'ButtonItem_LoadFromFile
         '
-        resources.ApplyResources(Me.ButtonItem_LoadFromFile, "ButtonItem_LoadFromFile")
         Me.ButtonItem_LoadFromFile.GlobalItem = False
         Me.ButtonItem_LoadFromFile.Image = Global.SM64_ROM_Manager.PatchScripts.MyIcons.icons8_open_folder_16px_1
         Me.ButtonItem_LoadFromFile.Name = "ButtonItem_LoadFromFile"
+        resources.ApplyResources(Me.ButtonItem_LoadFromFile, "ButtonItem_LoadFromFile")
         '
         'ButtonItem4
         '
-        resources.ApplyResources(Me.ButtonItem4, "ButtonItem4")
         Me.ButtonItem4.Name = "ButtonItem4"
         Me.ButtonItem4.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem3, Me.ButtonItem_RunInTestMode, Me.ButtonItem_CheckForErrors})
+        resources.ApplyResources(Me.ButtonItem4, "ButtonItem4")
         '
         'ButtonItem3
         '
-        resources.ApplyResources(Me.ButtonItem3, "ButtonItem3")
         Me.ButtonItem3.Image = Global.SM64_ROM_Manager.PatchScripts.MyIcons.icons8_play_16px
         Me.ButtonItem3.Name = "ButtonItem3"
+        resources.ApplyResources(Me.ButtonItem3, "ButtonItem3")
         '
         'ButtonItem_RunInTestMode
         '
-        resources.ApplyResources(Me.ButtonItem_RunInTestMode, "ButtonItem_RunInTestMode")
         Me.ButtonItem_RunInTestMode.AutoCheckOnClick = True
         Me.ButtonItem_RunInTestMode.Checked = True
         Me.ButtonItem_RunInTestMode.GlobalItem = False
         Me.ButtonItem_RunInTestMode.Name = "ButtonItem_RunInTestMode"
+        resources.ApplyResources(Me.ButtonItem_RunInTestMode, "ButtonItem_RunInTestMode")
         '
         'ButtonItem_CheckForErrors
         '
-        resources.ApplyResources(Me.ButtonItem_CheckForErrors, "ButtonItem_CheckForErrors")
         Me.ButtonItem_CheckForErrors.BeginGroup = True
         Me.ButtonItem_CheckForErrors.Name = "ButtonItem_CheckForErrors"
+        resources.ApplyResources(Me.ButtonItem_CheckForErrors, "ButtonItem_CheckForErrors")
         '
         'ButtonItem_ShowObjectCatalog
         '
-        resources.ApplyResources(Me.ButtonItem_ShowObjectCatalog, "ButtonItem_ShowObjectCatalog")
         Me.ButtonItem_ShowObjectCatalog.Name = "ButtonItem_ShowObjectCatalog"
+        resources.ApplyResources(Me.ButtonItem_ShowObjectCatalog, "ButtonItem_ShowObjectCatalog")
+        '
+        'CheckBoxX_ArmipsScript
+        '
+        '
+        '
+        '
+        Me.CheckBoxX_ArmipsScript.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX_ArmipsScript.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.CheckBoxX_ArmipsScript.FocusCuesEnabled = False
+        resources.ApplyResources(Me.CheckBoxX_ArmipsScript, "CheckBoxX_ArmipsScript")
+        Me.CheckBoxX_ArmipsScript.Name = "CheckBoxX_ArmipsScript"
+        Me.CheckBoxX_ArmipsScript.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         '
         'TweakScriptEditor
         '
@@ -445,4 +433,5 @@ Partial Class TweakScriptEditor
     Friend WithEvents ButtonItem_RunInTestMode As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem_ShowObjectCatalog As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem4 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents CheckBoxX_ArmipsScript As DevComponents.DotNetBar.Controls.CheckBoxX
 End Class

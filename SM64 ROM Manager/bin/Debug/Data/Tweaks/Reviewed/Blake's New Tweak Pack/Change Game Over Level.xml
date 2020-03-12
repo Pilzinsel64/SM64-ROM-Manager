@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Change Game Over Level" description="Changes the Game Over Screen into it's own level, like in Star Road&#xD;&#xA;Credits to jesusyoshi&#xD;&#xA;&#xD;&#xA;level offsets&#xD;&#xA;0458 -C1&#xD;&#xA;0584 -C2&#xD;&#xA;0494 -C3&#xD;&#xA;0408 -C4&#xD;&#xA;03f4 -C5&#xD;&#xA;055c -C7&#xD;&#xA;0430 -C6&#xD;&#xA;0444 -C8&#xD;&#xA;0570 -C9&#xD;&#xA;046c -C10&#xD;&#xA;0480 -C11&#xD;&#xA;064c -C13&#xD;&#xA;04bc -C14&#xD;&#xA;04d0 -C15&#xD;&#xA;04e4 -OW1&#xD;&#xA;041c -OW2&#xD;&#xA;05ac -OW3&#xD;&#xA;04f8 -B1&#xD;&#xA;05fc -B1 battle&#xD;&#xA;0520 -B2&#xD;&#xA;0624 -B2 battle&#xD;&#xA;0548 -B3&#xD;&#xA;0638 -B3 battle&#xD;&#xA;05d4 -MC&#xD;&#xA;05e8 -WC&#xD;&#xA;050c -VC&#xD;&#xA;0534 -SA&#xD;&#xA;0610 -Cloud Stage&#xD;&#xA;05c0 -PSS&#xD;&#xA;0598 -End Cake" version="1.0.0.0">
+  <patch name="Le Script" description="" type="0" references="">2ABEAE: [16, "level offset", hex]</patch>
+</m64tweak>

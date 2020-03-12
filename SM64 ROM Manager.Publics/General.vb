@@ -41,6 +41,18 @@ Public Module General
         End Get
     End Property
 
+    Public ReadOnly Property MyToolsPath As String
+        Get
+            Static p As String = String.Empty
+
+            If String.IsNullOrEmpty(p) Then
+                p = Path.Combine(MyDataPath, "Tools")
+            End If
+
+            Return p
+        End Get
+    End Property
+
     Public ReadOnly Property MyTweaksPath As String
         Get
             Static p As String = String.Empty

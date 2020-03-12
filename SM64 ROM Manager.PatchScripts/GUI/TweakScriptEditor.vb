@@ -107,6 +107,8 @@ Public Class TweakScriptEditor
                 CheckBoxX_VBScript.Checked = True
             Case ScriptType.CSharp
                 CheckBoxX_CSharpScript.Checked = True
+            Case ScriptType.Armips
+                CheckBoxX_ArmipsScript.Checked = True
         End Select
 
         CodeEditor.Text = tempScript.Script
@@ -176,7 +178,7 @@ End Module
 
     Private Sub SaveToFile()
         Dim sfd As New SaveFileDialog
-        sfd.Filter = "Textfile (*.txt)|*.txt|VB code file (*.vb)|*.vb|C# code file(*.cs)|*.cs"
+        sfd.Filter = "Textfile (*.txt)|*.txt|VB code file (*.vb)|*.vb|C# code file(*.cs)|*.cs|ASM files (*.asm)|*.asm"
 
         Select Case True
             Case CheckBoxX_TweakScript.Checked
@@ -185,6 +187,8 @@ End Module
                 sfd.FilterIndex = 2
             Case CheckBoxX_CSharpScript.Checked
                 sfd.FilterIndex = 3
+            Case CheckBoxX_ArmipsScript.Checked
+                sfd.FilterIndex = 4
         End Select
 
         If sfd.ShowDialog = DialogResult.OK Then
@@ -202,6 +206,8 @@ End Module
                     CheckBoxX_VBScript.Checked = True
                 Case ".cs"
                     CheckBoxX_CSharpScript.Checked = True
+                Case ".asm"
+                    CheckBoxX_ArmipsScript.Checked = True
                 Case Else
                     CheckBoxX_TweakScript.Checked = True
             End Select
@@ -275,7 +281,7 @@ End Module
         LoadAllData()
     End Sub
 
-    Private Sub CheckBoxX_ScriptChange_CheckedChanged(sender As CheckBoxX, e As EventArgs) Handles CheckBoxX_TweakScript.CheckedChanged, CheckBoxX_CSharpScript.CheckedChanged, CheckBoxX_VBScript.CheckedChanged
+    Private Sub CheckBoxX_ScriptChange_CheckedChanged(sender As CheckBoxX, e As EventArgs) Handles CheckBoxX_TweakScript.CheckedChanged, CheckBoxX_CSharpScript.CheckedChanged, CheckBoxX_VBScript.CheckedChanged, CheckBoxX_ArmipsScript.CheckedChanged
         If sender.Checked AndAlso CodeEditor IsNot Nothing Then
             If sender Is CheckBoxX_TweakScript Then
                 ChangeCurScriptType(Language.Custom, ScriptType.TweakScript)
@@ -283,13 +289,14 @@ End Module
                 ChangeCurScriptType(Language.CSharp, ScriptType.CSharp)
             ElseIf sender Is CheckBoxX_VBScript Then
                 ChangeCurScriptType(Language.VB, ScriptType.VisualBasic)
+            ElseIf sender Is CheckBoxX_ArmipsScript Then
+                ChangeCurScriptType(Language.Custom, ScriptType.Armips)
             End If
         End If
 
-        If sender Is CheckBoxX_TweakScript Then
-            LayoutControlItem4.Visible = Not sender.Checked
-            ButtonItem_CheckForErrors.Enabled = Not sender.Checked
-        End If
+        Dim isDotNet As Boolean = CheckBoxX_CSharpScript.Checked OrElse CheckBoxX_VBScript.Checked
+        LayoutControlItem4.Visible = isDotNet
+        ButtonItem_CheckForErrors.Enabled = isDotNet
     End Sub
 
     Private Sub TweakScriptEditor_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -371,11 +378,4 @@ End Module
         frm.Show()
     End Sub
 
-    Private Sub ButtonItem_RunInTestMode_CheckedChanged(sender As Object, e As EventArgs) Handles ButtonItem_RunInTestMode.CheckedChanged
-
-    End Sub
-
-    Private Sub CheckBoxX_ScriptChange_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxX_VBScript.CheckedChanged, CheckBoxX_TweakScript.CheckedChanged, CheckBoxX_CSharpScript.CheckedChanged
-
-    End Sub
 End Class

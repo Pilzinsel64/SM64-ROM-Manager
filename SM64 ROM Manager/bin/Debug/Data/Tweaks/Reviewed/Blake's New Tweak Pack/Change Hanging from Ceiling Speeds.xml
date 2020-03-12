@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Change Hanging from Ceiling Speeds" description="Original ASM code by jesusyoshi&#xD;&#xA;Tweak version by Blakeoramo" version="1.0.0.0">
+  <patch name="" description="" type="0" references="">19D08: 3C 01 42 00
+19D1C: 3C 01 40 80
+19F8C: 29 41 00 08
+19D0A: [16, "max hang spd", hex]
+19D1E: [16, "spd gained per frame", hex]
+19F8F: [8, "time before you can start moving", hex]</patch>
+</m64tweak>

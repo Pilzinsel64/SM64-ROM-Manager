@@ -32,11 +32,15 @@ Public Class HUDOptions
 
     Public Sub SetPosition(b As HUDOptionsBlock, p As Point)
         If b?.Cords IsNot Nothing AndAlso binaryData?.CanWrite Then
-            binaryData.Position = b.Cords.RomPosX
-            binaryData.Write(CShort(p.X))
+            If b.Cords.RomPosX IsNot Nothing Then
+                binaryData.Position = b.Cords.RomPosX
+                binaryData.Write(CShort(p.X))
+            End If
 
-            binaryData.Position = b.Cords.RomPosY
-            binaryData.Write(CShort(p.Y))
+            If b.Cords.RomPosY IsNot Nothing Then
+                binaryData.Position = b.Cords.RomPosY
+                binaryData.Write(CShort(p.Y))
+            End If
         End If
     End Sub
 

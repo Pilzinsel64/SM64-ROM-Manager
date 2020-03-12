@@ -28,7 +28,7 @@ Namespace LevelEditor
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InformationListDialog))
             Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
             Me.ButtonX_CancelSearch = New DevComponents.DotNetBar.ButtonX()
-            Me.ItemList = New Publics.Controls.ItemListBox()
+            Me.ItemList = New SM64_ROM_Manager.Publics.Controls.ItemListBox()
             Me.TextBoxX_Search = New DevComponents.DotNetBar.Controls.TextBoxX()
             Me.AdvPropertyGrid1 = New DevComponents.DotNetBar.AdvPropertyGrid()
             Me.Panel1 = New System.Windows.Forms.Panel()
@@ -192,8 +192,6 @@ Namespace LevelEditor
             resources.ApplyResources(Me, "$this")
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.Controls.Add(Me.Panel1)
-            Me.DoubleBuffered = True
-            Me.EnableGlass = False
             Me.Name = "InformationListDialog"
             Me.ShowIcon = False
             Me.TopLeftCornerSize = 0

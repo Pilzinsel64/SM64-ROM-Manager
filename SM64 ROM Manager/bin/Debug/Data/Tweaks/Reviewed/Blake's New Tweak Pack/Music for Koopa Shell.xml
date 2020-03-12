@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Music for Koopa Shell" description="Changes music that plays when interacting with a Koopa Shell&#xD;&#xA;Credits to jesusyoshi" version="1.0.0.0">
+  <patch name="New Script" description="" type="0" references="">431F: [sequence, "Sequence to play"]
+432B: [sequence, "Sequence to play"]</patch>
+</m64tweak>

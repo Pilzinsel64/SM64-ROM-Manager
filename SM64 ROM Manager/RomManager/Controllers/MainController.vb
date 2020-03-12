@@ -463,7 +463,9 @@ Public Class MainController
     Public Sub UpdateChecksum()
         If RomManager IsNot Nothing Then
             StatusText = "Calculating checksum ..."
+            DisableRomWatcher()
             PatchClass.UpdateChecksum(RomManager.RomFile)
+            EnableRomWatcher()
             StatusText = String.Empty
         End If
     End Sub
@@ -1068,7 +1070,7 @@ Public Class MainController
         'Object Banks
         lvl.ChangeObjectBankData(&HC, ObjectBankData(CByte(&HC)).ElementAtOrDefault(objBank0x0C - 1))
         lvl.ChangeObjectBankData(&HD, ObjectBankData(CByte(&HD)).ElementAtOrDefault(objBank0x0D - 1))
-        lvl.ChangeObjectBankData(&H9, ObjectBankData(CByte(&H9)).ElementAtOrDefault(objBank0x0E - 1))
+        lvl.ChangeObjectBankData(&H9, ObjectBankData(CByte(&H9)).ElementAtOrDefault(If(enableGlobalObjectBank, -1, objBank0x0E - 1)))
         lvl.EnableGlobalObjectBank = enableGlobalObjectBank
 
         SetLevelscriptNeedToSave(lvl)
@@ -1466,23 +1468,21 @@ Public Class MainController
                     lvlmgr = addedFuncs(cb.SelectedIndex - 1).InvokeGet
             End Select
 
-            Dim frm As New ImportLevelDialog(RomManager, destLevel)
-            If frm.LoadROM(cofd.FileName, lvlmgr) Then
-                If frm.ShowDialog = DialogResult.OK Then
-                    If Not addAreasOnly Then
-                        destLevel = frm.LevelCopy
-                    End If
+            Dim frm As New ImportLevelDialog(RomManager, destLevel, cofd.FileName, lvlmgr)
+            If frm.ShowDialog = DialogResult.OK Then
+                If Not addAreasOnly Then
+                    destLevel = frm.LevelCopy
+                End If
 
-                    SetLevelscriptNeedToSave(destLevel)
-                    SetLevelBank0x0ENeedToSave(destLevel)
+                SetLevelscriptNeedToSave(destLevel)
+                SetLevelBank0x0ENeedToSave(destLevel)
 
-                    If addAreasOnly Then
-                        For Each area As LevelArea In frm.AreasCopy
-                            RaiseEvent LevelAreaAdded(New LevelAreaEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.Areas.IndexOf(area), area.AreaID))
-                        Next
-                    Else
-                        RaiseEvent LevelAdded(New LevelEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.LevelID))
-                    End If
+                If addAreasOnly Then
+                    For Each area As LevelArea In frm.AreasCopy
+                        RaiseEvent LevelAreaAdded(New LevelAreaEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.Areas.IndexOf(area), area.AreaID))
+                    Next
+                Else
+                    RaiseEvent LevelAdded(New LevelEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.LevelID))
                 End If
             End If
         End If

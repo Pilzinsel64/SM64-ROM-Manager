@@ -117,152 +117,497 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBoxX_ScriptName.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ButtonX4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TextBoxX_ScriptDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 66</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CheckBoxX_VBScript.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonX3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonX4" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="TextBoxX_ReferenceName" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,26,Absolute,26" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ButtonX3.Name" xml:space="preserve">
-    <value>ButtonX3</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ButtonItem5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ReferenceName.Parent" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_SaveToFile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ButtonItem3.Text" xml:space="preserve">
-    <value>Run</value>
-  </data>
-  <data name="TextBoxX_ScriptName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="TextBoxX_ScriptDescription.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;Panel4.Name" xml:space="preserve">
-    <value>Panel4</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxX_ScriptDescription.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;ButtonX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <data name="TextBoxX_ScriptDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 175</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_RunInTestMode.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <data name="TextBoxX_ScriptDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ButtonX3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem3.Name" xml:space="preserve">
-    <value>LayoutControlItem3</value>
-  </data>
-  <data name="TableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 26</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;TextBoxX_ReferenceName.Name" xml:space="preserve">
-    <value>TextBoxX_ReferenceName</value>
-  </data>
-  <data name="CheckBoxX_VBScript.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 0</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ScriptDescription.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ScriptName.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;LayoutControlItem3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;TextBoxX_ScriptDescription.Name" xml:space="preserve">
+    <value>TextBoxX_ScriptDescription</value>
   </data>
   <data name="&gt;&gt;TextBoxX_ScriptDescription.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Tweak Script Editor</value>
+  <data name="&gt;&gt;TextBoxX_ScriptDescription.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_NewTemplate.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;TextBoxX_ScriptDescription.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="resource.Tooltip" xml:space="preserve">
-    <value />
+  <data name="TextBoxX_ScriptName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 21</value>
   </data>
-  <data name="ButtonItem_LoadFromFile.Text" xml:space="preserve">
-    <value>Load from File ...</value>
+  <data name="TextBoxX_ScriptName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;Panel4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="TextBoxX_ScriptName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 20</value>
   </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom2.Text" xml:space="preserve">
-    <value />
+  <data name="TextBoxX_ScriptName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ScriptName.Name" xml:space="preserve">
+    <value>TextBoxX_ScriptName</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ScriptName.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ScriptName.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ScriptName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="CheckBoxX_TweakScript.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="CheckBoxX_TweakScript.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 23</value>
+  </data>
+  <data name="CheckBoxX_TweakScript.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="CheckBoxX_TweakScript.Text" xml:space="preserve">
+    <value>Tweak Script</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_TweakScript.Name" xml:space="preserve">
+    <value>CheckBoxX_TweakScript</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_TweakScript.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_TweakScript.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_TweakScript.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CheckBoxX_ArmipsScript.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 0</value>
+  </data>
+  <data name="CheckBoxX_ArmipsScript.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="CheckBoxX_ArmipsScript.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="CheckBoxX_ArmipsScript.Text" xml:space="preserve">
+    <value>Armips</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Name" xml:space="preserve">
+    <value>CheckBoxX_ArmipsScript</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_ArmipsScript.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CheckBoxX_CSharpScript.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 0</value>
+  </data>
+  <data name="CheckBoxX_CSharpScript.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 23</value>
+  </data>
+  <data name="CheckBoxX_CSharpScript.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="CheckBoxX_CSharpScript.Text" xml:space="preserve">
+    <value>C#</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_CSharpScript.Name" xml:space="preserve">
     <value>CheckBoxX_CSharpScript</value>
   </data>
-  <data name="ButtonX3.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
+  <data name="&gt;&gt;CheckBoxX_CSharpScript.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Panel4.Type" xml:space="preserve">
+  <data name="&gt;&gt;CheckBoxX_CSharpScript.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CSharpScript.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckBoxX_VBScript.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 0</value>
+  </data>
+  <data name="CheckBoxX_VBScript.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 23</value>
+  </data>
+  <data name="CheckBoxX_VBScript.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="CheckBoxX_VBScript.Text" xml:space="preserve">
+    <value>VB</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_VBScript.Name" xml:space="preserve">
+    <value>CheckBoxX_VBScript</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_VBScript.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_VBScript.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_VBScript.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 266</value>
+  </data>
+  <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 23</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TextBoxX_ScriptDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 66</value>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
   </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom2.Text" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;ItemListBox1.Name" xml:space="preserve">
-    <value>ItemListBox1</value>
+  <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 3</value>
+  </data>
+  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>635, 616</value>
+  </data>
+  <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
     <value>Panel2</value>
   </data>
+  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
+    <value>Panel4</value>
+  </data>
+  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ItemListBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ItemListBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="ItemListBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>365, 270</value>
+  </data>
+  <data name="ItemListBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ItemListBox1.Text" xml:space="preserve">
+    <value>ItemListBox1</value>
+  </data>
+  <data name="&gt;&gt;ItemListBox1.Name" xml:space="preserve">
+    <value>ItemListBox1</value>
+  </data>
+  <data name="&gt;&gt;ItemListBox1.Type" xml:space="preserve">
+    <value>SM64_ROM_Manager.Publics.Controls.ItemListBox, SM64 ROM Manager.Publics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ItemListBox1.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;ItemListBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TableLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="TableLayoutPanel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ButtonX3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 3</value>
+  </data>
+  <data name="ButtonX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="ButtonX3.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;ButtonX3.Name" xml:space="preserve">
+    <value>ButtonX3</value>
+  </data>
+  <data name="&gt;&gt;ButtonX3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX3.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;ButtonX3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ButtonX4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="ButtonX4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 3</value>
+  </data>
+  <data name="ButtonX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="ButtonX4.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;ButtonX4.Name" xml:space="preserve">
+    <value>ButtonX4</value>
+  </data>
+  <data name="&gt;&gt;ButtonX4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX4.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;ButtonX4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextBoxX_ReferenceName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="TextBoxX_ReferenceName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="TextBoxX_ReferenceName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 20</value>
+  </data>
   <data name="TextBoxX_ReferenceName.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
+  <data name="TextBoxX_ReferenceName.WatermarkText" xml:space="preserve">
+    <value>E.g. System.Windows.Forms.dll</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ReferenceName.Name" xml:space="preserve">
+    <value>TextBoxX_ReferenceName</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ReferenceName.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ReferenceName.Parent" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ReferenceName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="TableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 26</value>
+  </data>
+  <data name="TableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Name" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonX3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonX4" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="TextBoxX_ReferenceName" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,26,Absolute,26" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 314</value>
+  </data>
+  <data name="Panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 305</value>
+  </data>
+  <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="LayoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="LayoutControlItem1.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="LayoutControlItem2.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="LayoutControlItem3.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="LayoutControlItem4.Text" xml:space="preserve">
+    <value>Additional References:</value>
+  </data>
+  <data name="LayoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 623</value>
+  </data>
+  <data name="LayoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;LayoutControl1.Name" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;LayoutControl1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LayoutControl1.Parent" xml:space="preserve">
+    <value>Panel4</value>
+  </data>
+  <data name="&gt;&gt;LayoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="Panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1026, 622</value>
+  </data>
+  <data name="Panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;Panel4.Name" xml:space="preserve">
+    <value>Panel4</value>
+  </data>
+  <data name="&gt;&gt;Panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Bar1.AccessibleDescription" xml:space="preserve">
+    <value>Bar1 (Bar1)</value>
+  </data>
+  <data name="Bar1.AccessibleName" xml:space="preserve">
+    <value>Bar1</value>
+  </data>
+  <data name="Bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="ButtonItem1.Text" xml:space="preserve">
+    <value>VB</value>
+  </data>
+  <data name="ButtonItem2.Text" xml:space="preserve">
+    <value>C#</value>
+  </data>
+  <data name="ButtonItem_NewTemplate.Text" xml:space="preserve">
+    <value>New Template</value>
+  </data>
+  <data name="ButtonItem_SaveToFile.Text" xml:space="preserve">
+    <value>Save to File ...</value>
+  </data>
+  <data name="ButtonItem_LoadFromFile.Text" xml:space="preserve">
+    <value>Load from File ...</value>
+  </data>
+  <data name="ButtonItem5.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="ButtonItem3.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="ButtonItem_RunInTestMode.Text" xml:space="preserve">
+    <value>Test Mode (Run Temporary)</value>
+  </data>
+  <data name="ButtonItem_CheckForErrors.Text" xml:space="preserve">
+    <value>Check for Errors</value>
+  </data>
+  <data name="ButtonItem4.Text" xml:space="preserve">
+    <value>Script</value>
+  </data>
+  <data name="ButtonItem_ShowObjectCatalog.Text" xml:space="preserve">
+    <value>Object Catalog</value>
+  </data>
+  <data name="Bar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Bar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1026, 24</value>
+  </data>
+  <data name="Bar1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="Bar1.Text" xml:space="preserve">
+    <value>Bar1</value>
+  </data>
+  <data name="&gt;&gt;Bar1.Name" xml:space="preserve">
+    <value>Bar1</value>
+  </data>
+  <data name="&gt;&gt;Bar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Bar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Bar1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1026, 646</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2162,505 +2507,106 @@
         CoWiGwyG/w/OanoYx+RXmwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
   </data>
-  <data name="LayoutControlItem1.Text" xml:space="preserve">
-    <value>Name:</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Tweak Script Editor</value>
   </data>
-  <data name="&gt;&gt;LayoutControl1.Parent" xml:space="preserve">
-    <value>Panel4</value>
+  <data name="&gt;&gt;LayoutControlItem1.Name" xml:space="preserve">
+    <value>LayoutControlItem1</value>
   </data>
-  <data name="&gt;&gt;ButtonItem3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ButtonX4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="ButtonX4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem3.Name" xml:space="preserve">
-    <value>ButtonItem3</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ScriptDescription.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem4.Type" xml:space="preserve">
+  <data name="&gt;&gt;LayoutControlItem1.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Parent" xml:space="preserve">
-    <value>Panel3</value>
+  <data name="&gt;&gt;LayoutControlItem2.Name" xml:space="preserve">
+    <value>LayoutControlItem2</value>
   </data>
-  <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
+  <data name="&gt;&gt;LayoutControlItem2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="Bar1.Text" xml:space="preserve">
-    <value>Bar1</value>
+  <data name="&gt;&gt;LayoutControlItem3.Name" xml:space="preserve">
+    <value>LayoutControlItem3</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_LoadFromFile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.Name" xml:space="preserve">
-    <value>ButtonX4</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="LayoutControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="Panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1026, 622</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ScriptName.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="CheckBoxX_CSharpScript.Text" xml:space="preserve">
-    <value>C#</value>
-  </data>
-  <data name="CheckBoxX_CSharpScript.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="CheckBoxX_VBScript.Text" xml:space="preserve">
-    <value>VB</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ScriptName.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
+  <data name="&gt;&gt;LayoutControlItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem4.Name" xml:space="preserve">
     <value>LayoutControlItem4</value>
   </data>
-  <data name="&gt;&gt;TextBoxX_ReferenceName.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;LayoutControlItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Bar1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;ButtonItem5.Name" xml:space="preserve">
+    <value>ButtonItem5</value>
   </data>
-  <data name="CheckBoxX_TweakScript.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;ButtonItem5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="TextBoxX_ScriptDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 175</value>
+  <data name="&gt;&gt;ButtonItem_NewTemplate.Name" xml:space="preserve">
+    <value>ButtonItem_NewTemplate</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_NewTemplate.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem1.Name" xml:space="preserve">
+    <value>ButtonItem1</value>
   </data>
   <data name="&gt;&gt;ButtonItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem2.Name" xml:space="preserve">
+    <value>ButtonItem2</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem2.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_SaveToFile.Name" xml:space="preserve">
     <value>ButtonItem_SaveToFile</value>
   </data>
-  <data name="&gt;&gt;ButtonX3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>635, 616</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_TweakScript.Name" xml:space="preserve">
-    <value>CheckBoxX_TweakScript</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem1.Name" xml:space="preserve">
-    <value>ButtonItem1</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem4.Name" xml:space="preserve">
-    <value>ButtonItem4</value>
-  </data>
-  <data name="Panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>TweakScriptEditor</value>
-  </data>
-  <data name="TableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.Parent" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="CheckBoxX_CSharpScript.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 23</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="ButtonItem_NewTemplate.Text" xml:space="preserve">
-    <value>New Template</value>
-  </data>
-  <data name="LayoutControlItem4.Text" xml:space="preserve">
-    <value>Additional References:</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CheckForErrors.Name" xml:space="preserve">
-    <value>ButtonItem_CheckForErrors</value>
-  </data>
-  <data name="Bar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1026, 24</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CheckForErrors.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonItem_SaveToFile.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ShowObjectCatalog.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ItemListBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 270</value>
-  </data>
-  <data name="ButtonItem_SaveToFile.Text" xml:space="preserve">
-    <value>Save to File ...</value>
-  </data>
-  <data name="Bar1.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 23</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Name" xml:space="preserve">
-    <value>CheckBoxX_VBScript</value>
-  </data>
-  <data name="&gt;&gt;Panel4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LayoutControl1.Name" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="Bar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ShowObjectCatalog.Name" xml:space="preserve">
-    <value>ButtonItem_ShowObjectCatalog</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TableLayoutPanel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="LayoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 623</value>
-  </data>
-  <data name="&gt;&gt;ItemListBox1.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="ButtonX4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 3</value>
-  </data>
-  <data name="TableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
-  </data>
-  <data name="&gt;&gt;LayoutControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ItemListBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ScriptName.Name" xml:space="preserve">
-    <value>TextBoxX_ScriptName</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.Parent" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="Panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="ButtonItem_ShowObjectCatalog.Text" xml:space="preserve">
-    <value>Object Catalog</value>
-  </data>
-  <data name="ButtonItem5.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="Bar1.AccessibleName" xml:space="preserve">
-    <value>Bar1</value>
-  </data>
-  <data name="ButtonItem2.Text" xml:space="preserve">
-    <value>C#</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="TextBoxX_ScriptName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 20</value>
-  </data>
-  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="ButtonX4.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="LayoutControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;Bar1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
-    <value>Panel4</value>
-  </data>
-  <data name="ItemListBox1.Text" xml:space="preserve">
-    <value>ItemListBox1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="TableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Bar1.AccessibleDescription" xml:space="preserve">
-    <value>Bar1 (Bar1)</value>
-  </data>
-  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonItem_RunInTestMode.Text" xml:space="preserve">
-    <value>Test Mode (Run Temporary)</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_TweakScript.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="ButtonX3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 3</value>
-  </data>
-  <data name="&gt;&gt;Bar1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_NewTemplate.Name" xml:space="preserve">
-    <value>ButtonItem_NewTemplate</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RunInTestMode.Name" xml:space="preserve">
-    <value>ButtonItem_RunInTestMode</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="CheckBoxX_TweakScript.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 305</value>
-  </data>
-  <data name="ItemListBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ItemListBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="LayoutControlItem3.Text" xml:space="preserve">
-    <value>Type:</value>
-  </data>
-  <data name="ButtonItem4.Text" xml:space="preserve">
-    <value>Script</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ButtonItem2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.WatermarkText" xml:space="preserve">
-    <value>E.g. System.Windows.Forms.dll</value>
-  </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 266</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ReferenceName.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem2.Name" xml:space="preserve">
-    <value>ButtonItem2</value>
-  </data>
-  <data name="ButtonItem1.Text" xml:space="preserve">
-    <value>VB</value>
-  </data>
-  <data name="TextBoxX_ScriptName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 21</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Name" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;ButtonItem_LoadFromFile.Name" xml:space="preserve">
     <value>ButtonItem_LoadFromFile</value>
   </data>
-  <data name="Panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
+  <data name="&gt;&gt;ButtonItem_LoadFromFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;ButtonItem4.Name" xml:space="preserve">
+    <value>ButtonItem4</value>
   </data>
-  <data name="&gt;&gt;LayoutControlItem2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ButtonItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ItemListBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;ButtonItem3.Name" xml:space="preserve">
+    <value>ButtonItem3</value>
   </data>
-  <data name="TextBoxX_ScriptDescription.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;ButtonItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="CheckBoxX_TweakScript.Text" xml:space="preserve">
-    <value>Tweak Script</value>
+  <data name="&gt;&gt;ButtonItem_RunInTestMode.Name" xml:space="preserve">
+    <value>ButtonItem_RunInTestMode</value>
   </data>
-  <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;ButtonItem_RunInTestMode.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Bar1.Name" xml:space="preserve">
-    <value>Bar1</value>
+  <data name="&gt;&gt;ButtonItem_CheckForErrors.Name" xml:space="preserve">
+    <value>ButtonItem_CheckForErrors</value>
   </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;ButtonItem_CheckForErrors.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="TextBoxX_ReferenceName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 20</value>
+  <data name="&gt;&gt;ButtonItem_ShowObjectCatalog.Name" xml:space="preserve">
+    <value>ButtonItem_ShowObjectCatalog</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;ButtonItem_ShowObjectCatalog.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
-    <value>Panel3</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TweakScriptEditor</value>
   </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem5.Name" xml:space="preserve">
-    <value>ButtonItem5</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;LayoutControlItem2.Name" xml:space="preserve">
-    <value>LayoutControlItem2</value>
-  </data>
-  <data name="resource.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;ButtonX4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_TweakScript.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;TextBoxX_ScriptDescription.Name" xml:space="preserve">
-    <value>TextBoxX_ScriptDescription</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1026, 646</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxX_ScriptName.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem1.Name" xml:space="preserve">
-    <value>LayoutControlItem1</value>
-  </data>
-  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="CheckBoxX_VBScript.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 23</value>
-  </data>
-  <data name="&gt;&gt;LayoutControl1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ItemListBox1.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Publics.Controls.ItemListBox, SM64 ROM Manager.Publics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="TableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_TweakScript.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="CheckBoxX_CSharpScript.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 0</value>
-  </data>
-  <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 3</value>
-  </data>
-  <data name="LayoutControlItem2.Text" xml:space="preserve">
-    <value>Description:</value>
-  </data>
-  <data name="TableLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonItem_CheckForErrors.Text" xml:space="preserve">
-    <value>Check for Errors</value>
-  </data>
-  <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 314</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="CheckBoxX_TweakScript.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 23</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

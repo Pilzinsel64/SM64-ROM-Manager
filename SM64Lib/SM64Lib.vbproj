@@ -122,6 +122,7 @@
     <Compile Include="SM64Lib\Configuration\CustomObjectConfig.vb" />
     <Compile Include="SM64Lib\Configuration\LevelAreaConfig.vb" />
     <Compile Include="SM64Lib\Configuration\LevelConfig.vb" />
+    <Compile Include="SM64Lib\Configuration\MusicConfiguration.vb" />
     <Compile Include="SM64Lib\Configuration\ObjectBankConfig.vb" />
     <Compile Include="SM64Lib\Configuration\RomConfig.vb" />
     <Compile Include="SM64Lib\Data\BinaryFile.vb" />

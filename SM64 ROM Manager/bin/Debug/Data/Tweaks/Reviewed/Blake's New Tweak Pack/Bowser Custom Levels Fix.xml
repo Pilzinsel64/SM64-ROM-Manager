@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Bowser Custom Levels Fix" description="WARNING: Replaces Waterfall Playsound Object&#xD;&#xA;Use this tweak to prevent Bowser from being static in non-Bowser courses&#xD;&#xA;Simply place the waterfall sounds object anywhere in the level, and you're&#xD;&#xA;good to go!&#xD;&#xA;Created by Blakeoramo" version="1.0.0.0">
+  <patch name="New Script" description="" type="0" references="">21DA38: 0C 80 29 38 C8</patch>
+</m64tweak>

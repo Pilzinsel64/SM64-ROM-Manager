@@ -7,13 +7,21 @@ Imports System.IO
 Imports System.Linq
 Imports System.Windows.Forms
 Imports SM64Lib
+Imports DevComponents.DotNetBar
 
 Module Script
 
+    Private Const MyMsgText As String =
+"The More Object Patches has been optimized to work with SM64 ROM Manager ROMs, but they still are experimental because they break water in custom level e.g." &amp; vbnewline &amp; vbnewline &amp;
+"If you want to use water you can use it as normal, but the texture will be missing. So you have to place your own face with an water texture and with texture animation on."  &amp; vbnewline &amp; vbnewline &amp;
+"Are you sure you want to continue patching the More Object Patches on this ROM?"
+
     Sub Main(params as IReadOnlyDictionary(Of String, Object))
-        Dim tweakDir as String = Path.GetDirectoryName(params("profilepath"))
-        Dim patchFile as String = Path.Combine(tweakDir, "mop123rm.ppf")
-        PatchClass.ApplyPPF(params("romfile"), patchFile)
+        If MessageBoxEx.Show(MyMsgText, "More Object Patches", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            Dim tweakDir as String = Path.GetDirectoryName(params("profilepath"))
+            Dim patchFile as String = Path.Combine(tweakDir, "mop123rm.ppf")
+            PatchClass.ApplyPPF(params("romfile"), patchFile)
+        End If
     End Sub
 
 End Module

@@ -17,11 +17,24 @@ Namespace Global.SM64Lib.ObjectBanks
         Public Property NeedToSave As Boolean = False
         Public ReadOnly Property Levelscript As New Levelscript
 
-        Public Function WriteToSeg(bankID As Byte)
+        Public Function WriteToSeg(bankID As Byte) As SegmentedBank
             Dim segStream As New MemoryStream
             Dim seg As New SegmentedBank(bankID, segStream)
-            Dim data As New BinaryStreamData(segStream)
+            Dim lastPos As Integer = WriteToSeg(seg, 0)
+            seg.Length = lastPos
+            Return seg
+        End Function
+
+        Public Function WriteToSeg(seg As SegmentedBank, offset As Integer) As Integer
+            Dim data As New BinaryStreamData(seg.Data)
+            Dim lastPos As Integer = WriteToSeg(data, offset, seg.BankID)
+            _CurSeg = seg
+            Return lastPos
+        End Function
+
+        Public Function WriteToSeg(data As BinaryData, offset As Integer, bankID As Byte) As Integer
             Dim lvlScriptLength As UInteger
+            Dim bankAddr As Integer = CUInt(bankID) << 24
 
             'Clear the old levelscript
             Levelscript.Clear()
@@ -33,7 +46,7 @@ Namespace Global.SM64Lib.ObjectBanks
             lvlScriptLength = HexRoundUp1(Objects.Count * 8 + 4)
 
             'Start Custom Objects
-            data.Position = lvlScriptLength
+            data.Position = offset + lvlScriptLength
 
             For i As Integer = 0 To Objects.Count - 1
                 Dim obj As CustomObject = Objects(i)
@@ -41,13 +54,13 @@ Namespace Global.SM64Lib.ObjectBanks
                 'Write Object Model
                 obj.ModelBankOffset = data.Position
                 Dim sr As Model.ObjectModel.SaveResult =
-                    obj.Model.ToBinaryData(data, data.Position, 0, seg.BankAddress)
+                    obj.Model.ToBinaryData(data, data.Position, 0, bankAddr)
                 HexRoundUp2(data.Position)
 
                 'Write Model Offset & Length & Collision Offset
                 data.Write(obj.ModelBankOffset)
                 data.Write(CInt(obj.Model.Fast3DBuffer.Length))
-                data.Write(sr.CollisionPointer And &HFFFFFF)
+                data.Write(If(sr.CollisionPointer = -1, -1, sr.CollisionPointer And &HFFFFFF))
                 obj.CollisionPointer = sr.CollisionPointer
                 HexRoundUp2(data.Position)
 
@@ -66,18 +79,18 @@ Namespace Global.SM64Lib.ObjectBanks
 
             'Set length of segmented
             HexRoundUp2(data.Position)
-            seg.Length = data.Position
+            Dim lastPosition As Integer = data.Position
 
             'Create Levelscript
             For Each obj As CustomObject In Objects
                 Levelscript.Add(New LevelscriptCommand($"22 08 00 {obj.ModelID.ToString("X")} {bankID.ToString("X")} {Hex((obj.GeolayoutBankOffset >> 16) And &HFF)} {Hex((obj.GeolayoutBankOffset >> 8) And &HFF)} {Hex(obj.GeolayoutBankOffset And &HFF)}"))
             Next
             Levelscript.Add(New LevelscriptCommand("07 04 00 00"))
-            Levelscript.Write(data, 0)
+            Levelscript.Write(data, offset)
 
-            _CurSeg = seg
             _NeedToSave = False
-            Return seg
+
+            Return lastPosition
         End Function
 
         Public Sub WriteCollisionPointers(rommgr As RomManager)

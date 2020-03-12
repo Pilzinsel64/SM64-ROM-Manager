@@ -81,8 +81,7 @@ Public Class TweakViewer
     End Function
 
     Private Sub LoadTweaks()
-        CircularProgress1.Visible = True
-        CircularProgress1.IsRunning = True
+        CircularProgress1.Start()
 
         Dim pathTweaks As String = MyTweaksPath
         Dim mgr As New PatchingManager
@@ -97,8 +96,7 @@ Public Class TweakViewer
 
         LoadTweakList()
 
-        CircularProgress1.IsRunning = False
-        CircularProgress1.Visible = False
+        CircularProgress1.Stop()
     End Sub
 
     Private Sub LoadTweakList(Optional Filter As String = "")
@@ -448,7 +446,15 @@ Public Class TweakViewer
     Private Async Sub WarningBox_TweakUpdates_OptionsClick(sender As Object, e As EventArgs) Handles WarningBox_TweakUpdates.OptionsClick
         WarningBox_TweakUpdates.Visible = False
 
-        If Await ExecuteUpdate() Then
+        Enabled = False
+        CircularProgress1.Start()
+
+        Dim res As Boolean = Await ExecuteUpdate()
+
+        CircularProgress1.Stop()
+        Enabled = True
+
+        If res Then
             LoadTweaks()
             MessageBoxEx.Show(Me, "Tweaks updated successfully!", "Tweak Updates", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else

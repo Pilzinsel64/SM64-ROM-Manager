@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Remove Growing Limbs" description="Created by Blakeoramo" version="1.0.0.0">
+  <patch name="" description="" type="0" references="">127DE8: 16 00 00 00 00 00 00 00
+127E60: 16 00 00 00 00 00 00 00
+12806C: 16 00 00 00 00 00 00 00
+1280C4: 16 00 00 00 00 00 00 00
+12813C: 16 00 00 00 00 00 00 00
+128348: 16 00 00 00 00 00 00 00</patch>
+</m64tweak>

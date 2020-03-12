@@ -28,6 +28,8 @@ Partial Class ImportLevelDialog
         Me.ItemListBox_Levels = New SM64_ROM_Manager.Publics.Controls.ItemListBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ItemPanel_Areas = New DevComponents.DotNetBar.ItemPanel()
+        Me.CircularProgress1 = New DevComponents.DotNetBar.Controls.CircularProgress()
+        Me.ItemListBox_Levels.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -67,6 +69,7 @@ Partial Class ImportLevelDialog
         Me.ItemListBox_Levels.BackgroundStyle.Class = "ItemPanel"
         Me.ItemListBox_Levels.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.ItemListBox_Levels.ContainerControlProcessDialogKey = True
+        Me.ItemListBox_Levels.Controls.Add(Me.CircularProgress1)
         Me.ItemListBox_Levels.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ItemListBox_Levels.DragDropSupport = True
         Me.ItemListBox_Levels.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical
@@ -118,6 +121,23 @@ Partial Class ImportLevelDialog
         Me.ItemPanel_Areas.TabIndex = 4
         Me.ItemPanel_Areas.Text = "ItemPanel1"
         '
+        'CircularProgress1
+        '
+        Me.CircularProgress1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.CircularProgress1.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.CircularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CircularProgress1.Location = New System.Drawing.Point(94, 76)
+        Me.CircularProgress1.Name = "CircularProgress1"
+        Me.CircularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot
+        Me.CircularProgress1.SetVisibleStateOnStart = True
+        Me.CircularProgress1.SetVisibleStateOnStop = True
+        Me.CircularProgress1.Size = New System.Drawing.Size(75, 75)
+        Me.CircularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP
+        Me.CircularProgress1.TabIndex = 9
+        '
         'ImportLevelDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -132,6 +152,7 @@ Partial Class ImportLevelDialog
         Me.Text = "Import Levels"
         Me.TopLeftCornerSize = 0
         Me.TopRightCornerSize = 0
+        Me.ItemListBox_Levels.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -141,4 +162,5 @@ Partial Class ImportLevelDialog
     Friend WithEvents LabelX_Romfile As DevComponents.DotNetBar.LabelX
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents ItemPanel_Areas As DevComponents.DotNetBar.ItemPanel
+    Friend WithEvents CircularProgress1 As DevComponents.DotNetBar.Controls.CircularProgress
 End Class

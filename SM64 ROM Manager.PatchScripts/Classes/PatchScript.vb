@@ -83,4 +83,8 @@ Public Enum ScriptType
     ''' A DLL file containing the Code.
     ''' </summary>
     DynamicLinkLibrary
+    ''' <summary>
+    ''' Code that can be applied using Armips.
+    ''' </summary>
+    Armips
 End Enum

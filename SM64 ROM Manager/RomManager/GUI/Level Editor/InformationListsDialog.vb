@@ -1,5 +1,6 @@
 Imports System.ComponentModel
 Imports System.Text.RegularExpressions
+Imports DevComponents.AdvTree
 Imports DevComponents.DotNetBar
 
 Namespace LevelEditor
@@ -34,6 +35,7 @@ Namespace LevelEditor
             LoadObjectCombosIfEmpty()
             LoadBehaviorInfosIfEmpty()
             SetUI()
+            TextBoxX_Search.Select()
             UpdateAmbientColors
         End Sub
 
@@ -195,14 +197,11 @@ Namespace LevelEditor
             'Add handler for Node created
             AddHandler AdvPropertyGrid1.PropertyTree.NodeMouseUp, AddressOf SetBParamValueText
             AddHandler AdvPropertyGrid1.PropertyTree.AfterNodeSelect, AddressOf SetBParamValueText
+            AddHandler AdvPropertyGrid1.PropertiesLoaded, AddressOf SetNodeValueReadOnly
         End Sub
 
         Private Sub SetUI()
             Bar1.Visible = EnableEdit
-            SplitContainer1.Panel2Collapsed = Not EnableEdit
-
-            Size = If(EnableEdit, New Size(840, 400), New Size(500, 400))
-            If EnableEdit Then SplitContainer1.Panel2.Size = New Size(150, SplitContainer1.Panel2.Size.Height)
 
             TabItem_Behaviors.Visible = EnableBehavs
             TabItem_ObjectCombos.Visible = EnableObjCombos
@@ -450,6 +449,17 @@ Namespace LevelEditor
             Next
         End Sub
 
+        Private Sub SetNodeValueReadOnly(sender As Object, e As EventArgs)
+            If Not EnableEdit Then
+                For Each n As Node In AdvPropertyGrid1.PropertyTree.Nodes(0).Nodes
+                    If TypeOf n Is PropertyNode Then
+                        Dim prop As PropertyNode = n
+                        prop.IsReadOnly = True
+                    End If
+                Next
+            End If
+        End Sub
+
         Private Sub ItemListBox1_ItemDoubleClick(sender As Object, e As MouseEventArgs) Handles ItemList.ItemDoubleClick
             If Not EnableEdit Then
                 DialogResult = DialogResult.OK
@@ -457,9 +467,7 @@ Namespace LevelEditor
         End Sub
 
         Private Sub ItemList_SelectedItemChanged(sender As Object, e As EventArgs) Handles ItemList.SelectedItemChanged
-            If EnableEdit Then
-                ShowItemProperties()
-            End If
+            ShowItemProperties()
         End Sub
 
         Private Sub ButtonItem1_Click(sender As Object, e As EventArgs) Handles ButtonItem_Add.Click

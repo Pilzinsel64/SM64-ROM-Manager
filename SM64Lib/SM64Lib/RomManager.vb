@@ -35,6 +35,7 @@ Public Class RomManager
     Private ReadOnly levelIDsToReset As New List(Of UShort)
     Private ReadOnly myTextGroups As New List(Of Text.TextGroup)
     Private myGameName As String = Nothing
+    Private isNewROM As Boolean = False
 
     'P r o p e r t i e s
 
@@ -58,7 +59,11 @@ Public Class RomManager
             Dim ver As RomVersion
 
             If Not loadedVersion Then
-                ver = LoadVersion()
+                If isNewROM Then
+                    ver = myProgramVersion
+                Else
+                    ver = LoadVersion()
+                End If
                 loadedVersion = True
             Else
                 ver = myProgramVersion
@@ -251,7 +256,7 @@ Public Class RomManager
 
             'Music
             Dim lastpos As Integer
-            MusicList.Write(RomFile, lastpos)
+            MusicList.Write(Me, lastpos)
             HexRoundUp2(lastpos)
 
             'Global Object Bank
@@ -442,12 +447,12 @@ Public Class RomManager
                     Case Else 'Original Level
                         lvl = Nothing
                         'Dim mgr As New OriginalLevelManager
-                        'lvl = New Level
+                        'lvl = New OriginalLevel
                         'mgr.LoadLevel(lvl, Me, ldi.ID, offset)
 
                 End Select
             Catch ex As Exception
-                'Skip the Level
+                'Skip the Level  
                 If IsDebugging Then
                     Throw
                 Else
@@ -610,7 +615,7 @@ Public Class RomManager
     ''' Loads the Music from the ROM.
     ''' </summary>
     Public Sub LoadMusic()
-        MusicList.Read(RomFile)
+        MusicList.Read(Me)
     End Sub
 
     ''' <summary>
@@ -628,6 +633,7 @@ Public Class RomManager
         If filelength = 8 * 1024 * 1024 Then
             CreateROM()
             PrepairROM()
+            isNewROM = True
         End If
 
         Dim br As New BinaryRom(Me, FileAccess.Read)
@@ -678,12 +684,12 @@ Public Class RomManager
         fs.Close()
 
         'Repaire patched music
-        MusicList.Read(RomFile)
+        MusicList.Read(Me)
         MusicList.NeedToSaveSequences = True
         MusicList.NeedToSaveSequenceNames = True
         MusicList.NeedToSaveNInsts = True
         MusicList.NeedToSaveMusicHackSettings = True
-        MusicList.Write(RomFile, 0)
+        MusicList.Write(Me, 0)
 
         'Update Checksum
         PatchClass.UpdateChecksum(RomFile)

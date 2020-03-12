@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Cinematic Patch (Add or Remove)" description="Adds more optimised black bars akin to the ones found in Kaze's&#xD;&#xA;Star Road (Console Compatible Edition).&#xD;&#xA;Created by Blakeoramo" version="1.0.0.0">
+  <patch name="Apply Cinematic Patch" description="" type="0" references="">23A7: 8C
+23B3: 30
+2493: 30
+24A3: 90
+25A3: 8C
+25AF: 30
+296B: 2C
+29A7: 90
+3646F: 30
+3647F: 90
+364FB: 30
+3650B: 90
+36587: 30
+36597: 90
+3799F: 8C
+379AB: 30</patch>
+  <patch name="Remove Cinematic Patch" description="" type="0" references="">23A7: 9C
+23B3: 20
+2493: 20
+24A3: A0
+25A3: 9C
+25AF: 20
+296B: 1C
+29A7: A0
+3646F: 20
+3647F: A0
+364FB: 20
+3650B: A0
+36587: 20
+36597: A0
+3799F: 9C
+379AB: 20</patch>
+</m64tweak>

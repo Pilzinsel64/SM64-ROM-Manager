@@ -129,7 +129,7 @@
     <value>Top, Right</value>
   </data>
   <data name="ButtonX_CancelSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 1</value>
+    <value>307, 1</value>
   </data>
   <data name="ButtonX_CancelSearch.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>18, 18</value>
@@ -144,6 +144,18 @@
   <data name="ButtonX_CancelSearch.Tooltip" xml:space="preserve">
     <value>Clear search</value>
   </data>
+  <data name="&gt;&gt;ButtonX_CancelSearch.Name" xml:space="preserve">
+    <value>ButtonX_CancelSearch</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_CancelSearch.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_CancelSearch.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_CancelSearch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="ItemList.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -154,10 +166,22 @@
     <value>0, 20</value>
   </data>
   <data name="ItemList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 316</value>
+    <value>326, 316</value>
   </data>
   <data name="ItemList.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;ItemList.Name" xml:space="preserve">
+    <value>ItemList</value>
+  </data>
+  <data name="&gt;&gt;ItemList.Type" xml:space="preserve">
+    <value>SM64_ROM_Manager.Publics.Controls.ItemListBox, SM64 ROM Manager.Publics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ItemList.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;ItemList.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="TextBoxX_Search.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -166,13 +190,37 @@
     <value>0, 0</value>
   </data>
   <data name="TextBoxX_Search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 20</value>
+    <value>326, 20</value>
   </data>
   <data name="TextBoxX_Search.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="TextBoxX_Search.WatermarkText" xml:space="preserve">
     <value>Search</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Search.Name" xml:space="preserve">
+    <value>TextBoxX_Search</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Search.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Search.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Search.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel1.Name" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>SplitContainer1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="AdvPropertyGrid1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -181,22 +229,58 @@
     <value>0, 0</value>
   </data>
   <data name="AdvPropertyGrid1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 336</value>
+    <value>326, 336</value>
   </data>
   <data name="AdvPropertyGrid1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Name" xml:space="preserve">
+    <value>AdvPropertyGrid1</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.AdvPropertyGrid, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel2.Name" xml:space="preserve">
+    <value>SplitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>SplitContainer1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="SplitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 336</value>
+    <value>656, 336</value>
   </data>
   <data name="SplitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>396</value>
+    <value>326</value>
   </data>
   <data name="SplitContainer1.SplitterIncrement" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="SplitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Name" xml:space="preserve">
+    <value>SplitContainer1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="TabStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -208,13 +292,25 @@
     <value>Object Combos</value>
   </data>
   <data name="TabStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 25</value>
+    <value>656, 25</value>
   </data>
   <data name="TabStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>99</value>
   </data>
   <data name="TabItem_Behaviors.Text" xml:space="preserve">
     <value>Behaviors</value>
+  </data>
+  <data name="&gt;&gt;TabStrip1.Name" xml:space="preserve">
+    <value>TabStrip1</value>
+  </data>
+  <data name="&gt;&gt;TabStrip1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabStrip, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabStrip1.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;TabStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="Bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -246,6 +342,18 @@
   <data name="Bar1.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="&gt;&gt;Bar1.Name" xml:space="preserve">
+    <value>Bar1</value>
+  </data>
+  <data name="&gt;&gt;Bar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Bar1.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Bar1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -253,19 +361,31 @@
     <value>0, 0</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>824, 361</value>
+    <value>684, 361</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
   </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>824, 361</value>
+    <value>684, 361</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2126,5 +2246,47 @@
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
+  </data>
+  <data name="&gt;&gt;TabItem_ObjectCombos.Name" xml:space="preserve">
+    <value>TabItem_ObjectCombos</value>
+  </data>
+  <data name="&gt;&gt;TabItem_ObjectCombos.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabItem_Behaviors.Name" xml:space="preserve">
+    <value>TabItem_Behaviors</value>
+  </data>
+  <data name="&gt;&gt;TabItem_Behaviors.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Add.Name" xml:space="preserve">
+    <value>ButtonItem_Add</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Add.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Remove.Name" xml:space="preserve">
+    <value>ButtonItem_Remove</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Remove.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_SaveAll.Name" xml:space="preserve">
+    <value>ButtonItem_SaveAll</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_SaveAll.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ReloadList.Name" xml:space="preserve">
+    <value>ButtonItem_ReloadList</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ReloadList.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>InformationListDialog</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

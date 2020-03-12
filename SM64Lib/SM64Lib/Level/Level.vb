@@ -23,6 +23,7 @@ Namespace Levels
 
         'A u t o   P r o p e r t i e s
 
+        Friend Property LastGobCmdSegLoad As LevelscriptCommand = Nothing
         Friend ReadOnly Property MyObjectBanks As New Dictionary(Of Byte, ObjectBankData)
         Public Property Levelscript As New Levelscript
         Public ReadOnly Property Areas As New List(Of LevelArea)

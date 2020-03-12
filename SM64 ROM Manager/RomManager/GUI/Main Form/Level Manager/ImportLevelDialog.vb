@@ -8,24 +8,32 @@ Public Class ImportLevelDialog
     Private openrom As RomManager = Nothing
     Private addAreasOnly As Boolean
     Private destLevel As Level = Nothing
+    Private openrompath As String
+    Private lvlmgr As ILevelManager
 
     Public ReadOnly Property LevelCopy As Level = Nothing
     Public ReadOnly Property AreasCopy As LevelArea() = Nothing
 
-    Public Sub New(rommgr As RomManager, destLevel As Level)
+    Public Sub New(rommgr As RomManager, destLevel As Level, romPath As String, lvlmgr As ILevelManager)
         InitializeComponent()
         UpdateAmbientColors
         Me.rommgr = rommgr
         Me.destLevel = destLevel
         addAreasOnly = destLevel IsNot Nothing
+        openrompath = romPath
+        Me.lvlmgr = lvlmgr
     End Sub
 
-    Public Function LoadROM(fileName As String, levelManager As ILevelManager) As Boolean
-        Dim mgr As New RomManager(fileName, levelManager)
+    Public Async Function LoadROM() As Task(Of Boolean)
+        Dim mgr As New RomManager(openrompath, lvlmgr)
         If mgr.CheckROM() Then
             openrom = mgr
             LabelX_Romfile.Text = IO.Path.GetFileName(mgr.RomFile)
-            mgr.LoadLevels()
+            Enabled = False
+            CircularProgress1.Start()
+            Await Task.Run(Sub() mgr.LoadLevels())
+            CircularProgress1.Stop()
+            Enabled = True
             LoadLevels()
             Return True
         Else
@@ -71,7 +79,7 @@ Public Class ImportLevelDialog
                 Sub(a As LevelArea, newArea As LevelArea)
                     newArea.Background.Type = a.Background.Type
                     newArea.Background.Color = a.Background.Color
-                    newArea.BGMusic = a.BGMusic
+                    'newArea.BGMusic = a.BGMusic
                     newArea.TerrainType = a.TerrainType
                     newArea.Objects.AddRange(a.Objects.ToArray)
                     newArea.Warps.AddRange(a.Warps.ToArray)
@@ -202,6 +210,12 @@ Public Class ImportLevelDialog
         ItemPanel_Areas.ResumeLayout(False)
         ItemPanel_Areas.Refresh()
         ItemPanel_Areas.Enabled = enableListBox
+    End Sub
+
+    Private Async Sub ImportLevelDialog_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        If Not Await LoadROM() Then
+            DialogResult = DialogResult.Abort
+        End If
     End Sub
 
 End Class

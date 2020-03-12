@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Disable Steep Jumps" description="Disables steep jumps on hills.&#xD;&#xA;Original ASM code by jesusyoshi and others?&#xD;&#xA;Tweak Version by Blakeoramo." version="1.0.0.0">
+  <patch name="New Script" description="" type="0" references="">DED4: 24 02 00 00
+E128: 24 02 00 00</patch>
+</m64tweak>

@@ -30,11 +30,11 @@
     'O p e r a t o r s
 
     Public Shared Operator >(a As ApplicationVersion, b As ApplicationVersion) As Boolean
-        Return a.Version > b.Version OrElse (a.Version = b.Version AndAlso (a.Channel > b.Channel OrElse (a.Channel = b.Channel AndAlso a.Build > b.Build)))
+        Return a.Version > b.Version OrElse (a.Version = b.Version AndAlso (a.Channel < b.Channel OrElse (a.Channel = b.Channel AndAlso a.Build > b.Build)))
     End Operator
 
     Public Shared Operator <(a As ApplicationVersion, b As ApplicationVersion) As Boolean
-        Return a.Version < b.Version OrElse (a.Version = b.Version AndAlso (a.Channel < b.Channel OrElse (a.Channel = b.Channel AndAlso a.Build < b.Build)))
+        Return a.Version < b.Version OrElse (a.Version = b.Version AndAlso (a.Channel > b.Channel OrElse (a.Channel = b.Channel AndAlso a.Build < b.Build)))
     End Operator
 
     Public Shared Operator =(a As ApplicationVersion, b As ApplicationVersion) As Boolean

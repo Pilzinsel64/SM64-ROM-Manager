@@ -96,7 +96,12 @@ Namespace Levels
                                 customBGStart = startAddr
                                 customBGEnd = endAddr - &H140
                             Case &H7 'Global Object Bank
-                                lvl.EnableGlobalObjectBank = True
+                                If rommgr.GlobalObjectBank IsNot Nothing AndAlso
+                                    startAddr = rommgr.GlobalObjectBank.CurSeg.RomStart AndAlso
+                                    endAddr = rommgr.GlobalObjectBank.CurSeg.RomEnd Then
+                                    lvl.EnableGlobalObjectBank = True
+                                    lvl.LastGobCmdSegLoad = c
+                                End If
                         End Select
 
                     Case LevelscriptCommandTypes.ShowDialog
@@ -282,9 +287,7 @@ Namespace Levels
 
                 'Write Object Bank
                 a.CustomObjectsStartOffset = curOff - a.Bank0x0EOffset
-                For Each customObj As CustomObject In a.CustomObjects.Objects
-                    '...
-                Next
+                'a.CustomObjects.WriteToSeg(output, a.CustomObjectsStartOffset, &HE)
 
                 a.Bank0xELength = curOff - a.Bank0x0EOffset
             Next
@@ -468,7 +471,9 @@ Namespace Levels
                             Case &HA
                                 cmdBgSegLoad = c
                             Case &H7
-                                cmdGobSegLoad = c
+                                If lvl.LastGobCmdSegLoad Is c Then
+                                    cmdGobSegLoad = c
+                                End If
                         End Select
 
                     Case LevelscriptCommandTypes.ShowDialog
@@ -535,6 +540,7 @@ Namespace Levels
                 If Not lvl.Levelscript.Contains(newgobcmd) Then
                     Dim indexoffirstx1d As Integer = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1D)
                     lvl.Levelscript.Insert(indexoffirstx1d, newgobcmd)
+                    lvl.LastGobCmdSegLoad = newgobcmd
                 End If
 
                 If Not lvl.Levelscript.Contains(newgobjumpcmd) Then

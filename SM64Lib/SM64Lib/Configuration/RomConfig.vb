@@ -7,6 +7,7 @@ Namespace Configuration
 
         Public ReadOnly Property LevelConfigs As New Dictionary(Of Byte, LevelConfig)
         Public ReadOnly Property GlobalObjectBankConfig As New ObjectBankConfig
+        Public ReadOnly Property MusicConfig As New MusicConfiguration
         Public Property SelectedTextProfileInfo As String = String.Empty
 
         Public Function GetLevelConfig(levelID As UShort) As LevelConfig
