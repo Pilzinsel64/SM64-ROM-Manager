@@ -6106,7 +6106,7 @@
             <param name="objArgs"></param>
             <returns>True if operation started</returns>
         </member>
-        <member name="M:DevComponents.DotNetBar.Schedule.MonthView.DragAppointment(DevComponents.DotNetBar.Schedule.MonthView,DevComponents.DotNetBar.Schedule.AppointmentView,System.Drawing.Point)">
+        <member name="M:DevComponents.DotNetBar.Schedule.MonthView.DragAppointment(DevComponents.DotNetBar.Schedule.MonthView,DevComponents.DotNetBar.Schedule.AppointmentView,System.Drawing.Point,System.Boolean)">
             <summary>
             Drags the given appointment from one view to another
             </summary>

@@ -16993,16 +16993,6 @@
             Indicates whether alert plays exclamation sound when shown.
             </summary>
         </member>
-        <member name="P:DevComponents.DotNetBar.Controls.DesktopAlert.CustomBackColor">
-            <summary>
-            Gets or sets the custom back color for the alert used by eDesktopAlertColor.Custom.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Controls.DesktopAlert.CustomForeColor">
-            <summary>
-            Gets or sets the custom fore color for the alert used by eDesktopAlertColor.Custom.
-            </summary>
-        </member>
         <member name="E:DevComponents.DotNetBar.Controls.DesktopAlert.BeforeAlertDisplayed">
             <summary>
             Occurs before alert is displayed and allows access to the alert Window through sender.
@@ -50451,18 +50441,18 @@
         </member>
         <member name="T:DevComponents.DotNetBar.Properties.Resources">
             <summary>
-              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+              A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
         <member name="P:DevComponents.DotNetBar.Properties.Resources.ResourceManager">
             <summary>
-              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+              Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
         <member name="P:DevComponents.DotNetBar.Properties.Resources.Culture">
             <summary>
-              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="T:DevComponents.DotNetBar.GradientColorTable">
@@ -66595,13 +66585,6 @@
             Sets the ambient settings StyleManager is allowed to change on component.
             </summary>
             <param name="c">Reference to supported component.</param>
-            <param name="ambientSettings">Ambient settings that StyleManager may change.</param>
-        </member>
-        <member name="M:DevComponents.DotNetBar.StyleManagerAmbient.SetEnableAmbientSettings(System.Type,DevComponents.DotNetBar.eAmbientSettings)">
-            <summary>
-            Sets the ambient settings StyleManager is allowed to change on component.
-            </summary>
-            <param name="t">Type to supported component.</param>
             <param name="ambientSettings">Ambient settings that StyleManager may change.</param>
         </member>
         <member name="T:DevComponents.DotNetBar.eAmbientSettings">
