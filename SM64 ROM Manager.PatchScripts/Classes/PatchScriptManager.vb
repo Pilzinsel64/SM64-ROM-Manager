@@ -277,6 +277,7 @@ Public Class PatchingManager
             Case ScriptType.Armips
                 Dim createText As String =
 $".Open ""{romfile}"", 0
+.n64
 {script.Script}
 .Close"
 
@@ -285,7 +286,7 @@ $".Open ""{romfile}"", 0
 
                 Dim p As New Process
                 p.StartInfo.FileName = Path.Combine(Publics.MyToolsPath, "armips.exe")
-                p.StartInfo.Arguments = $"""{tmpAsmFile}"" -root ""{Path.GetDirectoryName(params("profilepath"))}"""
+                p.StartInfo.Arguments = $"-root ""{Path.GetDirectoryName(params("profilepath"))}"" ""{tmpAsmFile}"""
                 p.StartInfo.UseShellExecute = False
                 p.Start()
 

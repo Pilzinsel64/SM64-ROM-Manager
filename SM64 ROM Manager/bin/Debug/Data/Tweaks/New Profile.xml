@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="New Profile" description="" version="1.0.0.0">
+  <patch name="New Script" description="" type="4" references="">.org 0x20
+nop</patch>
+</m64tweak>
