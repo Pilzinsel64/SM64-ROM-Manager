@@ -53,7 +53,7 @@ Public Class ModelImporter
             New ComboItem With {.Text = "5 - Transparent", .Tag = 5},
             New ComboItem With {.Text = "6 - Transparent Foreground", .Tag = 6}
             })
-        ComboBoxEx1.SelectedIndex = 5
+        ComboBoxEx1.SelectedIndex = 3
         ComboBoxEx1.UpdateAmbientColors
     End Sub
 
