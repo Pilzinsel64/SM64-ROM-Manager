@@ -567,9 +567,10 @@ Public Class Tab_LevelManager
                 'Load Level Bachground
                 ComboBoxEx_LM_BGMode.SelectedIndex = info.bgMode
                 UpdateBackgroundControlsVisible(info.bgMode)
-                ComboBox_LM_LevelBG.SelectedIndex = GetBackgroundIndexOfID(info.bgOriginal)
-                If info.bgMode = 1 Then
+                If info.bgMode = 1 OrElse info.bgOriginal = Geolayout.BackgroundIDs.Custom Then
                     PictureBox_BGImage.Image = info.bgImage
+                Else
+                    ComboBox_LM_LevelBG.SelectedIndex = GetBackgroundIndexOfID(info.bgOriginal)
                 End If
 
                 'Load Level Name
