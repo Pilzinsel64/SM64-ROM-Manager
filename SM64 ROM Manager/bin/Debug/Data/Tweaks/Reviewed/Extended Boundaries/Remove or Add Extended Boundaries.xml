@@ -13,7 +13,7 @@ Module Script
     Sub Main(params as IReadOnlyDictionary(Of String, Object))
         Dim tweakDir as String = Path.GetDirectoryName(params("profilepath"))
         Dim patchFile as String = Path.Combine(tweakDir, "apply ext bounds.ppf")
-        PatchClass.ApplyPPF(params("romfile"), patchFile)
+        General.PatchClass.ApplyPPF(params("romfile"), patchFile)
     End Sub
 
 End Module
@@ -31,7 +31,7 @@ Module Script
     Sub Main(params as IReadOnlyDictionary(Of String, Object))
         Dim tweakDir as String = Path.GetDirectoryName(params("profilepath"))
         Dim patchFile as String = Path.Combine(tweakDir, "remove ext bound.ppf")
-        PatchClass.ApplyPPF(params("romfile"), patchFile)
+        General.PatchClass.ApplyPPF(params("romfile"), patchFile)
     End Sub
 
 End Module

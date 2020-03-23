@@ -20,7 +20,7 @@ Module Script
         If MessageBoxEx.Show(MyMsgText, "More Object Patches", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Dim tweakDir as String = Path.GetDirectoryName(params("profilepath"))
             Dim patchFile as String = Path.Combine(tweakDir, "mop123rm.ppf")
-            PatchClass.ApplyPPF(params("romfile"), patchFile)
+            General.PatchClass.ApplyPPF(params("romfile"), patchFile)
         End If
     End Sub
 

@@ -3,7 +3,6 @@
   <description>Import a 3D-Coin Model and automaticly apply the codes.</description>
   <preset name="">
     <description></description>
-    <script></script>
     <max_length>1FE4</max_length>
     <rom_address>AB7B10</rom_address>
     <ram_address>30056C0</ram_address>
@@ -16,10 +15,10 @@ Imports System.Collections.Generic
 Imports SM64Lib.Model.Fast3D
 Imports SM64Lib.Model
 Imports SM64Lib.Data
-Imports SM64Lib.RomStruc
 Imports System.Drawing
 Imports System.Windows.Forms
 Imports Devcomponents.DotNetBar
+Imports SM64Lib.SegmentedBanking
 
 Module Script
 
@@ -396,17 +395,19 @@ Imports System.IO
 Imports SM64Lib
 Imports System.Collections.Generic
 Imports SM64Lib.Model
+imports System.Reflection
 
 Module Script
 
     Sub Main(params as IReadOnlyDictionary(Of String, Object))
+        Dim myDataPath as string = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "Data")
         
         'Get Paths
         Dim p_romfile as string = params("romfile")
-        Dim p_ppf as string = Path.Combine(MyDataPath, "Patchs\3D-Coins\Apply 3D Coins.ppf")
+        Dim p_ppf as string = Path.Combine(myDataPath, "Patchs\3D-Coins\Apply 3D Coins.ppf")
         
         'Patch 3D-Coins Patch
-        PatchClass.ApplyPPF(p_romfile, p_ppf)
+        General.PatchClass.ApplyPPF(p_romfile, p_ppf)
         
         'Remove Collision from Model
         Dim mdl As ObjectModel = params("ConvertedModel")
