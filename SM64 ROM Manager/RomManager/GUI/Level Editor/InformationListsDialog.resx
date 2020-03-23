@@ -148,7 +148,7 @@
     <value>ButtonX_CancelSearch</value>
   </data>
   <data name="&gt;&gt;ButtonX_CancelSearch.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX_CancelSearch.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel1</value>
@@ -202,7 +202,7 @@
     <value>TextBoxX_Search</value>
   </data>
   <data name="&gt;&gt;TextBoxX_Search.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TextBoxX_Search.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel1</value>
@@ -238,7 +238,7 @@
     <value>AdvPropertyGrid1</value>
   </data>
   <data name="&gt;&gt;AdvPropertyGrid1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.AdvPropertyGrid, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.AdvPropertyGrid, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;AdvPropertyGrid1.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel2</value>
@@ -304,7 +304,7 @@
     <value>TabStrip1</value>
   </data>
   <data name="&gt;&gt;TabStrip1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabStrip, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.TabStrip, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TabStrip1.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -346,7 +346,7 @@
     <value>Bar1</value>
   </data>
   <data name="&gt;&gt;Bar1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Bar1.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -2251,42 +2251,42 @@
     <value>TabItem_ObjectCombos</value>
   </data>
   <data name="&gt;&gt;TabItem_ObjectCombos.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TabItem_Behaviors.Name" xml:space="preserve">
     <value>TabItem_Behaviors</value>
   </data>
   <data name="&gt;&gt;TabItem_Behaviors.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_Add.Name" xml:space="preserve">
     <value>ButtonItem_Add</value>
   </data>
   <data name="&gt;&gt;ButtonItem_Add.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_Remove.Name" xml:space="preserve">
     <value>ButtonItem_Remove</value>
   </data>
   <data name="&gt;&gt;ButtonItem_Remove.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_SaveAll.Name" xml:space="preserve">
     <value>ButtonItem_SaveAll</value>
   </data>
   <data name="&gt;&gt;ButtonItem_SaveAll.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_ReloadList.Name" xml:space="preserve">
     <value>ButtonItem_ReloadList</value>
   </data>
   <data name="&gt;&gt;ButtonItem_ReloadList.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>InformationListDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

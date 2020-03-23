@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SM64Lib</name>
+    </assembly>
+    <members>
+        <member name="T:SM64Lib.My.Resources.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64Lib.My.Resources.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64Lib.My.Resources.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.Levels.SM64EditorLevelManager.LoadLevel(SM64Lib.Levels.Level,SM64Lib.RomManager,System.UInt16,System.UInt32)">
+            <summary>
+            Loads a SM64 Editor Level from ROM.
+            </summary>
+            <param name="lvl"></param>
+            <param name="rommgr"></param>
+            <param name="LevelID"></param>
+            <param name="segAddress"></param>
+        </member>
+        <member name="M:SM64Lib.Levels.LevelManager.LoadLevel(SM64Lib.Levels.Level,SM64Lib.RomManager,System.UInt16,System.UInt32)">
+            <summary>
+            Loads a ROM Manager Level from ROM.
+            </summary>
+            <param name="lvl"></param>
+            <param name="rommgr"></param>
+            <param name="LevelID"></param>
+            <param name="segAddress"></param>
+        </member>
+        <member name="M:SM64Lib.Levels.LevelManager.SaveLevel(SM64Lib.Levels.Level,SM64Lib.RomManager,SM64Lib.Data.BinaryData,System.UInt32@)">
+            <summary>
+            Saves a ROM Manager Level to ROM.
+            </summary>
+            <param name="lvl"></param>
+            <param name="rommgr"></param>
+            <param name="output"></param>
+            <param name="curOff"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.Command">
+            <summary>
+            The underlying levelscript command which provide all the properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.#ctor">
+            <summary>
+            Creates a new managed scrolling texture instance with an new levelscript command.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.#ctor(System.UInt16,System.Int32,System.Int16)">
+            <summary>
+            Creates a new managed scrolling texture instance using some data with an new levelscript command.
+            </summary>
+            <param name="facesCount">Amount of faces to count.</param>
+            <param name="vertexPtr">Pointer to the Vertices.</param>
+            <param name="groupID"></param>
+        </member>
+        <member name="M:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.#ctor(SM64Lib.Levels.Script.LevelscriptCommand)">
+            <summary>
+            Creates a new managed scrolling texture instance using an existing levelscript command.
+            </summary>
+            <param name="cmd">The levelscript command to use.</param>
+        </member>
+        <member name="P:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.GroupID">
+            <summary>
+            Indicates the group (by default deticted to the used texture).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.Behavior">
+            <summary>
+            Indicates the cycle duration of sine wave or jumping scrolling.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.Type">
+            <summary>
+            Indicates the scroll behavior.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.ScrollingSpeed">
+            <summary>
+            The Scrolling Speed per Frame (less then 0x1000).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.CycleDuration">
+            <summary>
+            Indicates the duration of a cycle in frames.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.FacesCount">
+            <summary>
+            Amount of faces to count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Levels.ScrolTex.ManagedScrollingTexture.VertexPointer">
+            <summary>
+            Pointer to the vertices.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:SM64Lib.Model.Conversion.Fast3DWriting.DisplaylistSelectionMode.Automatic">
+            <summary>
+            Automaticly choose a default Displaylist.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Conversion.Fast3DWriting.DisplaylistSelectionMode.Default">
+            <summary>
+            Force Material to be on a selected default Displaylist.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Conversion.Fast3DWriting.DisplaylistSelectionMode.Custom">
+            <summary>
+            Force Material to be on a custom defined Displaylist.
+            </summary>
+        </member>
+        <member name="T:SM64Lib.Model.Conversion.Fast3DWriting.Fast3DWriter.ReduceVericesLevel">
+            <summary>
+            Reduces the number of duplicate verticies.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Conversion.Fast3DWriting.Fast3DWriter.ReduceVericesLevel.Level0">
+            <summary>
+            No reduction.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Conversion.Fast3DWriting.Fast3DWriter.ReduceVericesLevel.Level1">
+            <summary>
+            Reduce only in the same 0x04 group. (Best choise!)
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Conversion.Fast3DWriting.Fast3DWriter.ReduceVericesLevel.Level2">
+            <summary>
+            Reduce and push up. (A little buggy!)
+            </summary>
+        </member>
+        <member name="M:SM64Lib.Model.Conversion.Fast3DWriting.Fast3DWriter.ShiftTMEMBack">
+            <summary>
+            Adds a command that is requied on the end of a display list if CI textures are enabled
+            </summary>
+        </member>
+        <member name="M:SM64Lib.Model.Conversion.Fast3DWriting.Fast3DWriter.SetOtherMode_H">
+            <summary>
+            Adds a command to enable CI textures
+            </summary>
+        </member>
+        <member name="M:SM64Lib.Model.Conversion.Fast3DWriting.Fast3DWriter.ConvertModel(System.IO.Stream,SM64Lib.Model.Conversion.Fast3DWriting.Fast3DWriter.ConvertSettings,Pilz.S3DFileParser.Object3D)">
+            <summary>
+            Converts a Object3D to an N64 Model and an SM64 Collision.
+            </summary>
+            <param name="s">The stream where to write the Fast3D and Collision data.</param>
+            <param name="settings">The convert settings.</param>
+            <param name="input">The input model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SM64Lib.Model.Conversion.Fast3DParsing.Fast3DParser.Convert(Pilz.S3DFileParser.Object3D,SM64Lib.Model.Fast3D.DisplayLists.DisplayList,SM64Lib.RomManager,System.Nullable{System.Byte})">
+            <summary>Parse a Displaylist to an Object3D.</summary>
+            <param name="obj">The Object3D where the model should be parsed to.</param>
+            <param name="dl">The Displaylist which should be parsed.</param>
+            <param name="rommgr">The RomManager Instance to use.</param>
+            <param name="AreaID">The Area ID if avaiable.</param>
+        </member>
+        <member name="M:SM64Lib.Model.Conversion.Fast3DParsing.Fast3DParser.ConvertAsync(Pilz.S3DFileParser.Object3D,SM64Lib.Model.Fast3D.DisplayLists.DisplayList,SM64Lib.RomManager,System.Nullable{System.Byte})">
+            <summary>Parse a Displaylist to an Object3D.</summary>
+            <param name="obj">The Object3D where the model should be parsed to.</param>
+            <param name="dl">The Displaylist which should be parsed.</param>
+            <param name="rommgr">The RomManager Instance to use.</param>
+            <param name="AreaID">The Area ID if avaiable.</param>
+        </member>
+        <member name="F:SM64Lib.Model.Fast3D.DisplayLists.Script.Commands.F3D_SETIMG.ColorFormat.RGBA">
+            <summary>
+            Color and alpha
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Fast3D.DisplayLists.Script.Commands.F3D_SETIMG.ColorFormat.YUV">
+            <summary>
+            Luminance and Chrominance
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Fast3D.DisplayLists.Script.Commands.F3D_SETIMG.ColorFormat.CI">
+            <summary>
+            Index and look-up palette
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Fast3D.DisplayLists.Script.Commands.F3D_SETIMG.ColorFormat.IA">
+            <summary>
+            Grayscale and alpha
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.Fast3D.DisplayLists.Script.Commands.F3D_SETIMG.ColorFormat.I">
+            <summary>
+            Grayscale
+            </summary>
+        </member>
+        <member name="M:SM64Lib.Model.Fast3D.Fast3DBuffer.FromModel(SM64Lib.Model.ObjectInputSettings,Pilz.S3DFileParser.Object3D,SM64Lib.Model.Fast3D.TextureFormatSettings)">
+            <summary>
+            Creates a Fast3D Model from a Obj File
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Model.ObjectInputSettings.ReduceDuplicateVerticesLevel.Level0">
+            <summary>Don't reduce vertices.</summary>
+        </member>
+        <member name="F:SM64Lib.Model.ObjectInputSettings.ReduceDuplicateVerticesLevel.Level1">
+            <summary>Reduce only, if in the same 0x4 group.</summary>
+        </member>
+        <member name="F:SM64Lib.Model.ObjectInputSettings.ReduceDuplicateVerticesLevel.Level2">
+            <summary>Reduce and push up. [Buggy]</summary>
+        </member>
+        <member name="M:SM64Lib.NPCs.CoinsManager.LoadCoinSettings">
+            <summary>
+            Loads all the properties from ROM.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.NPCs.CoinsManager.SaveCoinSettings">
+            <summary>
+            Saves all the properties to ROM and updates checksum.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.NPCs.CoinsManager.SaveCoinSettings(System.Boolean)">
+            <summary>
+            Saves all the properties to ROM and updates checksum if requested.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.NPCs.CoinsManager.ImportKazesCoins">
+            <summary>
+            Imports Kazes 3D Coins
+            </summary>
+        </member>
+        <member name="M:SM64Lib.NPCs.CoinsManager.Remove3DCoins">
+            <summary>
+            Remove 3D Coins [Experimental]
+            </summary>
+        </member>
+        <member name="P:SM64Lib.RomManager.ProgramVersion">
+            <summary>
+            Gets or sets the lastly used program version for this ROM.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.RomManager.NeedToSave">
+            <summary>
+            Gets if the ROM has unsaved chnages and need to be saved.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.RomManager.HasGlobalObjectBank">
+            <summary>
+            Gets if the current ROM has an user created global object bank.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SM64Lib.RomManager.#ctor(System.String)">
+            <summary>
+            Creates a new instance with input ROM.
+            </summary>
+            <param name="FileName">The ROM that will be opened.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.#ctor(System.String,SM64Lib.Levels.ILevelManager)">
+            <summary>
+            Creates a new instance with input ROM.
+            </summary>
+            <param name="FileName">The ROM that will be opened.</param>
+            <param name="levelManager">The ROM that will be opened.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.AreRomUpdatesAvaiable">
+            <summary>
+            Gets if Update Patches are avaiable for this ROM.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.RomManager.GameName">
+            <summary>
+            Gets or sets the Game Name which is used for the EEP-ROM (Save file).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SM64Lib.RomManager.GetBinaryRom(System.IO.FileAccess)">
+            <summary>
+            Gets a new instance of BinaryRom, a BinaryData object.
+            </summary>
+            <param name="access"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SM64Lib.RomManager.SaveRom(System.Boolean,System.Boolean)">
+            <summary>
+            Saves the ROM.
+            </summary>
+            <param name="IgnoreNeedToSave">If True, everything will be saved even if there are no changes.</param>
+            <param name="DontPatchUpdates">If True, Update Patches will be ignored.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.ClearTextGroups">
+            <summary>
+            Removes all loaded text groups, so they can be re-loaded.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.RomManager.LoadTextGroup(System.String,System.Boolean)">
+            <summary>
+            Loads the Text Tables.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.RomManager.GetTextGroupInfos">
+            <summary>
+            Gets the all known text sections
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SM64Lib.RomManager.SaveTextGroup(SM64Lib.Text.TextGroup)">
+            <summary>
+            Saves the Text Tables.
+            </summary>
+            <param name="table">The text table to save.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.SaveTextGroup(System.Boolean@,SM64Lib.Text.TextGroup)">
+            <summary>
+            Saves the Text Tables.
+            </summary>
+            <param name="needUpdateChecksum">Outputs if the checksumarea was changed and need to be updated.</param>
+            <param name="table">The text table to save.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.SaveAllTextGroups(System.Boolean)">
+            <summary>
+            Saves all Text Tables.
+            </summary>
+            <param name="IgnoreNeedToSave">If True, everything will be saved even if there are no changes.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.SaveAllTextGroups(System.Boolean@,System.Boolean)">
+            <summary>
+            Saves all Text Tables.
+            </summary>
+            <param name="needUpdateChecksum">Outputs if the checksumarea was changed and need to be updated.</param>
+            <param name="IgnoreNeedToSave">If True, everything will be saved even if there are no changes.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.LoadLevels">
+            <summary>
+            Loads all Levels that are in the ROM.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.RomManager.SaveLevels(System.Int32)">
+            <summary>
+            Saves all Levels to the ROM.
+            </summary>
+            <param name="StartAddress">At this position the Levels will be written in ROM.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.LoadGlobalObjectBank">
+            <summary>
+            Loads the global object bank, if avaiable (WIP)
+            </summary>
+        </member>
+        <member name="M:SM64Lib.RomManager.AddLevel(System.Byte)">
+            <summary>
+            Creates and adds a new Level with ID.
+            </summary>
+            <param name="LevelID">The ID of the Level.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.RemoveLevel(SM64Lib.Levels.Level)">
+            <summary>
+            Removes a Level from the list and ROM.
+            </summary>
+            <param name="level">The level to remove.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.ChangeLevelID(SM64Lib.Levels.Level,System.UInt16,System.Nullable{System.Boolean})">
+            <summary>
+            Changes the Level ID from a existing Level.
+            </summary>
+            <param name="level">The Level where to change the Level ID.</param>
+            <param name="newLevelID">The new Level ID.</param>
+            <param name="EnableActSelector">Activate/Deactivate the Act Selector fot the Level.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.LoadMusic">
+            <summary>
+            Loads the Music from the ROM.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.RomManager.CheckROM">
+            <summary>
+            Check, if the ROM is a valid SM64 ROM.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SM64Lib.RomManager.CreateROM(System.Boolean)">
+            <summary>
+            Extens the ROM.
+            </summary>
+            <param name="IsSecondTry">If True, no new try will be executed, if failed.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.ResetLevelPointer(System.Byte)">
+            <summary>
+            Resets the Level Pointer of the Level with the given ID.
+            </summary>
+            <param name="ID">The ID where to reset the pointer.</param>
+        </member>
+        <member name="M:SM64Lib.RomManager.ResetLevelPointer(SM64Lib.Levels.LevelInfoDataTabelList.Level)">
+            <summary>
+            Resets the Level Pointer of the Level with the given Levelinfo.
+            </summary>
+            <param name="info">The Levelinfo where to reset the pointer.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E29A037E-451D-05D8-12D2-FC9F72BD60AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SM64Lib</RootNamespace>
+    <AssemblyName>SM64Lib</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SM64Lib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CA1009</NoWarn>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SM64Lib.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\RelMono\</OutputPath>
+    <DocumentationFile>SM64Lib.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TRACE;RelMono</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="INIFileParser, Version=2.5.2.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ini-parser.2.5.2\lib\net20\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.Simple3DFileParser">
+      <HintPath>..\Shared Libs\Pilz.Simple3DFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Z.ExtensionMethods.WithNamespace, Version=2.1.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.ExtensionMethods.WithNamespace.2.1.1\lib\net45\Z.ExtensionMethods.WithNamespace.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="SM64Lib.Data.System" />
+    <Import Include="SM64Lib.TextValueConverter" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+    <Import Include="Z.Collections.Extensions" />
+    <Import Include="Z.IO.Extensions" />
+    <Import Include="Z.Xml.Linq.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="My Project\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SM64Lib\Behavior\Script\Behaviorscript.cs" />
+    <Compile Include="SM64Lib\Behavior\Script\BehaviorscriptCommand.cs" />
+    <Compile Include="SM64Lib\Behavior\Script\BehaviorscriptCommandCollection.cs" />
+    <Compile Include="SM64Lib\Behavior\Script\BehaviorscriptCommandTypes.cs" />
+    <Compile Include="SM64Lib\Configuration\CustomObjectConfig.cs" />
+    <Compile Include="SM64Lib\Configuration\LevelAreaConfig.cs" />
+    <Compile Include="SM64Lib\Configuration\LevelConfig.cs" />
+    <Compile Include="SM64Lib\Configuration\MusicConfiguration.cs" />
+    <Compile Include="SM64Lib\Configuration\ObjectBankConfig.cs" />
+    <Compile Include="SM64Lib\Configuration\RomConfig.cs" />
+    <Compile Include="SM64Lib\Data\BinaryFile.cs" />
+    <Compile Include="SM64Lib\Data\System\Bits.cs" />
+    <Compile Include="SM64Lib\FilePathsConfiguration.cs" />
+    <Compile Include="SM64Lib\General.cs" />
+    <Compile Include="SM64Lib\Geolayout\BackgroundIDs.cs" />
+    <Compile Include="SM64Lib\Geolayout\BackgroundPointers.cs" />
+    <Compile Include="SM64Lib\Geolayout\CameraPresets.cs" />
+    <Compile Include="SM64Lib\Geolayout\EnvironmentEffects.cs" />
+    <Compile Include="SM64Lib\Geolayout\GeoAsmPointer.cs" />
+    <Compile Include="SM64Lib\Geolayout\DefaultGeolayers.cs" />
+    <Compile Include="SM64Lib\Geolayout\Geopointer.cs" />
+    <Compile Include="SM64Lib\Geolayout\Script\GeolayoutCommandCollection.cs" />
+    <Compile Include="SM64Lib\Geolayout\Script\GeolayoutCommandTypes.cs" />
+    <Compile Include="SM64Lib\Geolayout\TerrainType.cs" />
+    <Compile Include="SM64Lib\ExtensionMethods.cs" />
+    <Compile Include="SM64Lib\Level\ILevelManager.cs" />
+    <Compile Include="SM64Lib\Level\LevelList.cs" />
+    <Compile Include="SM64Lib\Level\LevelSaveResult.cs" />
+    <Compile Include="SM64Lib\Level\LevelType.cs" />
+    <Compile Include="SM64Lib\Level\OriginalLevelManager.cs" />
+    <Compile Include="SM64Lib\Level\OriginalLevel.cs" />
+    <Compile Include="SM64Lib\Level\OriginalLevelArea.cs" />
+    <Compile Include="SM64Lib\Level\SM64ELevelArea.cs" />
+    <Compile Include="SM64Lib\Level\RMLevelArea.cs" />
+    <Compile Include="SM64Lib\Level\SM64ELevel.cs" />
+    <Compile Include="SM64Lib\Level\RMLevel.cs" />
+    <Compile Include="SM64Lib\Level\Script\LevelscriptCommandCollection.cs" />
+    <Compile Include="SM64Lib\Level\Script\LevelscriptCommandTypes.cs" />
+    <Compile Include="SM64Lib\Level\SM64EditorLevelManager.cs" />
+    <Compile Include="SM64Lib\Level\SpecialBoxList.cs" />
+    <Compile Include="SM64Lib\Level\WarpTools.cs" />
+    <Compile Include="SM64Lib\Model\Collision\BoxData.cs" />
+    <Compile Include="SM64Lib\Model\Collision\BoxDataType.cs" />
+    <Compile Include="SM64Lib\Model\Collision\ColMesh.cs" />
+    <Compile Include="SM64Lib\Model\Collision\Triangel.cs" />
+    <Compile Include="SM64Lib\Model\Collision\TriangelList.cs" />
+    <Compile Include="SM64Lib\Model\Collision\Vertex.cs" />
+    <Compile Include="SM64Lib\Model\Collision\VertexList.cs" />
+    <Compile Include="SM64Lib\Model\Conversion\FaceCullingMode.cs" />
+    <Compile Include="SM64Lib\Model\Conversion\Fast3DWriting\DisplaylistSelectionMode.cs" />
+    <Compile Include="SM64Lib\Model\Conversion\Fast3DWriting\DisplaylistSelectionSettings.cs" />
+    <Compile Include="SM64Lib\Model\Conversion\Fast3DWriting\DisplayListType.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\DisplayLists\Script\CommandTypes.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\DisplayLists\Script\DisplayListCommand.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\DisplayLists\Script\DisplayListScript.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\DisplayLists\DisplayList.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\DisplayLists\DisplayListCollection.cs" />
+    <Compile Include="SM64Lib\Model\Fog.cs" />
+    <Compile Include="SM64Lib\Model\FogPreset.cs" />
+    <Compile Include="SM64Lib\Object Banks\Data\ObjectBankDataCommand.cs" />
+    <Compile Include="SM64Lib\Object Banks\Data\ObjectBankDataList.cs" />
+    <Compile Include="SM64Lib\Object Banks\Data\ObjectBankDataListCollection.cs" />
+    <Compile Include="SM64Lib\Object Banks\Data\ObjectBankData.cs" />
+    <Compile Include="SM64Lib\RomVersion.cs" />
+    <Compile Include="SM64Lib\EventArguments\RomVersionEventArgs.cs" />
+    <Compile Include="SM64Lib\Model\Conversion\Fast3DWriting\DisplaylistProps.cs" />
+    <Compile Include="SM64Lib\Model\Conversion\Fast3DParsing\TextureLoadedInfos.cs" />
+    <Compile Include="SM64Lib\NPCs\CoinsManager.cs" />
+    <Compile Include="SM64Lib\Object Banks\CustomObject.cs" />
+    <Compile Include="SM64Lib\Objects\StarNames.cs" />
+    <Compile Include="SM64Lib\Model\ObjectInputSettings.cs" />
+    <Compile Include="SM64Lib\RomManagerSettings.cs" />
+    <Compile Include="SM64Lib\Data\BinaryData.cs" />
+    <Compile Include="SM64Lib\Data\BinaryArrayData.cs" />
+    <Compile Include="SM64Lib\Data\BinaryStreamData.cs" />
+    <Compile Include="SM64Lib\Data\BinarySegBank.cs" />
+    <Compile Include="SM64Lib\Data\BinaryRom.cs" />
+    <Compile Include="SM64Lib\Geolayout\Geolayout.cs" />
+    <Compile Include="SM64Lib\Geolayout\Script\GeolayoutCommandFunctions.cs" />
+    <Compile Include="SM64Lib\Geolayout\Script\GeolayoutCommand.cs" />
+    <Compile Include="SM64Lib\Geolayout\Script\Geolayoutscript.cs" />
+    <Compile Include="SM64Lib\Level\LevelInfoDataTabel.cs" />
+    <Compile Include="SM64Lib\Level\LevelArea.cs" />
+    <Compile Include="SM64Lib\Level\AreaBG.cs" />
+    <Compile Include="SM64Lib\Level\Enums.cs" />
+    <Compile Include="SM64Lib\Level\Level.cs" />
+    <Compile Include="SM64Lib\Level\LevelBG.cs" />
+    <Compile Include="SM64Lib\Level\LevelManager.cs" />
+    <Compile Include="SM64Lib\Level\LevelNumberTable.cs" />
+    <Compile Include="SM64Lib\Level\Script\Levelscript.cs" />
+    <Compile Include="SM64Lib\Level\Script\LevelscriptCommandFunctions.cs" />
+    <Compile Include="SM64Lib\Level\Script\LevelscriptCommand.cs" />
+    <Compile Include="SM64Lib\Level\Script\Managed Commands\IManagedLevelscriptCommand.cs" />
+    <Compile Include="SM64Lib\Level\ShowMessage.cs" />
+    <Compile Include="SM64Lib\Level\SpecialBox.cs" />
+    <Compile Include="SM64Lib\Model\Collision\CollisionMap.cs" />
+    <Compile Include="SM64Lib\Level\Script\Managed Commands\ManagedScrollingTextures.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\TextureFormatSettings.cs" />
+    <Compile Include="SM64Lib\Model\Collision\CollisionSettings.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\DisplayLists\Script\Commands.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\Fast3DBuffer.cs" />
+    <Compile Include="SM64Lib\Model\ObjectModel.cs" />
+    <Compile Include="SM64Lib\Model\Conversion\Fast3DParsing\Fast3DParser.cs" />
+    <Compile Include="SM64Lib\Model\Conversion\Fast3DWriting\Fast3DWriter.cs" />
+    <Compile Include="SM64Lib\Model\Fast3D\TextureManager.cs" />
+    <Compile Include="SM64Lib\Music\MusicList.cs" />
+    <Compile Include="SM64Lib\Music\MusicSequence.cs" />
+    <Compile Include="SM64Lib\Music\InstrumentSetList.cs" />
+    <Compile Include="SM64Lib\Object Banks\CustomObjectBank.cs" />
+    <Compile Include="SM64Lib\Objects\ItemBoxContents\ItemBoxContentEntry.cs" />
+    <Compile Include="SM64Lib\Objects\ItemBoxContents\ItemBoxContentManager.cs" />
+    <Compile Include="SM64Lib\Objects\ItemBoxContents\ItemBoxContentTable.cs" />
+    <Compile Include="SM64Lib\RomManager.cs" />
+    <Compile Include="SM64Lib\Script\BaseCommand.cs" />
+    <Compile Include="SM64Lib\Script\BaseCommandCollection.cs" />
+    <Compile Include="SM64Lib\Script\ICommand.cs" />
+    <Compile Include="SM64Lib\SegmentedBanking\SegmentedBank.cs" />
+    <Compile Include="SM64Lib\SegmentedBanking\SegmentedBanks.cs" />
+    <Compile Include="SM64Lib\Datatypecastes.cs" />
+    <Compile Include="SM64Lib\Exceptions\RomCompatiblityException.cs" />
+    <Compile Include="SM64Lib\Patching\PatchClass.cs" />
+    <Compile Include="SM64Lib\Objects\StarManager.cs" />
+    <Compile Include="SM64Lib\Data\System\SwapInts.cs" />
+    <Compile Include="SM64Lib\Text\DialogHorizontalPosition.cs" />
+    <Compile Include="SM64Lib\Text\DialogVerticalPosition.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextArrayItemInfo.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextTableDialogDataInfo.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextTableDataInfo.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextGroupInfo.cs" />
+    <Compile Include="SM64Lib\Text\M64TextEncoding.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextProfileInfo.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextArrayGroupInfo.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextTableGroupInfo.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextTableSegmentedInfo.cs" />
+    <Compile Include="SM64Lib\Text\TextArrayGroup.cs" />
+    <Compile Include="SM64Lib\Text\TextArrayItem.cs" />
+    <Compile Include="SM64Lib\Text\TextProfileInfoManager.cs" />
+    <Compile Include="SM64Lib\Text\TextTableDialogItem.cs" />
+    <Compile Include="SM64Lib\Text\TextTableItem.cs" />
+    <Compile Include="SM64Lib\Text\TextTableGroup.cs" />
+    <Compile Include="SM64Lib\Text\TextItem.cs" />
+    <Compile Include="SM64Lib\Text\Profiles\TextTableType.cs" />
+    <Compile Include="SM64Lib\Text\TextGroup.cs" />
+    <Compile Include="SM64Lib\Trajectories\Trajectories.cs" />
+    <Compile Include="SM64Lib\Trajectories\Trajectory.cs" />
+    <Compile Include="SM64Lib\Trajectories\TrajectoryName.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64Lib.My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>SM64Lib.My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SM64Lib.LIBMIO0\SM64Lib.LIBMIO0.csproj">
+      <Project>{e4cec3b1-5778-4d63-8c97-c95153cdc052}</Project>
+      <Name>SM64Lib.LIBMIO0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib.N64Graphics\SM64Lib.N64Graphics.csproj">
+      <Project>{d9258483-950c-46d1-a333-31f32492cd7e}</Project>
+      <Name>SM64Lib.N64Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj">
+      <Project>{e11312a8-5e8d-073f-0086-11d677519581}</Project>
+      <Name>SM64Lib.TextValueConverter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

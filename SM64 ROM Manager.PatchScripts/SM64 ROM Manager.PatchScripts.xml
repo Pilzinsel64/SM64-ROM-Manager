@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SM64 ROM Manager.PatchScripts</name>
+    </assembly>
+    <members>
+        <member name="T:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols">
+            <summary>
+            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols.ResourceManager">
+            <summary>
+            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols.Culture">
+            <summary>
+            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Class">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Delegate">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Enum">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Event">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Interface">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Module">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Namespace">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Property">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols._Structure">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols.Field">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.ReflectionSymbols.Methode">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.PatchScripts.My.Resources.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.My.Resources.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchProfile.Name">
+            <summary>
+            The Name of the Profile.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchProfile.Scripts">
+            <summary>
+            A list with scripts.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchProfile.Version">
+            <summary>
+            The version of this profile.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchProfile.Description">
+            <summary>
+            The description of this profile
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchProfile.FileName">
+            <summary>
+            The Xml file for this profile.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SM64_ROM_Manager.PatchScripts.PatchScript">
+            <summary>
+            A Profile containing a script and some descriptions.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchScript.Name">
+            <summary>
+            The Name of this Script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchScript.Script">
+            <summary>
+            The Script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchScript.Type">
+            <summary>
+            Defines the syntax of the script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchScript.Description">
+            <summary>
+            The description of this Script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.PatchScript.References">
+            <summary>
+            A collection of Reference Assemblies to bind at compiling script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SM64_ROM_Manager.PatchScripts.ScriptType">
+            <summary>
+            Defines the script type, so the behavior on write it.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.PatchScripts.ScriptType.TweakScript">
+            <summary>
+            A tweak syntax known from the SM64 Editor.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.PatchScripts.ScriptType.VisualBasic">
+            <summary>
+            A Visual Basic code.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.PatchScripts.ScriptType.CSharp">
+            <summary>
+            A C# Code.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.PatchScripts.ScriptType.DynamicLinkLibrary">
+            <summary>
+            A DLL file containing the Code.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.PatchScripts.ScriptType.Armips">
+            <summary>
+            Code that can be applied using Armips.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.PatchScripts.MyIcons">
+            <summary>
+            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.ResourceManager">
+            <summary>
+            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.Culture">
+            <summary>
+            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_cancel_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_checkmark_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_downloading_updates_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_edit_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_open_folder_16px_1">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_play_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_plus_math_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_save_16px_1">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_search_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_triggering_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

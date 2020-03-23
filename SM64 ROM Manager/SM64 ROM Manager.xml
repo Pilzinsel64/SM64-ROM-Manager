@@ -1,0 +1,1198 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SM64 ROM Manager</name>
+    </assembly>
+    <members>
+        <member name="T:SM64_ROM_Manager.My.Resources.MyIcons">
+            <summary>
+            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.ResourceManager">
+            <summary>
+            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.Culture">
+            <summary>
+            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_about_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_add_node_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_add_subnode_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_arrow_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_arrow_40px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_cancel_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_chevron_down_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_chevron_up_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_coins_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_collapse_arrow_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_color_dropper_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_controller_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_copy_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_cut_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_2_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_node_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_subnode_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_download_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_downloading_updates_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_node_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_error_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_filled_star_location_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_fit_to_width_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_folder_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_forward_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_help_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_high_importance_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_info_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_map_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_merge_horizontal_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_message_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_move_node_down_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_move_node_up_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_music_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_open_folder_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_paper_plane_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_paste_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_paste_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_paste_special_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_pills_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_plugin_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_preview_pane_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_redo_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_refresh_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_save_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_screenshot_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_settings_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_split_vertical_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_support_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_syringe_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_text_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_undo_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_upload_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_variation_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.MyOldIcons">
+            <summary>
+            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.ResourceManager">
+            <summary>
+            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Culture">
+            <summary>
+            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Add_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Edit_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.EditPicture_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Psychology_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Psychology_34px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Refresh_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Remove_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Save_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Save_18px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Save_19px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Save_20px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.SaveAll_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.SaveAll_16px1">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Shrink_16px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Shrink_16px1">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Shrink_32px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.Shrink_34px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyOldIcons.SMS_34px">
+            <summary>
+            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.btn_donateCC_LG">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentBuild">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die 1 ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die 0 ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.MoveCameraCross">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.MoveCameraWheel">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.MoveObjectCross">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.MoveObjectWheel">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.Psychology_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.Psychology_32px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.Psychology_34px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.RotateObjectCross">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.RotateObjectWheel">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Resources.SMS_34px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_CoinCounter">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Coins ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_CoinCounter_Counter">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Counter ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_CoinCounter_Icon">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Icon ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_CoinCounter_X">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die X ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_LiveCounter">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Lives ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_LiveCounter_Counter">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Counter ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_LiveCounter_Icon">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Icon ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_LiveCounter_X">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die X ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_StarCounter">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Stars ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_StarCounter_Counter">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Counter ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_StarCounter_Icon">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Icon ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Counters_StarCounter_X">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die X ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_FirstContainer">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Positions ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Main">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Main ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Main_Counters">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Counters ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Main_Timer">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Timer ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Timer_Counter">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Counter ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Timer_Time">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Time ähnelt.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.LangResCoinsManager">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.LangResCoinsManager.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.LangResCoinsManager.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.LangResCoinsManager.MsgBox_Experimental3DCoinsRemove">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Remove 3D Coins is experimental and can cause problems with custom 3D Coins. Are you sure you want to continue? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.LangResCoinsManager.MsgBox_Experimental3DCoinsRemove_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Remove 3D Coins ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.LangResCoinsManager.Notify_3DCoinsPatchesSuccess">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die 3D Coins has been patched successfully! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.LangResCoinsManager.Notify_3DCoinsRemovedSuccess">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die 3D Coins has been removed successfully! ähnelt.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.Form_Main_Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Button_OpenRom">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Open ROM... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Exception_RomWasUsedBySM64E">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die This ROM was modified by SM64 Editor and isn&apos;t compatible with SM64 ROM Manager. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_BankSizeChangedSuccess">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Successfully changed the size of bank 0x19. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_BankSizeChangedSuccess_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Size changed ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_ConvertToMidi_Failed">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die An error occurred while converting .m64 to .midi! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_ConvertToMidi_Failed_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die M64 to MIDI failed ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_ConvertToMidi_Succes">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Successfully converted M64 to MIDI ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_ConvertToMidi_Succes_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die M64 to MIDI success ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_ErrorSavingSequence">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die An error occurred while saving the sequence. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_ExportToMidi_Failed">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die An error occurred while exporting the sequence as MIDI. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_ExportToMidi_Failed_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Export to MIDI ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_GameNameHasInvalidChars">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The game name probably contains invalid characters. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_InvalidBankSize">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The size is too small. The minimum size is {0}. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_InvalidBankSize_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Invalid size ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_InvalidBgImageSize">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die This image does not have a valid size.&lt;br/&gt;The &lt;b&gt;recommended&lt;/b&gt;size is 248x248. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_InvalidBgImageSize_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Invalid size ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_LimitSequenceCountReached">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The limit of possible music sequences in the original game is 127. Do you want to add more anyway? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_LimitSequenceCountReached_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Limit reached ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_MaxCountAreasReached">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The maximum amount of areas a level can have is 8. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_MaxCountAreasReached_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Maximum reached ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_MaxSequenceCountReached">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The maximum amount of possible music sequences has been reached! It is not possible to add any more. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_MaxSequenceCountReached_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Maximum reached ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_PrepaireRom">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The ROM will be prepared for use with SM64 ROM Manager. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_PrepaireRom_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Prepare ROM ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomCanNotBestarted">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The ROM can&apos;t be started. Make sure the path to the emulator is correct. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomCanNotBestarted_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Launch Game ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomChanged">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The ROM was changed by an external program. Do you want to reload the ROM?&lt;br/&gt;&lt;br/&gt;Warning:&lt;br/&gt;When reloading the ROM, all unsaved changes will be lost! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomChanged_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die ROM changes detected ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomRemoved">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The opened ROM has been deleted.&lt;br/&gt;The program will close now. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomRemoved_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die ROM deleted ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_TextsOverLimit">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Your text exceeds the character limit! Please shorten it before saving the ROM. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_TextsOverLimit_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Character limit exceeded ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_UnknownErrorAtLoadingRom">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die An unknown error occurred while loading the ROM. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_UnknownErrorAtLoadingRom_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Load ROM ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_UnsavedChanges">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die There are unsaved changes to the ROM.&lt;br/&gt;Do you want to save before closing? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_UnsavedChanges_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Unsaved changes ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_UpdatePatchesAvaiable">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die There are updated patches available for this ROM, which provide improvements and/or new features.&lt;br/&gt;It is &lt;u&gt;highly recommended&lt;/u&gt; to apply them.&lt;br/&gt;&lt;br/&gt;Do you want to apply the patches now? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_UpdatePatchesAvaiable_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die New patches available ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Notify_ShouldLoadRomFirst">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die You must open a ROM first! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_CalculatingTextSpace">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Calculating space... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_Checking">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Checking ROM... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_CreatingNewSequence">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Creating new sequence... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_CreatingTextList">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Creating text list... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_ExportingModel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Exporting Model Map... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_ExportingSequence">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Exporting Sequence... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_ImportingSequence">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Importing Sequence ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_LoadingLevel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Loading Level... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_LoadingModel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Loading Model Map... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_LoadingMusic">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Loading Music... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_LoadingRom">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Loading ROM... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_LoadingTexts">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Loading text from ROM... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_Ready">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Ready ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_SavingRom">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Saving ROM... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_StartingUp">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Starting up... ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_Area">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Area ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_ChangeReplacingLevel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Change level to overwrite ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_Disabled">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Disabled ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_Invisible">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Invisible ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_LevelStar">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Level {0}, Star {1} ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_Mist">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Mist ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_NewLength">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die New Length ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_SecretStar">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Secret Star ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_StartPosition">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Start Position ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_ToxicHaze">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Toxic Haze ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_Unknown">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Unknown ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_UsedOfMaxLeft">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die {0} of {1} used / {2} left ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Text_Water">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Water ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.WarningBox_RomChanged_ReloadRom">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Reload ROM ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.WarningBox_RomChanged_Text">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The ROM was changed by an external program. To reload the ROM click on &apos;Reload ROM&apos;. ähnelt.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.Global_Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Abort">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Abort ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Cancel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Cancel ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Close">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Close ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_No">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die No ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Okay">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Okay ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Yes">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Yes ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_Error">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Error ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_Off">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Off ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_On">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die On ähnelt.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources.MsgBox_PluginInstalled">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Plugin will be removed on next restart of SM64 ROM Manager. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources.MsgBox_PluginInstalled_Error_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Installing Plugin ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources.MsgBox_PluginInstalled_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Plugin installed ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources.MsgBox_PluginRemoved">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Plugin installed successfully. The changes may be visible only after restart the SM64 ROM Manager. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources.MsgBox_PluginRemoved_Error_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Removing Plugin ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources.MsgBox_PluginRemoved_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Plugin Removed ähnelt.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.Star_Position_Editor_Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Star_Position_Editor_Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Star_Position_Editor_Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Star_Position_Editor_Resources.MsgBox_Done">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Star Position has been successfully written to ROM. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Star_Position_Editor_Resources.MsgBox_Done_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Done ähnelt.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.TextProfileEditorLangRes">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.TextProfileEditorLangRes.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.TextProfileEditorLangRes.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.TextProfileEditorLangRes.nArrayGroups">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Array Group ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.TextProfileEditorLangRes.nTableGroups">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Table Groups ähnelt.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Apply PPF</name>
+    </assembly>
+    <members>
+        <member name="T:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.MsgBox_FileNotFound">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Some files are missing! You should redownload ROM Manager to solve the problem. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.MsgBox_FileNotFound_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Missing files ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.MsgBox_Success">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The patch has been successfully applied! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.MsgBox_Success_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Done ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.MsgBox_UnkownError">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die An unknown error occurred. The patch has not been applied. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.MsgBox_UnkownError_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Unknown error ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.ApplyPPFTranslation.Text_NoFileLoaded">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die No file loaded! ähnelt.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.ApplyPPF.My.Resources.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ApplyPPF.My.Resources.Resources.icons8_folder_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3A773EB-A29D-032A-29A7-BC008496BDA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SM64_ROM_Manager.My.MyApplication</StartupObject>
+    <RootNamespace>SM64_ROM_Manager</RootNamespace>
+    <AssemblyName>SM64 ROM Manager</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,CS1591</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,CS1591</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1443729764_forest_mushroom.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\RelMono\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,CS1591</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TRACE;RelMono</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\RelMono\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\RelMono\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Ben.Demystifier, Version=0.1.0.0, Culture=neutral, PublicKeyToken=a6d206e05440431a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ben.Demystifier.0.1.4\lib\net45\Ben.Demystifier.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Design, Version=14.0.0.3, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout.Design">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="drsPwEnc">
+      <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <HintPath>..\packages\FCTB.2.16.24\lib\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="HexEditExample">
+      <HintPath>..\Shared Libs\HexEditExample.dll</HintPath>
+    </Reference>
+    <Reference Include="INIFileParser, Version=2.5.2.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ini-parser.2.5.2\lib\net20\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Core.1.1.0.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.1.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PaintingControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\PaintingControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.Drawing.Drawing3D.OpenGLFactory">
+      <HintPath>..\Shared Libs\Pilz.Drawing.Drawing3D.OpenGLFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.Reflection.PluginSystem">
+      <HintPath>..\Shared Libs\Pilz.Reflection.PluginSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.Simple3DFileParser">
+      <HintPath>..\Shared Libs\Pilz.Simple3DFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.Win32, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\Pilz.Win32.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DirectInput.4.2.0\lib\net45\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleHistory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleHistory.1.1.0\lib\net45\SimpleHistory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=1.4.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.7.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Z.ExtensionMethods.WithNamespace, Version=2.1.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.ExtensionMethods.WithNamespace.2.1.1\lib\net45\Z.ExtensionMethods.WithNamespace.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="SM64Lib.General" />
+    <Import Include="SM64Lib.TextValueConverter" />
+    <Import Include="SM64Lib.TextValueConverter.TextValueConverter" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+    <Import Include="Z.Collections.Extensions" />
+    <Import Include="Z.Core.Extensions" />
+    <Import Include="Z.Data.Extensions" />
+    <Import Include="Z.Drawing.Extensions" />
+    <Import Include="Z.IO.Extensions" />
+    <Import Include="Z.Net.Extensions" />
+    <Import Include="Z.Window.Forms.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
+    <Compile Include="ApplicationEvents.cs" />
+    <Compile Include="MyIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MyOldIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyOldIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\Controllers\PluginInstaller.cs" />
+    <Compile Include="RomManager\Controllers\TextManagerController.cs" />
+    <Compile Include="RomManager\EventArgs\LevelAreaEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\LevelAreaBackgroundModeChangedEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\LevelBackgroundImageChangedEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\LevelBackgroundModeChangedEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\EnabledEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\RequestValueEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\RequestRomManagerEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\SpecialItemEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\LevelEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\TextItemEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\RomChangesAvaiableEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\OtherStatusInfosChangedEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\MusicSequenceEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\StatusTextChangedEventArgs.cs" />
+    <Compile Include="RomManager\EventArgs\RomManagerChangedEventArgs.cs" />
+    <Compile Include="RomManager\GUI\Coins Settings\Coins Settings.Designer.cs">
+      <DependentUpon>Coins Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Coins Settings\Coins Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\AdvPropGrid_BehaviorManager.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\Managed3DObject.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\ManagedColFace.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\ManagedInstantWarp.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\ManagedSpecialBox.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\ManagedWarp.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\InformationListsDialog.Designer.cs">
+      <DependentUpon>InformationListsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\InformationListsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\MapManagement.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\ObjectControlling.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\OpenGLManager.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\TextureEditor.Designer.cs">
+      <DependentUpon>TextureEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\TextureEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\OtherTexturesJsonClasses.cs" />
+    <Compile Include="RomManager\Controllers\MainController.cs" />
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.Designer.cs">
+      <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.Designer.cs">
+      <DependentUpon>ObjectBankSelectorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Text Manager\MinimalAdvPropertyGridManager.cs" />
+    <Compile Include="RomManager\GUI\Main Form\Text Manager\MyTextProfileInfoManager.cs" />
+    <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfileEditorExtensions.cs" />
+    <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.Designer.cs">
+      <DependentUpon>TextProfileEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.Designer.cs">
+      <DependentUpon>TextProfilesManagerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Other\ThankYouForm.Designer.cs">
+      <DependentUpon>ThankYouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Other\ThankYouForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.Designer.cs">
+      <DependentUpon>AddressListEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Bank Manager\CustomBankManager.Designer.cs">
+      <DependentUpon>CustomBankManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Bank Manager\CustomBankManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\ImportLevelDialog.Designer.cs">
+      <DependentUpon>ImportLevelDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\ImportLevelDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\ApplyStyleMgrStyle.Designer.cs">
+      <DependentUpon>ApplyStyleMgrStyle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\ApplyStyleMgrStyle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Tab_General.Designer.cs">
+      <DependentUpon>Tab_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Tab_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Tab_LevelManager.Designer.cs">
+      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Tab_LevelManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Tab_MusicManager.Designer.cs">
+      <DependentUpon>Tab_MusicManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Tab_MusicManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Tab_TextManager.Designer.cs">
+      <DependentUpon>Tab_TextManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Tab_TextManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.Designer.cs">
+      <DependentUpon>ScrollTexEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexPropertyClass.cs" />
+    <Compile Include="RomManager\GUI\Settings\LevelEditorInputSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\HexEditor.Designer.cs">
+      <DependentUpon>HexEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\HexEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptions.cs" />
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsBlock.cs" />
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsCords.cs" />
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsForm.Designer.cs">
+      <DependentUpon>HUDOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsLangRes.de.Designer.cs">
+      <DependentUpon>HUDOptionsLangRes.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsLangRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HUDOptionsLangRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\ItemBoxContentEditor.Designer.cs">
+      <DependentUpon>ItemBoxContentEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\ItemBoxContentEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\PluginInstallerForm.Designer.cs">
+      <DependentUpon>PluginInstallerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\PluginInstallerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\RGB Editor\RGBEditInfoEditor.Designer.cs">
+      <DependentUpon>RGBEditInfoEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\RGB Editor\RGBEditInfoEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\RGB Editor\RGBEditor.Designer.cs">
+      <DependentUpon>RGBEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\RGB Editor\RGBEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\StarPositionEditor.Designer.cs">
+      <DependentUpon>StarPositionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\StarPositionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\TrajectoryEditor.Designer.cs">
+      <DependentUpon>TrajectoryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\TrajectoryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Coins Properties\LangResCoinsManager.de.Designer.cs">
+      <DependentUpon>LangResCoinsManager.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Coins Properties\LangResCoinsManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LangResCoinsManager.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\MainForm\Form_Main_Resources.de.Designer.cs">
+      <DependentUpon>Form_Main_Resources.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\MainForm\Form_Main_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Form_Main_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Global\Global_Resources.de.Designer.cs">
+      <DependentUpon>Global_Resources.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Global\Global_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Global_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\AreaEditorHistoryFunctions.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\Form_AreaEditor.Designer.cs">
+      <DependentUpon>Form_AreaEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\Form_AreaEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\Components\PropertyValueEditors.cs" />
+    <Compile Include="RomManager\Components\TypeConverters.cs" />
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\ValueInputDialog.Designer.cs">
+      <DependentUpon>ValueInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\ValueInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Script\ScriptDumper.Designer.cs">
+      <DependentUpon>ScriptDumper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Script\ScriptDumper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Plugin Installer\Plugin_Installer_Resources.de.Designer.cs">
+      <DependentUpon>Plugin_Installer_Resources.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Plugin Installer\Plugin_Installer_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plugin_Installer_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.de.Designer.cs">
+      <DependentUpon>Star_Position_Editor_Resources.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Star_Position_Editor_Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Text Profile Editor\TextProfileEditorLangRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextProfileEditorLangRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\Modules\BehaviorInfoList\BehaviorInfo.cs" />
+    <Compile Include="RomManager\Modules\BehaviorInfoList\BehaviorInfoList.cs" />
+    <Compile Include="RomManager\Modules\Extensions.cs" />
+    <Compile Include="RomManager\Modules\ObjectComboList\ObjectCombo.cs" />
+    <Compile Include="RomManager\Modules\OutputMidi.cs" />
+    <Compile Include="RomManager\GUI\Settings\LevelEditorInputManager.Designer.cs">
+      <DependentUpon>LevelEditorInputManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Settings\LevelEditorInputManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Settings\Form_Stylemanager.Designer.cs">
+      <DependentUpon>Form_Stylemanager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Settings\Form_Stylemanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Other\Form_ErrorDialog.designer.cs">
+      <DependentUpon>Form_ErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Other\Form_ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\Components\LM Custom ListViewItems.cs" />
+    <Compile Include="RomManager\GUI\Other\Form_About.Designer.cs">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Other\Form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Settings\Form_Settings.Designer.cs">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Settings\Form_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Form_AddSpecialItem.Designer.cs">
+      <DependentUpon>Form_AddSpecialItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Form_AddSpecialItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.Designer.cs">
+      <DependentUpon>Form_AddNewLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Form_SetUpRGBA.Designer.cs">
+      <DependentUpon>Form_SetUpRGBA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Form_SetUpRGBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\Components\ListBoxCustomModelItem.Designer.cs">
+      <DependentUpon>ListBoxCustomModelItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\Components\ListBoxCustomModelItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="My Project\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Form_SetUpPoint.Designer.cs">
+      <DependentUpon>Form_SetUpPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Main Form\Level Manager\Form_SetUpPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Form_SM64TextConverter.Designer.cs">
+      <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Form_SM64TextConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\Modules\General.cs" />
+    <Compile Include="RomManager\Modules\ObjectComboList\ObjectComboList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyIcons.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyIcons.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyOldIcons.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyOldIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Coins Settings\Coins Settings.de.resx">
+      <DependentUpon>Coins Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Coins Settings\Coins Settings.resx">
+      <DependentUpon>Coins Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Level Editor\Form_AreaEditor.de.resx">
+      <DependentUpon>Form_AreaEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Level Editor\InformationListsDialog.de.resx">
+      <DependentUpon>InformationListsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Level Editor\InformationListsDialog.resx">
+      <DependentUpon>InformationListsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Level Editor\TextureEditor.resx">
+      <DependentUpon>TextureEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.de.resx">
+      <DependentUpon>Form_AddNewLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.resx">
+      <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.resx">
+      <DependentUpon>ObjectBankSelectorBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\MainForm.de.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.resx">
+      <DependentUpon>TextProfileEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.de.resx">
+      <DependentUpon>TextProfilesManagerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.resx">
+      <DependentUpon>TextProfilesManagerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Other\ThankYouForm.resx">
+      <DependentUpon>ThankYouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.de.resx">
+      <DependentUpon>AddressListEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.resx">
+      <DependentUpon>AddressListEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Bank Manager\CustomBankManager.de.resx">
+      <DependentUpon>CustomBankManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Bank Manager\CustomBankManager.resx">
+      <DependentUpon>CustomBankManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ImportLevelDialog.resx">
+      <DependentUpon>ImportLevelDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\ApplyStyleMgrStyle.resx">
+      <DependentUpon>ApplyStyleMgrStyle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Tab_General.de.resx">
+      <DependentUpon>Tab_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Tab_General.resx">
+      <DependentUpon>Tab_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Tab_LevelManager.de.resx">
+      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Tab_LevelManager.resx">
+      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Tab_MusicManager.de.resx">
+      <DependentUpon>Tab_MusicManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Tab_MusicManager.resx">
+      <DependentUpon>Tab_MusicManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Tab_TextManager.de.resx">
+      <DependentUpon>Tab_TextManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Tab_TextManager.resx">
+      <DependentUpon>Tab_TextManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.resx">
+      <DependentUpon>ScrollTexEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Settings\Form_Settings.de.resx">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Settings\Form_Stylemanager.de.resx">
+      <DependentUpon>Form_Stylemanager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Other\Form_About.de.resx">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Other\Form_ErrorDialog.de.resx">
+      <DependentUpon>Form_ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Form_SM64TextConverter.de.resx">
+      <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\HexEditor.resx">
+      <DependentUpon>HexEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsForm.resx">
+      <DependentUpon>HUDOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsLangRes.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HUDOptionsLangRes.de.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsLangRes.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HUDOptionsLangRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\ItemBoxContentEditor.de.resx">
+      <DependentUpon>ItemBoxContentEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\ItemBoxContentEditor.resx">
+      <DependentUpon>ItemBoxContentEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\PluginInstallerForm.de.resx">
+      <DependentUpon>PluginInstallerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\PluginInstallerForm.resx">
+      <DependentUpon>PluginInstallerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\RGB Editor\RGBEditInfoEditor.resx">
+      <DependentUpon>RGBEditInfoEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\RGB Editor\RGBEditor.resx">
+      <DependentUpon>RGBEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\StarPositionEditor.de.resx">
+      <DependentUpon>StarPositionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\StarPositionEditor.resx">
+      <DependentUpon>StarPositionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\TrajectoryEditor.de.resx">
+      <DependentUpon>TrajectoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\TrajectoryEditor.resx">
+      <DependentUpon>TrajectoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Coins Properties\LangResCoinsManager.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LangResCoinsManager.de.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Coins Properties\LangResCoinsManager.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LangResCoinsManager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Global\Global_Resources.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Global_Resources.de.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Global\Global_Resources.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Global_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\MainForm\Form_Main_Resources.de.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Form_Main_Resources.de.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\MainForm\Form_Main_Resources.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Form_Main_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Level Editor\Form_AreaEditor.resx">
+      <DependentUpon>Form_AreaEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ValueInputDialog.resx">
+      <DependentUpon>ValueInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Script\ScriptDumper.resx">
+      <DependentUpon>ScriptDumper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Settings\LevelEditorInputManager.resx">
+      <DependentUpon>LevelEditorInputManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Settings\Form_Stylemanager.resx">
+      <DependentUpon>Form_Stylemanager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Other\Form_ErrorDialog.resx">
+      <DependentUpon>Form_ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Other\Form_About.resx">
+      <DependentUpon>Form_About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.resx">
+      <DependentUpon>Form_AddNewLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Form_AddSpecialItem.resx">
+      <DependentUpon>Form_AddSpecialItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Form_SetUpRGBA.resx">
+      <DependentUpon>Form_SetUpRGBA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Form_SetUpPoint.resx">
+      <DependentUpon>Form_SetUpPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Settings\Form_Settings.resx">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Form_SM64TextConverter.resx">
+      <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Plugin Installer\Plugin_Installer_Resources.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Plugin_Installer_Resources.de.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Plugin Installer\Plugin_Installer_Resources.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Plugin_Installer_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Star_Position_Editor_Resources.de.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Star_Position_Editor_Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Text Profile Editor\TextProfileEditorLangRes.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TextProfileEditorLangRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>SM64_ROM_Manager.My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1443729764_forest_mushroom.ico" />
+    <None Include="Resources\MoveObjectCross.png" />
+    <None Include="Resources\MoveObjectWheel.png" />
+    <None Include="Resources\MoveCameraCross.png" />
+    <None Include="Resources\MoveCameraWheel.png" />
+    <None Include="Resources\RotateObjectWheel.png" />
+    <None Include="Resources\RotateObjectCross.png" />
+    <None Include="Resources\Remove_16px.png" />
+    <None Include="Resources\Add_16px.png" />
+    <None Include="Resources\Edit_16px.png" />
+    <None Include="Resources\Shrink_16px.png" />
+    <None Include="Resources\SMS_34px.png" />
+    <None Include="Resources\Psychology_16px.png" />
+    <None Include="Resources\Psychology_34px.png" />
+    <None Include="Resources\SMS_34px1.png" />
+    <None Include="Resources\Psychology_16px1.png" />
+    <None Include="Resources\Psychology_34px1.png" />
+    <None Include="Resources\Shrink_16px1.png" />
+    <None Include="Resources\Shrink_16px2.png" />
+    <None Include="Resources\SaveAll_16px.png" />
+    <None Include="Resources\SaveAll_16px1.png" />
+    <None Include="Resources\Refresh_16px.png" />
+    <None Include="Resources\Shrink_32px.png" />
+    <None Include="Resources\Psychology_32px.png" />
+    <None Include="Resources\Save_16px.png" />
+    <None Include="Resources\Save_20px.png" />
+    <None Include="Resources\Save_18px.png" />
+    <None Include="Resources\Save_19px.png" />
+    <None Include="Resources\EditPicture_32px.png" />
+    <None Include="Resources\icons8_open_folder_16px.png" />
+    <None Include="Resources\icons8_save_16px.png" />
+    <None Include="Resources\icons8_controller_30px.png" />
+    <None Include="Resources\icons8_controller_16px.png" />
+    <None Include="Resources\icons8_cancel_16px.png" />
+    <None Include="Resources\icons8_text_16px.png" />
+    <None Include="Resources\icons8_music_16px.png" />
+    <None Include="Resources\icons8_plugin_16px.png" />
+    <None Include="Resources\icons8_support_16px.png" />
+    <None Include="Resources\icons8_settings_16px.png" />
+    <None Include="Resources\icons8_help_16px.png" />
+    <None Include="Resources\icons8_info_16px.png" />
+    <None Include="Resources\icons8_high_importance_16px.png" />
+    <None Include="Resources\icons8_about_16px.png" />
+    <None Include="Resources\icons8_downloading_updates_16px.png" />
+    <None Include="Resources\icons8_paper_plane_16px.png" />
+    <None Include="Resources\icons8_message_16px.png" />
+    <None Include="Resources\icons8_color_dropper_16px.png" />
+    <None Include="Resources\icons8_plus_math_16px.png" />
+    <None Include="Resources\icons8_plus_16px.png" />
+    <None Include="Resources\icons8_delete_sign_16px.png" />
+    <None Include="Resources\icons8_cancel_16px_1.png" />
+    <None Include="Resources\icons8_trash_16px.png" />
+    <None Include="Resources\icons8_delete_2_16px.png" />
+    <None Include="Resources\icons8_edit_16px.png" />
+    <None Include="Resources\icons8_pills_16px_1.png" />
+    <None Include="Resources\icons8_syringe_16px.png" />
+    <None Include="Resources\icons8_edit_node_16px.png" />
+    <None Include="Resources\icons8_add_node_16px.png" />
+    <None Include="Resources\icons8_add_subnode_16px.png" />
+    <None Include="Resources\icons8_delete_subnode_16px.png" />
+    <None Include="Resources\icons8_delete_node_16px.png" />
+    <None Include="Resources\icons8_move_node_down_16px.png" />
+    <None Include="Resources\icons8_move_node_up_16px.png" />
+    <None Include="Resources\icons8_filled_star_location_16px.png" />
+    <None Include="Resources\icons8_variation_16px.png" />
+    <None Include="Resources\icons8_coins_16px.png" />
+    <None Include="Resources\icons8_map_16px.png" />
+    <None Include="Resources\icons8_copy_16px_1.png" />
+    <None Include="Resources\icons8_forward_16px.png" />
+    <None Include="Resources\icons8_folder_16px.png" />
+    <None Include="Resources\icons8_copy_16px_2.png" />
+    <None Include="Resources\icons8_arrow_16px.png" />
+    <None Include="Resources\icons8_arrow_40px.png" />
+    <None Include="Resources\icons8_refresh_16px.png" />
+    <None Include="Resources\icons8_undo_16px.png" />
+    <None Include="Resources\icons8_redo_16px.png" />
+    <None Include="Resources\icons8_download_16px.png" />
+    <None Include="Resources\icons8_export_16px.png" />
+    <None Include="Resources\icons8_import_16px.png" />
+    <None Include="Resources\icons8_upload_16px.png" />
+    <None Include="Resources\icons8_plus_math_32px_2.png" />
+    <None Include="Resources\icons8_paste_16px.png" />
+    <None Include="Resources\icons8_cut_16px.png" />
+    <None Include="Resources\icons8_paste_special_16px.png" />
+    <None Include="Resources\icons8_paste_32px.png" />
+    <None Include="Resources\icons8_delete_sign_32px.png" />
+    <None Include="Resources\icons8_export_32px.png" />
+    <None Include="Resources\icons8_import_32px.png" />
+    <None Include="Resources\icons8_split_vertical_30px.png" />
+    <None Include="Resources\icons8_split_vertical_16px.png" />
+    <None Include="Resources\icons8_merge_horizontal_16px.png" />
+    <None Include="Resources\icons8_chevron_up_16px.png" />
+    <None Include="Resources\icons8_chevron_down_16px.png" />
+    <None Include="Resources\icons8_screenshot_32px.png" />
+    <None Include="Resources\icons8_fit_to_width_32px.png" />
+    <None Include="Resources\btn_donateCC_LG.gif" />
+    <None Include="Resources\icons8_error_16px.png" />
+    <None Include="Resources\icons8_collapse_arrow_16px.png" />
+    <None Include="Resources\icons8_expand_arrow_16px.png" />
+    <None Include="Resources\icons8_preview_pane_16px.png" />
+    <Content Include="RomManager\Others\RomMap.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SM64 ROM Manager.ApplyPPF\SM64 ROM Manager.ApplyPPF.csproj">
+      <Project>{86a3bbe4-1487-0369-30c8-e49d84dddebf}</Project>
+      <Name>SM64 ROM Manager.ApplyPPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.ModelConverterGUI\SM64 ROM Manager.ModelConverterGUI.csproj">
+      <Project>{c67aeb48-a50f-0a09-115d-429236e3e4d7}</Project>
+      <Name>SM64 ROM Manager.ModelConverterGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.ModelImporterGUI\SM64 ROM Manager.ModelImporterGUI.csproj">
+      <Project>{8db4c59a-d6f9-02b5-34d3-baf9a70cb52f}</Project>
+      <Name>SM64 ROM Manager.ModelImporterGUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.PatchScripts\SM64 ROM Manager.PatchScripts.csproj">
+      <Project>{77fab892-05f2-072e-3f2c-a2de35961df3}</Project>
+      <Name>SM64 ROM Manager.PatchScripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj">
+      <Project>{e23753fa-c065-0a5f-304e-b35c0255724c}</Project>
+      <Name>SM64 ROM Manager.Publics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj">
+      <Project>{24562e87-ba35-0cf9-13dc-be9f85e735bb}</Project>
+      <Name>SM64 ROM Manager.SettingsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Updating.Client.GUI\SM64 ROM Manager.Updating.Client.GUI.csproj">
+      <Project>{3021444d-14a6-0377-1c4c-05ec09c09a67}</Project>
+      <Name>SM64 ROM Manager.Updating.Client.GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Updating.Client\SM64 ROM Manager.Updating.Client.csproj">
+      <Project>{fcd7dc2f-9438-0e44-23b2-d0dfd601a79c}</Project>
+      <Name>SM64 ROM Manager.Updating.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj">
+      <Project>{3d253aef-6f82-0fc8-2b8a-c513d1800d4c}</Project>
+      <Name>SM64 ROM Manager.Updating</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.UserRequests.GUI\SM64 ROM Manager.UserRequests.GUI.csproj">
+      <Project>{54a70c40-e6a4-0a1d-2ee4-fa060625a07c}</Project>
+      <Name>SM64 ROM Manager.UserRequests.GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.UserRequests\SM64 ROM Manager.UserRequests.csproj">
+      <Project>{3f8fc0b6-ccb5-01fc-2eac-db9ebd065d41}</Project>
+      <Name>SM64 ROM Manager.UserRequests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib.LIBMIO0\SM64Lib.LIBMIO0.csproj">
+      <Project>{e4cec3b1-5778-4d63-8c97-c95153cdc052}</Project>
+      <Name>SM64Lib.LIBMIO0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib.N64Graphics\SM64Lib.N64Graphics.csproj">
+      <Project>{d9258483-950c-46d1-a333-31f32492cd7e}</Project>
+      <Name>SM64Lib.N64Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj">
+      <Project>{e11312a8-5e8d-073f-0086-11d677519581}</Project>
+      <Name>SM64Lib.TextValueConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj">
+      <Project>{e29a037e-451d-05d8-12d2-fc9f72bd60ac}</Project>
+      <Name>SM64Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

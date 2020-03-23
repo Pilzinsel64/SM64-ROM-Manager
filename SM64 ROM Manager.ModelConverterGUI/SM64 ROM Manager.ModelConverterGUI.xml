@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SM64 ROM Manager.ModelConverterGUI</name>
+    </assembly>
+    <members>
+        <member name="T:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Automatic">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Automatic ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Layer0">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Solid (no anti alias) ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Layer1">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Solid ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Layer2">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Solid Decal ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Layer3">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Translucent Decal ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Layer4">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Alpha ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Layer5">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Translucent ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Layer6">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Translucent Decal ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.Layer7">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Translucent Decal ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_ColMapIsnotTriangled">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Your collision map is not triangulated. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_ColMapIsnotTriangled_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Collision Map ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_ErrorLoadingMaterial">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Error at loading Materials:&lt;br/&gt;{0} ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_ErrorLoadingMaterial_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Material Error ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_ModelTooBig">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Your {0} is too big or your scaling is too large. Your collision map probably will have some issues after importing. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_ModelTooBig_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Out of bounds ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_MVCppMissing">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die To use Assimp loader module, you need &lt;b&gt;Microsoft Visual C++ Redistributable 2017&lt;/b&gt; installed on your PC.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Download links:&lt;/b&gt;&lt;br/&gt;&lt;a href=&quot;&quot;&gt;https://aka.ms/vs/15/release/vc_redist.x64.exe&quot;&quot;&gt;vc_redist.x64.exe&lt;/a&gt; (for &lt;b&gt;64-bit&lt;/b&gt; systems)&lt;br/&gt;&lt;a href=&quot;&quot;&gt;https://aka.ms/vs/15/release/vc_redist.x86.exe&quot;&quot;&gt;vc_redist.x32.exe&lt;/a&gt; (for &lt;b&gt;32-bit&lt;/b&gt; systems) ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_MVCppMissing_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Microsoft Visual C++ Redistributable 2017 is missing ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_VMapIsnotTriangled">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Your visual map is not triangulated. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.MainModelconverter_Resources.MsgBox_VMapIsnotTriangled_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Visual Map ähnelt.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.ModelConverterGUI.My.Resources.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.Resources.Add_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.Resources.icons8_delete_sign_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.ModelConverterGUI.My.Resources.Resources.icons8_edit_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SM64 ROM Manager.UserRequests.GUI</name>
+    </assembly>
+    <members>
+        <member name="T:SM64_ROM_Manager.UserRequests.GUI.My.Resources.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.Resources.icons8_delete_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.Resources.icons8_plus_math_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.Resources.icons8_send_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes">
+            <summary>
+            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes.ResourceManager">
+            <summary>
+            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes.Culture">
+            <summary>
+            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes.MsgBox_ErrorSendingRequest">
+            <summary>
+            Sucht eine lokalisierte Zeichenfolge, die An error happend at sending your request. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes.MsgBox_ErrorSendingRequest_Titel">
+            <summary>
+            Sucht eine lokalisierte Zeichenfolge, die Error sending request ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes.MsgBox_IncludedBigFiles">
+            <summary>
+            Sucht eine lokalisierte Zeichenfolge, die The maximum size of all attachments together is 250 MiB for security reasons. Please reduce it e.g. packing your files to an archive. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes.MsgBox_IncludedBigFiles_Titel">
+            <summary>
+            Sucht eine lokalisierte Zeichenfolge, die Files to big ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes.MsgBox_SendingRequestSuccess">
+            <summary>
+            Sucht eine lokalisierte Zeichenfolge, die The request was send successfully! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.UserRequests.GUI.My.Resources.UserRequestGuiLangRes.MsgBox_SendingRequestSuccess_Titel">
+            <summary>
+            Sucht eine lokalisierte Zeichenfolge, die Request sent successfull! ähnelt.
+            </summary>
+        </member>
+    </members>
+</doc>
