@@ -31690,6 +31690,11 @@
             Gets or sets the color of the Radial Menu border
             </summary>
         </member>
+        <member name="M:DevComponents.DotNetBar.Rendering.RadialMenuColorTable.ShouldSerializeRadialMenuBorder">
+            <summary>
+            Gets whether property should be serialized.
+            </summary>
+        </member>
         <member name="M:DevComponents.DotNetBar.Rendering.RadialMenuColorTable.ResetRadialMenuBorder">
             <summary>
             Resets property to its default value.
