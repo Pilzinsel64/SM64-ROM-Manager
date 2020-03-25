@@ -58,19 +58,18 @@ namespace SM64Lib.Script
 
         public static bool operator ==(BaseCommand<eTypes> cmd1, BaseCommand<eTypes> cmd2)
         {
-            if (cmd1.Length != cmd2.Length)
-            {
+            if (!(cmd1 is object) || !(cmd2 is object))
                 return false;
-            }
+
+            if (cmd1.Length != cmd2.Length)
+                return false;
 
             var buf1 = ((MemoryStream)cmd1.BaseStream).GetBuffer();
             var buf2 = ((MemoryStream)cmd2.BaseStream).GetBuffer();
             for (int i = 0, loopTo = (int)(cmd1.Length - 1); i <= loopTo; i++)
             {
                 if (buf1[i] != buf2[i])
-                {
                     return false;
-                }
             }
 
             return true;

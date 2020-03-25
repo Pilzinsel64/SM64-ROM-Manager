@@ -223,6 +223,33 @@
   <data name="TabItem4.Text" xml:space="preserve">
     <value>Bereichseinstellungen</value>
   </data>
+  <data name="LabelX10.Text" xml:space="preserve">
+    <value>Texturanimationen:</value>
+  </data>
+  <data name="ButtonX_LM_ScrollTexEditor.Text" xml:space="preserve">
+    <value>Textureanimationseditor</value>
+  </data>
+  <data name="ButtonItem9.Text" xml:space="preserve">
+    <value>Visuelles Modell importieren</value>
+  </data>
+  <data name="ButtonItem13.Text" xml:space="preserve">
+    <value>Kollisionsmodell importieren</value>
+  </data>
+  <data name="Button_ImportModel.Text" xml:space="preserve">
+    <value>Modell import.</value>
+  </data>
+  <data name="ButtonItem_ExportVisualMap.Text" xml:space="preserve">
+    <value>Visuelles Modell exportieren</value>
+  </data>
+  <data name="ButtonItem_ExportCollisionMap.Text" xml:space="preserve">
+    <value>Koillisionsmodell exportieren</value>
+  </data>
+  <data name="ButtonItem_ExportModel.Text" xml:space="preserve">
+    <value>Modell export.</value>
+  </data>
+  <data name="TabItem5.Text" xml:space="preserve">
+    <value>Bereichsmodell</value>
+  </data>
   <data name="Button_LM_RemoveSpecial.Text" xml:space="preserve">
     <value>Löschen</value>
   </data>
@@ -275,38 +302,41 @@
   <data name="TabItem6.Text" xml:space="preserve">
     <value>Spezialboxen</value>
   </data>
-  <data name="LabelX10.Text" xml:space="preserve">
-    <value>Texturanimationen:</value>
+  <data name="ButtonX_ManageLocalObjects.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 28</value>
   </data>
-  <data name="LabelX5.Text" xml:space="preserve">
-    <value>Eigene Objekte:</value>
+  <data name="ButtonX_ManageLocalObjects.Text" xml:space="preserve">
+    <value>Lokale Objekte verwalten</value>
   </data>
-  <data name="ButtonX_CustomObjects.Text" xml:space="preserve">
-    <value>Eigene Objekte bearbeiten</value>
+  <data name="labelX5.Text" xml:space="preserve">
+    <value>Lokale Objekt-Bank:</value>
   </data>
-  <data name="ButtonX_LM_ScrollTexEditor.Text" xml:space="preserve">
-    <value>Textureanimationseditor</value>
+  <data name="SwitchButton_UseLocalObjectBank.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 30</value>
   </data>
-  <data name="ButtonItem9.Text" xml:space="preserve">
-    <value>Visuelles Modell importieren</value>
+  <data name="SwitchButton_UseLocalObjectBank.OffText" xml:space="preserve">
+    <value>Aus</value>
   </data>
-  <data name="ButtonItem13.Text" xml:space="preserve">
-    <value>Kollisionsmodell importieren</value>
+  <data name="SwitchButton_UseLocalObjectBank.OnText" xml:space="preserve">
+    <value>Ein</value>
   </data>
-  <data name="Button_ImportModel.Text" xml:space="preserve">
-    <value>Modell import.</value>
+  <data name="LabelX13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 20</value>
   </data>
-  <data name="ButtonItem_ExportVisualMap.Text" xml:space="preserve">
-    <value>Visuelles Modell exportieren</value>
+  <data name="LabelX13.Text" xml:space="preserve">
+    <value>Globale Objekt-Bank:</value>
   </data>
-  <data name="ButtonItem_ExportCollisionMap.Text" xml:space="preserve">
-    <value>Koillisionsmodell exportieren</value>
+  <data name="SwitchButton_UseGlobalObjectBank.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 4</value>
   </data>
-  <data name="ButtonItem_ExportModel.Text" xml:space="preserve">
-    <value>Modell export.</value>
+  <data name="SwitchButton_UseGlobalObjectBank.OffText" xml:space="preserve">
+    <value>Aus</value>
   </data>
-  <data name="TabItem5.Text" xml:space="preserve">
-    <value>Bereichsmodell</value>
+  <data name="SwitchButton_UseGlobalObjectBank.OnText" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="TabItem2.Text" xml:space="preserve">
+    <value>Object-Banken</value>
   </data>
   <data name="LabelX12.Text" xml:space="preserve">
     <value>Original-Level:</value>
@@ -346,23 +376,5 @@
   </data>
   <data name="TabItem1.Text" xml:space="preserve">
     <value>Leveleinstellungen</value>
-  </data>
-  <data name="LabelX13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 20</value>
-  </data>
-  <data name="LabelX13.Text" xml:space="preserve">
-    <value>Globale Objekt-Bank:</value>
-  </data>
-  <data name="SwitchButton_UseGlobalObjectBank.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 4</value>
-  </data>
-  <data name="SwitchButton_UseGlobalObjectBank.OffText" xml:space="preserve">
-    <value>Aus</value>
-  </data>
-  <data name="SwitchButton_UseGlobalObjectBank.OnText" xml:space="preserve">
-    <value>Ein</value>
-  </data>
-  <data name="TabItem2.Text" xml:space="preserve">
-    <value>Object-Banken</value>
   </data>
 </root>

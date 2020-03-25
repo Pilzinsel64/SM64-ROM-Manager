@@ -603,6 +603,12 @@ namespace SM64_ROM_Manager.LevelEditor
                 Rommgr.GenerateGlobalObjectBank();
                 await LoadCustomObjectBankModels(Rommgr.GlobalObjectBank);
             }
+
+            // Load local objects
+            if (CLevel.EnableLocalObjectBank && CLevel.LocalObjectBank.Objects.Any())
+            {
+                await LoadCustomObjectBankModels(CLevel.LocalObjectBank);
+            }
         }
 
         private async Task LoadCustomObjectBankModels(CustomObjectBank objBank)

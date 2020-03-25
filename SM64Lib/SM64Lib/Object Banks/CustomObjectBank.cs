@@ -92,12 +92,18 @@ namespace SM64Lib.ObjectBanks
             NeedToSave = false;
             return lastPosition - offset;
         }
-
+        
         public void WriteCollisionPointers(RomManager rommgr)
         {
             BinaryData data = rommgr.GetBinaryRom(FileAccess.ReadWrite);
+            WriteCollisionPointers(data);
+            data.Close();
+        }
 
-            // Write collision pointer
+        public void WriteCollisionPointers(BinaryData data)
+        {
+            long posBefore = data.Position;
+
             foreach (CustomObject obj in Objects)
             {
                 foreach (int dest in obj.Config.CollisionPointerDestinations)
@@ -107,7 +113,7 @@ namespace SM64Lib.ObjectBanks
                 }
             }
 
-            data.Close();
+            data.Position = posBefore;
         }
 
         public void ReadFromSeg(RomManager rommgr, byte bankID, ObjectBankConfig config)
@@ -134,8 +140,8 @@ namespace SM64Lib.ObjectBanks
             for (int i = 0, loopTo = Levelscript.Count - 1; i <= loopTo; i++)
             {
                 LevelscriptCommand cmd = (LevelscriptCommand)Levelscript[i];
-                var switchExpr = cmd.CommandType;
-                switch (switchExpr)
+
+                switch (cmd.CommandType)
                 {
                     case LevelscriptCommandTypes.LoadPolygonWithGeo:
                         var obj = new CustomObject() { Config = config.GetCustomObjectConfig(i) };
@@ -144,6 +150,7 @@ namespace SM64Lib.ObjectBanks
                         obj.ModelID = clLoadPolygonWithGeo.GetModelID(cmd);
                         int geoAddr = clLoadPolygonWithGeo.GetSegAddress(cmd);
                         obj.GeolayoutBankOffset = geoAddr & 0xFFFFFF;
+
                         if (geoAddr >> 24 == seg.BankID)
                         {
                             // Load Model Offset & Length
@@ -165,6 +172,7 @@ namespace SM64Lib.ObjectBanks
                             // Add Object to list
                             Objects.Add(obj);
                         }
+
                         break;
                 }
             }

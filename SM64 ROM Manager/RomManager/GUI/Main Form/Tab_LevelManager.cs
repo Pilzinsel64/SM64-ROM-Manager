@@ -583,7 +583,7 @@ namespace SM64_ROM_Manager
         {
             if (AllowSavingLevelSettings)
             {
-                Controller.SetLevelSettings(CurrentLevelIndex, Conversions.ToByte(NUD_LM_DefaultPositionAreaID.Value), Conversions.ToShort(NUD_LM_DefaultPositionYRotation.Value), SwitchButton_LM_ActSelector.Value, SwitchButton_LM_HardcodedCameraSettings.Value, ObjectBankSelectorBox_C.SelectedComboIndex, ObjectBankSelectorBox_D.SelectedComboIndex, ObjectBankSelectorBox_9.SelectedComboIndex, SwitchButton_UseGlobalObjectBank.Value, SwitchButton_LM_ShowMsgEnabled.Value, Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX_LM_ShowMsgID.Text)));
+                Controller.SetLevelSettings(CurrentLevelIndex, Conversions.ToByte(NUD_LM_DefaultPositionAreaID.Value), Conversions.ToShort(NUD_LM_DefaultPositionYRotation.Value), SwitchButton_LM_ActSelector.Value, SwitchButton_LM_HardcodedCameraSettings.Value, ObjectBankSelectorBox_C.SelectedComboIndex, ObjectBankSelectorBox_D.SelectedComboIndex, ObjectBankSelectorBox_9.SelectedComboIndex, SwitchButton_UseGlobalObjectBank.Value, SwitchButton_UseLocalObjectBank.Value, SwitchButton_LM_ShowMsgEnabled.Value, Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX_LM_ShowMsgID.Text)));
             }
         }
 
@@ -788,6 +788,7 @@ namespace SM64_ROM_Manager
                 ObjectBankSelectorBox_D.SelectedComboIndex = info.objBank0x0D;
                 ObjectBankSelectorBox_9.SelectedComboIndex = info.objBank0x0E;
                 SwitchButton_UseGlobalObjectBank.Value = info.enableGlobalObjectBank;
+                SwitchButton_UseLocalObjectBank.Value = info.enableLocalObjectBank;
                 LM_LoadingLevel = wasLoadingLevel;
             }
         }
@@ -830,9 +831,10 @@ namespace SM64_ROM_Manager
             SaveLevelSettings();
         }
 
-        private void SwitchButton_UseGlobalObjectBank_ValueChanged()
+        private void SwitchButton_UseCustomObjectBank_ValueChanged(object sender, EventArgs e)
         {
-            ObjectBankSelectorBox_9.Enabled = !SwitchButton_UseGlobalObjectBank.Value;
+            ObjectBankSelectorBox_9.Enabled = !SwitchButton_UseGlobalObjectBank.Value && !SwitchButton_UseLocalObjectBank.Value;
+            ButtonX_ManageLocalObjects.Visible = SwitchButton_UseLocalObjectBank.Value;
         }
 
         private void LM_SaveGameBackground()
@@ -1121,7 +1123,6 @@ namespace SM64_ROM_Manager
         private void Button_LM_AddArea_Click(object sender, EventArgs e) => Button_LM_AddArea_Click();
         private void Button_LM_RemoveArea_Click(object sender, EventArgs e) => Button_LM_RemoveArea_Click();
         private void Controls_HandleToSaveLevelSettings(object sender, EventArgs e) => Controls_HandleToSaveLevelSettings();
-        private void SwitchButton_UseGlobalObjectBank_ValueChanged(object sender, EventArgs e) => SwitchButton_UseGlobalObjectBank_ValueChanged();
         private void LM_SaveGameBackground(object sender, EventArgs e) => LM_SaveGameBackground();
         private void ComboBoxEx_LM_BGMode_SelectedIndexChanged(object sender, EventArgs e) => ComboBoxEx_LM_BGMode_SelectedIndexChanged();
         private void ComboBoxEx_LM_AreaBG_SelectedIndexChanged(object sender, EventArgs e) => ComboBoxEx_LM_AreaBG_SelectedIndexChanged();
@@ -1129,5 +1130,10 @@ namespace SM64_ROM_Manager
         private void LM_LoadCustomBackground(object sender, EventArgs e) => LM_LoadCustomBackground();
         private void Controls_HandleToSaveAreaSettings(object sender, EventArgs e) => Controls_HandleToSaveAreaSettings();
         private void LM_OpenAreaEditor(object sender, EventArgs e) => LM_OpenAreaEditor();
+
+        private void ButtonX_ManageLocalObjects_Click(object sender, EventArgs e)
+        {
+            Controller.OpenLocalObjectBankManager(CurrentLevelIndex);
+        }
     }
 }

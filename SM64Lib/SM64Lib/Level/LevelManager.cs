@@ -121,8 +121,8 @@ namespace SM64Lib.Levels
                                 if (((RMLevel)lvl).Config.EnableLocalObjectBank)
                                 {
                                     lvl.EnableLocalObjectBank = true;
-                                    lvl.LastLobCmdSegLoad = c;
                                 }
+                                lvl.LastLobCmdSegLoad = c;
                                 break;
                         }
                         break;
@@ -160,6 +160,18 @@ namespace SM64Lib.Levels
             {
                 foreach (var c in a.Levelscript.Where(n => lvlscrptidstoremove.Contains(n.CommandType)).ToArray())
                     a.Levelscript.Remove(c);
+            }
+
+            // Load Local Object Bank
+            if (lvl.LastLobCmdSegLoad is object)
+            {
+                var seg = new SegmentedBank()
+                {
+                    BankID = clLoadRomToRam.GetSegmentedID(lvl.LastLobCmdSegLoad),
+                    RomStart = clLoadRomToRam.GetRomStart(lvl.LastLobCmdSegLoad),
+                    RomEnd = clLoadRomToRam.GetRomEnd(lvl.LastLobCmdSegLoad)
+                };
+                lvl.LocalObjectBank.ReadFromSeg(rommgr, seg, ((RMLevel)lvl).Config.LocalObjectBank);
             }
 
             // Lese Custom Background Image
@@ -368,12 +380,14 @@ namespace SM64Lib.Levels
             // Generate & Write Local Object Bank
             uint localObjectBankRomStart = 0;
             uint localObjectBankRomEnd = 0;
-            bool writeLocalObjectBank = lvl.LocalObjectBank.Objects.Count > 0 && lvl.EnableGlobalObjectBank;
+            bool writeLocalObjectBank = lvl.LocalObjectBank.Objects.Count > 0 && lvl.EnableLocalObjectBank;
             if (writeLocalObjectBank)
             {
                 localObjectBankRomStart = curOff;
                 curOff += (uint)lvl.LocalObjectBank.WriteToSeg(output, (int)curOff, 0x9);
                 localObjectBankRomEnd = curOff;
+                ((RMLevel)lvl).Config.LocalObjectBank = lvl.LocalObjectBank.Config;
+                lvl.LocalObjectBank.WriteCollisionPointers(output);
             }
             ((RMLevel)lvl).Config.EnableLocalObjectBank = writeLocalObjectBank;
 
@@ -717,7 +731,7 @@ namespace SM64Lib.Levels
             }
 
             // Füge Local Object Bank Command ein
-            if (lvl.EnableLocalObjectBank)
+            if (writeLocalObjectBank)
             {
                 var newlobjumpcmd = cmdLobJump ?? new LevelscriptCommand("06 08 00 00 09 00 00 00");
                 var newlobcmd = cmdLobSegLoad ?? new LevelscriptCommand("17 0C 00 09 00 00 00 00 00 00 00 00");

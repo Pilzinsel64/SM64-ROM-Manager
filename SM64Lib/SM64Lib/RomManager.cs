@@ -487,31 +487,31 @@ namespace SM64Lib
                 byte segID = br.ReadByte();
                 var curLvlSeg = SetSegBank(segID, Conversions.ToInteger(SwapInts.SwapUInt32(br.ReadUInt32())), Conversions.ToInteger(SwapInts.SwapUInt32(br.ReadUInt32())));
                 uint offset = SwapInts.SwapUInt32(br.ReadUInt32());
+#if !DEBUG
                 try
                 {
-                    switch (segID)
-                    {
-                        case 0x19:
-                            lvl = new RMLevel(RomConfig.GetLevelConfig(ldi.ID));
-                            LevelManager.LoadLevel(lvl, this, ldi.ID, offset);
-                            lvl.LastRomOffset = curLvlSeg.RomStart; // Original Level
-                            break;
-                        default:
-                            lvl = null;
-                            // Dim mgr As New OriginalLevelManager
-                            // lvl = New OriginalLevel
-                            // mgr.LoadLevel(lvl, Me, ldi.ID, offset)
-                            break;
-                    }
+#endif
+                switch (segID)
+                {
+                    case 0x19:
+                        lvl = new RMLevel(RomConfig.GetLevelConfig(ldi.ID));
+                        LevelManager.LoadLevel(lvl, this, ldi.ID, offset);
+                        lvl.LastRomOffset = curLvlSeg.RomStart; // Original Level
+                        break;
+                    default:
+                        lvl = null;
+                        // Dim mgr As New OriginalLevelManager
+                        // lvl = New OriginalLevel
+                        // mgr.LoadLevel(lvl, Me, ldi.ID, offset)
+                        break;
+                }
+#if !DEBUG
                 }
                 catch (Exception)
                 {
-                    // Skip the Level  
-                    if (General.IsDebugging)
-                        throw;
-                    else
-                        lvl = null;
+                    lvl = null;
                 }
+#endif
 
                 if (lvl is object)
                     Levels.Add(lvl);

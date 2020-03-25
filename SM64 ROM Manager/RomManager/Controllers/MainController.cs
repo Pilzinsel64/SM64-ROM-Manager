@@ -719,7 +719,7 @@ namespace SM64_ROM_Manager
                 RomManager.CreateNewGlobalObjectBank();
             }
 
-            var mgr = new SM64_ROM_Manager.CustomBankManager(RomManager, RomManager.GlobalObjectBank);
+            var mgr = new CustomBankManager(RomManager, RomManager.GlobalObjectBank);
             mgr.Show();
         }
 
@@ -859,13 +859,20 @@ namespace SM64_ROM_Manager
             frm.Show();
         }
 
-        private void OpenCustomBankManager(CustomObjectBank customBank, int levelIndex, ushort levelID)
+        public void OpenLocalObjectBankManager(int levelIndex)
         {
-            var mgr = new CustomBankManager(RomManager, customBank);
-            void objectCountChanged(object sender, EventArgs e) => LevelCustomObjectsCountChanged?.Invoke(new EventArguments.LevelEventArgs(levelIndex, levelID));
-            mgr.ObjectAdded += objectCountChanged;
-            mgr.ObjectRemoved += objectCountChanged;
-            mgr.Show();
+            Level lvl = GetLevelAndArea(levelIndex).level;
+
+            if (lvl is RMLevel)
+            {
+                //void objectCountChanged(object sender, EventArgs e) => 
+                //    LevelCustomObjectsCountChanged?.Invoke(new EventArguments.LevelEventArgs(levelIndex, lvl.LevelID));
+
+                var mgr = new CustomBankManager(RomManager, lvl.LocalObjectBank);
+                //mgr.ObjectAdded += objectCountChanged;
+                //mgr.ObjectRemoved += objectCountChanged;
+                mgr.Show();
+            }
         }
 
         private LevelInfoDataTabelList.Level OpenLevelSelectDialog()
@@ -1314,7 +1321,7 @@ namespace SM64_ROM_Manager
             lvl.NeedToSaveBanks0E = true;
         }
 
-        public void SetLevelSettings(int levelIndex, byte defStartPosDestAreaID, short defStartPosDestRotation, bool enableActSelector, bool enableHardcodedCamera, int objBank0x0C, int objBank0x0D, int objBank0x0E, bool enableGlobalObjectBank, bool enableShowMsg, byte showMsgDialogID)
+        public void SetLevelSettings(int levelIndex, byte defStartPosDestAreaID, short defStartPosDestRotation, bool enableActSelector, bool enableHardcodedCamera, int objBank0x0C, int objBank0x0D, int objBank0x0E, bool enableGlobalObjectBank, bool enableLocalObjectBank, bool enableShowMsg, byte showMsgDialogID)
         {
             var lvl = GetLevelAndArea(levelIndex, -1).level;
 
@@ -1331,9 +1338,11 @@ namespace SM64_ROM_Manager
             // Object Banks
             lvl.ChangeObjectBankData(0xC, SM64Lib.General.ObjectBankData[Conversions.ToByte(0xC)].ElementAtOrDefault(objBank0x0C - 1));
             lvl.ChangeObjectBankData(0xD, SM64Lib.General.ObjectBankData[Conversions.ToByte(0xD)].ElementAtOrDefault(objBank0x0D - 1));
-            lvl.ChangeObjectBankData(0x9, SM64Lib.General.ObjectBankData[Conversions.ToByte(0x9)].ElementAtOrDefault(enableGlobalObjectBank ? -1 : objBank0x0E - 1));
+            lvl.ChangeObjectBankData(0x9, SM64Lib.General.ObjectBankData[Conversions.ToByte(0x9)].ElementAtOrDefault(enableGlobalObjectBank || enableLocalObjectBank ? -1 : objBank0x0E - 1));
             lvl.EnableGlobalObjectBank = enableGlobalObjectBank;
-            this.SetLevelscriptNeedToSave(lvl);
+            lvl.EnableLocalObjectBank = enableLocalObjectBank;
+
+            SetLevelscriptNeedToSave(lvl);
         }
 
         public void SetLevelBackgroundMode(int levelIndex, int mode)
@@ -1657,10 +1666,10 @@ namespace SM64_ROM_Manager
             return (lvl.ActSelector, lvl.HardcodedCameraSettings, defPosCmd is object, defPosAreaID, defPosYRot, bgMode, bgImage, bgOriginal, (byte)lvl.Areas.Count);
         }
 
-        public (int objBank0x0C, int objBank0x0D, int objBank0x0E, bool enableGlobalObjectBank) GetLevelObjectBankDataSettings(int levelIndex)
+        public (int objBank0x0C, int objBank0x0D, int objBank0x0E, bool enableGlobalObjectBank, bool enableLocalObjectBank) GetLevelObjectBankDataSettings(int levelIndex)
         {
             var lvl = GetLevelAndArea(levelIndex).level;
-            return (SM64Lib.General.ObjectBankData[Conversions.ToByte(0xC)].IndexOf(lvl.GetObjectBankData(0xC)) + 1, SM64Lib.General.ObjectBankData[Conversions.ToByte(0xD)].IndexOf(lvl.GetObjectBankData(0xD)) + 1, SM64Lib.General.ObjectBankData[Conversions.ToByte(0x9)].IndexOf(lvl.GetObjectBankData(0x9)) + 1, lvl.EnableGlobalObjectBank);
+            return (SM64Lib.General.ObjectBankData[Conversions.ToByte(0xC)].IndexOf(lvl.GetObjectBankData(0xC)) + 1, SM64Lib.General.ObjectBankData[Conversions.ToByte(0xD)].IndexOf(lvl.GetObjectBankData(0xD)) + 1, SM64Lib.General.ObjectBankData[Conversions.ToByte(0x9)].IndexOf(lvl.GetObjectBankData(0x9)) + 1, lvl.EnableGlobalObjectBank, lvl.EnableLocalObjectBank);
         }
 
         public void ChangeLevelID(int levelIndex)
