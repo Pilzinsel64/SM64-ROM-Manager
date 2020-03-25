@@ -41,20 +41,6 @@ namespace SM64_ROM_Manager
     public class MainController
     {
 
-        // C o n s t r u c t o r
-
-        public MainController()
-        {
-            RomManager = null;
-            RomWatcher = null;
-            this.TextManagerController.RequestRomManager += e => e.RomManager = this.RomManager;
-            this.TextManagerController.RequestIsChangingTab += e => e.Value = Conversions.ToBoolean(this.IsChangingTab());
-            this.TextManagerController.SettingOtherStatusInfo += (text, foreColor) => this.SetOtherStatusInfos(text, foreColor);
-            this.TextManagerController.SettingStatusText += text => this.StatusText = text;
-            this.TextManagerController.RequestStatusText += e => e.Value = this.StatusText;
-            this.TextManagerController.ErrorBecauseNoRomLoaded += () => ErrorBecauseNoRomLoaded?.Invoke();
-        }
-
         // E v e n t s
 
         public event RomLoadingEventHandler RomLoading;
@@ -70,10 +56,10 @@ namespace SM64_ROM_Manager
         public delegate void RomLevelsLoadedEventHandler();
 
         public event StatusTextChangedEventHandler StatusTextChanged;
-        public delegate void StatusTextChangedEventHandler(SM64_ROM_Manager.EventArguments.StatusTextChangedEventArgs e);
+        public delegate void StatusTextChangedEventHandler(EventArguments.StatusTextChangedEventArgs e);
 
         public event OtherStatusInfosChangedEventHandler OtherStatusInfosChanged;
-        public delegate void OtherStatusInfosChangedEventHandler(SM64_ROM_Manager.EventArguments.OtherStatusInfosChangedEventArgs e);
+        public delegate void OtherStatusInfosChangedEventHandler(EventArguments.OtherStatusInfosChangedEventArgs e);
 
         public event RecentFilesChangedEventHandler RecentFilesChanged;
         public delegate void RecentFilesChangedEventHandler();
@@ -88,61 +74,61 @@ namespace SM64_ROM_Manager
         public delegate void RomFileChangedEventHandler();
 
         public event RomChangesAvailableEventHandler RomChangesAvailable;
-        public delegate void RomChangesAvailableEventHandler(SM64_ROM_Manager.EventArguments.RomChangesAvaiableEventArgs e);
+        public delegate void RomChangesAvailableEventHandler(EventArguments.RomChangesAvaiableEventArgs e);
 
         public event MusicSequenceRemovedEventHandler MusicSequenceRemoved;
-        public delegate void MusicSequenceRemovedEventHandler(SM64_ROM_Manager.EventArguments.MusicSequenceEventArgs e);
+        public delegate void MusicSequenceRemovedEventHandler(EventArguments.MusicSequenceEventArgs e);
 
         public event MusicSequenceAddedEventHandler MusicSequenceAdded;
-        public delegate void MusicSequenceAddedEventHandler(SM64_ROM_Manager.EventArguments.MusicSequenceEventArgs e);
+        public delegate void MusicSequenceAddedEventHandler(EventArguments.MusicSequenceEventArgs e);
 
         public event MusicSequenceChangedEventHandler MusicSequenceChanged;
-        public delegate void MusicSequenceChangedEventHandler(SM64_ROM_Manager.EventArguments.MusicSequenceEventArgs e);
+        public delegate void MusicSequenceChangedEventHandler(EventArguments.MusicSequenceEventArgs e);
 
         public event RequestIsChangingTabEventHandler RequestIsChangingTab;
-        public delegate void RequestIsChangingTabEventHandler(SM64_ROM_Manager.EventArguments.EnabledEventArgs e);
+        public delegate void RequestIsChangingTabEventHandler(EventArguments.EnabledEventArgs e);
 
         public event LevelSpecialItemAddedEventHandler LevelSpecialItemAdded;
-        public delegate void LevelSpecialItemAddedEventHandler(SM64_ROM_Manager.EventArguments.SpecialItemEventArgs e);
+        public delegate void LevelSpecialItemAddedEventHandler(EventArguments.SpecialItemEventArgs e);
 
         public event LevelSpecialItemRemovedEventHandler LevelSpecialItemRemoved;
-        public delegate void LevelSpecialItemRemovedEventHandler(SM64_ROM_Manager.EventArguments.SpecialItemEventArgs e);
+        public delegate void LevelSpecialItemRemovedEventHandler(EventArguments.SpecialItemEventArgs e);
 
         public event LevelSpecialItemChangedEventHandler LevelSpecialItemChanged;
-        public delegate void LevelSpecialItemChangedEventHandler(SM64_ROM_Manager.EventArguments.SpecialItemEventArgs e);
+        public delegate void LevelSpecialItemChangedEventHandler(EventArguments.SpecialItemEventArgs e);
 
         public event LevelAddedEventHandler LevelAdded;
-        public delegate void LevelAddedEventHandler(SM64_ROM_Manager.EventArguments.LevelEventArgs e);
+        public delegate void LevelAddedEventHandler(EventArguments.LevelEventArgs e);
 
         public event LevelRemovedEventHandler LevelRemoved;
-        public delegate void LevelRemovedEventHandler(SM64_ROM_Manager.EventArguments.LevelEventArgs e);
+        public delegate void LevelRemovedEventHandler(EventArguments.LevelEventArgs e);
 
         public event LevelAreaAddedEventHandler LevelAreaAdded;
-        public delegate void LevelAreaAddedEventHandler(SM64_ROM_Manager.EventArguments.LevelAreaEventArgs e);
+        public delegate void LevelAreaAddedEventHandler(EventArguments.LevelAreaEventArgs e);
 
         public event LevelAreaRemovedEventHandler LevelAreaRemoved;
-        public delegate void LevelAreaRemovedEventHandler(SM64_ROM_Manager.EventArguments.LevelAreaEventArgs e);
+        public delegate void LevelAreaRemovedEventHandler(EventArguments.LevelAreaEventArgs e);
 
         public event LevelIDChangedEventHandler LevelIDChanged;
-        public delegate void LevelIDChangedEventHandler(SM64_ROM_Manager.EventArguments.LevelEventArgs e);
+        public delegate void LevelIDChangedEventHandler(EventArguments.LevelEventArgs e);
 
         public event LevelCustomNameChangedEventHandler LevelCustomNameChanged;
-        public delegate void LevelCustomNameChangedEventHandler(SM64_ROM_Manager.EventArguments.LevelEventArgs e);
+        public delegate void LevelCustomNameChangedEventHandler(EventArguments.LevelEventArgs e);
 
         public event LevelBackgroundModeChangedEventHandler LevelBackgroundModeChanged;
-        public delegate void LevelBackgroundModeChangedEventHandler(SM64_ROM_Manager.EventArguments.LevelBackgroundModeChangedEventArgs e);
+        public delegate void LevelBackgroundModeChangedEventHandler(EventArguments.LevelBackgroundModeChangedEventArgs e);
 
         public event LevelBackgroundImageChangedEventHandler LevelBackgroundImageChanged;
-        public delegate void LevelBackgroundImageChangedEventHandler(SM64_ROM_Manager.EventArguments.LevelBackgroundImageChangedEventArgs e);
+        public delegate void LevelBackgroundImageChangedEventHandler(EventArguments.LevelBackgroundImageChangedEventArgs e);
 
         public event LevelAreaBackgroundModeChangedEventHandler LevelAreaBackgroundModeChanged;
-        public delegate void LevelAreaBackgroundModeChangedEventHandler(SM64_ROM_Manager.EventArguments.LevelAreaBackgroundModeChangedEventArgs e);
+        public delegate void LevelAreaBackgroundModeChangedEventHandler(EventArguments.LevelAreaBackgroundModeChangedEventArgs e);
 
-        public event LevelAreaCustomObjectsCountChangedEventHandler LevelAreaCustomObjectsCountChanged;
-        public delegate void LevelAreaCustomObjectsCountChangedEventHandler(SM64_ROM_Manager.EventArguments.LevelAreaEventArgs e);
+        public event LevelCustomObjectsCountChangedEventHandler LevelCustomObjectsCountChanged;
+        public delegate void LevelCustomObjectsCountChangedEventHandler(EventArguments.LevelEventArgs e);
 
         public event LevelAreaScrollingTextureCountChangedEventHandler LevelAreaScrollingTextureCountChanged;
-        public delegate void LevelAreaScrollingTextureCountChangedEventHandler(SM64_ROM_Manager.EventArguments.LevelAreaEventArgs e);
+        public delegate void LevelAreaScrollingTextureCountChangedEventHandler(EventArguments.LevelAreaEventArgs e);
 
         public event ObjectBankDataChangedEventHandler ObjectBankDataChanged;
         public delegate void ObjectBankDataChangedEventHandler();
@@ -164,22 +150,27 @@ namespace SM64_ROM_Manager
         private bool addedTweakViewerEvents = false;
         private TextManagerController tmc = null;
 
+        private string _StatusText = string.Empty;
+        private bool loadRecentROM = false;
+        private bool loadingROM = false;
+        private bool savingRom = false;
+        private byte hasRomChanged = 0;
+        private FileSystemWatcher _RomWatcher = null;
+
+        private List<BinaryData> openBinaryDatas = new List<BinaryData>();
+
+        // P r o p e r t i e s
+
         private RomManager RomManager
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _RomManager;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_RomManager != null)
                 {
-
-                    // R o m   M a n a g e r   E v e n t s
-
                     _RomManager.WritingNewProgramVersion -= RomManager_WritingNewRomVersion;
                 }
 
@@ -191,29 +182,16 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private string _StatusText = string.Empty;
-        private bool loadRecentROM = false;
-        private bool loadingROM = false;
-        private bool savingRom = false;
-        private byte hasRomChanged = 0;
-        private FileSystemWatcher _RomWatcher;
-
         private FileSystemWatcher RomWatcher
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _RomWatcher;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_RomWatcher != null)
                 {
-
-                    // R o m   W a t c h e r
-
                     _RomWatcher.Changed -= RomWatcher_Changed;
                     _RomWatcher.Renamed -= RomWatcher_Renamed;
                     _RomWatcher.Deleted -= RomWatcher_Deleted;
@@ -229,17 +207,13 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private List<BinaryData> openBinaryDatas = new List<BinaryData>();
-
-        // P r o p e r t i e s
-
         public TextManagerController TextManagerController
         {
             get
             {
                 if (tmc is null)
                 {
-                    tmc = new SM64_ROM_Manager.TextManagerController();
+                    tmc = new TextManagerController();
                     tmc.ForceUppercaseForActAndLevelNames = Settings.TextManager.ForceUpperCaseForActAndLevelNames;
                 }
 
@@ -267,7 +241,7 @@ namespace SM64_ROM_Manager
                 if (string.IsNullOrEmpty(value))
                     value = My.Resources.Form_Main_Resources.Status_Ready;
                 _StatusText = value;
-                StatusTextChanged?.Invoke(new SM64_ROM_Manager.EventArguments.StatusTextChangedEventArgs(_StatusText));
+                StatusTextChanged?.Invoke(new EventArguments.StatusTextChangedEventArgs(_StatusText));
             }
         }
 
@@ -304,7 +278,24 @@ namespace SM64_ROM_Manager
             }
         }
 
-        public MainController(SM64_ROM_Manager.MainForm mainForm) : this()
+        // C o n s t r u c t o r
+
+        public MainController()
+        {
+            RomWatcher.Changed += RomWatcher_Changed;
+            RomWatcher.Renamed += RomWatcher_Renamed;
+            RomWatcher.Deleted += RomWatcher_Deleted;
+
+            this.TextManagerController.RequestRomManager += e => e.RomManager = this.RomManager;
+            this.TextManagerController.RequestIsChangingTab += e => e.Value = Conversions.ToBoolean(this.IsChangingTab());
+            this.TextManagerController.SettingOtherStatusInfo += (text, foreColor) => this.SetOtherStatusInfos(text, foreColor);
+            this.TextManagerController.SettingStatusText += text => this.StatusText = text;
+            this.TextManagerController.RequestStatusText += e => e.Value = this.StatusText;
+            this.TextManagerController.ErrorBecauseNoRomLoaded += () => ErrorBecauseNoRomLoaded?.Invoke();
+
+        }
+
+        public MainController(MainForm mainForm) : this()
         {
             this.mainForm = mainForm;
 
@@ -852,10 +843,10 @@ namespace SM64_ROM_Manager
             frm.Show();
         }
 
-        private void OpenCustomBankManager(CustomObjectBank customBank, int levelIndex, int areaIndex, byte areaID)
+        private void OpenCustomBankManager(CustomObjectBank customBank, int levelIndex, ushort levelID)
         {
             var mgr = new CustomBankManager(RomManager, customBank);
-            void objectCountChanged(object sender, EventArgs e) => LevelAreaCustomObjectsCountChanged?.Invoke(new EventArguments.LevelAreaEventArgs(levelIndex, areaIndex, areaID));
+            void objectCountChanged(object sender, EventArgs e) => LevelCustomObjectsCountChanged?.Invoke(new EventArguments.LevelEventArgs(levelIndex, levelID));
             mgr.ObjectAdded += objectCountChanged;
             mgr.ObjectRemoved += objectCountChanged;
             mgr.Show();
@@ -1547,16 +1538,7 @@ namespace SM64_ROM_Manager
         {
             var lvl = GetLevelAndArea(levelIndex);
             return lvl.level?.Bank0x19 is object;
-        }
-
-        public void OpenCustomBankManager(int levelIndex, int areaIndex)
-        {
-            var lvl = GetLevelAndArea(levelIndex, areaIndex);
-            if (lvl.area is object)
-            {
-                OpenCustomBankManager(lvl.area.CustomObjects, levelIndex, areaIndex, lvl.area.AreaID);
-            }
-        }
+        }        
 
         public async Task ExportLevelVisualMap(int levelIndex, int areaIndex)
         {

@@ -38,20 +38,10 @@ namespace SM64Lib.Levels
         public uint GeolayoutOffset { get; set; } = 0;
         public ObjectModel AreaModel { get; set; } = new ObjectModel();
         public bool Enable2DCamera { get; set; } = false;
-        public CustomObjectBank CustomObjects { get; private set; } = new CustomObjectBank();
-        public int CustomObjectsStartOffset { get; set; } = 0;
         public uint Bank0x0EOffset { get; set; } = 0;
         public int Bank0xELength { get; set; }
 
         // O t h e r   P r o p e r t i e s
-
-        public bool HasCustomObjects
-        {
-            get
-            {
-                return CustomObjects.Objects.Any();
-            }
-        }
 
         public int Fast3DBankRomStart
         {

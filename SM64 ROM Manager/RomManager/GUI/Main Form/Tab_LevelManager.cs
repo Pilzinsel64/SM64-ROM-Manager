@@ -17,38 +17,28 @@ namespace SM64_ROM_Manager
     public partial class Tab_LevelManager
     {
 
-        // C o n s t r u c t o r
+        // F l a g s
 
-        public Tab_LevelManager()
-        {
-
-            // C o n t r o l s
-
-            ObjectBankSelectorBox_C = new ObjectBankSelectorBox() { Dock = DockStyle.Fill, ContentLabelText = "Content of Bank 0xC" };
-            ObjectBankSelectorBox_D = new ObjectBankSelectorBox() { Dock = DockStyle.Fill, ContentLabelText = "Content of Bank 0xD" };
-            ObjectBankSelectorBox_9 = new ObjectBankSelectorBox() { Dock = DockStyle.Fill, ContentLabelText = "Content of Bank 0x9" };
-            InitializeComponent();
-            SwitchButton_UseGlobalObjectBank.Enabled = true;
-
-            // Add ObjectBankSelectorBoxes
-            TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_C, 0, 0);
-            TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_D, 1, 0);
-            TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_9, 2, 0);
-        }
+        private bool LM_LoadingAreaList = false;
+        private bool LM_SavingRom = false;
+        private bool LM_LoadingArea = false;
+        private bool LM_LoadingLevel = false;
 
         // F i e l d s
 
+        // W i t h E v e n t s
+
         private MainController _Controller;
+        private ObjectBankSelectorBox _ObjectBankSelectorBox_C;
+        private ObjectBankSelectorBox _ObjectBankSelectorBox_D;
+        private ObjectBankSelectorBox _ObjectBankSelectorBox_9;
 
         public MainController Controller
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _Controller;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_Controller != null)
@@ -73,7 +63,6 @@ namespace SM64_ROM_Manager
                     _Controller.LevelCustomNameChanged -= Controller_LevelIDAndCustomNameChanged;
                     _Controller.LevelAreaAdded -= Controller_LevelAreaAdded;
                     _Controller.LevelAreaRemoved -= Controller_LevelAreaRemoved;
-                    _Controller.LevelAreaCustomObjectsCountChanged -= Controller_LevelAreaCustomObjectsCountChanged;
                     _Controller.LevelAreaScrollingTextureCountChanged -= Controller_LevelAreaScrollingTextureCountChanged;
                     _Controller.ObjectBankDataChanged -= Controller_ObjectBankDataChanged;
                 }
@@ -98,24 +87,18 @@ namespace SM64_ROM_Manager
                     _Controller.LevelCustomNameChanged += Controller_LevelIDAndCustomNameChanged;
                     _Controller.LevelAreaAdded += Controller_LevelAreaAdded;
                     _Controller.LevelAreaRemoved += Controller_LevelAreaRemoved;
-                    _Controller.LevelAreaCustomObjectsCountChanged += Controller_LevelAreaCustomObjectsCountChanged;
                     _Controller.LevelAreaScrollingTextureCountChanged += Controller_LevelAreaScrollingTextureCountChanged;
                     _Controller.ObjectBankDataChanged += Controller_ObjectBankDataChanged;
                 }
             }
         }
 
-        private ObjectBankSelectorBox _ObjectBankSelectorBox_C;
-
         private ObjectBankSelectorBox ObjectBankSelectorBox_C
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _ObjectBankSelectorBox_C;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_ObjectBankSelectorBox_C != null)
@@ -133,17 +116,12 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private ObjectBankSelectorBox _ObjectBankSelectorBox_D;
-
         private ObjectBankSelectorBox ObjectBankSelectorBox_D
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _ObjectBankSelectorBox_D;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_ObjectBankSelectorBox_D != null)
@@ -161,17 +139,12 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private ObjectBankSelectorBox _ObjectBankSelectorBox_9;
-
         private ObjectBankSelectorBox ObjectBankSelectorBox_9
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _ObjectBankSelectorBox_9;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_ObjectBankSelectorBox_9 != null)
@@ -188,13 +161,6 @@ namespace SM64_ROM_Manager
                 }
             }
         }
-
-        // F l a g s
-
-        private bool LM_LoadingAreaList = false;
-        private bool LM_SavingRom = false;
-        private bool LM_LoadingArea = false;
-        private bool LM_LoadingLevel = false;
 
         // P r o p e r t i e s
 
@@ -343,14 +309,6 @@ namespace SM64_ROM_Manager
             RemoveAreaFromList(e.AreaIndex);
         }
 
-        private void Controller_LevelAreaCustomObjectsCountChanged(LevelAreaEventArgs e)
-        {
-            if (CurrentLevelIndex == e.LevelIndex && CurrentAreaIndex == e.AreaIndex)
-            {
-                LoadCustomObjectsCount();
-            }
-        }
-
         private void Controller_LevelAreaScrollingTextureCountChanged(LevelAreaEventArgs e)
         {
             if (CurrentLevelIndex == e.LevelIndex && CurrentAreaIndex == e.AreaIndex)
@@ -362,6 +320,23 @@ namespace SM64_ROM_Manager
         private void Controller_ObjectBankDataChanged()
         {
             LoadObjectBankListBoxEntries();
+        }
+
+        // C o n s t r u c t o r
+
+        public Tab_LevelManager()
+        {
+            ObjectBankSelectorBox_C = new ObjectBankSelectorBox() { Dock = DockStyle.Fill, ContentLabelText = "Content of Bank 0xC" };
+            ObjectBankSelectorBox_D = new ObjectBankSelectorBox() { Dock = DockStyle.Fill, ContentLabelText = "Content of Bank 0xD" };
+            ObjectBankSelectorBox_9 = new ObjectBankSelectorBox() { Dock = DockStyle.Fill, ContentLabelText = "Content of Bank 0x9" };
+
+            InitializeComponent();
+            SwitchButton_UseGlobalObjectBank.Enabled = true;
+
+            // Add ObjectBankSelectorBoxes
+            TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_C, 0, 0);
+            TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_D, 1, 0);
+            TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_9, 2, 0);
         }
 
         // F e a t u r e s   &   G U I
@@ -738,11 +713,6 @@ namespace SM64_ROM_Manager
                 UpdateSpecialItemsList();
                 LM_LoadingArea = false;
             }
-        }
-
-        private void LoadCustomObjectsCount()
-        {
-            LabelX_Area_CountOfCustomObjects.Text = Conversions.ToString(Controller.GetLevelAreaCustomObjectsCount(CurrentLevelIndex, CurrentAreaIndex));
         }
 
         private void LoadScrollTexCount()

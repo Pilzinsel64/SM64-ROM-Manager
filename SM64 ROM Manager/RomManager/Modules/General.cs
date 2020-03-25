@@ -25,10 +25,6 @@ namespace SM64_ROM_Manager
 {
     internal static class General
     {
-        static General()
-        {
-            RomWatcher = null;
-        }
 
         private static bool hasLoadedObjectCombos = false;
         private static bool hasLoadedBehaviorInfos = false;
@@ -36,25 +32,9 @@ namespace SM64_ROM_Manager
         private const string p_ObjectCombosCustom = @"Area Editor\Object Combos Custom.json";
         private const string p_BehaviorInfos = @"Area Editor\Behavior IDs.json";
         private const string p_BehaviorInfosCustom = @"Area Editor\Behavior IDs Custom.json";
-        private static FileSystemWatcher _RomWatcher;
-
-        public static FileSystemWatcher RomWatcher
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _RomWatcher;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _RomWatcher = value;
-            }
-        }
-
         public static DateTime lastRomChangedDate = DateTime.Now;
 
+        public static FileSystemWatcher RomWatcher { get; set; } = null;
         public static ObjectComboList ObjectCombos { get; private set; } = new ObjectComboList();
         public static BehaviorInfoList BehaviorInfos { get; private set; } = new BehaviorInfoList();
         public static ObjectComboList ObjectCombosCustom { get; private set; } = new ObjectComboList();

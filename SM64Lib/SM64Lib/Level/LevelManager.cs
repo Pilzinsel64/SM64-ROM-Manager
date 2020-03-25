@@ -56,124 +56,83 @@ namespace SM64Lib.Levels
                 switch (switchExpr)
                 {
                     case LevelscriptCommandTypes.StartArea:
-                        {
-                            AreaOnFly = true;
-                            tArea = new RMLevelArea();
-                            tArea.AreaID = clStartArea.GetAreaID(c);
-                            tArea.GeolayoutOffset = clStartArea.GetSegGeolayoutAddr(c); // - bank0x19.BankAddress + bank0x19.RomStart
-                            tArea.Geolayout.Read(rommgr, Conversions.ToInteger(tArea.GeolayoutOffset));
-                            break;
-                        }
-
+                        AreaOnFly = true;
+                        tArea = new RMLevelArea();
+                        tArea.AreaID = clStartArea.GetAreaID(c);
+                        tArea.GeolayoutOffset = clStartArea.GetSegGeolayoutAddr(c); // - bank0x19.BankAddress + bank0x19.RomStart
+                        tArea.Geolayout.Read(rommgr, Conversions.ToInteger(tArea.GeolayoutOffset));
+                        break;
                     case LevelscriptCommandTypes.EndOfArea:
-                        {
-                            tArea.Levelscript.Add(c);
-                            lvl.Levelscript.Remove(c);
-                            lvl.Areas.Add(tArea);
-                            AreaOnFly = false;
-                            break;
-                        }
-
+                        tArea.Levelscript.Add(c);
+                        lvl.Levelscript.Remove(c);
+                        lvl.Areas.Add(tArea);
+                        AreaOnFly = false;
+                        break;
                     case LevelscriptCommandTypes.AreaMusic:
-                        {
-                            tArea.BGMusic = clAreaMusic.GetMusicID(c);
-                            break;
-                        }
-
+                        tArea.BGMusic = clAreaMusic.GetMusicID(c);
+                        break;
                     case LevelscriptCommandTypes.AreaMusicSimple:
-                        {
-                            tArea.BGMusic = clAreaMusicSimple.GetMusicID(c);
-                            break;
-                        }
-
+                        tArea.BGMusic = clAreaMusicSimple.GetMusicID(c);
+                        break;
                     case LevelscriptCommandTypes.Tarrain:
-                        {
-                            tArea.TerrainType = (Geolayout.TerrainTypes)clTerrian.GetTerrainType(c);
-                            break;
-                        }
-
+                        tArea.TerrainType = (Geolayout.TerrainTypes)clTerrian.GetTerrainType(c);
+                        break;
                     case LevelscriptCommandTypes.Normal3DObject:
+                        if (new[] { 0x400000, 0x401700 }.Contains(Conversions.ToInteger(clNormal3DObject.GetSegBehaviorAddr(c))))
                         {
-                            if (new[] { 0x400000, 0x401700 }.Contains(Conversions.ToInteger(clNormal3DObject.GetSegBehaviorAddr(c))))
-                            {
-                                tArea.ScrollingTextures.Add(new ManagedScrollingTexture(c));
-                            }
-                            else
-                            {
-                                tArea.Objects.Add(c);
-                            }
-
-                            break;
+                            tArea.ScrollingTextures.Add(new ManagedScrollingTexture(c));
                         }
-
+                        else
+                        {
+                            tArea.Objects.Add(c);
+                        }
+                        break;
                     case LevelscriptCommandTypes.ConnectedWarp:
+                        if ((new[] { 0xF0, 0xF1 }).Contains(clWarp.GetWarpID(c)))
                         {
-                            if ((new[] { 0xF0, 0xF1 }).Contains(clWarp.GetWarpID(c)))
-                            {
-                                tArea.WarpsForGame.Add(c);
-                            }
-                            else
-                            {
-                                tArea.Warps.Add(c);
-                            }
-
-                            break;
+                            tArea.WarpsForGame.Add(c);
                         }
-
-                    case LevelscriptCommandTypes.PaintingWarp:
-                    case LevelscriptCommandTypes.InstantWarp:
+                        else
                         {
                             tArea.Warps.Add(c);
-                            break;
                         }
-
+                        break;
+                    case LevelscriptCommandTypes.PaintingWarp:
+                    case LevelscriptCommandTypes.InstantWarp:
+                        tArea.Warps.Add(c);
+                        break;
                     case LevelscriptCommandTypes.LoadRomToRam:
+                        byte bankID = clLoadRomToRam.GetSegmentedID(c);
+                        int startAddr = clLoadRomToRam.GetRomStart(c);
+                        int endAddr = clLoadRomToRam.GetRomEnd(c);
+                        switch (bankID)
                         {
-                            byte bankID = clLoadRomToRam.GetSegmentedID(c);
-                            int startAddr = clLoadRomToRam.GetRomStart(c);
-                            int endAddr = clLoadRomToRam.GetRomEnd(c);
-                            switch (bankID)
-                            {
-                                case 0xA: // Background-Image
-                                    {
-                                        customBGStart = startAddr;
-                                        customBGEnd = endAddr - 0x140;
-                                        break;
-                                    }
-
-                                case 0x7: // Global Object Bank
-                                    {
-                                        if (rommgr.GlobalObjectBank is object && startAddr == rommgr.GlobalObjectBank.CurSeg.RomStart && endAddr == rommgr.GlobalObjectBank.CurSeg.RomEnd)
-                                        {
-                                            lvl.EnableGlobalObjectBank = true;
-                                            lvl.LastGobCmdSegLoad = c;
-                                        }
-
-                                        break;
-                                    }
-                            }
-
-                            break;
+                            case 0xA: // Background-Image
+                                customBGStart = startAddr;
+                                customBGEnd = endAddr - 0x140;
+                                break;
+                            case 0x7: // Global Object Bank
+                                if (rommgr.GlobalObjectBank is object && startAddr == rommgr.GlobalObjectBank.CurSeg.RomStart && endAddr == rommgr.GlobalObjectBank.CurSeg.RomEnd)
+                                {
+                                    lvl.EnableGlobalObjectBank = true;
+                                    lvl.LastGobCmdSegLoad = c;
+                                }
+                                break;
                         }
-
+                        break;
                     case LevelscriptCommandTypes.ShowDialog:
+                        if (AreaOnFly)
                         {
-                            if (AreaOnFly)
-                            {
-                                tArea.ShowMessage.Enabled = true;
-                                tArea.ShowMessage.DialogID = clShowDialog.GetDialogID(c);
-                            }
-
-                            break;
+                            tArea.ShowMessage.Enabled = true;
+                            tArea.ShowMessage.DialogID = clShowDialog.GetDialogID(c);
                         }
 
+                        break;
                     case LevelscriptCommandTypes.JumpBack:
                     case LevelscriptCommandTypes.JumpToSegAddr:
-                        {
-                            if (tArea is object)
-                                cmdsToRemove.Add(c);
-                            break;
-                        }
+                        if (tArea is object)
+                            cmdsToRemove.Add(c);
+                        break;
                 }
 
                 if (AreaOnFly && !cmdsToRemove.Contains(c))
@@ -365,7 +324,7 @@ namespace SM64Lib.Levels
 
                 // Write Area Model
                 ObjectModel.SaveResult res;
-                res = a.AreaModel.ToBinaryData(output, Conversions.ToInteger(curOff), Conversions.ToInteger(curOff), 0xE000000);
+                res = a.AreaModel.ToBinaryData(output, (int)(curOff), (int)(curOff), 0xE000000);
 
                 // Calculate Model Offset & Update Scrolling Texture Vertex Pointers
                 newModelStart = a.AreaModel.Fast3DBuffer.Fast3DBankStart;
@@ -380,10 +339,6 @@ namespace SM64Lib.Levels
                 a.Geolayout.Geopointers.AddRange(res.GeoPointers.ToArray());
                 curOff += (uint)(res.Length + 0x20);
                 General.HexRoundUp2(ref curOff);
-
-                // Write Object Bank
-                a.CustomObjectsStartOffset = (int)(curOff - a.Bank0x0EOffset);
-                // a.CustomObjects.WriteToSeg(output, a.CustomObjectsStartOffset, &HE)
 
                 a.Bank0xELength = (int)(curOff - a.Bank0x0EOffset);
             }
