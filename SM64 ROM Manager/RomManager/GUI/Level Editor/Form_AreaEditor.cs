@@ -2338,7 +2338,7 @@ namespace SM64_ROM_Manager.LevelEditor
             var newobjects = new List<Managed3DObject>();
             var newlvis = new List<ListViewItem>();
             int objcount = 0;
-            if (!int.TryParse(((Control)sender).Text, out objcount))
+            if (!int.TryParse(((BaseItem)sender).Text, out objcount))
                 objcount = 1;
             for (int i = 1, loopTo = objcount; i <= loopTo; i++)
             {

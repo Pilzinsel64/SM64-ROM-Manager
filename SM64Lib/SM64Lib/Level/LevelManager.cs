@@ -704,6 +704,7 @@ namespace SM64Lib.Levels
                 var newgobcmd = cmdGobSegLoad ?? new LevelscriptCommand("17 0C 00 07 00 00 00 00 00 00 00 00");
                 clLoadRomToRam.SetRomStart(newgobcmd, rommgr.GlobalObjectBank.CurSeg.RomStart);
                 clLoadRomToRam.SetRomEnd(newgobcmd, rommgr.GlobalObjectBank.CurSeg.RomEnd);
+
                 if (!lvl.Levelscript.Contains(newgobcmd))
                 {
                     int indexoffirstx1d = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1D);
@@ -713,8 +714,8 @@ namespace SM64Lib.Levels
 
                 if (!lvl.Levelscript.Contains(newgobjumpcmd))
                 {
-                    int indexoffirstx1e = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1E);
-                    lvl.Levelscript.Insert(indexoffirstx1e, newgobjumpcmd);
+                    int indexoffirstx1d = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1D);
+                    lvl.Levelscript.Insert(indexoffirstx1d + 1, newgobjumpcmd);
                 }
             }
             else
@@ -737,6 +738,7 @@ namespace SM64Lib.Levels
                 var newlobcmd = cmdLobSegLoad ?? new LevelscriptCommand("17 0C 00 09 00 00 00 00 00 00 00 00");
                 clLoadRomToRam.SetRomStart(newlobcmd, (int)localObjectBankRomStart);
                 clLoadRomToRam.SetRomEnd(newlobcmd, (int)localObjectBankRomEnd);
+
                 if (!lvl.Levelscript.Contains(newlobcmd))
                 {
                     int indexoffirstx1d = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1D);
@@ -746,8 +748,8 @@ namespace SM64Lib.Levels
 
                 if (!lvl.Levelscript.Contains(newlobjumpcmd))
                 {
-                    int indexoffirstx1e = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1E);
-                    lvl.Levelscript.Insert(indexoffirstx1e, newlobjumpcmd);
+                    int indexoffirstx1d = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1D);
+                    lvl.Levelscript.Insert(indexoffirstx1d + 1, newlobjumpcmd);
                 }
             }
             else

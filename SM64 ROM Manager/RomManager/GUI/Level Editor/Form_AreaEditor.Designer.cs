@@ -4000,6 +4000,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Activated += new System.EventHandler(this.Form_AreaEditor_Activated);
             this.Deactivate += new System.EventHandler(this.Form_AreaEditor_Deactivate);
             this.Shown += new System.EventHandler(this.Form_AreaEditor_Shown);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_AreaEditor_Closing);
             this.Panel_GLControl.ResumeLayout(false);
             this.DockSite4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Bar_Controls)).EndInit();

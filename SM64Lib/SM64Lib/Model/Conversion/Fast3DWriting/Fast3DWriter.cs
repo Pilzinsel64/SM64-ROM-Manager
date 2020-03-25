@@ -668,6 +668,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             var argimageData = entry.Data;
             var argpaletteData = entry.Palette;
             N64Graphics.N64Graphics.Convert(ref argimageData, ref argpaletteData, mat.TexType, (Bitmap)img);
+            entry.Data = argimageData;
+            entry.Palette = argpaletteData;
 
             // Get Texture like it is ingame (fixes bug that sometimes transparency is there even if there isn't)
             if (settings.OptimizeTransparencyChecks)

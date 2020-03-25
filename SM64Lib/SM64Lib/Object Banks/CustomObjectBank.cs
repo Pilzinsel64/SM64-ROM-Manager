@@ -56,8 +56,8 @@ namespace SM64Lib.ObjectBanks
                 var obj = Objects[i];
 
                 // Write Object Model
-                obj.ModelBankOffset = Conversions.ToInteger(data.Position);
-                var sr = obj.Model.ToBinaryData(data, Conversions.ToInteger(data.Position), 0, bankAddr);
+                obj.ModelBankOffset = Conversions.ToInteger(data.Position - offset);
+                var sr = obj.Model.ToBinaryData(data, Conversions.ToInteger(data.Position), offset, bankAddr);
                 data.RoundUpPosition();
 
                 // Write Model Offset & Length & Collision Offset
@@ -72,7 +72,7 @@ namespace SM64Lib.ObjectBanks
                 obj.Geolayout.Geopointers.AddRange(sr.GeoPointers.ToArray());
 
                 // Write Geolayout
-                obj.GeolayoutBankOffset = Conversions.ToInteger(data.Position);
+                obj.GeolayoutBankOffset = Conversions.ToInteger(data.Position - offset);
                 obj.Geolayout.Write(data.BaseStream, Conversions.ToInteger(data.Position));
                 data.RoundUpPosition(0x30);
 
