@@ -8,6 +8,7 @@ using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
 using global::SM64Lib.ObjectBanks.Data;
 using global::SM64Lib.SegmentedBanking;
+using SM64Lib.ObjectBanks;
 
 namespace SM64Lib.Levels
 {
@@ -25,6 +26,7 @@ namespace SM64Lib.Levels
         // A u t o   P r o p e r t i e s
 
         internal LevelscriptCommand LastGobCmdSegLoad { get; set; } = null;
+        internal LevelscriptCommand LastLobCmdSegLoad { get; set; } = null;
         internal Dictionary<byte, ObjectBankData> MyObjectBanks { get; private set; } = new Dictionary<byte, ObjectBankData>();
         public Levelscript Levelscript { get; set; } = new Levelscript();
         public List<LevelArea> Areas { get; private set; } = new List<LevelArea>();
@@ -42,6 +44,8 @@ namespace SM64Lib.Levels
         public bool NeedToSaveBanks0E { get; set; } = false;
         public bool OneBank0xESystemEnabled { get; set; } = true;
         public bool EnableGlobalObjectBank { get; set; } = false;
+        public bool EnableLocalObjectBank { get; set; } = false;
+        public CustomObjectBank LocalObjectBank { get; private set; } = new CustomObjectBank();
 
         // O t h e r   P r o p e r t i e s
 
@@ -86,7 +90,7 @@ namespace SM64Lib.Levels
                     tcount += a.Warps.Count;
                 return tcount;
             }
-        }
+        }      
 
         // C o n s t r u c t o r s
 

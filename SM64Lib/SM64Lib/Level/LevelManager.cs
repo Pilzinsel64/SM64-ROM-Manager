@@ -37,8 +37,7 @@ namespace SM64Lib.Levels
             lvl.Bank0x19.ReadDataIfNull(rommgr.RomFile);
 
             // Close if not closed & re-open
-            if (!lvl.Closed)
-                lvl.Close();
+            if (!lvl.Closed) lvl.Close();
             lvl.Closed = false;
 
             // Lade Levelscript
@@ -118,6 +117,13 @@ namespace SM64Lib.Levels
                                     lvl.LastGobCmdSegLoad = c;
                                 }
                                 break;
+                            case 0x9:
+                                if (((RMLevel)lvl).Config.EnableLocalObjectBank)
+                                {
+                                    lvl.EnableLocalObjectBank = true;
+                                    lvl.LastLobCmdSegLoad = c;
+                                }
+                                break;
                         }
                         break;
                     case LevelscriptCommandTypes.ShowDialog:
@@ -126,7 +132,6 @@ namespace SM64Lib.Levels
                             tArea.ShowMessage.Enabled = true;
                             tArea.ShowMessage.DialogID = clShowDialog.GetDialogID(c);
                         }
-
                         break;
                     case LevelscriptCommandTypes.JumpBack:
                     case LevelscriptCommandTypes.JumpToSegAddr:
@@ -324,7 +329,7 @@ namespace SM64Lib.Levels
 
                 // Write Area Model
                 ObjectModel.SaveResult res;
-                res = a.AreaModel.ToBinaryData(output, (int)(curOff), (int)(curOff), 0xE000000);
+                res = a.AreaModel.ToBinaryData(output, (int)curOff, (int)curOff, 0xE000000);
 
                 // Calculate Model Offset & Update Scrolling Texture Vertex Pointers
                 newModelStart = a.AreaModel.Fast3DBuffer.Fast3DBankStart;
@@ -358,6 +363,17 @@ namespace SM64Lib.Levels
                 customBGEnd = customBGStart + lvl.Background.ImageLength + bgPtrTable.Length;
                 curOff += (uint)lvl.Background.ImageLength + (uint)bgPtrTable.Length;
                 General.HexRoundUp2(ref curOff);
+            }
+
+            // Generate & Write Local Object Bank
+            uint localObjectBankRomStart = 0;
+            uint localObjectBankRomEnd = 0;
+
+            if(lvl.LocalObjectBank.Objects.Count > 0 && lvl.EnableGlobalObjectBank)
+            {
+                localObjectBankRomStart = curOff;
+                curOff += (uint)lvl.LocalObjectBank.WriteToSeg(output, (int)curOff, 0x9);
+                localObjectBankRomEnd = curOff;
             }
 
             // Get Bank 0x19
@@ -510,6 +526,8 @@ namespace SM64Lib.Levels
             LevelscriptCommand cmdBgSegLoad = null;
             LevelscriptCommand cmdGobSegLoad = null;
             LevelscriptCommand cmdGobJump = null;
+            LevelscriptCommand cmdLobSegLoad = null;
+            LevelscriptCommand cmdLobJump = null;
             var cmdsToInsertAt = new Dictionary<LevelscriptCommand, LevelscriptCommand>();
             var cmdsToRemove = new List<LevelscriptCommand>();
             foreach (var c in lvl.Levelscript)
@@ -565,27 +583,24 @@ namespace SM64Lib.Levels
                             switch (switchExpr2)
                             {
                                 case 0xE: // Bank 0xE
-                                    {
-                                        clLoadRomToRam.SetRomStart((LevelscriptCommand)c, firstBank0xE.RomStart);
-                                        clLoadRomToRam.SetRomEnd((LevelscriptCommand)c, firstBank0xE.RomEnd);
-                                        break;
-                                    }
-
+                                    clLoadRomToRam.SetRomStart((LevelscriptCommand)c, firstBank0xE.RomStart);
+                                    clLoadRomToRam.SetRomEnd((LevelscriptCommand)c, firstBank0xE.RomEnd);
+                                    break;
                                 case 0xA:
-                                    {
-                                        cmdBgSegLoad = (LevelscriptCommand)c;
-                                        break;
-                                    }
-
+                                    cmdBgSegLoad = (LevelscriptCommand)c;
+                                    break;
                                 case 0x7:
+                                    if (lvl.LastGobCmdSegLoad == c)
                                     {
-                                        if (lvl.LastGobCmdSegLoad == c)
-                                        {
-                                            cmdGobSegLoad = (LevelscriptCommand)c;
-                                        }
-
-                                        break;
+                                        cmdGobSegLoad = (LevelscriptCommand)c;
                                     }
+                                    break;
+                                case 0x9:
+                                    if (lvl.LastLobCmdSegLoad == c)
+                                    {
+                                        cmdLobSegLoad = (LevelscriptCommand)c;
+                                    }
+                                    break;
                             }
 
                             break;
@@ -608,11 +623,16 @@ namespace SM64Lib.Levels
 
                     case LevelscriptCommandTypes.JumpToSegAddr:
                         {
-                            if (clJumpToSegAddr.GetSegJumpAddr((LevelscriptCommand)c) >> 24 == 0x7)
+                            int bankID = clJumpToSegAddr.GetSegJumpAddr((LevelscriptCommand)c) >> 24;
+                            switch(bankID)
                             {
-                                cmdGobJump = (LevelscriptCommand)c;
+                                case 0x7:
+                                    cmdGobJump = (LevelscriptCommand)c;
+                                    break;
+                                case 0x9:
+                                    cmdLobJump = (LevelscriptCommand)c;
+                                    break;
                             }
-
                             break;
                         }
                 }
@@ -692,6 +712,39 @@ namespace SM64Lib.Levels
                 if (cmdGobSegLoad is object)
                 {
                     lvl.Levelscript.Remove(cmdGobSegLoad);
+                }
+            }
+
+            // Füge Local Object Bank Command ein
+            if (lvl.EnableLocalObjectBank)
+            {
+                var newlobjumpcmd = cmdLobJump ?? new LevelscriptCommand("06 08 00 00 09 00 00 00");
+                var newlobcmd = cmdLobSegLoad ?? new LevelscriptCommand("17 0C 00 09 00 00 00 00 00 00 00 00");
+                clLoadRomToRam.SetRomStart(newlobcmd, (int)localObjectBankRomStart);
+                clLoadRomToRam.SetRomEnd(newlobcmd, (int)localObjectBankRomEnd);
+                if (!lvl.Levelscript.Contains(newlobcmd))
+                {
+                    int indexoffirstx1d = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1D);
+                    lvl.Levelscript.Insert(indexoffirstx1d, newlobcmd);
+                    lvl.LastLobCmdSegLoad = newlobcmd;
+                }
+
+                if (!lvl.Levelscript.Contains(newlobjumpcmd))
+                {
+                    int indexoffirstx1e = lvl.Levelscript.IndexOfFirst(LevelscriptCommandTypes.x1E);
+                    lvl.Levelscript.Insert(indexoffirstx1e, newlobjumpcmd);
+                }
+            }
+            else
+            {
+                if (cmdLobJump is object)
+                {
+                    lvl.Levelscript.Remove(cmdLobJump);
+                }
+
+                if (cmdLobSegLoad is object)
+                {
+                    lvl.Levelscript.Remove(cmdLobSegLoad);
                 }
             }
 

@@ -25,15 +25,12 @@ namespace SM64Lib
         // E v e n t s
 
         public event BeforeRomSaveEventHandler BeforeRomSave;
-
         public delegate void BeforeRomSaveEventHandler(RomManager sender, CancelEventArgs e);
 
         public event AfterRomSaveEventHandler AfterRomSave;
-
         public delegate void AfterRomSaveEventHandler(RomManager sender, EventArgs e);
 
         public event WritingNewProgramVersionEventHandler WritingNewProgramVersion;
-
         public delegate void WritingNewProgramVersionEventHandler(RomManager sender, RomVersionEventArgs e);
 
         // F i e l d s
@@ -495,41 +492,29 @@ namespace SM64Lib
                     switch (segID)
                     {
                         case 0x19:
-                            {
-                                lvl = new RMLevel();
-                                LevelManager.LoadLevel(lvl, this, ldi.ID, offset);
-                                lvl.LastRomOffset = curLvlSeg.RomStart; // Original Level
-                                break;
-                            }
-
+                            lvl = new RMLevel(RomConfig.GetLevelConfig(ldi.ID));
+                            LevelManager.LoadLevel(lvl, this, ldi.ID, offset);
+                            lvl.LastRomOffset = curLvlSeg.RomStart; // Original Level
+                            break;
                         default:
-                            {
-                                lvl = null;
-                                break;
-                            }
+                            lvl = null;
                             // Dim mgr As New OriginalLevelManager
                             // lvl = New OriginalLevel
                             // mgr.LoadLevel(lvl, Me, ldi.ID, offset)
-
+                            break;
                     }
                 }
                 catch (Exception)
                 {
                     // Skip the Level  
                     if (General.IsDebugging)
-                    {
                         throw;
-                    }
                     else
-                    {
                         lvl = null;
-                    }
                 }
 
                 if (lvl is object)
-                {
                     Levels.Add(lvl);
-                }
             }
         }
 

@@ -90,7 +90,7 @@ namespace SM64Lib.ObjectBanks
             Levelscript.Add(new LevelscriptCommand("07 04 00 00"));
             Levelscript.Write(data, offset);
             NeedToSave = false;
-            return lastPosition;
+            return lastPosition - offset;
         }
 
         public void WriteCollisionPointers(RomManager rommgr)

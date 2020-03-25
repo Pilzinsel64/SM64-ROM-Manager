@@ -708,7 +708,6 @@ namespace SM64_ROM_Manager
                 UpdateShowMsgControlsVisible(infos.enableShowMsg);
 
                 // Model Infos
-                LoadCustomObjectsCount();
                 LoadScrollTexCount();
                 UpdateSpecialItemsList();
                 LM_LoadingArea = false;
@@ -1091,11 +1090,6 @@ namespace SM64_ROM_Manager
         private void ButtonX_LM_LevelsMore_PopupOpen(object sender, EventArgs e)
         {
             ButtonItem24.Visible = Controller.HasLevelBank0x19(CurrentLevelIndex);
-        }
-
-        private void ButtonX_CustomObjects_Click(object sender, EventArgs e)
-        {
-            Controller.OpenCustomBankManager(CurrentLevelIndex, CurrentAreaIndex);
         }
 
         private void ButtonItem_EditAreaLevelScript_Click(object sender, EventArgs e)

@@ -35,6 +35,7 @@ using global::SM64Lib.ObjectBanks;
 using global::SM64Lib.Script;
 using SM64Lib.TextValueConverter;
 using Z.Core.Extensions;
+using SM64_ROM_Manager.My.Resources;
 
 namespace SM64_ROM_Manager
 {
@@ -282,10 +283,6 @@ namespace SM64_ROM_Manager
 
         public MainController()
         {
-            RomWatcher.Changed += RomWatcher_Changed;
-            RomWatcher.Renamed += RomWatcher_Renamed;
-            RomWatcher.Deleted += RomWatcher_Deleted;
-
             this.TextManagerController.RequestRomManager += e => e.RomManager = this.RomManager;
             this.TextManagerController.RequestIsChangingTab += e => e.Value = Conversions.ToBoolean(this.IsChangingTab());
             this.TextManagerController.SettingOtherStatusInfo += (text, foreColor) => this.SetOtherStatusInfos(text, foreColor);
@@ -531,7 +528,11 @@ namespace SM64_ROM_Manager
             if (!loadRecentROM)
             {
 
-                /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+#if !DEBUG
+                try
+                {
+#endif
+
                 var romFileInfo = new FileInfo(Romfile);
                 var newrommgr = new RomManager(Romfile);
                 StatusText = SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_Checking;
@@ -563,7 +564,22 @@ namespace SM64_ROM_Manager
                 CreateRomWatcherForCurrentRom();
                 success = true;
 
-                /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+#if !DEBUG
+                }
+                catch (RomCompatiblityException ex)
+                {
+                    MessageBoxEx.Show(ex.Message, "Loading ROM", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (ReadOnlyException ex)
+                {
+                    MessageBoxEx.Show(ex.Message, "Loading ROM", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception)
+                {
+                    MessageBoxEx.Show(Form_Main_Resources.MsgBox_UnknownErrorAtLoadingRom, Form_Main_Resources.MsgBox_UnknownErrorAtLoadingRom_Titel, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+#endif
+
                 loadRecentROM = false;
                 StatusText = string.Empty;
             }
@@ -1578,14 +1594,6 @@ namespace SM64_ROM_Manager
 
             // Get Area Settings
             return (area.TerrainType, area.BGMusic, area.Geolayout.CameraPreset, area.Geolayout.EnvironmentEffect, area.Enable2DCamera, area.Background.Type, area.Background.Color, area.ShowMessage.Enabled, area.ShowMessage.DialogID);
-        }
-
-        public int GetLevelAreaCustomObjectsCount(int levelIndex, int areaIndex)
-        {
-            var area = GetLevelAndArea(levelIndex, areaIndex).area;
-
-            // Get Model Infos
-            return area.CustomObjects.Objects?.Count ?? 0;
         }
 
         public int GetLevelAreaScrollingTexturesCount(int levelIndex, int areaIndex)
