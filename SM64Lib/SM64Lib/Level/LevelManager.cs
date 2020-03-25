@@ -368,13 +368,14 @@ namespace SM64Lib.Levels
             // Generate & Write Local Object Bank
             uint localObjectBankRomStart = 0;
             uint localObjectBankRomEnd = 0;
-
-            if(lvl.LocalObjectBank.Objects.Count > 0 && lvl.EnableGlobalObjectBank)
+            bool writeLocalObjectBank = lvl.LocalObjectBank.Objects.Count > 0 && lvl.EnableGlobalObjectBank;
+            if (writeLocalObjectBank)
             {
                 localObjectBankRomStart = curOff;
                 curOff += (uint)lvl.LocalObjectBank.WriteToSeg(output, (int)curOff, 0x9);
                 localObjectBankRomEnd = curOff;
             }
+            ((RMLevel)lvl).Config.EnableLocalObjectBank = writeLocalObjectBank;
 
             // Get Bank 0x19
             if (lvl.Bank0x19 is null)
