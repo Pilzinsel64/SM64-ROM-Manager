@@ -345,10 +345,6 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         private const byte GEOLAYER_SOLID = 1;
         private const byte GEOLAYER_ALPHA = 4;
         private const byte GEOLAYER_TRANSPARENT = 5;
-        private bool definedSegPtr = false;
-        private MaterialType lastN64Codec = MaterialType.None;
-        private N64Codec? lastTexType = default;
-        private string currentPreName = null;
         private byte curSeg = 0;
         private uint startSegOffset = 0;
         private byte[] defaultColor = new byte[24];
@@ -450,7 +446,6 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             materials.Clear();
             finalVertData.Clear();
             currentFace = 0;
-            lastN64Codec = MaterialType.None;
         }
 
         private void CheckGeoModeInfo(Material m)
@@ -2192,8 +2187,6 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 needToResetCrystalEffectCommands = false;
                 ciEnabled = false;
                 lastMaterial = null;
-                lastN64Codec = MaterialType.None;
-                lastTexType = default;
                 lastFBColor = default;
                 lastCmdFC = string.Empty;
 
@@ -2281,7 +2274,6 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             }
 
             ResetVariables();
-            currentPreName = null;
         }
 
         /// <summary>
@@ -2296,15 +2288,11 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             this.settings = settings;
             impdata = new SM64Lib.Data.BinaryStreamData(s);
 
-            // Rom Address
-            definedSegPtr = false;
-
             // Segmented Address
             if (settings.SegmentedAddress is object)
             {
                 startSegOffset = (uint)(settings.SegmentedAddress & 0xFFFFFF);
                 curSeg = (byte)(settings.SegmentedAddress >> 24 & 0xFF);
-                definedSegPtr = true;
             }
 
             // Shading

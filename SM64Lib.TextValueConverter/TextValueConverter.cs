@@ -38,7 +38,7 @@ namespace SM64Lib.TextValueConverter
                             {
                                 return Convert.ToInt32(Text);
                             }
-                            catch (Exception ex)
+                            catch (Exception)
                             {
                             }
 
@@ -46,7 +46,7 @@ namespace SM64Lib.TextValueConverter
                             {
                                 return Convert.ToInt32(Text, 16);
                             }
-                            catch (Exception ex)
+                            catch (Exception)
                             {
                             }
                         }
@@ -56,7 +56,7 @@ namespace SM64Lib.TextValueConverter
                             {
                                 return Convert.ToInt32(Text, 16);
                             }
-                            catch (Exception ex)
+                            catch (Exception)
                             {
                             }
 
@@ -64,7 +64,7 @@ namespace SM64Lib.TextValueConverter
                             {
                                 return Convert.ToInt32(Text);
                             }
-                            catch (Exception ex)
+                            catch (Exception)
                             {
                             }
                         }
@@ -72,7 +72,7 @@ namespace SM64Lib.TextValueConverter
                         return 0;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return DefaultValue;
             }
