@@ -6,18 +6,18 @@
     <members>
         <member name="T:SM64_ROM_Manager.Updating.My.Resources.Resources">
             <summary>
-            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.My.Resources.Resources.ResourceManager">
             <summary>
-            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.My.Resources.Resources.Culture">
             <summary>
-            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
     </members>
