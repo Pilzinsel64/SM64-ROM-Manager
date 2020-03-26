@@ -17,21 +17,6 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 {
     public partial class TextureGraphicFormatEditor
     {
-        public TextureGraphicFormatEditor(Object3D obj)
-        {
-            base.Shown += Form_Shown;
-            SuspendLayout();
-            InitializeComponent();
-            StyleManager.UpdateAmbientColors(this);
-            obj3d = obj;
-            AcceptButton = Button_SaveColsettings;
-            LoadDisplayListTypes();
-            LoadN64TextureFormatTypes();
-            LoadRotateFlip();
-            base.UpdateAmbientColors();
-            hasInit = true;
-            ResumeLayout();
-        }
 
         private Object3D obj3d = null;
         private bool loadingtexItemSettings = false;
@@ -52,6 +37,22 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 _TextureFormatSettings = value;
                 LoadDisplayListTypes();
             }
+        }
+
+        public TextureGraphicFormatEditor(Object3D obj)
+        {
+            base.Shown += Form_Shown;
+            SuspendLayout();
+            InitializeComponent();
+            StyleManager.UpdateAmbientColors(this);
+            obj3d = obj;
+            AcceptButton = Button_SaveColsettings;
+            LoadDisplayListTypes();
+            LoadN64TextureFormatTypes();
+            LoadRotateFlip();
+            base.UpdateAmbientColors();
+            hasInit = true;
+            ResumeLayout();
         }
 
         private void Form_Shown(object sender, EventArgs e)
@@ -224,13 +225,13 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                             ComboBoxEx_SelectDisplaylist.SelectedIndex = 0;
                             break;
                         case DisplaylistSelectionMode.Default:
-                            if ((DefaultGeolayers)item.Tag == curEntry.DisplaylistSelection.DefaultGeolayer)
+                            if (item.Tag == null || (DefaultGeolayers)item.Tag == curEntry.DisplaylistSelection.DefaultGeolayer)
                             {
                                 ComboBoxEx_SelectDisplaylist.SelectedItem = item;
                             }
                             break;
                         case DisplaylistSelectionMode.Custom:
-                            if ((int)item.Tag == curEntry.DisplaylistSelection.CustomDisplaylistID)
+                            if (item.Tag == null || (int)item.Tag == curEntry.DisplaylistSelection.CustomDisplaylistID)
                             {
                                 ComboBoxEx_SelectDisplaylist.SelectedItem = item;
                             }
