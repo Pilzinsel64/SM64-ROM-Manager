@@ -1,0 +1,7 @@
+<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>The smoke texture, as seen when Mario gets set on fire, is incorrectly set to RGBA16 rather than IA16. This patch fixes that, restoring the texture's original look, including its multiple transparency levels. Tweak By someone2369</description>
+<patch>
+845BE9: 70
+845BF1: 70
+845C11: 70
+</patch>
+</m64tweak>

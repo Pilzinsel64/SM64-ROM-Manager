@@ -720,15 +720,14 @@ namespace SM64Lib
             // Patch things
             var proc = new Process();
             {
-                var withBlock = proc.StartInfo;
-                withBlock.FileName = General.MyFilePaths["ApplyPPF3.exe"];
-                withBlock.UseShellExecute = false;
-                withBlock.Arguments = string.Format("a \"{0}\" \"{1}\"", RomFile, General.MyFilePaths["SM64_ROM_Manager.ppf"]);
-                withBlock.CreateNoWindow = true;
+                proc.StartInfo.FileName = General.MyFilePaths["ApplyPPF3.exe"];
+                proc.StartInfo.UseShellExecute = false;
+                proc.StartInfo.Arguments = string.Format("a \"{0}\" \"{1}\"", RomFile, General.MyFilePaths["SM64_ROM_Manager.ppf"]);
+                proc.StartInfo.CreateNoWindow = true;
             }
-
             proc.Start();
             proc.WaitForExit();
+
             var fs = new BinaryRom(this, FileAccess.ReadWrite);
 
             // Write Custom Background Pointer
