@@ -173,6 +173,7 @@ namespace SM64_ROM_Manager
         {
             bool argmute = e.Mute;
             NotifyRomChangesAvailable(ref argmute);
+            e.Mute = argmute;
         }
 
         private void Controller_RequestIsChangingTab(EnabledEventArgs e)
@@ -276,8 +277,7 @@ namespace SM64_ROM_Manager
             di_Open.Click += MenuItem_OpenROM_Click;
             tabGeneral.ItemPanel_RecentFiles.Items.Add(di_Open);
             int cindex = 1;
-            var argcollection = Settings.RecentFiles.RecentROMs;
-            Publics.Publics.MergeRecentFiles(ref argcollection);
+            Publics.Publics.MergeRecentFiles(Settings.RecentFiles.RecentROMs);
             foreach (string r in Settings.RecentFiles.RecentROMs)
             {
                 if (File.Exists(r))

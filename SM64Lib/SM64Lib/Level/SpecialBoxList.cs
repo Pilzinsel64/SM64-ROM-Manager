@@ -18,13 +18,12 @@ namespace SM64Lib.Levels
         public static SpecialBox[] ReadTable(string Romfile, SpecialBoxType Type, int Levelscriptstart, int TabelStart)
         {
             var fs = new FileStream(Romfile, FileMode.Open, FileAccess.Read);
-            Stream args = fs;
-            var temp = ReadTable(ref args, Type, Levelscriptstart, TabelStart);
+            var temp = ReadTable(fs, Type, Levelscriptstart, TabelStart);
             fs.Close();
             return temp;
         }
 
-        public static SpecialBox[] ReadTable(ref Stream s, SpecialBoxType Type, int Levelscriptstart, int TabelStart)
+        public static SpecialBox[] ReadTable(Stream s, SpecialBoxType Type, int Levelscriptstart, int TabelStart)
         {
             var br = new BinaryReader(s);
             var boxlist = new List<SpecialBox>();

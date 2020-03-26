@@ -312,14 +312,18 @@ namespace SM64_ROM_Manager.ModelImporterGUI
 
         private void ButtonItem2_Click(object sender, EventArgs e)
         {
-            var argscript = SelectedPreset().ScriptAfter;
+            var p = SelectedPreset();
+            var argscript = p.ScriptAfter;
             EditScript(ref argscript);
+            p.ScriptAfter = argscript;
         }
 
         private void ButtonItem1_Click(object sender, EventArgs e)
         {
-            var argscript = SelectedPreset().ScriptBefore;
+            var p = SelectedPreset();
+            var argscript = p.ScriptBefore;
             EditScript(ref argscript);
+            p.ScriptBefore = argscript;
         }
 
         private void ButtonX2_Click(object sender, EventArgs e)

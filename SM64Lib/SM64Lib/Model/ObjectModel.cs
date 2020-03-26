@@ -17,8 +17,7 @@ namespace SM64Lib.Model
         public void FromROM(string Romfile, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1)
         {
             var fs = new FileStream(Romfile, FileMode.Open, FileAccess.Read);
-            Stream args = fs;
-            FromStream(ref args, BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer, Collisionpointer);
+            FromStream(fs, BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer, Collisionpointer);
             fs.Close();
         }
 
@@ -43,7 +42,7 @@ namespace SM64Lib.Model
             Fast3DBuffer.FromBinaryData(data, BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer);
         }
 
-        public void FromStream(ref Stream s, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1)
+        public void FromStream(Stream s, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1)
         {
             FromBinaryData(new BinaryStreamData(s), BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer, Collisionpointer);
         }

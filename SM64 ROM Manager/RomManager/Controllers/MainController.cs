@@ -554,10 +554,8 @@ namespace SM64_ROM_Manager
                 }
 
                 loadRecentROM = true;
-                var argcollection = Settings.RecentFiles.RecentROMs;
-                Publics.Publics.AddRecentFile(ref argcollection, Romfile);
-                var argcollection1 = Settings.RecentFiles.RecentROMs;
-                Publics.Publics.MergeRecentFiles(ref argcollection1);
+                Publics.Publics.AddRecentFile(Settings.RecentFiles.RecentROMs, Romfile);
+                Publics.Publics.MergeRecentFiles(Settings.RecentFiles.RecentROMs);
                 RecentFilesChanged?.Invoke();
                 SetRomMgr(newrommgr);
                 LoadROM();
@@ -2018,6 +2016,7 @@ namespace SM64_ROM_Manager
             var sequence = GetMusicSequenceByIndex(index);
             var argbuffer = sequence.BinaryData;
             General.OpenHexEditor(ref argbuffer);
+            sequence.BinaryData = argbuffer;
             RomManager.MusicList.NeedToSaveSequences = true;
             MusicSequenceChanged?.Invoke(new SM64_ROM_Manager.EventArguments.MusicSequenceEventArgs(index, sequence));
         }

@@ -14,20 +14,12 @@ using global::SM64_ROM_Manager.ModelConverterGUI.My.Resources;
 using global::SM64_ROM_Manager.SettingsManager;
 using global::SM64Lib.Model;
 using global::SM64Lib.Model.Fast3D;
+using Pilz.S3DFileParser.Exceptions;
 
 namespace SM64_ROM_Manager.ModelConverterGUI
 {
     public partial class MainModelConverter
     {
-
-        // C o n s t r u c t o r
-        public MainModelConverter()
-        {
-            base.FormClosing += Form_ModelConverter_FormClosing;
-            this.Shown += MainModelConverter_Shown;
-            InitializeComponent();
-            base.UpdateAmbientColors();
-        }
 
         // C o n s t a n t s
 
@@ -51,6 +43,15 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         public ObjectModel ResModel { get; set; } = null;
         public sbyte ForceDisplaylist { get; set; } = -1;
+
+        // C o n s t r u c t o r
+        public MainModelConverter()
+        {
+            base.FormClosing += Form_ModelConverter_FormClosing;
+            this.Shown += MainModelConverter_Shown;
+            InitializeComponent();
+            base.UpdateAmbientColors();
+        }
 
         // F e a t u r e s
 
@@ -314,6 +315,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                     var entry = curTexFormatSettings.GetEntry(mat.Key);
                     Bitmap argbmp = (Bitmap)mat.Value.Image;
                     TextureManager.PrepaireImage(ref argbmp, entry.RotateFlip, SM64Lib.N64Graphics.N64Graphics.StringCodec(texSettings.GetEntry(mat.Key).TextureFormat), fitImageSize);
+                    mat.Value.Image = argbmp;
                 }
             }
         }
@@ -366,14 +368,16 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             EnableCirProgress();
             var m = Publics.Publics.GetLoaderModuleFromID(Settings.FileParser.FileLoaderModule);
             bool useascoltoo = CheckBoxX_ConvertCollision.Checked && objCollisionMap is null || objCollisionMap == objVisualMap;
+#if !DEBUG
+            try
+            {
+#endif
 
-            /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
             objVisualMap = m.Invoke(fileName, new LoaderOptions(true, (UpAxis)ComboBoxEx_UpAxis.SelectedIndex));
             curTexFormatSettings = new TextureFormatSettings();
             await curTexFormatSettings.Load(fileName + EXT_GRAPHICS_SETTINGS);
             objVisualMap.RemoveUnusedMaterials();
-            var argcollection = Settings.RecentFiles.RecentModelFiles;
-            Publics.Publics.AddRecentFile(ref argcollection, fileName);
+            Publics.Publics.AddRecentFile(Settings.RecentFiles.RecentModelFiles, fileName);
             LoadRecentFiles();
             LabelX_Modelfile.Text = Path.GetFileName(fileName);
             curModelFile = fileName;
@@ -389,7 +393,18 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
             EnableModelControls();
 
-            /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+#if !DEBUG
+            }
+            catch(MaterialException ex)
+            {
+                MessageBoxEx.Show(string.Format(MainModelconverter_Resources.MsgBox_ErrorLoadingMaterial, ex.Message), MainModelconverter_Resources.MsgBox_ErrorLoadingMaterial_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (FileNotFoundException)
+            {
+                ShowVCPP2017IsMissingMessage();
+            }
+#endif
+
             EnableCirProgress(true);
         }
 
@@ -398,13 +413,16 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             EnableCirProgress();
             var m = Publics.Publics.GetLoaderModuleFromID(Settings.FileParser.FileLoaderModule);
 
-            /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+#if !DEBUG
+            try
+            {
+#endif
+
             objCollisionMap = m.Invoke(fileName, new LoaderOptions(true, (UpAxis)ComboBoxEx_UpAxis.SelectedIndex));
             curColSettings = new SM64Lib.Model.Collision.CollisionSettings();
             await curColSettings.Load(fileName + EXT_COLLISION_SETTINGS);
             objCollisionMap.RemoveUnusedMaterials();
-            var argcollection = Settings.RecentFiles.RecentModelFiles;
-            Publics.Publics.AddRecentFile(ref argcollection, fileName);
+            Publics.Publics.AddRecentFile(Settings.RecentFiles.RecentModelFiles, fileName);
             LoadRecentFiles();
             LabelX_Colfile.Text = Path.GetFileName(fileName);
             curCollisionFile = fileName;
@@ -412,7 +430,17 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             EnableModelControls();
             EnableCirProgress(true);
 
-            /* TODO ERROR: Skipped IfDirectiveTrivia *//* TODO ERROR: Skipped DisabledTextTrivia *//* TODO ERROR: Skipped EndIfDirectiveTrivia */
+#if !DEBUG
+            }
+            catch(MaterialException ex)
+            {
+                MessageBoxEx.Show(string.Format(MainModelconverter_Resources.MsgBox_ErrorLoadingMaterial, ex.Message), MainModelconverter_Resources.MsgBox_ErrorLoadingMaterial_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (FileNotFoundException)
+            {
+                ShowVCPP2017IsMissingMessage();
+            }
+#endif
         }
 
         private void ShowVCPP2017IsMissingMessage()
@@ -454,8 +482,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         {
             Button_LoadModel.SubItems.Clear();
             Button_LoadCol.SubItems.Clear();
-            var argcollection = Settings.RecentFiles.RecentModelFiles;
-            Publics.Publics.MergeRecentFiles(ref argcollection);
+            Publics.Publics.MergeRecentFiles(Settings.RecentFiles.RecentModelFiles);
             foreach (string f in Settings.RecentFiles.RecentModelFiles)
             {
                 string sf = Path.GetFileName(f);

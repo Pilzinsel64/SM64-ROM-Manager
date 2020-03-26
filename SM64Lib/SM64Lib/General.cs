@@ -75,9 +75,11 @@ namespace SM64Lib
 
         public static bool CompareTwoByteArrays(byte[] arr1, byte[] arr2, uint size = 0)
         {
-            if (arr2.Count() != arr1.Count())
-                return false;
-            for (int i = 0, loopTo = (int)((size != 0 ? size : (uint)arr1.Count()) - 1); i <= loopTo; i++)
+            if (arr2.Length != arr1.Length) return false;
+
+            int loopTo = size != 0 ? (int)size : arr1.Length;
+
+            for (int i = 0; i < loopTo; i++)
             {
                 if (arr1[i] != arr2[i])
                     return false;

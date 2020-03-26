@@ -243,20 +243,16 @@ namespace SM64Lib.Levels
                 a.AreaModel.Collision = new Model.Collision.CollisionMap();
                 a.AreaModel.Collision.FromStream(fs, modelBank.SegToRomAddr(a.CollisionPointer));
                 a.AreaModel.Fast3DBuffer = new Model.Fast3D.Fast3DBuffer();
-                Stream args = fs;
-                a.AreaModel.FromStream(ref args, modelBank.RomStart, 0xE000000, curMdlStartOffset, newEndOffset - curMdlStartOffset, a.Geolayout.Geopointers.ToArray(), a.CollisionPointer);
+                a.AreaModel.FromStream(fs, modelBank.RomStart, 0xE000000, curMdlStartOffset, newEndOffset - curMdlStartOffset, a.Geolayout.Geopointers.ToArray(), a.CollisionPointer);
                 a.AreaModel.Collision.SpecialBoxes.Clear();
                 curMdlStartOffset = newEndOffset;
             }
 
             // Lese alle Box-Daten
             firstArea.SpecialBoxes.Clear();
-            var args1 = brToUse.BaseStream;
-            firstArea.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(ref args1, SpecialBoxType.Water, bank0x19RomStart, bank0x19RomStart + 0x1810));
-            var args2 = brToUse.BaseStream;
-            firstArea.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(ref args2, SpecialBoxType.ToxicHaze, bank0x19RomStart, bank0x19RomStart + 0x1850));
-            var args3 = brToUse.BaseStream;
-            firstArea.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(ref args3, SpecialBoxType.Mist, bank0x19RomStart, bank0x19RomStart + 0x18A0));
+            firstArea.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(brToUse.BaseStream, SpecialBoxType.Water, bank0x19RomStart, bank0x19RomStart + 0x1810));
+            firstArea.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(brToUse.BaseStream, SpecialBoxType.ToxicHaze, bank0x19RomStart, bank0x19RomStart + 0x1850));
+            firstArea.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(brToUse.BaseStream, SpecialBoxType.Mist, bank0x19RomStart, bank0x19RomStart + 0x18A0));
             var areaWithBoxData = lvl.Areas.FirstOrDefault(n => n.AreaModel.Collision.SpecialBoxes.Any());
             if (areaWithBoxData is object)
             {

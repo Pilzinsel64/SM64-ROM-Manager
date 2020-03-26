@@ -230,7 +230,7 @@ namespace SM64_ROM_Manager.Publics
             return loaderModule.Name;
         }
 
-        public static void AddRecentFile(ref StringCollection collection, string fileName)
+        public static void AddRecentFile(StringCollection collection, string fileName)
         {
             if (collection.Contains(fileName))
             {
@@ -240,7 +240,7 @@ namespace SM64_ROM_Manager.Publics
             collection.Insert(0, fileName);
         }
 
-        public static void MergeRecentFiles(ref StringCollection collection)
+        public static void MergeRecentFiles(StringCollection collection)
         {
             var toRemove = new List<string>();
             foreach (string f in collection)

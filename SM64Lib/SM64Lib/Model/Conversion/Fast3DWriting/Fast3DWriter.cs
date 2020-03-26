@@ -7,13 +7,9 @@ using System.Linq;
 using global::System.Numerics;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.CompilerServices;
-using global::SM64Lib.Data;
-using global::SM64Lib.Geolayout;
-using global::SM64Lib.Levels.ScrolTex;
-using global::SM64Lib.Model.Fast3D;
-using global::SM64Lib.Model.Fast3D.DisplayLists.Script.Commands;
 using global::SM64Lib.N64Graphics;
 using Z.Collections.Extensions;
+using System.Runtime.CompilerServices;
 
 namespace SM64Lib.Model.Conversion.Fast3DWriting
 {
@@ -24,8 +20,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             public States State { get; set; } = States.Successfully;
             public uint PtrStart { get; set; } = 0;
             public uint PtrVertex { get; set; } = 0;
-            public List<Geopointer> PtrGeometry { get; private set; } = new List<Geopointer>();
-            public List<ManagedScrollingTexture> ScrollingCommands { get; private set; } = new List<ManagedScrollingTexture>();
+            public List<SM64Lib.Geolayout.Geopointer> PtrGeometry { get; private set; } = new List<SM64Lib.Geolayout.Geopointer>();
+            public List<SM64Lib.Levels.ScrolTex.ManagedScrollingTexture> ScrollingCommands { get; private set; } = new List<SM64Lib.Levels.ScrolTex.ManagedScrollingTexture>();
             public Dictionary<short, string> ScrollingNames { get; private set; } = new Dictionary<short, string>();
             public MemoryStream Data { get; private set; } = new MemoryStream();
 
@@ -54,11 +50,11 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             public string TexTypeData { get; set; } = "";
             public bool ResizeTextures { get; set; } = false;
             public bool CenterModel { get; set; } = false;
-            public Fog Fog { get; set; } = null;
+            public Model.Fog Fog { get; set; } = null;
             public string CollisionData { get; set; } = "";
             public sbyte ForceDisplaylist { get; set; } = -1;
             public bool OptimizeTransparencyChecks { get; set; } = false;
-            public TextureFormatSettings TextureFormatSettings { get; set; } = null;
+            public Model.Fast3D.TextureFormatSettings TextureFormatSettings { get; set; } = null;
 
             public bool EnableFog
             {
@@ -166,8 +162,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             public uint GeoMode { get; set; } = 0;
             public TextureEntry Texture { get; set; } = null;
             public bool EnableScrolling { get; set; } = false;
-            public DisplaylistSelectionSettings DisplaylistSelection { get; set; } = new DisplaylistSelectionSettings();
-            public FaceCullingMode FaceCullingMode { get; set; } = FaceCullingMode.Back;
+            public Fast3DWriting.DisplaylistSelectionSettings DisplaylistSelection { get; set; } = new Fast3DWriting.DisplaylistSelectionSettings();
+            public Conversion.FaceCullingMode FaceCullingMode { get; set; } = Conversion.FaceCullingMode.Back;
             public bool EnableMirrorS { get; set; } = false;
             public bool EnableMirrorT { get; set; } = false;
             public bool EnableClampS { get; set; } = false;
@@ -349,11 +345,15 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         private const byte GEOLAYER_SOLID = 1;
         private const byte GEOLAYER_ALPHA = 4;
         private const byte GEOLAYER_TRANSPARENT = 5;
+        private bool definedSegPtr = false;
+        private MaterialType lastN64Codec = MaterialType.None;
+        private N64Codec? lastTexType = default;
+        private string currentPreName = null;
         private byte curSeg = 0;
         private uint startSegOffset = 0;
         private byte[] defaultColor = new byte[24];
         private ConvertSettings settings = null;
-        private BinaryData impdata = null;
+        private SM64Lib.Data.BinaryData impdata = null;
         private ConvertResult conRes = new ConvertResult();
         private readonly byte[] ColtypesWithParams = new byte[] { 14, 44, 36, 37, 39, 45 };
 
@@ -365,24 +365,32 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             }
         }
 
-        private long TXL2WORDS(uint txls, int b_txl)
+        private object TXL2WORDS(object txls, object b_txl)
         {
-            return Math.Max(1, txls * b_txl / 8);
+            return NewLateBinding.LateGet(null, typeof(Math), "Max", new object[]
+            {
+                1,
+                Operators.DivideObject(Operators.MultiplyObject(txls, b_txl), 8)
+            }, null, null, null);
         }
 
-        private int CALC_DXT(uint width, int b_txl)
+        private object CALC_DXT(object width, object b_txl)
         {
-            return (1 << 11) / (int)TXL2WORDS(width, b_txl);
+            return Operators.DivideObject(2048, this.TXL2WORDS(RuntimeHelpers.GetObjectValue(width), RuntimeHelpers.GetObjectValue(b_txl)));
         }
 
-        private uint TXL2WORDS_4b(uint txls)
+        private object TXL2WORDS_4b(object txls)
         {
-            return Math.Max(1, txls / 16);
+            return NewLateBinding.LateGet(null, typeof(Math), "Max", new object[]
+            {
+                1,
+                Operators.DivideObject(txls, 16)
+            }, null, null, null);
         }
 
-        private uint CALC_DXT_4b(uint width)
+        private object CALC_DXT_4b(object width)
         {
-            return (1 << 11) / TXL2WORDS_4b(width);
+            return Operators.DivideObject(2048, this.TXL2WORDS_4b(RuntimeHelpers.GetObjectValue(width)));
         }
 
         private void SetLightAndDarkValues(Pilz.S3DFileParser.Shading s)
@@ -442,6 +450,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             materials.Clear();
             finalVertData.Clear();
             currentFace = 0;
+            lastN64Codec = MaterialType.None;
         }
 
         private void CheckGeoModeInfo(Material m)
@@ -576,7 +585,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     {
                         if (checkMat.HasTexture)
                         {
-                            if (mat.TexType == checkMat.TexType && General.CompareTwoByteArrays(mat.Texture.Data, checkMat.Texture.Data))
+                            if (mat.TexType == checkMat.TexType && SM64Lib.General.CompareTwoByteArrays(mat.Texture.Data, checkMat.Texture.Data))
                             {
                                 if (!foundCopies.Contains(checkMat))
                                 {
@@ -763,9 +772,9 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var v = new Vertex()
                     {
-                        X = General.KeepInInt16Range(General.Round(vert.X * settings.Scale + settings.OffsetPosition.X)),
-                        Y = General.KeepInInt16Range(General.Round(vert.Y * settings.Scale + settings.OffsetPosition.Y)),
-                        Z = General.KeepInInt16Range(General.Round(vert.Z * settings.Scale + settings.OffsetPosition.Z))
+                        X = SM64Lib.General.KeepInInt16Range(SM64Lib.General.Round(vert.X * settings.Scale + settings.OffsetPosition.X)),
+                        Y = SM64Lib.General.KeepInInt16Range(SM64Lib.General.Round(vert.Y * settings.Scale + settings.OffsetPosition.Y)),
+                        Z = SM64Lib.General.KeepInInt16Range(SM64Lib.General.Round(vert.Z * settings.Scale + settings.OffsetPosition.Z))
                     };
                     verts.Add(v);
                 }
@@ -775,9 +784,9 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var n = new Normal()
                     {
-                        A = Datatypecastes.LongToByte(Conversions.ToLong(General.Round(norm.X * 0x7F))),
-                        B = Datatypecastes.LongToByte(Conversions.ToLong(General.Round(norm.Y * 0x7F))),
-                        C = Datatypecastes.LongToByte(Conversions.ToLong(General.Round(norm.Z * 0x7F))),
+                        A = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(norm.X * (float)0x7F)))),
+                        B = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(norm.Y * (float)0x7F)))),
+                        C = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(norm.Z * (float)0x7F)))),
                         D = 0xFF
                     };
                     norms.Add(n);
@@ -788,8 +797,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var uv = new TexCord()
                     {
-                        U = Conversions.ToSingle(General.Round(tuv.U * 32 * 32)),
-                        V = Conversions.ToSingle(General.Round(-(tuv.V * 32 * 32)))
+                        U = Conversions.ToSingle(SM64Lib.General.Round((double)(tuv.U * (float)32 * (float)32))),
+                        V = Conversions.ToSingle(SM64Lib.General.Round((double)-(tuv.V * (float)32 * (float)32)))
                     };
                     uvs.Add(uv);
                 }
@@ -799,10 +808,10 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var vc = new VertexColor()
                     {
-                        R = Datatypecastes.LongToByte(Conversions.ToLong(General.Round(vertcol.R * 0xFF))),
-                        G = Datatypecastes.LongToByte(Conversions.ToLong(General.Round(vertcol.G * 0xFF))),
-                        B = Datatypecastes.LongToByte(Conversions.ToLong(General.Round(vertcol.B * 0xFF))),
-                        A = Datatypecastes.LongToByte(Conversions.ToLong(General.Round(vertcol.A * 0xFF)))
+                        R = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(vertcol.R * (float)0xFF)))),
+                        G = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(vertcol.G * (float)0xFF)))),
+                        B = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(vertcol.B * (float)0xFF)))),
+                        A = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(vertcol.A * (float)0xFF))))
                     };
                     vertexColors.Add(vc);
                 }
@@ -936,24 +945,16 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             }
         }
 
-        private void ProcessObject3DMaterials(Pilz.S3DFileParser.Object3D obj, TextureFormatSettings texFormatSettings)
+        private void ProcessObject3DMaterials(Pilz.S3DFileParser.Object3D obj, Model.Fast3D.TextureFormatSettings texFormatSettings)
         {
             var tasks = new List<Task>();
 
             // Start converting each image
             foreach (var kvp in obj.Materials)
-                // Dim t As New Task(Sub() ProcessObject3DMaterial(obj, kvp, texFormatSettings))
-                // t.Start()
-                // tasks.Add(t)
                 ProcessObject3DMaterial(obj, kvp, texFormatSettings);
-
-            // Wait until all images has been converted
-            // For Each t As Task In tasks
-            // t.Wait()
-            // Next
         }
 
-        private void ProcessObject3DMaterial(Pilz.S3DFileParser.Object3D obj, KeyValuePair<string, Pilz.S3DFileParser.Material> kvp, TextureFormatSettings texFormatSettings)
+        private void ProcessObject3DMaterial(Pilz.S3DFileParser.Object3D obj, KeyValuePair<string, Pilz.S3DFileParser.Material> kvp, Model.Fast3D.TextureFormatSettings texFormatSettings)
         {
             int size = 0;
             var curEntry = texFormatSettings.GetEntry(kvp.Key);
@@ -1050,7 +1051,6 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
 
             jump = matWidth * 0x40;
             uvs = new[] { uv1, uv2, uv3 }.OrderBy(n => n.U).ToArray();
-
             if (jump != 0)
             {
                 while (uvs.Last().U > 32767)
@@ -1070,7 +1070,6 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
 
             jump = matHeight * 0x40;
             uvs = new[] { uv1, uv2, uv3 }.OrderBy(n => n.V).ToArray();
-
             if (jump != 0)
             {
                 while (uvs.Last().V > 32767)
@@ -1091,23 +1090,22 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
 
         private void removeDuplicateVertices(ReduceVericesLevel level)
         {
-            if ((int)level < 1) return;
-
+            if ((int)level < 1)
+                return;
             int dupCnt = 0;
-
             foreach (VertexGroupList mp in vertexGroups)
             {
-                for (int g = 0, loopTo = mp.GroupsCount - 1; g <= loopTo; g++)
+                for (int g = 0; g < mp.GroupsCount; g++)
                 {
                     var fvg = mp.FinalVertexGroups[g];
-                    if (fvg.VertexDataCount < 1)
-                        continue;
-                    for (int i = 0, loopTo1 = fvg.VertexDataCount - 1; i <= loopTo1; i++)
+                    if (fvg.VertexDataCount < 1) continue;
+
+                    for (int i = 0; i < fvg.VertexDataCount; i++)
                     {
                         int j = i + 1;
                         while (j < fvg.VertexDataCount)
                         {
-                            if (General.CompareTwoByteArrays(fvg.FinalVertexData[i].Data, fvg.FinalVertexData[j].Data, 16))
+                            if (SM64Lib.General.CompareTwoByteArrays(fvg.FinalVertexData[i].Data, fvg.FinalVertexData[j].Data, 16))
                             {
                                 moveElementsInGroupUpward(fvg, 1, j);
                                 UpdateIndexList(fvg, Conversions.ToByte(j), Conversions.ToByte(i));
@@ -1132,10 +1130,10 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
 
         private void UpdateIndexList(FvGroup grp, byte removed, byte replaceWith)
         {
-            for (int i = 0, loopTo = grp.NumTri * 3 - 1; i <= loopTo; i++)
+            for (int i = 0; i < grp.NumTri * 3; i++)
             {
-                if (grp.indexList[i] < removed)
-                    continue;
+                if (grp.indexList[i] < removed) continue;
+
                 if (grp.indexList[i] == removed)
                 {
                     grp.indexList[i] = Conversions.ToSByte(replaceWith);
@@ -1181,14 +1179,14 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
 
         private void moveElementsInGroupUpward(FvGroup grp, int amount, int start)
         {
-            for (int i = 0, loopTo = amount - 1; i <= loopTo; i++)
+            for (int i = 0; i < amount; i++)
                 grp.FinalVertexData.RemoveAt(start);
         }
 
         private void BuildVertexGroups()
         {
             int vs = 0;
-            for (int i = 0, loopTo = vertexGroups.Count - 1; i <= loopTo; i++)
+            for (int i = 0; i < vertexGroups.Count; i++)
             {
                 {
                     var withBlock = vertexGroups[i];
@@ -1213,9 +1211,10 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                         groupsCount = (int)(Math.Truncate(length / (double)5) + 1);
                     }
 
-                    for (int j = 0, loopTo1 = groupsCount - 1; j <= loopTo1; j++)
+                    for (int j = 0; j < groupsCount; j++)
                         withBlock.FinalVertexGroups.Add(new FvGroup() { NumTri = 0 });
-                    for (int g = 0, loopTo2 = groupsCount - 1; g <= loopTo2; g++)
+
+                    for (int g = 0; g < groupsCount; g++)
                     {
                         int s = 5;
                         if (g == groupsCount - 1)
@@ -1224,7 +1223,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                             s = 5;
                         var curFvg = withBlock.FinalVertexGroups[g];
                         curFvg.NumTri = Conversions.ToShort(s);
-                        for (int j = 0, loopTo3 = s - 1; j <= loopTo3; j++)
+                        for (int j = 0; j < s; j++)
                         {
                             int from = (withBlock.Position + j + g * 5) * 3;
                             curFvg.FinalVertexData.Add(finalVertData[from]);
@@ -1245,7 +1244,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         {
             var cmd = new F3D();
             var b = str.Replace(".", ",").Split(' ');
-            for (int i = 0, loopTo = b.Count() - 1; i <= loopTo; i++)
+            for (int i = 0; i < b.Length; i++)
                 cmd.data[i] = Conversions.ToByte($"&H{b[i]}");
             return cmd;
         }
@@ -1258,46 +1257,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         private void ImpF3D(F3D f3d)
         {
             impdata.Write(f3d.data);
-        }
-
-        private byte[] GetColorData(Material mt, ref float darkMult)
-        {
-            var colorData = new byte[24];
-            byte lr, lg, lb, a;
-            ushort dr, dg, db;
-            lr = Conversions.ToByte(mt.Color >> 24 & (long)0xFF);
-            lg = Conversions.ToByte(mt.Color >> 16 & (long)0xFF);
-            lb = Conversions.ToByte(mt.Color >> 8 & (long)0xFF);
-            dr = Conversions.ToUShort(lr * darkMult);
-            dg = Conversions.ToUShort(lg * darkMult);
-            db = Conversions.ToUShort(lb * darkMult);
-            if (dr > 0xFF)
-                dr = 0xFF;
-            if (dg > 0xFF)
-                dg = 0xFF;
-            if (db > 0xFF)
-                db = 0xFF;
-            a = Conversions.ToByte(mt.Color & (long)0xFF);
-            colorData[0] = lr;
-            colorData[1] = lg;
-            colorData[2] = lb;
-            colorData[3] = 0;
-            colorData[4] = lr;
-            colorData[5] = lg;
-            colorData[6] = lb;
-            colorData[7] = 0;
-            colorData[8] = Conversions.ToByte(dr);
-            colorData[9] = Conversions.ToByte(dg);
-            colorData[10] = Conversions.ToByte(db);
-            colorData[11] = 0;
-            colorData[12] = Conversions.ToByte(dr);
-            colorData[13] = Conversions.ToByte(dg);
-            colorData[14] = Conversions.ToByte(db);
-            colorData[15] = 0;
-            for (int i = 16, loopTo = colorData.Length - 1; i <= loopTo; i++)
-                colorData[i] = defaultColor[i];
-            return colorData;
-        }
+        }        
 
         private void ImpFogStart(int layer)
         {
@@ -1359,55 +1319,55 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             var switchExpr = settings.Fog.Type;
             switch (switchExpr)
             {
-                case FogPreset.SubtleFog1:
+                case global::SM64Lib.Model.FogPreset.SubtleFog1:
                     {
                         ImpF3D("BC 00 00 08 19 00 E8 00");
                         break;
                     }
 
-                case FogPreset.SubtleFog2:
+                case global::SM64Lib.Model.FogPreset.SubtleFog2:
                     {
                         ImpF3D("BC 00 00 08 12 00 F0 00");
                         break;
                     }
 
-                case FogPreset.ModerateFog1:
+                case global::SM64Lib.Model.FogPreset.ModerateFog1:
                     {
                         ImpF3D("BC 00 00 08 0E 49 F2 B7");
                         break;
                     }
 
-                case FogPreset.ModerateFog2:
+                case global::SM64Lib.Model.FogPreset.ModerateFog2:
                     {
                         ImpF3D("BC 00 00 08 0C 80 F4 80");
                         break;
                     }
 
-                case FogPreset.ModerateFog3:
+                case global::SM64Lib.Model.FogPreset.ModerateFog3:
                     {
                         ImpF3D("BC 00 00 08 0A 00 F7 00");
                         break;
                     }
 
-                case FogPreset.ModerateFog4:
+                case global::SM64Lib.Model.FogPreset.ModerateFog4:
                     {
                         ImpF3D("BC 00 00 08 08 55 F8 AB");
                         break;
                     }
 
-                case FogPreset.IntenseFog:
+                case global::SM64Lib.Model.FogPreset.IntenseFog:
                     {
                         ImpF3D("BC 00 00 08 07 24 F9 DC");
                         break;
                     }
 
-                case FogPreset.VeryIntenseFog:
+                case global::SM64Lib.Model.FogPreset.VeryIntenseFog:
                     {
                         ImpF3D("BC 00 00 08 05 00 FC 00");
                         break;
                     }
 
-                case FogPreset.HardcoreFog:
+                case global::SM64Lib.Model.FogPreset.HardcoreFog:
                     {
                         ImpF3D("BC 00 00 08 02 50 FF 00");
                         break;
@@ -1691,11 +1651,11 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             string cmd;
             if (bpt != 0)
             {
-                tl = (uint)(CALC_DXT(mat.TexWidth, bpt) & 0xFFF);
+                tl = Conversions.ToUInteger(Operators.AndObject(CALC_DXT(mat.TexWidth, bpt), 4095));
             }
             else
             {
-                tl = CALC_DXT_4b(mat.TexWidth) & 0xFFF;
+                tl = Conversions.ToUInteger(Operators.AndObject(CALC_DXT_4b(mat.TexWidth), 4095));
             }
 
             lower = Conversions.ToUInteger((numTexels << 12 | tl) & (long)0xFFFFFF);
@@ -1715,7 +1675,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         private void AddCmdFC(Material mat, ref string lastCmd)
         {
             string cmd = string.Empty;
-            var colorFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.CCMUX.SHADE);
+            var colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE);
             bool isColorPresent = Conversions.ToDouble(Conversions.ToString(mat.Color) + Conversions.ToString(0xFFFFFF00U)) != 0xFFFFFF00U;
             if (mat.HasTexture)
             {
@@ -1727,7 +1687,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     case MaterialType.TextureAlpha:
                     case MaterialType.TextureTransparent:
                         {
-                            colorFormula = F3D_SETCOMBINE.Formula.Multiply(F3D_SETCOMBINE.CCMUX.TEXEL0, F3D_SETCOMBINE.CCMUX.SHADE);
+                            colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.TEXEL0, Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE);
                             break;
                         }
 
@@ -1736,12 +1696,12 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                         {
                             if (isColorPresent)
                             {
-                                colorFormula = F3D_SETCOMBINE.Formula.Multiply(F3D_SETCOMBINE.CCMUX.TEXEL0, F3D_SETCOMBINE.CCMUX.ENVIRONMENT);
+                                colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.TEXEL0, Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.ENVIRONMENT);
                             }
                             else
                             {
                                 // TODO: This condition cannot be met with current setup
-                                colorFormula = F3D_SETCOMBINE.Formula.Multiply(F3D_SETCOMBINE.CCMUX.TEXEL0, F3D_SETCOMBINE.CCMUX.SHADE);
+                                colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.TEXEL0, Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE);
                             }
 
                             break;
@@ -1758,7 +1718,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     case MaterialType.TextureAlpha:
                     case MaterialType.TextureTransparent:
                         {
-                            colorFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.CCMUX.SHADE);
+                            colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE);
                             break;
                         }
 
@@ -1767,11 +1727,11 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                         {
                             if (isColorPresent)
                             {
-                                colorFormula = F3D_SETCOMBINE.Formula.Multiply(F3D_SETCOMBINE.CCMUX.SHADE, F3D_SETCOMBINE.CCMUX.ENVIRONMENT);
+                                colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE, Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.ENVIRONMENT);
                             }
                             else
                             {
-                                colorFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.CCMUX.SHADE);
+                                colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE);
                             }
 
                             break;
@@ -1779,7 +1739,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 }
             }
 
-            var alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.SHADE);
+            var alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.SHADE);
             bool isTransPresent = Conversions.ToDouble(Conversions.ToString(mat.Color) + Conversions.ToString(0xFFU)) != 0xFFU;
             if (mat.HasTexture)
             {
@@ -1790,7 +1750,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     case MaterialType.TextureSolid:
                     case MaterialType.ColorSolid:
                         {
-                            alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.ONE);
+                            alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.ONE);
                             break;
                         }
 
@@ -1800,11 +1760,11 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                             // With Fog multiplying SHADE is not something you want because it will be alpha fog so just output TEXEL0 and hope it is fine
                             if (settings.EnableFog)
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.TEXEL0);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.TEXEL0);
                             }
                             else
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Multiply((byte)F3D_SETCOMBINE.ACMUX.TEXEL0, (byte)F3D_SETCOMBINE.ACMUX.SHADE);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply((byte)Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.TEXEL0, (byte)Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.SHADE);
                             }
 
                             break;
@@ -1814,15 +1774,15 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                         {
                             if (isTransPresent)
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Multiply((byte)F3D_SETCOMBINE.ACMUX.TEXEL0, (byte)F3D_SETCOMBINE.ACMUX.ENVIRONMENT);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply((byte)Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.TEXEL0, (byte)Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.ENVIRONMENT);
                             }
                             else if (settings.EnableFog)
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.TEXEL0);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.TEXEL0);
                             }
                             else
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Multiply((byte)F3D_SETCOMBINE.ACMUX.TEXEL0, (byte)F3D_SETCOMBINE.ACMUX.SHADE);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply((byte)Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.TEXEL0, (byte)Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.SHADE);
                             }
 
                             break;
@@ -1838,7 +1798,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     case MaterialType.TextureSolid:
                     case MaterialType.ColorSolid:
                         {
-                            alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.ONE);
+                            alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.ONE);
                             break;
                         }
 
@@ -1848,11 +1808,11 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                             // With Fog multiplying SHADE is not something you want because it will be alpha fog so just output TEXEL0
                             if (settings.EnableFog)
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.ONE);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.ONE);
                             }
                             else
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.SHADE);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.SHADE);
                             }
 
                             break;
@@ -1865,20 +1825,20 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                                 // If there is no material, may as well provide more options for alpha modulate
                                 if (settings.EnableFog)
                                 {
-                                    alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.ENVIRONMENT);
+                                    alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.ENVIRONMENT);
                                 }
                                 else
                                 {
-                                    alphaFormula = F3D_SETCOMBINE.Formula.Multiply((byte)F3D_SETCOMBINE.ACMUX.ENVIRONMENT, (byte)F3D_SETCOMBINE.ACMUX.SHADE);
+                                    alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply((byte)Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.ENVIRONMENT, (byte)Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.SHADE);
                                 }
                             }
                             else if (settings.EnableFog)
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.ONE);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.ONE);
                             }
                             else
                             {
-                                alphaFormula = F3D_SETCOMBINE.Formula.Output(F3D_SETCOMBINE.ACMUX.SHADE);
+                                alphaFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Output(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.ACMUX.SHADE);
                             }
 
                             break;
@@ -1886,7 +1846,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 }
             }
 
-            cmd = F3D_SETCOMBINE.Make(colorFormula, alphaFormula, settings.EnableFog);
+            cmd = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Make(colorFormula, alphaFormula, settings.EnableFog);
             if (!string.IsNullOrEmpty(cmd) && (lastCmd ?? "") != (cmd ?? ""))
             {
                 ImpF3D(cmd);
@@ -2024,7 +1984,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     short groupID = getScrollingGroup(curMatAddr);
                     scrollTexts.RemoveRange(0, count);
-                    conRes.ScrollingCommands.Add(new ManagedScrollingTexture(Conversions.ToUShort(vertsCount), startOff, groupID));
+                    conRes.ScrollingCommands.Add(new SM64Lib.Levels.ScrolTex.ManagedScrollingTexture(Conversions.ToUShort(vertsCount), startOff, groupID));
                     conRes.ScrollingNames.AddIfNotContainsKey(groupID, curMatName);
                 }
             }
@@ -2072,10 +2032,10 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             bool ciEnabled;
             var citextypes = new[] { N64Codec.CI4, N64Codec.CI8 };
             string lastCmdFC;
-            var dlsToCreate = new List<DisplaylistProps>();
+            var dlsToCreate = new List<Fast3DWriting.DisplaylistProps>();
             var dicMatDlIDs = new Dictionary<Material, int>();
             ProcessObject3DModel(model);
-            conRes.PtrStart = Conversions.ToUInteger(CurSegAddress | impdata.Position);
+            conRes.PtrStart = Conversions.ToUInteger((long)CurSegAddress | impdata.Position);
             importStart = Conversions.ToUInteger(impdata.Position);
 
             // Write default color
@@ -2107,15 +2067,15 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             removeDuplicateVertices(settings.ReduceVertLevel);
 
             // Write vertices
-            conRes.PtrVertex = Conversions.ToUInteger(CurSegAddress | impdata.Position);
+            conRes.PtrVertex = Conversions.ToUInteger((long)CurSegAddress | impdata.Position);
             startVerts = Conversions.ToUInteger(impdata.Position);
             foreach (VertexGroupList mp in vertexGroups)
             {
-                for (int g = 0, loopTo = mp.GroupsCount - 1; g <= loopTo; g++)
+                for (int g = 0; g < mp.GroupsCount; g++)
                 {
                     if (mp.FinalVertexGroups[g].VertexDataCount >= 1)
                     {
-                        for (int i = 0, loopTo1 = mp.FinalVertexGroups[g].VertexDataCount - 1; i <= loopTo1; i++)
+                        for (int i = 0; i < mp.FinalVertexGroups[g].VertexDataCount; i++)
                         {
                             var data = mp.FinalVertexGroups[g].FinalVertexData[i].Data;
                             impdata.Write(data);
@@ -2124,11 +2084,11 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 }
             }
 
-            int createDefaultDL(DefaultGeolayers layerID)
+            int createDefaultDL(SM64Lib.Geolayout.DefaultGeolayers layerID)
             {
-                DisplaylistProps dlProp = null;
+                Fast3DWriting.DisplaylistProps dlProp = null;
                 int newLayerID = ((int)layerID + 1) * -1;
-                foreach (DisplaylistProps dl in dlsToCreate)
+                foreach (Fast3DWriting.DisplaylistProps dl in dlsToCreate)
                 {
                     if (dlProp is null && dl.ID == newLayerID)
                     {
@@ -2138,7 +2098,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
 
                 if (dlProp is null)
                 {
-                    dlProp = new DisplaylistProps(newLayerID);
+                    dlProp = new Fast3DWriting.DisplaylistProps(newLayerID);
                 }
 
                 dlProp.Layer = layerID;
@@ -2151,7 +2111,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             };
             int createCustomDL(int dlID)
             {
-                DisplaylistProps dlProp = null;
+                Fast3DWriting.DisplaylistProps dlProp = null;
 
                 // Search dlProp
                 foreach (var prop in settings.TextureFormatSettings.CustomDisplayLists)
@@ -2173,7 +2133,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             // Check which DLs should be created
             if (enableForcing)
             {
-                int dlID = createDefaultDL((DefaultGeolayers)settings.ForceDisplaylist);
+                int dlID = createDefaultDL((SM64Lib.Geolayout.DefaultGeolayers)settings.ForceDisplaylist);
                 foreach (Material mat in materials)
                     dicMatDlIDs.Add(mat, dlID);
             }
@@ -2185,31 +2145,31 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     var switchExpr = mat.DisplaylistSelection.SelectionMode;
                     switch (switchExpr)
                     {
-                        case DisplaylistSelectionMode.Automatic:
+                        case global::SM64Lib.Model.Conversion.Fast3DWriting.DisplaylistSelectionMode.Automatic:
                             {
                                 if (mat.HasTransparency)
                                 {
-                                    dlID = createDefaultDL(DefaultGeolayers.Translucent);
+                                    dlID = createDefaultDL(SM64Lib.Geolayout.DefaultGeolayers.Translucent);
                                 }
                                 else if (mat.HasTextureAlpha)
                                 {
-                                    dlID = createDefaultDL(DefaultGeolayers.Alpha);
+                                    dlID = createDefaultDL(SM64Lib.Geolayout.DefaultGeolayers.Alpha);
                                 }
                                 else
                                 {
-                                    dlID = createDefaultDL(DefaultGeolayers.Solid);
+                                    dlID = createDefaultDL(SM64Lib.Geolayout.DefaultGeolayers.Solid);
                                 }
 
                                 break;
                             }
 
-                        case DisplaylistSelectionMode.Default:
+                        case global::SM64Lib.Model.Conversion.Fast3DWriting.DisplaylistSelectionMode.Default:
                             {
                                 dlID = createDefaultDL(mat.DisplaylistSelection.DefaultGeolayer);
                                 break;
                             }
 
-                        case DisplaylistSelectionMode.Custom:
+                        case global::SM64Lib.Model.Conversion.Fast3DWriting.DisplaylistSelectionMode.Custom:
                             {
                                 dlID = createCustomDL(mat.DisplaylistSelection.CustomDisplaylistID);
                                 break;
@@ -2221,10 +2181,10 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             }
 
             // Create DLs
-            foreach (DisplaylistProps dlProps in dlsToCreate)
+            foreach (Fast3DWriting.DisplaylistProps dlProps in dlsToCreate)
             {
                 // Add Geopointer
-                conRes.PtrGeometry.Add(new Geopointer((byte)dlProps.Layer, Conversions.ToInteger(CurSegAddress | impdata.Position)));
+                conRes.PtrGeometry.Add(new SM64Lib.Geolayout.Geopointer((byte)dlProps.Layer, Conversions.ToInteger((long)CurSegAddress | impdata.Position)));
 
                 // Reset some stuff
                 enabledVertexColors = false;
@@ -2232,6 +2192,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 needToResetCrystalEffectCommands = false;
                 ciEnabled = false;
                 lastMaterial = null;
+                lastN64Codec = MaterialType.None;
+                lastTexType = default;
                 lastFBColor = default;
                 lastCmdFC = string.Empty;
 
@@ -2319,6 +2281,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             }
 
             ResetVariables();
+            currentPreName = null;
         }
 
         /// <summary>
@@ -2331,13 +2294,17 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         public ConvertResult ConvertModel(Stream s, ConvertSettings settings, Pilz.S3DFileParser.Object3D input)
         {
             this.settings = settings;
-            impdata = new BinaryStreamData(s);
+            impdata = new SM64Lib.Data.BinaryStreamData(s);
+
+            // Rom Address
+            definedSegPtr = false;
 
             // Segmented Address
             if (settings.SegmentedAddress is object)
             {
                 startSegOffset = (uint)(settings.SegmentedAddress & 0xFFFFFF);
                 curSeg = (byte)(settings.SegmentedAddress >> 24 & 0xFF);
+                definedSegPtr = true;
             }
 
             // Shading

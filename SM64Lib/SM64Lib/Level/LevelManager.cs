@@ -237,8 +237,7 @@ namespace SM64Lib.Levels
             // Lese Area-Modelle
             foreach (LevelArea a in lvl.Areas)
             {
-                Stream args = fs;
-                a.AreaModel.FromStream(ref args, Conversions.ToInteger(a.Bank0x0EOffset), 0xE000000, a.Fast3DBankRomStart, a.Fast3DLength, a.Geolayout.Geopointers.ToArray(), a.CollisionPointer);
+                a.AreaModel.FromStream(fs, Conversions.ToInteger(a.Bank0x0EOffset), 0xE000000, a.Fast3DBankRomStart, a.Fast3DLength, a.Geolayout.Geopointers.ToArray(), a.CollisionPointer);
             }
 
             // Lese alle Box-Daten
@@ -249,12 +248,9 @@ namespace SM64Lib.Levels
                 a.SpecialBoxes.Clear();
 
                 // Load special boxes
-                var args1 = brToUse.BaseStream;
-                a.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(ref args1, SpecialBoxType.Water, bank0x19RomStart, bank0x19RomStart + 0x6000 + 0x50 * a.AreaID));
-                var args2 = brToUse.BaseStream;
-                a.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(ref args2, SpecialBoxType.ToxicHaze, bank0x19RomStart, bank0x19RomStart + 0x6280 + 0x50 * a.AreaID));
-                var args3 = brToUse.BaseStream;
-                a.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(ref args3, SpecialBoxType.Mist, bank0x19RomStart, bank0x19RomStart + 0x6500 + 0x50 * a.AreaID));
+                a.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(brToUse.BaseStream, SpecialBoxType.Water, bank0x19RomStart, bank0x19RomStart + 0x6000 + 0x50 * a.AreaID));
+                a.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(brToUse.BaseStream, SpecialBoxType.ToxicHaze, bank0x19RomStart, bank0x19RomStart + 0x6280 + 0x50 * a.AreaID));
+                a.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(brToUse.BaseStream, SpecialBoxType.Mist, bank0x19RomStart, bank0x19RomStart + 0x6500 + 0x50 * a.AreaID));
 
                 // Load boxdata from collision
                 for (int i = 0, loopTo = a.SpecialBoxes.Count - 1; i <= loopTo; i++)

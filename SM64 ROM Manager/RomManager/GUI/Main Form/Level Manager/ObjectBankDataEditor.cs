@@ -326,6 +326,7 @@ namespace SM64_ROM_Manager
             // Edit cmd
             var argbuffer = cmd.Command;
             General.OpenHexEditor(ref argbuffer);
+            cmd.Command = argbuffer;
 
             // Update ObdTree
             nCmd.Text = $"<font face=\"Consolas\">{SM64Lib.General.CommandByteArrayToString(cmd.Command)}</font>";
