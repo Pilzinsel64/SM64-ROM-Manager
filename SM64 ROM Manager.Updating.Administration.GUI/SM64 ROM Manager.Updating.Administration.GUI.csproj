@@ -72,6 +72,12 @@
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="drsPwEnc">
+      <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
       <HintPath>..\packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
@@ -87,9 +93,6 @@
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2">
-      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.WindowsAPICodePack-Core.1.1.0.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
     </Reference>
@@ -98,6 +101,9 @@
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
@@ -131,6 +137,7 @@
     <Import Include="Z.Collections.Extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General.cs" />
     <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
@@ -163,11 +170,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProjectConfig.cs" />
     <Compile Include="ToolSelectionWindow.Designer.cs">
       <DependentUpon>ToolSelectionWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="ToolSelectionWindow.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateServerInfoEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateServerInfoEditor.Designer.cs">
+      <DependentUpon>UpdateServerInfoEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdatingAdministrationLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -191,6 +205,9 @@
     <EmbeddedResource Include="ToolSelectionWindow.resx">
       <DependentUpon>ToolSelectionWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateServerInfoEditor.resx">
+      <DependentUpon>UpdateServerInfoEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdatingAdministrationLangRes.resx">
       <CustomToolNamespace>SM64_ROM_Manager.Updating.Administration.GUI.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
@@ -212,6 +229,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_software_installer.ico" />
+    <None Include="Resources\icons8_opened_folder_16px.png" />
+    <None Include="Resources\icons8_new_file_16px.png" />
+    <None Include="Resources\icons8_delete_16px.png" />
+    <None Include="Resources\icons8_checkmark_16px.png" />
+    <None Include="Resources\icons8_support_32px_1.png" />
     <None Include="Resources\icons8_new_file_32px.png" />
     <None Include="Resources\icons8_code_file_32px_1.png" />
     <None Include="Resources\icons8_template_32px.png" />

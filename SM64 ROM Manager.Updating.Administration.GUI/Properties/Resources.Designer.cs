@@ -93,6 +93,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_checkmark_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_checkmark_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_code_file_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_code_file_32px", resourceCulture);
@@ -213,6 +223,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_new_file_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_new_file_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_new_file_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_new_file_32px", resourceCulture);
@@ -226,6 +246,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My.Resources {
         internal static System.Drawing.Bitmap icons8_open_box_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_open_box_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_opened_folder_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_opened_folder_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +286,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My.Resources {
         internal static System.Drawing.Bitmap icons8_save_as_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_save_as_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_support_32px_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_support_32px_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

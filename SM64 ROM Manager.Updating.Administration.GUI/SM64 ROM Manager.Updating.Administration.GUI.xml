@@ -6,133 +6,153 @@
     <members>
         <member name="T:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources">
             <summary>
-            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.ResourceManager">
             <summary>
-            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.Culture">
             <summary>
-            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_add_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_add_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_administrative_tools_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_checkmark_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_code_file_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_code_file_32px_1">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_delete_sign_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_delete_sign_32px_1">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_documents_folder_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_edit_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_edit_file_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_edit_property_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_export_32px_3">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_link_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_merge_files_16px_1">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_merge_files_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_new_file_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_new_file_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_open_box_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_opened_folder_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_opened_folder_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_save_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_save_as_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_support_32px_1">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_template_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_versions_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_view_file_32px_1">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="T:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.UpdatingAdministrationLangRes">
@@ -189,6 +209,23 @@
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.UpdatingAdministrationLangRes.MsgBox_PkgExportSuccess_Titel">
             <summary>
             Sucht eine lokalisierte Zeichenfolge, die Paket exportiert ähnelt.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.Updating.Administration.GUI.UpdateServerInfoEditor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.Updating.Administration.GUI.UpdateServerInfoEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.Updating.Administration.GUI.UpdateServerInfoEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
     </members>

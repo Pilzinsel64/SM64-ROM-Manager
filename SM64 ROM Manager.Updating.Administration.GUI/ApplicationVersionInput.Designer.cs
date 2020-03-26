@@ -38,219 +38,219 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         {
             components = new System.ComponentModel.Container();
             var resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplicationVersionInput));
-            _TextBoxX_VersionName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TextBoxX_Version = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _ComboBoxEx_Channel = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            _IntegerInput_Build = new DevComponents.Editors.IntegerInput();
-            _LayoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
-            _ButtonX_Cancel = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_Okay = new DevComponents.DotNetBar.ButtonX();
-            _LayoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _LayoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _LayoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _LayoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _LayoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
-            _LayoutControlItem5 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _LayoutControlItem6 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_Build).BeginInit();
-            _LayoutControl1.SuspendLayout();
+            TextBoxX_VersionName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            TextBoxX_Version = new DevComponents.DotNetBar.Controls.TextBoxX();
+            ComboBoxEx_Channel = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            IntegerInput_Build = new DevComponents.Editors.IntegerInput();
+            LayoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
+            ButtonX_Cancel = new DevComponents.DotNetBar.ButtonX();
+            ButtonX_Okay = new DevComponents.DotNetBar.ButtonX();
+            LayoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            LayoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            LayoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            LayoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            LayoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
+            LayoutControlItem5 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            LayoutControlItem6 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            ((System.ComponentModel.ISupportInitialize)IntegerInput_Build).BeginInit();
+            LayoutControl1.SuspendLayout();
             SuspendLayout();
             // 
             // TextBoxX_VersionName
             // 
-            _TextBoxX_VersionName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _TextBoxX_VersionName.BackColor = Color.White;
+            TextBoxX_VersionName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            TextBoxX_VersionName.BackColor = Color.White;
             // 
             // 
             // 
-            _TextBoxX_VersionName.Border.Class = "TextBoxBorder";
-            _TextBoxX_VersionName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX_VersionName.DisabledBackColor = Color.White;
-            _TextBoxX_VersionName.ForeColor = Color.Black;
-            _TextBoxX_VersionName.Location = new Point(53, 4);
-            _TextBoxX_VersionName.Margin = new Padding(0);
-            _TextBoxX_VersionName.Name = "TextBoxX_VersionName";
-            _TextBoxX_VersionName.PreventEnterBeep = true;
-            _TextBoxX_VersionName.Size = new Size(275, 20);
-            _TextBoxX_VersionName.TabIndex = 0;
-            _TextBoxX_VersionName.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
-            _TextBoxX_VersionName.WatermarkText = "Bspw.: Version 1.2.5.0 - Dark Mode und vieles mehr!";
+            TextBoxX_VersionName.Border.Class = "TextBoxBorder";
+            TextBoxX_VersionName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            TextBoxX_VersionName.DisabledBackColor = Color.White;
+            TextBoxX_VersionName.ForeColor = Color.Black;
+            TextBoxX_VersionName.Location = new Point(53, 4);
+            TextBoxX_VersionName.Margin = new Padding(0);
+            TextBoxX_VersionName.Name = "TextBoxX_VersionName";
+            TextBoxX_VersionName.PreventEnterBeep = true;
+            TextBoxX_VersionName.Size = new Size(275, 20);
+            TextBoxX_VersionName.TabIndex = 0;
+            TextBoxX_VersionName.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
+            TextBoxX_VersionName.WatermarkText = "Bspw.: Version 1.2.5.0 - Dark Mode und vieles mehr!";
             // 
             // TextBoxX_Version
             // 
-            _TextBoxX_Version.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _TextBoxX_Version.BackColor = Color.White;
+            TextBoxX_Version.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            TextBoxX_Version.BackColor = Color.White;
             // 
             // 
             // 
-            _TextBoxX_Version.Border.Class = "TextBoxBorder";
-            _TextBoxX_Version.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX_Version.DisabledBackColor = Color.White;
-            _TextBoxX_Version.ForeColor = Color.Black;
-            _TextBoxX_Version.Location = new Point(53, 32);
-            _TextBoxX_Version.Margin = new Padding(0);
-            _TextBoxX_Version.Name = "TextBoxX_Version";
-            _TextBoxX_Version.PreventEnterBeep = true;
-            _TextBoxX_Version.Size = new Size(275, 20);
-            _TextBoxX_Version.TabIndex = 1;
-            _TextBoxX_Version.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
-            _TextBoxX_Version.WatermarkText = "Bspw.: 1.2.5.0";
+            TextBoxX_Version.Border.Class = "TextBoxBorder";
+            TextBoxX_Version.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            TextBoxX_Version.DisabledBackColor = Color.White;
+            TextBoxX_Version.ForeColor = Color.Black;
+            TextBoxX_Version.Location = new Point(53, 32);
+            TextBoxX_Version.Margin = new Padding(0);
+            TextBoxX_Version.Name = "TextBoxX_Version";
+            TextBoxX_Version.PreventEnterBeep = true;
+            TextBoxX_Version.Size = new Size(275, 20);
+            TextBoxX_Version.TabIndex = 1;
+            TextBoxX_Version.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
+            TextBoxX_Version.WatermarkText = "Bspw.: 1.2.5.0";
             // 
             // ComboBoxEx_Channel
             // 
-            _ComboBoxEx_Channel.DisplayMember = "Text";
-            _ComboBoxEx_Channel.DrawMode = DrawMode.OwnerDrawFixed;
-            _ComboBoxEx_Channel.DropDownStyle = ComboBoxStyle.DropDownList;
-            _ComboBoxEx_Channel.ForeColor = Color.Black;
-            _ComboBoxEx_Channel.FormattingEnabled = true;
-            _ComboBoxEx_Channel.ItemHeight = 15;
-            _ComboBoxEx_Channel.Location = new Point(53, 60);
-            _ComboBoxEx_Channel.Margin = new Padding(0);
-            _ComboBoxEx_Channel.Name = "ComboBoxEx_Channel";
-            _ComboBoxEx_Channel.Size = new Size(275, 21);
-            _ComboBoxEx_Channel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ComboBoxEx_Channel.TabIndex = 2;
+            ComboBoxEx_Channel.DisplayMember = "Text";
+            ComboBoxEx_Channel.DrawMode = DrawMode.OwnerDrawFixed;
+            ComboBoxEx_Channel.DropDownStyle = ComboBoxStyle.DropDownList;
+            ComboBoxEx_Channel.ForeColor = Color.Black;
+            ComboBoxEx_Channel.FormattingEnabled = true;
+            ComboBoxEx_Channel.ItemHeight = 15;
+            ComboBoxEx_Channel.Location = new Point(53, 60);
+            ComboBoxEx_Channel.Margin = new Padding(0);
+            ComboBoxEx_Channel.Name = "ComboBoxEx_Channel";
+            ComboBoxEx_Channel.Size = new Size(275, 21);
+            ComboBoxEx_Channel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            ComboBoxEx_Channel.TabIndex = 2;
             // 
             // IntegerInput_Build
             // 
-            _IntegerInput_Build.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            IntegerInput_Build.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             // 
             // 
             // 
-            _IntegerInput_Build.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput_Build.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput_Build.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            _IntegerInput_Build.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
-            _IntegerInput_Build.Location = new Point(53, 89);
-            _IntegerInput_Build.Margin = new Padding(0);
-            _IntegerInput_Build.MinValue = 0;
-            _IntegerInput_Build.Name = "IntegerInput_Build";
-            _IntegerInput_Build.ShowUpDown = true;
-            _IntegerInput_Build.Size = new Size(275, 20);
-            _IntegerInput_Build.TabIndex = 3;
+            IntegerInput_Build.BackgroundStyle.Class = "DateTimeInputBackground";
+            IntegerInput_Build.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            IntegerInput_Build.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            IntegerInput_Build.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
+            IntegerInput_Build.Location = new Point(53, 89);
+            IntegerInput_Build.Margin = new Padding(0);
+            IntegerInput_Build.MinValue = 0;
+            IntegerInput_Build.Name = "IntegerInput_Build";
+            IntegerInput_Build.ShowUpDown = true;
+            IntegerInput_Build.Size = new Size(275, 20);
+            IntegerInput_Build.TabIndex = 3;
             // 
             // LayoutControl1
             // 
-            _LayoutControl1.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)));
-            _LayoutControl1.Controls.Add(_TextBoxX_VersionName);
-            _LayoutControl1.Controls.Add(_TextBoxX_Version);
-            _LayoutControl1.Controls.Add(_ComboBoxEx_Channel);
-            _LayoutControl1.Controls.Add(_IntegerInput_Build);
-            _LayoutControl1.Controls.Add(_ButtonX_Cancel);
-            _LayoutControl1.Controls.Add(_ButtonX_Okay);
-            _LayoutControl1.Dock = DockStyle.Fill;
-            _LayoutControl1.ForeColor = Color.Black;
-            _LayoutControl1.Location = new Point(0, 0);
-            _LayoutControl1.Name = "LayoutControl1";
+            LayoutControl1.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)));
+            LayoutControl1.Controls.Add(TextBoxX_VersionName);
+            LayoutControl1.Controls.Add(TextBoxX_Version);
+            LayoutControl1.Controls.Add(ComboBoxEx_Channel);
+            LayoutControl1.Controls.Add(IntegerInput_Build);
+            LayoutControl1.Controls.Add(ButtonX_Cancel);
+            LayoutControl1.Controls.Add(ButtonX_Okay);
+            LayoutControl1.Dock = DockStyle.Fill;
+            LayoutControl1.ForeColor = Color.Black;
+            LayoutControl1.Location = new Point(0, 0);
+            LayoutControl1.Name = "LayoutControl1";
             // 
             // 
             // 
-            _LayoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] { _LayoutControlItem1, _LayoutControlItem2, _LayoutControlItem3, _LayoutControlItem4, _LayoutSpacerItem1, _LayoutControlItem5, _LayoutControlItem6 });
-            _LayoutControl1.Size = new Size(332, 144);
-            _LayoutControl1.TabIndex = 5;
+            LayoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] { LayoutControlItem1, LayoutControlItem2, LayoutControlItem3, LayoutControlItem4, LayoutSpacerItem1, LayoutControlItem5, LayoutControlItem6 });
+            LayoutControl1.Size = new Size(332, 144);
+            LayoutControl1.TabIndex = 5;
             // 
             // ButtonX_Cancel
             // 
-            _ButtonX_Cancel.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_Cancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_Cancel.DialogResult = DialogResult.Cancel;
-            _ButtonX_Cancel.Location = new Point(170, 117);
-            _ButtonX_Cancel.Margin = new Padding(0);
-            _ButtonX_Cancel.Name = "ButtonX_Cancel";
-            _ButtonX_Cancel.Size = new Size(75, 23);
-            _ButtonX_Cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX_Cancel.TabIndex = 5;
-            _ButtonX_Cancel.Text = "Abbrechen";
+            ButtonX_Cancel.AccessibleRole = AccessibleRole.PushButton;
+            ButtonX_Cancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            ButtonX_Cancel.DialogResult = DialogResult.Cancel;
+            ButtonX_Cancel.Location = new Point(170, 117);
+            ButtonX_Cancel.Margin = new Padding(0);
+            ButtonX_Cancel.Name = "ButtonX_Cancel";
+            ButtonX_Cancel.Size = new Size(75, 23);
+            ButtonX_Cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            ButtonX_Cancel.TabIndex = 5;
+            ButtonX_Cancel.Text = "Abbrechen";
             // 
             // ButtonX_Okay
             // 
-            _ButtonX_Okay.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_Okay.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_Okay.DialogResult = DialogResult.OK;
-            _ButtonX_Okay.Location = new Point(253, 117);
-            _ButtonX_Okay.Margin = new Padding(0);
-            _ButtonX_Okay.Name = "ButtonX_Okay";
-            _ButtonX_Okay.Size = new Size(75, 23);
-            _ButtonX_Okay.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX_Okay.TabIndex = 6;
-            _ButtonX_Okay.Text = "Okay";
+            ButtonX_Okay.AccessibleRole = AccessibleRole.PushButton;
+            ButtonX_Okay.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            ButtonX_Okay.DialogResult = DialogResult.OK;
+            ButtonX_Okay.Location = new Point(253, 117);
+            ButtonX_Okay.Margin = new Padding(0);
+            ButtonX_Okay.Name = "ButtonX_Okay";
+            ButtonX_Okay.Size = new Size(75, 23);
+            ButtonX_Okay.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            ButtonX_Okay.TabIndex = 6;
+            ButtonX_Okay.Text = "Okay";
             // 
             // LayoutControlItem1
             // 
-            _LayoutControlItem1.Control = _TextBoxX_VersionName;
-            _LayoutControlItem1.Height = 28;
-            _LayoutControlItem1.MinSize = new Size(120, 0);
-            _LayoutControlItem1.Name = "LayoutControlItem1";
-            _LayoutControlItem1.Text = "Name:";
-            _LayoutControlItem1.TextLineAlignment = DevComponents.DotNetBar.Layout.eTextLineAlignment.Middle;
-            _LayoutControlItem1.Width = 100;
-            _LayoutControlItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            LayoutControlItem1.Control = TextBoxX_VersionName;
+            LayoutControlItem1.Height = 28;
+            LayoutControlItem1.MinSize = new Size(120, 0);
+            LayoutControlItem1.Name = "LayoutControlItem1";
+            LayoutControlItem1.Text = "Name:";
+            LayoutControlItem1.TextLineAlignment = DevComponents.DotNetBar.Layout.eTextLineAlignment.Middle;
+            LayoutControlItem1.Width = 100;
+            LayoutControlItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutControlItem2
             // 
-            _LayoutControlItem2.Control = _TextBoxX_Version;
-            _LayoutControlItem2.Height = 28;
-            _LayoutControlItem2.MinSize = new Size(120, 0);
-            _LayoutControlItem2.Name = "LayoutControlItem2";
-            _LayoutControlItem2.Text = "Version:";
-            _LayoutControlItem2.TextLineAlignment = DevComponents.DotNetBar.Layout.eTextLineAlignment.Middle;
-            _LayoutControlItem2.Width = 100;
-            _LayoutControlItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            LayoutControlItem2.Control = TextBoxX_Version;
+            LayoutControlItem2.Height = 28;
+            LayoutControlItem2.MinSize = new Size(120, 0);
+            LayoutControlItem2.Name = "LayoutControlItem2";
+            LayoutControlItem2.Text = "Version:";
+            LayoutControlItem2.TextLineAlignment = DevComponents.DotNetBar.Layout.eTextLineAlignment.Middle;
+            LayoutControlItem2.Width = 100;
+            LayoutControlItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutControlItem3
             // 
-            _LayoutControlItem3.Control = _ComboBoxEx_Channel;
-            _LayoutControlItem3.Height = 29;
-            _LayoutControlItem3.MinSize = new Size(64, 18);
-            _LayoutControlItem3.Name = "LayoutControlItem3";
-            _LayoutControlItem3.Text = "Kanal:";
-            _LayoutControlItem3.TextLineAlignment = DevComponents.DotNetBar.Layout.eTextLineAlignment.Middle;
-            _LayoutControlItem3.Width = 100;
-            _LayoutControlItem3.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            LayoutControlItem3.Control = ComboBoxEx_Channel;
+            LayoutControlItem3.Height = 29;
+            LayoutControlItem3.MinSize = new Size(64, 18);
+            LayoutControlItem3.Name = "LayoutControlItem3";
+            LayoutControlItem3.Text = "Kanal:";
+            LayoutControlItem3.TextLineAlignment = DevComponents.DotNetBar.Layout.eTextLineAlignment.Middle;
+            LayoutControlItem3.Width = 100;
+            LayoutControlItem3.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutControlItem4
             // 
-            _LayoutControlItem4.Control = _IntegerInput_Build;
-            _LayoutControlItem4.Height = 28;
-            _LayoutControlItem4.MinSize = new Size(120, 0);
-            _LayoutControlItem4.Name = "LayoutControlItem4";
-            _LayoutControlItem4.Text = "Build:";
-            _LayoutControlItem4.TextLineAlignment = DevComponents.DotNetBar.Layout.eTextLineAlignment.Middle;
-            _LayoutControlItem4.Width = 100;
-            _LayoutControlItem4.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            LayoutControlItem4.Control = IntegerInput_Build;
+            LayoutControlItem4.Height = 28;
+            LayoutControlItem4.MinSize = new Size(120, 0);
+            LayoutControlItem4.Name = "LayoutControlItem4";
+            LayoutControlItem4.Text = "Build:";
+            LayoutControlItem4.TextLineAlignment = DevComponents.DotNetBar.Layout.eTextLineAlignment.Middle;
+            LayoutControlItem4.Width = 100;
+            LayoutControlItem4.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutSpacerItem1
             // 
-            _LayoutSpacerItem1.Height = 31;
-            _LayoutSpacerItem1.HeightType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
-            _LayoutSpacerItem1.Name = "LayoutSpacerItem1";
-            _LayoutSpacerItem1.Width = 99;
-            _LayoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            LayoutSpacerItem1.Height = 31;
+            LayoutSpacerItem1.HeightType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            LayoutSpacerItem1.Name = "LayoutSpacerItem1";
+            LayoutSpacerItem1.Width = 99;
+            LayoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutControlItem5
             // 
-            _LayoutControlItem5.Control = _ButtonX_Cancel;
-            _LayoutControlItem5.Height = 31;
-            _LayoutControlItem5.MinSize = new Size(32, 20);
-            _LayoutControlItem5.Name = "LayoutControlItem5";
-            _LayoutControlItem5.Width = 83;
+            LayoutControlItem5.Control = ButtonX_Cancel;
+            LayoutControlItem5.Height = 31;
+            LayoutControlItem5.MinSize = new Size(32, 20);
+            LayoutControlItem5.Name = "LayoutControlItem5";
+            LayoutControlItem5.Width = 83;
             // 
             // LayoutControlItem6
             // 
-            _LayoutControlItem6.Control = _ButtonX_Okay;
-            _LayoutControlItem6.Height = 31;
-            _LayoutControlItem6.MinSize = new Size(32, 20);
-            _LayoutControlItem6.Name = "LayoutControlItem6";
-            _LayoutControlItem6.Width = 83;
+            LayoutControlItem6.Control = ButtonX_Okay;
+            LayoutControlItem6.Height = 31;
+            LayoutControlItem6.MinSize = new Size(32, 20);
+            LayoutControlItem6.Name = "LayoutControlItem6";
+            LayoutControlItem6.Width = 83;
             // 
             // ApplicationVersionInput
             // 
-            AcceptButton = _ButtonX_Okay;
+            AcceptButton = ButtonX_Okay;
             AutoScaleDimensions = new SizeF(6.0F, 13.0F);
             AutoScaleMode = AutoScaleMode.Font;
-            CancelButton = _ButtonX_Cancel;
+            CancelButton = ButtonX_Cancel;
             ClientSize = new Size(332, 144);
-            Controls.Add(_LayoutControl1);
+            Controls.Add(LayoutControl1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
@@ -260,247 +260,47 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             Text = "Version";
             TopLeftCornerSize = 0;
             TopRightCornerSize = 0;
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_Build).EndInit();
-            _LayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)IntegerInput_Build).EndInit();
+            LayoutControl1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX_VersionName;
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_VersionName;
 
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_VersionName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX_VersionName;
-            }
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _TextBoxX_VersionName = value;
-            }
-        }
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_Version;
 
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX_Version;
 
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_Version
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX_Version;
-            }
+        private DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx_Channel;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _TextBoxX_Version = value;
-            }
-        }
 
-        private DevComponents.DotNetBar.Controls.ComboBoxEx _ComboBoxEx_Channel;
+        private DevComponents.Editors.IntegerInput IntegerInput_Build;
 
-        internal DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx_Channel
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ComboBoxEx_Channel;
-            }
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _ComboBoxEx_Channel = value;
-            }
-        }
+        private DevComponents.DotNetBar.Layout.LayoutControl LayoutControl1;
 
-        private DevComponents.Editors.IntegerInput _IntegerInput_Build;
 
-        internal DevComponents.Editors.IntegerInput IntegerInput_Build
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput_Build;
-            }
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem1;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _IntegerInput_Build = value;
-            }
-        }
 
-        private DevComponents.DotNetBar.Layout.LayoutControl _LayoutControl1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem2;
 
-        internal DevComponents.DotNetBar.Layout.LayoutControl LayoutControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControl1;
-            }
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LayoutControl1 = value;
-            }
-        }
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem3;
 
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem1;
 
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem1;
-            }
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem4;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LayoutControlItem1 = value;
-            }
-        }
 
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem2;
+        private DevComponents.DotNetBar.ButtonX ButtonX_Cancel;
 
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem2;
-            }
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LayoutControlItem2 = value;
-            }
-        }
+        private DevComponents.DotNetBar.ButtonX ButtonX_Okay;
 
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem3;
+        private DevComponents.DotNetBar.Layout.LayoutSpacerItem LayoutSpacerItem1;
 
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem3;
-            }
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem5;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LayoutControlItem3 = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem4;
-
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LayoutControlItem4 = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_Cancel;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_Cancel
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_Cancel;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _ButtonX_Cancel = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_Okay;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_Okay
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_Okay;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _ButtonX_Okay = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutSpacerItem _LayoutSpacerItem1;
-
-        internal DevComponents.DotNetBar.Layout.LayoutSpacerItem LayoutSpacerItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutSpacerItem1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LayoutSpacerItem1 = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem5;
-
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LayoutControlItem5 = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem6;
-
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem6
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem6;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LayoutControlItem6 = value;
-            }
-        }
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem6;
     }
 }
