@@ -6,343 +6,348 @@
     <members>
         <member name="T:SM64_ROM_Manager.My.Resources.MyIcons">
             <summary>
-            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.ResourceManager">
             <summary>
-            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.Culture">
             <summary>
-            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_about_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_add_node_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_add_subnode_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_arrow_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_arrow_40px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_cancel_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_checkmark_16px_1">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_chevron_down_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_chevron_up_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_coins_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_collapse_arrow_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_color_dropper_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_controller_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_copy_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_cut_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_2_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_node_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_subnode_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_download_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_downloading_updates_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_node_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_error_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_filled_star_location_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_fit_to_width_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_folder_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_forward_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_help_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_high_importance_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_info_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_map_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_merge_horizontal_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_message_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_move_node_down_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_move_node_up_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_music_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_open_folder_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_paper_plane_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_paste_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_paste_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_paste_special_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_pills_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_plugin_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_preview_pane_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_redo_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_refresh_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_save_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_screenshot_32px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_settings_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_split_vertical_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_support_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_syringe_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_text_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_undo_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_upload_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_variation_16px">
             <summary>
-            Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="T:SM64_ROM_Manager.My.Resources.MyOldIcons">

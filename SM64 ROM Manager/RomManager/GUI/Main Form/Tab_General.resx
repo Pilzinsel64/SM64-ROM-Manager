@@ -142,7 +142,7 @@
     <value>ItemPanel_RecentFiles</value>
   </data>
   <data name="&gt;&gt;ItemPanel_RecentFiles.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ItemPanel, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ItemPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ItemPanel_RecentFiles.Parent" xml:space="preserve">
     <value>GroupPanel2</value>
@@ -166,7 +166,7 @@
     <value>GroupPanel2</value>
   </data>
   <data name="&gt;&gt;GroupPanel2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;GroupPanel2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -184,7 +184,7 @@
     <value>False</value>
   </data>
   <data name="Button_G_SaveGameName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 54</value>
+    <value>187, 54</value>
   </data>
   <data name="Button_G_SaveGameName.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 22</value>
@@ -199,7 +199,7 @@
     <value>Button_G_SaveGameName</value>
   </data>
   <data name="&gt;&gt;Button_G_SaveGameName.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Button_G_SaveGameName.Parent" xml:space="preserve">
     <value>GroupPanel6</value>
@@ -223,7 +223,7 @@
     <value>LabelX27</value>
   </data>
   <data name="&gt;&gt;LabelX27.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX27.Parent" xml:space="preserve">
     <value>GroupPanel6</value>
@@ -238,7 +238,7 @@
     <value>86, 3</value>
   </data>
   <data name="LabelX_G_Filename.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 20</value>
+    <value>155, 20</value>
   </data>
   <data name="LabelX_G_Filename.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -247,7 +247,7 @@
     <value>LabelX_G_Filename</value>
   </data>
   <data name="&gt;&gt;LabelX_G_Filename.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_G_Filename.Parent" xml:space="preserve">
     <value>GroupPanel6</value>
@@ -265,7 +265,7 @@
     <value>20</value>
   </data>
   <data name="TextBoxX_G_GameName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 20</value>
+    <value>95, 20</value>
   </data>
   <data name="TextBoxX_G_GameName.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -274,7 +274,7 @@
     <value>TextBoxX_G_GameName</value>
   </data>
   <data name="&gt;&gt;TextBoxX_G_GameName.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TextBoxX_G_GameName.Parent" xml:space="preserve">
     <value>GroupPanel6</value>
@@ -289,7 +289,7 @@
     <value>86, 29</value>
   </data>
   <data name="LabelX_G_Filesize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 20</value>
+    <value>155, 20</value>
   </data>
   <data name="LabelX_G_Filesize.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -298,7 +298,7 @@
     <value>LabelX_G_Filesize</value>
   </data>
   <data name="&gt;&gt;LabelX_G_Filesize.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_G_Filesize.Parent" xml:space="preserve">
     <value>GroupPanel6</value>
@@ -322,7 +322,7 @@
     <value>LabelX34</value>
   </data>
   <data name="&gt;&gt;LabelX34.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX34.Parent" xml:space="preserve">
     <value>GroupPanel6</value>
@@ -346,7 +346,7 @@
     <value>LabelX35</value>
   </data>
   <data name="&gt;&gt;LabelX35.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX35.Parent" xml:space="preserve">
     <value>GroupPanel6</value>
@@ -370,12 +370,360 @@
     <value>GroupPanel6</value>
   </data>
   <data name="&gt;&gt;GroupPanel6.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;GroupPanel6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GroupPanel6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="pictureBox_RomConfigStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 29</value>
+  </data>
+  <data name="pictureBox_RomConfigStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="pictureBox_RomConfigStatus.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox_RomConfigStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_RomConfigStatus.Name" xml:space="preserve">
+    <value>pictureBox_RomConfigStatus</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_RomConfigStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_RomConfigStatus.Parent" xml:space="preserve">
+    <value>groupPanel1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox_RomConfigStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="labelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="labelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>Filename:</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Name" xml:space="preserve">
+    <value>labelX1</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Parent" xml:space="preserve">
+    <value>groupPanel1</value>
+  </data>
+  <data name="&gt;&gt;labelX1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelX_RomConfigStatus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelX_RomConfigStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 29</value>
+  </data>
+  <data name="labelX_RomConfigStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="labelX_RomConfigStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;labelX_RomConfigStatus.Name" xml:space="preserve">
+    <value>labelX_RomConfigStatus</value>
+  </data>
+  <data name="&gt;&gt;labelX_RomConfigStatus.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX_RomConfigStatus.Parent" xml:space="preserve">
+    <value>groupPanel1</value>
+  </data>
+  <data name="&gt;&gt;labelX_RomConfigStatus.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelX_RomConfigFilepath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelX_RomConfigFilepath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 3</value>
+  </data>
+  <data name="labelX_RomConfigFilepath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="labelX_RomConfigFilepath.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;labelX_RomConfigFilepath.Name" xml:space="preserve">
+    <value>labelX_RomConfigFilepath</value>
+  </data>
+  <data name="&gt;&gt;labelX_RomConfigFilepath.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX_RomConfigFilepath.Parent" xml:space="preserve">
+    <value>groupPanel1</value>
+  </data>
+  <data name="&gt;&gt;labelX_RomConfigFilepath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelX3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelX3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 29</value>
+  </data>
+  <data name="labelX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="labelX3.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;labelX3.Name" xml:space="preserve">
+    <value>labelX3</value>
+  </data>
+  <data name="&gt;&gt;labelX3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX3.Parent" xml:space="preserve">
+    <value>groupPanel1</value>
+  </data>
+  <data name="&gt;&gt;labelX3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelX5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 29</value>
+  </data>
+  <data name="labelX5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="labelX5.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="labelX5.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="&gt;&gt;labelX5.Name" xml:space="preserve">
+    <value>labelX5</value>
+  </data>
+  <data name="&gt;&gt;labelX5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX5.Parent" xml:space="preserve">
+    <value>groupPanel1</value>
+  </data>
+  <data name="&gt;&gt;labelX5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 172</value>
+  </data>
+  <data name="groupPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 73</value>
+  </data>
+  <data name="groupPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupPanel1.Text" xml:space="preserve">
+    <value>ROM.config</value>
+  </data>
+  <data name="&gt;&gt;groupPanel1.Name" xml:space="preserve">
+    <value>groupPanel1</value>
+  </data>
+  <data name="&gt;&gt;groupPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;groupPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupPanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 29</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="labelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="labelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="labelX2.Text" xml:space="preserve">
+    <value>Filename:</value>
+  </data>
+  <data name="&gt;&gt;labelX2.Name" xml:space="preserve">
+    <value>labelX2</value>
+  </data>
+  <data name="&gt;&gt;labelX2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX2.Parent" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;labelX2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelX4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelX4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 29</value>
+  </data>
+  <data name="labelX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 20</value>
+  </data>
+  <data name="labelX4.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;labelX4.Name" xml:space="preserve">
+    <value>labelX4</value>
+  </data>
+  <data name="&gt;&gt;labelX4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX4.Parent" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;labelX4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelX6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelX6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 3</value>
+  </data>
+  <data name="labelX6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="labelX6.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;labelX6.Name" xml:space="preserve">
+    <value>labelX6</value>
+  </data>
+  <data name="&gt;&gt;labelX6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX6.Parent" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;labelX6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelX7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelX7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 29</value>
+  </data>
+  <data name="labelX7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="labelX7.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;labelX7.Name" xml:space="preserve">
+    <value>labelX7</value>
+  </data>
+  <data name="&gt;&gt;labelX7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX7.Parent" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;labelX7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelX8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 29</value>
+  </data>
+  <data name="labelX8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="labelX8.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="labelX8.Text" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="&gt;&gt;labelX8.Name" xml:space="preserve">
+    <value>labelX8</value>
+  </data>
+  <data name="&gt;&gt;labelX8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX8.Parent" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;labelX8.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 251</value>
+  </data>
+  <data name="groupPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 73</value>
+  </data>
+  <data name="groupPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupPanel3.Text" xml:space="preserve">
+    <value>Patches</value>
+  </data>
+  <data name="groupPanel3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;groupPanel3.Name" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;groupPanel3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;groupPanel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupPanel3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

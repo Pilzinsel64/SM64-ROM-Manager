@@ -174,7 +174,7 @@ namespace SM64Lib
 
         // F e a t u r e s
 
-        private string GetRomConfigFilePath()
+        public string GetRomConfigFilePath()
         {
             return RomFile + ".config";
         }

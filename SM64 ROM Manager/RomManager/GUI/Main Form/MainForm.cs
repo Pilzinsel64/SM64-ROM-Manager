@@ -54,13 +54,10 @@ namespace SM64_ROM_Manager
 
         private MainController Controller
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _Controller;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_Controller != null)
@@ -99,13 +96,10 @@ namespace SM64_ROM_Manager
 
         private WarningBox WarningBox_RomChanged
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _WarningBox_RomChanged;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_WarningBox_RomChanged != null)
@@ -204,22 +198,16 @@ namespace SM64_ROM_Manager
                     Text = Form_Main_Resources.MsgBox_RomChanged,
                     DialogButtons = eTaskDialogButton.Yes | eTaskDialogButton.No
                 };
-                var switchExpr = TaskDialog.Show(tdinfo);
-                switch (switchExpr)
+                switch (TaskDialog.Show(tdinfo))
                 {
                     case eTaskDialogResult.Yes:
-                        {
-                            Controller.ReloadRom();
-                            showWarningBox = false;
-                            break;
-                        }
-
+                        Controller.ReloadRom();
+                        showWarningBox = false;
+                        break;
                     default:
-                        {
-                            showWarningBox = true;
-                            mute = true;
-                            break;
-                        }
+                        showWarningBox = true;
+                        mute = true;
+                        break;
                 }
             }
 

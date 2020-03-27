@@ -137,6 +137,12 @@ namespace SM64_ROM_Manager
         public event ErrorBecauseNoRomLoadedEventHandler ErrorBecauseNoRomLoaded;
         public delegate void ErrorBecauseNoRomLoadedEventHandler();
 
+        public event RomSavedEventHandler RomSaved;
+        public delegate void RomSavedEventHandler();
+
+        public event RomSavingEventHandler RomSaving;
+        public delegate void RomSavingEventHandler();
+
         // C o n s t a n t s
 
         public const string PLUGINCODE_PLUGINMENU = "pluginmenu";
@@ -479,11 +485,13 @@ namespace SM64_ROM_Manager
         {
             if (AllowSavingRom())
             {
+                RomSaving?.Invoke();
                 StatusText = SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_SavingRom;
                 savingRom = true;
-                SM64_ROM_Manager.General.SaveRom(RomManager);
+                General.SaveRom(RomManager);
                 savingRom = false;
                 StatusText = string.Empty;
+                RomSaved?.Invoke();
                 return true;
             }
             else
@@ -525,6 +533,7 @@ namespace SM64_ROM_Manager
         public bool OpenRom(string Romfile)
         {
             bool success = false;
+
             if (!loadRecentROM)
             {
 
@@ -577,7 +586,6 @@ namespace SM64_ROM_Manager
                     MessageBoxEx.Show(Form_Main_Resources.MsgBox_UnknownErrorAtLoadingRom, Form_Main_Resources.MsgBox_UnknownErrorAtLoadingRom_Titel, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 #endif
-
                 loadRecentROM = false;
                 StatusText = string.Empty;
             }
@@ -612,8 +620,8 @@ namespace SM64_ROM_Manager
         {
             if (RomManager is object)
             {
-                SM64_ROM_Manager.General.RomWatcher = new FileSystemWatcher(Path.GetDirectoryName(RomManager.RomFile), Path.GetFileName(RomManager.RomFile)) { EnableRaisingEvents = true, SynchronizingObject = mainForm };
                 hasRomChanged = 0;
+                SM64_ROM_Manager.General.RomWatcher = new FileSystemWatcher(Path.GetDirectoryName(RomManager.RomFile), Path.GetFileName(RomManager.RomFile)) { EnableRaisingEvents = true, SynchronizingObject = mainForm };
             }
             else
             {
@@ -959,7 +967,7 @@ namespace SM64_ROM_Manager
             RomManager.GameName = name;
         }
 
-        public string GetGameNAme()
+        public string GetGameName()
         {
             return RomManager.GameName;
         }
@@ -984,6 +992,14 @@ namespace SM64_ROM_Manager
                 OpenThankYouPage();
                 Settings.General.LastThankYouPageSeen = myVersion;
             }
+        }
+
+        public (string fileName, bool available) GetRomConfigInfo()
+        {
+            var fp = RomManager.GetRomConfigFilePath();
+            var fn = Path.GetDirectoryName(fp);
+            var a = File.Exists(fp);
+            return (fn, a);
         }
 
         // L e v e l   M a n a g e r

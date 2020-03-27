@@ -192,15 +192,6 @@ namespace SM64_ROM_Manager
             // 
             resources.ApplyResources(_tabGeneral, "tabGeneral");
             _tabGeneral.BackColor = Color.White;
-            _Controller.StatusTextChanged += new MainController.StatusTextChangedEventHandler(Controller_StatusTextChanged);
-            _Controller.OtherStatusInfosChanged += new MainController.OtherStatusInfosChangedEventHandler(Controller_OtherStatusInfosChanged);
-            _Controller.RomLoaded += new MainController.RomLoadedEventHandler(Controller_RomLoaded);
-            _Controller.RecentFilesChanged += new MainController.RecentFilesChangedEventHandler(Controller_RecentFilesChanged);
-            _Controller.RomFileRenamed += new MainController.RomFileRenamedEventHandler(Controller_RomFileRenamed);
-            _Controller.RomFileDeleted += new MainController.RomFileDeletedEventHandler(Controller_RomFileDeleted);
-            _Controller.RomChangesAvailable += new MainController.RomChangesAvailableEventHandler(Controller_RomChangesAvaiable);
-            _Controller.RequestIsChangingTab += new MainController.RequestIsChangingTabEventHandler(Controller_RequestIsChangingTab);
-            _Controller.ErrorBecauseNoRomLoaded += new MainController.ErrorBecauseNoRomLoadedEventHandler(Controller_ErrorBecauseNoRomLoaded);
             _tabGeneral.Name = "tabGeneral";
             // 
             // TabItem_General
@@ -227,15 +218,6 @@ namespace SM64_ROM_Manager
             // 
             resources.ApplyResources(_tabMusicManager, "tabMusicManager");
             _tabMusicManager.BackColor = Color.White;
-            _Controller.StatusTextChanged += new MainController.StatusTextChangedEventHandler(Controller_StatusTextChanged);
-            _Controller.OtherStatusInfosChanged += new MainController.OtherStatusInfosChangedEventHandler(Controller_OtherStatusInfosChanged);
-            _Controller.RomLoaded += new MainController.RomLoadedEventHandler(Controller_RomLoaded);
-            _Controller.RecentFilesChanged += new MainController.RecentFilesChangedEventHandler(Controller_RecentFilesChanged);
-            _Controller.RomFileRenamed += new MainController.RomFileRenamedEventHandler(Controller_RomFileRenamed);
-            _Controller.RomFileDeleted += new MainController.RomFileDeletedEventHandler(Controller_RomFileDeleted);
-            _Controller.RomChangesAvailable += new MainController.RomChangesAvailableEventHandler(Controller_RomChangesAvaiable);
-            _Controller.RequestIsChangingTab += new MainController.RequestIsChangingTabEventHandler(Controller_RequestIsChangingTab);
-            _Controller.ErrorBecauseNoRomLoaded += new MainController.ErrorBecauseNoRomLoadedEventHandler(Controller_ErrorBecauseNoRomLoaded);
             _tabMusicManager.Name = "tabMusicManager";
             // 
             // TabItem_MusicManager
@@ -288,15 +270,6 @@ namespace SM64_ROM_Manager
             // 
             resources.ApplyResources(_tabLevelManager, "tabLevelManager");
             _tabLevelManager.BackColor = Color.White;
-            _Controller.StatusTextChanged += new MainController.StatusTextChangedEventHandler(Controller_StatusTextChanged);
-            _Controller.OtherStatusInfosChanged += new MainController.OtherStatusInfosChangedEventHandler(Controller_OtherStatusInfosChanged);
-            _Controller.RomLoaded += new MainController.RomLoadedEventHandler(Controller_RomLoaded);
-            _Controller.RecentFilesChanged += new MainController.RecentFilesChangedEventHandler(Controller_RecentFilesChanged);
-            _Controller.RomFileRenamed += new MainController.RomFileRenamedEventHandler(Controller_RomFileRenamed);
-            _Controller.RomFileDeleted += new MainController.RomFileDeletedEventHandler(Controller_RomFileDeleted);
-            _Controller.RomChangesAvailable += new MainController.RomChangesAvailableEventHandler(Controller_RomChangesAvaiable);
-            _Controller.RequestIsChangingTab += new MainController.RequestIsChangingTabEventHandler(Controller_RequestIsChangingTab);
-            _Controller.ErrorBecauseNoRomLoaded += new MainController.ErrorBecauseNoRomLoadedEventHandler(Controller_ErrorBecauseNoRomLoaded);
             _tabLevelManager.Name = "tabLevelManager";
             // 
             // TabItem_LevelManager

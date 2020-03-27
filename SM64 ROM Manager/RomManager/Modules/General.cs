@@ -288,59 +288,44 @@ namespace SM64_ROM_Manager
                     switch (switchExpr)
                     {
                         case DialogResult.Yes:
-                            {
-                                dontpatchupdates = false;
-                                break;
-                            }
-
+                            dontpatchupdates = false;
+                            break;
                         case DialogResult.No:
-                            {
-                                dontpatchupdates = true;
-                                break;
-                            }
-
+                            dontpatchupdates = true;
+                            break;
                         default:
+                            var tdi = new TaskDialogInfo(Form_Main_Resources.MsgBox_UpdatePatchesAvaiable_Title, eTaskDialogIcon.ShieldHelp, Form_Main_Resources.MsgBox_UpdatePatchesAvaiable_Title, Form_Main_Resources.MsgBox_UpdatePatchesAvaiable, eTaskDialogButton.Yes | eTaskDialogButton.No | eTaskDialogButton.Cancel);
+                            tdi.CheckBoxCommand = new Command() { Text = "Don't show this message again." };
+
+                            var switchExpr1 = TaskDialog.Show(tdi);
+                            switch (switchExpr1)
                             {
-                                var tdi = new TaskDialogInfo(Form_Main_Resources.MsgBox_UpdatePatchesAvaiable_Title, eTaskDialogIcon.ShieldHelp, Form_Main_Resources.MsgBox_UpdatePatchesAvaiable_Title, Form_Main_Resources.MsgBox_UpdatePatchesAvaiable, eTaskDialogButton.Yes | eTaskDialogButton.No | eTaskDialogButton.Cancel);
-                                tdi.CheckBoxCommand = new Command() { Text = "Don't show this message again." };
-                                var switchExpr1 = TaskDialog.Show(tdi); // MessageBoxEx.Show(Form_Main_Resources.MsgBox_UpdatePatchesAvaiable, Form_Main_Resources.MsgBox_UpdatePatchesAvaiable_Title, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information)
-                                switch (switchExpr1)
-                                {
-                                    case eTaskDialogResult.Yes:
-                                        {
-                                            dontpatchupdates = false;
-                                            if (tdi.CheckBoxCommand.Checked)
-                                            {
-                                                Settings.General.ActionIfUpdatePatches = DialogResult.Yes;
-                                            }
+                                case eTaskDialogResult.Yes:
+                                    dontpatchupdates = false;
+                                    if (tdi.CheckBoxCommand.Checked)
+                                    {
+                                        Settings.General.ActionIfUpdatePatches = DialogResult.Yes;
+                                    }
 
-                                            break;
-                                        }
+                                    break;
+                                case eTaskDialogResult.No:
+                                    dontpatchupdates = true;
+                                    if (tdi.CheckBoxCommand.Checked)
+                                    {
+                                        Settings.General.ActionIfUpdatePatches = DialogResult.No;
+                                    }
 
-                                    case eTaskDialogResult.No:
-                                        {
-                                            dontpatchupdates = true;
-                                            if (tdi.CheckBoxCommand.Checked)
-                                            {
-                                                Settings.General.ActionIfUpdatePatches = DialogResult.No;
-                                            }
-
-                                            break;
-                                        }
-
-                                    default:
-                                        {
-                                            return;
-                                        }
-                                }
-
-                                if (!tdi.CheckBoxCommand.Checked)
-                                {
-                                    Settings.General.ActionIfUpdatePatches = DialogResult.None;
-                                }
-
-                                break;
+                                    break;
+                                default:
+                                    return;
                             }
+
+                            if (!tdi.CheckBoxCommand.Checked)
+                            {
+                                Settings.General.ActionIfUpdatePatches = DialogResult.None;
+                            }
+
+                            break;
                     }
                 }
                 else
