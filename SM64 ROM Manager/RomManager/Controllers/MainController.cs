@@ -221,9 +221,7 @@ namespace SM64_ROM_Manager
                 if (tmc is null)
                 {
                     tmc = new TextManagerController();
-                    tmc.ForceUppercaseForActAndLevelNames = Settings.TextManager.ForceUpperCaseForActAndLevelNames;
                 }
-
                 return tmc;
             }
         }

@@ -165,8 +165,8 @@ namespace SM64_ROM_Manager
             // 
             // Button_G_SaveGameName
             // 
-            this.Button_G_SaveGameName.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             resources.ApplyResources(this.Button_G_SaveGameName, "Button_G_SaveGameName");
+            this.Button_G_SaveGameName.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_G_SaveGameName.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_G_SaveGameName.FocusCuesEnabled = false;
             this.Button_G_SaveGameName.Name = "Button_G_SaveGameName";
@@ -175,12 +175,12 @@ namespace SM64_ROM_Manager
             // 
             // LabelX27
             // 
+            resources.ApplyResources(this.LabelX27, "LabelX27");
             // 
             // 
             // 
             this.LabelX27.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.LabelX27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.LabelX27, "LabelX27");
             this.LabelX27.Name = "LabelX27";
             this.LabelX27.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -204,6 +204,14 @@ namespace SM64_ROM_Manager
             // 
             this.TextBoxX_G_GameName.Border.Class = "TextBoxBorder";
             this.TextBoxX_G_GameName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX_G_GameName.ButtonCustom.DisplayPosition = ((int)(resources.GetObject("TextBoxX_G_GameName.ButtonCustom.DisplayPosition")));
+            this.TextBoxX_G_GameName.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("TextBoxX_G_GameName.ButtonCustom.Image")));
+            this.TextBoxX_G_GameName.ButtonCustom.Text = resources.GetString("TextBoxX_G_GameName.ButtonCustom.Text");
+            this.TextBoxX_G_GameName.ButtonCustom.Tooltip = resources.GetString("TextBoxX_G_GameName.ButtonCustom.Tooltip");
+            this.TextBoxX_G_GameName.ButtonCustom2.DisplayPosition = ((int)(resources.GetObject("TextBoxX_G_GameName.ButtonCustom2.DisplayPosition")));
+            this.TextBoxX_G_GameName.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("TextBoxX_G_GameName.ButtonCustom2.Image")));
+            this.TextBoxX_G_GameName.ButtonCustom2.Text = resources.GetString("TextBoxX_G_GameName.ButtonCustom2.Text");
+            this.TextBoxX_G_GameName.ButtonCustom2.Tooltip = resources.GetString("TextBoxX_G_GameName.ButtonCustom2.Tooltip");
             this.TextBoxX_G_GameName.DisabledBackColor = System.Drawing.Color.White;
             this.TextBoxX_G_GameName.ForeColor = System.Drawing.Color.Black;
             this.TextBoxX_G_GameName.Name = "TextBoxX_G_GameName";
@@ -223,23 +231,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX34
             // 
+            resources.ApplyResources(this.LabelX34, "LabelX34");
             // 
             // 
             // 
             this.LabelX34.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.LabelX34.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.LabelX34, "LabelX34");
             this.LabelX34.Name = "LabelX34";
             this.LabelX34.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // LabelX35
             // 
+            resources.ApplyResources(this.LabelX35, "LabelX35");
             // 
             // 
             // 
             this.LabelX35.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.LabelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.LabelX35, "LabelX35");
             this.LabelX35.Name = "LabelX35";
             this.LabelX35.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -292,12 +300,12 @@ namespace SM64_ROM_Manager
             // 
             // labelX1
             // 
+            resources.ApplyResources(this.labelX1, "labelX1");
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX1, "labelX1");
             this.labelX1.Name = "labelX1";
             this.labelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -336,12 +344,12 @@ namespace SM64_ROM_Manager
             // 
             // labelX5
             // 
+            resources.ApplyResources(this.labelX5, "labelX5");
             // 
             // 
             // 
             this.labelX5.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX5, "labelX5");
             this.labelX5.Name = "labelX5";
             this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -394,12 +402,12 @@ namespace SM64_ROM_Manager
             // 
             // labelX2
             // 
+            resources.ApplyResources(this.labelX2, "labelX2");
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX2, "labelX2");
             this.labelX2.Name = "labelX2";
             this.labelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -438,24 +446,24 @@ namespace SM64_ROM_Manager
             // 
             // labelX8
             // 
+            resources.ApplyResources(this.labelX8, "labelX8");
             // 
             // 
             // 
             this.labelX8.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX8, "labelX8");
             this.labelX8.Name = "labelX8";
             this.labelX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // Tab_General
             // 
+            resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.GroupPanel2);
             this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.GroupPanel6);
             this.Name = "Tab_General";
-            resources.ApplyResources(this, "$this");
             this.GroupPanel2.ResumeLayout(false);
             this.GroupPanel6.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);

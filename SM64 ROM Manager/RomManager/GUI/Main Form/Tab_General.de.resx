@@ -117,14 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ItemPanel_RecentFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 517</value>
+  </data>
   <data name="GroupPanel2.Text" xml:space="preserve">
     <value>Zuletzt verwendet</value>
+  </data>
+  <data name="Button_G_SaveGameName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 54</value>
   </data>
   <data name="Button_G_SaveGameName.Text" xml:space="preserve">
     <value>Speichern</value>
   </data>
   <data name="LabelX27.Text" xml:space="preserve">
     <value>Dateiname:</value>
+  </data>
+  <data name="LabelX_G_Filename.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 20</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TextBoxX_G_GameName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
@@ -134,11 +144,29 @@
   <data name="TextBoxX_G_GameName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="TextBoxX_G_GameName.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_G_GameName.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
   <data name="TextBoxX_G_GameName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="TextBoxX_G_GameName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="TextBoxX_G_GameName.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_G_GameName.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_G_GameName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 20</value>
+  </data>
+  <data name="LabelX_G_Filesize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 20</value>
   </data>
   <data name="LabelX34.Text" xml:space="preserve">
     <value>Spielname:</value>
@@ -148,5 +176,26 @@
   </data>
   <data name="GroupPanel6.Text" xml:space="preserve">
     <value>ROM-Info</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>Dateiname:</value>
+  </data>
+  <data name="labelX_RomConfigStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 20</value>
+  </data>
+  <data name="labelX_RomConfigFilepath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 20</value>
+  </data>
+  <data name="labelX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 20</value>
+  </data>
+  <data name="labelX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 20</value>
+  </data>
+  <data name="labelX6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 20</value>
+  </data>
+  <data name="labelX7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 20</value>
   </data>
 </root>

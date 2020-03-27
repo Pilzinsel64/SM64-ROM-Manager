@@ -69,7 +69,7 @@ namespace SM64_ROM_Manager
         // P r o p e r t i e s
 
         public MyTextProfileInfoManager MyTextProfiles { get; private set; } = new MyTextProfileInfoManager();
-        public bool ForceUppercaseForActAndLevelNames { get; set; } = true;
+        public bool ForceUppercaseForActAndLevelNames { get => SettingsManager.Settings.TextManager.ForceUpperCaseForActAndLevelNames; }
 
         public RomManager RomManager
         {
