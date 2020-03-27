@@ -109,28 +109,8 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Panel1 = new System.Windows.Forms.Panel();
             this.PanelDockContainer1 = new DevComponents.DotNetBar.PanelDockContainer();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.PanelDockContainer8 = new DevComponents.DotNetBar.PanelDockContainer();
-            this.TabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.TabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.ListViewEx_CollVertices = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
-            this.TabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.ListViewEx_ColFaces = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.DockContainerItem4 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
-            this.DockContainerItem5 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockSite2 = new DevComponents.DotNetBar.DockSite();
             this.DockSite8 = new DevComponents.DotNetBar.DockSite();
             this.DockSite5 = new DevComponents.DotNetBar.DockSite();
@@ -266,30 +246,13 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonBar28 = new DevComponents.DotNetBar.RibbonBar();
             this.ButtonItem34 = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.RibbonBar14 = new DevComponents.DotNetBar.RibbonBar();
             this.RibbonBar25 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer16 = new DevComponents.DotNetBar.ItemContainer();
             this.ButtonItem8 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonBar24 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer17 = new DevComponents.DotNetBar.ItemContainer();
-            this.ButtonItem10 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem11 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem12 = new DevComponents.DotNetBar.ButtonItem();
-            this.RibbonBar15 = new DevComponents.DotNetBar.RibbonBar();
-            this.ButtonItem21 = new DevComponents.DotNetBar.ButtonItem();
-            this.ItemContainer19 = new DevComponents.DotNetBar.ItemContainer();
-            this.ButtonItem18 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem17 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem19 = new DevComponents.DotNetBar.ButtonItem();
-            this.RibbonBar13 = new DevComponents.DotNetBar.RibbonBar();
-            this.ItemContainer18 = new DevComponents.DotNetBar.ItemContainer();
-            this.ItemContainer20 = new DevComponents.DotNetBar.ItemContainer();
-            this.ButtonItem20 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem14 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem15 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem16 = new DevComponents.DotNetBar.ButtonItem();
-            this.LabelItem4 = new DevComponents.DotNetBar.LabelItem();
             this.RibbonBar17 = new DevComponents.DotNetBar.RibbonBar();
             this.ButtonItem85 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem86 = new DevComponents.DotNetBar.ButtonItem();
@@ -356,11 +319,6 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Panel1.SuspendLayout();
             this.PanelDockContainer1.SuspendLayout();
             this.Panel2.SuspendLayout();
-            this.PanelDockContainer8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TabControl1)).BeginInit();
-            this.TabControl1.SuspendLayout();
-            this.TabControlPanel1.SuspendLayout();
-            this.TabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).BeginInit();
             this.RibbonControl1.SuspendLayout();
             this.RibbonPanel1.SuspendLayout();
@@ -437,9 +395,9 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ListViewEx_Objects.Name = "ListViewEx_Objects";
             this.ListViewEx_Objects.UseCompatibleStateImageBehavior = false;
             this.ListViewEx_Objects.View = System.Windows.Forms.View.Details;
+            this.ListViewEx_Objects.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_Objects_SelectedIndexChanged);
             this.ListViewEx_Objects.Click += new System.EventHandler(this.ListViewEx_Objects_Click);
             this.ListViewEx_Objects.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListViewEx_Objects_MouseClick);
-            this.ListViewEx_Objects.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_Objects_SelectedIndexChanged);
             // 
             // ColumnHeader1
             // 
@@ -1117,15 +1075,13 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Bar2.CloseSingleTab = true;
             this.Bar2.Controls.Add(this.PanelDockContainer7);
             this.Bar2.Controls.Add(this.PanelDockContainer1);
-            this.Bar2.Controls.Add(this.PanelDockContainer8);
             this.Bar2.DockTabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Top;
             this.Bar2.GrabHandleStyle = DevComponents.DotNetBar.eGrabHandleStyle.Caption;
             this.Bar2.HideFloatingInactive = false;
             this.Bar2.IsMaximized = false;
             this.Bar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.DockContainerItem4,
-            this.DockContainerItem1,
-            this.DockContainerItem5});
+            this.DockContainerItem1});
             this.Bar2.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
             this.Bar2.Name = "Bar2";
             this.Bar2.SelectedDockTab = 0;
@@ -1171,186 +1127,6 @@ namespace SM64_ROM_Manager.LevelEditor
             resources.ApplyResources(this.Panel2, "Panel2");
             this.Panel2.Name = "Panel2";
             // 
-            // PanelDockContainer8
-            // 
-            this.PanelDockContainer8.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.PanelDockContainer8.Controls.Add(this.TabControl1);
-            this.PanelDockContainer8.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.PanelDockContainer8, "PanelDockContainer8");
-            this.PanelDockContainer8.Name = "PanelDockContainer8";
-            this.PanelDockContainer8.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.PanelDockContainer8.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.PanelDockContainer8.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.PanelDockContainer8.Style.GradientAngle = 90;
-            // 
-            // TabControl1
-            // 
-            this.TabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.TabControl1.CanReorderTabs = true;
-            this.TabControl1.Controls.Add(this.TabControlPanel1);
-            this.TabControl1.Controls.Add(this.TabControlPanel3);
-            this.TabControl1.Controls.Add(this.TabControlPanel2);
-            resources.ApplyResources(this.TabControl1, "TabControl1");
-            this.TabControl1.ForeColor = System.Drawing.Color.Black;
-            this.TabControl1.Name = "TabControl1";
-            this.TabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.TabControl1.SelectedTabIndex = 0;
-            this.TabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
-            this.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.TabControl1.Tabs.Add(this.TabItem1);
-            this.TabControl1.Tabs.Add(this.TabItem2);
-            this.TabControl1.Tabs.Add(this.TabItem3);
-            // 
-            // TabControlPanel1
-            // 
-            this.TabControlPanel1.Controls.Add(this.ListViewEx_CollVertices);
-            this.TabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel1, "TabControlPanel1");
-            this.TabControlPanel1.Name = "TabControlPanel1";
-            this.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel1.Style.GradientAngle = 90;
-            this.TabControlPanel1.TabItem = this.TabItem1;
-            // 
-            // ListViewEx_CollVertices
-            // 
-            resources.ApplyResources(this.ListViewEx_CollVertices, "ListViewEx_CollVertices");
-            this.ListViewEx_CollVertices.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx_CollVertices.Border.Class = "ListViewBorder";
-            this.ListViewEx_CollVertices.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_CollVertices.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader7,
-            this.ColumnHeader8,
-            this.ColumnHeader11,
-            this.ColumnHeader12});
-            this.ListViewEx_CollVertices.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_CollVertices.FocusCuesEnabled = false;
-            this.ListViewEx_CollVertices.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_CollVertices.FullRowSelect = true;
-            this.ListViewEx_CollVertices.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx_CollVertices.HideSelection = false;
-            this.ListViewEx_CollVertices.Name = "ListViewEx_CollVertices";
-            this.ListViewEx_CollVertices.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_CollVertices.View = System.Windows.Forms.View.Details;
-            this.ListViewEx_CollVertices.Click += new System.EventHandler(this.ListViewEx_Objects_Click);
-            // 
-            // ColumnHeader7
-            // 
-            resources.ApplyResources(this.ColumnHeader7, "ColumnHeader7");
-            // 
-            // ColumnHeader8
-            // 
-            resources.ApplyResources(this.ColumnHeader8, "ColumnHeader8");
-            // 
-            // ColumnHeader11
-            // 
-            resources.ApplyResources(this.ColumnHeader11, "ColumnHeader11");
-            // 
-            // ColumnHeader12
-            // 
-            resources.ApplyResources(this.ColumnHeader12, "ColumnHeader12");
-            // 
-            // TabItem1
-            // 
-            this.TabItem1.AttachedControl = this.TabControlPanel1;
-            this.TabItem1.Name = "TabItem1";
-            resources.ApplyResources(this.TabItem1, "TabItem1");
-            // 
-            // TabControlPanel3
-            // 
-            this.TabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel3, "TabControlPanel3");
-            this.TabControlPanel3.Name = "TabControlPanel3";
-            this.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel3.Style.GradientAngle = 90;
-            this.TabControlPanel3.TabItem = this.TabItem3;
-            // 
-            // TabItem3
-            // 
-            this.TabItem3.AttachedControl = this.TabControlPanel3;
-            this.TabItem3.Name = "TabItem3";
-            resources.ApplyResources(this.TabItem3, "TabItem3");
-            // 
-            // TabControlPanel2
-            // 
-            this.TabControlPanel2.Controls.Add(this.ListViewEx_ColFaces);
-            this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel2, "TabControlPanel2");
-            this.TabControlPanel2.Name = "TabControlPanel2";
-            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel2.Style.GradientAngle = 90;
-            this.TabControlPanel2.TabItem = this.TabItem2;
-            // 
-            // ListViewEx_ColFaces
-            // 
-            resources.ApplyResources(this.ListViewEx_ColFaces, "ListViewEx_ColFaces");
-            this.ListViewEx_ColFaces.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx_ColFaces.Border.Class = "ListViewBorder";
-            this.ListViewEx_ColFaces.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_ColFaces.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader9,
-            this.ColumnHeader10,
-            this.ColumnHeader13,
-            this.ColumnHeader14,
-            this.ColumnHeader15});
-            this.ListViewEx_ColFaces.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_ColFaces.FocusCuesEnabled = false;
-            this.ListViewEx_ColFaces.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_ColFaces.FullRowSelect = true;
-            this.ListViewEx_ColFaces.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx_ColFaces.HideSelection = false;
-            this.ListViewEx_ColFaces.Name = "ListViewEx_ColFaces";
-            this.ListViewEx_ColFaces.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_ColFaces.View = System.Windows.Forms.View.Details;
-            this.ListViewEx_ColFaces.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_ColFaces_SelectedIndexChanged);
-            this.ListViewEx_ColFaces.Click += new System.EventHandler(this.ListViewEx_Objects_Click);
-            // 
-            // ColumnHeader9
-            // 
-            resources.ApplyResources(this.ColumnHeader9, "ColumnHeader9");
-            // 
-            // ColumnHeader10
-            // 
-            resources.ApplyResources(this.ColumnHeader10, "ColumnHeader10");
-            // 
-            // ColumnHeader13
-            // 
-            resources.ApplyResources(this.ColumnHeader13, "ColumnHeader13");
-            // 
-            // ColumnHeader14
-            // 
-            resources.ApplyResources(this.ColumnHeader14, "ColumnHeader14");
-            // 
-            // ColumnHeader15
-            // 
-            resources.ApplyResources(this.ColumnHeader15, "ColumnHeader15");
-            // 
-            // TabItem2
-            // 
-            this.TabItem2.AttachedControl = this.TabControlPanel2;
-            this.TabItem2.Name = "TabItem2";
-            resources.ApplyResources(this.TabItem2, "TabItem2");
-            // 
             // DockContainerItem4
             // 
             this.DockContainerItem4.Control = this.PanelDockContainer7;
@@ -1366,13 +1142,6 @@ namespace SM64_ROM_Manager.LevelEditor
             this.DockContainerItem1.Name = "DockContainerItem1";
             resources.ApplyResources(this.DockContainerItem1, "DockContainerItem1");
             this.DockContainerItem1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DockContainerItem1_Click);
-            // 
-            // DockContainerItem5
-            // 
-            this.DockContainerItem5.Control = this.PanelDockContainer8;
-            this.DockContainerItem5.Name = "DockContainerItem5";
-            resources.ApplyResources(this.DockContainerItem5, "DockContainerItem5");
-            this.DockContainerItem5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DockContainerItem5_Click);
             // 
             // DockSite2
             // 
@@ -1893,11 +1662,11 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonControl1.CanCustomize = false;
             this.RibbonControl1.CaptionVisible = true;
             this.RibbonControl1.Controls.Add(this.RibbonPanel1);
+            this.RibbonControl1.Controls.Add(this.RibbonPanel4);
             this.RibbonControl1.Controls.Add(this.RibbonPanel2);
             this.RibbonControl1.Controls.Add(this.RibbonPanel6);
             this.RibbonControl1.Controls.Add(this.RibbonPanel3);
             this.RibbonControl1.Controls.Add(this.RibbonPanel7);
-            this.RibbonControl1.Controls.Add(this.RibbonPanel4);
             this.RibbonControl1.Controls.Add(this.RibbonPanel5);
             resources.ApplyResources(this.RibbonControl1, "RibbonControl1");
             this.RibbonControl1.ForeColor = System.Drawing.Color.Black;
@@ -3216,11 +2985,8 @@ namespace SM64_ROM_Manager.LevelEditor
             // RibbonPanel4
             // 
             this.RibbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.RibbonPanel4.Controls.Add(this.RibbonBar14);
             this.RibbonPanel4.Controls.Add(this.RibbonBar25);
             this.RibbonPanel4.Controls.Add(this.RibbonBar24);
-            this.RibbonPanel4.Controls.Add(this.RibbonBar15);
-            this.RibbonPanel4.Controls.Add(this.RibbonBar13);
             this.RibbonPanel4.Controls.Add(this.RibbonBar17);
             resources.ApplyResources(this.RibbonPanel4, "RibbonPanel4");
             this.RibbonPanel4.Name = "RibbonPanel4";
@@ -3236,32 +3002,6 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // 
             this.RibbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // RibbonBar14
-            // 
-            this.RibbonBar14.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.RibbonBar14.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RibbonBar14.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.RibbonBar14, "RibbonBar14");
-            this.RibbonBar14.DragDropSupport = true;
-            this.RibbonBar14.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.RibbonBar14.Name = "RibbonBar14";
-            this.RibbonBar14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.RibbonBar14.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar14.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // RibbonBar25
             // 
@@ -3365,9 +3105,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ItemContainer17.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
             this.ItemContainer17.Name = "ItemContainer17";
             this.ItemContainer17.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem10,
-            this.ButtonItem11,
-            this.ButtonItem12});
+            this.ButtonItem11});
             // 
             // 
             // 
@@ -3377,14 +3115,6 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             this.ItemContainer17.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // ButtonItem10
-            // 
-            this.ButtonItem10.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem10.Enabled = false;
-            this.ButtonItem10.Name = "ButtonItem10";
-            this.ButtonItem10.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem10, "ButtonItem10");
-            // 
             // ButtonItem11
             // 
             this.ButtonItem11.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
@@ -3392,202 +3122,6 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem11.SubItemsExpandWidth = 14;
             resources.ApplyResources(this.ButtonItem11, "ButtonItem11");
             this.ButtonItem11.Click += new System.EventHandler(this.ButtonItem11_Click);
-            // 
-            // ButtonItem12
-            // 
-            this.ButtonItem12.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem12.Enabled = false;
-            this.ButtonItem12.Name = "ButtonItem12";
-            this.ButtonItem12.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem12, "ButtonItem12");
-            // 
-            // RibbonBar15
-            // 
-            this.RibbonBar15.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.RibbonBar15.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RibbonBar15.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.RibbonBar15, "RibbonBar15");
-            this.RibbonBar15.DragDropSupport = true;
-            this.RibbonBar15.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem21,
-            this.ItemContainer19});
-            this.RibbonBar15.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.RibbonBar15.Name = "RibbonBar15";
-            this.RibbonBar15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.RibbonBar15.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar15.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ButtonItem21
-            // 
-            this.ButtonItem21.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem21.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_32px;
-            this.ButtonItem21.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.ButtonItem21.Name = "ButtonItem21";
-            this.ButtonItem21.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem21, "ButtonItem21");
-            // 
-            // ItemContainer19
-            // 
-            // 
-            // 
-            // 
-            this.ItemContainer19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ItemContainer19.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.ItemContainer19.Name = "ItemContainer19";
-            this.ItemContainer19.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem18,
-            this.ButtonItem17,
-            this.ButtonItem19});
-            // 
-            // 
-            // 
-            this.ItemContainer19.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ItemContainer19.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ButtonItem18
-            // 
-            this.ButtonItem18.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem18.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem18.Name = "ButtonItem18";
-            this.ButtonItem18.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem18, "ButtonItem18");
-            // 
-            // ButtonItem17
-            // 
-            this.ButtonItem17.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem17.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem17.Name = "ButtonItem17";
-            this.ButtonItem17.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem17, "ButtonItem17");
-            // 
-            // ButtonItem19
-            // 
-            this.ButtonItem19.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem19.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.ButtonItem19.Name = "ButtonItem19";
-            resources.ApplyResources(this.ButtonItem19, "ButtonItem19");
-            // 
-            // RibbonBar13
-            // 
-            this.RibbonBar13.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.RibbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RibbonBar13.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.RibbonBar13, "RibbonBar13");
-            this.RibbonBar13.DragDropSupport = true;
-            this.RibbonBar13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ItemContainer18,
-            this.LabelItem4});
-            this.RibbonBar13.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.RibbonBar13.Name = "RibbonBar13";
-            this.RibbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.RibbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ItemContainer18
-            // 
-            // 
-            // 
-            // 
-            this.ItemContainer18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ItemContainer18.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.ItemContainer18.Name = "ItemContainer18";
-            this.ItemContainer18.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ItemContainer20,
-            this.ButtonItem15,
-            this.ButtonItem16});
-            // 
-            // 
-            // 
-            this.ItemContainer18.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ItemContainer18.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ItemContainer20
-            // 
-            // 
-            // 
-            // 
-            this.ItemContainer20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ItemContainer20.Name = "ItemContainer20";
-            this.ItemContainer20.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem20,
-            this.ButtonItem14});
-            // 
-            // 
-            // 
-            this.ItemContainer20.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ItemContainer20.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ButtonItem20
-            // 
-            this.ButtonItem20.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem20.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem20.Name = "ButtonItem20";
-            this.ButtonItem20.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem20, "ButtonItem20");
-            // 
-            // ButtonItem14
-            // 
-            this.ButtonItem14.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem14.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem14.Name = "ButtonItem14";
-            this.ButtonItem14.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem14, "ButtonItem14");
-            // 
-            // ButtonItem15
-            // 
-            this.ButtonItem15.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem15.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem15.Name = "ButtonItem15";
-            this.ButtonItem15.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem15, "ButtonItem15");
-            // 
-            // ButtonItem16
-            // 
-            this.ButtonItem16.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem16.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.ButtonItem16.Name = "ButtonItem16";
-            resources.ApplyResources(this.ButtonItem16, "ButtonItem16");
-            // 
-            // LabelItem4
-            // 
-            this.LabelItem4.Name = "LabelItem4";
-            resources.ApplyResources(this.LabelItem4, "LabelItem4");
-            this.LabelItem4.Visible = false;
             // 
             // RibbonBar17
             // 
@@ -3999,8 +3533,8 @@ namespace SM64_ROM_Manager.LevelEditor
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Form_AreaEditor_Activated);
             this.Deactivate += new System.EventHandler(this.Form_AreaEditor_Deactivate);
-            this.Shown += new System.EventHandler(this.Form_AreaEditor_Shown);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_AreaEditor_Closing);
+            this.Shown += new System.EventHandler(this.Form_AreaEditor_Shown);
             this.Panel_GLControl.ResumeLayout(false);
             this.DockSite4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Bar_Controls)).EndInit();
@@ -4032,11 +3566,6 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Panel1.ResumeLayout(false);
             this.PanelDockContainer1.ResumeLayout(false);
             this.Panel2.ResumeLayout(false);
-            this.PanelDockContainer8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TabControl1)).EndInit();
-            this.TabControl1.ResumeLayout(false);
-            this.TabControlPanel1.ResumeLayout(false);
-            this.TabControlPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).EndInit();
             this.RibbonControl1.ResumeLayout(false);
             this.RibbonControl1.PerformLayout();
@@ -4119,33 +3648,13 @@ namespace SM64_ROM_Manager.LevelEditor
         internal DevComponents.DotNetBar.LabelX LabelX14;
         internal DevComponents.DotNetBar.PanelDockContainer PanelDockContainer7;
         internal DevComponents.DotNetBar.DockContainerItem DockContainerItem4;
-        internal DevComponents.DotNetBar.PanelDockContainer PanelDockContainer8;
-        internal DevComponents.DotNetBar.DockContainerItem DockContainerItem5;
-        internal DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_CollVertices;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader7;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader8;
-        internal DevComponents.DotNetBar.TabControl TabControl1;
-        internal DevComponents.DotNetBar.TabControlPanel TabControlPanel1;
-        internal DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_ColFaces;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader9;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader10;
-        internal DevComponents.DotNetBar.TabItem TabItem1;
-        internal DevComponents.DotNetBar.TabControlPanel TabControlPanel2;
-        internal DevComponents.DotNetBar.TabItem TabItem2;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader11;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader12;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader13;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader14;
         internal DevComponents.DotNetBar.ButtonX ButtonX_KeepOnButtom;
         internal DevComponents.DotNetBar.ButtonX ButtonX_KeepOnTop;
         internal DevComponents.DotNetBar.ButtonX ButtonX_KeepOnGround;
         internal DevComponents.DotNetBar.ButtonX ButtonX_DropToBottom;
         internal DevComponents.DotNetBar.ButtonX ButtonX_DropToTop;
         internal DevComponents.DotNetBar.ButtonX ButtonX_DropToGround;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader15;
         internal DevComponents.DotNetBar.Controls.CircularProgress CircularProgress1;
-        internal DevComponents.DotNetBar.TabControlPanel TabControlPanel3;
-        internal DevComponents.DotNetBar.TabItem TabItem3;
         internal DevComponents.DotNetBar.RibbonControl RibbonControl1;
         internal DevComponents.DotNetBar.RibbonPanel RibbonPanel1;
         internal DevComponents.DotNetBar.RibbonBar RibbonBar1;
@@ -4223,9 +3732,6 @@ namespace SM64_ROM_Manager.LevelEditor
         internal DevComponents.DotNetBar.ButtonItem ButtonItem81;
         internal DevComponents.DotNetBar.RibbonBar RibbonBar12;
         internal DevComponents.DotNetBar.ButtonItem ButtonX_WarpsAdd;
-        internal DevComponents.DotNetBar.RibbonBar RibbonBar14;
-        internal DevComponents.DotNetBar.RibbonBar RibbonBar15;
-        internal DevComponents.DotNetBar.RibbonBar RibbonBar13;
         internal DevComponents.DotNetBar.ItemContainer ItemContainer13;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem83;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem84;
@@ -4287,26 +3793,12 @@ namespace SM64_ROM_Manager.LevelEditor
         internal DevComponents.DotNetBar.ButtonItem ButtonItem2;
         internal DevComponents.DotNetBar.RibbonBar RibbonBar24;
         internal DevComponents.DotNetBar.ItemContainer ItemContainer17;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem10;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem11;
         internal DevComponents.DotNetBar.RibbonBar RibbonBar25;
         internal DevComponents.DotNetBar.ItemContainer ItemContainer16;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem8;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem4;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem12;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem13;
-        internal DevComponents.DotNetBar.ItemContainer ItemContainer18;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem14;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem15;
-        internal DevComponents.DotNetBar.LabelItem LabelItem4;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem16;
-        internal DevComponents.DotNetBar.ItemContainer ItemContainer19;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem18;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem19;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem21;
-        internal DevComponents.DotNetBar.ItemContainer ItemContainer20;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem20;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem17;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem22;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem24;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem25;

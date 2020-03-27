@@ -69,8 +69,6 @@ namespace SM64_ROM_Manager.LevelEditor
             // ListViews
             ListViewEx_Objects.SetValue("DoubleBuffered", true);
             ListViewEx_Warps.SetValue("DoubleBuffered", true);
-            ListViewEx_CollVertices.SetValue("DoubleBuffered", true);
-            ListViewEx_ColFaces.SetValue("DoubleBuffered", true);
 
             // Stop drawing
             SuspendLayout();
@@ -532,18 +530,6 @@ namespace SM64_ROM_Manager.LevelEditor
                     {
                         SelectedList = ListViewEx_Warps;
                         DockContainerItem1.Selected = true;
-                        break;
-                    }
-
-                case object _ when srti.Equals(RibbonTabItem_Collision):
-                    {
-                        if (Conversions.ToBoolean(maps.IsCollisionMapNothing))
-                        {
-                            maps.LoadAreaCollisionAsObject3D();
-                        }
-
-                        maps.LoadCollisionLists();
-                        DockContainerItem5.Selected = true;
                         break;
                     }
 
@@ -1583,61 +1569,6 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        internal void ListViewEx_ColFaces_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selectedIndexes = ListViewEx_ColFaces.SelectedIndices;
-            if (selectedIndexes.Count > 0)
-            {
-                ShowColFaceProperties();
-                PanelDockContainer10.DockContainerItem.Selected = true;
-            }
-        }
-
-        internal Face SelectedColFace
-        {
-            get
-            {
-                if (ListViewEx_ColFaces.SelectedIndices.Count == 0)
-                    return null;
-                return (Face)ListViewEx_ColFaces.SelectedItems[0].Tag;
-            }
-        }
-
-        internal Face[] SelectedColFaces
-        {
-            get
-            {
-                if (ListViewEx_ColFaces.SelectedIndices.Count == 0)
-                    return Array.Empty<Face>();
-                var objs = new List<Face>();
-                foreach (ListViewItem item in ListViewEx_ColFaces.SelectedItems)
-                    objs.Add((Face)item.Tag);
-                return objs.ToArray();
-            }
-        }
-
-        internal void SelectColFace(Face face)
-        {
-            SelectColFaces(new[] { face });
-        }
-
-        internal void SelectColFaces(Face[] faces, bool DeselectAllFaces = true)
-        {
-            if (DeselectAllFaces)
-                DeselectAllObjects(false);
-            foreach (Face f in faces)
-            {
-                if (f is object)
-                {
-                    maps.rndrCollisionMap.SelectedElements.Add(f);
-                }
-            }
-
-            ogl.UpdateOrbitCamera();
-            ogl.Invalidate();
-            ogl.Update();
-        }
-
         internal void DeselectAllFaces(bool UpdateGLAndCamera = true)
         {
             foreach (Face f in maps.rndrCollisionMap.SelectedElements.OfType<Face>())
@@ -1650,54 +1581,9 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        internal void ToogleColFaceSelection(Face face)
-        {
-            if (maps.rndrCollisionMap.SelectedElements.Contains(face))
-            {
-                maps.rndrCollisionMap.SelectedElements.Remove(face);
-            }
-            else
-            {
-                maps.rndrCollisionMap.SelectedElements.Add(face);
-            }
-
-            {
-                var withBlock = ListViewEx_Objects.Items[maps.cCollisionMap.Meshes[0].Faces.IndexOf(face)];
-                withBlock.Selected = !withBlock.Selected;
-            }
-
-            ogl.UpdateOrbitCamera();
-            ogl.Invalidate();
-            ogl.Update();
-        }
-
         internal void ListViewEx_Objects_Click(object sender, EventArgs e)
         {
             SelectedList = (ListViewEx)sender;
-        }
-
-        internal bool EditCollision
-        {
-            get
-            {
-                return EditCollisionVertices || EditCollisionFaces;
-            }
-        }
-
-        internal bool EditCollisionVertices
-        {
-            get
-            {
-                return SelectedList == ListViewEx_CollVertices;
-            }
-        }
-
-        internal bool EditCollisionFaces
-        {
-            get
-            {
-                return SelectedList == ListViewEx_ColFaces;
-            }
         }
 
         internal bool EditObjects
@@ -2825,13 +2711,6 @@ namespace SM64_ROM_Manager.LevelEditor
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private void ShowColFaceProperties()
-        {
-            SetObjectsToPropertyGrid(SelectedColFaces);
-        }
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private void UpdateBParamNames()
         {
             var obj = SelectedObject;
@@ -2938,41 +2817,6 @@ namespace SM64_ROM_Manager.LevelEditor
                 }
             }
         }
-
-        // Friend Sub ProvideBParamContentList(sender As ContentSelectorEditor.ComboBoxEditor, e As EventArgs)
-        // Dim obj As Managed3DObject = SelectedObject
-        // Dim i As Byte
-
-        // If sender.Tag IsNot obj Then
-        // If sender Is bpMgr.CbEditorBParam1 Then
-        // i = 1
-        // ElseIf sender Is bpMgr.CbEditorBParam2 Then
-        // i = 2
-        // Else
-        // i = 0
-        // End If
-
-        // If i > 0 Then
-        // Dim info As BehaviorInfoList.BehaviorInfo = BehaviorInfos.GetByBehaviorAddress(obj.BehaviorID)
-        // If info IsNot Nothing Then
-        // Dim param As BehaviorInfoList.BParam = info.GetValue($"BParam{i}")
-
-        // sender.Items.Clear()
-
-        // If param IsNot Nothing Then
-        // For Each kvp As KeyValuePair(Of String, Byte) In param.Values
-        // Dim ci As New ComboItem
-        // ci.Text = kvp.Key
-        // ci.Tag = kvp.Value
-        // sender.Items.Add(ci)
-        // Next
-        // End If
-        // End If
-        // End If
-
-        // sender.Tag = obj
-        // End If
-        // End Sub
 
         internal void ButtonX_CamMode_Click(object sender, EventArgs e)
         {

@@ -71,7 +71,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        public object IsCollisionMapNothing
+        public bool IsCollisionMapNothing
         {
             get
             {
@@ -170,7 +170,6 @@ namespace SM64_ROM_Manager.LevelEditor
                             {
                                 rndrCollisionMap = new Renderer(cCollisionMap);
                                 rndrCollisionMap.RenderModel();
-                                LoadCollisionLists();
                             }
 
                             break;
@@ -212,51 +211,6 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             hashVisualMap = Main.CArea.AreaModel.Fast3DBuffer.GetBuffer().GetHashCode();
             cVisualMap = (Object3D)General.AwaitOnUI(General.LoadAreaVisualMapAsObject3DAsync(Main.Rommgr, Main.CArea));
-        }
-
-        public void LoadCollisionLists()
-        {
-            Main.ListViewEx_ColFaces.SuspendLayout();
-            Main.ListViewEx_CollVertices.SuspendLayout();
-            Main.ListViewEx_ColFaces.Items.Clear();
-            Main.ListViewEx_CollVertices.Items.Clear();
-            if (Main.CArea.AreaModel.Collision is object)
-            {
-                int vertCounter = 0;
-                int faceCounter = 0;
-                foreach (Mesh mesh in cCollisionMap.Meshes)
-                {
-                    var lvg_verts = new ListViewGroup();
-                    foreach (Vertex vert in mesh.Vertices)
-                    {
-                        var lvi = new ListViewItem(Conversions.ToString(vertCounter));
-                        lvi.SubItems.Add(vert.X.ToString());
-                        lvi.SubItems.Add(vert.Y.ToString());
-                        lvi.SubItems.Add(vert.Z.ToString());
-                        lvi.Tag = vert;
-                        lvi.Group = lvg_verts;
-                        Main.ListViewEx_CollVertices.Items.Add(lvi);
-                        vertCounter += 1;
-                    }
-
-                    var lvg_faces = new ListViewGroup();
-                    int vertsCountBefore = vertCounter - mesh.Vertices.Count;
-                    foreach (Face f in mesh.Faces)
-                    {
-                        var lvi = new ListViewItem(Conversions.ToString(faceCounter));
-                        foreach (Pilz.S3DFileParser.Point p in f.Points)
-                            lvi.SubItems.Add(Conversions.ToString(mesh.Vertices.IndexOf(p.Vertex) + vertsCountBefore));
-                        lvi.SubItems.Add(f.Tag.ToString());
-                        lvi.Tag = f;
-                        lvi.Group = lvg_faces;
-                        Main.ListViewEx_ColFaces.Items.Add(lvi);
-                        faceCounter += 1;
-                    }
-                }
-            }
-
-            Main.ListViewEx_ColFaces.ResumeLayout();
-            Main.ListViewEx_CollVertices.ResumeLayout();
         }
 
         internal void ButtonItem_ExportCollision_Click(object sender, EventArgs e)

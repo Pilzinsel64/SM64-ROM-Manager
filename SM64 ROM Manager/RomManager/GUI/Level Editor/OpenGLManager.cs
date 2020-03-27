@@ -583,36 +583,16 @@ namespace SM64_ROM_Manager.LevelEditor
             switch (pixid) // pixels(0) >> 4
             {
                 case 1: // Object
+                    int newIndex = pixval; // (CInt(pixels(2)) << 8) Or pixels(3)
+                    if (Main.IsStrgPressed)
                     {
-                        int newIndex = pixval; // (CInt(pixels(2)) << 8) Or pixels(3)
-                        if (Main.IsStrgPressed)
-                        {
-                            Main.ToogleObjectSelection(Main.ManagedObjects[newIndex]);
-                        }
-                        else
-                        {
-                            Main.SelectItemAtIndexInList(Main.ListViewEx_Objects, newIndex, true);
-                        }
-
-                        break;
+                        Main.ToogleObjectSelection(Main.ManagedObjects[newIndex]);
                     }
-
-                case 2: // Collision Face
+                    else
                     {
-                        int iMesh = pixval >> 16;
-                        int iFace = pixval & 0xFFFF;
-                        var face = Maps.cCollisionMap.Meshes[iMesh].Faces[iFace];
-                        if (Main.IsStrgPressed)
-                        {
-                            Main.ToogleColFaceSelection(face);
-                        }
-                        else
-                        {
-                            Main.SelectItemAtIndexInList(Main.ListViewEx_ColFaces, iFace, true);
-                        }
-
-                        break;
+                        Main.SelectItemAtIndexInList(Main.ListViewEx_Objects, newIndex, true);
                     }
+                    break;
             }
         }
 
