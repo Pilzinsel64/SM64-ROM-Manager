@@ -835,6 +835,7 @@ namespace SM64_ROM_Manager
         {
             ObjectBankSelectorBox_9.Enabled = !SwitchButton_UseGlobalObjectBank.Value && !SwitchButton_UseLocalObjectBank.Value;
             ButtonX_ManageLocalObjects.Visible = SwitchButton_UseLocalObjectBank.Value;
+            Controls_HandleToSaveLevelSettings();
         }
 
         private void LM_SaveGameBackground()

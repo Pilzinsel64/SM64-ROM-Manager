@@ -1379,7 +1379,7 @@ namespace SM64_ROM_Manager
             this.SwitchButton_UseLocalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_UseLocalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_UseLocalObjectBank.SwitchWidth = 15;
-            this.SwitchButton_UseLocalObjectBank.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
+            this.SwitchButton_UseLocalObjectBank.ValueChanged += new System.EventHandler(this.SwitchButton_UseCustomObjectBank_ValueChanged);
             // 
             // LabelX13
             // 
@@ -1408,7 +1408,7 @@ namespace SM64_ROM_Manager
             this.SwitchButton_UseGlobalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_UseGlobalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_UseGlobalObjectBank.SwitchWidth = 15;
-            this.SwitchButton_UseGlobalObjectBank.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
+            this.SwitchButton_UseGlobalObjectBank.ValueChanged += new System.EventHandler(this.SwitchButton_UseCustomObjectBank_ValueChanged);
             // 
             // TableLayoutPanel_ObjectBankSelectorBoxes
             // 
