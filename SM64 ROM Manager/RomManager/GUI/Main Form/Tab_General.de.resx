@@ -144,22 +144,10 @@
   <data name="TextBoxX_G_GameName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="TextBoxX_G_GameName.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_G_GameName.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
-  </data>
   <data name="TextBoxX_G_GameName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="TextBoxX_G_GameName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_G_GameName.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_G_GameName.ButtonCustom2.Tooltip" xml:space="preserve">
     <value />
   </data>
   <data name="TextBoxX_G_GameName.Size" type="System.Drawing.Size, System.Drawing">

@@ -885,7 +885,7 @@ namespace SM64_ROM_Manager
 
         private void LM_ImportModel(object sender, EventArgs e)
         {
-            Controller.ImportLevelAreaModel(CurrentLevelIndex, CurrentAreaIndex, sender == Button_ImportModel || sender == ButtonItem9, sender == Button_ImportModel || sender == ButtonItem13);
+            Controller.ImportLevelAreaModel(CurrentLevelIndex, CurrentAreaIndex, sender == Button_ImportModel || sender == ButtonX_ImportVisualMap, sender == Button_ImportModel || sender == ButtonX_ImportCollision);
         }
 
         private void LM_UpdateObjectBankList(object sender, EventArgs e)
@@ -1134,6 +1134,11 @@ namespace SM64_ROM_Manager
         private void ButtonX_ManageLocalObjects_Click(object sender, EventArgs e)
         {
             Controller.OpenLocalObjectBankManager(CurrentLevelIndex);
+        }
+
+        private void ButtonX_EditFast3D_Click(object sender, EventArgs e)
+        {
+            Controller.OpenHexEditorForFast3DBuffer(CurrentLevelIndex, CurrentAreaIndex);
         }
     }
 }

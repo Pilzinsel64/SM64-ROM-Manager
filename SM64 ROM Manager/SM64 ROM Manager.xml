@@ -290,6 +290,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_property_script_32px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_redo_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -1197,6 +1202,23 @@
         <member name="P:SM64_ROM_Manager.My.Resources.TextProfileEditorLangRes.nTableGroups">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die Table Groups ähnelt.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.LevelEditor.FormScriptDumps.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.LevelEditor.FormScriptDumps.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.LevelEditor.FormScriptDumps.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
     </members>

@@ -54,19 +54,10 @@ namespace SM64_ROM_Manager
             this.labelX_RomConfigFilepath = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.GroupPanel2.SuspendLayout();
             this.GroupPanel6.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_RomConfigStatus)).BeginInit();
-            this.groupPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupPanel2
@@ -165,8 +156,8 @@ namespace SM64_ROM_Manager
             // 
             // Button_G_SaveGameName
             // 
-            resources.ApplyResources(this.Button_G_SaveGameName, "Button_G_SaveGameName");
             this.Button_G_SaveGameName.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.Button_G_SaveGameName, "Button_G_SaveGameName");
             this.Button_G_SaveGameName.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_G_SaveGameName.FocusCuesEnabled = false;
             this.Button_G_SaveGameName.Name = "Button_G_SaveGameName";
@@ -175,12 +166,12 @@ namespace SM64_ROM_Manager
             // 
             // LabelX27
             // 
-            resources.ApplyResources(this.LabelX27, "LabelX27");
             // 
             // 
             // 
             this.LabelX27.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.LabelX27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX27, "LabelX27");
             this.LabelX27.Name = "LabelX27";
             this.LabelX27.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -204,14 +195,6 @@ namespace SM64_ROM_Manager
             // 
             this.TextBoxX_G_GameName.Border.Class = "TextBoxBorder";
             this.TextBoxX_G_GameName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TextBoxX_G_GameName.ButtonCustom.DisplayPosition = ((int)(resources.GetObject("TextBoxX_G_GameName.ButtonCustom.DisplayPosition")));
-            this.TextBoxX_G_GameName.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("TextBoxX_G_GameName.ButtonCustom.Image")));
-            this.TextBoxX_G_GameName.ButtonCustom.Text = resources.GetString("TextBoxX_G_GameName.ButtonCustom.Text");
-            this.TextBoxX_G_GameName.ButtonCustom.Tooltip = resources.GetString("TextBoxX_G_GameName.ButtonCustom.Tooltip");
-            this.TextBoxX_G_GameName.ButtonCustom2.DisplayPosition = ((int)(resources.GetObject("TextBoxX_G_GameName.ButtonCustom2.DisplayPosition")));
-            this.TextBoxX_G_GameName.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("TextBoxX_G_GameName.ButtonCustom2.Image")));
-            this.TextBoxX_G_GameName.ButtonCustom2.Text = resources.GetString("TextBoxX_G_GameName.ButtonCustom2.Text");
-            this.TextBoxX_G_GameName.ButtonCustom2.Tooltip = resources.GetString("TextBoxX_G_GameName.ButtonCustom2.Tooltip");
             this.TextBoxX_G_GameName.DisabledBackColor = System.Drawing.Color.White;
             this.TextBoxX_G_GameName.ForeColor = System.Drawing.Color.Black;
             this.TextBoxX_G_GameName.Name = "TextBoxX_G_GameName";
@@ -231,23 +214,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX34
             // 
-            resources.ApplyResources(this.LabelX34, "LabelX34");
             // 
             // 
             // 
             this.LabelX34.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.LabelX34.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX34, "LabelX34");
             this.LabelX34.Name = "LabelX34";
             this.LabelX34.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // LabelX35
             // 
-            resources.ApplyResources(this.LabelX35, "LabelX35");
             // 
             // 
             // 
             this.LabelX35.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.LabelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX35, "LabelX35");
             this.LabelX35.Name = "LabelX35";
             this.LabelX35.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -300,12 +283,12 @@ namespace SM64_ROM_Manager
             // 
             // labelX1
             // 
-            resources.ApplyResources(this.labelX1, "labelX1");
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX1, "labelX1");
             this.labelX1.Name = "labelX1";
             this.labelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -344,132 +327,27 @@ namespace SM64_ROM_Manager
             // 
             // labelX5
             // 
-            resources.ApplyResources(this.labelX5, "labelX5");
             // 
             // 
             // 
             this.labelX5.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX5, "labelX5");
             this.labelX5.Name = "labelX5";
             this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
-            // groupPanel3
-            // 
-            resources.ApplyResources(this.groupPanel3, "groupPanel3");
-            this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel3.CanvasColor = System.Drawing.Color.Empty;
-            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.pictureBox2);
-            this.groupPanel3.Controls.Add(this.labelX2);
-            this.groupPanel3.Controls.Add(this.labelX4);
-            this.groupPanel3.Controls.Add(this.labelX6);
-            this.groupPanel3.Controls.Add(this.labelX7);
-            this.groupPanel3.Controls.Add(this.labelX8);
-            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel3.Name = "groupPanel3";
-            // 
-            // 
-            // 
-            this.groupPanel3.Style.BackColorGradientAngle = 90;
-            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderBottomWidth = 1;
-            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderLeftWidth = 1;
-            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderRightWidth = 1;
-            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderTopWidth = 1;
-            this.groupPanel3.Style.CornerDiameter = 4;
-            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // labelX2
-            // 
-            resources.ApplyResources(this.labelX2, "labelX2");
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // labelX4
-            // 
-            resources.ApplyResources(this.labelX4, "labelX4");
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // labelX6
-            // 
-            resources.ApplyResources(this.labelX6, "labelX6");
-            this.labelX6.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // labelX7
-            // 
-            resources.ApplyResources(this.labelX7, "labelX7");
-            this.labelX7.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Name = "labelX7";
-            this.labelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // labelX8
-            // 
-            resources.ApplyResources(this.labelX8, "labelX8");
-            // 
-            // 
-            // 
-            this.labelX8.BackgroundStyle.BackColor = System.Drawing.Color.Transparent;
-            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Name = "labelX8";
-            this.labelX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
             // Tab_General
             // 
-            resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.GroupPanel2);
-            this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.GroupPanel6);
             this.Name = "Tab_General";
+            resources.ApplyResources(this, "$this");
             this.GroupPanel2.ResumeLayout(false);
             this.GroupPanel6.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_RomConfigStatus)).EndInit();
-            this.groupPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -508,12 +386,5 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX5;
         private PictureBox pictureBox_RomConfigStatus;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-        private PictureBox pictureBox2;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.LabelX labelX7;
-        private DevComponents.DotNetBar.LabelX labelX8;
     }
 }

@@ -59,6 +59,21 @@ namespace SM64_ROM_Manager
             this.ButtonItem26 = new DevComponents.DotNetBar.ButtonItem();
             this.ListBoxAdv_LM_Levels = new SM64_ROM_Manager.Publics.Controls.ItemListBox();
             this.TabControl_LM_Area = new DevComponents.DotNetBar.TabControl();
+            this.TabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
+            this.Line2 = new DevComponents.DotNetBar.Controls.Line();
+            this.line4 = new DevComponents.DotNetBar.Controls.Line();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.LabelX_Area_CountOfTexAnimations = new DevComponents.DotNetBar.LabelX();
+            this.LabelX10 = new DevComponents.DotNetBar.LabelX();
+            this.ButtonX_EditCollision = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_EditFast3D = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_ImportCollision = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_ImportVisualMap = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_LM_ScrollTexEditor = new DevComponents.DotNetBar.ButtonX();
+            this.Button_ImportModel = new DevComponents.DotNetBar.ButtonX();
+            this.TabItem5 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
             this.LabelX9 = new DevComponents.DotNetBar.LabelX();
             this.ComboBoxEx_LM_AreaBG = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -79,18 +94,6 @@ namespace SM64_ROM_Manager
             this.ComboBox_LM_CameraPreset = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.ColorPickerButton_LM_BackgroundColor = new DevComponents.DotNetBar.ColorPickerButton();
             this.TabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
-            this.Line2 = new DevComponents.DotNetBar.Controls.Line();
-            this.LabelX_Area_CountOfTexAnimations = new DevComponents.DotNetBar.LabelX();
-            this.LabelX10 = new DevComponents.DotNetBar.LabelX();
-            this.ButtonX_LM_ScrollTexEditor = new DevComponents.DotNetBar.ButtonX();
-            this.Button_ImportModel = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonItem9 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem13 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ExportModel = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonItem_ExportVisualMap = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ExportCollisionMap = new DevComponents.DotNetBar.ButtonItem();
-            this.TabItem5 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
             this.Button_LM_RemoveSpecial = new DevComponents.DotNetBar.ButtonX();
             this.Button_LM_AddSpecial = new DevComponents.DotNetBar.ButtonX();
@@ -106,14 +109,6 @@ namespace SM64_ROM_Manager
             this.ColumnHeaderA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TabItem6 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControl_LM_Level = new DevComponents.DotNetBar.TabControl();
-            this.TabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.ButtonX_ManageLocalObjects = new DevComponents.DotNetBar.ButtonX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.SwitchButton_UseLocalObjectBank = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.LabelX13 = new DevComponents.DotNetBar.LabelX();
-            this.SwitchButton_UseGlobalObjectBank = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.TableLayoutPanel_ObjectBankSelectorBoxes = new System.Windows.Forms.TableLayoutPanel();
-            this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.LabelX_TargetLevel = new DevComponents.DotNetBar.LabelX();
             this.LabelX12 = new DevComponents.DotNetBar.LabelX();
@@ -136,20 +131,28 @@ namespace SM64_ROM_Manager
             this.Button_LM_LoadLevelBG = new DevComponents.DotNetBar.ButtonX();
             this.Button_LM_SetUpStartPosition = new DevComponents.DotNetBar.ButtonX();
             this.TabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.TabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+            this.ButtonX_ManageLocalObjects = new DevComponents.DotNetBar.ButtonX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.SwitchButton_UseLocalObjectBank = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.LabelX13 = new DevComponents.DotNetBar.LabelX();
+            this.SwitchButton_UseGlobalObjectBank = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.TableLayoutPanel_ObjectBankSelectorBoxes = new System.Windows.Forms.TableLayoutPanel();
+            this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.GroupBox_LM_Areas.SuspendLayout();
             this.GroupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Area)).BeginInit();
             this.TabControl_LM_Area.SuspendLayout();
-            this.TabControlPanel4.SuspendLayout();
             this.TabControlPanel5.SuspendLayout();
+            this.TabControlPanel4.SuspendLayout();
             this.TabControlPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Level)).BeginInit();
             this.TabControl_LM_Level.SuspendLayout();
-            this.TabControlPanel2.SuspendLayout();
             this.TabControlPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_BGImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionYRotation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionAreaID)).BeginInit();
+            this.TabControlPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox_LM_Areas
@@ -192,9 +195,9 @@ namespace SM64_ROM_Manager
             // 
             // Button_LM_AddArea
             // 
-            resources.ApplyResources(this.Button_LM_AddArea, "Button_LM_AddArea");
             this.Button_LM_AddArea.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_LM_AddArea.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.Button_LM_AddArea, "Button_LM_AddArea");
             this.Button_LM_AddArea.FocusCuesEnabled = false;
             this.Button_LM_AddArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
             this.Button_LM_AddArea.Name = "Button_LM_AddArea";
@@ -208,16 +211,16 @@ namespace SM64_ROM_Manager
             // 
             // ButtonItem_ImportArea
             // 
-            resources.ApplyResources(this.ButtonItem_ImportArea, "ButtonItem_ImportArea");
             this.ButtonItem_ImportArea.GlobalItem = false;
             this.ButtonItem_ImportArea.Name = "ButtonItem_ImportArea";
+            resources.ApplyResources(this.ButtonItem_ImportArea, "ButtonItem_ImportArea");
             this.ButtonItem_ImportArea.Click += new System.EventHandler(this.ButtonItem_ImportArea_Click);
             // 
             // Button_LM_AreaEditor
             // 
-            resources.ApplyResources(this.Button_LM_AreaEditor, "Button_LM_AreaEditor");
             this.Button_LM_AreaEditor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_LM_AreaEditor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.Button_LM_AreaEditor, "Button_LM_AreaEditor");
             this.Button_LM_AreaEditor.FocusCuesEnabled = false;
             this.Button_LM_AreaEditor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
             this.Button_LM_AreaEditor.Name = "Button_LM_AreaEditor";
@@ -233,18 +236,17 @@ namespace SM64_ROM_Manager
             // 
             // Button_LM_RemoveArea
             // 
-            resources.ApplyResources(this.Button_LM_RemoveArea, "Button_LM_RemoveArea");
             this.Button_LM_RemoveArea.GlobalItem = false;
             this.Button_LM_RemoveArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
             this.Button_LM_RemoveArea.Name = "Button_LM_RemoveArea";
             this.Button_LM_RemoveArea.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Button_LM_RemoveArea.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_RemoveArea.SymbolSize = 12F;
+            resources.ApplyResources(this.Button_LM_RemoveArea, "Button_LM_RemoveArea");
             this.Button_LM_RemoveArea.Click += new System.EventHandler(this.Button_LM_RemoveArea_Click);
             // 
             // ButtonItem_EditAreaLevelScript
             // 
-            resources.ApplyResources(this.ButtonItem_EditAreaLevelScript, "ButtonItem_EditAreaLevelScript");
             this.ButtonItem_EditAreaLevelScript.BeginGroup = true;
             this.ButtonItem_EditAreaLevelScript.GlobalItem = false;
             this.ButtonItem_EditAreaLevelScript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
@@ -252,17 +254,18 @@ namespace SM64_ROM_Manager
             this.ButtonItem_EditAreaLevelScript.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonItem_EditAreaLevelScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem_EditAreaLevelScript.SymbolSize = 12F;
+            resources.ApplyResources(this.ButtonItem_EditAreaLevelScript, "ButtonItem_EditAreaLevelScript");
             this.ButtonItem_EditAreaLevelScript.Click += new System.EventHandler(this.ButtonItem_EditAreaLevelScript_Click);
             // 
             // ButtonItem2_EditGeolayoutScript
             // 
-            resources.ApplyResources(this.ButtonItem2_EditGeolayoutScript, "ButtonItem2_EditGeolayoutScript");
             this.ButtonItem2_EditGeolayoutScript.GlobalItem = false;
             this.ButtonItem2_EditGeolayoutScript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
             this.ButtonItem2_EditGeolayoutScript.Name = "ButtonItem2_EditGeolayoutScript";
             this.ButtonItem2_EditGeolayoutScript.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonItem2_EditGeolayoutScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem2_EditGeolayoutScript.SymbolSize = 12F;
+            resources.ApplyResources(this.ButtonItem2_EditGeolayoutScript, "ButtonItem2_EditGeolayoutScript");
             this.ButtonItem2_EditGeolayoutScript.Click += new System.EventHandler(this.ButtonItem2_EditGeolayoutScript_Click);
             // 
             // ListBoxAdv_LM_Areas
@@ -286,13 +289,13 @@ namespace SM64_ROM_Manager
             // 
             // GroupPanel1
             // 
-            resources.ApplyResources(this.GroupPanel1, "GroupPanel1");
             this.GroupPanel1.CanvasColor = System.Drawing.Color.Empty;
             this.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.GroupPanel1.Controls.Add(this.ButtonX_LM_LevelsMore);
             this.GroupPanel1.Controls.Add(this.Button_LM_AddNewLevel);
             this.GroupPanel1.Controls.Add(this.ListBoxAdv_LM_Levels);
             this.GroupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.GroupPanel1, "GroupPanel1");
             this.GroupPanel1.Name = "GroupPanel1";
             // 
             // 
@@ -323,10 +326,10 @@ namespace SM64_ROM_Manager
             // 
             // ButtonX_LM_LevelsMore
             // 
-            resources.ApplyResources(this.ButtonX_LM_LevelsMore, "ButtonX_LM_LevelsMore");
             this.ButtonX_LM_LevelsMore.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_LM_LevelsMore.AutoExpandOnClick = true;
             this.ButtonX_LM_LevelsMore.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.ButtonX_LM_LevelsMore, "ButtonX_LM_LevelsMore");
             this.ButtonX_LM_LevelsMore.FocusCuesEnabled = false;
             this.ButtonX_LM_LevelsMore.Name = "ButtonX_LM_LevelsMore";
             this.ButtonX_LM_LevelsMore.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -343,50 +346,49 @@ namespace SM64_ROM_Manager
             // 
             // ButtonItem20
             // 
-            resources.ApplyResources(this.ButtonItem20, "ButtonItem20");
             this.ButtonItem20.GlobalItem = false;
             this.ButtonItem20.Name = "ButtonItem20";
             this.ButtonItem20.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonItem20.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem20.SymbolSize = 12F;
+            resources.ApplyResources(this.ButtonItem20, "ButtonItem20");
             this.ButtonItem20.Click += new System.EventHandler(this.ButtonItem20_Click);
             // 
             // ButtonItem1
             // 
-            resources.ApplyResources(this.ButtonItem1, "ButtonItem1");
             this.ButtonItem1.GlobalItem = false;
             this.ButtonItem1.Name = "ButtonItem1";
+            resources.ApplyResources(this.ButtonItem1, "ButtonItem1");
             this.ButtonItem1.Click += new System.EventHandler(this.ButtonItem1_Click);
             // 
             // ButtonItem24
             // 
-            resources.ApplyResources(this.ButtonItem24, "ButtonItem24");
             this.ButtonItem24.GlobalItem = false;
             this.ButtonItem24.Name = "ButtonItem24";
+            resources.ApplyResources(this.ButtonItem24, "ButtonItem24");
             this.ButtonItem24.Click += new System.EventHandler(this.ButtonItem24_Click);
             // 
             // ButtonItem19
             // 
-            resources.ApplyResources(this.ButtonItem19, "ButtonItem19");
             this.ButtonItem19.GlobalItem = false;
             this.ButtonItem19.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
             this.ButtonItem19.Name = "ButtonItem19";
             this.ButtonItem19.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ButtonItem19.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem19.SymbolSize = 12F;
+            resources.ApplyResources(this.ButtonItem19, "ButtonItem19");
             this.ButtonItem19.Click += new System.EventHandler(this.ButtonItem19_Click);
             // 
             // ButtonItem21
             // 
-            resources.ApplyResources(this.ButtonItem21, "ButtonItem21");
             this.ButtonItem21.BeginGroup = true;
             this.ButtonItem21.GlobalItem = false;
             this.ButtonItem21.Name = "ButtonItem21";
+            resources.ApplyResources(this.ButtonItem21, "ButtonItem21");
             this.ButtonItem21.Click += new System.EventHandler(this.ButtonItem21_Click);
             // 
             // ButtonItem15
             // 
-            resources.ApplyResources(this.ButtonItem15, "ButtonItem15");
             this.ButtonItem15.BeginGroup = true;
             this.ButtonItem15.GlobalItem = false;
             this.ButtonItem15.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
@@ -394,15 +396,16 @@ namespace SM64_ROM_Manager
             this.ButtonItem15.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonItem15.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem15.SymbolSize = 12F;
+            resources.ApplyResources(this.ButtonItem15, "ButtonItem15");
             this.ButtonItem15.Click += new System.EventHandler(this.ButtonItem15_Click);
             // 
             // Button_LM_AddNewLevel
             // 
-            resources.ApplyResources(this.Button_LM_AddNewLevel, "Button_LM_AddNewLevel");
             this.Button_LM_AddNewLevel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_LM_AddNewLevel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_LM_AddNewLevel.FocusCuesEnabled = false;
             this.Button_LM_AddNewLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            resources.ApplyResources(this.Button_LM_AddNewLevel, "Button_LM_AddNewLevel");
             this.Button_LM_AddNewLevel.Name = "Button_LM_AddNewLevel";
             this.Button_LM_AddNewLevel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_AddNewLevel.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -414,9 +417,9 @@ namespace SM64_ROM_Manager
             // 
             // ButtonItem26
             // 
-            resources.ApplyResources(this.ButtonItem26, "ButtonItem26");
             this.ButtonItem26.GlobalItem = false;
             this.ButtonItem26.Name = "ButtonItem26";
+            resources.ApplyResources(this.ButtonItem26, "ButtonItem26");
             this.ButtonItem26.Click += new System.EventHandler(this.ButtonItem26_Click);
             // 
             // ListBoxAdv_LM_Levels
@@ -444,8 +447,8 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.TabControl_LM_Area, "TabControl_LM_Area");
             this.TabControl_LM_Area.BackColor = System.Drawing.Color.Transparent;
             this.TabControl_LM_Area.CanReorderTabs = false;
-            this.TabControl_LM_Area.Controls.Add(this.TabControlPanel4);
             this.TabControl_LM_Area.Controls.Add(this.TabControlPanel5);
+            this.TabControl_LM_Area.Controls.Add(this.TabControlPanel4);
             this.TabControl_LM_Area.Controls.Add(this.TabControlPanel6);
             this.TabControl_LM_Area.ForeColor = System.Drawing.Color.Black;
             this.TabControl_LM_Area.Name = "TabControl_LM_Area";
@@ -457,9 +460,160 @@ namespace SM64_ROM_Manager
             this.TabControl_LM_Area.Tabs.Add(this.TabItem5);
             this.TabControl_LM_Area.Tabs.Add(this.TabItem6);
             // 
+            // TabControlPanel5
+            // 
+            this.TabControlPanel5.Controls.Add(this.Line2);
+            this.TabControlPanel5.Controls.Add(this.line4);
+            this.TabControlPanel5.Controls.Add(this.line1);
+            this.TabControlPanel5.Controls.Add(this.LabelX_Area_CountOfTexAnimations);
+            this.TabControlPanel5.Controls.Add(this.LabelX10);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_EditCollision);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_EditFast3D);
+            this.TabControlPanel5.Controls.Add(this.buttonX2);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_ImportCollision);
+            this.TabControlPanel5.Controls.Add(this.buttonX1);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_ImportVisualMap);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_LM_ScrollTexEditor);
+            this.TabControlPanel5.Controls.Add(this.Button_ImportModel);
+            this.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel5, "TabControlPanel5");
+            this.TabControlPanel5.Name = "TabControlPanel5";
+            this.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel5.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel5.Style.GradientAngle = 90;
+            this.TabControlPanel5.TabItem = this.TabItem5;
+            // 
+            // Line2
+            // 
+            this.Line2.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.Line2, "Line2");
+            this.Line2.Name = "Line2";
+            this.Line2.VerticalLine = true;
+            // 
+            // line4
+            // 
+            this.line4.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.line4, "line4");
+            this.line4.Name = "line4";
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.line1, "line1");
+            this.line1.Name = "line1";
+            // 
+            // LabelX_Area_CountOfTexAnimations
+            // 
+            this.LabelX_Area_CountOfTexAnimations.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.LabelX_Area_CountOfTexAnimations.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX_Area_CountOfTexAnimations, "LabelX_Area_CountOfTexAnimations");
+            this.LabelX_Area_CountOfTexAnimations.Name = "LabelX_Area_CountOfTexAnimations";
+            this.LabelX_Area_CountOfTexAnimations.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // LabelX10
+            // 
+            this.LabelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX10, "LabelX10");
+            this.LabelX10.Name = "LabelX10";
+            // 
+            // ButtonX_EditCollision
+            // 
+            this.ButtonX_EditCollision.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_EditCollision.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.ButtonX_EditCollision, "ButtonX_EditCollision");
+            this.ButtonX_EditCollision.FocusCuesEnabled = false;
+            this.ButtonX_EditCollision.Name = "ButtonX_EditCollision";
+            this.ButtonX_EditCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // ButtonX_EditFast3D
+            // 
+            this.ButtonX_EditFast3D.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_EditFast3D.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.ButtonX_EditFast3D, "ButtonX_EditFast3D");
+            this.ButtonX_EditFast3D.FocusCuesEnabled = false;
+            this.ButtonX_EditFast3D.Name = "ButtonX_EditFast3D";
+            this.ButtonX_EditFast3D.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_EditFast3D.Click += new System.EventHandler(this.ButtonX_EditFast3D_Click);
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.FocusCuesEnabled = false;
+            resources.ApplyResources(this.buttonX2, "buttonX2");
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.Click += new System.EventHandler(this.ButtonItem_ExportCollisionMap_Click);
+            // 
+            // ButtonX_ImportCollision
+            // 
+            this.ButtonX_ImportCollision.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_ImportCollision.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_ImportCollision.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX_ImportCollision, "ButtonX_ImportCollision");
+            this.ButtonX_ImportCollision.Name = "ButtonX_ImportCollision";
+            this.ButtonX_ImportCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ImportCollision.Click += new System.EventHandler(this.LM_ImportModel);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.FocusCuesEnabled = false;
+            resources.ApplyResources(this.buttonX1, "buttonX1");
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.Click += new System.EventHandler(this.ButtonItem_ExportVisualMap_Click);
+            // 
+            // ButtonX_ImportVisualMap
+            // 
+            this.ButtonX_ImportVisualMap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_ImportVisualMap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_ImportVisualMap.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX_ImportVisualMap, "ButtonX_ImportVisualMap");
+            this.ButtonX_ImportVisualMap.Name = "ButtonX_ImportVisualMap";
+            this.ButtonX_ImportVisualMap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ImportVisualMap.Click += new System.EventHandler(this.LM_ImportModel);
+            // 
+            // ButtonX_LM_ScrollTexEditor
+            // 
+            this.ButtonX_LM_ScrollTexEditor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_LM_ScrollTexEditor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_LM_ScrollTexEditor.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX_LM_ScrollTexEditor, "ButtonX_LM_ScrollTexEditor");
+            this.ButtonX_LM_ScrollTexEditor.Name = "ButtonX_LM_ScrollTexEditor";
+            this.ButtonX_LM_ScrollTexEditor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_LM_ScrollTexEditor.Click += new System.EventHandler(this.ButtonX_LM_ScrollTexEditor_Click);
+            // 
+            // Button_ImportModel
+            // 
+            this.Button_ImportModel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.Button_ImportModel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.Button_ImportModel.FocusCuesEnabled = false;
+            resources.ApplyResources(this.Button_ImportModel, "Button_ImportModel");
+            this.Button_ImportModel.Name = "Button_ImportModel";
+            this.Button_ImportModel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_ImportModel.Click += new System.EventHandler(this.LM_ImportModel);
+            // 
+            // TabItem5
+            // 
+            this.TabItem5.AttachedControl = this.TabControlPanel5;
+            this.TabItem5.Name = "TabItem5";
+            resources.ApplyResources(this.TabItem5, "TabItem5");
+            // 
             // TabControlPanel4
             // 
-            resources.ApplyResources(this.TabControlPanel4, "TabControlPanel4");
             this.TabControlPanel4.Controls.Add(this.LabelX9);
             this.TabControlPanel4.Controls.Add(this.ComboBoxEx_LM_AreaBG);
             this.TabControlPanel4.Controls.Add(this.TextBoxX_LM_ShowMsgID);
@@ -477,6 +631,7 @@ namespace SM64_ROM_Manager
             this.TabControlPanel4.Controls.Add(this.ComboBox_LM_CameraPreset);
             this.TabControlPanel4.Controls.Add(this.ColorPickerButton_LM_BackgroundColor);
             this.TabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel4, "TabControlPanel4");
             this.TabControlPanel4.Name = "TabControlPanel4";
             this.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
@@ -489,23 +644,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX9
             // 
-            resources.ApplyResources(this.LabelX9, "LabelX9");
             this.LabelX9.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX9, "LabelX9");
             this.LabelX9.Name = "LabelX9";
             this.LabelX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // ComboBoxEx_LM_AreaBG
             // 
-            resources.ApplyResources(this.ComboBoxEx_LM_AreaBG, "ComboBoxEx_LM_AreaBG");
             this.ComboBoxEx_LM_AreaBG.DisplayMember = "Text";
             this.ComboBoxEx_LM_AreaBG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ComboBoxEx_LM_AreaBG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxEx_LM_AreaBG.ForeColor = System.Drawing.Color.Black;
             this.ComboBoxEx_LM_AreaBG.FormattingEnabled = true;
+            resources.ApplyResources(this.ComboBoxEx_LM_AreaBG, "ComboBoxEx_LM_AreaBG");
             this.ComboBoxEx_LM_AreaBG.Items.AddRange(new object[] {
             this.ComboItem12,
             this.ComboItem13});
@@ -523,46 +678,38 @@ namespace SM64_ROM_Manager
             // 
             // TextBoxX_LM_ShowMsgID
             // 
-            resources.ApplyResources(this.TextBoxX_LM_ShowMsgID, "TextBoxX_LM_ShowMsgID");
             this.TextBoxX_LM_ShowMsgID.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.TextBoxX_LM_ShowMsgID.Border.Class = "TextBoxBorder";
             this.TextBoxX_LM_ShowMsgID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TextBoxX_LM_ShowMsgID.ButtonCustom.DisplayPosition = ((int)(resources.GetObject("TextBoxX_LM_ShowMsgID.ButtonCustom.DisplayPosition")));
-            this.TextBoxX_LM_ShowMsgID.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("TextBoxX_LM_ShowMsgID.ButtonCustom.Image")));
-            this.TextBoxX_LM_ShowMsgID.ButtonCustom.Text = resources.GetString("TextBoxX_LM_ShowMsgID.ButtonCustom.Text");
-            this.TextBoxX_LM_ShowMsgID.ButtonCustom.Tooltip = resources.GetString("TextBoxX_LM_ShowMsgID.ButtonCustom.Tooltip");
-            this.TextBoxX_LM_ShowMsgID.ButtonCustom2.DisplayPosition = ((int)(resources.GetObject("TextBoxX_LM_ShowMsgID.ButtonCustom2.DisplayPosition")));
-            this.TextBoxX_LM_ShowMsgID.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("TextBoxX_LM_ShowMsgID.ButtonCustom2.Image")));
-            this.TextBoxX_LM_ShowMsgID.ButtonCustom2.Text = resources.GetString("TextBoxX_LM_ShowMsgID.ButtonCustom2.Text");
-            this.TextBoxX_LM_ShowMsgID.ButtonCustom2.Tooltip = resources.GetString("TextBoxX_LM_ShowMsgID.ButtonCustom2.Tooltip");
             this.TextBoxX_LM_ShowMsgID.DisabledBackColor = System.Drawing.Color.White;
             this.TextBoxX_LM_ShowMsgID.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.TextBoxX_LM_ShowMsgID, "TextBoxX_LM_ShowMsgID");
             this.TextBoxX_LM_ShowMsgID.Name = "TextBoxX_LM_ShowMsgID";
             this.TextBoxX_LM_ShowMsgID.PreventEnterBeep = true;
             this.TextBoxX_LM_ShowMsgID.TextChanged += new System.EventHandler(this.TextBoxX_LM_ShowMsgID_TextChanged);
             // 
             // LabelX1
             // 
-            resources.ApplyResources(this.LabelX1, "LabelX1");
             this.LabelX1.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX1, "LabelX1");
             this.LabelX1.Name = "LabelX1";
             this.LabelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // SwitchButton_LM_ShowMsgEnabled
             // 
-            resources.ApplyResources(this.SwitchButton_LM_ShowMsgEnabled, "SwitchButton_LM_ShowMsgEnabled");
             // 
             // 
             // 
             this.SwitchButton_LM_ShowMsgEnabled.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.SwitchButton_LM_ShowMsgEnabled.FocusCuesEnabled = false;
+            resources.ApplyResources(this.SwitchButton_LM_ShowMsgEnabled, "SwitchButton_LM_ShowMsgEnabled");
             this.SwitchButton_LM_ShowMsgEnabled.Name = "SwitchButton_LM_ShowMsgEnabled";
             this.SwitchButton_LM_ShowMsgEnabled.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SwitchButton_LM_ShowMsgEnabled.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
@@ -575,23 +722,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX2
             // 
-            resources.ApplyResources(this.LabelX2, "LabelX2");
             this.LabelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX2, "LabelX2");
             this.LabelX2.Name = "LabelX2";
             this.LabelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // CheckBoxX_LM_Enable2DCamera
             // 
-            resources.ApplyResources(this.CheckBoxX_LM_Enable2DCamera, "CheckBoxX_LM_Enable2DCamera");
             // 
             // 
             // 
             this.CheckBoxX_LM_Enable2DCamera.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.CheckBoxX_LM_Enable2DCamera.FocusCuesEnabled = false;
+            resources.ApplyResources(this.CheckBoxX_LM_Enable2DCamera, "CheckBoxX_LM_Enable2DCamera");
             this.CheckBoxX_LM_Enable2DCamera.Name = "CheckBoxX_LM_Enable2DCamera";
             this.CheckBoxX_LM_Enable2DCamera.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CheckBoxX_LM_Enable2DCamera.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
@@ -604,23 +751,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX6
             // 
-            resources.ApplyResources(this.LabelX6, "LabelX6");
             this.LabelX6.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX6, "LabelX6");
             this.LabelX6.Name = "LabelX6";
             this.LabelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // ComboBox_LM_Music
             // 
-            resources.ApplyResources(this.ComboBox_LM_Music, "ComboBox_LM_Music");
             this.ComboBox_LM_Music.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ComboBox_LM_Music.DropDownHeight = 150;
             this.ComboBox_LM_Music.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_Music.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_Music.FormattingEnabled = true;
+            resources.ApplyResources(this.ComboBox_LM_Music, "ComboBox_LM_Music");
             this.ComboBox_LM_Music.Items.AddRange(new object[] {
             resources.GetString("ComboBox_LM_Music.Items"),
             resources.GetString("ComboBox_LM_Music.Items1")});
@@ -630,23 +777,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX7
             // 
-            resources.ApplyResources(this.LabelX7, "LabelX7");
             this.LabelX7.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX7, "LabelX7");
             this.LabelX7.Name = "LabelX7";
             this.LabelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // ComboBox_LM_TerrainTyp
             // 
-            resources.ApplyResources(this.ComboBox_LM_TerrainTyp, "ComboBox_LM_TerrainTyp");
             this.ComboBox_LM_TerrainTyp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ComboBox_LM_TerrainTyp.DropDownHeight = 150;
             this.ComboBox_LM_TerrainTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_TerrainTyp.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_TerrainTyp.FormattingEnabled = true;
+            resources.ApplyResources(this.ComboBox_LM_TerrainTyp, "ComboBox_LM_TerrainTyp");
             this.ComboBox_LM_TerrainTyp.Items.AddRange(new object[] {
             resources.GetString("ComboBox_LM_TerrainTyp.Items"),
             resources.GetString("ComboBox_LM_TerrainTyp.Items1"),
@@ -661,23 +808,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX8
             // 
-            resources.ApplyResources(this.LabelX8, "LabelX8");
             this.LabelX8.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX8, "LabelX8");
             this.LabelX8.Name = "LabelX8";
             this.LabelX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // ComboBox_LM_EnvironmentEffects
             // 
-            resources.ApplyResources(this.ComboBox_LM_EnvironmentEffects, "ComboBox_LM_EnvironmentEffects");
             this.ComboBox_LM_EnvironmentEffects.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ComboBox_LM_EnvironmentEffects.DropDownHeight = 150;
             this.ComboBox_LM_EnvironmentEffects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_EnvironmentEffects.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_EnvironmentEffects.FormattingEnabled = true;
+            resources.ApplyResources(this.ComboBox_LM_EnvironmentEffects, "ComboBox_LM_EnvironmentEffects");
             this.ComboBox_LM_EnvironmentEffects.Items.AddRange(new object[] {
             resources.GetString("ComboBox_LM_EnvironmentEffects.Items"),
             resources.GetString("ComboBox_LM_EnvironmentEffects.Items1"),
@@ -692,23 +839,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX11
             // 
-            resources.ApplyResources(this.LabelX11, "LabelX11");
             this.LabelX11.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX11, "LabelX11");
             this.LabelX11.Name = "LabelX11";
             this.LabelX11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // ComboBox_LM_CameraPreset
             // 
-            resources.ApplyResources(this.ComboBox_LM_CameraPreset, "ComboBox_LM_CameraPreset");
             this.ComboBox_LM_CameraPreset.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ComboBox_LM_CameraPreset.DropDownHeight = 150;
             this.ComboBox_LM_CameraPreset.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_CameraPreset.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_CameraPreset.FormattingEnabled = true;
+            resources.ApplyResources(this.ComboBox_LM_CameraPreset, "ComboBox_LM_CameraPreset");
             this.ComboBox_LM_CameraPreset.Items.AddRange(new object[] {
             resources.GetString("ComboBox_LM_CameraPreset.Items"),
             resources.GetString("ComboBox_LM_CameraPreset.Items1"),
@@ -732,12 +879,12 @@ namespace SM64_ROM_Manager
             // 
             // ColorPickerButton_LM_BackgroundColor
             // 
-            resources.ApplyResources(this.ColorPickerButton_LM_BackgroundColor, "ColorPickerButton_LM_BackgroundColor");
             this.ColorPickerButton_LM_BackgroundColor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ColorPickerButton_LM_BackgroundColor.AutoExpandOnClick = true;
             this.ColorPickerButton_LM_BackgroundColor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ColorPickerButton_LM_BackgroundColor.FocusCuesEnabled = false;
             this.ColorPickerButton_LM_BackgroundColor.Image = ((System.Drawing.Image)(resources.GetObject("ColorPickerButton_LM_BackgroundColor.Image")));
+            resources.ApplyResources(this.ColorPickerButton_LM_BackgroundColor, "ColorPickerButton_LM_BackgroundColor");
             this.ColorPickerButton_LM_BackgroundColor.Name = "ColorPickerButton_LM_BackgroundColor";
             this.ColorPickerButton_LM_BackgroundColor.SelectedColorImageRectangle = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.ColorPickerButton_LM_BackgroundColor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -749,132 +896,14 @@ namespace SM64_ROM_Manager
             this.TabItem4.Name = "TabItem4";
             resources.ApplyResources(this.TabItem4, "TabItem4");
             // 
-            // TabControlPanel5
-            // 
-            resources.ApplyResources(this.TabControlPanel5, "TabControlPanel5");
-            this.TabControlPanel5.Controls.Add(this.Line2);
-            this.TabControlPanel5.Controls.Add(this.LabelX_Area_CountOfTexAnimations);
-            this.TabControlPanel5.Controls.Add(this.LabelX10);
-            this.TabControlPanel5.Controls.Add(this.ButtonX_LM_ScrollTexEditor);
-            this.TabControlPanel5.Controls.Add(this.Button_ImportModel);
-            this.TabControlPanel5.Controls.Add(this.ButtonItem_ExportModel);
-            this.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty;
-            this.TabControlPanel5.Name = "TabControlPanel5";
-            this.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel5.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel5.Style.GradientAngle = 90;
-            this.TabControlPanel5.TabItem = this.TabItem5;
-            // 
-            // Line2
-            // 
-            resources.ApplyResources(this.Line2, "Line2");
-            this.Line2.BackColor = System.Drawing.Color.Transparent;
-            this.Line2.Name = "Line2";
-            this.Line2.VerticalLine = true;
-            // 
-            // LabelX_Area_CountOfTexAnimations
-            // 
-            resources.ApplyResources(this.LabelX_Area_CountOfTexAnimations, "LabelX_Area_CountOfTexAnimations");
-            this.LabelX_Area_CountOfTexAnimations.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.LabelX_Area_CountOfTexAnimations.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX_Area_CountOfTexAnimations.Name = "LabelX_Area_CountOfTexAnimations";
-            this.LabelX_Area_CountOfTexAnimations.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // LabelX10
-            // 
-            resources.ApplyResources(this.LabelX10, "LabelX10");
-            this.LabelX10.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX10.Name = "LabelX10";
-            // 
-            // ButtonX_LM_ScrollTexEditor
-            // 
-            resources.ApplyResources(this.ButtonX_LM_ScrollTexEditor, "ButtonX_LM_ScrollTexEditor");
-            this.ButtonX_LM_ScrollTexEditor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_LM_ScrollTexEditor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_LM_ScrollTexEditor.FocusCuesEnabled = false;
-            this.ButtonX_LM_ScrollTexEditor.Name = "ButtonX_LM_ScrollTexEditor";
-            this.ButtonX_LM_ScrollTexEditor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_LM_ScrollTexEditor.Click += new System.EventHandler(this.ButtonX_LM_ScrollTexEditor_Click);
-            // 
-            // Button_ImportModel
-            // 
-            resources.ApplyResources(this.Button_ImportModel, "Button_ImportModel");
-            this.Button_ImportModel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.Button_ImportModel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.Button_ImportModel.FocusCuesEnabled = false;
-            this.Button_ImportModel.Name = "Button_ImportModel";
-            this.Button_ImportModel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_ImportModel.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem9,
-            this.ButtonItem13});
-            this.Button_ImportModel.Click += new System.EventHandler(this.LM_ImportModel);
-            // 
-            // ButtonItem9
-            // 
-            resources.ApplyResources(this.ButtonItem9, "ButtonItem9");
-            this.ButtonItem9.GlobalItem = false;
-            this.ButtonItem9.Name = "ButtonItem9";
-            this.ButtonItem9.Click += new System.EventHandler(this.LM_ImportModel);
-            // 
-            // ButtonItem13
-            // 
-            resources.ApplyResources(this.ButtonItem13, "ButtonItem13");
-            this.ButtonItem13.GlobalItem = false;
-            this.ButtonItem13.Name = "ButtonItem13";
-            this.ButtonItem13.Click += new System.EventHandler(this.LM_ImportModel);
-            // 
-            // ButtonItem_ExportModel
-            // 
-            resources.ApplyResources(this.ButtonItem_ExportModel, "ButtonItem_ExportModel");
-            this.ButtonItem_ExportModel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonItem_ExportModel.AutoExpandOnClick = true;
-            this.ButtonItem_ExportModel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonItem_ExportModel.FocusCuesEnabled = false;
-            this.ButtonItem_ExportModel.Name = "ButtonItem_ExportModel";
-            this.ButtonItem_ExportModel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonItem_ExportModel.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_ExportVisualMap,
-            this.ButtonItem_ExportCollisionMap});
-            // 
-            // ButtonItem_ExportVisualMap
-            // 
-            resources.ApplyResources(this.ButtonItem_ExportVisualMap, "ButtonItem_ExportVisualMap");
-            this.ButtonItem_ExportVisualMap.GlobalItem = false;
-            this.ButtonItem_ExportVisualMap.Name = "ButtonItem_ExportVisualMap";
-            this.ButtonItem_ExportVisualMap.Click += new System.EventHandler(this.ButtonItem_ExportVisualMap_Click);
-            // 
-            // ButtonItem_ExportCollisionMap
-            // 
-            resources.ApplyResources(this.ButtonItem_ExportCollisionMap, "ButtonItem_ExportCollisionMap");
-            this.ButtonItem_ExportCollisionMap.GlobalItem = false;
-            this.ButtonItem_ExportCollisionMap.Name = "ButtonItem_ExportCollisionMap";
-            this.ButtonItem_ExportCollisionMap.Click += new System.EventHandler(this.ButtonItem_ExportCollisionMap_Click);
-            // 
-            // TabItem5
-            // 
-            this.TabItem5.AttachedControl = this.TabControlPanel5;
-            this.TabItem5.Name = "TabItem5";
-            resources.ApplyResources(this.TabItem5, "TabItem5");
-            // 
             // TabControlPanel6
             // 
-            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
             this.TabControlPanel6.Controls.Add(this.Button_LM_RemoveSpecial);
             this.TabControlPanel6.Controls.Add(this.Button_LM_AddSpecial);
             this.TabControlPanel6.Controls.Add(this.Button_LM_EditSpecial);
             this.TabControlPanel6.Controls.Add(this.ListViewEx_LM_Specials);
             this.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
             this.TabControlPanel6.Name = "TabControlPanel6";
             this.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
@@ -887,8 +916,8 @@ namespace SM64_ROM_Manager
             // 
             // Button_LM_RemoveSpecial
             // 
-            resources.ApplyResources(this.Button_LM_RemoveSpecial, "Button_LM_RemoveSpecial");
             this.Button_LM_RemoveSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.Button_LM_RemoveSpecial, "Button_LM_RemoveSpecial");
             this.Button_LM_RemoveSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_LM_RemoveSpecial.FocusCuesEnabled = false;
             this.Button_LM_RemoveSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
@@ -901,11 +930,11 @@ namespace SM64_ROM_Manager
             // 
             // Button_LM_AddSpecial
             // 
-            resources.ApplyResources(this.Button_LM_AddSpecial, "Button_LM_AddSpecial");
             this.Button_LM_AddSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_LM_AddSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_LM_AddSpecial.FocusCuesEnabled = false;
             this.Button_LM_AddSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            resources.ApplyResources(this.Button_LM_AddSpecial, "Button_LM_AddSpecial");
             this.Button_LM_AddSpecial.Name = "Button_LM_AddSpecial";
             this.Button_LM_AddSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_AddSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
@@ -915,9 +944,9 @@ namespace SM64_ROM_Manager
             // 
             // Button_LM_EditSpecial
             // 
-            resources.ApplyResources(this.Button_LM_EditSpecial, "Button_LM_EditSpecial");
             this.Button_LM_EditSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_LM_EditSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.Button_LM_EditSpecial, "Button_LM_EditSpecial");
             this.Button_LM_EditSpecial.FocusCuesEnabled = false;
             this.Button_LM_EditSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
             this.Button_LM_EditSpecial.Name = "Button_LM_EditSpecial";
@@ -1007,8 +1036,8 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.TabControl_LM_Level, "TabControl_LM_Level");
             this.TabControl_LM_Level.BackColor = System.Drawing.Color.Transparent;
             this.TabControl_LM_Level.CanReorderTabs = false;
-            this.TabControl_LM_Level.Controls.Add(this.TabControlPanel2);
             this.TabControl_LM_Level.Controls.Add(this.TabControlPanel1);
+            this.TabControl_LM_Level.Controls.Add(this.TabControlPanel2);
             this.TabControl_LM_Level.ForeColor = System.Drawing.Color.Black;
             this.TabControl_LM_Level.Name = "TabControl_LM_Level";
             this.TabControl_LM_Level.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
@@ -1018,111 +1047,8 @@ namespace SM64_ROM_Manager
             this.TabControl_LM_Level.Tabs.Add(this.TabItem1);
             this.TabControl_LM_Level.Tabs.Add(this.TabItem2);
             // 
-            // TabControlPanel2
-            // 
-            resources.ApplyResources(this.TabControlPanel2, "TabControlPanel2");
-            this.TabControlPanel2.Controls.Add(this.ButtonX_ManageLocalObjects);
-            this.TabControlPanel2.Controls.Add(this.labelX5);
-            this.TabControlPanel2.Controls.Add(this.SwitchButton_UseLocalObjectBank);
-            this.TabControlPanel2.Controls.Add(this.LabelX13);
-            this.TabControlPanel2.Controls.Add(this.SwitchButton_UseGlobalObjectBank);
-            this.TabControlPanel2.Controls.Add(this.TableLayoutPanel_ObjectBankSelectorBoxes);
-            this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.TabControlPanel2.Name = "TabControlPanel2";
-            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel2.Style.GradientAngle = 90;
-            this.TabControlPanel2.TabItem = this.TabItem2;
-            // 
-            // ButtonX_ManageLocalObjects
-            // 
-            resources.ApplyResources(this.ButtonX_ManageLocalObjects, "ButtonX_ManageLocalObjects");
-            this.ButtonX_ManageLocalObjects.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_ManageLocalObjects.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_ManageLocalObjects.FocusCuesEnabled = false;
-            this.ButtonX_ManageLocalObjects.Name = "ButtonX_ManageLocalObjects";
-            this.ButtonX_ManageLocalObjects.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ManageLocalObjects.Click += new System.EventHandler(this.ButtonX_ManageLocalObjects_Click);
-            // 
-            // labelX5
-            // 
-            resources.ApplyResources(this.labelX5, "labelX5");
-            this.labelX5.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // SwitchButton_UseLocalObjectBank
-            // 
-            resources.ApplyResources(this.SwitchButton_UseLocalObjectBank, "SwitchButton_UseLocalObjectBank");
-            // 
-            // 
-            // 
-            this.SwitchButton_UseLocalObjectBank.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SwitchButton_UseLocalObjectBank.FocusCuesEnabled = false;
-            this.SwitchButton_UseLocalObjectBank.Name = "SwitchButton_UseLocalObjectBank";
-            this.SwitchButton_UseLocalObjectBank.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SwitchButton_UseLocalObjectBank.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_UseLocalObjectBank.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_UseLocalObjectBank.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SwitchButton_UseLocalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
-            this.SwitchButton_UseLocalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
-            this.SwitchButton_UseLocalObjectBank.SwitchWidth = 15;
-            this.SwitchButton_UseLocalObjectBank.ValueChanged += new System.EventHandler(this.SwitchButton_UseCustomObjectBank_ValueChanged);
-            this.SwitchButton_UseLocalObjectBank.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
-            // 
-            // LabelX13
-            // 
-            resources.ApplyResources(this.LabelX13, "LabelX13");
-            this.LabelX13.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.LabelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX13.Name = "LabelX13";
-            this.LabelX13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // SwitchButton_UseGlobalObjectBank
-            // 
-            resources.ApplyResources(this.SwitchButton_UseGlobalObjectBank, "SwitchButton_UseGlobalObjectBank");
-            // 
-            // 
-            // 
-            this.SwitchButton_UseGlobalObjectBank.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SwitchButton_UseGlobalObjectBank.FocusCuesEnabled = false;
-            this.SwitchButton_UseGlobalObjectBank.Name = "SwitchButton_UseGlobalObjectBank";
-            this.SwitchButton_UseGlobalObjectBank.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SwitchButton_UseGlobalObjectBank.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_UseGlobalObjectBank.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_UseGlobalObjectBank.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SwitchButton_UseGlobalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
-            this.SwitchButton_UseGlobalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
-            this.SwitchButton_UseGlobalObjectBank.SwitchWidth = 15;
-            this.SwitchButton_UseGlobalObjectBank.ValueChanged += new System.EventHandler(this.SwitchButton_UseCustomObjectBank_ValueChanged);
-            this.SwitchButton_UseGlobalObjectBank.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
-            // 
-            // TableLayoutPanel_ObjectBankSelectorBoxes
-            // 
-            resources.ApplyResources(this.TableLayoutPanel_ObjectBankSelectorBoxes, "TableLayoutPanel_ObjectBankSelectorBoxes");
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.BackColor = System.Drawing.Color.Transparent;
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.Name = "TableLayoutPanel_ObjectBankSelectorBoxes";
-            // 
-            // TabItem2
-            // 
-            this.TabItem2.AttachedControl = this.TabControlPanel2;
-            this.TabItem2.Name = "TabItem2";
-            resources.ApplyResources(this.TabItem2, "TabItem2");
-            // 
             // TabControlPanel1
             // 
-            resources.ApplyResources(this.TabControlPanel1, "TabControlPanel1");
             this.TabControlPanel1.Controls.Add(this.LabelX_TargetLevel);
             this.TabControlPanel1.Controls.Add(this.LabelX12);
             this.TabControlPanel1.Controls.Add(this.PictureBox_BGImage);
@@ -1141,6 +1067,7 @@ namespace SM64_ROM_Manager
             this.TabControlPanel1.Controls.Add(this.Button_LM_LoadLevelBG);
             this.TabControlPanel1.Controls.Add(this.Button_LM_SetUpStartPosition);
             this.TabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel1, "TabControlPanel1");
             this.TabControlPanel1.Name = "TabControlPanel1";
             this.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
@@ -1153,41 +1080,41 @@ namespace SM64_ROM_Manager
             // 
             // LabelX_TargetLevel
             // 
-            resources.ApplyResources(this.LabelX_TargetLevel, "LabelX_TargetLevel");
             this.LabelX_TargetLevel.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX_TargetLevel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX_TargetLevel, "LabelX_TargetLevel");
             this.LabelX_TargetLevel.Name = "LabelX_TargetLevel";
             this.LabelX_TargetLevel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // LabelX12
             // 
-            resources.ApplyResources(this.LabelX12, "LabelX12");
             this.LabelX12.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX12, "LabelX12");
             this.LabelX12.Name = "LabelX12";
             this.LabelX12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // PictureBox_BGImage
             // 
-            resources.ApplyResources(this.PictureBox_BGImage, "PictureBox_BGImage");
             this.PictureBox_BGImage.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.PictureBox_BGImage, "PictureBox_BGImage");
             this.PictureBox_BGImage.Name = "PictureBox_BGImage";
             this.PictureBox_BGImage.TabStop = false;
             // 
             // ComboBoxEx_LM_BGMode
             // 
-            resources.ApplyResources(this.ComboBoxEx_LM_BGMode, "ComboBoxEx_LM_BGMode");
             this.ComboBoxEx_LM_BGMode.DisplayMember = "Text";
             this.ComboBoxEx_LM_BGMode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ComboBoxEx_LM_BGMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxEx_LM_BGMode.ForeColor = System.Drawing.Color.Black;
             this.ComboBoxEx_LM_BGMode.FormattingEnabled = true;
+            resources.ApplyResources(this.ComboBoxEx_LM_BGMode, "ComboBoxEx_LM_BGMode");
             this.ComboBoxEx_LM_BGMode.Items.AddRange(new object[] {
             this.ComboItem1,
             this.ComboItem2,
@@ -1210,34 +1137,34 @@ namespace SM64_ROM_Manager
             // 
             // LabelX15
             // 
-            resources.ApplyResources(this.LabelX15, "LabelX15");
             this.LabelX15.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX15, "LabelX15");
             this.LabelX15.Name = "LabelX15";
             this.LabelX15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // LabelX3
             // 
-            resources.ApplyResources(this.LabelX3, "LabelX3");
             this.LabelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX3, "LabelX3");
             this.LabelX3.Name = "LabelX3";
             this.LabelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // SwitchButton_LM_ActSelector
             // 
-            resources.ApplyResources(this.SwitchButton_LM_ActSelector, "SwitchButton_LM_ActSelector");
             // 
             // 
             // 
             this.SwitchButton_LM_ActSelector.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.SwitchButton_LM_ActSelector.FocusCuesEnabled = false;
+            resources.ApplyResources(this.SwitchButton_LM_ActSelector, "SwitchButton_LM_ActSelector");
             this.SwitchButton_LM_ActSelector.Name = "SwitchButton_LM_ActSelector";
             this.SwitchButton_LM_ActSelector.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SwitchButton_LM_ActSelector.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
@@ -1252,23 +1179,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX57
             // 
-            resources.ApplyResources(this.LabelX57, "LabelX57");
             this.LabelX57.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX57.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX57, "LabelX57");
             this.LabelX57.Name = "LabelX57";
             this.LabelX57.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // SwitchButton_LM_HardcodedCameraSettings
             // 
-            resources.ApplyResources(this.SwitchButton_LM_HardcodedCameraSettings, "SwitchButton_LM_HardcodedCameraSettings");
             // 
             // 
             // 
             this.SwitchButton_LM_HardcodedCameraSettings.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.SwitchButton_LM_HardcodedCameraSettings.FocusCuesEnabled = false;
+            resources.ApplyResources(this.SwitchButton_LM_HardcodedCameraSettings, "SwitchButton_LM_HardcodedCameraSettings");
             this.SwitchButton_LM_HardcodedCameraSettings.Name = "SwitchButton_LM_HardcodedCameraSettings";
             this.SwitchButton_LM_HardcodedCameraSettings.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SwitchButton_LM_HardcodedCameraSettings.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
@@ -1281,23 +1208,23 @@ namespace SM64_ROM_Manager
             // 
             // LabelX4
             // 
-            resources.ApplyResources(this.LabelX4, "LabelX4");
             this.LabelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX4, "LabelX4");
             this.LabelX4.Name = "LabelX4";
             this.LabelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // ComboBox_LM_LevelBG
             // 
-            resources.ApplyResources(this.ComboBox_LM_LevelBG, "ComboBox_LM_LevelBG");
             this.ComboBox_LM_LevelBG.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ComboBox_LM_LevelBG.DropDownHeight = 200;
             this.ComboBox_LM_LevelBG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_LevelBG.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_LevelBG.FormattingEnabled = true;
+            resources.ApplyResources(this.ComboBox_LM_LevelBG, "ComboBox_LM_LevelBG");
             this.ComboBox_LM_LevelBG.Items.AddRange(new object[] {
             resources.GetString("ComboBox_LM_LevelBG.Items"),
             resources.GetString("ComboBox_LM_LevelBG.Items1"),
@@ -1315,12 +1242,12 @@ namespace SM64_ROM_Manager
             // 
             // LabelX24
             // 
-            resources.ApplyResources(this.LabelX24, "LabelX24");
             this.LabelX24.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX24, "LabelX24");
             this.LabelX24.Name = "LabelX24";
             this.LabelX24.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -1342,12 +1269,12 @@ namespace SM64_ROM_Manager
             // 
             // LabelX25
             // 
-            resources.ApplyResources(this.LabelX25, "LabelX25");
             this.LabelX25.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
             this.LabelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX25, "LabelX25");
             this.LabelX25.Name = "LabelX25";
             this.LabelX25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -1364,11 +1291,11 @@ namespace SM64_ROM_Manager
             // 
             // Button_LM_LoadLevelBG
             // 
-            resources.ApplyResources(this.Button_LM_LoadLevelBG, "Button_LM_LoadLevelBG");
             this.Button_LM_LoadLevelBG.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_LM_LoadLevelBG.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_LM_LoadLevelBG.FocusCuesEnabled = false;
             this.Button_LM_LoadLevelBG.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_open_folder_16px;
+            resources.ApplyResources(this.Button_LM_LoadLevelBG, "Button_LM_LoadLevelBG");
             this.Button_LM_LoadLevelBG.Name = "Button_LM_LoadLevelBG";
             this.Button_LM_LoadLevelBG.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_LoadLevelBG.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
@@ -1378,11 +1305,11 @@ namespace SM64_ROM_Manager
             // 
             // Button_LM_SetUpStartPosition
             // 
-            resources.ApplyResources(this.Button_LM_SetUpStartPosition, "Button_LM_SetUpStartPosition");
             this.Button_LM_SetUpStartPosition.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_LM_SetUpStartPosition.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_LM_SetUpStartPosition.FocusCuesEnabled = false;
             this.Button_LM_SetUpStartPosition.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_support_16px;
+            resources.ApplyResources(this.Button_LM_SetUpStartPosition, "Button_LM_SetUpStartPosition");
             this.Button_LM_SetUpStartPosition.Name = "Button_LM_SetUpStartPosition";
             this.Button_LM_SetUpStartPosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_SetUpStartPosition.SymbolColor = System.Drawing.Color.Gray;
@@ -1394,6 +1321,106 @@ namespace SM64_ROM_Manager
             this.TabItem1.AttachedControl = this.TabControlPanel1;
             this.TabItem1.Name = "TabItem1";
             resources.ApplyResources(this.TabItem1, "TabItem1");
+            // 
+            // TabControlPanel2
+            // 
+            this.TabControlPanel2.Controls.Add(this.ButtonX_ManageLocalObjects);
+            this.TabControlPanel2.Controls.Add(this.labelX5);
+            this.TabControlPanel2.Controls.Add(this.SwitchButton_UseLocalObjectBank);
+            this.TabControlPanel2.Controls.Add(this.LabelX13);
+            this.TabControlPanel2.Controls.Add(this.SwitchButton_UseGlobalObjectBank);
+            this.TabControlPanel2.Controls.Add(this.TableLayoutPanel_ObjectBankSelectorBoxes);
+            this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel2, "TabControlPanel2");
+            this.TabControlPanel2.Name = "TabControlPanel2";
+            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel2.Style.GradientAngle = 90;
+            this.TabControlPanel2.TabItem = this.TabItem2;
+            // 
+            // ButtonX_ManageLocalObjects
+            // 
+            this.ButtonX_ManageLocalObjects.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_ManageLocalObjects.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_ManageLocalObjects.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX_ManageLocalObjects, "ButtonX_ManageLocalObjects");
+            this.ButtonX_ManageLocalObjects.Name = "ButtonX_ManageLocalObjects";
+            this.ButtonX_ManageLocalObjects.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ManageLocalObjects.Click += new System.EventHandler(this.ButtonX_ManageLocalObjects_Click);
+            // 
+            // labelX5
+            // 
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX5, "labelX5");
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // SwitchButton_UseLocalObjectBank
+            // 
+            // 
+            // 
+            // 
+            this.SwitchButton_UseLocalObjectBank.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SwitchButton_UseLocalObjectBank.FocusCuesEnabled = false;
+            resources.ApplyResources(this.SwitchButton_UseLocalObjectBank, "SwitchButton_UseLocalObjectBank");
+            this.SwitchButton_UseLocalObjectBank.Name = "SwitchButton_UseLocalObjectBank";
+            this.SwitchButton_UseLocalObjectBank.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SwitchButton_UseLocalObjectBank.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.SwitchButton_UseLocalObjectBank.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.SwitchButton_UseLocalObjectBank.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SwitchButton_UseLocalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.SwitchButton_UseLocalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.SwitchButton_UseLocalObjectBank.SwitchWidth = 15;
+            this.SwitchButton_UseLocalObjectBank.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
+            // 
+            // LabelX13
+            // 
+            this.LabelX13.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.LabelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX13, "LabelX13");
+            this.LabelX13.Name = "LabelX13";
+            this.LabelX13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // SwitchButton_UseGlobalObjectBank
+            // 
+            // 
+            // 
+            // 
+            this.SwitchButton_UseGlobalObjectBank.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.SwitchButton_UseGlobalObjectBank, "SwitchButton_UseGlobalObjectBank");
+            this.SwitchButton_UseGlobalObjectBank.FocusCuesEnabled = false;
+            this.SwitchButton_UseGlobalObjectBank.Name = "SwitchButton_UseGlobalObjectBank";
+            this.SwitchButton_UseGlobalObjectBank.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SwitchButton_UseGlobalObjectBank.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.SwitchButton_UseGlobalObjectBank.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.SwitchButton_UseGlobalObjectBank.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SwitchButton_UseGlobalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.SwitchButton_UseGlobalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.SwitchButton_UseGlobalObjectBank.SwitchWidth = 15;
+            this.SwitchButton_UseGlobalObjectBank.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
+            // 
+            // TableLayoutPanel_ObjectBankSelectorBoxes
+            // 
+            resources.ApplyResources(this.TableLayoutPanel_ObjectBankSelectorBoxes, "TableLayoutPanel_ObjectBankSelectorBoxes");
+            this.TableLayoutPanel_ObjectBankSelectorBoxes.BackColor = System.Drawing.Color.Transparent;
+            this.TableLayoutPanel_ObjectBankSelectorBoxes.Name = "TableLayoutPanel_ObjectBankSelectorBoxes";
+            // 
+            // TabItem2
+            // 
+            this.TabItem2.AttachedControl = this.TabControlPanel2;
+            this.TabItem2.Name = "TabItem2";
+            resources.ApplyResources(this.TabItem2, "TabItem2");
             // 
             // Tab_LevelManager
             // 
@@ -1409,16 +1436,16 @@ namespace SM64_ROM_Manager
             this.GroupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Area)).EndInit();
             this.TabControl_LM_Area.ResumeLayout(false);
-            this.TabControlPanel4.ResumeLayout(false);
             this.TabControlPanel5.ResumeLayout(false);
+            this.TabControlPanel4.ResumeLayout(false);
             this.TabControlPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Level)).EndInit();
             this.TabControl_LM_Level.ResumeLayout(false);
-            this.TabControlPanel2.ResumeLayout(false);
             this.TabControlPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_BGImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionYRotation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionAreaID)).EndInit();
+            this.TabControlPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1582,19 +1609,9 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonX Button_ImportModel;
 
 
-        private DevComponents.DotNetBar.ButtonItem ButtonItem9;
 
 
-        private DevComponents.DotNetBar.ButtonItem ButtonItem13;
 
-
-        private DevComponents.DotNetBar.ButtonX ButtonItem_ExportModel;
-
-
-        private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportVisualMap;
-
-
-        private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportCollisionMap;
 
 
         private DevComponents.DotNetBar.TabItem TabItem5;
@@ -1703,5 +1720,13 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_UseLocalObjectBank;
         private DevComponents.DotNetBar.ButtonX ButtonX_ManageLocalObjects;
+        private DevComponents.DotNetBar.ButtonX ButtonX_EditFast3D;
+        private DevComponents.DotNetBar.Controls.Line line1;
+        private DevComponents.DotNetBar.ButtonX ButtonX_ImportCollision;
+        private DevComponents.DotNetBar.ButtonX ButtonX_ImportVisualMap;
+        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.Controls.Line line4;
+        private DevComponents.DotNetBar.ButtonX ButtonX_EditCollision;
     }
 }

@@ -44,6 +44,7 @@ namespace SM64_ROM_Manager
         public Tab_General()
         {
             InitializeComponent();
+            ItemPanel_RecentFiles.Height = 534;
         }
 
         // C o n t r o l l e r   E v e n t s

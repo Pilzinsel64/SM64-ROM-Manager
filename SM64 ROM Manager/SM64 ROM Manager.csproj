@@ -392,6 +392,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RomManager\GUI\Level Editor\AdvPropGrid_BehaviorManager.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\FormScriptDumps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\FormScriptDumps.Designer.cs">
+      <DependentUpon>FormScriptDumps.cs</DependentUpon>
+    </Compile>
     <Compile Include="RomManager\GUI\Level Editor\Managed3DObject.cs" />
     <Compile Include="RomManager\GUI\Level Editor\ManagedColFace.cs" />
     <Compile Include="RomManager\GUI\Level Editor\ManagedInstantWarp.cs" />
@@ -750,6 +756,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Coins Settings\Coins Settings.resx">
       <DependentUpon>Coins Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Level Editor\FormScriptDumps.resx">
+      <DependentUpon>FormScriptDumps.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Level Editor\Form_AreaEditor.de.resx">
       <DependentUpon>Form_AreaEditor.cs</DependentUpon>
@@ -1121,6 +1130,7 @@
     <None Include="Resources\icons8_expand_arrow_16px.png" />
     <None Include="Resources\icons8_preview_pane_16px.png" />
     <None Include="Resources\icons8_checkmark_16px_1.png" />
+    <None Include="Resources\icons8_property_script_32px.png" />
     <Content Include="RomManager\Others\RomMap.txt" />
   </ItemGroup>
   <ItemGroup>

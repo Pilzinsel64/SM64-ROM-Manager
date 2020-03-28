@@ -40,74 +40,13 @@ using global::SM64Lib.SegmentedBanking;
 using SM64Lib.TextValueConverter;
 using Z.Collections.Extensions;
 using Z.Core.Extensions;
+using SM64Lib.Geolayout.Script;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
     public partial class Form_AreaEditor
     {
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        public Form_AreaEditor(SM64Lib.RomManager rommgr, Level Level, byte LevelID, byte AreaID)
-        {
-            Timer_ListViewEx_Objects_SelectionChanged = new System.Timers.Timer() { AutoReset = false, SynchronizingObject = this, Interval = 40 };
-            // Setup some level variables
-            CLevel = Level;
-            Rommgr = rommgr;
-            AreaIdToLoad = AreaID;
-            this.LevelID = LevelID;
-
-            // Initialize Components
-            InitializeComponent();            
-            SelectedList = ListViewEx_Objects;
-
-            // Create Modules
-            ogl = new OpenGLManager(this, Panel_GLControl);
-            objectControlling = new ObjectControlling(this);
-            maps = new MapManagement(this);
-
-            // ListViews
-            ListViewEx_Objects.SetValue("DoubleBuffered", true);
-            ListViewEx_Warps.SetValue("DoubleBuffered", true);
-
-            // Stop drawing
-            SuspendLayout();
-
-            // Setup other Components
-            RibbonControl1.Expanded = Settings.AreaEditor.RibbonControlExpanded;
-
-            // Setup Form Settings
-            WindowState = Settings.AreaEditor.DefaultWindowMode;
-
-            // Setup some Styles
-            if (Settings.StyleManager.AlwaysKeepBlueColors)
-            {
-                PanelEx1.Style.BackColor1.Color = Color.LightSteelBlue;
-                PanelEx1.Style.BackColor2.Color = Color.LightSteelBlue;
-            }
-
-            // Add Groups to ListView Controls
-            ListViewEx_Warps.Groups.AddRange(new[] { lvg_ConnectedWarps, lvg_WarpsForGame, lvg_PaintingWarps, lvg_InstantWarps });
-            // ListViewEx_Objects.Groups.AddRange({lvg_Objects, lvg_MacroObjects})
-
-            // Bring CircularProgress to front
-            CircularProgress1.BringToFront();
-
-            // Init Object Properties Helper
-            PropertyTree = AdvPropertyGrid1.PropertyTree;
-            bpMgr = new AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid1, MyObjectCombos, nameof(Managed3DObject.BehaviorID), "BParam");
-
-            // Get the PropertyTree of AdvPropertyGrid1
-            PropertyTree = AdvPropertyGrid1.PropertyTree;
-
-            // Update Ambient Colors
-            base.UpdateAmbientColors();
-
-            // Resume drawing
-            ResumeLayout();
-        }
-
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         internal Level CLevel { get; set; } = null;
         internal DateTime LastKeyLeaveTimer { get; set; } = DateTime.Now;
         internal List<Keys> PressedKeys { get; private set; } = new List<Keys>();
@@ -125,6 +64,7 @@ namespace SM64_ROM_Manager.LevelEditor
         internal Dictionary<byte, object> ObjectModelsToParse { get; private set; } = new Dictionary<byte, object>();
         internal List<string> MyLevelsList { get; private set; } = new List<string>();
         internal List<byte> KnownModelIDs { get; private set; } = new List<byte>();
+        internal Dictionary<byte, Geolayoutscript> GeolayoutScriptDumps { get; private set; } = new Dictionary<byte, Geolayoutscript>();
 
         // Modules
         internal ObjectControlling objectControlling;
@@ -154,6 +94,9 @@ namespace SM64_ROM_Manager.LevelEditor
         internal WindowState backupWindowState = (WindowState)FormWindowState.Normal;
         internal int backupCurrentAreaIndex = -1;
         internal string lastChangedPropertyName = "";
+
+        // Delegates
+        internal delegate bool RemoveAllObjectsWhereExpression(Managed3DObject mobj);
 
         // Components
         private AdvTree _PropertyTree;
@@ -202,11 +145,6 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        // Delegates
-        internal delegate bool RemoveAllObjectsWhereExpression(Managed3DObject mobj);
-
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         internal LevelArea CArea
         {
             get
@@ -320,8 +258,6 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         internal void ProgressControl(bool enabled)
         {
             Task.Run(() => CircularProgress1.Invoke(new ProgressControlOnInstanceHandler(ProgressControlOnInstance), enabled));
@@ -340,6 +276,64 @@ namespace SM64_ROM_Manager.LevelEditor
                 CircularProgress1.Stop();
             }
         }
+        public Form_AreaEditor(SM64Lib.RomManager rommgr, Level Level, byte LevelID, byte AreaID)
+        {
+            Timer_ListViewEx_Objects_SelectionChanged = new System.Timers.Timer() { AutoReset = false, SynchronizingObject = this, Interval = 40 };
+            // Setup some level variables
+            CLevel = Level;
+            Rommgr = rommgr;
+            AreaIdToLoad = AreaID;
+            this.LevelID = LevelID;
+
+            // Initialize Components
+            InitializeComponent();
+            SelectedList = ListViewEx_Objects;
+
+            // Create Modules
+            ogl = new OpenGLManager(this, Panel_GLControl);
+            objectControlling = new ObjectControlling(this);
+            maps = new MapManagement(this);
+
+            // ListViews
+            ListViewEx_Objects.SetValue("DoubleBuffered", true);
+            ListViewEx_Warps.SetValue("DoubleBuffered", true);
+
+            // Stop drawing
+            SuspendLayout();
+
+            // Setup other Components
+            RibbonControl1.Expanded = Settings.AreaEditor.RibbonControlExpanded;
+
+            // Setup Form Settings
+            WindowState = Settings.AreaEditor.DefaultWindowMode;
+
+            // Setup some Styles
+            if (Settings.StyleManager.AlwaysKeepBlueColors)
+            {
+                PanelEx1.Style.BackColor1.Color = Color.LightSteelBlue;
+                PanelEx1.Style.BackColor2.Color = Color.LightSteelBlue;
+            }
+
+            // Add Groups to ListView Controls
+            ListViewEx_Warps.Groups.AddRange(new[] { lvg_ConnectedWarps, lvg_WarpsForGame, lvg_PaintingWarps, lvg_InstantWarps });
+            // ListViewEx_Objects.Groups.AddRange({lvg_Objects, lvg_MacroObjects})
+
+            // Bring CircularProgress to front
+            CircularProgress1.BringToFront();
+
+            // Init Object Properties Helper
+            PropertyTree = AdvPropertyGrid1.PropertyTree;
+            bpMgr = new AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid1, MyObjectCombos, nameof(Managed3DObject.BehaviorID), "BParam");
+
+            // Get the PropertyTree of AdvPropertyGrid1
+            PropertyTree = AdvPropertyGrid1.PropertyTree;
+
+            // Update Ambient Colors
+            base.UpdateAmbientColors();
+
+            // Resume drawing
+            ResumeLayout();
+        }
 
         internal void ButtonItem10_Click(object sender, EventArgs e)
         {
@@ -349,6 +343,11 @@ namespace SM64_ROM_Manager.LevelEditor
         internal void Form_AreaEditor_FormClosing(object sender, FormClosingEventArgs e)
         {
             maps.ReleaseBuffers();
+
+            foreach (var item in GeolayoutScriptDumps)
+            {
+                item.Value.Close();
+            }
         }
 
         internal async void Form_AreaEditor_Shown(object sender, EventArgs e)
@@ -571,7 +570,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        private async Task LoadObjectModels() // Friend Async Function LoadObjectModels() As Task
+        private async Task LoadObjectModels()
         {
             ObjectModels.Clear();
 
@@ -721,7 +720,8 @@ namespace SM64_ROM_Manager.LevelEditor
                                 var glscript = new SM64Lib.Geolayout.Script.Geolayoutscript();
                                 glscript.Read(Rommgr, segPointer);
                                 await ParseGeolayoutAndLoadModels(glscript, modelID);
-                                glscript.Close();
+                                GeolayoutScriptDumps.Add(modelID, glscript);
+                                //glscript.Close();
                             }
 
                             break;
@@ -3156,6 +3156,10 @@ namespace SM64_ROM_Manager.LevelEditor
         {
         }
 
-        /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
+        private void ButtonItem_GeolayoutScriptDumps_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -145,8 +145,7 @@ namespace SM64_ROM_Manager
 
         // C o n s t a n t s
 
-        public const string PLUGINCODE_PLUGINMENU = "pluginmenu";
-        public const string UPDATE_URL = "https://pilzinsel64.com/pilzcloud/index.php/s/sm64rm-allupdatepackages/download?path=%2F&files=CurrentUpdates.json"; // "https://pilzinsel64.com/Updates/SM64_ROM_Manager.json"
+        public const string UPDATE_URL = "https://pilzinsel64.com/pilzcloud/index.php/s/sm64rm-allupdatepackages/download?path=%2F&files=CurrentUpdates.json";
 
         // F i e l d s
 
@@ -1832,6 +1831,18 @@ namespace SM64_ROM_Manager
                         @continue = false;
                     }
                 }
+            }
+        }
+
+        public void OpenHexEditorForFast3DBuffer(int levelIndex, int areaIndex)
+        {
+            LevelArea area = GetLevelAndArea(levelIndex, areaIndex).area;
+            if (area is object)
+            {
+                var arg = area.AreaModel.Fast3DBuffer.ToArray();
+                General.OpenHexEditor(ref arg);
+                area.AreaModel.Fast3DBuffer.SetLength(arg.Length);
+                area.AreaModel.Fast3DBuffer.Write(arg, 0, arg.Length);
             }
         }
 
