@@ -507,7 +507,7 @@ namespace SM64_ROM_Manager.LevelEditor
             uint addr = CurBehavAddr;
             string bpname = "";
 
-            if (sender.Tag != null && (uint)sender.Tag == addr)
+            if (sender.Tag == null || (uint)sender.Tag != addr)
             {
                 if (sender == CbEditorBParam1)
                 {
