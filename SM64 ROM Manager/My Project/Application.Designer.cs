@@ -27,6 +27,8 @@ namespace SM64_ROM_Manager.My
             EnableVisualStyles = true;
             SaveMySettingsOnExit = false;
             ShutdownStyle = Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses;
+            this.UnhandledException += this.OnErrorMessage;
+            this.Startup += this.OnAppStart;
         }
 
         [DebuggerStepThrough()]

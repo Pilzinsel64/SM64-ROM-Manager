@@ -27,6 +27,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI.My
             EnableVisualStyles = true;
             SaveMySettingsOnExit = true;
             ShutdownStyle = Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses;
+            Startup += OnAppStart;
         }
 
         [DebuggerStepThrough()]
