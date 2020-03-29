@@ -9,6 +9,10 @@ namespace SM64Lib.Patching
 {
     public class PatchClass
     {
+        public static event ExternalToolStartExitNotification StartingExternalTool;
+        public static event ExternalToolStartExitNotification ExitingExternalTool;
+        public delegate void ExternalToolStartExitNotification(PatchClass instance);
+
         private BinaryData data = null;
 
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
@@ -28,9 +32,13 @@ namespace SM64Lib.Patching
                 withBlock.UseShellExecute = false;
             }
 
+            StartingExternalTool?.Invoke(this);
+
             p.Start();
             while (!p.HasExited)
                 Application.DoEvents();
+
+            ExitingExternalTool?.Invoke(this);
             return p.ExitCode;
         }
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

@@ -12,6 +12,13 @@
     "Version": "1.6.0.0",
     "DevelopmentStage": 3,
     "DevelopmentBuild": 4
+  },
+  "1.7.1.0":
+  {
+    "Filename": "1.7.1.0.ppf",
+    "Version": "1.7.1.0",
+    "DevelopmentStage": 0,
+    "DevelopmentBuild": 1
   }
 }
 

@@ -70,6 +70,9 @@ namespace SM64Lib
                 {
                     if (isNewROM)
                     {
+                        var romVerEventArgs = new RomVersionEventArgs(myProgramVersion);
+                        WritingNewProgramVersion?.Invoke(this, romVerEventArgs);
+                        myProgramVersion = romVerEventArgs.RomVersion;
                         ver = myProgramVersion;
                     }
                     else
