@@ -994,7 +994,7 @@ namespace SM64_ROM_Manager
         public (string fileName, bool available) GetRomConfigInfo()
         {
             var fp = RomManager.GetRomConfigFilePath();
-            var fn = Path.GetDirectoryName(fp);
+            var fn = Path.GetFileName(fp);
             var a = File.Exists(fp);
             return (fn, a);
         }
