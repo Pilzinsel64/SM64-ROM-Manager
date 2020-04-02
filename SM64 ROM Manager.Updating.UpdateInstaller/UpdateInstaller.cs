@@ -105,6 +105,7 @@ namespace SM64_ROM_Manager.Updating.UpdateInstaller
             string zipPath = Path.Combine(packagePath, PackageFileNameDefinations.ZIP_PACKAGE_FILENAME);
             dataPath = Path.Combine(packagePath, Path.GetFileNameWithoutExtension(PackageFileNameDefinations.ZIP_PACKAGE_FILENAME));
             var dataPathDir = new DirectoryInfo(dataPath);
+
             if (dataPathDir.Exists)
             {
                 dataPathDir.Delete(true);
@@ -116,13 +117,17 @@ namespace SM64_ROM_Manager.Updating.UpdateInstaller
 
         private void InstallPackage()
         {
+            // Run installation addon
+            ChangeStatus(UpdateInstallerStatus.RunningAddons);
+            RunAddOns(false);
+
             // Copy files
             ChangeStatus(UpdateInstallerStatus.CopyingFiles);
             CopyFiles();
 
             // Run installation addon
             ChangeStatus(UpdateInstallerStatus.RunningAddons);
-            RunAddOns();
+            RunAddOns(true);
         }
 
         private void CopyFiles()
@@ -158,7 +163,7 @@ namespace SM64_ROM_Manager.Updating.UpdateInstaller
             }
         }
 
-        private void RunAddOns()
+        private void RunAddOns(bool isAfterCopyFiles)
         {
             foreach (string addOnPath in Directory.GetFiles(Path.Combine(General.MyAppPath, "AddOns"))) // Directory.GetFiles(Path.Combine(dataPath, ZIP_UPDATE_INSTALLER_ADDONS_DIRECTORY))
             {
@@ -167,7 +172,7 @@ namespace SM64_ROM_Manager.Updating.UpdateInstaller
                 if (t is object)
                 {
                     var m = t.GetMethod(UpdateInstallerAddOnNameDefinitions.UPDATE_INSTALLER_ADDON_METHOD, BindingFlags.Static | BindingFlags.Public);
-                    m.Invoke(null, new[] { Configuration });
+                    m?.Invoke(null, new object[] { Configuration, isAfterCopyFiles });
                 }
             }
         }

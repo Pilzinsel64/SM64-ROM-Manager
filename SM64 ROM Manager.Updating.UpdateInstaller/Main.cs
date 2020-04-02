@@ -16,10 +16,10 @@ namespace SM64_ROM_Manager.Updating.UpdateInstaller
         {
 
             // G u i
-
             this.Shown += Main_Shown;
             this.FormClosed += Main_FormClosed;
             this.FormClosing += Main_FormClosing;
+
             // Get arguments
             var args = My.MyProject.Application.CommandLineArgs.ToArray();
             if (args.Any())
@@ -60,13 +60,10 @@ namespace SM64_ROM_Manager.Updating.UpdateInstaller
 
         private UpdateInstaller Installer
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _Installer;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_Installer != null)
@@ -127,11 +124,11 @@ namespace SM64_ROM_Manager.Updating.UpdateInstaller
             }
 
             LabelX_Status.Text = newStatusText;
-            if (newStatus == UpdateInstallerStatus.Done)
-            {
-                allowClose = true;
-                Close();
-            }
+            //if (newStatus == UpdateInstallerStatus.Done)
+            //{
+            //    allowClose = true;
+            //    Close();
+            //}
         }
 
         private async Task WaitforHostApp()
@@ -140,9 +137,11 @@ namespace SM64_ROM_Manager.Updating.UpdateInstaller
             await Task.Run(() => Installer.WaitForHostApplication());
         }
 
-        private void ExecuteUpdate()
+        private async void ExecuteUpdate()
         {
-            Task.Run(() => Installer.InstallUpdate());
+            await Task.Run(() => Installer.InstallUpdate());
+            allowClose = true;
+            Close();
         }
 
         private async void Main_Shown(object sender, EventArgs e)
