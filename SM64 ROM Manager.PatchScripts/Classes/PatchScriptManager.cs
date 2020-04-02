@@ -347,7 +347,8 @@ namespace SM64_ROM_Manager.PatchScripts
 
                 case ScriptType.Armips:
                     {
-                        string createText = $@".Open ""{romfile}"", 0
+                        string createText =
+$@".Open ""{romfile}"", 0
 .n64
 {script.Script}
 .Close";
@@ -357,6 +358,7 @@ namespace SM64_ROM_Manager.PatchScripts
                         p.StartInfo.FileName = Path.Combine(Publics.General.MyToolsPath, "armips.exe");
                         p.StartInfo.Arguments = $"-root \"{Path.GetDirectoryName(Conversions.ToString(@params["profilepath"]))}\" \"{tmpAsmFile}\"";
                         p.StartInfo.UseShellExecute = false;
+                        p.StartInfo.CreateNoWindow = true;
                         p.Start();
                         while (!p.HasExited)
                         {
