@@ -53,7 +53,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private async void Form_Shown(object sender, EventArgs e)
         {
-            await LoadFloorTypes();
+            LoadFloorTypes();
             LoadTexturesFromModel();
         }
 
@@ -96,15 +96,8 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             ListViewEx1.Visible = true;
         }
 
-        private async Task LoadFloorTypes()
+        private void LoadFloorTypes()
         {
-            if (!terrainTypesComboItems.Any())
-            {
-                CircularProgress1.Start();
-                await Task.Run(WaitForFloorTypes);
-                CircularProgress1.Stop();
-            }
-
             ComboBox_ColType.Items.Clear();
             ComboBox_ColType.SuspendLayout();
             ComboBox_ColType.Items.AddRange(terrainTypesComboItems.ToArray());
@@ -140,6 +133,9 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         {
             ExcelWorksheet ws;
             loadingTerrainTypesComboItems = true;
+
+            // Clear items
+            terrainTypesComboItems.Clear();
 
             // Set the worksheet to load
             if (Settings.ModelConverter.UseLegacyCollisionDescriptions)
