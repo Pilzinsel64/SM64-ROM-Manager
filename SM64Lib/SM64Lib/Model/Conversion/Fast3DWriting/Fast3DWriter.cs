@@ -1044,18 +1044,39 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             TexCord[] uvs = null;
             int jump = 0;
 
+            float RoundToJump(float val)
+            {
+                var mod = val % jump;
+
+                if (mod >= 0.5 * jump)
+                    val = jump * (float)Math.Ceiling(val / jump); // Round up
+                else
+                    val = jump * (float)Math.Floor(val / jump); // Round down
+
+                return val;
+            }
+
             jump = matWidth * 0x40;
             uvs = new[] { uv1, uv2, uv3 }.OrderBy(n => n.U).ToArray();
             if (jump != 0)
             {
-                while (uvs.Last().U > 32767)
+                // Move near 0
+                float varM;
+                varM = RoundToJump((uvs[0].U + uvs[2].U) / 2);
+                uvs[0].U -= varM;
+                uvs[1].U -= varM;
+                uvs[2].U -= varM;
+
+                // Keep in bounds (max bounds)
+                while (uvs.Last().U > short.MaxValue)
                 {
                     uvs[0].U -= jump;
                     uvs[1].U -= jump;
                     uvs[2].U -= jump;
                 }
 
-                while (uvs.First().U < -32768)
+                // Keep in bounds (min bounds)
+                while (uvs.First().U < short.MinValue)
                 {
                     uvs[0].U += jump;
                     uvs[1].U += jump;
@@ -1067,14 +1088,23 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             uvs = new[] { uv1, uv2, uv3 }.OrderBy(n => n.V).ToArray();
             if (jump != 0)
             {
-                while (uvs.Last().V > 32767)
+                // Move near 0
+                float varM;
+                varM = RoundToJump((uvs[0].V + uvs[2].V) / 2);
+                uvs[0].V -= varM;
+                uvs[1].V -= varM;
+                uvs[2].V -= varM;
+
+                // Keep in bounds (max bounds)
+                while (uvs.Last().V > short.MaxValue)
                 {
                     uvs[0].V -= jump;
                     uvs[1].V -= jump;
                     uvs[2].V -= jump;
                 }
 
-                while (uvs.First().V < -32768)
+                // Keep in bounds (min bounds)
+                while (uvs.First().V < short.MinValue)
                 {
                     uvs[0].V += jump;
                     uvs[1].V += jump;
