@@ -51,7 +51,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         public SM64Lib.Model.Collision.CollisionSettings CollisionSettings { get; set; } = null;
 
-        private async void Form_Shown(object sender, EventArgs e)
+        private void Form_Shown(object sender, EventArgs e)
         {
             LoadFloorTypes();
             LoadTexturesFromModel();
