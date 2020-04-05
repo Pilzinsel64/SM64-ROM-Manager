@@ -149,7 +149,7 @@ namespace SM64Lib.Trajectorys
         {
             if ((uint)addr > 0x80400000 && (uint)addr < 0x80410000)
             {
-                rom.Position = addr - 0x80400000 + 0x1200000;
+                rom.Position = (uint)addr - 0x80400000 + 0x1200000;
                 for (int i = 1, loopTo = count; i <= loopTo; i++)
                 {
                     var trajectory = new Trajectory();
