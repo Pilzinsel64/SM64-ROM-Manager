@@ -339,27 +339,29 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private async void Button_LM_LoadModel_Click(object sender, EventArgs e)
         {
-            var ofd = new OpenFileDialog();
-            ofd.Filter = Publics.General.GetExtensionFilter(Settings.FileParser.FileLoaderModule, 0); // "All supported files|*.obj;*.dae|OBJ Files (*.obj)|*.obj|Collada Files (*.dae)|*.dae"
-            var p = Settings.RecentFiles.RecentModelFiles;
-            if (p.Count > 0)
-                ofd.InitialDirectory = Path.GetDirectoryName(p[0]);
-            if (ofd.ShowDialog() == DialogResult.OK)
+            if (!Button_LoadModel.Expanded)
             {
-                await LoadModel(ofd.FileName);
+                var ofd = new OpenFileDialog();
+                ofd.Filter = Publics.General.GetExtensionFilter(Settings.FileParser.FileLoaderModule, 0);
+                var p = Settings.RecentFiles.RecentModelFiles;
+                if (p.Count > 0)
+                    ofd.InitialDirectory = Path.GetDirectoryName(p[0]);
+                if (ofd.ShowDialog() == DialogResult.OK)
+                    await LoadModel(ofd.FileName);
             }
         }
 
         private async void Button3_LM_LoadCol_Click(object sender, EventArgs e)
         {
-            var ofd = new OpenFileDialog();
-            ofd.Filter = Publics.General.GetExtensionFilter(Settings.FileParser.FileLoaderModule, 0); // "All supported files|*.obj;*.dae|OBJ Files (*.obj)|*.obj|Collada Files (*.dae)|*.dae"
-            var p = Settings.RecentFiles.RecentModelFiles;
-            if (p.Count > 0)
-                ofd.InitialDirectory = Path.GetDirectoryName(p[0]);
-            if (ofd.ShowDialog() == DialogResult.OK)
+            if (!Button_LoadCol.Expanded)
             {
-                await LoadCollision(ofd.FileName);
+                var ofd = new OpenFileDialog();
+                ofd.Filter = Publics.General.GetExtensionFilter(Settings.FileParser.FileLoaderModule, 0); // "All supported files|*.obj;*.dae|OBJ Files (*.obj)|*.obj|Collada Files (*.dae)|*.dae"
+                var p = Settings.RecentFiles.RecentModelFiles;
+                if (p.Count > 0)
+                    ofd.InitialDirectory = Path.GetDirectoryName(p[0]);
+                if (ofd.ShowDialog() == DialogResult.OK)
+                    await LoadCollision(ofd.FileName);
             }
         }
 

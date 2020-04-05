@@ -142,7 +142,7 @@
     <value>Line2</value>
   </data>
   <data name="&gt;&gt;Line2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.Line, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.Line, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Line2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -169,7 +169,7 @@
     <value>LabelX_Colfile</value>
   </data>
   <data name="&gt;&gt;LabelX_Colfile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_Colfile.Parent" xml:space="preserve">
     <value>$this</value>
@@ -196,7 +196,7 @@
     <value>LabelX_Modelfile</value>
   </data>
   <data name="&gt;&gt;LabelX_Modelfile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_Modelfile.Parent" xml:space="preserve">
     <value>$this</value>
@@ -220,7 +220,7 @@
     <value>LabelX2</value>
   </data>
   <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -244,7 +244,7 @@
     <value>LabelX1</value>
   </data>
   <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -279,7 +279,7 @@
   <data name="LabelX4.SuperTooltip4" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <assembly alias="DevComponents.DotNetBar2" name="DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null" />
+  <assembly alias="DevComponents.DotNetBar2" name="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null" />
   <data name="LabelX4.SuperTooltip5" type="DevComponents.DotNetBar.eTooltipColor, DevComponents.DotNetBar2">
     <value>System</value>
   </data>
@@ -302,7 +302,7 @@
     <value>LabelX4</value>
   </data>
   <data name="&gt;&gt;LabelX4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
     <value>Panel3</value>
@@ -329,7 +329,7 @@
     <value>SwitchButton_EnableFog</value>
   </data>
   <data name="&gt;&gt;SwitchButton_EnableFog.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_EnableFog.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -356,7 +356,7 @@
     <value>Button_ColEditor</value>
   </data>
   <data name="&gt;&gt;Button_ColEditor.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Button_ColEditor.Parent" xml:space="preserve">
     <value>Panel9</value>
@@ -380,7 +380,7 @@
     <value>LabelX20</value>
   </data>
   <data name="&gt;&gt;LabelX20.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX20.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -404,7 +404,7 @@
     <value>LabelX16</value>
   </data>
   <data name="&gt;&gt;LabelX16.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX16.Parent" xml:space="preserve">
     <value>Panel6</value>
@@ -457,7 +457,7 @@ Scaling = 500 --&gt; Modelsize * 500</value>
     <value>NUD_Scaling</value>
   </data>
   <data name="&gt;&gt;NUD_Scaling.Type" xml:space="preserve">
-    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.Editors.DoubleInput, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;NUD_Scaling.Parent" xml:space="preserve">
     <value>Panel6</value>
@@ -517,7 +517,7 @@ It is inviisble.</value>
     <value>Button_LoadCol</value>
   </data>
   <data name="&gt;&gt;Button_LoadCol.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Button_LoadCol.Parent" xml:space="preserve">
     <value>$this</value>
@@ -573,7 +573,7 @@ The Model is all what you can see.</value>
     <value>Button_LoadModel</value>
   </data>
   <data name="&gt;&gt;Button_LoadModel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Button_LoadModel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -603,7 +603,7 @@ The Model is all what you can see.</value>
     <value>Line3</value>
   </data>
   <data name="&gt;&gt;Line3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.Line, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.Line, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Line3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -636,7 +636,7 @@ The Model is all what you can see.</value>
     <value>Button_ConvertModel</value>
   </data>
   <data name="&gt;&gt;Button_ConvertModel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Button_ConvertModel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -663,7 +663,7 @@ The Model is all what you can see.</value>
     <value>CircularProgress1</value>
   </data>
   <data name="&gt;&gt;CircularProgress1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CircularProgress, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.CircularProgress, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CircularProgress1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -721,7 +721,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ComboBoxEx_UpAxis</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_UpAxis.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_UpAxis.Parent" xml:space="preserve">
     <value>Panel7</value>
@@ -745,7 +745,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>LabelX9</value>
   </data>
   <data name="&gt;&gt;LabelX9.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX9.Parent" xml:space="preserve">
     <value>Panel2</value>
@@ -766,7 +766,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>CheckBoxX_ConvertModel</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_ConvertModel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_ConvertModel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -787,7 +787,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>CheckBoxX_ConvertCollision</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_ConvertCollision.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_ConvertCollision.Parent" xml:space="preserve">
     <value>$this</value>
@@ -811,7 +811,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>LabelX3</value>
   </data>
   <data name="&gt;&gt;LabelX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
     <value>Panel4</value>
@@ -838,7 +838,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>SwitchButton_ResizeTextures</value>
   </data>
   <data name="&gt;&gt;SwitchButton_ResizeTextures.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_ResizeTextures.Parent" xml:space="preserve">
     <value>Panel4</value>
@@ -862,7 +862,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>LabelX5</value>
   </data>
   <data name="&gt;&gt;LabelX5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX5.Parent" xml:space="preserve">
     <value>Panel5</value>
@@ -886,7 +886,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>LabelX6</value>
   </data>
   <data name="&gt;&gt;LabelX6.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX6.Parent" xml:space="preserve">
     <value>Panel5</value>
@@ -910,7 +910,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>LabelX7</value>
   </data>
   <data name="&gt;&gt;LabelX7.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX7.Parent" xml:space="preserve">
     <value>Panel5</value>
@@ -937,7 +937,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>SwitchButton_CenterModel</value>
   </data>
   <data name="&gt;&gt;SwitchButton_CenterModel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_CenterModel.Parent" xml:space="preserve">
     <value>Panel2</value>
@@ -964,7 +964,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ButtonX_VisualMapPreview</value>
   </data>
   <data name="&gt;&gt;ButtonX_VisualMapPreview.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX_VisualMapPreview.Parent" xml:space="preserve">
     <value>Panel8</value>
@@ -991,7 +991,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ButtonX_CollisionMapPreview</value>
   </data>
   <data name="&gt;&gt;ButtonX_CollisionMapPreview.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX_CollisionMapPreview.Parent" xml:space="preserve">
     <value>Panel9</value>
@@ -1018,7 +1018,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>SwitchButton_EnableReduceVertices</value>
   </data>
   <data name="&gt;&gt;SwitchButton_EnableReduceVertices.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_EnableReduceVertices.Parent" xml:space="preserve">
     <value>Panel3</value>
@@ -1042,7 +1042,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>LabelX10</value>
   </data>
   <data name="&gt;&gt;LabelX10.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX10.Parent" xml:space="preserve">
     <value>Panel7</value>
@@ -1070,7 +1070,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ColorPickerButton_ShadingAmbient</value>
   </data>
   <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.Parent" xml:space="preserve">
     <value>Panel5</value>
@@ -1097,7 +1097,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ButtonX_GraphicsEditor</value>
   </data>
   <data name="&gt;&gt;ButtonX_GraphicsEditor.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX_GraphicsEditor.Parent" xml:space="preserve">
     <value>Panel8</value>
@@ -1154,7 +1154,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ComboBox_FogTyp</value>
   </data>
   <data name="&gt;&gt;ComboBox_FogTyp.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ComboBox_FogTyp.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -1185,7 +1185,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ColorPickerButton_FogColor</value>
   </data>
   <data name="&gt;&gt;ColorPickerButton_FogColor.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ColorPickerButton_FogColor.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -1284,7 +1284,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>LabelX8</value>
   </data>
   <data name="&gt;&gt;LabelX8.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX8.Parent" xml:space="preserve">
     <value>Panel4</value>
@@ -1311,7 +1311,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>SwitchButton_OptimizeTransChecks</value>
   </data>
   <data name="&gt;&gt;SwitchButton_OptimizeTransChecks.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_OptimizeTransChecks.Parent" xml:space="preserve">
     <value>Panel4</value>
@@ -1365,7 +1365,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ButtonX1</value>
   </data>
   <data name="&gt;&gt;ButtonX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX1.Parent" xml:space="preserve">
     <value>Panel5</value>
@@ -1393,7 +1393,7 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>ColorPickerButton_ShadingDiffuse</value>
   </data>
   <data name="&gt;&gt;ColorPickerButton_ShadingDiffuse.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ColorPickerButton_ShadingDiffuse.Parent" xml:space="preserve">
     <value>Panel5</value>
@@ -3403,36 +3403,36 @@ As higher the level and as bigger the model, as more space will be saved!</value
     <value>SuperTooltip1</value>
   </data>
   <data name="&gt;&gt;SuperTooltip1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.SuperTooltip, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.SuperTooltip, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ComboItem1.Name" xml:space="preserve">
     <value>ComboItem1</value>
   </data>
   <data name="&gt;&gt;ComboItem1.Type" xml:space="preserve">
-    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ComboItem2.Name" xml:space="preserve">
     <value>ComboItem2</value>
   </data>
   <data name="&gt;&gt;ComboItem2.Type" xml:space="preserve">
-    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_SetupDiffusePosition.Name" xml:space="preserve">
     <value>ButtonItem_SetupDiffusePosition</value>
   </data>
   <data name="&gt;&gt;ButtonItem_SetupDiffusePosition.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_ResetDiffusePosition.Name" xml:space="preserve">
     <value>ButtonItem_ResetDiffusePosition</value>
   </data>
   <data name="&gt;&gt;ButtonItem_ResetDiffusePosition.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainModelConverter</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.34, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04</value>
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
