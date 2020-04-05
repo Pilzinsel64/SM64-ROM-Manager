@@ -51,9 +51,9 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         public SM64Lib.Model.Collision.CollisionSettings CollisionSettings { get; set; } = null;
 
-        private void Form_Shown(object sender, EventArgs e)
+        private async void Form_Shown(object sender, EventArgs e)
         {
-            LoadFloorTypes();
+            await LoadFloorTypes();
             LoadTexturesFromModel();
         }
 
@@ -96,8 +96,9 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             ListViewEx1.Visible = true;
         }
 
-        private void LoadFloorTypes()
+        private async Task LoadFloorTypes()
         {
+            await Task.Run(WaitForFloorTypes);
             ComboBox_ColType.Items.Clear();
             ComboBox_ColType.SuspendLayout();
             ComboBox_ColType.Items.AddRange(terrainTypesComboItems.ToArray());
