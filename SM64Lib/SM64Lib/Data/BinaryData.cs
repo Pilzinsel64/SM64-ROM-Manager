@@ -77,7 +77,7 @@ namespace SM64Lib.Data
                 if (_BaseStream is null)
                 {
                     _BaseStream = GetBaseStream();
-                    AnyBinaryDataOpened?.Invoke(this);
+                    RaiseAnyBinaryDataOpened(this);
                 }
 
                 return _BaseStream;
@@ -262,6 +262,11 @@ namespace SM64Lib.Data
         public void SetLength(long length)
         {
             BaseStream.SetLength(length);
+        }
+
+        internal static void RaiseAnyBinaryDataOpened(BinaryData data)
+        {
+            AnyBinaryDataOpened?.Invoke(data);
         }
 
         public void Dispose()

@@ -9,6 +9,7 @@ namespace SM64Lib.Data
         public BinaryStreamData(Stream stream)
         {
             myBaseStream = stream;
+            //RaiseAnyBinaryDataOpened(this);
         }
 
         protected override Stream GetBaseStream()

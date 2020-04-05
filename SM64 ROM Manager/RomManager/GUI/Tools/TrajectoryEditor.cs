@@ -49,17 +49,17 @@ namespace SM64_ROM_Manager
 
         private void TrajectoryEditor_Shown(object sender, EventArgs e)
         {
-            var fs = new FileStream(rommgr.RomFile, FileMode.Open, FileAccess.Read);
-            trajectories.ReadTrajectories(fs);
-            fs.Close();
+            var data = rommgr.GetBinaryRom(FileAccess.Read);
+            trajectories.ReadTrajectories(data);
+            data.Close();
             LoadTrajectoriesList();
         }
 
         private void ButtonX5_Click(object sender, EventArgs e)
         {
-            var fs = new FileStream(rommgr.RomFile, FileMode.Open, FileAccess.ReadWrite);
-            trajectories.WriteTrajectories(fs);
-            fs.Close();
+            var data = rommgr.GetBinaryRom(FileAccess.ReadWrite);
+            trajectories.WriteTrajectories(data);
+            data.Close();
             General.PatchClass.UpdateChecksum(rommgr.RomFile);
         }
 
