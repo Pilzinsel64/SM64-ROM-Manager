@@ -257,12 +257,15 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private void ComboBox_CI_ColType_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboItem selItem = (ComboItem)ComboBox_ColType.SelectedItem;
-            byte id = (byte)((object[])selItem.Tag)[0];
-            this.SetParamTipp(id);
-            SetToolTip((object[])selItem.Tag);
-            if (!LoadingColItemSettings)
+            if (selItem?.Tag is object)
             {
-                this.UpdateTextureListItemSettings(id);
+                byte id = (byte)((object[])selItem.Tag)[0];
+                this.SetParamTipp(id);
+                SetToolTip((object[])selItem.Tag);
+                if (!LoadingColItemSettings)
+                {
+                    this.UpdateTextureListItemSettings(id);
+                }
             }
         }
 
