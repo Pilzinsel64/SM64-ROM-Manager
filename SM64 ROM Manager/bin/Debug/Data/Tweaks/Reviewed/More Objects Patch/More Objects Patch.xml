@@ -17,7 +17,7 @@ Module Script
 "Are you sure you want to continue patching the More Object Patches on this ROM?"
 
     Sub Main(params as IReadOnlyDictionary(Of String, Object))
-        If MessageBoxEx.Show(MyMsgText, "More Object Patches", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+        If MessageBox.Show(MyMsgText, "More Object Patches", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
             Dim tweakDir as String = Path.GetDirectoryName(params("profilepath"))
             Dim patchFile as String = Path.Combine(tweakDir, "mop123rm.ppf")
             General.PatchClass.ApplyPPF(params("romfile"), patchFile)

@@ -1,0 +1,4 @@
+<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Mario will do his underwater star grab animation instead of falling and doing the star dance animation, works even if stars won't warp Mario out of the level. BE SURE TO RESET CHECKSUM! Tweak by Pyro Jay (Thanks to Arthurtilly for help)</description><patch>
+8D26: 13 03
+EA804: 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44
+</patch></m64tweak>

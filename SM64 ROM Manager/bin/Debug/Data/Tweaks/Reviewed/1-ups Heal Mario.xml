@@ -1,0 +1,3 @@
+<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>1-ups will heal Mario completely, by someone2369 (WILL NOT give an extra life)</description><patch>
+AEC9B: AE 34 0F 08 80 A5 CF 00 AE
+</patch></m64tweak>
