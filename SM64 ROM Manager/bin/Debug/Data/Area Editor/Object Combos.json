@@ -4579,7 +4579,7 @@
       "BP4_DESCRIPTION": null
     },
     {
-      "Name": "Rotating Platform",
+      "Name": "Rising/Falling stairs",
       "ModelID": 60,
       "ModelAddress": 234881760,
       "Behavior": 318786764,
