@@ -65,15 +65,48 @@ namespace SM64_ROM_Manager
         // F i e l d s
 
         private string dialogNamesFilePath = string.Empty;
+        private bool forceUppercaseForActAndLevelNames = true;
+        private bool autoDetectStartEndQuotationMarks = true;
 
         // P r o p e r t i e s
 
         public MyTextProfileInfoManager MyTextProfiles { get; private set; } = new MyTextProfileInfoManager();
-        public bool ForceUppercaseForActAndLevelNames { get; set; } = SettingsManager.Settings.TextManager.ForceUpperCaseForActAndLevelNames;
+        public bool UseSettingsForOptions { get; set; } = true;
+
+        public bool ForceUppercaseForActAndLevelNames
+        {
+            get
+            {
+                if (UseSettingsForOptions)
+                    return SettingsManager.Settings.TextManager.ForceUpperCaseForActAndLevelNames;
+                else
+                    return forceUppercaseForActAndLevelNames;
+            }
+            set
+            {
+                if (UseSettingsForOptions)
+                    SettingsManager.Settings.TextManager.ForceUpperCaseForActAndLevelNames = value;
+                else
+                    forceUppercaseForActAndLevelNames = value;
+            }
+        }
+
         public bool AutoDetectStartEndQuotationMarks
         {
-            get => SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks;
-            set => SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks = value;
+            get
+            {
+                if (UseSettingsForOptions)
+                    return SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks;
+                else
+                    return autoDetectStartEndQuotationMarks;
+            }
+            set
+            {
+                if (UseSettingsForOptions)
+                    SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks = value;
+                else
+                    autoDetectStartEndQuotationMarks = value;
+            }
         }
 
         public RomManager RomManager
@@ -86,7 +119,7 @@ namespace SM64_ROM_Manager
                 if (e.RomManager is object)
                 {
                     SetCurrentTextProfileToRomManager(e.RomManager);
-                    M64TextEncoding.AutoDetectStartEndQuotationMarks = SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks;
+                    M64TextEncoding.AutoDetectStartEndQuotationMarks = AutoDetectStartEndQuotationMarks;
                 }
 
                 return e.RomManager;
