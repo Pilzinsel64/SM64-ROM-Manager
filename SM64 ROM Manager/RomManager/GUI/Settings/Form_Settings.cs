@@ -74,6 +74,7 @@ namespace SM64_ROM_Manager
             TextBoxX_HexEditorCustomPath.Text = Settings.General.HexEditMode.CustomPath;
             SwitchButton_UseLegacyCollisionDescriptions.Value = Settings.ModelConverter.UseLegacyCollisionDescriptions;
             SwitchButton_TMForceUppercase.Value = Settings.TextManager.ForceUpperCaseForActAndLevelNames;
+            SwitchButton_AutoDetectStartEndQuotationMarks.Value = Settings.TextManager.AutoDetectStartEndQuotationMarks;
             TextBoxX_ProxyUsr.Text = Settings.Network.ProxyUsername;
             TextBoxX_ProxyPwd.Text = string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted) ? string.Empty : crypter.DecryptData(Settings.Network.ProxyPasswordEncrypted);
             var curLoaderModule = Publics.Publics.GetLoaderModuleFromID(Settings.FileParser.FileLoaderModule);
@@ -227,6 +228,7 @@ namespace SM64_ROM_Manager
             Settings.FileParser.FileExporterModule = Publics.Publics.GetExporterIDFromModule((File3DLoaderModule)((ComboItem)ComboBoxEx_ExporterModule.SelectedItem).Tag);
             Settings.ModelConverter.UseLegacyCollisionDescriptions = SwitchButton_UseLegacyCollisionDescriptions.Value;
             Settings.TextManager.ForceUpperCaseForActAndLevelNames = SwitchButton_TMForceUppercase.Value;
+            Settings.TextManager.AutoDetectStartEndQuotationMarks = SwitchButton_AutoDetectStartEndQuotationMarks.Value;
             Settings.Network.ProxyUsername = TextBoxX_ProxyUsr.Text.Trim();
             Settings.Network.ProxyPasswordEncrypted = string.IsNullOrEmpty(TextBoxX_ProxyPwd.Text) ? string.Empty : crypter.EncryptData(TextBoxX_ProxyPwd.Text);
             var switchExpr = ComboBoxEx1.SelectedIndex;

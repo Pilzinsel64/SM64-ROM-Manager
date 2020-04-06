@@ -70,6 +70,11 @@ namespace SM64_ROM_Manager
 
         public MyTextProfileInfoManager MyTextProfiles { get; private set; } = new MyTextProfileInfoManager();
         public bool ForceUppercaseForActAndLevelNames { get => SettingsManager.Settings.TextManager.ForceUpperCaseForActAndLevelNames; }
+        public bool AutoDetectStartEndQuotationMarks
+        {
+            get => SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks;
+            set => SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks = value;
+        }
 
         public RomManager RomManager
         {
@@ -77,9 +82,11 @@ namespace SM64_ROM_Manager
             {
                 var e = new RequestRomManagerEventArgs();
                 RequestRomManager?.Invoke(e);
+
                 if (e.RomManager is object)
                 {
                     SetCurrentTextProfileToRomManager(e.RomManager);
+                    M64TextEncoding.AutoDetectStartEndQuotationMarks = SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks;
                 }
 
                 return e.RomManager;

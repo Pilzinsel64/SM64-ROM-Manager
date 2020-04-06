@@ -8,6 +8,7 @@ namespace SM64Lib.Text
     public class M64TextEncoding : System.Text.Encoding
     {
         private static M64TextEncoding M64Text_enc = new M64TextEncoding();
+        public static bool AutoDetectStartEndQuotationMarks { get; set; } = true;
 
         public static System.Text.Encoding M64Text
         {
@@ -554,13 +555,19 @@ namespace SM64Lib.Text
 
                     case 0xF5:
                         {
-                            txt += "\"";
+                            if (AutoDetectStartEndQuotationMarks)
+                                txt += "\"";
+                            else
+                                txt += "{sqm}";
                             break;
                         }
 
                     case 0xF6:
                         {
-                            txt += "\"";
+                            if (AutoDetectStartEndQuotationMarks)
+                                txt += "\"";
+                            else
+                                txt += "{eqm}";
                             break;
                         }
 
@@ -620,17 +627,19 @@ namespace SM64Lib.Text
         {
             bool isFirst = true;
             var bytes = new List<byte>();
-            s = Strings.Replace(s, "{starsleft}", "€");
-            s = Strings.Replace(s, "you", "²");
-            s = Strings.Replace(s, "the", "³");
-            s = Strings.Replace(s, "[A]", @"\");
-            s = Strings.Replace(s, "[B]", "°");
-            s = Strings.Replace(s, "[C]", "#");
-            s = Strings.Replace(s, "[Z]", "*");
-            s = Strings.Replace(s, "[R]", ";");
-            s = Strings.Replace(s, ")(", "}");
-            s = Strings.Replace(s, "[x]", "{");
-            s = Strings.Replace(s, Constants.vbNewLine, "§");
+            s = s.Replace("{starsleft}", "€");
+            s = s.Replace("you", "²");
+            s = s.Replace("the", "³");
+            s = s.Replace("[A]", @"\");
+            s = s.Replace("[B]", "°");
+            s = s.Replace("[C]", "#");
+            s = s.Replace("[Z]", "*");
+            s = s.Replace("[R]", ";");
+            s = s.Replace(")(", "}");
+            s = s.Replace("[x]", "{");
+            s = s.Replace("{sqm}", "[");
+            s = s.Replace("{eqm}", "]");
+            s = s.Replace(Constants.vbNewLine, "§");
             if (s is object)
             {
                 foreach (char ccb in s)
@@ -1168,26 +1177,27 @@ namespace SM64Lib.Text
 
                         case "\"":
                             {
-                                var switchExpr = isFirst;
-                                switch (switchExpr)
+                                switch (isFirst)
                                 {
                                     case true:
-                                        {
-                                            bytes.Add(0xF5);
-                                            isFirst = false;
-                                            break;
-                                        }
-
+                                        bytes.Add(0xF5);
+                                        isFirst = false;
+                                        break;
                                     case false:
-                                        {
-                                            isFirst = true;
-                                            bytes.Add(0xF6);
-                                            break;
-                                        }
+                                        isFirst = true;
+                                        bytes.Add(0xF6);
+                                        break;
                                 }
 
                                 break;
                             }
+
+                        case "[":
+                            bytes.Add(0xF5);
+                            break;
+                        case "]":
+                            bytes.Add(0xF6);
+                            break;
 
                         case "~":
                             {
