@@ -210,19 +210,19 @@
         },
         {
             "Type": "BC",
-            "Number": "3",
-            "Name": "Bowser's 3rd Course",
-            "Index": 17,
-            "ID": "0x15",
-            "Pointer": "0x2AC1E8"
-        },
-        {
-            "Type": "BC",
             "Number": "2",
             "Name": "Bowser's 2nd Course",
             "Index": 15,
             "ID": "0x13",
             "Pointer": "0x2AC1C0"
+        },
+        {
+            "Type": "BC",
+            "Number": "3",
+            "Name": "Bowser's 3rd Course",
+            "Index": 17,
+            "ID": "0x15",
+            "Pointer": "0x2AC1E8"
         },
         {
             "Type": "BB",
