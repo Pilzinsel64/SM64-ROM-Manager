@@ -198,5 +198,20 @@ namespace SM64Lib.Geolayout.Script
                 command.Position = 0;
             }
         }
+
+        public class cgx10
+        {
+            public static Vector3 GetOffset(ref GeolayoutCommand command)
+            {
+                command.Position = 2;
+                var value = new Vector3();
+                value.X = command.ReadInt16();
+                value.Y = command.ReadInt16();
+                command.Position += 2;
+                value.Z = command.ReadInt16();
+                command.Position = 0;
+                return value;
+            }
+        }
     }
 }

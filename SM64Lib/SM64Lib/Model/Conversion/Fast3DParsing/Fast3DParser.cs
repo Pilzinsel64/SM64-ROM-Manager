@@ -403,7 +403,7 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
             s.Position = vtStart;
             vert.X = br.ReadInt16() + modelOffset.X;
             vert.Y = br.ReadInt16() + modelOffset.Y;
-            vert.Z = br.ReadInt16() + modelOffset.Y;
+            vert.Z = br.ReadInt16() + modelOffset.Z;
             vert.X *= modelScale.X;
             vert.Y *= modelScale.Y;
             vert.Z *= modelScale.Z;
