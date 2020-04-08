@@ -179,7 +179,14 @@ namespace SM64Lib
 
         public string GetRomConfigFilePath()
         {
-            return RomFile + ".config";
+            var p = Path.ChangeExtension(RomFile, ".config");
+            if (!File.Exists(p))
+            {
+                var pOld = RomFile + ".config";
+                if (File.Exists(pOld))
+                    File.Move(pOld, p);
+            }
+            return p;
         }
 
         private void LoadRomConfig()
