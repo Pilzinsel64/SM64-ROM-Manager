@@ -277,7 +277,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // Add handler for Node created
             AdvPropertyGrid1.PropertyTree.NodeMouseUp += (_, __) => SetBParamValueText();
             AdvPropertyGrid1.PropertyTree.AfterNodeSelect += (_, __) => SetBParamValueText();
-            AdvPropertyGrid1.PropertiesLoaded += SetNodeValueReadOnly;
+            AdvPropertyGrid1.PropertyTree.AfterNodeInsert += SetNodeValueReadOnly;
         }
 
         private void SetUI()
@@ -598,16 +598,21 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        private void SetNodeValueReadOnly(object sender, EventArgs e)
+        private void SetNodeValueReadOnly(object sender, TreeNodeCollectionEventArgs e)
         {
             if (!EnableEdit)
             {
-                foreach (Node n in AdvPropertyGrid1.PropertyTree.Nodes[0].Nodes)
+                setNodes(AdvPropertyGrid1.PropertyTree.Nodes);
+                void setNodes(NodeCollection nodes)
                 {
-                    if (n is PropertyNode)
+                    foreach (Node n in nodes)
                     {
-                        PropertyNode prop = (PropertyNode)n;
-                        prop.IsReadOnly = true;
+                        if (n is PropertyNode)
+                        {
+                            PropertyNode prop = (PropertyNode)n;
+                            prop.IsReadOnly = true;
+                        }
+                        setNodes(n.Nodes);
                     }
                 }
             }
