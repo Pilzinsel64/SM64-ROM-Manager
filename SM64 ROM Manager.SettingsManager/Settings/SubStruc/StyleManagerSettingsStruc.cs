@@ -13,7 +13,7 @@ namespace SM64_ROM_Manager.SettingsManager
 
         public void ResetValues()
         {
-            AlwaysKeepBlueColors = true;
+            AlwaysKeepBlueColors = false;
             MetroColorParams = VisualThemeLight; // MetroColorGeneratorParameters.Office2016Purple
             UseWindows10Style = true;
         }
