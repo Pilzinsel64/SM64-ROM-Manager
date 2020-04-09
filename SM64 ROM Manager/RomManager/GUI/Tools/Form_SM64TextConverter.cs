@@ -14,20 +14,17 @@ namespace SM64_ROM_Manager
 {
     public partial class Form_SM64TextConverter
     {
-        public Form_SM64TextConverter()
-        {
-            base.Load += Form_SM64TextConverter_Load;
-
-            // Dieser Aufruf ist für den Designer erforderlich.
-            InitializeComponent();
-
-            // Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-            StyleManager.UpdateAmbientColors(this);
-        }
-
-        private bool RaisedClick { get; set; } = false;
 
         private TextBoxX activeTextBox = null;
+        private bool RaisedClick { get; set; } = false;
+
+        public Form_SM64TextConverter()
+        {
+            InitializeComponent();
+            StyleManager.UpdateAmbientColors(this);
+            Load += Form_SM64TextConverter_Load;
+            activeTextBox = TextBoxX_Input;
+        }
 
         private void Form_SM64TextConverter_Load(object sender, EventArgs e)
         {
