@@ -682,7 +682,8 @@ namespace SM64_ROM_Manager.LevelEditor
                         break;
                     case GeolayoutCommandTypes.EndOfNode:
                         nodeIndex -= 1;
-                        curTotalOffset = offsets.Pop();
+                        if (offsets.Any())
+                            curTotalOffset = offsets.Pop();
                         break;
                     case GeolayoutCommandTypes.x10:
                         curTotalOffset += cgLoadDisplayListWithOffset.GetOffset(ref gmd);
