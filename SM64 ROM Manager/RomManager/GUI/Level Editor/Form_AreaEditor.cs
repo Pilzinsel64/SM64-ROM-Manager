@@ -721,7 +721,7 @@ namespace SM64_ROM_Manager.LevelEditor
                                 var glscript = new Geolayoutscript();
                                 glscript.Read(Rommgr, segPointer);
                                 await ParseGeolayoutAndLoadModels(glscript, modelID);
-                                GeolayoutScriptDumps.Add(modelID, glscript);
+                                GeolayoutScriptDumps.AddOrUpdate(modelID, glscript);
                                 //glscript.Close();
                             }
 
