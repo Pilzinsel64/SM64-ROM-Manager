@@ -14,6 +14,8 @@ namespace UpdateInstaller
                     if (Path.GetFileName(dir) == "Reviewed")
                         Directory.Delete(dir, true);
                 }
+
+                Directory.Delete(Path.Combine(config.HostApplicationPath, @"Data\Importer Presets"), true);
             }
         }
     }
