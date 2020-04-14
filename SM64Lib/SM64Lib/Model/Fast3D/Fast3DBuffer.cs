@@ -90,7 +90,7 @@ namespace SM64Lib.Model.Fast3D
             int tdif = newBankStart - Fast3DBankStart;
             foreach (Geopointer geop in DLPointers)
             {
-                if (true/*geop.SegPointer >> 24 == 0xE*/)
+                if (geop.SegPointer >> 24 == BankRamStart >> 24)
                 {
                     Position = geop.SegPointer - Fast3DBankStart;
                     do
