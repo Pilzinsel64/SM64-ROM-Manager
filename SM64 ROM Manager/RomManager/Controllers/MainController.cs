@@ -162,6 +162,7 @@ namespace SM64_ROM_Manager
         private bool savingRom = false;
         private byte hasRomChanged = 0;
         private FileSystemWatcher _RomWatcher = null;
+        private bool isSavingRom = false;
 
         private List<BinaryData> openBinaryDatas = new List<BinaryData>();
 
@@ -178,12 +179,16 @@ namespace SM64_ROM_Manager
                 if (_RomManager != null)
                 {
                     _RomManager.WritingNewProgramVersion -= RomManager_WritingNewRomVersion;
+                    _RomManager.BeforeRomSave -= RomManager_BeforeRomSave;
+                    _RomManager.AfterRomSave -= RomManager_AfterRomSave;
                 }
 
                 _RomManager = value;
                 if (_RomManager != null)
                 {
                     _RomManager.WritingNewProgramVersion += RomManager_WritingNewRomVersion;
+                    _RomManager.BeforeRomSave += RomManager_BeforeRomSave;
+                    _RomManager.AfterRomSave += RomManager_AfterRomSave;
                 }
             }
         }
@@ -331,6 +336,20 @@ namespace SM64_ROM_Manager
             e.RomVersion = v;
         }
 
+        // R o m M a n a g e r   E v e n t s
+
+        private void RomManager_AfterRomSave(RomManager sender, EventArgs e)
+        {
+            isSavingRom = false;
+            ClearUpOpenBinaryDatasAndEnableRomWatcher();
+        }
+
+        private void RomManager_BeforeRomSave(RomManager sender, System.ComponentModel.CancelEventArgs e)
+        {
+            General.DisableRomWatcher();
+            isSavingRom = true;
+        }
+
         // P r i v a t e   F e a u t u r e s
 
         private void SetRomMgr(RomManager rommgr)
@@ -360,7 +379,7 @@ namespace SM64_ROM_Manager
 
         private void HandlesBinaryDataOpened(BinaryData data)
         {
-            if (data.BaseStream is FileStream && data.CanWrite)
+            if (!savingRom && data.BaseStream is FileStream && data.CanWrite)
             {
                 openBinaryDatas.Add(data);
                 SM64_ROM_Manager.General.DisableRomWatcher();
