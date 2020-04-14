@@ -77,24 +77,19 @@ namespace SM64Lib.Levels
                         tArea.TerrainType = (Geolayout.TerrainTypes)clTerrian.GetTerrainType(c);
                         break;
                     case LevelscriptCommandTypes.Normal3DObject:
-                        if (new[] { 0x400000, 0x401700 }.Contains(Conversions.ToInteger(clNormal3DObject.GetSegBehaviorAddr(c))))
-                        {
+                        var scrollTexAddrs = new List<int>(new[] { 0x400000, 0x401700 });
+                        if (rommgr.RomConfig.ScrollTexConfig.UseCustomBehavior)
+                            scrollTexAddrs.Add(rommgr.RomConfig.ScrollTexConfig.CustomBehaviorAddress);
+                        if (scrollTexAddrs.Contains(Conversions.ToInteger(clNormal3DObject.GetSegBehaviorAddr(c))))
                             tArea.ScrollingTextures.Add(new ManagedScrollingTexture(c));
-                        }
                         else
-                        {
                             tArea.Objects.Add(c);
-                        }
                         break;
                     case LevelscriptCommandTypes.ConnectedWarp:
                         if ((new[] { 0xF0, 0xF1 }).Contains(clWarp.GetWarpID(c)))
-                        {
                             tArea.WarpsForGame.Add(c);
-                        }
                         else
-                        {
                             tArea.Warps.Add(c);
-                        }
                         break;
                     case LevelscriptCommandTypes.PaintingWarp:
                     case LevelscriptCommandTypes.InstantWarp:
@@ -492,7 +487,7 @@ namespace SM64Lib.Levels
 
                 foreach (ManagedScrollingTexture c in a.ScrollingTextures)
                 {
-                    c.SaveProperties();
+                    c.SaveProperties(rommgr.RomConfig.ScrollTexConfig);
                     lvlScript0E.Add(c.Command);
                     curFirstBank0xEOffset += (uint)c.Command.Length;
                 }

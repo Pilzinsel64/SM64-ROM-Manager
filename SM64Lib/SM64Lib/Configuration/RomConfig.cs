@@ -11,6 +11,7 @@ namespace SM64Lib.Configuration
         public ObjectBankConfig GlobalObjectBankConfig { get; private set; } = new ObjectBankConfig();
         public MusicConfiguration MusicConfig { get; private set; } = new MusicConfiguration();
         public string SelectedTextProfileInfo { get; set; } = string.Empty;
+        public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
 
         public LevelConfig GetLevelConfig(ushort levelID)
         {

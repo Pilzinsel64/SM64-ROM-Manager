@@ -3,6 +3,7 @@ using Microsoft.VisualBasic.CompilerServices;
 using SM64Lib.Data.System;
 using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
+using SM64Lib.Configuration;
 
 namespace SM64Lib.Levels.ScrolTex
 {
@@ -20,7 +21,7 @@ namespace SM64Lib.Levels.ScrolTex
         /// </summary>
         public ManagedScrollingTexture()
         {
-            Command = new LevelscriptCommand("24 18 1F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00");
+            Command = new LevelscriptCommand("24 18 1F 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 17 00");
             SaveProperties();
         }
 
@@ -175,10 +176,20 @@ namespace SM64Lib.Levels.ScrolTex
 
         public void SaveProperties()
         {
-            SaveProperties(Command);
+            SaveProperties((ScrollTexConfig)null);
+        }
+
+        public void SaveProperties(ScrollTexConfig config)
+        {
+            SaveProperties(Command, config);
         }
 
         public void SaveProperties(LevelscriptCommand Command)
+        {
+            SaveProperties(Command, null);
+        }
+
+        public void SaveProperties(LevelscriptCommand Command, ScrollTexConfig config)
         {
             clScrollingTexture.SetCycleDuration(Command, CycleDuration);
             clScrollingTexture.SetVertexPointer(Command, Conversions.ToUInteger(VertexPointer));
@@ -187,7 +198,8 @@ namespace SM64Lib.Levels.ScrolTex
             clScrollingTexture.SetScrollType(Command, (byte)Type);
             clScrollingTexture.SetScrollBehavior(Command, (byte)Behavior);
             clScrollingTexture.SetGroupID(Command, GroupID);
-            clNormal3DObject.SetSegBehaviorAddr(Command, 0x401700);
+            clNormal3DObject.SetSegBehaviorAddr(Command,
+                config is object && config.UseCustomBehavior && config.CustomBehaviorAddress > -1 ? (uint)config.CustomBehaviorAddress : 0x401700);
             var acts = new[] { false, false, false, false, false, false, false, false };
             acts[7] = Act1;
             acts[6] = Act2;

@@ -137,6 +137,7 @@
     <Compile Include="SM64Lib\Configuration\MusicConfiguration.cs" />
     <Compile Include="SM64Lib\Configuration\ObjectBankConfig.cs" />
     <Compile Include="SM64Lib\Configuration\RomConfig.cs" />
+    <Compile Include="SM64Lib\Configuration\ScrollTexConfig.cs" />
     <Compile Include="SM64Lib\Data\BinaryFile.cs" />
     <Compile Include="SM64Lib\Data\System\Bits.cs" />
     <Compile Include="SM64Lib\FilePathsConfiguration.cs" />
