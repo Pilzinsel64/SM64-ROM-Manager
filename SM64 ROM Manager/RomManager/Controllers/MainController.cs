@@ -382,13 +382,13 @@ namespace SM64_ROM_Manager
             if (!savingRom && data.BaseStream is FileStream && data.CanWrite)
             {
                 openBinaryDatas.Add(data);
-                SM64_ROM_Manager.General.DisableRomWatcher();
+                General.DisableRomWatcher();
             }
         }
 
         private void HandlesBinaryDataClosed(BinaryData data)
         {
-            if (openBinaryDatas.Contains(data))
+            if (!savingRom && openBinaryDatas.Contains(data))
             {
                 openBinaryDatas.Remove(data);
                 ClearUpOpenBinaryDatasAndEnableRomWatcher();
@@ -397,17 +397,16 @@ namespace SM64_ROM_Manager
 
         private void ClearUpOpenBinaryDatasAndEnableRomWatcher()
         {
-            foreach (BinaryData d in openBinaryDatas.ToArray())
+            if (!savingRom)
             {
-                if (!d.CanWrite)
+                foreach (BinaryData d in openBinaryDatas.ToArray())
                 {
-                    openBinaryDatas.Remove(d);
+                    if (!d.CanWrite)
+                        openBinaryDatas.Remove(d);
                 }
-            }
 
-            if (openBinaryDatas.Count == 0)
-            {
-                SM64_ROM_Manager.General.EnableRomWatcher();
+                if (openBinaryDatas.Count == 0)
+                    General.EnableRomWatcher();
             }
         }
 
