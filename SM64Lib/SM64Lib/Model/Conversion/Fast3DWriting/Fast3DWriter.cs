@@ -418,9 +418,9 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
 
                 if (float.IsInfinity(d))
                     d = 0;
-                defaultColor[16] = Conversions.ToByte(Math.Round(s.DiffusePosition.X * d));
-                defaultColor[17] = Conversions.ToByte(Math.Round(s.DiffusePosition.Y * d));
-                defaultColor[18] = Conversions.ToByte(Math.Round(s.DiffusePosition.Z * d));
+                defaultColor[16] = (byte)Conversions.ToSByte(Math.Round(s.DiffusePosition.X * d));
+                defaultColor[17] = (byte)Conversions.ToSByte(Math.Round(s.DiffusePosition.Y * d));
+                defaultColor[18] = (byte)Conversions.ToSByte(Math.Round(s.DiffusePosition.Z * d));
             }
             else
             {
