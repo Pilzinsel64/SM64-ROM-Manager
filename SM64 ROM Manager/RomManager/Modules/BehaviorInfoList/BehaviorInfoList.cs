@@ -34,7 +34,7 @@ namespace SM64_ROM_Manager.LevelEditor
                                 param.Values.Add(new BehaviorInfo.BParamValue()
                                 {
                                     Name = kvp["Name"].Value<string>(),
-                                    Value = Conversions.ToByte(TextValueConverter.ValueFromText(kvp["Value"].Value<string>()))
+                                    Value = Conversions.ToByte(kvp["Value"].Value<string>())
                                 });
                         }
                     }
