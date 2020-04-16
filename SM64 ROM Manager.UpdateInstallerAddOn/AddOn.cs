@@ -10,8 +10,12 @@ namespace UpdateInstaller
             if (!isAfterCopyFiles /*&& config.NewApplicationVersion is null && config.CurrentApplicationVersion is null*/)
             {
                 Directory.Delete(Path.Combine(config.HostApplicationPath, @"Data\Importer Presets"), true);
-                Directory.Delete(Path.Combine(config.HostApplicationPath, @"Data\Custom Objects\Reviewed"), true);
+
                 Directory.Delete(Path.Combine(config.HostApplicationPath, @"Data\Tweaks\Reviewed"), true);
+
+                var pCustomObjectDatabase = Path.Combine(config.HostApplicationPath, @"Data\Custom Objects\Reviewed");
+                if (Directory.Exists(pCustomObjectDatabase))
+                    Directory.Delete(pCustomObjectDatabase, true);
             }
         }
     }
