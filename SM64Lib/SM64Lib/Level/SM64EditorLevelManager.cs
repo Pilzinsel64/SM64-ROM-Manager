@@ -294,33 +294,35 @@ namespace SM64Lib.Levels
             byte cb = 0;
             int Ausnahmen = 0;
             s.Position = startPos;
+            bool ende = false;
+
             do
             {
                 cb = Conversions.ToByte(s.ReadByte());
                 if (s.Position >= s.Length - 1)
-                {
                     return Conversions.ToInteger(s.Length);
-                }
                 else if (cb == 0x1)
                 {
+                    var haveFound = true;
                     s.Position -= 1;
+
                     for (int i = 1; i <= 0x100; i++)
                     {
-                        if (s.ReadByte() != 0x1)
-                            continue;
+                        if (haveFound && s.ReadByte() != 0x1)
+                            haveFound = false;
                     }
 
-                    if (Ausnahmen == areaIndex)
+                    if (haveFound)
                     {
-                        break;
-                    }
-                    else
-                    {
-                        Ausnahmen += 1;
+                        if (Ausnahmen == areaIndex)
+                            ende = true;
+                        else
+                            Ausnahmen += 1;
                     }
                 }
             }
-            while (true);
+            while (!ende);
+
             return Conversions.ToInteger(s.Position);
         }
     }

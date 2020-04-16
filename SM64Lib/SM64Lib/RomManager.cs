@@ -504,7 +504,10 @@ namespace SM64Lib
                 switch (segID)
                 {
                     case 0x19:
-                        lvl = new RMLevel(RomConfig.GetLevelConfig(ldi.ID));
+                        if (IsSM64EditorMode)
+                            lvl = new SM64ELevel(ldi.ID, ldi.Index);
+                        else
+                            lvl = new RMLevel(RomConfig.GetLevelConfig(ldi.ID));
                         LevelManager.LoadLevel(lvl, this, ldi.ID, offset);
                         lvl.LastRomOffset = curLvlSeg.RomStart; // Original Level
                         break;
