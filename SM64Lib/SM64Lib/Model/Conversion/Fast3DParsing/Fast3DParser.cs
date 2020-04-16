@@ -383,7 +383,7 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
                         obj.Materials.Add(Conversions.ToString(curTexSegAddr), mat);
                     }
                 }
-                catch (Exception ex)
+                catch (Exception /*ex*/)
                 {
                     //Interaction.MsgBox(ex.Message);
                 }
