@@ -54,20 +54,31 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
             Color? curColor = default;
             TextureLoadedInfos curTexLoadedInfos = null;
             bool useUVOffsetFix = true;
+            int dlDepth = 0;
 
             // Load Main Segmented Bank
             var curSeg = GetSegBank(rommgr, dl.GeoPointer.SegPointer, AreaID);
-            if (curSeg is null)
-                return;
+            if (curSeg is null) return;
+
             curMesh = new Mesh();
-            obj.Meshes.Add(curMesh);
-            while (cmdIndex < dl.Script.Count && dl.Script[cmdIndex].CommandType != CommandTypes.EndDisplaylist)
+
+            while (cmdIndex < dl.Script.Count /*&& dl.Script[cmdIndex].CommandType != CommandTypes.EndDisplaylist*/)
             {
                 cmd = dl.Script[cmdIndex];
                 cmdarr = cmd.ToArray();
                 var switchExpr = cmd.CommandType; // &H20000
                 switch (switchExpr)
                 {
+                    case CommandTypes.DisplayList:
+                        if (cmdarr[1] != 1)
+                            dlDepth += 1;
+                        break;
+
+                    case CommandTypes.EndDisplaylist:
+                        if (dlDepth > 0)
+                            dlDepth -= 1;
+                        break;
+
                     case CommandTypes.ClearGeometryMode:
                         {
                             curGeometryMode = curGeometryMode & ~F3D_CLEARGEOMETRYMODE.GetGeometryMode(cmd);
@@ -316,6 +327,9 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
 
                 cmdIndex += 1;
             }
+
+            //if (curMesh.Faces.Any())
+                obj.Meshes.Add(curMesh);
         }
 
         /// <summary>Parse a Displaylist to an Object3D.</summary>
