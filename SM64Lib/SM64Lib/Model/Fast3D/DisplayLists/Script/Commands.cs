@@ -127,7 +127,7 @@ namespace SM64Lib.Model.Fast3D.DisplayLists.Script.Commands
             cmd.Position = 5;
             byte val = cmd.ReadByte();
             cmd.Position = 0;
-            return Conversions.ToByte(val >> 2 & 0x2);
+            return Conversions.ToByte((val >> 2) & 0x2);
         }
 
         public static byte GetWrapS(DisplayListCommand cmd)

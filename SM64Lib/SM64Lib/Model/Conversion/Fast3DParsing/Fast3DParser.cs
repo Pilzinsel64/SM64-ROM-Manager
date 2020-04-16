@@ -269,10 +269,10 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
                     case CommandTypes.SetImage:
                         {
                             int newAddr = F3D_SETIMG.GetSegmentedAddress(cmd);
-                            if ((uint)newAddr != 0xFFFFFFFF)
-                            {
+                            //if ((uint)newAddr != 0xFFFFFFFF)
+                            //{
                                 curTexSegAddr = newAddr;
-                            }
+                            //}
 
                             break;
                         }
@@ -290,7 +290,7 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
                             cmd.Position = 0;
                             if (checkVal != 0x7000000)
                             {
-                                if ((checkVal >> 24 & 0xFF) == 0)
+                                if (cmdarr[4] == 0)
                                 {
                                     curTexFormat = F3D_SETTILE.GetTextureFormat(cmd);
                                 }
@@ -353,7 +353,7 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
 
         private static void ProcessTexture(Object3D obj, RomManager rommgr, byte? AreaID, DisplayList dl, N64Graphics.N64Codec texFormat, Dictionary<int, Material> knownTextures, ref Material curTexture, int curTexSegAddr, Size curTexSize, int curTexWrapT, int curTexWrapS, System.Numerics.Vector2 curTexScale, byte[] curTexPalette, int curTexPaletteSegAddr, Color? curColor, ref TextureLoadedInfos curTexLoadedInfos)
         {
-            if (curTexSegAddr < 0)
+            if (curTexSegAddr == 0 && curTexScale.X == 0 && curTexScale.Y == 0)
                 return;
             if (knownTextures.ContainsKey(curTexSegAddr))
             {
@@ -385,7 +385,7 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
                 }
                 catch (Exception ex)
                 {
-                    Interaction.MsgBox(ex.Message);
+                    //Interaction.MsgBox(ex.Message);
                 }
             }
         }
