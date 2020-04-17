@@ -18,6 +18,7 @@ namespace SM64_ROM_Manager
         private void ThankYouForm_Load(object sender, EventArgs e)
         {
             WebBrowser1.Url = new Uri(WebAddress);
+            WebBrowser1.Refresh(WebBrowserRefreshOption.Completely);
             loaded = true;
         }
 
