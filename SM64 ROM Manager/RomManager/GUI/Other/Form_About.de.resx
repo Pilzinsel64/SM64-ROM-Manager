@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LabelX1.Text" xml:space="preserve">
-    <value>&lt;font color="#C0504D"&gt;&lt;b&gt;SM64 ROM Manager&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;von &lt;font color="#5C83B4"&gt;Pilzinsel64&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Der SM64 ROM Manager ist ein &lt;u&gt;brand-neues&lt;/u&gt; benutzerfreundliches All-In-One-Programm for SM64 Hacking.&lt;br/&gt;Es beinhaltet alles, was man zum Erstellen eines wundervollen SM64 Hacks braucht.&lt;br/&gt;</value>
+    <value>&lt;font color="#C0504D"&gt;&lt;b&gt;SM64 ROM Manager&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;von &lt;font color="#5C83B4"&gt;Pilzinsel64&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;Der SM64 ROM Manager ist ein &lt;u&gt;brand-neues&lt;/u&gt; benutzerfreundliches All-In-One-Programm for SM64 Hacking.&lt;br/&gt;Es beinhaltet alles, was man zum Erstellen eines wundervollen SM64 Hacks braucht.&lt;br/&gt;&lt;br/&gt;&lt;u&gt;Vielen Dank für all meine Patreon-Spender:&lt;/u&gt;&lt;br/&gt;- GooseDaJuice</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Über</value>
