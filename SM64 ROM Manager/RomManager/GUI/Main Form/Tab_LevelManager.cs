@@ -11,6 +11,7 @@ using global::SM64_ROM_Manager.My.Resources;
 using global::SM64Lib.Levels;
 using global::SM64Lib.ObjectBanks.Data;
 using SM64Lib.TextValueConverter;
+using System.Linq;
 
 namespace SM64_ROM_Manager
 {
@@ -518,7 +519,8 @@ namespace SM64_ROM_Manager
             ListBoxAdv_LM_Areas.Items.Clear();
 
             // Load all Areas
-            foreach (byte areaID in Controller.GetUsedLevelAreaIDs(Conversions.ToUShort(CurrentLevelIndex)))
+            var areaIDs = Controller.GetUsedLevelAreaIDs(Conversions.ToUShort(CurrentLevelIndex));
+            foreach (byte areaID in areaIDs)
             {
                 var btn = new ButtonItem() { Text = Form_Main_Resources.Text_Area + " " + Conversions.ToString(areaID) };
 
@@ -537,11 +539,16 @@ namespace SM64_ROM_Manager
             LM_LoadingAreaList = false;
 
             // Select first item, if possible
-            if (ListBoxAdv_LM_Areas.Items.Count > selectAreaIndex)
+            if (areaIDs.Length > selectAreaIndex)
             {
                 var selItem = ListBoxAdv_LM_Areas.Items[selectAreaIndex];
                 ListBoxAdv_LM_Areas.SelectedItem = selItem;
                 ListBoxAdv_LM_Areas.EnsureVisible(selItem);
+            }
+            else
+            {
+                ListBoxAdv_LM_Areas.SelectedItem = null;
+                ListBoxAdv_LM_Areas.SelectedItem = null;
             }
         }
 
@@ -661,6 +668,7 @@ namespace SM64_ROM_Manager
             ListBoxAdv_LM_Levels.Items.RemoveAt(levelIndex);
             LM_LoadingLevel = false;
             ListBoxAdv_LM_Levels.Refresh();
+            LoadLevelSettings(-1);
         }
 
         private void LoadAreaSettings(int levelIndex, int areaIndex)
@@ -773,7 +781,6 @@ namespace SM64_ROM_Manager
                     LoadAreaList(0);
                     TabControl_LM_Level.Enabled = true;
                     GroupBox_LM_Areas.Enabled = true;
-                    TabControl_LM_Area.Enabled = true;
                     ButtonX_LM_LevelsMore.Enabled = true;
                 }
             }
