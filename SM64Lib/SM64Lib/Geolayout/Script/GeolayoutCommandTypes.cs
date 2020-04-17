@@ -19,6 +19,7 @@ namespace SM64Lib.Geolayout.Script
         CameraPreset = 0xF,
         x10 = 0x10,
         x11 = 0x11,
+        x12 = 0x12,
         LoadDisplaylistWithOffset = 0x13,
         BillboardModel = 0x14,
         LoadDisplaylist = 0x15,
