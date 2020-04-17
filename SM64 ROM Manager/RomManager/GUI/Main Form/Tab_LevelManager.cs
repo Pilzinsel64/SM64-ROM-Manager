@@ -657,7 +657,9 @@ namespace SM64_ROM_Manager
 
         private void RemoveLevelFromList(int levelIndex)
         {
+            LM_LoadingLevel = true;
             ListBoxAdv_LM_Levels.Items.RemoveAt(levelIndex);
+            LM_LoadingLevel = false;
             ListBoxAdv_LM_Levels.Refresh();
         }
 
