@@ -1704,34 +1704,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             bool isColorPresent = Conversions.ToDouble(Conversions.ToString(mat.Color) + Conversions.ToString(0xFFFFFF00U)) != 0xFFFFFF00U;
             if (mat.HasTexture)
             {
-                var switchExpr = mat.Type;
-                switch (switchExpr)
-                {
-                    case MaterialType.None:
-                    case MaterialType.TextureSolid:
-                    case MaterialType.TextureAlpha:
-                    case MaterialType.TextureTransparent:
-                        {
-                            colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.TEXEL0, Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE);
-                            break;
-                        }
-
-                    case MaterialType.ColorSolid:
-                    case MaterialType.ColorTransparent:
-                        {
-                            if (isColorPresent)
-                            {
-                                colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.TEXEL0, Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.ENVIRONMENT);
-                            }
-                            else
-                            {
-                                // TODO: This condition cannot be met with current setup
-                                colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.TEXEL0, Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE);
-                            }
-
-                            break;
-                        }
-                }
+                colorFormula = Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.Formula.Multiply(Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.TEXEL0, Model.Fast3D.DisplayLists.Script.Commands.F3D_SETCOMBINE.CCMUX.SHADE);
             }
             else
             {
