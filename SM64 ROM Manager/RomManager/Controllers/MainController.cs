@@ -163,6 +163,7 @@ namespace SM64_ROM_Manager
         private byte hasRomChanged = 0;
         private FileSystemWatcher _RomWatcher = null;
         private bool isSavingRom = false;
+        private bool isExecutingProcess = false;
 
         private List<BinaryData> openBinaryDatas = new List<BinaryData>();
 
@@ -297,7 +298,6 @@ namespace SM64_ROM_Manager
             this.TextManagerController.SettingStatusText += text => this.StatusText = text;
             this.TextManagerController.RequestStatusText += e => e.Value = this.StatusText;
             this.TextManagerController.ErrorBecauseNoRomLoaded += () => ErrorBecauseNoRomLoaded?.Invoke();
-
         }
 
         public MainController(MainForm mainForm) : this()
@@ -311,6 +311,11 @@ namespace SM64_ROM_Manager
             BinaryData.AnyBinaryDataOpened += HandlesBinaryDataOpened;
             BinaryData.AnyBinaryDataClosed += HandlesBinaryDataClosed;
             BinaryData.AnyBinaryDataDisposed += ClearUpOpenBinaryDatasAndEnableRomWatcher;
+
+            // Watch processes
+            SM64Lib.Patching.PatchClass.StartingExternalTool += PatchClass_StartingExternalTool;
+            SM64Lib.Patching.PatchClass.ExitingExternalTool += PatchClass_ExitingExternalTool;
+
             var appVersion = new ApplicationVersion(new Version(Application.ProductVersion), Conversions.ToInteger(SM64_ROM_Manager.My.Resources.Resources.DevelopmentBuild), (Channels)Conversions.ToInteger(SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage));
             updateClient = new UpdateClient(UPDATE_URL, appVersion, Settings.Network.MinimumUpdateChannel)
             {
@@ -327,6 +332,22 @@ namespace SM64_ROM_Manager
             Settings.AutoSave = true;
         }
 
+        // P a t c h C l a s s   E v e n t s
+
+        private void PatchClass_ExitingExternalTool(SM64Lib.Patching.PatchClass instance)
+        {
+            isExecutingProcess = false;
+            ClearUpOpenBinaryDatasAndEnableRomWatcher();
+        }
+
+        private void PatchClass_StartingExternalTool(SM64Lib.Patching.PatchClass instance)
+        {
+            General.DisableRomWatcher();
+            isExecutingProcess = true;
+        }
+
+        // R o m M a n a g e r   E v e n t s
+
         private void RomManager_WritingNewRomVersion(RomManager sender, RomVersionEventArgs e)
         {
             var v = e.RomVersion;
@@ -335,8 +356,6 @@ namespace SM64_ROM_Manager
             v.DevelopmentBuild = Conversions.ToInteger(SM64_ROM_Manager.My.Resources.Resources.DevelopmentBuild);
             e.RomVersion = v;
         }
-
-        // R o m M a n a g e r   E v e n t s
 
         private void RomManager_AfterRomSave(RomManager sender, EventArgs e)
         {
@@ -397,7 +416,7 @@ namespace SM64_ROM_Manager
 
         private void ClearUpOpenBinaryDatasAndEnableRomWatcher()
         {
-            if (!savingRom)
+            if (!savingRom && !isExecutingProcess)
             {
                 foreach (BinaryData d in openBinaryDatas.ToArray())
                 {
