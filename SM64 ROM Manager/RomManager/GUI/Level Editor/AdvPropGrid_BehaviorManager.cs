@@ -441,14 +441,10 @@ namespace SM64_ROM_Manager.LevelEditor
                 {
                     case var @case when @case == typeof(bool):
                         {
-                            if ((bool)e.TypedValue == true)
-                            {
+                            if (Conversions.ToBoolean(e.TypedValue))
                                 e.StringValue = "Yes";
-                            }
                             else
-                            {
                                 e.StringValue = "No";
-                            }
 
                             e.IsConverted = true;
                             break;

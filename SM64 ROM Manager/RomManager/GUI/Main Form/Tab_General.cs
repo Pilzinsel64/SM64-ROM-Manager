@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using global::DevComponents.DotNetBar;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64_ROM_Manager.My.Resources;
+using DevComponents.DotNetBar.Validator;
 
 namespace SM64_ROM_Manager
 {
@@ -79,11 +80,13 @@ namespace SM64_ROM_Manager
             {
                 labelX_RomConfigStatus.Text = "Available";
                 pictureBox_RomConfigStatus.Image = MyIcons.icons8_checkmark_16px_1;
+                highlighter1.SetHighlightColor(groupPanel1, eHighlightColor.None);
             }
             else
             {
                 labelX_RomConfigStatus.Text = "Missing";
                 pictureBox_RomConfigStatus.Image = MyIcons.icons8_delete_sign_16px;
+                highlighter1.SetHighlightColor(groupPanel1, eHighlightColor.Red);
             }
         }
 

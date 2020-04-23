@@ -31,11 +31,12 @@ using global::SM64Lib.Geolayout;
 using global::SM64Lib.Levels;
 using global::SM64Lib.Levels.Script.Commands;
 using global::SM64Lib.Music;
-using global::SM64Lib.ObjectBanks;
+using global::SM64Lib.Objects.ObjectBanks;
 using global::SM64Lib.Script;
 using SM64Lib.TextValueConverter;
 using Z.Core.Extensions;
 using SM64_ROM_Manager.My.Resources;
+using System.Diagnostics;
 
 namespace SM64_ROM_Manager
 {
@@ -768,15 +769,33 @@ namespace SM64_ROM_Manager
             return RomManager;
         }
 
-        public void OpenGlobalObjectBankManager()
+        public void OpenGlobalModelBankManager()
         {
-            if (RomManager.GlobalObjectBank is null)
+            if (RomManager.GlobalModelBank is null)
             {
-                RomManager.CreateNewGlobalObjectBank();
+                RomManager.CreateNewGlobalModelBank();
             }
 
-            var mgr = new CustomBankManager(RomManager, RomManager.GlobalObjectBank);
+            var mgr = new ModelBankManager(RomManager, RomManager.GlobalModelBank);
             mgr.Show();
+        }
+
+        public void OpenGlobalBehaviorManager()
+        {
+            if (RomManager?.GlobalBehaviorBank is object)
+            {
+                var mgr = new BehaviorBankManager(RomManager.GlobalBehaviorBank, RomManager);
+                mgr.Show();
+            }
+        }
+
+        public void OpenCustomObjectsManager()
+        {
+            if (RomManager is object)
+            {
+                var mgr = new CustomObjectsManager(RomManager.CustomObjects, RomManager);
+                mgr.Show();
+            }
         }
 
         public void OpenPluginManager()
@@ -844,6 +863,23 @@ namespace SM64_ROM_Manager
             frm.Show();
         }
 
+        public void CallPublicHackingDocuments()
+        {
+            Process.Start("https://docs.google.com/document/d/1pSYR91UiMVKnP3PyvJiCdwRF5wNS_nZzMe-r2WPQUJk/edit?usp=sharing");
+        }
+
+        public async Task OpenTextureEditor()
+        {
+            // Load main levelscript because the segmented banks
+            var lvlScriptMain = LevelEditor.Form_AreaEditor.LoadMainLevelscript(RomManager);
+            await LevelEditor.Form_AreaEditor.ParseLevelscriptAndLoadSegmentedBanks(RomManager, lvlScriptMain);
+
+            // Open Texture editor
+            var cat = LevelEditor.Form_AreaEditor.GetOtherTexturesCategorie(RomManager);
+            var frm = new LevelEditor.TextureEditor(RomManager, new[] { cat });
+            frm.Show();
+        }
+
         public void OpenStyleManager()
         {
             SM64_ROM_Manager.My.MyProject.Forms.Form_Stylemanager.Show();
@@ -886,8 +922,8 @@ namespace SM64_ROM_Manager
         public void OpenObjectBankDataEditor()
         {
             var editor = new SM64_ROM_Manager.ObjectBankDataEditor(SM64Lib.General.ObjectBankData);
-            var removedObds = new List<SM64Lib.ObjectBanks.Data.ObjectBankData>();
-            var changedObds = new List<SM64Lib.ObjectBanks.Data.ObjectBankData>();
+            var removedObds = new List<SM64Lib.Objects.ObjectBanks.Data.ObjectBankData>();
+            var changedObds = new List<SM64Lib.Objects.ObjectBanks.Data.ObjectBankData>();
 
             // Watch for removed and changed Obds
             editor.RemovedObjectBankData += obd => removedObds.Add(obd);
@@ -900,7 +936,7 @@ namespace SM64_ROM_Manager
             SaveObjectBankData();
 
             // Set removed and changed Obds in Levels to Null
-            void setObdsToNull(List<SM64Lib.ObjectBanks.Data.ObjectBankData> dic, bool remove) { if (RomManager is object) { foreach (Level lvl in RomManager.Levels) { foreach (byte bankID in lvl.LoadedObjectBanks.Keys.ToArray()) { foreach (SM64Lib.ObjectBanks.Data.ObjectBankData obd in dic) { var curObd = lvl.GetObjectBankData(bankID); if (curObd == obd) { lvl.ChangeObjectBankData(bankID, remove ? null : curObd); } } } } } };
+            void setObdsToNull(List<SM64Lib.Objects.ObjectBanks.Data.ObjectBankData> dic, bool remove) { if (RomManager is object) { foreach (Level lvl in RomManager.Levels) { foreach (byte bankID in lvl.LoadedObjectBanks.Keys.ToArray()) { foreach (SM64Lib.Objects.ObjectBanks.Data.ObjectBankData obd in dic) { var curObd = lvl.GetObjectBankData(bankID); if (curObd == obd) { lvl.ChangeObjectBankData(bankID, remove ? null : curObd); } } } } } };
             setObdsToNull(removedObds, true);
             setObdsToNull(changedObds, false);
 
@@ -908,7 +944,7 @@ namespace SM64_ROM_Manager
             ObjectBankDataChanged?.Invoke();
         }
 
-        private void OpenScriptDumper<TCmd, eTypes>(BaseCommandCollection<TCmd, eTypes> script)
+        private void OpenScriptDumper<TCmd, eTypes>(BaseCommandCollection<TCmd, eTypes> script) where TCmd : BaseCommand<eTypes>
         {
             var frm = new SM64_ROM_Manager.ScriptDumper<TCmd, eTypes>();
             frm.Script = script;
@@ -924,7 +960,7 @@ namespace SM64_ROM_Manager
                 //void objectCountChanged(object sender, EventArgs e) => 
                 //    LevelCustomObjectsCountChanged?.Invoke(new EventArguments.LevelEventArgs(levelIndex, lvl.LevelID));
 
-                var mgr = new CustomBankManager(RomManager, lvl.LocalObjectBank);
+                var mgr = new ModelBankManager(RomManager, lvl.LocalObjectBank);
                 //mgr.ObjectAdded += objectCountChanged;
                 //mgr.ObjectRemoved += objectCountChanged;
                 mgr.Show();
@@ -1048,7 +1084,7 @@ namespace SM64_ROM_Manager
         {
             var fp = RomManager.GetRomConfigFilePath();
             var fn = Path.GetFileName(fp);
-            var a = File.Exists(fp);
+            var a = RomManager.IsNewROM || File.Exists(fp);
             return (fn, a);
         }
 

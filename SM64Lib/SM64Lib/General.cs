@@ -14,7 +14,7 @@ namespace SM64Lib
         public static bool[] ActSelectorDefaultValues { get; private set; } = new bool[] { false, false, false, true, true, false, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false, false, false, false, false, false };
         public static IniParser.FileIniDataParser FileIniParser { get; private set; } = new IniParser.FileIniDataParser();
         public static IniParser.StreamIniDataParser StreamIniParser { get; private set; } = new IniParser.StreamIniDataParser();
-        public static ObjectBanks.Data.ObjectBankDataListCollection ObjectBankData { get; private set; } = new ObjectBanks.Data.ObjectBankDataListCollection();
+        public static Objects.ObjectBanks.Data.ObjectBankDataListCollection ObjectBankData { get; private set; } = new Objects.ObjectBanks.Data.ObjectBankDataListCollection();
         public static PatchClass PatchClass { get; private set; } = new PatchClass();
 
         public static bool IsDebugging

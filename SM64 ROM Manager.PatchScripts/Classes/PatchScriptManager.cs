@@ -13,6 +13,7 @@ using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 using global::Pilz.S3DFileParser;
 using global::SM64Lib;
+using Newtonsoft.Json.Linq;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -20,37 +21,36 @@ namespace SM64_ROM_Manager.PatchScripts
     {
         public void Save(PatchProfile patch, string dir)
         {
-            XElement xml = XElement.Parse($"<m64tweak name=\"{patch.Name}\" description=\"{patch.Description}\" version=\"{patch.Version.ToString()}\"></m64tweak>");
-            foreach (PatchScript script in patch.Scripts)
-                xml.Add(ScriptToXElement(script));
             if (string.IsNullOrEmpty(patch.FileName))
             {
-                patch.FileName = Path.Combine(dir, patch.Name + ".xml");
+                patch.FileName = Path.Combine(dir, patch.Name + ".json");
             }
-
-            xml.Save(patch.FileName);
-        }
-
-        public XElement ScriptToXElement(PatchScript script)
-        {
-            string references = "";
-            foreach (string @ref in script.References)
+            else if (Path.GetExtension(patch.FileName) == ".xml")
             {
-                if (!string.IsNullOrEmpty(references))
-                {
-                    references += ";";
-                }
-
-                references += @ref;
+                var newFileName = Path.ChangeExtension(patch.FileName, ".json");
+                File.Delete(patch.FileName);
+                patch.FileName = newFileName;
             }
 
-            var xe = XElement.Parse($"<patch name=\"{script.Name}\" description=\"{script.Description}\" type=\"{(int)script.Type}\" references=\"{references}\"></patch>");
-            xe.Value = script.Script;
-
-            return xe;
+            File.WriteAllText(patch.FileName, JObject.FromObject(patch).ToString());
         }
 
         public PatchProfile Read(string fileName)
+        {
+            switch (Path.GetExtension(fileName))
+            {
+                case ".json":
+                    var profile = JObject.Parse(File.ReadAllText(fileName)).ToObject<PatchProfile>();
+                    profile.FileName = fileName;
+                    return profile;
+                case ".xml":
+                    return ReadPatchProfileFromXml(fileName);
+                default:
+                    return null;
+            }
+        }
+
+        private PatchProfile ReadPatchProfileFromXml(string fileName)
         {
             var patch = new PatchProfile();
             var xml = XDocument.Load(fileName);

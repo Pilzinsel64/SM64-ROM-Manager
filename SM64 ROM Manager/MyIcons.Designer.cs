@@ -63,6 +63,16 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_300_degrees_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_300_degrees_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_about_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_about_16px", resourceCulture);
@@ -196,6 +206,16 @@ namespace SM64_ROM_Manager.My.Resources {
         public static System.Drawing.Bitmap icons8_copy_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_copy_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_cube_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_cube_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -463,6 +483,16 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_module_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_module_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_move_node_down_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_move_node_down_16px", resourceCulture);
@@ -496,6 +526,16 @@ namespace SM64_ROM_Manager.My.Resources {
         public static System.Drawing.Bitmap icons8_open_folder_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_open_folder_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_package_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_package_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -666,6 +706,16 @@ namespace SM64_ROM_Manager.My.Resources {
         public static System.Drawing.Bitmap icons8_split_vertical_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_split_vertical_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_static_view_level1_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_static_view_level1_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

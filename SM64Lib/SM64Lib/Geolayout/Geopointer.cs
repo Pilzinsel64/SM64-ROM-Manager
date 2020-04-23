@@ -1,4 +1,6 @@
 ﻿
+using Newtonsoft.Json;
+
 namespace SM64Lib.Geolayout
 {
     public class Geopointer
@@ -8,7 +10,12 @@ namespace SM64Lib.Geolayout
         public System.Numerics.Vector3 ModelScale { get; set; } = System.Numerics.Vector3.One;
         public System.Numerics.Vector3 ModelOffset { get; set; } = System.Numerics.Vector3.Zero;
 
-        public Geopointer(byte Layer)
+        [JsonConstructor]
+        private Geopointer()
+        {
+        }
+
+        public Geopointer(byte Layer) : this()
         {
             this.Layer = Layer;
         }

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using global::DevComponents.AdvTree;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64_ROM_Manager.SettingsManager;
-using global::SM64Lib.ObjectBanks.Data;
+using global::SM64Lib.Objects.ObjectBanks.Data;
 using SM64Lib.TextValueConverter;
 using Z.Core.Extensions;
 

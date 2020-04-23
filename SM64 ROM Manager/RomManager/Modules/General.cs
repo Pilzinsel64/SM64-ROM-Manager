@@ -26,6 +26,9 @@ namespace SM64_ROM_Manager
     internal static class General
     {
 
+        public delegate void LoadedAreaVisualMapDisplayListsEventHandler(DisplayList[] dls);
+        public static event LoadedAreaVisualMapDisplayListsEventHandler LoadedAreaVisualMapDisplayLists;
+
         private static bool hasLoadedObjectCombos = false;
         private static bool hasLoadedBehaviorInfos = false;
         private const string p_ObjectCombos = @"Area Editor\Object Combos.json";
@@ -348,12 +351,17 @@ namespace SM64_ROM_Manager
         internal static Object3D LoadAreaVisualMapAsObject3D(RomManager rommgr, LevelArea area)
         {
             var obj = new Object3D();
+            var dls = new List<DisplayList>();
+            
             foreach (Geopointer geop in area.AreaModel.Fast3DBuffer.DLPointers)
             {
                 var dl = new DisplayList();
                 dl.FromStream(geop, rommgr, area.AreaID);
                 dl.ToObject3D(obj, rommgr, area.AreaID);
+                dls.Add(dl);
             }
+
+            LoadedAreaVisualMapDisplayLists?.Invoke(dls.ToArray());
 
             return obj;
         }

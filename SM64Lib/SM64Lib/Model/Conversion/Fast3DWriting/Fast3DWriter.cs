@@ -10,6 +10,7 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib.N64Graphics;
 using Z.Collections.Extensions;
 using System.Runtime.CompilerServices;
+using static Microsoft.VisualBasic.Conversion;
 
 namespace SM64Lib.Model.Conversion.Fast3DWriting
 {
@@ -162,8 +163,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             public uint GeoMode { get; set; } = 0;
             public TextureEntry Texture { get; set; } = null;
             public bool EnableScrolling { get; set; } = false;
-            public Fast3DWriting.DisplaylistSelectionSettings DisplaylistSelection { get; set; } = new Fast3DWriting.DisplaylistSelectionSettings();
-            public Conversion.FaceCullingMode FaceCullingMode { get; set; } = Conversion.FaceCullingMode.Back;
+            public DisplaylistSelectionSettings DisplaylistSelection { get; set; } = new Fast3DWriting.DisplaylistSelectionSettings();
+            public FaceCullingMode FaceCullingMode { get; set; } = Conversion.FaceCullingMode.Back;
             public bool EnableMirrorS { get; set; } = false;
             public bool EnableMirrorT { get; set; } = false;
             public bool EnableClampS { get; set; } = false;
@@ -976,7 +977,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 EnableMirrorT = curEntry.EnableMirrorT,
                 EnableClampS = curEntry.EnableClampS,
                 EnableClampT = curEntry.EnableClampT,
-                EnableCrystalEffect = curEntry.EnableCrystalEffect
+                EnableCrystalEffect = curEntry.EnableCrystalEffect,
+                FaceCullingMode = curEntry.FaceCullingMode
             };
 
             // Set default size
@@ -1288,7 +1290,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         {
             ImpF3D("BA 00 14 02 00 10 00 00");
             string cmdF8 = "";
-            cmdF8 = $"F8 00 00 00 {Microsoft.VisualBasic.Conversion.Hex(settings.Fog.Color.R)} {Microsoft.VisualBasic.Conversion.Hex(settings.Fog.Color.G)} {Microsoft.VisualBasic.Conversion.Hex(settings.Fog.Color.B)} FF";
+            cmdF8 = $"F8 00 00 00 {Hex(settings.Fog.Color.R)} {Hex(settings.Fog.Color.G)} {Hex(settings.Fog.Color.B)} FF";
             ImpF3D(cmdF8);
             switch (layer)
             {
@@ -1607,13 +1609,13 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         {
             uint off = startSegOffset + offset;
             byte type = GetTypeFromTexType(texType, true);
-            ImpF3D($"FD {Microsoft.VisualBasic.Conversion.Hex(type)} 00 00 {Microsoft.VisualBasic.Conversion.Hex(curSeg & 0xFF)} {Microsoft.VisualBasic.Conversion.Hex(off >> 16 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(off >> 8 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(off & (long)0xFF)}");
+            ImpF3D($"FD {Hex(type)} 00 00 {Hex(curSeg & 0xFF)} {Hex(off >> 16 & (long)0xFF)} {Hex(off >> 8 & (long)0xFF)} {Hex(off & (long)0xFF)}");
         }
 
         private void ImpCmdF5_First(N64Codec texType)
         {
             byte type = GetTypeFromTexType(texType, true);
-            ImpF3D($"F5 {Microsoft.VisualBasic.Conversion.Hex(type)} 00 00 07 00 00 00");
+            ImpF3D($"F5 {Hex(type)} 00 00 07 00 00 00");
         }
 
         private void ImpCmdF5_Second(Material mat, uint texWidth, uint texHeight)
@@ -1664,7 +1666,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             }
 
             // Create Command
-            ImpF3D($"F5 {Microsoft.VisualBasic.Conversion.Hex(upper >> 16 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(upper >> 8 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(upper & (long)0xFF)} 00 {Microsoft.VisualBasic.Conversion.Hex(lower >> 16 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(lower >> 8 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(lower & (long)0xFF)}");
+            ImpF3D($"F5 {Hex(upper >> 16 & (long)0xFF)} {Hex(upper >> 8 & (long)0xFF)} {Hex(upper & (long)0xFF)} 00 {Hex(lower >> 16 & (long)0xFF)} {Hex(lower >> 8 & (long)0xFF)} {Hex(lower & (long)0xFF)}");
         }
 
         private void AddCmdF3(Material mat)
@@ -1684,7 +1686,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             }
 
             lower = Conversions.ToUInteger((numTexels << 12 | tl) & (long)0xFFFFFF);
-            cmd = $"F3 00 00 00 07 {Microsoft.VisualBasic.Conversion.Hex(lower >> 16 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(lower >> 8 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(lower & (long)0xFF)}";
+            cmd = $"F3 00 00 00 07 {Hex(lower >> 16 & (long)0xFF)} {Hex(lower >> 8 & (long)0xFF)} {Hex(lower & (long)0xFF)}";
             ImpF3D(cmd);
         }
 
@@ -1693,7 +1695,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             ushort width = Conversions.ToUShort(mat.TexWidth - (long)1 << 2 & 0xFFF);
             ushort height = Conversions.ToUShort(mat.TexHeight - (long)1 << 2 & 0xFFF);
             uint data = Conversions.ToUInteger(Conversions.ToInteger(width) << 12 | height);
-            string cmd = $"F2 00 00 00 00 {Microsoft.VisualBasic.Conversion.Hex(data >> 16 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(data >> 8 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(data & (long)0xFF)}";
+            string cmd = $"F2 00 00 00 00 {Hex(data >> 16 & (long)0xFF)} {Hex(data >> 8 & (long)0xFF)} {Hex(data & (long)0xFF)}";
             ImpF3D(cmd);
         }
 
@@ -1877,13 +1879,13 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 enabledVertexColors = false;
             }
 
-            ImpF3D($"04 {Microsoft.VisualBasic.Conversion.Hex(amount - 0x10 & 0xFF)} 00 {Microsoft.VisualBasic.Conversion.Hex(amount & 0xFF)} {Microsoft.VisualBasic.Conversion.Hex(curSeg)} {Microsoft.VisualBasic.Conversion.Hex(off >> 16 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(off >> 8 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(off & (long)0xFF)}");
+            ImpF3D($"04 {Hex(amount - 0x10 & 0xFF)} 00 {Hex(amount & 0xFF)} {Hex(curSeg)} {Hex(off >> 16 & (long)0xFF)} {Hex(off >> 8 & (long)0xFF)} {Hex(off & (long)0xFF)}");
             for (int i = 0, loopTo = grp.NumTri - 1; i <= loopTo; i++)
             {
                 byte a = Conversions.ToByte(grp.indexList[i * 3] * 0xA);
                 byte b = Conversions.ToByte(grp.indexList[i * 3 + 1] * 0xA);
                 byte c = Conversions.ToByte(grp.indexList[i * 3 + 2] * 0xA);
-                ImpF3D($"BF 00 00 00 00 {Microsoft.VisualBasic.Conversion.Hex(a)} {Microsoft.VisualBasic.Conversion.Hex(b)} {Microsoft.VisualBasic.Conversion.Hex(c)}");
+                ImpF3D($"BF 00 00 00 00 {Hex(a)} {Hex(b)} {Hex(c)}");
             }
         }
 
@@ -1895,11 +1897,11 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             needToResetCrystalEffectCommands = false;
         }
 
-        private void ImpMaterialCmds(Material mat, ref bool needToReShiftTMEM, ref bool hasCrystalEffectEnabled, ref bool needToResetCrystalEffectCommands)
+        private void ImpMaterialCmds(Material mat, ref bool needToReShiftTMEM, ref bool hasCrystalEffectEnabled, ref bool needToResetCrystalEffectCommands, ref bool disabledBackfaceCulling)
         {
             if (mat.EnableCrystalEffect && !hasCrystalEffectEnabled)
             {
-                ImpF3D("B7 00 00 00 00 04 00 00");
+                ImpF3D($"B7 00 00 00 00 04 00 00");
                 ImpF3D("BB 00 00 01 08 00 08 00");
                 hasCrystalEffectEnabled = true;
                 needToResetCrystalEffectCommands = true;
@@ -1914,7 +1916,18 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 ImpCmdFD(mat.PaletteOffset, N64Codec.RGBA16);
                 ImpF3D("F5 00 01 00 01 00 00 00");
                 ushort num = Conversions.ToUShort(Conversions.ToLong(mat.PaletteSize / (double)2 - 1) << 6);
-                ImpF3D($"F0 00 00 00 01 {Microsoft.VisualBasic.Conversion.Hex(num >> 8 & 0xFF)} {Microsoft.VisualBasic.Conversion.Hex(num & 0xFF)} 00");
+                ImpF3D($"F0 00 00 00 01 {Hex(num >> 8 & 0xFF)} {Hex(num & 0xFF)} 00");
+            }
+
+            if (((mat.FaceCullingMode & FaceCullingMode.Back) != FaceCullingMode.Back) && !disabledBackfaceCulling)
+            {
+                ImpF3D($"B6 00 00 00 00 00 20 00"); // Disable back face culling
+                disabledBackfaceCulling = true;
+            }
+            else if (disabledBackfaceCulling)
+            {
+                ImpF3D($"B7 00 00 00 00 00 20 00"); // Enable back face culling
+                disabledBackfaceCulling = false;
             }
 
             if (mat.HasTexture)
@@ -1993,7 +2006,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             byte r = Conversions.ToByte(mat.Color >> 24 & (long)0xFF);
             byte g = Conversions.ToByte(mat.Color >> 16 & (long)0xFF);
             byte b = Conversions.ToByte(mat.Color >> 8 & (long)0xFF);
-            ImpF3D($"FB 00 00 00 {Microsoft.VisualBasic.Conversion.Hex(r)} {Microsoft.VisualBasic.Conversion.Hex(g)} {Microsoft.VisualBasic.Conversion.Hex(b)} {Microsoft.VisualBasic.Conversion.Hex(mat.Opacity)}");
+            ImpF3D($"FB 00 00 00 {Hex(r)} {Hex(g)} {Hex(b)} {Hex(mat.Opacity)}");
         }
 
         private void AlignPosition()
@@ -2026,7 +2039,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             bool needToRevertShiftTMEM = false;
             Material lastMaterial = null;
             uint lastFBColor = default;
-            bool hasCrystalEffectEnabled, needToResetCrystalEffectCommands;
+            bool hasCrystalEffectEnabled, needToResetCrystalEffectCommands, disabledBackfaceCulling;            
             bool ciEnabled;
             var citextypes = new[] { N64Codec.CI4, N64Codec.CI8 };
             string lastCmdFC;
@@ -2188,6 +2201,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 enabledVertexColors = false;
                 hasCrystalEffectEnabled = false;
                 needToResetCrystalEffectCommands = false;
+                disabledBackfaceCulling = false;
                 ciEnabled = false;
                 lastMaterial = null;
                 lastFBColor = default;
@@ -2228,7 +2242,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     if (mp.Material.EnableGeoMode)
                     {
                         ImpF3D("B6 00 00 00 FF FF FF FF");
-                        ImpF3D($"B7 00 00 00 {Microsoft.VisualBasic.Conversion.Hex(mp.Material.GeoMode >> 24 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(mp.Material.GeoMode >> 16 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(mp.Material.GeoMode >> 8 & (long)0xFF)} {Microsoft.VisualBasic.Conversion.Hex(mp.Material.GeoMode & (long)0xFF)}");
+                        ImpF3D($"B7 00 00 00 {Hex(mp.Material.GeoMode >> 24 & (long)0xFF)} {Hex(mp.Material.GeoMode >> 16 & (long)0xFF)} {Hex(mp.Material.GeoMode >> 8 & (long)0xFF)} {Hex(mp.Material.GeoMode & (long)0xFF)}");
                     }
 
                     if (lastMaterial != mp.Material)
@@ -2243,7 +2257,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                             }
                         }
 
-                        ImpMaterialCmds(mp.Material, ref needToRevertShiftTMEM, ref hasCrystalEffectEnabled, ref needToResetCrystalEffectCommands);
+                        ImpMaterialCmds(mp.Material, ref needToRevertShiftTMEM, ref hasCrystalEffectEnabled, ref needToResetCrystalEffectCommands, ref disabledBackfaceCulling);
                     }
 
                     int grpOff = 0;

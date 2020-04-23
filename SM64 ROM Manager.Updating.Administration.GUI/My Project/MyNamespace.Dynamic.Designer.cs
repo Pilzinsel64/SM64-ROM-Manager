@@ -32,25 +32,48 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My
             }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
-            public EditorWindow m_EditorWindow;
+            public PackageCreationDialog m_PackageCreationDialog;
 
-            public EditorWindow EditorWindow
+            public PackageCreationDialog PackageCreationDialog
             {
                 [DebuggerHidden]
                 get
                 {
-                    m_EditorWindow = MyForms.Create__Instance__(m_EditorWindow);
-                    return m_EditorWindow;
+                    m_PackageCreationDialog = MyForms.Create__Instance__(m_PackageCreationDialog);
+                    return m_PackageCreationDialog;
                 }
 
                 [DebuggerHidden]
                 set
                 {
-                    if (value == m_EditorWindow)
+                    if (value == m_PackageCreationDialog)
                         return;
                     if (value is object)
                         throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_EditorWindow);
+                    Dispose__Instance__(ref m_PackageCreationDialog);
+                }
+            }
+
+            [EditorBrowsable(EditorBrowsableState.Never)]
+            public UpdateManagerWindow m_UpdateManagerWindow;
+
+            public UpdateManagerWindow UpdateManagerWindow
+            {
+                [DebuggerHidden]
+                get
+                {
+                    m_UpdateManagerWindow = MyForms.Create__Instance__(m_UpdateManagerWindow);
+                    return m_UpdateManagerWindow;
+                }
+
+                [DebuggerHidden]
+                set
+                {
+                    if (value == m_UpdateManagerWindow)
+                        return;
+                    if (value is object)
+                        throw new ArgumentException("Property can only be set to Nothing");
+                    Dispose__Instance__(ref m_UpdateManagerWindow);
                 }
             }
 

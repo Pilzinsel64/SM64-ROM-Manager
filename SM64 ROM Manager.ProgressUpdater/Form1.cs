@@ -11,6 +11,20 @@ namespace SM64_ROM_Manager.ProgressUpdater
 {
     public partial class Form1
     {
+        // C o n s t a n t s
+
+        private const string TEMP_DIR_FOLDER_NAME = "SM64RM Progress Updater";
+        private const string TEMP_CONF_FILE_NAME = "config.dat";
+
+        // F i e l d s
+
+        private readonly drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
+        private Settings settings = new Settings();
+        private WebDavMgr wdmgr = null;
+        private DiscordMgr dmgr = null;
+
+        // C o n s t r u c t o r
+
         public Form1()
         {
             this.Load += Form1_Load;
@@ -18,20 +32,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
             InitializeComponent();
         }
 
-        // C o n s t a n t s
-
-        private const string TEMP_DIR_FOLDER_NAME = "SM64RM Progress Updater";
-        private const string TEMP_CONF_FILE_NAME = "config.dat";
-        private const string CONF_PROXY_USR = "ProxyUsr";
-        private const string CONF_PROXY_PWD = "ProxyPwd";
-        private const string CONF_WEBDAV_USR = "WebDavUsr";
-        private const string CONF_WEBDAV_PWD = "WebDavPwd";
-        private const string CONF_WEBDAV_URI = "WebDavUri";
-        private const string CONF_VERSION = "Version";
-
-        // F i e l d s
-
-        private readonly drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
+        // F e a t u r e s
 
         private void PasteFromClipboard()
         {
@@ -41,73 +42,22 @@ namespace SM64_ROM_Manager.ProgressUpdater
             }
         }
 
-        private async Task<bool> Upload()
-        {
-            bool result;
-            string usr = TextBoxX_ProxUsr.Text.Trim();
-            string pwd = TextBoxX_ProxPwd.Text;
-            string vers = TextBoxX_Version.Text.Trim();
-            string uri = TextBoxX_WebDavUploadUri.Text.Trim();
-            if (string.IsNullOrEmpty(uri) || string.IsNullOrEmpty(vers))
-            {
-                result = false;
-            }
-            else
-            {
-                // Set web proxy
-                if (!string.IsNullOrEmpty(usr) || !string.IsNullOrEmpty(pwd))
-                {
-                    WebRequest.DefaultWebProxy.Credentials = new NetworkCredential(usr, pwd);
-                }
-
-                // Create client
-                var clientparams = new WebDavClientParams()
-                {
-                    BaseAddress = new Uri(uri),
-                    Credentials = new NetworkCredential(TextBoxX_WebDavUploadUsr.Text.Trim(), TextBoxX_WebDavUploadPwd.Text)
-                };
-                var client = new WebDavClient(clientparams);
-
-                // Save image to memory
-                var msImage = new MemoryStream();
-                PictureBox1.Image.Save(msImage, System.Drawing.Imaging.ImageFormat.Png);
-                msImage.Position = 0;
-
-                // Upload image
-                try
-                {
-                    var res = await client.PutFile($"{vers}.png", msImage);
-                    result = res.IsSuccessful;
-                }
-                catch (Exception)
-                {
-                    result = false;
-                }
-                finally
-                {
-                    msImage.Close();
-                }
-            }
-
-            return result;
-        }
-
         private DirectoryInfo GetTempDirPath()
         {
             return new DirectoryInfo(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), TEMP_DIR_FOLDER_NAME));
         }
 
+        private void LoadTextBoxes()
+        {
+            ComboBoxEx_Version.Text = settings.Version;
+        }
+
         private void SaveConfig()
         {
-            var obj = new JObject();
-            obj[CONF_PROXY_USR] = TextBoxX_ProxUsr.Text;
-            obj[CONF_PROXY_PWD] = TextBoxX_ProxPwd.Text;
-            obj[CONF_WEBDAV_URI] = TextBoxX_WebDavUploadUri.Text;
-            obj[CONF_WEBDAV_USR] = TextBoxX_WebDavUploadUsr.Text;
-            obj[CONF_WEBDAV_PWD] = TextBoxX_WebDavUploadPwd.Text;
-            obj[CONF_VERSION] = TextBoxX_Version.Text;
+            var obj = JObject.FromObject(settings);
             var dir = GetTempDirPath();
             string confFile = Path.Combine(dir.FullName, TEMP_CONF_FILE_NAME);
+
             if (!dir.Exists)
             {
                 dir.Create();
@@ -125,13 +75,42 @@ namespace SM64_ROM_Manager.ProgressUpdater
             {
                 string raw = File.ReadAllText(confFile);
                 var obj = JObject.Parse(crypter.DecryptData(raw));
-                TextBoxX_ProxUsr.Text = (string)obj[CONF_PROXY_USR];
-                TextBoxX_ProxPwd.Text = (string)obj[CONF_PROXY_PWD];
-                TextBoxX_WebDavUploadUri.Text = (string)obj[CONF_WEBDAV_URI];
-                TextBoxX_WebDavUploadUsr.Text = (string)obj[CONF_WEBDAV_USR];
-                TextBoxX_WebDavUploadPwd.Text = (string)obj[CONF_WEBDAV_PWD];
-                TextBoxX_Version.Text = (string)obj[CONF_VERSION];
+                settings = obj.ToObject<Settings>();
+                LoadTextBoxes();
+                LoadWebDavMgr();
+                LoadDiscordMgr();
             }
+        }
+
+        private void LoadDiscordMgr()
+        {
+            if (dmgr is object && dmgr.IsReady)
+                dmgr.Stop();
+            dmgr = new DiscordMgr(settings);
+            dmgr.GotReady += (_, __) => ButtonX_DiscordSetup.Enabled = true;
+            dmgr.Start();
+        }
+
+        private Task LoadWebDavMgr()
+        {
+            ButtonX_Upload.Enabled = false;
+            return Task.Run(() =>
+            {
+                wdmgr = new WebDavMgr(settings);
+                if (wdmgr.Connect())
+                {
+                    Invoke(new Action(() => ButtonX_Upload.Enabled = true));
+                    LoadUsedVersions();
+                }
+            });
+        }
+
+        private async void LoadUsedVersions()
+        {
+            Invoke(new Action(() => ComboBoxEx_Version.Items.Clear()));
+
+            foreach (var version in await wdmgr.GetUsedVersions())
+                Invoke(new Action(() => ComboBoxEx_Version.Items.Add(version)));
         }
 
         // G u i
@@ -143,13 +122,26 @@ namespace SM64_ROM_Manager.ProgressUpdater
 
         private async void ButtonX_Upload_Click(object sender, EventArgs e)
         {
-            if (await Upload())
+            if (settings.DiscordUploadEnabled && !dmgr.IsReady)
             {
-                MessageBoxEx.Show("Erfolgreich hochgeladen!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBoxEx.Show("Discord ist noch nicht bereit!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBoxEx.Show("Fehler beim Hochladen!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Enabled = false;
+                circularProgress1.Start();
+                if (await wdmgr.UploadImage(PictureBox1.Image))
+                {
+                    if (dmgr is object && dmgr.IsReady)
+                        await dmgr.SendMessage();
+                    MessageBoxEx.Show(this, "Erfolgreich hochgeladen!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBoxEx.Show(this, "Fehler beim Hochladen!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                circularProgress1.Stop();
+                Enabled = true;
             }
         }
 
@@ -161,7 +153,28 @@ namespace SM64_ROM_Manager.ProgressUpdater
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (dmgr is object && dmgr.IsReady)
+                dmgr.Stop();
             SaveConfig();
+        }
+
+        private void TextBoxX_Version_TextChanged(object sender, EventArgs e)
+        {
+            settings.Version = ComboBoxEx_Version.Text.Trim();
+        }
+
+        private void ButtonX_DiscordSetup_Click(object sender, EventArgs e)
+        {
+            var frm = new DiscordSettingsDialog(settings);
+            frm.ShowDialog();
+            LoadDiscordMgr();
+        }
+
+        private void ButtonX_SetupWebDav_Click(object sender, EventArgs e)
+        {
+            var frm = new WebDavSettingsDialog(settings);
+            frm.ShowDialog();
+            LoadWebDavMgr();
         }
     }
 }

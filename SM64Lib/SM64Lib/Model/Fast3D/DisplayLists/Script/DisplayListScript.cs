@@ -26,7 +26,11 @@ namespace SM64Lib.Model.Fast3D.DisplayLists.Script
                 curSeg.Data.Read(cmdbytes, 0, cmdbytes.Length);
 
                 // Create & Add Command
-                var cmd = new DisplayListCommand(cmdbytes);
+                var cmd = new DisplayListCommand(cmdbytes)
+                {
+                    RomAddress = (int)(curSeg.RomStart + curSeg.Data.Position),
+                    BankAddress = (int)(curSeg.BankAddress + curSeg.Data.Position)
+                };
                 Add(cmd);
 
                 switch (cmd.CommandType)

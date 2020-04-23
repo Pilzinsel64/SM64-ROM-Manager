@@ -127,15 +127,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SM64Lib\Behavior\Script\Behaviorscript.cs" />
-    <Compile Include="SM64Lib\Behavior\Script\BehaviorscriptCommand.cs" />
-    <Compile Include="SM64Lib\Behavior\Script\BehaviorscriptCommandCollection.cs" />
-    <Compile Include="SM64Lib\Behavior\Script\BehaviorscriptCommandTypes.cs" />
-    <Compile Include="SM64Lib\Configuration\CustomObjectConfig.cs" />
+    <Compile Include="SM64Lib\Behaviors\Behavior.cs" />
+    <Compile Include="SM64Lib\Behaviors\BehaviorBank.cs" />
+    <Compile Include="SM64Lib\Behaviors\BehaviorBankConfig.cs" />
+    <Compile Include="SM64Lib\Behaviors\BehaviorConfig.cs" />
+    <Compile Include="SM64Lib\Behaviors\BehaviorCreationTypes.cs" />
+    <Compile Include="SM64Lib\Behaviors\Script\Behaviorscript.cs" />
+    <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommand.cs" />
+    <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandCollection.cs" />
+    <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandFactory.cs" />
+    <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandFunctions.cs" />
+    <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandTypes.cs" />
+    <Compile Include="SM64Lib\Configuration\CustomModelConfig.cs" />
     <Compile Include="SM64Lib\Configuration\LevelAreaConfig.cs" />
     <Compile Include="SM64Lib\Configuration\LevelConfig.cs" />
     <Compile Include="SM64Lib\Configuration\MusicConfiguration.cs" />
-    <Compile Include="SM64Lib\Configuration\ObjectBankConfig.cs" />
+    <Compile Include="SM64Lib\Configuration\ObjectModelConfig.cs" />
     <Compile Include="SM64Lib\Configuration\RomConfig.cs" />
     <Compile Include="SM64Lib\Configuration\ScrollTexConfig.cs" />
     <Compile Include="SM64Lib\Data\BinaryFile.cs" />
@@ -153,6 +160,12 @@
     <Compile Include="SM64Lib\Geolayout\Script\GeolayoutCommandTypes.cs" />
     <Compile Include="SM64Lib\Geolayout\TerrainType.cs" />
     <Compile Include="SM64Lib\ExtensionMethods.cs" />
+    <Compile Include="SM64Lib\Json\ArrayReferencePreservngConverter.cs" />
+    <Compile Include="SM64Lib\Json\ComplexDictionarJsonConverter.cs" />
+    <Compile Include="SM64Lib\Json\BaseCommandJsonConverter.cs" />
+    <Compile Include="SM64Lib\Json\GeolayoutscriptCommandJsonConverter.cs" />
+    <Compile Include="SM64Lib\Json\BehaviorscriptCommandJsonConverter.cs" />
+    <Compile Include="SM64Lib\Json\Fast3DBufferJsonConverter.cs" />
     <Compile Include="SM64Lib\Level\ILevelManager.cs" />
     <Compile Include="SM64Lib\Level\LevelList.cs" />
     <Compile Include="SM64Lib\Level\LevelSaveResult.cs" />
@@ -187,16 +200,22 @@
     <Compile Include="SM64Lib\Model\Fast3D\DisplayLists\DisplayListCollection.cs" />
     <Compile Include="SM64Lib\Model\Fog.cs" />
     <Compile Include="SM64Lib\Model\FogPreset.cs" />
-    <Compile Include="SM64Lib\Object Banks\Data\ObjectBankDataCommand.cs" />
-    <Compile Include="SM64Lib\Object Banks\Data\ObjectBankDataList.cs" />
-    <Compile Include="SM64Lib\Object Banks\Data\ObjectBankDataListCollection.cs" />
-    <Compile Include="SM64Lib\Object Banks\Data\ObjectBankData.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObject.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectCollection.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectBehaviorProps.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectImport.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectExport.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectModelProps.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataCommand.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataList.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataListCollection.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankData.cs" />
     <Compile Include="SM64Lib\RomVersion.cs" />
     <Compile Include="SM64Lib\EventArguments\RomVersionEventArgs.cs" />
     <Compile Include="SM64Lib\Model\Conversion\Fast3DWriting\DisplaylistProps.cs" />
     <Compile Include="SM64Lib\Model\Conversion\Fast3DParsing\TextureLoadedInfos.cs" />
     <Compile Include="SM64Lib\NPCs\CoinsManager.cs" />
-    <Compile Include="SM64Lib\Object Banks\CustomObject.cs" />
+    <Compile Include="SM64Lib\Objects\ModelBanks\CustomModel.cs" />
     <Compile Include="SM64Lib\Objects\StarNames.cs" />
     <Compile Include="SM64Lib\Model\ObjectInputSettings.cs" />
     <Compile Include="SM64Lib\RomManagerSettings.cs" />
@@ -236,7 +255,7 @@
     <Compile Include="SM64Lib\Music\MusicList.cs" />
     <Compile Include="SM64Lib\Music\MusicSequence.cs" />
     <Compile Include="SM64Lib\Music\InstrumentSetList.cs" />
-    <Compile Include="SM64Lib\Object Banks\CustomObjectBank.cs" />
+    <Compile Include="SM64Lib\Objects\ModelBanks\CustomModelBank.cs" />
     <Compile Include="SM64Lib\Objects\ItemBoxContents\ItemBoxContentEntry.cs" />
     <Compile Include="SM64Lib\Objects\ItemBoxContents\ItemBoxContentManager.cs" />
     <Compile Include="SM64Lib\Objects\ItemBoxContents\ItemBoxContentTable.cs" />
@@ -309,6 +328,8 @@
       <Name>SM64Lib.TextValueConverter</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\Collision\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

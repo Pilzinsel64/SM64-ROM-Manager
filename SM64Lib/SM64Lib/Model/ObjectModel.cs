@@ -10,7 +10,6 @@ namespace SM64Lib.Model
     public class ObjectModel
     {
 
-        // Public DisplayLists As New DisplayListCollection
         public Collision.CollisionMap Collision { get; set; } = null;
         public Fast3D.Fast3DBuffer Fast3DBuffer { get; set; } = null;
 

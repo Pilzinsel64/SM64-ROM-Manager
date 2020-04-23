@@ -103,6 +103,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_checkmark_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_checkmark_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_code_file_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_code_file_32px", resourceCulture);
@@ -136,6 +146,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My.Resources {
         internal static System.Drawing.Bitmap icons8_delete_sign_32px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_delete_sign_32px_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_discord_new_logo_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_discord_new_logo_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +203,29 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_email_send_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_email_send_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_export_32px_3 {
             get {
                 object obj = ResourceManager.GetObject("icons8_export_32px_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_import_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_import_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +346,26 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My.Resources {
         internal static System.Drawing.Bitmap icons8_template_32px {
             get {
                 object obj = ResourceManager.GetObject("icons8_template_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_upload_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_upload_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_upload_to_cloud_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_upload_to_cloud_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

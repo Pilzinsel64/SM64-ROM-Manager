@@ -129,6 +129,10 @@
   <data name="ColumnHeader3.Text" xml:space="preserve">
     <value>Combo-Name</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RibbonBar29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1107, 0</value>
+  </data>
   <data name="ButtonItem_CopyObjCmdAsHex.Text" xml:space="preserve">
     <value>Kopiere Command als Hex-Array</value>
   </data>
@@ -138,7 +142,6 @@
   <data name="ButtonItem_ResetObjToDefault.Text" xml:space="preserve">
     <value>Zurücksetzen zu Standart-Object</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RibbonBar9.Location" type="System.Drawing.Point, System.Drawing">
     <value>925, 0</value>
   </data>
@@ -151,7 +154,7 @@
   <data name="ButtonItem_DropToTop.Text" xml:space="preserve">
     <value>Absetzen zur höchsten Fläche</value>
   </data>
-  <data name="ButtonItem_DropToButtom.Text" xml:space="preserve">
+  <data name="ButtonItem_DropToBottom.Text" xml:space="preserve">
     <value>Absetzen zur niedrigsten Fläche</value>
   </data>
   <data name="RibbonBar18.Location" type="System.Drawing.Point, System.Drawing">
@@ -218,10 +221,20 @@
     <value>Objekt hinzufügen</value>
   </data>
   <data name="RibbonBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 91</value>
+    <value>195, 84</value>
   </data>
   <data name="RibbonBar1.Text" xml:space="preserve">
     <value>Objekte hinzufügen</value>
+  </data>
+  <data name="ButtonItem_GeolayoutScriptDumps.Text" xml:space="preserve">
+    <value>Skript-Dumps anzeigen</value>
+  </data>
+  <data name="ribbonBar13.Text" xml:space="preserve">
+    <value>Script-Dumps</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RibbonPanel7.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="CheckBoxItem_PerspectiveMode.Text" xml:space="preserve">
     <value>Perspektiven-Modus</value>
@@ -265,8 +278,20 @@
   <data name="RibbonBar19.Text" xml:space="preserve">
     <value>Modelle</value>
   </data>
-  <data name="RibbonBar14.Text" xml:space="preserve">
-    <value>Spezial-Boxen</value>
+  <data name="ButtonItem47.Text" xml:space="preserve">
+    <value>Importieren</value>
+  </data>
+  <data name="ButtonItem53.Text" xml:space="preserve">
+    <value>Exportieren</value>
+  </data>
+  <data name="RibbonBar6.Text" xml:space="preserve">
+    <value>Modell</value>
+  </data>
+  <data name="ButtonItem_AddArea.Text" xml:space="preserve">
+    <value>Bereich hinzufügen</value>
+  </data>
+  <data name="ButtonItem_RemoveArea.Text" xml:space="preserve">
+    <value>Aktuellen Bereich löschen</value>
   </data>
   <data name="ButtonItem8.Text" xml:space="preserve">
     <value>Todesboden hinzufügen</value>
@@ -277,47 +302,11 @@
   <data name="RibbonBar25.Text" xml:space="preserve">
     <value>Todesböden</value>
   </data>
-  <data name="ButtonItem10.Text" xml:space="preserve">
-    <value>Kollisionstyp von Fläche ändern</value>
-  </data>
   <data name="ButtonItem11.Text" xml:space="preserve">
     <value>Alle Flächen mit bestimmten Typ löschen</value>
   </data>
-  <data name="ButtonItem12.Text" xml:space="preserve">
-    <value>Alle nichtgenutzten Eckpunkte entfernen</value>
-  </data>
   <data name="RibbonBar24.Text" xml:space="preserve">
     <value>Werkzeug</value>
-  </data>
-  <data name="ButtonItem21.Text" xml:space="preserve">
-    <value>&lt;div align="center"&gt;1 Fläche +&lt;br/&gt;neue Eckpunkte&lt;/div&gt;</value>
-  </data>
-  <data name="ButtonItem18.Text" xml:space="preserve">
-    <value>1 leere Fläche</value>
-  </data>
-  <data name="ButtonItem17.Text" xml:space="preserve">
-    <value>Flächen hinzufügen ...</value>
-  </data>
-  <data name="ButtonItem19.Text" xml:space="preserve">
-    <value>Fläche entfernen</value>
-  </data>
-  <data name="RibbonBar15.Text" xml:space="preserve">
-    <value>Flächen</value>
-  </data>
-  <data name="ButtonItem20.Text" xml:space="preserve">
-    <value>1 Eckpunkt</value>
-  </data>
-  <data name="ButtonItem14.Text" xml:space="preserve">
-    <value>3 Eckpunkte</value>
-  </data>
-  <data name="ButtonItem15.Text" xml:space="preserve">
-    <value>Eckpunkte hinzufügen ...</value>
-  </data>
-  <data name="ButtonItem16.Text" xml:space="preserve">
-    <value>Eckpunkte entfernen</value>
-  </data>
-  <data name="RibbonBar13.Text" xml:space="preserve">
-    <value>Eckpunkte</value>
   </data>
   <data name="ButtonItem85.Text" xml:space="preserve">
     <value>Kollision importieren</value>
@@ -367,29 +356,11 @@
   <data name="RibbonBar11.Text" xml:space="preserve">
     <value>Zwischenablage</value>
   </data>
-  <data name="ButtonItem47.Text" xml:space="preserve">
-    <value>Importieren</value>
-  </data>
-  <data name="ButtonItem53.Text" xml:space="preserve">
-    <value>Exportieren</value>
-  </data>
-  <data name="RibbonBar6.Text" xml:space="preserve">
-    <value>Modell</value>
-  </data>
-  <data name="ButtonItem_AddArea.Text" xml:space="preserve">
-    <value>Bereich hinzufügen</value>
-  </data>
-  <data name="ButtonItem_RemoveArea.Text" xml:space="preserve">
-    <value>Aktuellen Bereich löschen</value>
-  </data>
   <data name="ButtonItem84.Text" xml:space="preserve">
     <value>Zu ausgewähltem Objekt setzen</value>
   </data>
   <data name="RibbonBar4.Text" xml:space="preserve">
     <value>Standart Startposition</value>
-  </data>
-  <data name="ApplicationButton1.Text" xml:space="preserve">
-    <value>Datei</value>
   </data>
   <data name="RibbonTabItem5.Text" xml:space="preserve">
     <value>Bereich</value>
@@ -402,6 +373,9 @@
   </data>
   <data name="RibbonTabItem6.Text" xml:space="preserve">
     <value>Ansicht</value>
+  </data>
+  <data name="ApplicationButton1.Text" xml:space="preserve">
+    <value>Datei</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2263,11 +2237,23 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Level-Editor</value>
   </data>
+  <data name="PanelDockContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>935, 106</value>
+  </data>
   <data name="Bar_Controls.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
+  <data name="PanelEx1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>935, 106</value>
+  </data>
+  <data name="PanelEx5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>681, 3</value>
+  </data>
   <data name="Slider_CamMoveSpeed.Text" xml:space="preserve">
     <value>Kamerabewegung: 100%</value>
+  </data>
+  <data name="PanelEx4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>846, 3</value>
   </data>
   <data name="LabelItem1.Text" xml:space="preserve">
     <value>Kamera-Modis:</value>
@@ -2299,7 +2285,7 @@
   <data name="LabelX14.Text" xml:space="preserve">
     <value>Kameramodus:</value>
   </data>
-  <data name="ButtonX_DropToButtom.Text" xml:space="preserve">
+  <data name="ButtonX_DropToBottom.Text" xml:space="preserve">
     <value>Absetzen niedrigste</value>
   </data>
   <data name="ButtonX_DropToTop.Text" xml:space="preserve">
@@ -2311,11 +2297,23 @@
   <data name="Slider_ObjMoveSpeed.Text" xml:space="preserve">
     <value>Objektbewegung: 100%</value>
   </data>
+  <data name="PictureBox_CamCntrWheel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 3</value>
+  </data>
+  <data name="PictureBox_CamMoveCross.Location" type="System.Drawing.Point, System.Drawing">
+    <value>550, 3</value>
+  </data>
   <data name="Bar_AreaViewer.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="Bar2.AccessibleDescription" xml:space="preserve">
+    <value>Objekte (Bar2)</value>
+  </data>
+  <data name="Bar2.AccessibleName" xml:space="preserve">
+    <value>Objekte</value>
   </data>
   <data name="Bar2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -2323,25 +2321,13 @@
   <data name="DockContainerItem4.Text" xml:space="preserve">
     <value>Objekte</value>
   </data>
-  <data name="DockContainerItem5.Text" xml:space="preserve">
-    <value>Kollision</value>
-  </data>
   <data name="Bar2.Text" xml:space="preserve">
     <value>Objekte</value>
   </data>
-  <data name="TabItem1.Text" xml:space="preserve">
-    <value>Eckpunkte</value>
-  </data>
-  <data name="TabItem2.Text" xml:space="preserve">
-    <value>Flächen</value>
-  </data>
-  <data name="TabItem3.Text" xml:space="preserve">
-    <value>Spezial-Boxen</value>
-  </data>
-  <data name="ButtonItem5.Text" xml:space="preserve">
+  <data name="ButtonItem37.Text" xml:space="preserve">
     <value>Einfügen (Standart)</value>
   </data>
-  <data name="ButtonItem37.Text" xml:space="preserve">
+  <data name="ButtonItem5.Text" xml:space="preserve">
     <value>Einfügen (Standart)</value>
   </data>
   <data name="ButtonItem9.Text" xml:space="preserve">
@@ -2409,11 +2395,5 @@
   </data>
   <data name="ButtonItem3.Text" xml:space="preserve">
     <value>Level-Editor beenden</value>
-  </data>
-  <data name="ButtonItem_DropToBottom.Text" xml:space="preserve">
-    <value>Absetzen zur niedrigsten Fläche</value>
-  </data>
-  <data name="ButtonX_DropToBottom.Text" xml:space="preserve">
-    <value>Absetzen niedrigste</value>
   </data>
 </root>

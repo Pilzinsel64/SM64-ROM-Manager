@@ -106,7 +106,7 @@ namespace SM64Lib.Levels
                                 customBGEnd = endAddr - 0x140;
                                 break;
                             case 0x7: // Global Object Bank
-                                if (rommgr.GlobalObjectBank is object && startAddr == rommgr.GlobalObjectBank.CurSeg.RomStart && endAddr == rommgr.GlobalObjectBank.CurSeg.RomEnd)
+                                if (rommgr.GlobalModelBank is object && startAddr == rommgr.GlobalModelBank.CurSeg.RomStart && endAddr == rommgr.GlobalModelBank.CurSeg.RomEnd)
                                 {
                                     lvl.EnableGlobalObjectBank = true;
                                     lvl.LastGobCmdSegLoad = c;
@@ -371,7 +371,7 @@ namespace SM64Lib.Levels
             // Generate & Write Local Object Bank
             uint localObjectBankRomStart = 0;
             uint localObjectBankRomEnd = 0;
-            bool writeLocalObjectBank = lvl.LocalObjectBank.Objects.Count > 0 && lvl.EnableLocalObjectBank;
+            bool writeLocalObjectBank = lvl.LocalObjectBank.Models.Count > 0 && lvl.EnableLocalObjectBank;
             if (writeLocalObjectBank)
             {
                 localObjectBankRomStart = curOff;
@@ -693,8 +693,8 @@ namespace SM64Lib.Levels
             {
                 var newgobjumpcmd = cmdGobJump ?? new LevelscriptCommand("06 08 00 00 07 00 00 00");
                 var newgobcmd = cmdGobSegLoad ?? new LevelscriptCommand("17 0C 00 07 00 00 00 00 00 00 00 00");
-                clLoadRomToRam.SetRomStart(newgobcmd, rommgr.GlobalObjectBank.CurSeg.RomStart);
-                clLoadRomToRam.SetRomEnd(newgobcmd, rommgr.GlobalObjectBank.CurSeg.RomEnd);
+                clLoadRomToRam.SetRomStart(newgobcmd, rommgr.GlobalModelBank.CurSeg.RomStart);
+                clLoadRomToRam.SetRomEnd(newgobcmd, rommgr.GlobalModelBank.CurSeg.RomEnd);
 
                 if (!lvl.Levelscript.Contains(newgobcmd))
                 {

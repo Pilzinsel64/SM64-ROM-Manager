@@ -426,7 +426,7 @@ namespace SM64_ROM_Manager.PropertyValueEditors
                     {
                         try
                         {
-                            if ((int)value == 0)
+                            if (Conversions.ToLong(value) == 0)
                             {
                                 base.Text = TextValueConverter.TextFromValue(Conversions.ToLong(value), IntegerValueMode);
                                 found = true;

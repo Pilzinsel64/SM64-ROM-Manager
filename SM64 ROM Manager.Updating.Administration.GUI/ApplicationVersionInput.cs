@@ -23,19 +23,6 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
 
         // P r o p e r t i e s
 
-        public string VersionName
-        {
-            get
-            {
-                return TextBoxX_VersionName.Text;
-            }
-
-            set
-            {
-                TextBoxX_VersionName.Text = value;
-            }
-        }
-
         public Version Version
         {
             get
@@ -68,16 +55,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             }
         }
 
-        public uint Build
+        public int Build
         {
             get
             {
-                return Conversions.ToUInteger(IntegerInput_Build.Value);
+                return IntegerInput_Build.Value;
             }
 
             set
             {
-                IntegerInput_Build.Value = Conversions.ToInteger(value);
+                IntegerInput_Build.Value = value;
             }
         }
     }

@@ -517,7 +517,7 @@
     <value>5</value>
   </data>
   <data name="ButtonX_EditFast3D.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>True</value>
   </data>
   <data name="ButtonX_EditFast3D.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 75</value>
@@ -2022,7 +2022,7 @@
     <value>47</value>
   </data>
   <data name="labelX5.Text" xml:space="preserve">
-    <value>Local Object Bank:</value>
+    <value>Local Model Bank:</value>
   </data>
   <data name="&gt;&gt;labelX5.Name" xml:space="preserve">
     <value>labelX5</value>
@@ -2073,7 +2073,7 @@
     <value>45</value>
   </data>
   <data name="LabelX13.Text" xml:space="preserve">
-    <value>Global Object Bank:</value>
+    <value>Global Model Bank:</value>
   </data>
   <data name="&gt;&gt;LabelX13.Name" xml:space="preserve">
     <value>LabelX13</value>
@@ -2207,9 +2207,9 @@
   <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>

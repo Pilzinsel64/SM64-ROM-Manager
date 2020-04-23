@@ -37,1655 +37,825 @@ namespace SM64_ROM_Manager.ModelImporterGUI
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(ModelImporter));
-            _LabelX50 = new DevComponents.DotNetBar.LabelX();
-            _LabelX51 = new DevComponents.DotNetBar.LabelX();
-            _LabelX54 = new DevComponents.DotNetBar.LabelX();
-            _TextBoxX_RomAddr = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TextBoxX_RomAddr.TextChanged += new EventHandler(TextBoxX_RomAddr_TextChanged);
-            _TextBoxX_MaxLength = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TextBoxX_MaxLength.TextChanged += new EventHandler(TextBoxX_MaxLength_TextChanged);
-            _TextBoxX_BankAddr = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TextBoxX_BankAddr.TextChanged += new EventHandler(TextBoxX_BankAddr_TextChanged);
-            _ButtonX_OpenRom = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_OpenRom.Click += new EventHandler(ButtonX_OpenRom_Click);
-            _LabelX1 = new DevComponents.DotNetBar.LabelX();
-            _LabelX2 = new DevComponents.DotNetBar.LabelX();
-            _Line2 = new DevComponents.DotNetBar.Controls.Line();
-            _Line1 = new DevComponents.DotNetBar.Controls.Line();
-            _Line3 = new DevComponents.DotNetBar.Controls.Line();
-            _LabelX3 = new DevComponents.DotNetBar.LabelX();
-            _TextBoxX_Output = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _ButtonX_ImportMdl = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_ImportMdl.Click += new EventHandler(ButtonX_ImportMdl_Click);
-            _ButtonX_ConvertMdl = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_ConvertMdl.Click += new EventHandler(ButtonX_ConvertMdl_Click);
-            _LabelX4 = new DevComponents.DotNetBar.LabelX();
-            _ComboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            _ComboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            _ComboBoxEx2.SelectedIndexChanged += new EventHandler(ComboBoxEx2_SelectedIndexChanged);
-            _LabelX6 = new DevComponents.DotNetBar.LabelX();
-            _LabelX7 = new DevComponents.DotNetBar.LabelX();
-            _TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TextBoxX1.LostFocus += new EventHandler(TextBoxX1_TextChanged);
-            _TextBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TextBoxX2.LostFocus += new EventHandler(TextBoxX2_TextChanged);
-            _SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
-            _ButtonX3 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX3.Click += new EventHandler(ButtonX3_Click);
-            _ButtonX2 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX2.Click += new EventHandler(ButtonX2_Click);
-            _ButtonX1 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX1.Click += new EventHandler(ButtonX1_Click);
-            _Panel1 = new Panel();
-            _LabelX5 = new DevComponents.DotNetBar.LabelX();
-            _TableLayoutPanel2 = new TableLayoutPanel();
-            _LabelX_Description = new DevComponents.DotNetBar.LabelX();
-            _LabelX_PatchName = new DevComponents.DotNetBar.LabelX();
-            _TableLayoutPanel1 = new TableLayoutPanel();
-            _ButtonX6 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem1.Click += new EventHandler(ButtonItem1_Click);
-            _ButtonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem2.Click += new EventHandler(ButtonItem2_Click);
-            _ButtonX7 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX7.Click += new EventHandler(ButtonX7_Click);
-            _ButtonX4 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX4.Click += new EventHandler(ButtonX4_Click);
-            _Flyout1 = new DevComponents.DotNetBar.Controls.Flyout(components);
-            _Flyout1.PrepareContent += new EventHandler(Flyout1_PrepareContent);
-            _Flyout1.FlyoutShowing += new DevComponents.DotNetBar.Controls.FlyoutShowingEventHandler(Flyout1_FlyoutShowing);
-            _Panel1.SuspendLayout();
-            _TableLayoutPanel2.SuspendLayout();
-            _TableLayoutPanel1.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModelImporter));
+            this.LabelX50 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX51 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX54 = new DevComponents.DotNetBar.LabelX();
+            this.TextBoxX_RomAddr = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TextBoxX_MaxLength = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TextBoxX_BankAddr = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.ButtonX_OpenRom = new DevComponents.DotNetBar.ButtonX();
+            this.LabelX1 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX2 = new DevComponents.DotNetBar.LabelX();
+            this.Line2 = new DevComponents.DotNetBar.Controls.Line();
+            this.Line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.Line3 = new DevComponents.DotNetBar.Controls.Line();
+            this.LabelX3 = new DevComponents.DotNetBar.LabelX();
+            this.TextBoxX_Output = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.ButtonX_ImportMdl = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_ConvertMdl = new DevComponents.DotNetBar.ButtonX();
+            this.LabelX4 = new DevComponents.DotNetBar.LabelX();
+            this.ComboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.ComboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.LabelX6 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX7 = new DevComponents.DotNetBar.LabelX();
+            this.TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TextBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
+            this.ButtonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.Panel1 = new System.Windows.Forms.Panel();
+            this.LabelX5 = new DevComponents.DotNetBar.LabelX();
+            this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.LabelX_Description = new DevComponents.DotNetBar.LabelX();
+            this.LabelX_PatchName = new DevComponents.DotNetBar.LabelX();
+            this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ButtonX6 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonX7 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.Flyout1 = new DevComponents.DotNetBar.Controls.Flyout(this.components);
+            this.labelX_Version = new DevComponents.DotNetBar.LabelX();
+            this.Panel1.SuspendLayout();
+            this.TableLayoutPanel2.SuspendLayout();
+            this.TableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // LabelX50
             // 
-            _LabelX50.BackColor = Color.Transparent;
+            this.LabelX50.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX50.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX50.Location = new Point(12, 168);
-            _LabelX50.Name = "LabelX50";
-            _LabelX50.Size = new Size(90, 20);
-            _LabelX50.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _LabelX50.TabIndex = 92;
-            _LabelX50.Text = "Rom Address:";
+            this.LabelX50.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX50.Location = new System.Drawing.Point(12, 168);
+            this.LabelX50.Name = "LabelX50";
+            this.LabelX50.Size = new System.Drawing.Size(90, 20);
+            this.LabelX50.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.LabelX50.TabIndex = 92;
+            this.LabelX50.Text = "Rom Address:";
             // 
             // LabelX51
             // 
-            _LabelX51.BackColor = Color.Transparent;
+            this.LabelX51.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX51.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX51.Location = new Point(12, 220);
-            _LabelX51.Name = "LabelX51";
-            _LabelX51.Size = new Size(90, 20);
-            _LabelX51.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _LabelX51.TabIndex = 93;
-            _LabelX51.Text = "Max Length:";
+            this.LabelX51.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX51.Location = new System.Drawing.Point(12, 220);
+            this.LabelX51.Name = "LabelX51";
+            this.LabelX51.Size = new System.Drawing.Size(90, 20);
+            this.LabelX51.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.LabelX51.TabIndex = 93;
+            this.LabelX51.Text = "Max Length:";
             // 
             // LabelX54
             // 
-            _LabelX54.BackColor = Color.Transparent;
+            this.LabelX54.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX54.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX54.Location = new Point(12, 194);
-            _LabelX54.Name = "LabelX54";
-            _LabelX54.Size = new Size(90, 20);
-            _LabelX54.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _LabelX54.TabIndex = 94;
-            _LabelX54.Text = "Bank Address:";
+            this.LabelX54.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX54.Location = new System.Drawing.Point(12, 194);
+            this.LabelX54.Name = "LabelX54";
+            this.LabelX54.Size = new System.Drawing.Size(90, 20);
+            this.LabelX54.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.LabelX54.TabIndex = 94;
+            this.LabelX54.Text = "Bank Address:";
             // 
             // TextBoxX_RomAddr
             // 
-            _TextBoxX_RomAddr.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _TextBoxX_RomAddr.BackColor = Color.White;
+            this.TextBoxX_RomAddr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxX_RomAddr.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX_RomAddr.Border.Class = "TextBoxBorder";
-            _TextBoxX_RomAddr.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX_RomAddr.DisabledBackColor = Color.White;
-            _TextBoxX_RomAddr.ForeColor = Color.Black;
-            _TextBoxX_RomAddr.Location = new Point(162, 168);
-            _TextBoxX_RomAddr.Name = "TextBoxX_RomAddr";
-            _TextBoxX_RomAddr.PreventEnterBeep = true;
-            _TextBoxX_RomAddr.Size = new Size(100, 20);
-            _TextBoxX_RomAddr.TabIndex = 95;
-            _TextBoxX_RomAddr.Text = "0x0";
+            this.TextBoxX_RomAddr.Border.Class = "TextBoxBorder";
+            this.TextBoxX_RomAddr.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX_RomAddr.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX_RomAddr.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxX_RomAddr.Location = new System.Drawing.Point(162, 168);
+            this.TextBoxX_RomAddr.Name = "TextBoxX_RomAddr";
+            this.TextBoxX_RomAddr.PreventEnterBeep = true;
+            this.TextBoxX_RomAddr.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxX_RomAddr.TabIndex = 95;
+            this.TextBoxX_RomAddr.Text = "0x0";
+            this.TextBoxX_RomAddr.TextChanged += new System.EventHandler(this.TextBoxX_RomAddr_TextChanged);
             // 
             // TextBoxX_MaxLength
             // 
-            _TextBoxX_MaxLength.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _TextBoxX_MaxLength.BackColor = Color.White;
+            this.TextBoxX_MaxLength.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxX_MaxLength.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX_MaxLength.Border.Class = "TextBoxBorder";
-            _TextBoxX_MaxLength.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX_MaxLength.DisabledBackColor = Color.White;
-            _TextBoxX_MaxLength.ForeColor = Color.Black;
-            _TextBoxX_MaxLength.Location = new Point(162, 220);
-            _TextBoxX_MaxLength.Name = "TextBoxX_MaxLength";
-            _TextBoxX_MaxLength.PreventEnterBeep = true;
-            _TextBoxX_MaxLength.Size = new Size(100, 20);
-            _TextBoxX_MaxLength.TabIndex = 96;
-            _TextBoxX_MaxLength.Text = "0x0";
+            this.TextBoxX_MaxLength.Border.Class = "TextBoxBorder";
+            this.TextBoxX_MaxLength.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX_MaxLength.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX_MaxLength.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxX_MaxLength.Location = new System.Drawing.Point(162, 220);
+            this.TextBoxX_MaxLength.Name = "TextBoxX_MaxLength";
+            this.TextBoxX_MaxLength.PreventEnterBeep = true;
+            this.TextBoxX_MaxLength.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxX_MaxLength.TabIndex = 96;
+            this.TextBoxX_MaxLength.Text = "0x0";
+            this.TextBoxX_MaxLength.TextChanged += new System.EventHandler(this.TextBoxX_MaxLength_TextChanged);
             // 
             // TextBoxX_BankAddr
             // 
-            _TextBoxX_BankAddr.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _TextBoxX_BankAddr.BackColor = Color.White;
+            this.TextBoxX_BankAddr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxX_BankAddr.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX_BankAddr.Border.Class = "TextBoxBorder";
-            _TextBoxX_BankAddr.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX_BankAddr.DisabledBackColor = Color.White;
-            _TextBoxX_BankAddr.ForeColor = Color.Black;
-            _TextBoxX_BankAddr.Location = new Point(162, 194);
-            _TextBoxX_BankAddr.Name = "TextBoxX_BankAddr";
-            _TextBoxX_BankAddr.PreventEnterBeep = true;
-            _TextBoxX_BankAddr.Size = new Size(100, 20);
-            _TextBoxX_BankAddr.TabIndex = 97;
-            _TextBoxX_BankAddr.Text = "0x0";
+            this.TextBoxX_BankAddr.Border.Class = "TextBoxBorder";
+            this.TextBoxX_BankAddr.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX_BankAddr.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX_BankAddr.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxX_BankAddr.Location = new System.Drawing.Point(162, 194);
+            this.TextBoxX_BankAddr.Name = "TextBoxX_BankAddr";
+            this.TextBoxX_BankAddr.PreventEnterBeep = true;
+            this.TextBoxX_BankAddr.Size = new System.Drawing.Size(100, 20);
+            this.TextBoxX_BankAddr.TabIndex = 97;
+            this.TextBoxX_BankAddr.Text = "0x0";
+            this.TextBoxX_BankAddr.TextChanged += new System.EventHandler(this.TextBoxX_BankAddr_TextChanged);
             // 
             // ButtonX_OpenRom
             // 
-            _ButtonX_OpenRom.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_OpenRom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _ButtonX_OpenRom.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_OpenRom.FocusCuesEnabled = false;
-            _ButtonX_OpenRom.Location = new Point(187, 12);
-            _ButtonX_OpenRom.Name = "ButtonX_OpenRom";
-            _ButtonX_OpenRom.Size = new Size(75, 23);
-            _ButtonX_OpenRom.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX_OpenRom.Symbol = "58055";
-            _ButtonX_OpenRom.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(215)), Conversions.ToInteger(Conversions.ToByte(172)), Conversions.ToInteger(Conversions.ToByte(106)));
-            _ButtonX_OpenRom.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX_OpenRom.SymbolSize = 12.0F;
-            _ButtonX_OpenRom.TabIndex = 98;
-            _ButtonX_OpenRom.Text = "Load ...";
+            this.ButtonX_OpenRom.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_OpenRom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonX_OpenRom.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_OpenRom.FocusCuesEnabled = false;
+            this.ButtonX_OpenRom.Location = new System.Drawing.Point(187, 12);
+            this.ButtonX_OpenRom.Name = "ButtonX_OpenRom";
+            this.ButtonX_OpenRom.Size = new System.Drawing.Size(75, 23);
+            this.ButtonX_OpenRom.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_OpenRom.Symbol = "58055";
+            this.ButtonX_OpenRom.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
+            this.ButtonX_OpenRom.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX_OpenRom.SymbolSize = 12F;
+            this.ButtonX_OpenRom.TabIndex = 98;
+            this.ButtonX_OpenRom.Text = "Load ...";
+            this.ButtonX_OpenRom.Click += new System.EventHandler(this.ButtonX_OpenRom_Click);
             // 
             // LabelX1
             // 
-            _LabelX1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            this.LabelX1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            _LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX1.Location = new Point(49, 12);
-            _LabelX1.Name = "LabelX1";
-            _LabelX1.Size = new Size(132, 23);
-            _LabelX1.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _LabelX1.SymbolSize = 12.0F;
-            _LabelX1.TabIndex = 0;
-            _LabelX1.Text = "No file loaded!";
+            this.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX1.Location = new System.Drawing.Point(49, 12);
+            this.LabelX1.Name = "LabelX1";
+            this.LabelX1.Size = new System.Drawing.Size(132, 23);
+            this.LabelX1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.LabelX1.SymbolSize = 12F;
+            this.LabelX1.TabIndex = 0;
+            this.LabelX1.Text = "No file loaded!";
             // 
             // LabelX2
             // 
             // 
             // 
             // 
-            _LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX2.Location = new Point(12, 16);
-            _LabelX2.Name = "LabelX2";
-            _LabelX2.Size = new Size(31, 15);
-            _LabelX2.TabIndex = 99;
-            _LabelX2.Text = "ROM:";
+            this.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX2.Location = new System.Drawing.Point(12, 16);
+            this.LabelX2.Name = "LabelX2";
+            this.LabelX2.Size = new System.Drawing.Size(31, 15);
+            this.LabelX2.TabIndex = 99;
+            this.LabelX2.Text = "ROM:";
             // 
             // Line2
             // 
-            _Line2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _Line2.BackColor = Color.Transparent;
-            _Line2.ForeColor = Color.Gainsboro;
-            _Line2.Location = new Point(12, 38);
-            _Line2.Margin = new Padding(0);
-            _Line2.Name = "Line2";
-            _Line2.Size = new Size(250, 23);
-            _Line2.TabIndex = 100;
-            _Line2.Text = "Line2";
+            this.Line2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Line2.BackColor = System.Drawing.Color.Transparent;
+            this.Line2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Line2.Location = new System.Drawing.Point(12, 38);
+            this.Line2.Margin = new System.Windows.Forms.Padding(0);
+            this.Line2.Name = "Line2";
+            this.Line2.Size = new System.Drawing.Size(250, 23);
+            this.Line2.TabIndex = 100;
+            this.Line2.Text = "Line2";
             // 
             // Line1
             // 
-            _Line1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _Line1.BackColor = Color.Transparent;
-            _Line1.ForeColor = Color.Gainsboro;
-            _Line1.Location = new Point(12, 116);
-            _Line1.Margin = new Padding(0);
-            _Line1.Name = "Line1";
-            _Line1.Size = new Size(250, 23);
-            _Line1.TabIndex = 101;
-            _Line1.Text = "Line1";
+            this.Line1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Line1.BackColor = System.Drawing.Color.Transparent;
+            this.Line1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Line1.Location = new System.Drawing.Point(12, 116);
+            this.Line1.Margin = new System.Windows.Forms.Padding(0);
+            this.Line1.Name = "Line1";
+            this.Line1.Size = new System.Drawing.Size(250, 23);
+            this.Line1.TabIndex = 101;
+            this.Line1.Text = "Line1";
             // 
             // Line3
             // 
-            _Line3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _Line3.BackColor = Color.Transparent;
-            _Line3.ForeColor = Color.Gainsboro;
-            _Line3.Location = new Point(12, 324);
-            _Line3.Margin = new Padding(0);
-            _Line3.Name = "Line3";
-            _Line3.Size = new Size(250, 23);
-            _Line3.TabIndex = 103;
-            _Line3.Text = "Line3";
+            this.Line3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Line3.BackColor = System.Drawing.Color.Transparent;
+            this.Line3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Line3.Location = new System.Drawing.Point(12, 324);
+            this.Line3.Margin = new System.Windows.Forms.Padding(0);
+            this.Line3.Name = "Line3";
+            this.Line3.Size = new System.Drawing.Size(250, 23);
+            this.Line3.TabIndex = 103;
+            this.Line3.Text = "Line3";
             // 
             // LabelX3
             // 
             // 
             // 
             // 
-            _LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX3.Location = new Point(12, 350);
-            _LabelX3.Name = "LabelX3";
-            _LabelX3.Size = new Size(75, 23);
-            _LabelX3.TabIndex = 104;
-            _LabelX3.Text = "Result:";
+            this.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX3.Location = new System.Drawing.Point(12, 350);
+            this.LabelX3.Name = "LabelX3";
+            this.LabelX3.Size = new System.Drawing.Size(75, 23);
+            this.LabelX3.TabIndex = 104;
+            this.LabelX3.Text = "Result:";
             // 
             // TextBoxX_Output
             // 
-            _TextBoxX_Output.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            _TextBoxX_Output.BackColor = Color.White;
+            this.TextBoxX_Output.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxX_Output.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX_Output.Border.Class = "TextBoxBorder";
-            _TextBoxX_Output.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX_Output.DisabledBackColor = Color.White;
-            _TextBoxX_Output.ForeColor = Color.Black;
-            _TextBoxX_Output.Location = new Point(12, 379);
-            _TextBoxX_Output.Multiline = true;
-            _TextBoxX_Output.Name = "TextBoxX_Output";
-            _TextBoxX_Output.PreventEnterBeep = true;
-            _TextBoxX_Output.ReadOnly = true;
-            _TextBoxX_Output.ScrollBars = ScrollBars.Vertical;
-            _TextBoxX_Output.Size = new Size(250, 96);
-            _TextBoxX_Output.TabIndex = 105;
+            this.TextBoxX_Output.Border.Class = "TextBoxBorder";
+            this.TextBoxX_Output.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX_Output.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX_Output.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxX_Output.Location = new System.Drawing.Point(12, 379);
+            this.TextBoxX_Output.Multiline = true;
+            this.TextBoxX_Output.Name = "TextBoxX_Output";
+            this.TextBoxX_Output.PreventEnterBeep = true;
+            this.TextBoxX_Output.ReadOnly = true;
+            this.TextBoxX_Output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TextBoxX_Output.Size = new System.Drawing.Size(250, 96);
+            this.TextBoxX_Output.TabIndex = 105;
             // 
             // ButtonX_ImportMdl
             // 
-            _ButtonX_ImportMdl.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_ImportMdl.Anchor = AnchorStyles.Top;
-            _ButtonX_ImportMdl.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_ImportMdl.Enabled = false;
-            _ButtonX_ImportMdl.FocusCuesEnabled = false;
-            _ButtonX_ImportMdl.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, Conversions.ToByte(0));
-            _ButtonX_ImportMdl.Location = new Point(78, 298);
-            _ButtonX_ImportMdl.Name = "ButtonX_ImportMdl";
-            _ButtonX_ImportMdl.Size = new Size(119, 23);
-            _ButtonX_ImportMdl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX_ImportMdl.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _ButtonX_ImportMdl.SymbolSize = 12.0F;
-            _ButtonX_ImportMdl.TabIndex = 106;
-            _ButtonX_ImportMdl.Text = "Import Model";
+            this.ButtonX_ImportMdl.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_ImportMdl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ButtonX_ImportMdl.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_ImportMdl.Enabled = false;
+            this.ButtonX_ImportMdl.FocusCuesEnabled = false;
+            this.ButtonX_ImportMdl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonX_ImportMdl.Location = new System.Drawing.Point(78, 298);
+            this.ButtonX_ImportMdl.Name = "ButtonX_ImportMdl";
+            this.ButtonX_ImportMdl.Size = new System.Drawing.Size(119, 23);
+            this.ButtonX_ImportMdl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ImportMdl.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.ButtonX_ImportMdl.SymbolSize = 12F;
+            this.ButtonX_ImportMdl.TabIndex = 106;
+            this.ButtonX_ImportMdl.Text = "Import Model";
+            this.ButtonX_ImportMdl.Click += new System.EventHandler(this.ButtonX_ImportMdl_Click);
             // 
             // ButtonX_ConvertMdl
             // 
-            _ButtonX_ConvertMdl.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_ConvertMdl.Anchor = AnchorStyles.Top;
-            _ButtonX_ConvertMdl.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_ConvertMdl.FocusCuesEnabled = false;
-            _ButtonX_ConvertMdl.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Conversions.ToByte(0));
-            _ButtonX_ConvertMdl.Location = new Point(78, 90);
-            _ButtonX_ConvertMdl.Name = "ButtonX_ConvertMdl";
-            _ButtonX_ConvertMdl.Size = new Size(119, 23);
-            _ButtonX_ConvertMdl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX_ConvertMdl.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _ButtonX_ConvertMdl.SymbolSize = 12.0F;
-            _ButtonX_ConvertMdl.TabIndex = 107;
-            _ButtonX_ConvertMdl.Text = "Convert Model";
+            this.ButtonX_ConvertMdl.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_ConvertMdl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ButtonX_ConvertMdl.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_ConvertMdl.FocusCuesEnabled = false;
+            this.ButtonX_ConvertMdl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonX_ConvertMdl.Location = new System.Drawing.Point(78, 90);
+            this.ButtonX_ConvertMdl.Name = "ButtonX_ConvertMdl";
+            this.ButtonX_ConvertMdl.Size = new System.Drawing.Size(119, 23);
+            this.ButtonX_ConvertMdl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ConvertMdl.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.ButtonX_ConvertMdl.SymbolSize = 12F;
+            this.ButtonX_ConvertMdl.TabIndex = 107;
+            this.ButtonX_ConvertMdl.Text = "Convert Model";
+            this.ButtonX_ConvertMdl.Click += new System.EventHandler(this.ButtonX_ConvertMdl_Click);
             // 
             // LabelX4
             // 
-            _LabelX4.BackColor = Color.Transparent;
+            this.LabelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX4.Location = new Point(12, 64);
-            _LabelX4.Name = "LabelX4";
-            _LabelX4.Size = new Size(90, 20);
-            _LabelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _LabelX4.TabIndex = 108;
-            _LabelX4.Text = "Force Displaylist:";
+            this.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX4.Location = new System.Drawing.Point(12, 64);
+            this.LabelX4.Name = "LabelX4";
+            this.LabelX4.Size = new System.Drawing.Size(90, 20);
+            this.LabelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.LabelX4.TabIndex = 108;
+            this.LabelX4.Text = "Force Displaylist:";
             // 
             // ComboBoxEx1
             // 
-            _ComboBoxEx1.DisplayMember = "Text";
-            _ComboBoxEx1.DrawMode = DrawMode.OwnerDrawFixed;
-            _ComboBoxEx1.DropDownStyle = ComboBoxStyle.DropDownList;
-            _ComboBoxEx1.ForeColor = Color.Black;
-            _ComboBoxEx1.FormattingEnabled = true;
-            _ComboBoxEx1.ItemHeight = 15;
-            _ComboBoxEx1.Location = new Point(108, 63);
-            _ComboBoxEx1.Name = "ComboBoxEx1";
-            _ComboBoxEx1.Size = new Size(154, 21);
-            _ComboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ComboBoxEx1.TabIndex = 109;
+            this.ComboBoxEx1.DisplayMember = "Text";
+            this.ComboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxEx1.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxEx1.FormattingEnabled = true;
+            this.ComboBoxEx1.ItemHeight = 15;
+            this.ComboBoxEx1.Location = new System.Drawing.Point(108, 63);
+            this.ComboBoxEx1.Name = "ComboBoxEx1";
+            this.ComboBoxEx1.Size = new System.Drawing.Size(154, 21);
+            this.ComboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBoxEx1.TabIndex = 109;
             // 
             // ComboBoxEx2
             // 
-            _ComboBoxEx2.DisplayMember = "Text";
-            _ComboBoxEx2.DrawMode = DrawMode.OwnerDrawFixed;
-            _ComboBoxEx2.DropDownStyle = ComboBoxStyle.DropDownList;
-            _ComboBoxEx2.ForeColor = Color.Black;
-            _ComboBoxEx2.FormattingEnabled = true;
-            _ComboBoxEx2.ItemHeight = 15;
-            _ComboBoxEx2.Location = new Point(12, 142);
-            _ComboBoxEx2.Name = "ComboBoxEx2";
-            _ComboBoxEx2.Size = new Size(224, 21);
-            _ComboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ComboBoxEx2.TabIndex = 111;
+            this.ComboBoxEx2.DisplayMember = "Text";
+            this.ComboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxEx2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxEx2.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxEx2.FormattingEnabled = true;
+            this.ComboBoxEx2.ItemHeight = 15;
+            this.ComboBoxEx2.Location = new System.Drawing.Point(12, 142);
+            this.ComboBoxEx2.Name = "ComboBoxEx2";
+            this.ComboBoxEx2.Size = new System.Drawing.Size(224, 21);
+            this.ComboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBoxEx2.TabIndex = 111;
+            this.ComboBoxEx2.SelectedIndexChanged += new System.EventHandler(this.ComboBoxEx2_SelectedIndexChanged);
             // 
             // LabelX6
             // 
-            _LabelX6.BackColor = Color.Transparent;
+            this.LabelX6.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX6.Location = new Point(12, 272);
-            _LabelX6.Name = "LabelX6";
-            _LabelX6.Size = new Size(90, 20);
-            _LabelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _LabelX6.TabIndex = 112;
-            _LabelX6.Text = "Geo Pointer:";
+            this.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX6.Location = new System.Drawing.Point(12, 272);
+            this.LabelX6.Name = "LabelX6";
+            this.LabelX6.Size = new System.Drawing.Size(90, 20);
+            this.LabelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.LabelX6.TabIndex = 112;
+            this.LabelX6.Text = "Geo Pointer:";
             // 
             // LabelX7
             // 
-            _LabelX7.BackColor = Color.Transparent;
+            this.LabelX7.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX7.Location = new Point(12, 246);
-            _LabelX7.Name = "LabelX7";
-            _LabelX7.Size = new Size(90, 20);
-            _LabelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _LabelX7.TabIndex = 113;
-            _LabelX7.Text = "Collision Pointer:";
+            this.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX7.Location = new System.Drawing.Point(12, 246);
+            this.LabelX7.Name = "LabelX7";
+            this.LabelX7.Size = new System.Drawing.Size(90, 20);
+            this.LabelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.LabelX7.TabIndex = 113;
+            this.LabelX7.Text = "Collision Pointer:";
             // 
             // TextBoxX1
             // 
-            _TextBoxX1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _TextBoxX1.BackColor = Color.White;
+            this.TextBoxX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxX1.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX1.Border.Class = "TextBoxBorder";
-            _TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX1.DisabledBackColor = Color.White;
-            _TextBoxX1.ForeColor = Color.Black;
-            _TextBoxX1.Location = new Point(108, 272);
-            _TextBoxX1.Name = "TextBoxX1";
-            _TextBoxX1.PreventEnterBeep = true;
-            _TextBoxX1.Size = new Size(154, 20);
-            _SuperTooltip1.SetSuperTooltip(_TextBoxX1, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The Geopointers will be written to this addresses." + Conversions.ToString((char)13) + Conversions.ToString((char)10) + "Seperate them with comma." + Conversions.ToString((char)13) + Conversions.ToString((char)10) + Conversions.ToString((char)13) + Conversions.ToString((char)10) + "Example:" + Conversions.ToString((char)13) + Conversions.ToString((char)10) + "0x1250000, 0x18E0000", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new Size(0, 0)));
-            _TextBoxX1.TabIndex = 114;
+            this.TextBoxX1.Border.Class = "TextBoxBorder";
+            this.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX1.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX1.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxX1.Location = new System.Drawing.Point(108, 272);
+            this.TextBoxX1.Name = "TextBoxX1";
+            this.TextBoxX1.PreventEnterBeep = true;
+            this.TextBoxX1.Size = new System.Drawing.Size(154, 20);
+            this.SuperTooltip1.SetSuperTooltip(this.TextBoxX1, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The Geopointers will be written to this addresses.\r\nSeperate them with comma.\r\n\r\n" +
+            "Example:\r\n0x1250000, 0x18E0000", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
+            this.TextBoxX1.TabIndex = 114;
+            this.TextBoxX1.LostFocus += new System.EventHandler(this.TextBoxX1_TextChanged);
             // 
             // TextBoxX2
             // 
-            _TextBoxX2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _TextBoxX2.BackColor = Color.White;
+            this.TextBoxX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxX2.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX2.Border.Class = "TextBoxBorder";
-            _TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX2.DisabledBackColor = Color.White;
-            _TextBoxX2.ForeColor = Color.Black;
-            _TextBoxX2.Location = new Point(108, 246);
-            _TextBoxX2.Name = "TextBoxX2";
-            _TextBoxX2.PreventEnterBeep = true;
-            _TextBoxX2.Size = new Size(154, 20);
-            _SuperTooltip1.SetSuperTooltip(_TextBoxX2, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The Collision Pointer will be written to this addresses." + Conversions.ToString((char)13) + Conversions.ToString((char)10) + "Seperate them with comm" + "a." + Conversions.ToString((char)13) + Conversions.ToString((char)10) + Conversions.ToString((char)13) + Conversions.ToString((char)10) + "Example:" + Conversions.ToString((char)13) + Conversions.ToString((char)10) + "0x1250000, 0x18E0000", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new Size(0, 0)));
-            _TextBoxX2.TabIndex = 115;
+            this.TextBoxX2.Border.Class = "TextBoxBorder";
+            this.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX2.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX2.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxX2.Location = new System.Drawing.Point(108, 246);
+            this.TextBoxX2.Name = "TextBoxX2";
+            this.TextBoxX2.PreventEnterBeep = true;
+            this.TextBoxX2.Size = new System.Drawing.Size(154, 20);
+            this.SuperTooltip1.SetSuperTooltip(this.TextBoxX2, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "The Collision Pointer will be written to this addresses.\r\nSeperate them with comm" +
+            "a.\r\n\r\nExample:\r\n0x1250000, 0x18E0000", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
+            this.TextBoxX2.TabIndex = 115;
+            this.TextBoxX2.LostFocus += new System.EventHandler(this.TextBoxX2_TextChanged);
             // 
             // SuperTooltip1
             // 
-            _SuperTooltip1.DefaultTooltipSettings = new DevComponents.DotNetBar.SuperTooltipInfo("", "", "", null, null, DevComponents.DotNetBar.eTooltipColor.Gray);
-            _SuperTooltip1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.SuperTooltip1.DefaultTooltipSettings = new DevComponents.DotNetBar.SuperTooltipInfo("", "", "", null, null, DevComponents.DotNetBar.eTooltipColor.Gray);
+            this.SuperTooltip1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // ButtonX3
             // 
-            _ButtonX3.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX3.FocusCuesEnabled = false;
-            _ButtonX3.Location = new Point(3, 3);
-            _ButtonX3.MinimumSize = new Size(20, 20);
-            _ButtonX3.Name = "ButtonX3";
-            _ButtonX3.Size = new Size(20, 20);
-            _ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX3, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Close Popup", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new Size(0, 0)));
-            _ButtonX3.Symbol = "57676";
-            _ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX3.SymbolSize = 12.0F;
-            _ButtonX3.TabIndex = 39;
+            this.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX3.FocusCuesEnabled = false;
+            this.ButtonX3.Location = new System.Drawing.Point(3, 3);
+            this.ButtonX3.MinimumSize = new System.Drawing.Size(20, 20);
+            this.ButtonX3.Name = "ButtonX3";
+            this.ButtonX3.Size = new System.Drawing.Size(20, 20);
+            this.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SuperTooltip1.SetSuperTooltip(this.ButtonX3, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Close Popup", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
+            this.ButtonX3.Symbol = "57676";
+            this.ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX3.SymbolSize = 12F;
+            this.ButtonX3.TabIndex = 39;
+            this.ButtonX3.Click += new System.EventHandler(this.ButtonX3_Click);
             // 
             // ButtonX2
             // 
-            _ButtonX2.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX2.FocusCuesEnabled = false;
-            _ButtonX2.Location = new Point(112, 3);
-            _ButtonX2.MinimumSize = new Size(20, 20);
-            _ButtonX2.Name = "ButtonX2";
-            _ButtonX2.Size = new Size(115, 20);
-            _ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX2, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Edit Name & Description", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new Size(0, 0)));
-            _ButtonX2.Symbol = "57680";
-            _ButtonX2.SymbolColor = Color.Goldenrod;
-            _ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX2.SymbolSize = 12.0F;
-            _ButtonX2.TabIndex = 45;
-            _ButtonX2.Text = "Edit Preset Info";
+            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX2.FocusCuesEnabled = false;
+            this.ButtonX2.Location = new System.Drawing.Point(112, 3);
+            this.ButtonX2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.ButtonX2.Name = "ButtonX2";
+            this.ButtonX2.Size = new System.Drawing.Size(115, 20);
+            this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SuperTooltip1.SetSuperTooltip(this.ButtonX2, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Edit Name & Description", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
+            this.ButtonX2.Symbol = "57680";
+            this.ButtonX2.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX2.SymbolSize = 12F;
+            this.ButtonX2.TabIndex = 45;
+            this.ButtonX2.Text = "Edit Preset Info";
+            this.ButtonX2.Click += new System.EventHandler(this.ButtonX2_Click);
             // 
             // ButtonX1
             // 
-            _ButtonX1.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX1.FocusCuesEnabled = false;
-            _ButtonX1.Location = new Point(112, 29);
-            _ButtonX1.MinimumSize = new Size(20, 20);
-            _ButtonX1.Name = "ButtonX1";
-            _ButtonX1.Size = new Size(95, 20);
-            _ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX1, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Edit Name & Description", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new Size(0, 0)));
-            _ButtonX1.Symbol = "57697";
-            _ButtonX1.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX1.SymbolSize = 12.0F;
-            _ButtonX1.TabIndex = 46;
-            _ButtonX1.Text = "Save Preset";
+            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX1.FocusCuesEnabled = false;
+            this.ButtonX1.Location = new System.Drawing.Point(112, 29);
+            this.ButtonX1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.ButtonX1.Name = "ButtonX1";
+            this.ButtonX1.Size = new System.Drawing.Size(95, 20);
+            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SuperTooltip1.SetSuperTooltip(this.ButtonX1, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Edit Name & Description", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
+            this.ButtonX1.Symbol = "57697";
+            this.ButtonX1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX1.SymbolSize = 12F;
+            this.ButtonX1.TabIndex = 46;
+            this.ButtonX1.Text = "Save Preset";
+            this.ButtonX1.Click += new System.EventHandler(this.ButtonX1_Click);
             // 
             // Panel1
             // 
-            _Panel1.BackColor = Color.Transparent;
-            _Panel1.Controls.Add(_LabelX5);
-            _Panel1.Controls.Add(_TableLayoutPanel2);
-            _Panel1.Controls.Add(_LabelX_Description);
-            _Panel1.Controls.Add(_LabelX_PatchName);
-            _Panel1.Controls.Add(_TableLayoutPanel1);
-            _Panel1.Location = new Point(17, 294);
-            _Panel1.Name = "Panel1";
-            _Panel1.Size = new Size(298, 191);
-            _Panel1.TabIndex = 117;
-            _Panel1.Visible = false;
+            this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.labelX_Version);
+            this.Panel1.Controls.Add(this.LabelX5);
+            this.Panel1.Controls.Add(this.TableLayoutPanel2);
+            this.Panel1.Controls.Add(this.LabelX_Description);
+            this.Panel1.Controls.Add(this.LabelX_PatchName);
+            this.Panel1.Controls.Add(this.TableLayoutPanel1);
+            this.Panel1.Location = new System.Drawing.Point(17, 220);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(298, 265);
+            this.Panel1.TabIndex = 117;
+            this.Panel1.Visible = false;
             // 
             // LabelX5
             // 
-            _LabelX5.BackColor = Color.Transparent;
+            this.LabelX5.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX5.Location = new Point(3, 87);
-            _LabelX5.Name = "LabelX5";
-            _LabelX5.Size = new Size(230, 23);
-            _LabelX5.TabIndex = 52;
-            _LabelX5.Text = "Description:";
+            this.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX5.Location = new System.Drawing.Point(3, 114);
+            this.LabelX5.Name = "LabelX5";
+            this.LabelX5.Size = new System.Drawing.Size(230, 23);
+            this.LabelX5.TabIndex = 52;
+            this.LabelX5.Text = "Description:";
             // 
             // TableLayoutPanel2
             // 
-            _TableLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            _TableLayoutPanel2.AutoSize = true;
-            _TableLayoutPanel2.BackColor = Color.Transparent;
-            _TableLayoutPanel2.ColumnCount = 1;
-            _TableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
-            _TableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20.0F));
-            _TableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20.0F));
-            _TableLayoutPanel2.Controls.Add(_ButtonX3, 0, 0);
-            _TableLayoutPanel2.Location = new Point(272, 0);
-            _TableLayoutPanel2.Name = "TableLayoutPanel2";
-            _TableLayoutPanel2.RowCount = 1;
-            _TableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100.0F));
-            _TableLayoutPanel2.Size = new Size(26, 26);
-            _TableLayoutPanel2.TabIndex = 48;
+            this.TableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TableLayoutPanel2.AutoSize = true;
+            this.TableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.TableLayoutPanel2.ColumnCount = 1;
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TableLayoutPanel2.Controls.Add(this.ButtonX3, 0, 0);
+            this.TableLayoutPanel2.Location = new System.Drawing.Point(272, 0);
+            this.TableLayoutPanel2.Name = "TableLayoutPanel2";
+            this.TableLayoutPanel2.RowCount = 1;
+            this.TableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayoutPanel2.Size = new System.Drawing.Size(26, 26);
+            this.TableLayoutPanel2.TabIndex = 48;
             // 
             // LabelX_Description
             // 
-            _LabelX_Description.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-
-            _LabelX_Description.BackColor = Color.Transparent;
+            this.LabelX_Description.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LabelX_Description.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX_Description.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX_Description.Location = new Point(3, 116);
-            _LabelX_Description.Name = "LabelX_Description";
-            _LabelX_Description.Size = new Size(292, 72);
-            _LabelX_Description.TabIndex = 50;
-            _LabelX_Description.TextLineAlignment = StringAlignment.Near;
-            _LabelX_Description.WordWrap = true;
+            this.LabelX_Description.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX_Description.Location = new System.Drawing.Point(3, 146);
+            this.LabelX_Description.Name = "LabelX_Description";
+            this.LabelX_Description.Size = new System.Drawing.Size(292, 116);
+            this.LabelX_Description.TabIndex = 50;
+            this.LabelX_Description.TextLineAlignment = System.Drawing.StringAlignment.Near;
+            this.LabelX_Description.WordWrap = true;
             // 
             // LabelX_PatchName
             // 
-            _LabelX_PatchName.BackColor = Color.Transparent;
+            this.LabelX_PatchName.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX_PatchName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX_PatchName.Location = new Point(3, 58);
-            _LabelX_PatchName.Name = "LabelX_PatchName";
-            _LabelX_PatchName.Size = new Size(381, 23);
-            _LabelX_PatchName.TabIndex = 49;
-            _LabelX_PatchName.Text = "Name:";
+            this.LabelX_PatchName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX_PatchName.Location = new System.Drawing.Point(3, 58);
+            this.LabelX_PatchName.Name = "LabelX_PatchName";
+            this.LabelX_PatchName.Size = new System.Drawing.Size(381, 23);
+            this.LabelX_PatchName.TabIndex = 49;
+            this.LabelX_PatchName.Text = "Name:";
             // 
             // TableLayoutPanel1
             // 
-            _TableLayoutPanel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _TableLayoutPanel1.AutoSize = true;
-            _TableLayoutPanel1.BackColor = Color.Transparent;
-            _TableLayoutPanel1.ColumnCount = 2;
-            _TableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            _TableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            _TableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20.0F));
-            _TableLayoutPanel1.Controls.Add(_ButtonX1, 1, 1);
-            _TableLayoutPanel1.Controls.Add(_ButtonX6, 0, 0);
-            _TableLayoutPanel1.Controls.Add(_ButtonX2, 1, 0);
-            _TableLayoutPanel1.Controls.Add(_ButtonX7, 0, 1);
-            _TableLayoutPanel1.Location = new Point(0, 0);
-            _TableLayoutPanel1.Name = "TableLayoutPanel1";
-            _TableLayoutPanel1.RowCount = 2;
-            _TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50.0F));
-            _TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50.0F));
-            _TableLayoutPanel1.Size = new Size(236, 52);
-            _TableLayoutPanel1.TabIndex = 47;
+            this.TableLayoutPanel1.AutoSize = true;
+            this.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.TableLayoutPanel1.ColumnCount = 2;
+            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TableLayoutPanel1.Controls.Add(this.ButtonX1, 1, 1);
+            this.TableLayoutPanel1.Controls.Add(this.ButtonX6, 0, 0);
+            this.TableLayoutPanel1.Controls.Add(this.ButtonX2, 1, 0);
+            this.TableLayoutPanel1.Controls.Add(this.ButtonX7, 0, 1);
+            this.TableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.TableLayoutPanel1.Name = "TableLayoutPanel1";
+            this.TableLayoutPanel1.RowCount = 2;
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableLayoutPanel1.Size = new System.Drawing.Size(236, 52);
+            this.TableLayoutPanel1.TabIndex = 47;
             // 
             // ButtonX6
             // 
-            _ButtonX6.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _ButtonX6.AutoExpandOnClick = true;
-            _ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX6.FocusCuesEnabled = false;
-            _ButtonX6.Location = new Point(3, 3);
-            _ButtonX6.Name = "ButtonX6";
-            _ButtonX6.Size = new Size(103, 20);
-            _ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem1, _ButtonItem2 });
-            _ButtonX6.Symbol = "57680";
-            _ButtonX6.SymbolColor = Color.Goldenrod;
-            _ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX6.SymbolSize = 12.0F;
-            _ButtonX6.TabIndex = 44;
-            _ButtonX6.Text = "Edit Script";
+            this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ButtonX6.AutoExpandOnClick = true;
+            this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX6.FocusCuesEnabled = false;
+            this.ButtonX6.Location = new System.Drawing.Point(3, 3);
+            this.ButtonX6.Name = "ButtonX6";
+            this.ButtonX6.Size = new System.Drawing.Size(103, 20);
+            this.ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem1,
+            this.ButtonItem2});
+            this.ButtonX6.Symbol = "57680";
+            this.ButtonX6.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX6.SymbolSize = 12F;
+            this.ButtonX6.TabIndex = 44;
+            this.ButtonX6.Text = "Edit Script";
             // 
             // ButtonItem1
             // 
-            _ButtonItem1.GlobalItem = false;
-            _ButtonItem1.Name = "ButtonItem1";
-            _ButtonItem1.Text = "Script \"Before\"";
+            this.ButtonItem1.GlobalItem = false;
+            this.ButtonItem1.Name = "ButtonItem1";
+            this.ButtonItem1.Text = "Script \"Before\"";
+            this.ButtonItem1.Click += new System.EventHandler(this.ButtonItem1_Click);
             // 
             // ButtonItem2
             // 
-            _ButtonItem2.GlobalItem = false;
-            _ButtonItem2.Name = "ButtonItem2";
-            _ButtonItem2.Text = "Script \"After\"";
+            this.ButtonItem2.GlobalItem = false;
+            this.ButtonItem2.Name = "ButtonItem2";
+            this.ButtonItem2.Text = "Script \"After\"";
+            this.ButtonItem2.Click += new System.EventHandler(this.ButtonItem2_Click);
             // 
             // ButtonX7
             // 
-            _ButtonX7.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX7.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            _ButtonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX7.FocusCuesEnabled = false;
-            _ButtonX7.Location = new Point(3, 29);
-            _ButtonX7.Name = "ButtonX7";
-            _ButtonX7.Size = new Size(103, 20);
-            _ButtonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX7.Symbol = "57676";
-            _ButtonX7.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(150)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)));
-            _ButtonX7.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX7.SymbolSize = 12.0F;
-            _ButtonX7.TabIndex = 45;
-            _ButtonX7.Text = "Delete Preset";
+            this.ButtonX7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ButtonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX7.FocusCuesEnabled = false;
+            this.ButtonX7.Location = new System.Drawing.Point(3, 29);
+            this.ButtonX7.Name = "ButtonX7";
+            this.ButtonX7.Size = new System.Drawing.Size(103, 20);
+            this.ButtonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX7.Symbol = "57676";
+            this.ButtonX7.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ButtonX7.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX7.SymbolSize = 12F;
+            this.ButtonX7.TabIndex = 45;
+            this.ButtonX7.Text = "Delete Preset";
+            this.ButtonX7.Click += new System.EventHandler(this.ButtonX7_Click);
             // 
             // ButtonX4
             // 
-            _ButtonX4.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX4.FocusCuesEnabled = false;
-            _ButtonX4.Location = new Point(242, 142);
-            _ButtonX4.Name = "ButtonX4";
-            _ButtonX4.Size = new Size(20, 20);
-            _ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX4.Symbol = "57669";
-            _ButtonX4.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _ButtonX4.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX4.SymbolSize = 12.0F;
-            _ButtonX4.TabIndex = 42;
+            this.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX4.FocusCuesEnabled = false;
+            this.ButtonX4.Location = new System.Drawing.Point(242, 142);
+            this.ButtonX4.Name = "ButtonX4";
+            this.ButtonX4.Size = new System.Drawing.Size(20, 20);
+            this.ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX4.Symbol = "57669";
+            this.ButtonX4.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.ButtonX4.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX4.SymbolSize = 12F;
+            this.ButtonX4.TabIndex = 42;
+            this.ButtonX4.Click += new System.EventHandler(this.ButtonX4_Click);
             // 
             // Flyout1
             // 
-            _Flyout1.Content = _Panel1;
-            _Flyout1.DisplayMode = DevComponents.DotNetBar.Controls.eFlyoutDisplayMode.MouseHover;
-            _Flyout1.DropShadow = false;
-            _Flyout1.TargetControl = _ComboBoxEx2;
+            this.Flyout1.Content = this.Panel1;
+            this.Flyout1.DisplayMode = DevComponents.DotNetBar.Controls.eFlyoutDisplayMode.MouseHover;
+            this.Flyout1.DropShadow = false;
+            this.Flyout1.TargetControl = this.ComboBoxEx2;
+            this.Flyout1.PrepareContent += new System.EventHandler(this.Flyout1_PrepareContent);
+            this.Flyout1.FlyoutShowing += new DevComponents.DotNetBar.Controls.FlyoutShowingEventHandler(this.Flyout1_FlyoutShowing);
+            // 
+            // labelX_Version
+            // 
+            this.labelX_Version.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX_Version.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX_Version.Location = new System.Drawing.Point(3, 85);
+            this.labelX_Version.Name = "labelX_Version";
+            this.labelX_Version.Size = new System.Drawing.Size(381, 23);
+            this.labelX_Version.TabIndex = 53;
+            this.labelX_Version.Text = "Version:";
             // 
             // ModelImporter
             // 
-            AutoScaleDimensions = new SizeF(6.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(274, 489);
-            Controls.Add(_ButtonX4);
-            Controls.Add(_Panel1);
-            Controls.Add(_LabelX6);
-            Controls.Add(_LabelX7);
-            Controls.Add(_TextBoxX1);
-            Controls.Add(_TextBoxX2);
-            Controls.Add(_ComboBoxEx2);
-            Controls.Add(_ComboBoxEx1);
-            Controls.Add(_LabelX4);
-            Controls.Add(_ButtonX_ConvertMdl);
-            Controls.Add(_ButtonX_ImportMdl);
-            Controls.Add(_TextBoxX_Output);
-            Controls.Add(_LabelX3);
-            Controls.Add(_Line3);
-            Controls.Add(_Line1);
-            Controls.Add(_Line2);
-            Controls.Add(_LabelX2);
-            Controls.Add(_LabelX1);
-            Controls.Add(_ButtonX_OpenRom);
-            Controls.Add(_LabelX50);
-            Controls.Add(_LabelX51);
-            Controls.Add(_LabelX54);
-            Controls.Add(_TextBoxX_RomAddr);
-            Controls.Add(_TextBoxX_MaxLength);
-            Controls.Add(_TextBoxX_BankAddr);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            MaximizeBox = false;
-            Name = "ModelImporter";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Model Importer";
-            TopLeftCornerSize = 0;
-            TopRightCornerSize = 0;
-            _Panel1.ResumeLayout(false);
-            _Panel1.PerformLayout();
-            _TableLayoutPanel2.ResumeLayout(false);
-            _TableLayoutPanel1.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(274, 489);
+            this.Controls.Add(this.ButtonX4);
+            this.Controls.Add(this.Panel1);
+            this.Controls.Add(this.LabelX6);
+            this.Controls.Add(this.LabelX7);
+            this.Controls.Add(this.TextBoxX1);
+            this.Controls.Add(this.TextBoxX2);
+            this.Controls.Add(this.ComboBoxEx2);
+            this.Controls.Add(this.ComboBoxEx1);
+            this.Controls.Add(this.LabelX4);
+            this.Controls.Add(this.ButtonX_ConvertMdl);
+            this.Controls.Add(this.ButtonX_ImportMdl);
+            this.Controls.Add(this.TextBoxX_Output);
+            this.Controls.Add(this.LabelX3);
+            this.Controls.Add(this.Line3);
+            this.Controls.Add(this.Line1);
+            this.Controls.Add(this.Line2);
+            this.Controls.Add(this.LabelX2);
+            this.Controls.Add(this.LabelX1);
+            this.Controls.Add(this.ButtonX_OpenRom);
+            this.Controls.Add(this.LabelX50);
+            this.Controls.Add(this.LabelX51);
+            this.Controls.Add(this.LabelX54);
+            this.Controls.Add(this.TextBoxX_RomAddr);
+            this.Controls.Add(this.TextBoxX_MaxLength);
+            this.Controls.Add(this.TextBoxX_BankAddr);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "ModelImporter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Model Importer";
+            this.TopLeftCornerSize = 0;
+            this.TopRightCornerSize = 0;
+            this.Panel1.ResumeLayout(false);
+            this.Panel1.PerformLayout();
+            this.TableLayoutPanel2.ResumeLayout(false);
+            this.TableLayoutPanel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
-        private DevComponents.DotNetBar.LabelX _LabelX50;
-
-        internal DevComponents.DotNetBar.LabelX LabelX50
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX50;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX50 != null)
-                {
-                }
-
-                _LabelX50 = value;
-                if (_LabelX50 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX51;
-
-        internal DevComponents.DotNetBar.LabelX LabelX51
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX51;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX51 != null)
-                {
-                }
-
-                _LabelX51 = value;
-                if (_LabelX51 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX54;
-
-        internal DevComponents.DotNetBar.LabelX LabelX54
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX54;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX54 != null)
-                {
-                }
-
-                _LabelX54 = value;
-                if (_LabelX54 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX_RomAddr;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_RomAddr
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX_RomAddr;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX_RomAddr != null)
-                {
-                    _TextBoxX_RomAddr.TextChanged -= TextBoxX_RomAddr_TextChanged;
-                }
-
-                _TextBoxX_RomAddr = value;
-                if (_TextBoxX_RomAddr != null)
-                {
-                    _TextBoxX_RomAddr.TextChanged += TextBoxX_RomAddr_TextChanged;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX_MaxLength;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_MaxLength
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX_MaxLength;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX_MaxLength != null)
-                {
-                    _TextBoxX_MaxLength.TextChanged -= TextBoxX_MaxLength_TextChanged;
-                }
-
-                _TextBoxX_MaxLength = value;
-                if (_TextBoxX_MaxLength != null)
-                {
-                    _TextBoxX_MaxLength.TextChanged += TextBoxX_MaxLength_TextChanged;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX_BankAddr;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_BankAddr
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX_BankAddr;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX_BankAddr != null)
-                {
-                    _TextBoxX_BankAddr.TextChanged -= TextBoxX_BankAddr_TextChanged;
-                }
-
-                _TextBoxX_BankAddr = value;
-                if (_TextBoxX_BankAddr != null)
-                {
-                    _TextBoxX_BankAddr.TextChanged += TextBoxX_BankAddr_TextChanged;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_OpenRom;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_OpenRom
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_OpenRom;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_OpenRom != null)
-                {
-                    _ButtonX_OpenRom.Click -= ButtonX_OpenRom_Click;
-                }
-
-                _ButtonX_OpenRom = value;
-                if (_ButtonX_OpenRom != null)
-                {
-                    _ButtonX_OpenRom.Click += ButtonX_OpenRom_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX1;
-
-        internal DevComponents.DotNetBar.LabelX LabelX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX1 != null)
-                {
-                }
-
-                _LabelX1 = value;
-                if (_LabelX1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX2;
-
-        internal DevComponents.DotNetBar.LabelX LabelX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX2 != null)
-                {
-                }
-
-                _LabelX2 = value;
-                if (_LabelX2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.Line _Line2;
-
-        internal DevComponents.DotNetBar.Controls.Line Line2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Line2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Line2 != null)
-                {
-                }
-
-                _Line2 = value;
-                if (_Line2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.Line _Line1;
-
-        internal DevComponents.DotNetBar.Controls.Line Line1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Line1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Line1 != null)
-                {
-                }
-
-                _Line1 = value;
-                if (_Line1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.Line _Line3;
-
-        internal DevComponents.DotNetBar.Controls.Line Line3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Line3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Line3 != null)
-                {
-                }
-
-                _Line3 = value;
-                if (_Line3 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX3;
-
-        internal DevComponents.DotNetBar.LabelX LabelX3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX3 != null)
-                {
-                }
-
-                _LabelX3 = value;
-                if (_LabelX3 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX_Output;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_Output
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX_Output;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX_Output != null)
-                {
-                }
-
-                _TextBoxX_Output = value;
-                if (_TextBoxX_Output != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_ImportMdl;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_ImportMdl
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_ImportMdl;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_ImportMdl != null)
-                {
-                    _ButtonX_ImportMdl.Click -= ButtonX_ImportMdl_Click;
-                }
-
-                _ButtonX_ImportMdl = value;
-                if (_ButtonX_ImportMdl != null)
-                {
-                    _ButtonX_ImportMdl.Click += ButtonX_ImportMdl_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_ConvertMdl;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_ConvertMdl
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_ConvertMdl;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_ConvertMdl != null)
-                {
-                    _ButtonX_ConvertMdl.Click -= ButtonX_ConvertMdl_Click;
-                }
-
-                _ButtonX_ConvertMdl = value;
-                if (_ButtonX_ConvertMdl != null)
-                {
-                    _ButtonX_ConvertMdl.Click += ButtonX_ConvertMdl_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX4;
-
-        internal DevComponents.DotNetBar.LabelX LabelX4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX4 != null)
-                {
-                }
-
-                _LabelX4 = value;
-                if (_LabelX4 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.ComboBoxEx _ComboBoxEx1;
-
-        internal DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ComboBoxEx1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ComboBoxEx1 != null)
-                {
-                }
-
-                _ComboBoxEx1 = value;
-                if (_ComboBoxEx1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.ComboBoxEx _ComboBoxEx2;
-
-        internal DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ComboBoxEx2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ComboBoxEx2 != null)
-                {
-                    _ComboBoxEx2.SelectedIndexChanged -= ComboBoxEx2_SelectedIndexChanged;
-                }
-
-                _ComboBoxEx2 = value;
-                if (_ComboBoxEx2 != null)
-                {
-                    _ComboBoxEx2.SelectedIndexChanged += ComboBoxEx2_SelectedIndexChanged;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX6;
-
-        internal DevComponents.DotNetBar.LabelX LabelX6
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX6;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX6 != null)
-                {
-                }
-
-                _LabelX6 = value;
-                if (_LabelX6 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX7;
-
-        internal DevComponents.DotNetBar.LabelX LabelX7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX7 != null)
-                {
-                }
-
-                _LabelX7 = value;
-                if (_LabelX7 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX1;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX1 != null)
-                {
-                    _TextBoxX1.LostFocus -= TextBoxX1_TextChanged;
-                }
-
-                _TextBoxX1 = value;
-                if (_TextBoxX1 != null)
-                {
-                    _TextBoxX1.LostFocus += TextBoxX1_TextChanged;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX2;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX2 != null)
-                {
-                    _TextBoxX2.LostFocus -= TextBoxX2_TextChanged;
-                }
-
-                _TextBoxX2 = value;
-                if (_TextBoxX2 != null)
-                {
-                    _TextBoxX2.LostFocus += TextBoxX2_TextChanged;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.SuperTooltip _SuperTooltip1;
-
-        internal DevComponents.DotNetBar.SuperTooltip SuperTooltip1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _SuperTooltip1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_SuperTooltip1 != null)
-                {
-                }
-
-                _SuperTooltip1 = value;
-                if (_SuperTooltip1 != null)
-                {
-                }
-            }
-        }
-
-        private Panel _Panel1;
-
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX5;
-
-        internal DevComponents.DotNetBar.LabelX LabelX5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX5 != null)
-                {
-                }
-
-                _LabelX5 = value;
-                if (_LabelX5 != null)
-                {
-                }
-            }
-        }
-
-        private TableLayoutPanel _TableLayoutPanel2;
-
-        internal TableLayoutPanel TableLayoutPanel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TableLayoutPanel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TableLayoutPanel2 != null)
-                {
-                }
-
-                _TableLayoutPanel2 = value;
-                if (_TableLayoutPanel2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX3;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX3 != null)
-                {
-                    _ButtonX3.Click -= ButtonX3_Click;
-                }
-
-                _ButtonX3 = value;
-                if (_ButtonX3 != null)
-                {
-                    _ButtonX3.Click += ButtonX3_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX_Description;
-
-        internal DevComponents.DotNetBar.LabelX LabelX_Description
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX_Description;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX_Description != null)
-                {
-                }
-
-                _LabelX_Description = value;
-                if (_LabelX_Description != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX_PatchName;
-
-        internal DevComponents.DotNetBar.LabelX LabelX_PatchName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX_PatchName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX_PatchName != null)
-                {
-                }
-
-                _LabelX_PatchName = value;
-                if (_LabelX_PatchName != null)
-                {
-                }
-            }
-        }
-
-        private TableLayoutPanel _TableLayoutPanel1;
-
-        internal TableLayoutPanel TableLayoutPanel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TableLayoutPanel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TableLayoutPanel1 != null)
-                {
-                }
-
-                _TableLayoutPanel1 = value;
-                if (_TableLayoutPanel1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX4;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX4 != null)
-                {
-                    _ButtonX4.Click -= ButtonX4_Click;
-                }
-
-                _ButtonX4 = value;
-                if (_ButtonX4 != null)
-                {
-                    _ButtonX4.Click += ButtonX4_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX7;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX7 != null)
-                {
-                    _ButtonX7.Click -= ButtonX7_Click;
-                }
-
-                _ButtonX7 = value;
-                if (_ButtonX7 != null)
-                {
-                    _ButtonX7.Click += ButtonX7_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX6;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX6
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX6;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX6 != null)
-                {
-                }
-
-                _ButtonX6 = value;
-                if (_ButtonX6 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.Flyout _Flyout1;
-
-        internal DevComponents.DotNetBar.Controls.Flyout Flyout1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Flyout1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Flyout1 != null)
-                {
-                    _Flyout1.PrepareContent -= Flyout1_PrepareContent;
-                    _Flyout1.FlyoutShowing -= Flyout1_FlyoutShowing;
-                }
-
-                _Flyout1 = value;
-                if (_Flyout1 != null)
-                {
-                    _Flyout1.PrepareContent += Flyout1_PrepareContent;
-                    _Flyout1.FlyoutShowing += Flyout1_FlyoutShowing;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX1;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX1 != null)
-                {
-                    _ButtonX1.Click -= ButtonX1_Click;
-                }
-
-                _ButtonX1 = value;
-                if (_ButtonX1 != null)
-                {
-                    _ButtonX1.Click += ButtonX1_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX2;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX2 != null)
-                {
-                    _ButtonX2.Click -= ButtonX2_Click;
-                }
-
-                _ButtonX2 = value;
-                if (_ButtonX2 != null)
-                {
-                    _ButtonX2.Click += ButtonX2_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem1;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem1 != null)
-                {
-                    _ButtonItem1.Click -= ButtonItem1_Click;
-                }
-
-                _ButtonItem1 = value;
-                if (_ButtonItem1 != null)
-                {
-                    _ButtonItem1.Click += ButtonItem1_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem2;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem2 != null)
-                {
-                    _ButtonItem2.Click -= ButtonItem2_Click;
-                }
-
-                _ButtonItem2 = value;
-                if (_ButtonItem2 != null)
-                {
-                    _ButtonItem2.Click += ButtonItem2_Click;
-                }
-            }
-        }
+        private DevComponents.DotNetBar.LabelX LabelX50;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX51;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX54;
+
+
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_RomAddr;
+
+
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_MaxLength;
+
+
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_BankAddr;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX_OpenRom;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX1;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX2;
+
+
+        private DevComponents.DotNetBar.Controls.Line Line2;
+
+
+        private DevComponents.DotNetBar.Controls.Line Line1;
+
+
+        private DevComponents.DotNetBar.Controls.Line Line3;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX3;
+
+
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_Output;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX_ImportMdl;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX_ConvertMdl;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX4;
+
+
+        private DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx1;
+
+
+        private DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx2;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX6;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX7;
+
+
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX1;
+
+
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX2;
+
+
+        private DevComponents.DotNetBar.SuperTooltip SuperTooltip1;
+
+
+        private Panel Panel1;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX5;
+
+
+        private TableLayoutPanel TableLayoutPanel2;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX3;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX_Description;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX_PatchName;
+
+
+        private TableLayoutPanel TableLayoutPanel1;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX4;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX7;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX6;
+
+
+        private DevComponents.DotNetBar.Controls.Flyout Flyout1;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX1;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX2;
+
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem1;
+
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem2;
+        private DevComponents.DotNetBar.LabelX labelX_Version;
     }
 }

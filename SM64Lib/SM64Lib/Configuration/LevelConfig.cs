@@ -6,7 +6,7 @@ namespace SM64Lib.Configuration
     {
         public string LevelName { get; set; }
         public bool EnableLocalObjectBank { get; set; } = false;
-        public ObjectBankConfig LocalObjectBank { get; set; } = new ObjectBankConfig();
+        public ObjectModelConfig LocalObjectBank { get; set; } = new ObjectModelConfig();
         public Dictionary<byte, LevelAreaConfig> AreaConfigs { get; private set; } = new Dictionary<byte, LevelAreaConfig>();
 
         public LevelAreaConfig GetLevelAreaConfig(byte areaID)

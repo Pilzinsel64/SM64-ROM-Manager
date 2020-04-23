@@ -1,4 +1,6 @@
 ﻿
+using Newtonsoft.Json;
+
 namespace SM64_ROM_Manager.Updating
 {
     public class UpdatePackageInfo

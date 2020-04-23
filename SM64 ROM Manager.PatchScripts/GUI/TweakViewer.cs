@@ -10,6 +10,8 @@ using global::DevComponents.DotNetBar;
 using global::DevComponents.Editors;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64_ROM_Manager.Publics;
+using Microsoft.VisualBasic;
+using static Microsoft.VisualBasic.CompilerServices.LikeOperator;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -57,7 +59,7 @@ namespace SM64_ROM_Manager.PatchScripts
         private async void CheckForTweakUpdates()
         {
             var dbmgr = GetDatabaseManager();
-            string localPath = Path.Combine(General.MyTweaksPath, nameof(TweakDatabaseCategories.Reviewed));
+            string localPath = Path.Combine(General.MyTweaksPath, dbmgr.Preferences.CategoryPaths[TweakDatabaseCategories.Reviewed]);
             bool hasUpdates = false;
 
 #if !DEBUG
@@ -108,7 +110,7 @@ namespace SM64_ROM_Manager.PatchScripts
             string pathTweaks = General.MyTweaksPath;
             var mgr = new PatchingManager();
             myPatchs.Clear();
-            foreach (string f in Directory.GetFiles(pathTweaks, "*.xml", SearchOption.AllDirectories))
+            foreach (string f in Directory.GetFiles(pathTweaks, "*.xml", SearchOption.AllDirectories).Concat(Directory.GetFiles(pathTweaks, "*.json", SearchOption.AllDirectories)))
             {
                 var p = mgr.Read(f);
                 myPatchs.Add(p);
@@ -122,20 +124,16 @@ namespace SM64_ROM_Manager.PatchScripts
         private void LoadTweakList(string Filter = "")
         {
             bool enableFilter = !string.IsNullOrEmpty(Filter.Trim());
-            string filterLower = Filter.ToLower();
+            Filter = $"*{Filter}*";
             ItemListBox1.Items.Clear();
+
             foreach (PatchProfile patch in myPatchs)
             {
-                if (enableFilter && !patch.Name.ToLower().Contains(filterLower) && patch.Scripts.Where(n => n.Name.ToLower().Contains(filterLower)).Count() == 0)
+                if (!enableFilter || LikeString(patch.Name, Filter, CompareMethod.Text) || patch.Scripts.Where(n => LikeString(n.Name, Filter, CompareMethod.Text)).Any())
                 {
-                    continue;
+                    var btnItem = GetButtonItemFromPatch(patch);
+                    ItemListBox1.Items.Add(btnItem);
                 }
-
-                var btnItem = new ButtonItem();
-                btnItem.Text = patch.Name;
-                btnItem.Tag = patch;
-                btnItem.MouseUp += ItemListBox1_ItemMouseClick;
-                ItemListBox1.Items.Add(btnItem);
             }
 
             if (ItemListBox1.Items.Count > 0)
@@ -146,9 +144,26 @@ namespace SM64_ROM_Manager.PatchScripts
             ItemListBox1.Refresh();
         }
 
+        private Color GetTweakColor(PatchProfile patch)
+        {
+            switch (true)
+            {
+                case object _ when patch.FileName.StartsWith(Path.Combine(General.MyTweaksPath, dbmgr.Preferences.CategoryPaths[TweakDatabaseCategories.Reviewed])):
+                    return default;
+                case object _ when patch.FileName.StartsWith(Path.Combine(General.MyTweaksPath, dbmgr.Preferences.CategoryPaths[TweakDatabaseCategories.Experimental])):
+                    return Color.Orange;
+                case object _ when patch.FileName.StartsWith(Path.Combine(General.MyTweaksPath, dbmgr.Preferences.CategoryPaths[TweakDatabaseCategories.Uploads])):
+                    return Color.OrangeRed;
+                default:
+                    return Color.DarkViolet;
+            }
+        }
+
         private void LoadTweak(PatchProfile patch)
         {
             LabelX_PatchName.Text = patch.Name;
+            labelX_Version.Text = $"Version {patch.Version}";
+
             if (!string.IsNullOrEmpty(LabelX_Description.Text))
             {
                 LabelX_Description.Text = patch.Description;
@@ -166,8 +181,7 @@ namespace SM64_ROM_Manager.PatchScripts
         private void LoadScriptsList(PatchProfile patch)
         {
             ComboBoxEx_Scripts.Items.Clear();
-            LabelX_PatchName.Text = $"Name: {patch.Name}";
-            LabelX_Description.Text = string.IsNullOrEmpty(patch.Name) ? "No description available." : patch.Description;
+
             foreach (PatchScript script in patch.Scripts)
             {
                 var item = new ComboItem();
@@ -228,12 +242,13 @@ namespace SM64_ROM_Manager.PatchScripts
             ComboBoxEx_Scripts.SelectedItem = comboItem;
         }
 
-        private void AddNewPatch(string name, string description, string firstScriptName)
+        private void AddNewPatch(string name, string description, Version version, string firstScriptName)
         {
             var patch = new PatchProfile()
             {
                 Name = name,
-                Description = description
+                Description = description,
+                Version = version
             };
             var script = new PatchScript() { Name = firstScriptName };
             patch.Scripts.Add(script);
@@ -250,7 +265,8 @@ namespace SM64_ROM_Manager.PatchScripts
             var btnItem = new ButtonItem()
             {
                 Text = patch.Name,
-                Tag = patch
+                Tag = patch,
+                ForeColor = GetTweakColor(patch)
             };
             btnItem.MouseUp += ItemListBox1_ItemMouseClick;
             return btnItem;
@@ -282,21 +298,25 @@ namespace SM64_ROM_Manager.PatchScripts
             var editor = new TweakProfileEditor()
             {
                 Titel = patch.Name,
-                Description = patch.Description
+                Description = patch.Description,
+                Version = patch.Version
             };
             if (editor.ShowDialog(this) == DialogResult.OK)
             {
                 string oldName = patch.Name;
                 string oldDescription = patch.Description;
+
                 patch.Name = editor.Titel.Trim();
                 patch.Description = editor.Description.Trim();
+                patch.Version = editor.Version;
+
                 if ((oldName ?? "") != (patch.Name ?? ""))
                 {
-                    // Rename File
-                    string newFileName = Path.Combine(Path.GetDirectoryName(patch.FileName), editor.Titel + Path.GetExtension(patch.FileName));
-                    newFileName = EnsureFileNameIsNotUsed(newFileName);
-                    File.Move(patch.FileName, newFileName);
-                    patch.FileName = newFileName;
+                    //// Rename File
+                    //string newFileName = Path.Combine(Path.GetDirectoryName(patch.FileName), editor.Titel + Path.GetExtension(patch.FileName));
+                    //newFileName = EnsureFileNameIsNotUsed(newFileName);
+                    //File.Move(patch.FileName, newFileName);
+                    //patch.FileName = newFileName;
 
                     // Update Title in ListBox
                     ItemListBox1.SelectedItem.Text = patch.Name;
@@ -318,7 +338,7 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             ButtonItem btnItem = (ButtonItem)ItemListBox1.SelectedItem;
             PatchProfile patch = (PatchProfile)btnItem.Tag;
-            LoadScriptsList(patch);
+            LoadTweak(patch);
         }
 
         private void ComboBoxEx_Scripts_SelectedIndexChanged(object sender, EventArgs e)
@@ -376,11 +396,12 @@ namespace SM64_ROM_Manager.PatchScripts
             var frm = new TweakProfileEditor()
             {
                 Titel = "New Profile",
-                Description = string.Empty
+                Description = string.Empty,
+                Version = new Version("1.0.0.0")
             };
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                AddNewPatch(frm.Titel, frm.Description, "New Script");
+                AddNewPatch(frm.Titel, frm.Description, frm.Version, "New Script");
             }
         }
 

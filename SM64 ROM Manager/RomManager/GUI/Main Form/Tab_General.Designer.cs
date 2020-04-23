@@ -54,6 +54,7 @@ namespace SM64_ROM_Manager
             this.labelX_RomConfigFilepath = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.highlighter1 = new DevComponents.DotNetBar.Validator.Highlighter();
             this.GroupPanel2.SuspendLayout();
             this.GroupPanel6.SuspendLayout();
             this.groupPanel1.SuspendLayout();
@@ -336,6 +337,11 @@ namespace SM64_ROM_Manager
             this.labelX5.Name = "labelX5";
             this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
+            // highlighter1
+            // 
+            this.highlighter1.ContainerControl = this;
+            this.highlighter1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            // 
             // Tab_General
             // 
             this.BackColor = System.Drawing.Color.White;
@@ -386,5 +392,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX5;
         private PictureBox pictureBox_RomConfigStatus;
+        private DevComponents.DotNetBar.Validator.Highlighter highlighter1;
     }
 }

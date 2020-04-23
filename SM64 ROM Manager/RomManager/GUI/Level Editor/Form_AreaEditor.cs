@@ -35,12 +35,16 @@ using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
 using global::SM64Lib.Model.Fast3D.DisplayLists;
 using global::SM64Lib.N64Graphics;
-using global::SM64Lib.ObjectBanks;
 using global::SM64Lib.SegmentedBanking;
 using SM64Lib.TextValueConverter;
 using Z.Collections.Extensions;
 using Z.Core.Extensions;
 using SM64Lib.Geolayout.Script;
+using SM64Lib.Model.Fast3D.DisplayLists.Script;
+using Color = System.Drawing.Color;
+using Bitmap = System.Drawing.Bitmap;
+using SM64Lib.Objects.ModelBanks;
+using SM64Lib.Objects.ObjectBanks;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -65,6 +69,8 @@ namespace SM64_ROM_Manager.LevelEditor
         internal List<string> MyLevelsList { get; private set; } = new List<string>();
         internal List<byte> KnownModelIDs { get; private set; } = new List<byte>();
         internal Dictionary<byte, Geolayoutscript> GeolayoutScriptDumps { get; private set; } = new Dictionary<byte, Geolayoutscript>();
+        internal Dictionary<byte, DisplayListScript[]> ObjectDisplaylistScriptDumps { get; private set; } = new Dictionary<byte, DisplayListScript[]>();
+        internal Dictionary<byte, DisplayListScript[]> AreaDisplaylistScriptDumps { get; private set; } = new Dictionary<byte, DisplayListScript[]>();
 
         // Modules
         internal ObjectControlling objectControlling;
@@ -89,11 +95,13 @@ namespace SM64_ROM_Manager.LevelEditor
         internal bool isFullscreen = false;
         internal bool waitUntilLostFocus = false;
         internal bool isDeactivated = false;
+        internal bool hasClosed = false;
 
         // Variables
         internal WindowState backupWindowState = (WindowState)FormWindowState.Normal;
         internal int backupCurrentAreaIndex = -1;
         internal string lastChangedPropertyName = "";
+        internal DisplayList[] lastlyLoadedDisplaylists = null;
 
         // Delegates
         internal delegate bool RemoveAllObjectsWhereExpression(Managed3DObject mobj);
@@ -203,6 +211,8 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
+        internal bool DrawDirectionArrow { get; set; } = true;
+
         internal bool KeepObjectsOnNearestGround
         {
             get
@@ -276,9 +286,11 @@ namespace SM64_ROM_Manager.LevelEditor
                 CircularProgress1.Stop();
             }
         }
+
         public Form_AreaEditor(SM64Lib.RomManager rommgr, Level Level, byte LevelID, byte AreaID)
         {
             Timer_ListViewEx_Objects_SelectionChanged = new System.Timers.Timer() { AutoReset = false, SynchronizingObject = this, Interval = 40 };
+
             // Setup some level variables
             CLevel = Level;
             Rommgr = rommgr;
@@ -333,21 +345,19 @@ namespace SM64_ROM_Manager.LevelEditor
 
             // Resume drawing
             ResumeLayout();
+
+            // Add event to remember loaded area displaylist dumps
+            General.LoadedAreaVisualMapDisplayLists += General_LoadedAreaVisualMapDisplayLists;
+        }
+
+        private void General_LoadedAreaVisualMapDisplayLists(DisplayList[] dls)
+        {
+            lastlyLoadedDisplaylists = dls;
         }
 
         internal void ButtonItem10_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        internal void Form_AreaEditor_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            maps.ReleaseBuffers();
-
-            foreach (var item in GeolayoutScriptDumps)
-            {
-                item.Value.Close();
-            }
         }
 
         internal async void Form_AreaEditor_Shown(object sender, EventArgs e)
@@ -392,10 +402,27 @@ namespace SM64_ROM_Manager.LevelEditor
             foreach (ObjectCombo obj in General.ObjectCombos.Concat(General.ObjectCombosCustom))
             {
                 if ((modelIDsToLoad.Contains(obj.ModelID) || obj.Name.Contains("[MOP")) && !MyObjectCombos.Contains(obj))
-                {
                     MyObjectCombos.Add(obj);
-                }
             }
+            MyObjectCombos.AddRange(BuildObjectCombos(Rommgr.CustomObjects));
+        }
+
+        internal static ObjectComboList BuildObjectCombos(CustomObjectCollection customObjectCollection)
+        {
+            var list = new ObjectComboList();
+
+            foreach (var customObject in customObjectCollection.CustomObjects)
+            {
+                var combo = new ObjectCombo
+                {
+                    Name = customObject.Name,
+                    BehaviorAddress = (uint)customObject.BehaviorProps.BehaviorAddress,
+                    ModelID = customObject.ModelProps.ModelID
+                };
+                list.Add(combo);
+            }
+
+            return list;
         }
 
         internal void LoadLevelsStringList()
@@ -471,6 +498,16 @@ namespace SM64_ROM_Manager.LevelEditor
             // Save all Objects
             SaveAllObjectProperties();
             SaveAllWarpProperties();
+
+            General.LoadedAreaVisualMapDisplayLists -= General_LoadedAreaVisualMapDisplayLists;
+
+            maps.ReleaseBuffers();
+
+            GeolayoutScriptDumps.ForEach((n) => n.Value.Close());
+            ObjectDisplaylistScriptDumps.ForEach((m) => m.Value.ForEach((n) => n.Close()));
+            AreaDisplaylistScriptDumps.ForEach((m) => m.Value.ForEach((n) => n.Close()));
+
+            hasClosed = true;
         }
 
         internal void DockContainerItem4_Click(object sender, EventArgs e)
@@ -575,9 +612,7 @@ namespace SM64_ROM_Manager.LevelEditor
             ObjectModels.Clear();
 
             // Parse root level script
-            var lvlScriptMain = new Levelscript();
-            lvlScriptMain.Read(Rommgr, Rommgr.GetSegBank(0x15).BankAddress, LevelscriptCommandTypes.x1E);
-            await ParseLevelscriptAndLoadModels(lvlScriptMain);
+            await ParseLevelscriptAndLoadModels(LoadMainLevelscript(Rommgr));
 
             // Parse level script
             await ParseLevelscriptAndLoadModels(CLevel.Levelscript);
@@ -586,19 +621,44 @@ namespace SM64_ROM_Manager.LevelEditor
             if (Rommgr.HasGlobalObjectBank && CLevel.EnableGlobalObjectBank)
             {
                 Rommgr.GenerateGlobalObjectBank();
-                await LoadCustomObjectBankModels(Rommgr.GlobalObjectBank);
+                await LoadCustomObjectBankModels(Rommgr.GlobalModelBank);
             }
 
             // Load local objects
-            if (CLevel.EnableLocalObjectBank && CLevel.LocalObjectBank.Objects.Any())
+            if (CLevel.EnableLocalObjectBank && CLevel.LocalObjectBank.Models.Any())
             {
                 await LoadCustomObjectBankModels(CLevel.LocalObjectBank);
             }
+
+            // Additional Editor Models
+            await LoadAdditionalEditorModels();
         }
 
-        private async Task LoadCustomObjectBankModels(CustomObjectBank objBank)
+        private async Task LoadAdditionalEditorModels()
         {
-            foreach (CustomObject obj in objBank.Objects)
+            var loaderModule = File3DLoaderModule.LoaderModules.FirstOrDefault(n => n.Name == "Assimp");
+            var loaderOptions = new LoaderOptions()
+            {
+                LoadMaterials = true,
+                UpAxis = UpAxis.Y
+            };
+
+            // Load Model ID 0
+            var mdlDirectionArrow = await loaderModule.InvokeAsync(Path.Combine(Publics.General.MyDataPath, @"Area Editor\Models\Direction Arrow.fbx"), loaderOptions);
+            mdlDirectionArrow.ScaleModel(100f);
+            AddObject3DWithRendererIfNotNull(mdlDirectionArrow, 0);
+        }
+
+        public static Levelscript LoadMainLevelscript(SM64Lib.RomManager Rommgr)
+        {
+            var lvlScriptMain = new Levelscript();
+            lvlScriptMain.Read(Rommgr, Rommgr.GetSegBank(0x15).BankAddress, LevelscriptCommandTypes.x1E);
+            return lvlScriptMain;
+        }
+
+        private async Task LoadCustomObjectBankModels(CustomModelBank objBank)
+        {
+            foreach (CustomModel obj in objBank.Models)
             {
                 if (!ObjectModels.ContainsKey(obj.ModelID))
                 {
@@ -607,7 +667,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        private async Task LoadCustomObjectBankModel(CustomObject obj)
+        private async Task LoadCustomObjectBankModel(CustomModel obj)
         {
             var mdl = new Object3D();
             foreach (Geopointer gp in obj.Geolayout.Geopointers)
@@ -615,11 +675,12 @@ namespace SM64_ROM_Manager.LevelEditor
             AddObject3DWithRendererIfNotNull(mdl, obj.ModelID);
         }
 
-        private async Task LoadDisplaylist(Geopointer pointer, Object3D mdl)
+        private async Task<DisplayList> LoadDisplaylist(Geopointer pointer, Object3D mdl)
         {
             var dl = new DisplayList();
             await dl.TryFromStreamAsync(pointer, Rommgr, default);
             await dl.TryToObject3DAsync(mdl, Rommgr, default);
+            return dl;
         }
 
         private void AddObject3DWithRendererIfNotNull(Object3D mdl, byte modelID)
@@ -637,6 +698,7 @@ namespace SM64_ROM_Manager.LevelEditor
             int mdlScaleNodeIndex = -1;
             int nodeIndex = 0;
             var mdl = new Object3D();
+            var dls = new List<DisplayList>();
             var offsets = new Stack<System.Numerics.Vector3>();
             var curTotalOffset = System.Numerics.Vector3.Zero;
             offsets.Push(curTotalOffset);
@@ -651,7 +713,7 @@ namespace SM64_ROM_Manager.LevelEditor
                             byte geolayer = cgLoadDisplayList.GetDrawingLayer(ref gmd);
                             int segAddr = cgLoadDisplayList.GetSegGeopointer(ref gmd);
                             if (segAddr > 0)
-                                await LoadDisplaylist(new Geopointer(geolayer, segAddr, mdlScale, curTotalOffset), mdl);
+                                dls.Add(await LoadDisplaylist(new Geopointer(geolayer, segAddr, mdlScale, curTotalOffset), mdl));
                             break;
                         }
                     case GeolayoutCommandTypes.LoadDisplaylistWithOffset:
@@ -662,7 +724,7 @@ namespace SM64_ROM_Manager.LevelEditor
                             if (segAddr > 0)
                             {
                                 var geop = new Geopointer(geolayer, segAddr, mdlScale, localOffset + curTotalOffset);
-                                await LoadDisplaylist(geop, mdl);
+                                dls.Add(await LoadDisplaylist(geop, mdl));
                             }
                             else
                                 curTotalOffset += localOffset;
@@ -697,7 +759,57 @@ namespace SM64_ROM_Manager.LevelEditor
                 }
             }
 
+            if (dls.Any())
+                ObjectDisplaylistScriptDumps.AddOrUpdate(modelID, dls.Select((n) => n.Script).ToArray());
+
             AddObject3DWithRendererIfNotNull(mdl, modelID);
+        }
+
+        public static async Task ParseLevelscriptAndLoadSegmentedBanks(SM64Lib.RomManager Rommgr, Levelscript lvlscript)
+        {
+            foreach (LevelscriptCommand cmd in lvlscript)
+            {
+                var switchExpr = cmd.CommandType;
+                switch (switchExpr)
+                {
+                    case LevelscriptCommandTypes.JumpToSegAddr:
+                        var scrpt = ParseLevelscriptCommandGetLevelscriptToJump(Rommgr, cmd);
+                        await ParseLevelscriptAndLoadSegmentedBanks(Rommgr, scrpt);
+                        break;
+                    case LevelscriptCommandTypes.LoadRomToRam:
+                    case LevelscriptCommandTypes.x1A:
+                    case LevelscriptCommandTypes.x18:
+                        ParseLevelscriptCommandLoadSegBank(Rommgr, cmd);
+                        break;
+                }
+            }
+        }
+
+        private static Levelscript ParseLevelscriptCommandGetLevelscriptToJump(SM64Lib.RomManager Rommgr, LevelscriptCommand cmd)
+        {
+            int bankAddr = clJumpToSegAddr.GetSegJumpAddr(cmd);
+            byte segID = Conversions.ToByte(bankAddr >> 24);
+            var seg = Rommgr.GetSegBank(segID);
+            var scrpt = new Levelscript();
+            if (segID != 0 && seg is object)
+                scrpt.Read(Rommgr, bankAddr, LevelscriptCommandTypes.JumpBack);
+            return scrpt;
+        }
+
+        private static void ParseLevelscriptCommandLoadSegBank(SM64Lib.RomManager Rommgr, LevelscriptCommand cmd)
+        {
+            byte segID = clLoadRomToRam.GetSegmentedID(cmd);
+            var segg = Rommgr.GetSegBank(segID);
+            if (segg is null)
+            {
+                var seg = new SegmentedBank();
+                seg.BankID = segID;
+                seg.RomStart = clLoadRomToRam.GetRomStart(cmd);
+                seg.RomEnd = clLoadRomToRam.GetRomEnd(cmd);
+                if (cmd.CommandType == LevelscriptCommandTypes.x1A)
+                    seg.MakeAsMIO0();
+                Rommgr.SetSegBank(seg);
+            }
         }
 
         private async Task ParseLevelscriptAndLoadModels(Levelscript lvlscript)
@@ -722,12 +834,9 @@ namespace SM64_ROM_Manager.LevelEditor
                                 glscript.Read(Rommgr, segPointer);
                                 await ParseGeolayoutAndLoadModels(glscript, modelID);
                                 GeolayoutScriptDumps.AddOrUpdate(modelID, glscript);
-                                //glscript.Close();
                             }
-
                             break;
                         }
-
                     case LevelscriptCommandTypes.LoadPolygonWithoutGeo:
                         {
                             byte modelID = clLoadPolygonWithGeo.GetModelID(cmd);
@@ -745,50 +854,19 @@ namespace SM64_ROM_Manager.LevelEditor
                                 var rndr = new Renderer(mdl);
                                 ObjectModels.AddOrUpdate(modelID, rndr);
                             }
-
                             break;
                         }
-
                     case LevelscriptCommandTypes.PaintingWarp:
-                        {
-                            break;
-                        }
-                    // ...
-
+                        break;
                     case LevelscriptCommandTypes.JumpToSegAddr:
-                        {
-                            int bankAddr = clJumpToSegAddr.GetSegJumpAddr(cmd);
-                            byte segID = Conversions.ToByte(bankAddr >> 24);
-                            var seg = Rommgr.GetSegBank(segID);
-                            if (segID != 0 && seg is object)
-                            {
-                                var scrpt = new Levelscript();
-                                scrpt.Read(Rommgr, bankAddr, LevelscriptCommandTypes.JumpBack);
-                                await ParseLevelscriptAndLoadModels(scrpt);
-                            }
-
-                            break;
-                        }
-
+                        var scrpt = ParseLevelscriptCommandGetLevelscriptToJump(Rommgr, cmd);
+                        await ParseLevelscriptAndLoadModels(scrpt);
+                        break;
                     case LevelscriptCommandTypes.LoadRomToRam:
                     case LevelscriptCommandTypes.x1A:
                     case LevelscriptCommandTypes.x18:
-                        {
-                            byte segID = clLoadRomToRam.GetSegmentedID(cmd);
-                            var segg = Rommgr.GetSegBank(segID);
-                            if (segg is null)
-                            {
-                                var seg = new SegmentedBank();
-                                seg.BankID = segID;
-                                seg.RomStart = clLoadRomToRam.GetRomStart(cmd);
-                                seg.RomEnd = clLoadRomToRam.GetRomEnd(cmd);
-                                if (cmd.CommandType == LevelscriptCommandTypes.x1A)
-                                    seg.MakeAsMIO0();
-                                Rommgr.SetSegBank(seg);
-                            }
-
-                            break;
-                        }
+                        ParseLevelscriptCommandLoadSegBank(Rommgr, cmd);
+                        break;
                 }
             }
         }
@@ -1266,6 +1344,22 @@ namespace SM64_ROM_Manager.LevelEditor
             ListViewEx_Objects.ResumeLayout();
         }
 
+        internal void SelectItemsInList(ListViewEx list, ListViewItem[] items, bool deselectAllOtherItems)
+        {
+            list.SuspendLayout();
+
+            if (deselectAllOtherItems)
+                foreach (ListViewItem item in list.SelectedItems)
+                    item.Selected = false;
+
+            foreach (var item in items)
+                item.Selected = true;
+
+            items.LastOrDefault()?.EnsureVisible();
+
+            list.ResumeLayout();
+        }
+
         internal void SelectItemAtIndexInList(ListViewEx list, int index, bool deselectAllOtherItems)
         {
             for (int i = 0, loopTo = list.Items.Count - 1; i <= loopTo; i++)
@@ -1509,12 +1603,11 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             if (DeselectAllObjects)
                 this.DeselectAllObjects(false);
+
             foreach (Managed3DObject obj in objs)
             {
                 if (obj is object)
-                {
                     obj.IsSelected = true;
-                }
             }
 
             ogl.UpdateOrbitCamera();
@@ -1526,6 +1619,7 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             foreach (Managed3DObject obj in ManagedObjects)
                 obj.IsSelected = false;
+
             if (UpdateGLAndCamera)
             {
                 ogl.UpdateOrbitCamera();
@@ -1678,6 +1772,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 maps.cCollisionMap = null;
                 maps.cVisualMap = null;
                 maps.LoadAreaModel();
+                AreaDisplaylistScriptDumps.AddOrUpdate(CArea.AreaID, lastlyLoadedDisplaylists.Select((n) => n.Script).ToArray());
                 LoadObjectLists();
                 LoadWarpsLists();
                 LoadSpecailBoxList();
@@ -2172,8 +2267,9 @@ namespace SM64_ROM_Manager.LevelEditor
                     // Change Object Combo by Name
                     foreach (Managed3DObject obj in SelectedObjects)
                         obj.ObjectCombo = dialog.SelectedObjectCombo.Name;
+
                     UpdateObjectListViewItems();
-                    AdvPropertyGrid1.RefreshPropertyValues();
+                    ShowObjectProperties();
                 }
             }
         }
@@ -2183,7 +2279,7 @@ namespace SM64_ROM_Manager.LevelEditor
             var objs = SelectedObjects;
             if (objs.Any())
             {
-                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableBehavTab);
+                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableBehavTab, MyObjectCombos);
                 dialog.SelectedBehavior = General.BehaviorInfos.GetByBehaviorAddress(objs.First().BehaviorID);
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
@@ -2193,8 +2289,9 @@ namespace SM64_ROM_Manager.LevelEditor
                     // Change Object Combo by Name
                     foreach (Managed3DObject obj in SelectedObjects)
                         obj.BehaviorID = dialog.SelectedBehavior.BehaviorAddress;
+
                     UpdateObjectListViewItems();
-                    AdvPropertyGrid1.RefreshPropertyValues();
+                    ShowObjectProperties();
                 }
             }
         }
@@ -2225,8 +2322,10 @@ namespace SM64_ROM_Manager.LevelEditor
             var newobjects = new List<Managed3DObject>();
             var newlvis = new List<ListViewItem>();
             int objcount = 0;
+
             if (!int.TryParse(((BaseItem)sender).Text, out objcount))
                 objcount = 1;
+
             for (int i = 1, loopTo = objcount; i <= loopTo; i++)
             {
                 var newObjCmd = new LevelscriptCommand(LevelArea.DefaultNormal3DObject);
@@ -2245,8 +2344,11 @@ namespace SM64_ROM_Manager.LevelEditor
             // Store History Point
             this.StoreHistoryPoint(AreaEditorHistoryFunctions.Methodes["RemoveObjects"], AreaEditorHistoryFunctions.Methodes["AddObjects"], new object[] { CArea, ManagedObjects, newobjects, ListViewEx_Objects.Items, newlvis });
             ogl.Invalidate();
-        }
 
+            if (newlvis.Any())
+                SelectItemsInList(ListViewEx_Objects, newlvis.ToArray(), true);
+        }
+        
         internal void ResetObjToDefault(object sender, EventArgs e)
         {
             var oldObjects = new List<Managed3DObject>();
@@ -2581,8 +2683,10 @@ namespace SM64_ROM_Manager.LevelEditor
                 LevelscriptCommand newWarp = null;
                 IManagedLevelscriptCommand newManagedWarp = null;
                 var lvi = new ListViewItem();
+
                 for (int i = 2; i <= 4; i++)
                     lvi.SubItems.Add(new ListViewItem.ListViewSubItem());
+
                 switch (type)
                 {
                     case LevelscriptCommandTypes.ConnectedWarp:
@@ -2626,6 +2730,9 @@ namespace SM64_ROM_Manager.LevelEditor
                 var dicGroups = new Dictionary<ListViewItem, ListViewGroup>();
                 dicGroups.Add(lvi, lvi.Group);
                 this.StoreHistoryPoint(AreaEditorHistoryFunctions.Methodes["RemoveWarps"], AreaEditorHistoryFunctions.Methodes["AddWarps"], new object[] { CArea, ManagedWarps, new[] { newManagedWarp }, ListViewEx_Warps.Items, new[] { lvi }, dicGroups });
+
+                if (newWarp is object)
+                    SelectItemsInList(ListViewEx_Warps, new[] { lvi }, true);
             }
         }
 
@@ -2985,11 +3092,60 @@ namespace SM64_ROM_Manager.LevelEditor
         internal IEnumerable<TextureEditor.TextureCategory> LoadOtherTexturesCategories()
         {
             // Load json for other textures
-            var ot = JObject.Parse(File.ReadAllText(Path.Combine(Publics.General.MyDataPath, @"Other\Other Textures.json")));
-            var jblocks = ot["Blocks"].ToObject<TextureBlocksJsonClass[]>();
-            var addresses = ot["Levelscripts to load"].ToObject<string[]>();
             var categories = new List<TextureEditor.TextureCategory>();
             var catLevelTextures = new TextureEditor.TextureCategory() { Name = "Level Textures" };
+
+            // Read Other Textures
+            categories.Add(GetOtherTexturesCategorie(Rommgr));
+
+            // Add all area model textures
+            if (maps.cVisualMap is object)
+            {
+                var block = new TextureEditor.TextureBlock();
+                block.Name = "Area Model";
+                foreach (var kvp in maps.cVisualMap.Materials)
+                {
+                    if (kvp.Value.Image is object)
+                    {
+                        block.Textures.Add(kvp.Value);
+                    }
+                }
+
+                catLevelTextures.Blocks.Add(block);
+            }
+
+            // Add all other textures
+            if (ObjectModels.Any())
+            {
+                var block = new TextureEditor.TextureBlock();
+                block.Name = "Object Models";
+                foreach (var kvpp in ObjectModels)
+                {
+                    foreach (var kvp in kvpp.Value.Model.Materials)
+                    {
+                        if (kvp.Value.Image is object)
+                        {
+                            block.Textures.Add(kvp.Value);
+                        }
+                    }
+                }
+
+                catLevelTextures.Blocks.Add(block);
+            }
+
+            if (catLevelTextures.Blocks.Any())
+            {
+                categories.Add(catLevelTextures);
+            }
+
+            return categories;
+        }
+
+        internal static TextureEditor.TextureCategory GetOtherTexturesCategorie(SM64Lib.RomManager Rommgr)
+        {
+            // Load json for other textures
+            var ot = JObject.Parse(File.ReadAllText(Path.Combine(Publics.General.MyDataPath, @"Other\Other Textures.json")));
+            var jblocks = ot["Blocks"].ToObject<TextureBlocksJsonClass[]>();
 
             // Read Textures
             var catOtherTextures = new TextureEditor.TextureCategory() { Name = "Other Textures" };
@@ -3086,49 +3242,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
 
             data.Close();
-            categories.Add(catOtherTextures);
-
-            // Add all area model textures
-            if (maps.cVisualMap is object)
-            {
-                var block = new TextureEditor.TextureBlock();
-                block.Name = "Area Model";
-                foreach (var kvp in maps.cVisualMap.Materials)
-                {
-                    if (kvp.Value.Image is object)
-                    {
-                        block.Textures.Add(kvp.Value);
-                    }
-                }
-
-                catLevelTextures.Blocks.Add(block);
-            }
-
-            // Add all other textures
-            if (ObjectModels.Any())
-            {
-                var block = new TextureEditor.TextureBlock();
-                block.Name = "Object Models";
-                foreach (var kvpp in ObjectModels)
-                {
-                    foreach (var kvp in kvpp.Value.Model.Materials)
-                    {
-                        if (kvp.Value.Image is object)
-                        {
-                            block.Textures.Add(kvp.Value);
-                        }
-                    }
-                }
-
-                catLevelTextures.Blocks.Add(block);
-            }
-
-            if (catLevelTextures.Blocks.Any())
-            {
-                categories.Add(catLevelTextures);
-            }
-
-            return categories;
+            return catOtherTextures;
         }
 
         internal void OpenTextureEditor()
@@ -3143,7 +3257,7 @@ namespace SM64_ROM_Manager.LevelEditor
             var frm = new TextureEditor(Rommgr, otherTextures_Categories.ToArray());
 
             // Update textures
-            frm.TextureReplaced += (_,__) =>
+            frm.TextureReplaced += (_, __) =>
             {
                 maps.UpdateTexturesOfCurrentModel(dic);
                 dic = maps.TakeSnapshotOfCurrentModelTextures();
@@ -3159,7 +3273,21 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void ButtonItem_GeolayoutScriptDumps_Click(object sender, EventArgs e)
         {
+            var frm = new FormScriptDumps();
 
+            foreach (var area in CLevel.Areas)
+                frm.AddAreaGeolayoutScript(area.AreaID, area.Geolayout.Geolayoutscript);
+
+            foreach (var kvp in GeolayoutScriptDumps)
+                frm.AddObjectGeolayoutScript(kvp.Key, kvp.Value);
+
+            foreach (var kvp in AreaDisplaylistScriptDumps)
+                frm.AddAreaDisplaylistScripts(kvp.Key, kvp.Value);
+
+            foreach (var kvp in ObjectDisplaylistScriptDumps)
+                frm.AddObjectDisplaylistScripts(kvp.Key, kvp.Value);
+
+            frm.Show();
         }
 
     }
