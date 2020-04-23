@@ -63,13 +63,14 @@ namespace SM64Lib.Behaviors
             Read(data, address, false);
         }
 
-        public void Read(BinaryData data, int address, bool setFixedSize)
+        public bool Read(BinaryData data, int address, bool setFixedSize)
         {
             CreateNewBehaviorscript();
-            Script.Read(data, address);
+            var success = Script.Read(data, address);
             if (setFixedSize)
                 Config.FixedLength = (int)Script.Length;
             ParseScript();
+            return success;
         }
         
         public void Write(BinaryData data, int address)

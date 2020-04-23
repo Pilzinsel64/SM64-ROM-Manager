@@ -43,6 +43,8 @@ namespace SM64Lib.Behaviors.Script
                         success = false;
                     }
                 }
+                else
+                    data.Position += 3;
 
                 ende = isEndCmd;
             }

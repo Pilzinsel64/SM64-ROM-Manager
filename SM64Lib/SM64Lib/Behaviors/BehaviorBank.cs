@@ -75,9 +75,19 @@ namespace SM64Lib.Behaviors
                 else
                     bankOffset = config.BankAddress & 0xffffff;
 
-                if (isVanilla) behav.Config.IsVanilla = true;
-                behav.Read(data, bankOffset, isVanilla);
-                Behaviors.Add(behav);
+                if (isVanilla)
+                    behav.Config.IsVanilla = true;
+
+                var lastBehav = Behaviors.LastOrDefault();
+
+                if (behav.Read(data, bankOffset, isVanilla))
+                {
+                    if (isVanilla && lastBehav is object && lastBehav.Config.IsVanilla && lastBehav.Config.FixedLength != -1)
+                        lastBehav.Config.FixedLength = bankOffset - (lastBehav.Config.BankAddress & 0xffffff);
+
+                    Behaviors.Add(behav);
+                }
+
             }
         }
 
