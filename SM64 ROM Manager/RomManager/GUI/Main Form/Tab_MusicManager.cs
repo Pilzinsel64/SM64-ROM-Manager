@@ -9,14 +9,21 @@ namespace SM64_ROM_Manager
 {
     public partial class Tab_MusicManager
     {
+        // F i e l d s
+
+        private MainController _Controller;
+        private bool settingSequenceName = false;
+
+        // P r o p e r t i e s
+
+        
+
+        // C o n s t r u c t o r
+
         public Tab_MusicManager()
         {
             InitializeComponent();
         }
-
-        // F i e l d s
-
-        private MainController _Controller;
 
         public MainController Controller
         {
@@ -69,10 +76,8 @@ namespace SM64_ROM_Manager
         private void Controller_MusicSequenceChanged(MusicSequenceEventArgs e)
         {
             UpdateSequenceInList(e.Index);
-            if (e.Index == SelectedSequenceIndex)
-            {
+            if (e.Index == SelectedSequenceIndex && !settingSequenceName)
                 LoadCurrentSequence(e.Index);
-            }
         }
 
         private void Controller_MusicSequenceAdded(MusicSequenceEventArgs e)
@@ -188,7 +193,9 @@ namespace SM64_ROM_Manager
         {
             if (!TextBoxX_MS_Sequencename.ReadOnly)
             {
+                settingSequenceName = true;
                 Controller.SetMusicSequenceName(SelectedSequenceIndex, TextBoxX_MS_Sequencename.Text);
+                settingSequenceName = false;
             }
         }
 
