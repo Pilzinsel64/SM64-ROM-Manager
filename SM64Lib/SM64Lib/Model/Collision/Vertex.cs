@@ -1,4 +1,6 @@
 ﻿
+using Newtonsoft.Json;
+
 namespace SM64Lib.Model.Collision
 {
     public class Vertex

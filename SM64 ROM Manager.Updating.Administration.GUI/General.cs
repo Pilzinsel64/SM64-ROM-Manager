@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace SM64_ROM_Manager.Updating.Administration.GUI
 {
-    class General
+    public static class General
     {
         private static string myAppPath = string.Empty;
+        public static UpdateProject CurProject { get; set; } = null;
 
         public static string MyAppPath
         {

@@ -5,7 +5,6 @@ using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
 using global::SM64Lib.Levels.ScrolTex;
 using global::SM64Lib.Model;
-using global::SM64Lib.ObjectBanks;
 
 namespace SM64Lib.Levels
 {

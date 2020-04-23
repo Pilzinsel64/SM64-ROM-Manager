@@ -12,6 +12,7 @@ using global::SM64Lib.Geolayout;
 using global::SM64Lib.Model.Conversion.Fast3DWriting;
 using global::SM64Lib.Model.Fast3D;
 using global::SM64Lib.N64Graphics;
+using SM64Lib.Model.Conversion;
 
 namespace SM64_ROM_Manager.ModelConverterGUI
 {
@@ -85,11 +86,10 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private void LoadRotateFlip()
         {
             {
-                var withBlock = ComboBoxEx_RotateFlip.Items;
-                withBlock.Add(new ComboItem() { Text = "None", Tag = RotateFlipType.RotateNoneFlipNone });
-                withBlock.Add(new ComboItem() { Text = "Y", Tag = RotateFlipType.RotateNoneFlipY });
-                withBlock.Add(new ComboItem() { Text = "X", Tag = RotateFlipType.RotateNoneFlipX });
-                withBlock.Add(new ComboItem() { Text = "X & Y", Tag = RotateFlipType.RotateNoneFlipXY });
+                ComboBoxEx_RotateFlip.Items.Add(new ComboItem() { Text = "None", Tag = RotateFlipType.RotateNoneFlipNone });
+                ComboBoxEx_RotateFlip.Items.Add(new ComboItem() { Text = "Y", Tag = RotateFlipType.RotateNoneFlipY });
+                ComboBoxEx_RotateFlip.Items.Add(new ComboItem() { Text = "X", Tag = RotateFlipType.RotateNoneFlipX });
+                ComboBoxEx_RotateFlip.Items.Add(new ComboItem() { Text = "X & Y", Tag = RotateFlipType.RotateNoneFlipXY });
             }
 
             ComboBoxEx_RotateFlip.SelectedIndex = 0;
@@ -215,26 +215,23 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 CheckBoxX_EnableClampS.Checked = curEntry.EnableClampS;
                 CheckBoxX_EnableClampT.Checked = curEntry.EnableClampT;
                 CheckBoxX_EnableCrystalEffect.Checked = curEntry.EnableCrystalEffect;
+                CheckBoxX_EnableTwoSidedFaces.Checked = curEntry.FaceCullingMode != FaceCullingMode.Back;
                 ComboBoxEx_RotateFlip.SelectedItem = GetRotateFlipComboItem(curEntry.RotateFlip);
+
                 foreach (ComboItem item in ComboBoxEx_SelectDisplaylist.Items)
                 {
-                    var switchExpr = curEntry.DisplaylistSelection.SelectionMode;
-                    switch (switchExpr)
+                    switch (curEntry.DisplaylistSelection.SelectionMode)
                     {
                         case DisplaylistSelectionMode.Automatic:
                             ComboBoxEx_SelectDisplaylist.SelectedIndex = 0;
                             break;
                         case DisplaylistSelectionMode.Default:
                             if (item.Tag == null || (DefaultGeolayers)item.Tag == curEntry.DisplaylistSelection.DefaultGeolayer)
-                            {
                                 ComboBoxEx_SelectDisplaylist.SelectedItem = item;
-                            }
                             break;
                         case DisplaylistSelectionMode.Custom:
                             if (item.Tag == null || (int)item.Tag == curEntry.DisplaylistSelection.CustomDisplaylistID)
-                            {
                                 ComboBoxEx_SelectDisplaylist.SelectedItem = item;
-                            }
                             break;
                     }
                 }
@@ -245,7 +242,9 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 CheckBoxX_EnableClampS.Enabled = enTexTools;
                 CheckBoxX_EnableCrystalEffect.Enabled = enTexTools;
                 ComboBoxEx_RotateFlip.Enabled = enTexTools;
+
                 loadingtexItemSettings = false;
+
                 if (!found)
                 {
                     ComboBox_ColType.SelectedIndex = 0;
@@ -296,6 +295,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 {
                     KeyValuePair<string, Material> mat = (KeyValuePair<string, Material>)item.Tag;
                     var curEntry = TextureFormatSettings.GetEntry(mat.Key);
+
                     curEntry.IsScrollingTexture = CheckBoxX_EnableTextureAnimation.Checked;
                     curEntry.TextureFormat = id;
                     curEntry.EnableMirrorS = CheckBoxX_EnableMirrorS.Checked;
@@ -304,6 +304,8 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                     curEntry.EnableClampT = CheckBoxX_EnableClampT.Checked;
                     curEntry.EnableCrystalEffect = CheckBoxX_EnableCrystalEffect.Checked;
                     curEntry.RotateFlip = (RotateFlipType)((ComboItem)ComboBoxEx_RotateFlip.SelectedItem).Tag;
+                    curEntry.FaceCullingMode = CheckBoxX_EnableTwoSidedFaces.Checked ? FaceCullingMode.NoCulling : FaceCullingMode.Back;
+
                     var selDL = ((ComboItem)ComboBoxEx_SelectDisplaylist.SelectedItem).Tag;
                     if (selDL is DefaultGeolayers)
                     {
@@ -323,7 +325,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             }
         }
 
-        private void ButtonItem_IsScollTex_Click(object sender, EventArgs e)
+        private void ControlsOccusUpdateTextureListItemSettings(object sender, EventArgs e)
         {
             if (hasInit && !loadingtexItemSettings)
             {

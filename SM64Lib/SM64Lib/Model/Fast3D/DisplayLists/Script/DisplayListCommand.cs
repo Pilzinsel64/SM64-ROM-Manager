@@ -48,11 +48,7 @@ namespace SM64Lib.Model.Fast3D.DisplayLists.Script
 
         public override string ToString()
         {
-            string ToStringRet = default;
-            ToStringRet = $"{RomAddress.ToString("X")}:";
-            foreach (byte b in ToArray())
-                ToStringRet += " " + b.ToString("X2");
-            return ToStringRet;
+            return $"{RomAddress.ToString("X")} ({BankAddress.ToString("X")}): {General.CommandByteArrayToString(ToArray())}";
         }
 
         public byte[] ToArray()

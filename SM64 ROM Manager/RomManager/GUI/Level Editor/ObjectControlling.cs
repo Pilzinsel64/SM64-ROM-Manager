@@ -161,16 +161,8 @@ namespace SM64_ROM_Manager.LevelEditor
                         mo_s_incr += 1;
                     }
 
-                    if (Main.KeepObjectOnGround)
-                    {
-                        Main.KeepObjectsOnGround();
-                    }
-                    else
-                    {
-                        Main.AdvPropertyGrid1_RefreshPropertyValues();
-                    }
-
                     Main.KeepObjectsOnGround();
+                    Main.AdvPropertyGrid1_RefreshPropertyValues();
                     Main.ogl.GLControl.Invalidate();
                 }
             }

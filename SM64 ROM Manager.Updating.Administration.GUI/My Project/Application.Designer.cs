@@ -32,7 +32,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI.My
         [DebuggerStepThrough()]
         protected override void OnCreateMainForm()
         {
-            MainForm = MyProject.Forms.ToolSelectionWindow;
+            MainForm = MyProject.Forms.UpdateManagerWindow;
         }
     }
 }

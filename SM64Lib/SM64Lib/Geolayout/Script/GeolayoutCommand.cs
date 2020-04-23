@@ -1,7 +1,10 @@
 ﻿using global::SM64Lib.Script;
+using Newtonsoft.Json;
+using SM64Lib.Json;
 
 namespace SM64Lib.Geolayout.Script
 {
+    [JsonConverter(typeof(GeolayoutscriptCommandJsonConverter))]
     public class GeolayoutCommand : BaseCommand<GeolayoutCommandTypes>
     {
         public GeolayoutCommand(byte[] bytes) : base(bytes)

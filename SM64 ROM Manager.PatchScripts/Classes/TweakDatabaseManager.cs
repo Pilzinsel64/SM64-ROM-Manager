@@ -12,9 +12,9 @@ namespace SM64_ROM_Manager.PatchScripts
     public class TweakDatabaseManager
     {
         private static readonly drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
+        private static readonly Random random = new Random();
 
         private Dictionary<TweakDatabaseLoginTypes, WebDavClient> dicClients = new Dictionary<TweakDatabaseLoginTypes, WebDavClient>();
-
         public TweakDatabasePreferences Preferences { get; private set; }
 
         public TweakDatabaseManager(TweakDatabasePreferences pref)
@@ -42,13 +42,13 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             var client = CreateClient(TweakDatabaseLoginTypes.ReadOnlyAll);
             var syncFiles = new List<TweakDatabaseSyncFile>();
-            Func<string, Task> checkOutFolder = null;
             WebDavResource resTopFolder = null;
             var checkedFiles = new List<string>();
             bool responseSuccessfull = false;
-            checkOutFolder = async (remotePath) =>
+
+            async Task checkOutFolder(string remotePath)
             {
-                var response = await client.Propfind(remotePath);
+                var response = await client.Propfind(remotePath, new PropfindParameters() { ApplyTo = ApplyTo.Propfind.ResourceAndAncestors });
                 if (resTopFolder is null && response.IsSuccessful && response.Resources.Any())
                 {
                     resTopFolder = response.Resources.ElementAtOrDefault(0);
@@ -61,11 +61,8 @@ namespace SM64_ROM_Manager.PatchScripts
                     {
                         var res = response.Resources.ElementAtOrDefault(i);
                         bool isFolder = res.Uri.EndsWith("/");
-                        if (isFolder)
-                        {
-                            await checkOutFolder(res.Uri);
-                        }
-                        else
+
+                        if (!isFolder)
                         {
                             TweakDatabaseSyncAction? syncAction = default;
                             string localFile = string.Empty;
@@ -81,21 +78,15 @@ namespace SM64_ROM_Manager.PatchScripts
                             if (File.Exists(localFile))
                             {
                                 if (File.GetLastWriteTime(localFile) < res.LastModifiedDate == true)
-                                {
                                     syncAction = TweakDatabaseSyncAction.UpdatedFile;
-                                }
                             }
                             else
-                            {
                                 syncAction = TweakDatabaseSyncAction.NewFile;
-                            }
 
                             // Add to list
                             checkedFiles.Add(localFile);
                             if (syncAction is object)
-                            {
                                 syncFiles.Add(new TweakDatabaseSyncFile((TweakDatabaseSyncAction)syncAction, localFile, remoteFile));
-                            }
                         }
                     }
                 }
@@ -114,15 +105,11 @@ namespace SM64_ROM_Manager.PatchScripts
                     foreach (string checkedFile in checkedFiles)
                     {
                         if (!isKnown && (checkedFile ?? "") == (lf ?? ""))
-                        {
                             isKnown = true;
-                        }
                     }
 
                     if (!isKnown)
-                    {
                         syncFiles.Add(new TweakDatabaseSyncFile(TweakDatabaseSyncAction.RemovedFile, lf, string.Empty));
-                    }
                 }
             }
 
@@ -155,13 +142,28 @@ namespace SM64_ROM_Manager.PatchScripts
             }
         }
 
-        public async Task<bool> Upload(string fileName)
-        {
-            var client = CreateClient(TweakDatabaseLoginTypes.UserUploads);
-            var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            var result = await client.PutFile(Path.GetFileName(fileName), fs);
-            fs.Close();
-            return result.IsSuccessful;
-        }
+        //public async Task<bool> Upload(string path)
+        //{
+        //    var client = CreateClient(TweakDatabaseLoginTypes.UserUploads);
+        //    var fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+        //    var result = await client.PutFile(Path.GetFileName(path), fs);
+        //    fs.Close();
+        //    return result.IsSuccessful;
+        //}
+
+        //public async Task<bool> GetUploadInfo(uint uploadID)
+        //{
+
+        //}
+
+        //private async Task<IEnumerable<uint>> GetAllUploadIDs()
+        //{
+
+        //}
+
+        //private async Task<int> GetNewUploadID()
+        //{
+
+        //}
     }
 }

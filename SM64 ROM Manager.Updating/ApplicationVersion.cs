@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace SM64_ROM_Manager.Updating
 {
@@ -7,17 +8,19 @@ namespace SM64_ROM_Manager.Updating
 
         // P r o p e r t i e s
 
+        [JsonConverter(typeof(Newtonsoft.Json.Converters.VersionConverter))]
         public Version Version { get; set; }
         public int Build { get; set; }
+        [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         public Channels Channel { get; set; }
 
         // C o n s t r u c t o r s
 
-        public ApplicationVersion()
+        public ApplicationVersion() : this(new Version("1.0.0.0"))
         {
         }
 
-        public ApplicationVersion(Version version) : this(version, 0, Channels.Stable)
+        public ApplicationVersion(Version version) : this(version, 1, Channels.Stable)
         {
         }
 

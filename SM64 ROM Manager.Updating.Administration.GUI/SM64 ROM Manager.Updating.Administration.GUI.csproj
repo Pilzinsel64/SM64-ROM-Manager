@@ -137,6 +137,24 @@
     <Import Include="Z.Collections.Extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiscordBotSettingsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscordBotSettingsWindow.Designer.cs">
+      <DependentUpon>DiscordBotSettingsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscordPostDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscordPostDialog.Designer.cs">
+      <DependentUpon>DiscordPostDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageDescriptionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageDescriptionEditor.Designer.cs">
+      <DependentUpon>PackageDescriptionEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="General.cs" />
     <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
@@ -148,11 +166,17 @@
     <Compile Include="ApplicationVersionInput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditorWindow.cs">
+    <Compile Include="UpdateManagerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditorWindow.Designer.cs">
-      <DependentUpon>EditorWindow.cs</DependentUpon>
+    <Compile Include="UpdateManagerWindow.Designer.cs">
+      <DependentUpon>UpdateManagerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageCreationDialog.Designer.cs">
+      <DependentUpon>PackageCreationDialog.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -170,7 +194,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ProjectConfig.cs" />
     <Compile Include="ToolSelectionWindow.Designer.cs">
       <DependentUpon>ToolSelectionWindow.cs</DependentUpon>
     </Compile>
@@ -190,11 +213,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DiscordBotSettingsWindow.resx">
+      <DependentUpon>DiscordBotSettingsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscordPostDialog.resx">
+      <DependentUpon>DiscordPostDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageDescriptionEditor.resx">
+      <DependentUpon>PackageDescriptionEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationVersionInput.resx">
       <DependentUpon>ApplicationVersionInput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditorWindow.resx">
-      <DependentUpon>EditorWindow.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateManagerWindow.resx">
+      <DependentUpon>UpdateManagerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageCreationDialog.resx">
+      <DependentUpon>PackageCreationDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -229,6 +264,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_software_installer.ico" />
+    <None Include="Resources\icons8_email_send_16px.png" />
+    <None Include="Resources\icons8_checkmark_32px.png" />
+    <None Include="Resources\icons8_discord_new_logo_32px.png" />
+    <None Include="Resources\icons8_upload_to_cloud_32px.png" />
+    <None Include="Resources\icons8_upload_32px.png" />
+    <None Include="Resources\icons8_import_32px.png" />
     <None Include="Resources\icons8_opened_folder_16px.png" />
     <None Include="Resources\icons8_new_file_16px.png" />
     <None Include="Resources\icons8_delete_16px.png" />

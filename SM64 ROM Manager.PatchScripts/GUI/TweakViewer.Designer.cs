@@ -36,1047 +36,446 @@ namespace SM64_ROM_Manager.PatchScripts
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(TweakViewer));
-            _Panel1 = new Panel();
-            _LabelX2 = new DevComponents.DotNetBar.LabelX();
-            _Panel3 = new Panel();
-            _ButtonX8 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX8.Click += new EventHandler(ButtonX8_Click);
-            _TableLayoutPanel2 = new TableLayoutPanel();
-            _ButtonX5 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX5.Click += new EventHandler(ButtonX5_Click);
-            _ButtonX3 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX3.Click += new EventHandler(ButtonX3_Click);
-            _ButtonX2 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX2.Click += new EventHandler(ButtonX2_Click);
-            _LabelX_Description = new DevComponents.DotNetBar.LabelX();
-            _LabelX_Description.TextChanged += new EventHandler(LabelX_Description_MouseEnter);
-            _LabelX_PatchName = new DevComponents.DotNetBar.LabelX();
-            _TableLayoutPanel1 = new TableLayoutPanel();
-            _ButtonX1 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX1.Click += new EventHandler(ButtonX1_Click);
-            _ButtonX6 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX6.Click += new EventHandler(ButtonX6_Click);
-            _ButtonX4 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX4.Click += new EventHandler(ButtonX4_Click);
-            _ComboBoxEx_Scripts = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            _ComboBoxEx_Scripts.SelectedIndexChanged += new EventHandler(ComboBoxEx_Scripts_SelectedIndexChanged);
-            _LabelX1 = new DevComponents.DotNetBar.LabelX();
-            _Flyout1 = new DevComponents.DotNetBar.Controls.Flyout(components);
-            _Flyout1.FlyoutShown += new EventHandler(Flyout1_FlyoutShown);
-            _ItemListBox1 = new Publics.Controls.ItemListBox();
-            _ItemListBox1.SelectedItemChanged += new Publics.Controls.ItemListBox.SelectedItemChangedEventHandler(ItemListBox1_SelectedItemChanged);
-            _ItemListBox1.Scroll += new ScrollEventHandler(ItemListBox1_Scroll);
-            _SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
-            _TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TextBoxX1.KeyDown += new KeyEventHandler(TextBoxX1_KeyDown);
-            _CircularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
-            _ButtonX9 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX9.Click += new EventHandler(ButtonX9_Click);
-            _Panel2 = new Panel();
-            _WarningBox_TweakUpdates = new DevComponents.DotNetBar.Controls.WarningBox();
-            _WarningBox_TweakUpdates.OptionsClick += new EventHandler(WarningBox_TweakUpdates_OptionsClick);
-            _ButtonX7 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX7.Click += new EventHandler(ButtonX7_Click);
-            _ButtonX_AddNew = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_AddNew.Click += new EventHandler(ButtonX_AddNew_Click);
-            _Panel1.SuspendLayout();
-            _Panel3.SuspendLayout();
-            _TableLayoutPanel2.SuspendLayout();
-            _TableLayoutPanel1.SuspendLayout();
-            _Panel2.SuspendLayout();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TweakViewer));
+            this.Panel1 = new System.Windows.Forms.Panel();
+            this.LabelX2 = new DevComponents.DotNetBar.LabelX();
+            this.Panel3 = new System.Windows.Forms.Panel();
+            this.ButtonX8 = new DevComponents.DotNetBar.ButtonX();
+            this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ButtonX5 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.LabelX_Description = new DevComponents.DotNetBar.LabelX();
+            this.LabelX_PatchName = new DevComponents.DotNetBar.LabelX();
+            this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX6 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.ComboBoxEx_Scripts = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.LabelX1 = new DevComponents.DotNetBar.LabelX();
+            this.Flyout1 = new DevComponents.DotNetBar.Controls.Flyout(this.components);
+            this.ItemListBox1 = new SM64_ROM_Manager.Publics.Controls.ItemListBox();
+            this.SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
+            this.TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.CircularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
+            this.ButtonX9 = new DevComponents.DotNetBar.ButtonX();
+            this.Panel2 = new System.Windows.Forms.Panel();
+            this.WarningBox_TweakUpdates = new DevComponents.DotNetBar.Controls.WarningBox();
+            this.ButtonX7 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_AddNew = new DevComponents.DotNetBar.ButtonX();
+            this.labelX_Version = new DevComponents.DotNetBar.LabelX();
+            this.Panel1.SuspendLayout();
+            this.Panel3.SuspendLayout();
+            this.TableLayoutPanel2.SuspendLayout();
+            this.TableLayoutPanel1.SuspendLayout();
+            this.Panel2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // Panel1
             // 
-            resources.ApplyResources(_Panel1, "Panel1");
-            _Panel1.BackColor = System.Drawing.Color.Transparent;
-            _Panel1.Controls.Add(_LabelX2);
-            _Panel1.Controls.Add(_Panel3);
-            _Panel1.Controls.Add(_TableLayoutPanel2);
-            _Panel1.Controls.Add(_LabelX_Description);
-            _Panel1.Controls.Add(_LabelX_PatchName);
-            _Panel1.Controls.Add(_TableLayoutPanel1);
-            _Panel1.Controls.Add(_ComboBoxEx_Scripts);
-            _Panel1.Controls.Add(_LabelX1);
-            _Panel1.Name = "Panel1";
-            _SuperTooltip1.SetSuperTooltip(_Panel1, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("Panel1.SuperTooltip"));
+            this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.labelX_Version);
+            this.Panel1.Controls.Add(this.LabelX2);
+            this.Panel1.Controls.Add(this.Panel3);
+            this.Panel1.Controls.Add(this.TableLayoutPanel2);
+            this.Panel1.Controls.Add(this.LabelX_Description);
+            this.Panel1.Controls.Add(this.LabelX_PatchName);
+            this.Panel1.Controls.Add(this.TableLayoutPanel1);
+            this.Panel1.Controls.Add(this.ComboBoxEx_Scripts);
+            this.Panel1.Controls.Add(this.LabelX1);
+            resources.ApplyResources(this.Panel1, "Panel1");
+            this.Panel1.Name = "Panel1";
             // 
             // LabelX2
             // 
-            resources.ApplyResources(_LabelX2, "LabelX2");
-            _LabelX2.BackColor = System.Drawing.Color.Transparent;
+            this.LabelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX2.Name = "LabelX2";
-            _SuperTooltip1.SetSuperTooltip(_LabelX2, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("LabelX2.SuperTooltip"));
+            this.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX2, "LabelX2");
+            this.LabelX2.Name = "LabelX2";
             // 
             // Panel3
             // 
-            resources.ApplyResources(_Panel3, "Panel3");
-            _Panel3.BackColor = System.Drawing.Color.Transparent;
-            _Panel3.Controls.Add(_ButtonX8);
-            _Panel3.Name = "Panel3";
-            _SuperTooltip1.SetSuperTooltip(_Panel3, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("Panel3.SuperTooltip"));
+            resources.ApplyResources(this.Panel3, "Panel3");
+            this.Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.Panel3.Controls.Add(this.ButtonX8);
+            this.Panel3.Name = "Panel3";
             // 
             // ButtonX8
             // 
-            resources.ApplyResources(_ButtonX8, "ButtonX8");
-            _ButtonX8.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX8.FocusCuesEnabled = false;
-            _ButtonX8.Image = MyIcons.icons8_triggering_16px;
-            _ButtonX8.Name = "ButtonX8";
-            _ButtonX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX8, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX8.SuperTooltip"));
-            _ButtonX8.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX8.FocusCuesEnabled = false;
+            this.ButtonX8.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_triggering_16px;
+            resources.ApplyResources(this.ButtonX8, "ButtonX8");
+            this.ButtonX8.Name = "ButtonX8";
+            this.ButtonX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX8.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX8.Click += new System.EventHandler(this.ButtonX8_Click);
             // 
             // TableLayoutPanel2
             // 
-            resources.ApplyResources(_TableLayoutPanel2, "TableLayoutPanel2");
-            _TableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            _TableLayoutPanel2.Controls.Add(_ButtonX5, 1, 0);
-            _TableLayoutPanel2.Controls.Add(_ButtonX3, 2, 0);
-            _TableLayoutPanel2.Controls.Add(_ButtonX2, 0, 0);
-            _TableLayoutPanel2.Name = "TableLayoutPanel2";
-            _SuperTooltip1.SetSuperTooltip(_TableLayoutPanel2, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("TableLayoutPanel2.SuperTooltip"));
+            resources.ApplyResources(this.TableLayoutPanel2, "TableLayoutPanel2");
+            this.TableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.TableLayoutPanel2.Controls.Add(this.ButtonX5, 1, 0);
+            this.TableLayoutPanel2.Controls.Add(this.ButtonX3, 2, 0);
+            this.TableLayoutPanel2.Controls.Add(this.ButtonX2, 0, 0);
+            this.TableLayoutPanel2.Name = "TableLayoutPanel2";
             // 
             // ButtonX5
             // 
-            resources.ApplyResources(_ButtonX5, "ButtonX5");
-            _ButtonX5.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX5.FocusCuesEnabled = false;
-            _ButtonX5.Image = MyIcons.icons8_delete_sign_16px_1;
-            _ButtonX5.Name = "ButtonX5";
-            _ButtonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX5, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX5.SuperTooltip"));
-            _ButtonX5.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX5.FocusCuesEnabled = false;
+            this.ButtonX5.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
+            resources.ApplyResources(this.ButtonX5, "ButtonX5");
+            this.ButtonX5.Name = "ButtonX5";
+            this.ButtonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX5.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX5.Click += new System.EventHandler(this.ButtonX5_Click);
             // 
             // ButtonX3
             // 
-            resources.ApplyResources(_ButtonX3, "ButtonX3");
-            _ButtonX3.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX3.FocusCuesEnabled = false;
-            _ButtonX3.Image = MyIcons.icons8_cancel_16px;
-            _ButtonX3.Name = "ButtonX3";
-            _ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX3, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX3.SuperTooltip"));
-            _ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX3.FocusCuesEnabled = false;
+            this.ButtonX3.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_cancel_16px;
+            resources.ApplyResources(this.ButtonX3, "ButtonX3");
+            this.ButtonX3.Name = "ButtonX3";
+            this.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX3.Click += new System.EventHandler(this.ButtonX3_Click);
             // 
             // ButtonX2
             // 
-            resources.ApplyResources(_ButtonX2, "ButtonX2");
-            _ButtonX2.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX2.FocusCuesEnabled = false;
-            _ButtonX2.Image = MyIcons.icons8_edit_16px;
-            _ButtonX2.Name = "ButtonX2";
-            _ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX2, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX2.SuperTooltip"));
-            _ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX2, "ButtonX2");
+            this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX2.FocusCuesEnabled = false;
+            this.ButtonX2.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_edit_16px;
+            this.ButtonX2.Name = "ButtonX2";
+            this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX2.Click += new System.EventHandler(this.ButtonX2_Click);
             // 
             // LabelX_Description
             // 
-            resources.ApplyResources(_LabelX_Description, "LabelX_Description");
-            _LabelX_Description.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.LabelX_Description, "LabelX_Description");
+            this.LabelX_Description.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX_Description.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX_Description.Name = "LabelX_Description";
-            _SuperTooltip1.SetSuperTooltip(_LabelX_Description, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("LabelX_Description.SuperTooltip"));
-            _LabelX_Description.TextLineAlignment = System.Drawing.StringAlignment.Near;
-            _LabelX_Description.WordWrap = true;
+            this.LabelX_Description.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX_Description.Name = "LabelX_Description";
+            this.LabelX_Description.TextLineAlignment = System.Drawing.StringAlignment.Near;
+            this.LabelX_Description.WordWrap = true;
+            this.LabelX_Description.TextChanged += new System.EventHandler(this.LabelX_Description_MouseEnter);
             // 
             // LabelX_PatchName
             // 
-            resources.ApplyResources(_LabelX_PatchName, "LabelX_PatchName");
-            _LabelX_PatchName.BackColor = System.Drawing.Color.Transparent;
+            this.LabelX_PatchName.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX_PatchName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX_PatchName.Name = "LabelX_PatchName";
-            _SuperTooltip1.SetSuperTooltip(_LabelX_PatchName, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("LabelX_PatchName.SuperTooltip"));
+            this.LabelX_PatchName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX_PatchName, "LabelX_PatchName");
+            this.LabelX_PatchName.Name = "LabelX_PatchName";
             // 
             // TableLayoutPanel1
             // 
-            resources.ApplyResources(_TableLayoutPanel1, "TableLayoutPanel1");
-            _TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            _TableLayoutPanel1.Controls.Add(_ButtonX1, 0, 0);
-            _TableLayoutPanel1.Controls.Add(_ButtonX6, 1, 0);
-            _TableLayoutPanel1.Controls.Add(_ButtonX4, 2, 0);
-            _TableLayoutPanel1.Name = "TableLayoutPanel1";
-            _SuperTooltip1.SetSuperTooltip(_TableLayoutPanel1, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("TableLayoutPanel1.SuperTooltip"));
+            resources.ApplyResources(this.TableLayoutPanel1, "TableLayoutPanel1");
+            this.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.TableLayoutPanel1.Controls.Add(this.ButtonX1, 0, 0);
+            this.TableLayoutPanel1.Controls.Add(this.ButtonX6, 1, 0);
+            this.TableLayoutPanel1.Controls.Add(this.ButtonX4, 2, 0);
+            this.TableLayoutPanel1.Name = "TableLayoutPanel1";
             // 
             // ButtonX1
             // 
-            resources.ApplyResources(_ButtonX1, "ButtonX1");
-            _ButtonX1.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX1.FocusCuesEnabled = false;
-            _ButtonX1.Image = MyIcons.icons8_plus_math_16px;
-            _ButtonX1.Name = "ButtonX1";
-            _ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX1, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX1.SuperTooltip"));
-            _ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX1.FocusCuesEnabled = false;
+            this.ButtonX1.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_plus_math_16px;
+            resources.ApplyResources(this.ButtonX1, "ButtonX1");
+            this.ButtonX1.Name = "ButtonX1";
+            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX1.Click += new System.EventHandler(this.ButtonX1_Click);
             // 
             // ButtonX6
             // 
-            resources.ApplyResources(_ButtonX6, "ButtonX6");
-            _ButtonX6.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX6.FocusCuesEnabled = false;
-            _ButtonX6.Image = MyIcons.icons8_edit_16px;
-            _ButtonX6.Name = "ButtonX6";
-            _ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX6, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX6.SuperTooltip"));
-            _ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX6, "ButtonX6");
+            this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX6.FocusCuesEnabled = false;
+            this.ButtonX6.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_edit_16px;
+            this.ButtonX6.Name = "ButtonX6";
+            this.ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX6.Click += new System.EventHandler(this.ButtonX6_Click);
             // 
             // ButtonX4
             // 
-            resources.ApplyResources(_ButtonX4, "ButtonX4");
-            _ButtonX4.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX4.FocusCuesEnabled = false;
-            _ButtonX4.Image = MyIcons.icons8_delete_sign_16px_1;
-            _ButtonX4.Name = "ButtonX4";
-            _ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX4, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX4.SuperTooltip"));
-            _ButtonX4.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX4, "ButtonX4");
+            this.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX4.FocusCuesEnabled = false;
+            this.ButtonX4.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
+            this.ButtonX4.Name = "ButtonX4";
+            this.ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX4.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX4.Click += new System.EventHandler(this.ButtonX4_Click);
             // 
             // ComboBoxEx_Scripts
             // 
-            resources.ApplyResources(_ComboBoxEx_Scripts, "ComboBoxEx_Scripts");
-            _ComboBoxEx_Scripts.DisplayMember = "Text";
-            _ComboBoxEx_Scripts.DrawMode = DrawMode.OwnerDrawFixed;
-            _ComboBoxEx_Scripts.DropDownStyle = ComboBoxStyle.DropDownList;
-            _ComboBoxEx_Scripts.ForeColor = System.Drawing.Color.Black;
-            _ComboBoxEx_Scripts.FormattingEnabled = true;
-            _ComboBoxEx_Scripts.Name = "ComboBoxEx_Scripts";
-            _ComboBoxEx_Scripts.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ComboBoxEx_Scripts, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ComboBoxEx_Scripts.SuperTooltip"));
+            resources.ApplyResources(this.ComboBoxEx_Scripts, "ComboBoxEx_Scripts");
+            this.ComboBoxEx_Scripts.DisplayMember = "Text";
+            this.ComboBoxEx_Scripts.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxEx_Scripts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxEx_Scripts.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxEx_Scripts.FormattingEnabled = true;
+            this.ComboBoxEx_Scripts.Name = "ComboBoxEx_Scripts";
+            this.ComboBoxEx_Scripts.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBoxEx_Scripts.SelectedIndexChanged += new System.EventHandler(this.ComboBoxEx_Scripts_SelectedIndexChanged);
             // 
             // LabelX1
             // 
-            resources.ApplyResources(_LabelX1, "LabelX1");
-            _LabelX1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.LabelX1, "LabelX1");
+            this.LabelX1.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX1.Name = "LabelX1";
-            _SuperTooltip1.SetSuperTooltip(_LabelX1, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("LabelX1.SuperTooltip"));
+            this.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX1.Name = "LabelX1";
             // 
             // Flyout1
             // 
-            _Flyout1.Content = _Panel1;
-            _Flyout1.DisplayMode = DevComponents.DotNetBar.Controls.eFlyoutDisplayMode.Manual;
-            _Flyout1.DropShadow = false;
-            _Flyout1.Parent = this;
+            this.Flyout1.Content = this.Panel1;
+            this.Flyout1.DisplayMode = DevComponents.DotNetBar.Controls.eFlyoutDisplayMode.Manual;
+            this.Flyout1.DropShadow = false;
+            this.Flyout1.Parent = this;
+            this.Flyout1.FlyoutShown += new System.EventHandler(this.Flyout1_FlyoutShown);
             // 
             // ItemListBox1
             // 
-            resources.ApplyResources(_ItemListBox1, "ItemListBox1");
+            resources.ApplyResources(this.ItemListBox1, "ItemListBox1");
             // 
             // 
             // 
-            _ItemListBox1.BackgroundStyle.Class = "ItemPanel";
-            _ItemListBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _ItemListBox1.ContainerControlProcessDialogKey = true;
-            _ItemListBox1.DragDropSupport = true;
-            _ItemListBox1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            _ItemListBox1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            _ItemListBox1.Name = "ItemListBox1";
-            _ItemListBox1.ReserveLeftSpace = false;
-            _ItemListBox1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ItemListBox1, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ItemListBox1.SuperTooltip"));
+            this.ItemListBox1.BackgroundStyle.Class = "ItemPanel";
+            this.ItemListBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ItemListBox1.ContainerControlProcessDialogKey = true;
+            this.ItemListBox1.DragDropSupport = true;
+            this.ItemListBox1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.ItemListBox1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ItemListBox1.Name = "ItemListBox1";
+            this.ItemListBox1.ReserveLeftSpace = false;
+            this.ItemListBox1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ItemListBox1.SelectedItemChanged += new SM64_ROM_Manager.Publics.Controls.ItemListBox.SelectedItemChangedEventHandler(this.ItemListBox1_SelectedItemChanged);
+            this.ItemListBox1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ItemListBox1_Scroll);
             // 
             // SuperTooltip1
             // 
-            resources.ApplyResources(_SuperTooltip1, "SuperTooltip1");
-            _SuperTooltip1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            resources.ApplyResources(this.SuperTooltip1, "SuperTooltip1");
+            this.SuperTooltip1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // TextBoxX1
             // 
-            resources.ApplyResources(_TextBoxX1, "TextBoxX1");
-            _TextBoxX1.BackColor = System.Drawing.Color.White;
+            this.TextBoxX1.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX1.Border.Class = "TextBoxBorder";
-            _TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX1.ButtonCustom.DisplayPosition = Conversions.ToInteger(resources.GetObject("TextBoxX1.ButtonCustom.DisplayPosition"));
-            _TextBoxX1.ButtonCustom.Image = (System.Drawing.Image)resources.GetObject("TextBoxX1.ButtonCustom.Image");
-            _TextBoxX1.ButtonCustom.Text = resources.GetString("TextBoxX1.ButtonCustom.Text");
-            _TextBoxX1.ButtonCustom.Tooltip = resources.GetString("TextBoxX1.ButtonCustom.Tooltip");
-            _TextBoxX1.ButtonCustom2.DisplayPosition = Conversions.ToInteger(resources.GetObject("TextBoxX1.ButtonCustom2.DisplayPosition"));
-            _TextBoxX1.ButtonCustom2.Image = (System.Drawing.Image)resources.GetObject("TextBoxX1.ButtonCustom2.Image");
-            _TextBoxX1.ButtonCustom2.Text = resources.GetString("TextBoxX1.ButtonCustom2.Text");
-            _TextBoxX1.ButtonCustom2.Tooltip = resources.GetString("TextBoxX1.ButtonCustom2.Tooltip");
-            _TextBoxX1.DisabledBackColor = System.Drawing.Color.White;
-            _TextBoxX1.ForeColor = System.Drawing.Color.Black;
-            _TextBoxX1.Name = "TextBoxX1";
-            _TextBoxX1.PreventEnterBeep = true;
-            _SuperTooltip1.SetSuperTooltip(_TextBoxX1, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("TextBoxX1.SuperTooltip"));
-            _TextBoxX1.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
+            this.TextBoxX1.Border.Class = "TextBoxBorder";
+            this.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX1.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX1.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.TextBoxX1, "TextBoxX1");
+            this.TextBoxX1.Name = "TextBoxX1";
+            this.TextBoxX1.PreventEnterBeep = true;
+            this.TextBoxX1.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
+            this.TextBoxX1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxX1_KeyDown);
             // 
             // CircularProgress1
             // 
-            resources.ApplyResources(_CircularProgress1, "CircularProgress1");
             // 
             // 
             // 
-            _CircularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _CircularProgress1.Name = "CircularProgress1";
-            _CircularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot;
-            _CircularProgress1.SetVisibleStateOnStart = true;
-            _CircularProgress1.SetVisibleStateOnStop = true;
-            _CircularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
-            _SuperTooltip1.SetSuperTooltip(_CircularProgress1, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("CircularProgress1.SuperTooltip"));
+            this.CircularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.CircularProgress1, "CircularProgress1");
+            this.CircularProgress1.Name = "CircularProgress1";
+            this.CircularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot;
+            this.CircularProgress1.SetVisibleStateOnStart = true;
+            this.CircularProgress1.SetVisibleStateOnStop = true;
+            this.CircularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             // 
             // ButtonX9
             // 
-            resources.ApplyResources(_ButtonX9, "ButtonX9");
-            _ButtonX9.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            _ButtonX9.FocusCuesEnabled = false;
-            _ButtonX9.Name = "ButtonX9";
-            _ButtonX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX9, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX9.SuperTooltip"));
-            _ButtonX9.Symbol = "57676";
-            _ButtonX9.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX9.SymbolSize = 12.0F;
+            this.ButtonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX9.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX9, "ButtonX9");
+            this.ButtonX9.Name = "ButtonX9";
+            this.ButtonX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX9.Symbol = "57676";
+            this.ButtonX9.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX9.SymbolSize = 12F;
+            this.ButtonX9.Click += new System.EventHandler(this.ButtonX9_Click);
             // 
             // Panel2
             // 
-            resources.ApplyResources(_Panel2, "Panel2");
-            _Panel2.BackColor = System.Drawing.Color.Transparent;
-            _Panel2.Controls.Add(_ItemListBox1);
-            _Panel2.Controls.Add(_WarningBox_TweakUpdates);
-            _Panel2.Name = "Panel2";
-            _SuperTooltip1.SetSuperTooltip(_Panel2, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("Panel2.SuperTooltip"));
+            this.Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.Panel2.Controls.Add(this.ItemListBox1);
+            this.Panel2.Controls.Add(this.WarningBox_TweakUpdates);
+            resources.ApplyResources(this.Panel2, "Panel2");
+            this.Panel2.Name = "Panel2";
             // 
             // WarningBox_TweakUpdates
             // 
-            resources.ApplyResources(_WarningBox_TweakUpdates, "WarningBox_TweakUpdates");
-            _WarningBox_TweakUpdates.BackColor = System.Drawing.Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)));
-            _WarningBox_TweakUpdates.CloseButtonVisible = false;
-            _WarningBox_TweakUpdates.ForeColor = System.Drawing.Color.Black;
-            _WarningBox_TweakUpdates.Name = "WarningBox_TweakUpdates";
-            _SuperTooltip1.SetSuperTooltip(_WarningBox_TweakUpdates, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("WarningBox_TweakUpdates.SuperTooltip"));
+            this.WarningBox_TweakUpdates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(219)))), ((int)(((byte)(249)))));
+            this.WarningBox_TweakUpdates.CloseButtonVisible = false;
+            resources.ApplyResources(this.WarningBox_TweakUpdates, "WarningBox_TweakUpdates");
+            this.WarningBox_TweakUpdates.ForeColor = System.Drawing.Color.Black;
+            this.WarningBox_TweakUpdates.Name = "WarningBox_TweakUpdates";
+            this.WarningBox_TweakUpdates.OptionsClick += new System.EventHandler(this.WarningBox_TweakUpdates_OptionsClick);
             // 
             // ButtonX7
             // 
-            resources.ApplyResources(_ButtonX7, "ButtonX7");
-            _ButtonX7.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX7.FocusCuesEnabled = false;
-            _ButtonX7.Image = MyIcons.icons8_search_16px;
-            _ButtonX7.Name = "ButtonX7";
-            _ButtonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX7, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX7.SuperTooltip"));
-            _ButtonX7.SymbolColor = System.Drawing.Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _ButtonX7.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX7.SymbolSize = 12.0F;
+            this.ButtonX7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX7, "ButtonX7");
+            this.ButtonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX7.FocusCuesEnabled = false;
+            this.ButtonX7.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_search_16px;
+            this.ButtonX7.Name = "ButtonX7";
+            this.ButtonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX7.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.ButtonX7.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX7.SymbolSize = 12F;
+            this.ButtonX7.Click += new System.EventHandler(this.ButtonX7_Click);
             // 
             // ButtonX_AddNew
             // 
-            resources.ApplyResources(_ButtonX_AddNew, "ButtonX_AddNew");
-            _ButtonX_AddNew.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_AddNew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_AddNew.FocusCuesEnabled = false;
-            _ButtonX_AddNew.Image = MyIcons.icons8_plus_math_16px;
-            _ButtonX_AddNew.Name = "ButtonX_AddNew";
-            _ButtonX_AddNew.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SuperTooltip1.SetSuperTooltip(_ButtonX_AddNew, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("ButtonX_AddNew.SuperTooltip"));
-            _ButtonX_AddNew.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX_AddNew.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX_AddNew, "ButtonX_AddNew");
+            this.ButtonX_AddNew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_AddNew.FocusCuesEnabled = false;
+            this.ButtonX_AddNew.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_plus_math_16px;
+            this.ButtonX_AddNew.Name = "ButtonX_AddNew";
+            this.ButtonX_AddNew.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_AddNew.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX_AddNew.Click += new System.EventHandler(this.ButtonX_AddNew_Click);
+            // 
+            // labelX_Version
+            // 
+            this.labelX_Version.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX_Version.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX_Version, "labelX_Version");
+            this.labelX_Version.Name = "labelX_Version";
             // 
             // TweakViewer
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(_Panel1);
-            Controls.Add(_ButtonX9);
-            Controls.Add(_CircularProgress1);
-            Controls.Add(_ButtonX7);
-            Controls.Add(_TextBoxX1);
-            Controls.Add(_ButtonX_AddNew);
-            Controls.Add(_Panel2);
-            Name = "TweakViewer";
-            _SuperTooltip1.SetSuperTooltip(this, (DevComponents.DotNetBar.SuperTooltipInfo)resources.GetObject("$this.SuperTooltip"));
-            TopLeftCornerSize = 0;
-            TopRightCornerSize = 0;
-            _Panel1.ResumeLayout(false);
-            _Panel1.PerformLayout();
-            _Panel3.ResumeLayout(false);
-            _TableLayoutPanel2.ResumeLayout(false);
-            _TableLayoutPanel1.ResumeLayout(false);
-            _Panel2.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Panel1);
+            this.Controls.Add(this.ButtonX9);
+            this.Controls.Add(this.CircularProgress1);
+            this.Controls.Add(this.ButtonX7);
+            this.Controls.Add(this.TextBoxX1);
+            this.Controls.Add(this.ButtonX_AddNew);
+            this.Controls.Add(this.Panel2);
+            this.Name = "TweakViewer";
+            this.TopLeftCornerSize = 0;
+            this.TopRightCornerSize = 0;
+            this.Panel1.ResumeLayout(false);
+            this.Panel1.PerformLayout();
+            this.Panel3.ResumeLayout(false);
+            this.TableLayoutPanel2.ResumeLayout(false);
+            this.TableLayoutPanel1.ResumeLayout(false);
+            this.Panel2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
-        private DevComponents.DotNetBar.ButtonX _ButtonX5;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX5 != null)
-                {
-                    _ButtonX5.Click -= ButtonX5_Click;
-                }
-
-                _ButtonX5 = value;
-                if (_ButtonX5 != null)
-                {
-                    _ButtonX5.Click += ButtonX5_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_AddNew;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_AddNew
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_AddNew;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_AddNew != null)
-                {
-                    _ButtonX_AddNew.Click -= ButtonX_AddNew_Click;
-                }
-
-                _ButtonX_AddNew = value;
-                if (_ButtonX_AddNew != null)
-                {
-                    _ButtonX_AddNew.Click += ButtonX_AddNew_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX8;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX8 != null)
-                {
-                    _ButtonX8.Click -= ButtonX8_Click;
-                }
-
-                _ButtonX8 = value;
-                if (_ButtonX8 != null)
-                {
-                    _ButtonX8.Click += ButtonX8_Click;
-                }
-            }
-        }
-
-        private Panel _Panel1;
-
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX3;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX3 != null)
-                {
-                    _ButtonX3.Click -= ButtonX3_Click;
-                }
-
-                _ButtonX3 = value;
-                if (_ButtonX3 != null)
-                {
-                    _ButtonX3.Click += ButtonX3_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.ComboBoxEx _ComboBoxEx_Scripts;
-
-        internal DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx_Scripts
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ComboBoxEx_Scripts;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ComboBoxEx_Scripts != null)
-                {
-                    _ComboBoxEx_Scripts.SelectedIndexChanged -= ComboBoxEx_Scripts_SelectedIndexChanged;
-                }
-
-                _ComboBoxEx_Scripts = value;
-                if (_ComboBoxEx_Scripts != null)
-                {
-                    _ComboBoxEx_Scripts.SelectedIndexChanged += ComboBoxEx_Scripts_SelectedIndexChanged;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX1;
-
-        internal DevComponents.DotNetBar.LabelX LabelX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX1 != null)
-                {
-                }
-
-                _LabelX1 = value;
-                if (_LabelX1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.Flyout _Flyout1;
-
-        internal DevComponents.DotNetBar.Controls.Flyout Flyout1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Flyout1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Flyout1 != null)
-                {
-                    _Flyout1.FlyoutShown -= Flyout1_FlyoutShown;
-                }
-
-                _Flyout1 = value;
-                if (_Flyout1 != null)
-                {
-                    _Flyout1.FlyoutShown += Flyout1_FlyoutShown;
-                }
-            }
-        }
-
-        private Publics.Controls.ItemListBox _ItemListBox1;
-
-        internal Publics.Controls.ItemListBox ItemListBox1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ItemListBox1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ItemListBox1 != null)
-                {
-                    _ItemListBox1.SelectedItemChanged -= (_, __) => ItemListBox1_SelectedItemChanged();
-                    _ItemListBox1.Scroll -= ItemListBox1_Scroll;
-                }
-
-                _ItemListBox1 = value;
-                if (_ItemListBox1 != null)
-                {
-                    _ItemListBox1.SelectedItemChanged += (_, __) => ItemListBox1_SelectedItemChanged();
-                    _ItemListBox1.Scroll += ItemListBox1_Scroll;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX4;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX4 != null)
-                {
-                    _ButtonX4.Click -= ButtonX4_Click;
-                }
-
-                _ButtonX4 = value;
-                if (_ButtonX4 != null)
-                {
-                    _ButtonX4.Click += ButtonX4_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX6;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX6
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX6;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX6 != null)
-                {
-                    _ButtonX6.Click -= ButtonX6_Click;
-                }
-
-                _ButtonX6 = value;
-                if (_ButtonX6 != null)
-                {
-                    _ButtonX6.Click += ButtonX6_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX1;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX1 != null)
-                {
-                    _ButtonX1.Click -= ButtonX1_Click;
-                }
-
-                _ButtonX1 = value;
-                if (_ButtonX1 != null)
-                {
-                    _ButtonX1.Click += ButtonX1_Click;
-                }
-            }
-        }
-
-        private TableLayoutPanel _TableLayoutPanel1;
-
-        internal TableLayoutPanel TableLayoutPanel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TableLayoutPanel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TableLayoutPanel1 != null)
-                {
-                }
-
-                _TableLayoutPanel1 = value;
-                if (_TableLayoutPanel1 != null)
-                {
-                }
-            }
-        }
-
-        private TableLayoutPanel _TableLayoutPanel2;
-
-        internal TableLayoutPanel TableLayoutPanel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TableLayoutPanel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TableLayoutPanel2 != null)
-                {
-                }
-
-                _TableLayoutPanel2 = value;
-                if (_TableLayoutPanel2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.SuperTooltip _SuperTooltip1;
-
-        internal DevComponents.DotNetBar.SuperTooltip SuperTooltip1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _SuperTooltip1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_SuperTooltip1 != null)
-                {
-                }
-
-                _SuperTooltip1 = value;
-                if (_SuperTooltip1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX_PatchName;
-
-        internal DevComponents.DotNetBar.LabelX LabelX_PatchName
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX_PatchName;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX_PatchName != null)
-                {
-                }
-
-                _LabelX_PatchName = value;
-                if (_LabelX_PatchName != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX_Description;
-
-        internal DevComponents.DotNetBar.LabelX LabelX_Description
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX_Description;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX_Description != null)
-                {
-                    _LabelX_Description.TextChanged -= LabelX_Description_MouseEnter;
-                }
-
-                _LabelX_Description = value;
-                if (_LabelX_Description != null)
-                {
-                    _LabelX_Description.TextChanged += LabelX_Description_MouseEnter;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX2;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX2 != null)
-                {
-                    _ButtonX2.Click -= ButtonX2_Click;
-                }
-
-                _ButtonX2 = value;
-                if (_ButtonX2 != null)
-                {
-                    _ButtonX2.Click += ButtonX2_Click;
-                }
-            }
-        }
-
-        private Panel _Panel3;
-
-        internal Panel Panel3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel3 != null)
-                {
-                }
-
-                _Panel3 = value;
-                if (_Panel3 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX2;
-
-        internal DevComponents.DotNetBar.LabelX LabelX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX2 != null)
-                {
-                }
-
-                _LabelX2 = value;
-                if (_LabelX2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX7;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX7 != null)
-                {
-                    _ButtonX7.Click -= ButtonX7_Click;
-                }
-
-                _ButtonX7 = value;
-                if (_ButtonX7 != null)
-                {
-                    _ButtonX7.Click += ButtonX7_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX1;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX1 != null)
-                {
-                    _TextBoxX1.KeyDown -= TextBoxX1_KeyDown;
-                }
-
-                _TextBoxX1 = value;
-                if (_TextBoxX1 != null)
-                {
-                    _TextBoxX1.KeyDown += TextBoxX1_KeyDown;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.CircularProgress _CircularProgress1;
-
-        internal DevComponents.DotNetBar.Controls.CircularProgress CircularProgress1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _CircularProgress1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_CircularProgress1 != null)
-                {
-                }
-
-                _CircularProgress1 = value;
-                if (_CircularProgress1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX9;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX9 != null)
-                {
-                    _ButtonX9.Click -= ButtonX9_Click;
-                }
-
-                _ButtonX9 = value;
-                if (_ButtonX9 != null)
-                {
-                    _ButtonX9.Click += ButtonX9_Click;
-                }
-            }
-        }
-
-        private Panel _Panel2;
-
-        internal Panel Panel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel2 != null)
-                {
-                }
-
-                _Panel2 = value;
-                if (_Panel2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.WarningBox _WarningBox_TweakUpdates;
-
-        internal DevComponents.DotNetBar.Controls.WarningBox WarningBox_TweakUpdates
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _WarningBox_TweakUpdates;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_WarningBox_TweakUpdates != null)
-                {
-                    _WarningBox_TweakUpdates.OptionsClick -= WarningBox_TweakUpdates_OptionsClick;
-                }
-
-                _WarningBox_TweakUpdates = value;
-                if (_WarningBox_TweakUpdates != null)
-                {
-                    _WarningBox_TweakUpdates.OptionsClick += WarningBox_TweakUpdates_OptionsClick;
-                }
-            }
-        }
+        private DevComponents.DotNetBar.ButtonX ButtonX5;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX_AddNew;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX8;
+
+
+        private Panel Panel1;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX3;
+
+
+        private DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx_Scripts;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX1;
+
+
+        private DevComponents.DotNetBar.Controls.Flyout Flyout1;
+
+
+        private Publics.Controls.ItemListBox ItemListBox1;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX4;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX6;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX1;
+
+
+        private TableLayoutPanel TableLayoutPanel1;
+
+
+        private TableLayoutPanel TableLayoutPanel2;
+
+
+        private DevComponents.DotNetBar.SuperTooltip SuperTooltip1;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX_PatchName;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX_Description;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX2;
+
+
+        private Panel Panel3;
+
+
+        private DevComponents.DotNetBar.LabelX LabelX2;
+
+                private DevComponents.DotNetBar.ButtonX ButtonX7;
+
+
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX1;
+
+
+        private DevComponents.DotNetBar.Controls.CircularProgress CircularProgress1;
+
+
+        private DevComponents.DotNetBar.ButtonX ButtonX9;
+
+
+        private Panel Panel2;
+
+
+        private DevComponents.DotNetBar.Controls.WarningBox WarningBox_TweakUpdates;
+        private DevComponents.DotNetBar.LabelX labelX_Version;
     }
 }

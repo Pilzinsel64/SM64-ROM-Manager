@@ -322,10 +322,10 @@
     <value>223, 28</value>
   </data>
   <data name="ButtonX_ManageLocalObjects.Text" xml:space="preserve">
-    <value>Lokale Objekte verwalten</value>
+    <value>Lokale Modelle verwalten</value>
   </data>
   <data name="labelX5.Text" xml:space="preserve">
-    <value>Lokale Objekt-Bank:</value>
+    <value>Lokale Modell-Bank:</value>
   </data>
   <data name="SwitchButton_UseLocalObjectBank.Location" type="System.Drawing.Point, System.Drawing">
     <value>167, 30</value>
@@ -340,7 +340,7 @@
     <value>156, 20</value>
   </data>
   <data name="LabelX13.Text" xml:space="preserve">
-    <value>Globale Objekt-Bank:</value>
+    <value>Globale Modell-Bank:</value>
   </data>
   <data name="SwitchButton_UseGlobalObjectBank.Location" type="System.Drawing.Point, System.Drawing">
     <value>167, 4</value>

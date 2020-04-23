@@ -2,16 +2,22 @@
 using global::System.IO;
 using Microsoft.VisualBasic.CompilerServices;
 using global::Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using SM64Lib.Behaviors;
+using SM64Lib.Objects.ObjectBanks;
 
 namespace SM64Lib.Configuration
 {
     public class RomConfig
     {
         public Dictionary<byte, LevelConfig> LevelConfigs { get; private set; } = new Dictionary<byte, LevelConfig>();
-        public ObjectBankConfig GlobalObjectBankConfig { get; private set; } = new ObjectBankConfig();
         public MusicConfiguration MusicConfig { get; private set; } = new MusicConfiguration();
         public string SelectedTextProfileInfo { get; set; } = string.Empty;
         public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
+        [JsonProperty("GlobalObjectBankConfig")]
+        public ObjectModelConfig GlobalModelBank { get; private set; } = new ObjectModelConfig();
+        public BehaviorBankConfig GlobalBehaviorBank { get; private set; } = new BehaviorBankConfig();
+        public CustomObjectCollection GlobalObjectBank { get; private set; } = new CustomObjectCollection();
 
         public LevelConfig GetLevelConfig(ushort levelID)
         {
@@ -29,12 +35,16 @@ namespace SM64Lib.Configuration
 
         public static RomConfig Load(string filePath)
         {
-            return JObject.Parse(File.ReadAllText(filePath)).ToObject<RomConfig>();
+            var serializer = JsonSerializer.CreateDefault();
+            serializer.PreserveReferencesHandling = PreserveReferencesHandling.All;
+            return JObject.Parse(File.ReadAllText(filePath)).ToObject<RomConfig>(serializer);
         }
 
         public void Save(string filePath)
         {
-            File.WriteAllText(filePath, JObject.FromObject(this).ToString());
+            var serializer = JsonSerializer.CreateDefault();
+            serializer.PreserveReferencesHandling = PreserveReferencesHandling.All;
+            File.WriteAllText(filePath, JObject.FromObject(this, serializer).ToString());
         }
     }
 }

@@ -37,883 +37,379 @@ namespace SM64_ROM_Manager
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(HUDOptionsForm));
-            _Panel1 = new Panel();
-            _TabControl1 = new DevComponents.DotNetBar.TabControl();
-            _TabControlPanel_Positions = new DevComponents.DotNetBar.TabControlPanel();
-            _Panel2 = new Panel();
-            _AdvTree1 = new DevComponents.AdvTree.AdvTree();
-            _AdvTree1.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(AdvTree1_AfterNodeSelect);
-            _Node1 = new DevComponents.AdvTree.Node();
-            _NodeConnector1 = new DevComponents.AdvTree.NodeConnector();
-            _ElementStyle1 = new DevComponents.DotNetBar.ElementStyle();
-            _LayoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
-            _IntegerInput_PosX = new DevComponents.Editors.IntegerInput();
-            _IntegerInput_PosY = new DevComponents.Editors.IntegerInput();
-            _ButtonX_SavePosition = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_SavePosition.Click += new EventHandler(ButtonX_SavePosition_Click);
-            _ButtonX_RestorePosition = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_RestorePosition.Click += new EventHandler(ButtonX_RestorePosition_Click);
-            _LayoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _LayoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _LayoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
-            _LayoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _LayoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            _TabItem1 = new DevComponents.DotNetBar.TabItem(components);
-            _Bar1 = new DevComponents.DotNetBar.Bar();
-            _ButtonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_ImportPosFromFile = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_ImportPosFromFile.Click += new EventHandler(ButtonItem_ImportPosFromFile_Click);
-            _ButtonItem_ExportPosToFile = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_ExportPosToFile.Click += new EventHandler(ButtonItem_ExportPosToFile_Click);
-            _Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_TabControl1).BeginInit();
-            _TabControl1.SuspendLayout();
-            _TabControlPanel_Positions.SuspendLayout();
-            _Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_AdvTree1).BeginInit();
-            _LayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_PosX).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_PosY).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_Bar1).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HUDOptionsForm));
+            this.Panel1 = new System.Windows.Forms.Panel();
+            this.TabControl1 = new DevComponents.DotNetBar.TabControl();
+            this.TabControlPanel_Positions = new DevComponents.DotNetBar.TabControlPanel();
+            this.Panel2 = new System.Windows.Forms.Panel();
+            this.AdvTree1 = new DevComponents.AdvTree.AdvTree();
+            this.Node1 = new DevComponents.AdvTree.Node();
+            this.NodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.ElementStyle1 = new DevComponents.DotNetBar.ElementStyle();
+            this.LayoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
+            this.IntegerInput_PosX = new DevComponents.Editors.IntegerInput();
+            this.IntegerInput_PosY = new DevComponents.Editors.IntegerInput();
+            this.ButtonX_SavePosition = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_RestorePosition = new DevComponents.DotNetBar.ButtonX();
+            this.LayoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.LayoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.LayoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
+            this.LayoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.LayoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.TabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.Bar1 = new DevComponents.DotNetBar.Bar();
+            this.ButtonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ImportPosFromFile = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ExportPosToFile = new DevComponents.DotNetBar.ButtonItem();
+            this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TabControl1)).BeginInit();
+            this.TabControl1.SuspendLayout();
+            this.TabControlPanel_Positions.SuspendLayout();
+            this.Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvTree1)).BeginInit();
+            this.LayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_PosX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_PosY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bar1)).BeginInit();
+            this.SuspendLayout();
             // 
             // Panel1
             // 
-            _Panel1.BackColor = Color.Transparent;
-            _Panel1.Controls.Add(_TabControl1);
-            _Panel1.Dock = DockStyle.Fill;
-            _Panel1.Location = new Point(0, 24);
-            _Panel1.Name = "Panel1";
-            _Panel1.Size = new Size(508, 426);
-            _Panel1.TabIndex = 0;
+            this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.TabControl1);
+            this.Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel1.Location = new System.Drawing.Point(0, 24);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(508, 426);
+            this.Panel1.TabIndex = 0;
             // 
             // TabControl1
             // 
-            _TabControl1.BackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)));
-            _TabControl1.CanReorderTabs = true;
-            _TabControl1.Controls.Add(_TabControlPanel_Positions);
-            _TabControl1.Dock = DockStyle.Fill;
-            _TabControl1.ForeColor = Color.Black;
-            _TabControl1.Location = new Point(0, 0);
-            _TabControl1.Name = "TabControl1";
-            _TabControl1.SelectedTabFont = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
-            _TabControl1.SelectedTabIndex = 0;
-            _TabControl1.Size = new Size(508, 426);
-            _TabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
-            _TabControl1.TabIndex = 0;
-            _TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            _TabControl1.Tabs.Add(_TabItem1);
+            this.TabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.TabControl1.CanReorderTabs = true;
+            this.TabControl1.Controls.Add(this.TabControlPanel_Positions);
+            this.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabControl1.ForeColor = System.Drawing.Color.Black;
+            this.TabControl1.Location = new System.Drawing.Point(0, 0);
+            this.TabControl1.Name = "TabControl1";
+            this.TabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.TabControl1.SelectedTabIndex = 0;
+            this.TabControl1.Size = new System.Drawing.Size(508, 426);
+            this.TabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
+            this.TabControl1.TabIndex = 0;
+            this.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
+            this.TabControl1.Tabs.Add(this.TabItem1);
             // 
             // TabControlPanel_Positions
             // 
-            _TabControlPanel_Positions.Controls.Add(_Panel2);
-            _TabControlPanel_Positions.DisabledBackColor = Color.Empty;
-            _TabControlPanel_Positions.Dock = DockStyle.Fill;
-            _TabControlPanel_Positions.Location = new Point(0, 27);
-            _TabControlPanel_Positions.Name = "TabControlPanel_Positions";
-            _TabControlPanel_Positions.Padding = new Padding(1);
-            _TabControlPanel_Positions.Size = new Size(508, 399);
-            _TabControlPanel_Positions.Style.BackColor1.Color = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(227)), Conversions.ToInteger(Conversions.ToByte(239)), Conversions.ToInteger(Conversions.ToByte(255)));
-            _TabControlPanel_Positions.Style.BackColor2.Color = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(176)), Conversions.ToInteger(Conversions.ToByte(210)), Conversions.ToInteger(Conversions.ToByte(255)));
-            _TabControlPanel_Positions.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            _TabControlPanel_Positions.Style.BorderColor.Color = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(146)), Conversions.ToInteger(Conversions.ToByte(165)), Conversions.ToInteger(Conversions.ToByte(199)));
-            _TabControlPanel_Positions.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Bottom;
-            _TabControlPanel_Positions.Style.GradientAngle = 90;
-            _TabControlPanel_Positions.TabIndex = 1;
-            _TabControlPanel_Positions.TabItem = _TabItem1;
+            this.TabControlPanel_Positions.Controls.Add(this.Panel2);
+            this.TabControlPanel_Positions.DisabledBackColor = System.Drawing.Color.Empty;
+            this.TabControlPanel_Positions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabControlPanel_Positions.Location = new System.Drawing.Point(0, 27);
+            this.TabControlPanel_Positions.Name = "TabControlPanel_Positions";
+            this.TabControlPanel_Positions.Padding = new System.Windows.Forms.Padding(1);
+            this.TabControlPanel_Positions.Size = new System.Drawing.Size(508, 399);
+            this.TabControlPanel_Positions.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel_Positions.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel_Positions.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel_Positions.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel_Positions.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel_Positions.Style.GradientAngle = 90;
+            this.TabControlPanel_Positions.TabIndex = 1;
+            this.TabControlPanel_Positions.TabItem = this.TabItem1;
             // 
             // Panel2
             // 
-            _Panel2.BackColor = Color.Transparent;
-            _Panel2.Controls.Add(_AdvTree1);
-            _Panel2.Controls.Add(_LayoutControl1);
-            _Panel2.Dock = DockStyle.Fill;
-            _Panel2.Location = new Point(1, 1);
-            _Panel2.Name = "Panel2";
-            _Panel2.Size = new Size(506, 397);
-            _Panel2.TabIndex = 1;
+            this.Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.Panel2.Controls.Add(this.AdvTree1);
+            this.Panel2.Controls.Add(this.LayoutControl1);
+            this.Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel2.Location = new System.Drawing.Point(1, 1);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(506, 397);
+            this.Panel2.TabIndex = 1;
             // 
             // AdvTree1
             // 
-            _AdvTree1.AccessibleRole = AccessibleRole.Outline;
-            _AdvTree1.BackColor = SystemColors.Window;
+            this.AdvTree1.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.AdvTree1.BackColor = System.Drawing.SystemColors.Window;
             // 
             // 
             // 
-            _AdvTree1.BackgroundStyle.Class = "TreeBorderKey";
-            _AdvTree1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _AdvTree1.Dock = DockStyle.Fill;
-            _AdvTree1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            _AdvTree1.Location = new Point(0, 0);
-            _AdvTree1.Name = "AdvTree1";
-            _AdvTree1.Nodes.AddRange(new DevComponents.AdvTree.Node[] { _Node1 });
-            _AdvTree1.NodesConnector = _NodeConnector1;
-            _AdvTree1.NodeStyle = _ElementStyle1;
-            _AdvTree1.PathSeparator = ";";
-            _AdvTree1.Size = new Size(312, 397);
-            _AdvTree1.Styles.Add(_ElementStyle1);
-            _AdvTree1.TabIndex = 0;
-            _AdvTree1.Text = "AdvTree1";
+            this.AdvTree1.BackgroundStyle.Class = "TreeBorderKey";
+            this.AdvTree1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AdvTree1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdvTree1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.AdvTree1.Location = new System.Drawing.Point(0, 0);
+            this.AdvTree1.Name = "AdvTree1";
+            this.AdvTree1.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
+            this.Node1});
+            this.AdvTree1.NodesConnector = this.NodeConnector1;
+            this.AdvTree1.NodeStyle = this.ElementStyle1;
+            this.AdvTree1.PathSeparator = ";";
+            this.AdvTree1.Size = new System.Drawing.Size(312, 397);
+            this.AdvTree1.Styles.Add(this.ElementStyle1);
+            this.AdvTree1.TabIndex = 0;
+            this.AdvTree1.Text = "AdvTree1";
+            this.AdvTree1.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree1_AfterNodeSelect);
             // 
             // Node1
             // 
-            _Node1.Expanded = true;
-            _Node1.Name = "Node1";
-            _Node1.Text = "Node1";
+            this.Node1.Expanded = true;
+            this.Node1.Name = "Node1";
+            this.Node1.Text = "Node1";
             // 
             // NodeConnector1
             // 
-            _NodeConnector1.LineColor = SystemColors.ControlText;
+            this.NodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
             // 
             // ElementStyle1
             // 
-            _ElementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _ElementStyle1.Name = "ElementStyle1";
-            _ElementStyle1.TextColor = SystemColors.ControlText;
+            this.ElementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ElementStyle1.Name = "ElementStyle1";
+            this.ElementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // LayoutControl1
             // 
-            _LayoutControl1.Controls.Add(_IntegerInput_PosX);
-            _LayoutControl1.Controls.Add(_IntegerInput_PosY);
-            _LayoutControl1.Controls.Add(_ButtonX_SavePosition);
-            _LayoutControl1.Controls.Add(_ButtonX_RestorePosition);
-            _LayoutControl1.Dock = DockStyle.Right;
-            _LayoutControl1.Location = new Point(312, 0);
-            _LayoutControl1.Name = "LayoutControl1";
+            this.LayoutControl1.Controls.Add(this.IntegerInput_PosX);
+            this.LayoutControl1.Controls.Add(this.IntegerInput_PosY);
+            this.LayoutControl1.Controls.Add(this.ButtonX_SavePosition);
+            this.LayoutControl1.Controls.Add(this.ButtonX_RestorePosition);
+            this.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LayoutControl1.Location = new System.Drawing.Point(312, 0);
+            this.LayoutControl1.Name = "LayoutControl1";
             // 
             // 
             // 
-            _LayoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] { _LayoutControlItem1, _LayoutControlItem2, _LayoutSpacerItem1, _LayoutControlItem4, _LayoutControlItem3 });
-            _LayoutControl1.Size = new Size(194, 397);
-            _LayoutControl1.TabIndex = 1;
+            this.LayoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] {
+            this.LayoutControlItem1,
+            this.LayoutControlItem2,
+            this.LayoutSpacerItem1,
+            this.LayoutControlItem4,
+            this.LayoutControlItem3});
+            this.LayoutControl1.Size = new System.Drawing.Size(194, 397);
+            this.LayoutControl1.TabIndex = 1;
             // 
             // IntegerInput_PosX
             // 
             // 
             // 
             // 
-            _IntegerInput_PosX.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput_PosX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput_PosX.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            _IntegerInput_PosX.Location = new Point(22, 4);
-            _IntegerInput_PosX.Margin = new Padding(0);
-            _IntegerInput_PosX.Name = "IntegerInput_PosX";
-            _IntegerInput_PosX.ShowUpDown = true;
-            _IntegerInput_PosX.Size = new Size(168, 20);
-            _IntegerInput_PosX.TabIndex = 0;
+            this.IntegerInput_PosX.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput_PosX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput_PosX.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.IntegerInput_PosX.Location = new System.Drawing.Point(22, 4);
+            this.IntegerInput_PosX.Margin = new System.Windows.Forms.Padding(0);
+            this.IntegerInput_PosX.Name = "IntegerInput_PosX";
+            this.IntegerInput_PosX.ShowUpDown = true;
+            this.IntegerInput_PosX.Size = new System.Drawing.Size(168, 20);
+            this.IntegerInput_PosX.TabIndex = 0;
             // 
             // IntegerInput_PosY
             // 
             // 
             // 
             // 
-            _IntegerInput_PosY.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput_PosY.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput_PosY.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            _IntegerInput_PosY.Location = new Point(22, 32);
-            _IntegerInput_PosY.Margin = new Padding(0);
-            _IntegerInput_PosY.Name = "IntegerInput_PosY";
-            _IntegerInput_PosY.ShowUpDown = true;
-            _IntegerInput_PosY.Size = new Size(168, 20);
-            _IntegerInput_PosY.TabIndex = 1;
+            this.IntegerInput_PosY.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput_PosY.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput_PosY.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.IntegerInput_PosY.Location = new System.Drawing.Point(22, 32);
+            this.IntegerInput_PosY.Margin = new System.Windows.Forms.Padding(0);
+            this.IntegerInput_PosY.Name = "IntegerInput_PosY";
+            this.IntegerInput_PosY.ShowUpDown = true;
+            this.IntegerInput_PosY.Size = new System.Drawing.Size(168, 20);
+            this.IntegerInput_PosY.TabIndex = 1;
             // 
             // ButtonX_SavePosition
             // 
-            _ButtonX_SavePosition.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_SavePosition.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_SavePosition.Location = new Point(115, 60);
-            _ButtonX_SavePosition.Margin = new Padding(0);
-            _ButtonX_SavePosition.Name = "ButtonX_SavePosition";
-            _ButtonX_SavePosition.Size = new Size(75, 24);
-            _ButtonX_SavePosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX_SavePosition.TabIndex = 4;
-            _ButtonX_SavePosition.Text = "Save";
+            this.ButtonX_SavePosition.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_SavePosition.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_SavePosition.Location = new System.Drawing.Point(115, 60);
+            this.ButtonX_SavePosition.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonX_SavePosition.Name = "ButtonX_SavePosition";
+            this.ButtonX_SavePosition.Size = new System.Drawing.Size(75, 24);
+            this.ButtonX_SavePosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_SavePosition.TabIndex = 4;
+            this.ButtonX_SavePosition.Text = "Save";
+            this.ButtonX_SavePosition.Click += new System.EventHandler(this.ButtonX_SavePosition_Click);
             // 
             // ButtonX_RestorePosition
             // 
-            _ButtonX_RestorePosition.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_RestorePosition.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_RestorePosition.Location = new Point(32, 60);
-            _ButtonX_RestorePosition.Margin = new Padding(0);
-            _ButtonX_RestorePosition.Name = "ButtonX_RestorePosition";
-            _ButtonX_RestorePosition.Size = new Size(75, 24);
-            _ButtonX_RestorePosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX_RestorePosition.TabIndex = 3;
-            _ButtonX_RestorePosition.Text = "Restore";
+            this.ButtonX_RestorePosition.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_RestorePosition.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_RestorePosition.Location = new System.Drawing.Point(32, 60);
+            this.ButtonX_RestorePosition.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonX_RestorePosition.Name = "ButtonX_RestorePosition";
+            this.ButtonX_RestorePosition.Size = new System.Drawing.Size(75, 24);
+            this.ButtonX_RestorePosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_RestorePosition.TabIndex = 3;
+            this.ButtonX_RestorePosition.Text = "Restore";
+            this.ButtonX_RestorePosition.Click += new System.EventHandler(this.ButtonX_RestorePosition_Click);
             // 
             // LayoutControlItem1
             // 
-            _LayoutControlItem1.Control = _IntegerInput_PosX;
-            _LayoutControlItem1.Height = 28;
-            _LayoutControlItem1.MinSize = new Size(64, 18);
-            _LayoutControlItem1.Name = "LayoutControlItem1";
-            _LayoutControlItem1.Text = "X:";
-            _LayoutControlItem1.Width = 100;
-            _LayoutControlItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            this.LayoutControlItem1.Control = this.IntegerInput_PosX;
+            this.LayoutControlItem1.Height = 28;
+            this.LayoutControlItem1.MinSize = new System.Drawing.Size(64, 18);
+            this.LayoutControlItem1.Name = "LayoutControlItem1";
+            this.LayoutControlItem1.Text = "X:";
+            this.LayoutControlItem1.Width = 100;
+            this.LayoutControlItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutControlItem2
             // 
-            _LayoutControlItem2.Control = _IntegerInput_PosY;
-            _LayoutControlItem2.Height = 28;
-            _LayoutControlItem2.MinSize = new Size(64, 18);
-            _LayoutControlItem2.Name = "LayoutControlItem2";
-            _LayoutControlItem2.Text = "Y:";
-            _LayoutControlItem2.Width = 100;
-            _LayoutControlItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            this.LayoutControlItem2.Control = this.IntegerInput_PosY;
+            this.LayoutControlItem2.Height = 28;
+            this.LayoutControlItem2.MinSize = new System.Drawing.Size(64, 18);
+            this.LayoutControlItem2.Name = "LayoutControlItem2";
+            this.LayoutControlItem2.Text = "Y:";
+            this.LayoutControlItem2.Width = 100;
+            this.LayoutControlItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutSpacerItem1
             // 
-            _LayoutSpacerItem1.Height = 32;
-            _LayoutSpacerItem1.Name = "LayoutSpacerItem1";
-            _LayoutSpacerItem1.Width = 99;
-            _LayoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            this.LayoutSpacerItem1.Height = 32;
+            this.LayoutSpacerItem1.Name = "LayoutSpacerItem1";
+            this.LayoutSpacerItem1.Width = 99;
+            this.LayoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutControlItem4
             // 
-            _LayoutControlItem4.Control = _ButtonX_RestorePosition;
-            _LayoutControlItem4.Height = 32;
-            _LayoutControlItem4.MinSize = new Size(32, 20);
-            _LayoutControlItem4.Name = "LayoutControlItem4";
-            _LayoutControlItem4.Width = 83;
+            this.LayoutControlItem4.Control = this.ButtonX_RestorePosition;
+            this.LayoutControlItem4.Height = 32;
+            this.LayoutControlItem4.MinSize = new System.Drawing.Size(32, 20);
+            this.LayoutControlItem4.Name = "LayoutControlItem4";
+            this.LayoutControlItem4.Width = 83;
             // 
             // LayoutControlItem3
             // 
-            _LayoutControlItem3.Control = _ButtonX_SavePosition;
-            _LayoutControlItem3.Height = 31;
-            _LayoutControlItem3.MinSize = new Size(32, 20);
-            _LayoutControlItem3.Name = "LayoutControlItem3";
-            _LayoutControlItem3.Width = 83;
+            this.LayoutControlItem3.Control = this.ButtonX_SavePosition;
+            this.LayoutControlItem3.Height = 31;
+            this.LayoutControlItem3.MinSize = new System.Drawing.Size(32, 20);
+            this.LayoutControlItem3.Name = "LayoutControlItem3";
+            this.LayoutControlItem3.Width = 83;
             // 
             // TabItem1
             // 
-            _TabItem1.AttachedControl = _TabControlPanel_Positions;
-            _TabItem1.Name = "TabItem1";
-            _TabItem1.Text = "Positions";
+            this.TabItem1.AttachedControl = this.TabControlPanel_Positions;
+            this.TabItem1.Name = "TabItem1";
+            this.TabItem1.Text = "Positions";
             // 
             // Bar1
             // 
-            _Bar1.AccessibleDescription = "DotNetBar Bar (Bar1)";
-            _Bar1.AccessibleName = "DotNetBar Bar";
-            _Bar1.AccessibleRole = AccessibleRole.MenuBar;
-            _Bar1.AntiAlias = true;
-            _Bar1.BarType = DevComponents.DotNetBar.eBarType.MenuBar;
-            _Bar1.Dock = DockStyle.Top;
-            _Bar1.Font = new Font("Segoe UI", 9.0F);
-            _Bar1.IsMaximized = false;
-            _Bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem1 });
-            _Bar1.Location = new Point(0, 0);
-            _Bar1.MenuBar = true;
-            _Bar1.Name = "Bar1";
-            _Bar1.Size = new Size(508, 24);
-            _Bar1.Stretch = true;
-            _Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _Bar1.TabIndex = 1;
-            _Bar1.TabStop = false;
+            this.Bar1.AccessibleDescription = "DotNetBar Bar (Bar1)";
+            this.Bar1.AccessibleName = "DotNetBar Bar";
+            this.Bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.Bar1.AntiAlias = true;
+            this.Bar1.BarType = DevComponents.DotNetBar.eBarType.MenuBar;
+            this.Bar1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Bar1.IsMaximized = false;
+            this.Bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem1});
+            this.Bar1.Location = new System.Drawing.Point(0, 0);
+            this.Bar1.MenuBar = true;
+            this.Bar1.Name = "Bar1";
+            this.Bar1.Size = new System.Drawing.Size(508, 24);
+            this.Bar1.Stretch = true;
+            this.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Bar1.TabIndex = 1;
+            this.Bar1.TabStop = false;
             // 
             // ButtonItem1
             // 
-            _ButtonItem1.Name = "ButtonItem1";
-            _ButtonItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem_ImportPosFromFile, _ButtonItem_ExportPosToFile });
-            _ButtonItem1.Text = "Positions";
+            this.ButtonItem1.Name = "ButtonItem1";
+            this.ButtonItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_ImportPosFromFile,
+            this.ButtonItem_ExportPosToFile});
+            this.ButtonItem1.Text = "Positions";
             // 
             // ButtonItem_ImportPosFromFile
             // 
-            _ButtonItem_ImportPosFromFile.Name = "ButtonItem_ImportPosFromFile";
-            _ButtonItem_ImportPosFromFile.Text = "Import from file ...";
+            this.ButtonItem_ImportPosFromFile.Name = "ButtonItem_ImportPosFromFile";
+            this.ButtonItem_ImportPosFromFile.Text = "Import from file ...";
+            this.ButtonItem_ImportPosFromFile.Click += new System.EventHandler(this.ButtonItem_ImportPosFromFile_Click);
             // 
             // ButtonItem_ExportPosToFile
             // 
-            _ButtonItem_ExportPosToFile.Name = "ButtonItem_ExportPosToFile";
-            _ButtonItem_ExportPosToFile.Text = "Export to file ...";
+            this.ButtonItem_ExportPosToFile.Name = "ButtonItem_ExportPosToFile";
+            this.ButtonItem_ExportPosToFile.Text = "Export to file ...";
+            this.ButtonItem_ExportPosToFile.Click += new System.EventHandler(this.ButtonItem_ExportPosToFile_Click);
             // 
             // HUDOptionsForm
             // 
-            AutoScaleDimensions = new SizeF(6.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(508, 450);
-            Controls.Add(_Panel1);
-            Controls.Add(_Bar1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "HUDOptionsForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "HUD Options";
-            TopLeftCornerSize = 0;
-            TopRightCornerSize = 0;
-            _Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_TabControl1).EndInit();
-            _TabControl1.ResumeLayout(false);
-            _TabControlPanel_Positions.ResumeLayout(false);
-            _Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_AdvTree1).EndInit();
-            _LayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_PosX).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_PosY).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_Bar1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(508, 450);
+            this.Controls.Add(this.Panel1);
+            this.Controls.Add(this.Bar1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "HUDOptionsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HUD Options";
+            this.TopLeftCornerSize = 0;
+            this.TopRightCornerSize = 0;
+            this.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TabControl1)).EndInit();
+            this.TabControl1.ResumeLayout(false);
+            this.TabControlPanel_Positions.ResumeLayout(false);
+            this.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AdvTree1)).EndInit();
+            this.LayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_PosX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_PosY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bar1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
-        private Panel _Panel1;
+        private Panel Panel1;
 
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
+        private DevComponents.DotNetBar.TabControl TabControl1;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
+        private DevComponents.DotNetBar.TabControlPanel TabControlPanel_Positions;
 
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.TabItem TabItem1;
 
-        private DevComponents.DotNetBar.TabControl _TabControl1;
+        private DevComponents.DotNetBar.Bar Bar1;
 
-        internal DevComponents.DotNetBar.TabControl TabControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabControl1;
-            }
+        private DevComponents.DotNetBar.ButtonItem ButtonItem1;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabControl1 != null)
-                {
-                }
+        private Panel Panel2;
 
-                _TabControl1 = value;
-                if (_TabControl1 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.AdvTree.AdvTree AdvTree1;
 
-        private DevComponents.DotNetBar.TabControlPanel _TabControlPanel_Positions;
+        private DevComponents.AdvTree.Node Node1;
 
-        internal DevComponents.DotNetBar.TabControlPanel TabControlPanel_Positions
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabControlPanel_Positions;
-            }
+        private DevComponents.AdvTree.NodeConnector NodeConnector1;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabControlPanel_Positions != null)
-                {
-                }
+        private DevComponents.DotNetBar.ElementStyle ElementStyle1;
 
-                _TabControlPanel_Positions = value;
-                if (_TabControlPanel_Positions != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.Layout.LayoutControl LayoutControl1;
 
-        private DevComponents.DotNetBar.TabItem _TabItem1;
+        private DevComponents.Editors.IntegerInput IntegerInput_PosY;
 
-        internal DevComponents.DotNetBar.TabItem TabItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TabItem1;
-            }
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem2;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TabItem1 != null)
-                {
-                }
+        private DevComponents.DotNetBar.ButtonX ButtonX_SavePosition;
 
-                _TabItem1 = value;
-                if (_TabItem1 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.Layout.LayoutSpacerItem LayoutSpacerItem1;
 
-        private DevComponents.DotNetBar.Bar _Bar1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem3;
 
-        internal DevComponents.DotNetBar.Bar Bar1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Bar1;
-            }
+        private DevComponents.DotNetBar.ButtonX ButtonX_RestorePosition;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Bar1 != null)
-                {
-                }
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem4;
 
-                _Bar1 = value;
-                if (_Bar1 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.Editors.IntegerInput IntegerInput_PosX;
 
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem1;
 
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem1;
-            }
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_ImportPosFromFile;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem1 != null)
-                {
-                }
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportPosToFile;
 
-                _ButtonItem1 = value;
-                if (_ButtonItem1 != null)
-                {
-                }
-            }
-        }
-
-        private Panel _Panel2;
-
-        internal Panel Panel2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel2 != null)
-                {
-                }
-
-                _Panel2 = value;
-                if (_Panel2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.AdvTree.AdvTree _AdvTree1;
-
-        internal DevComponents.AdvTree.AdvTree AdvTree1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _AdvTree1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_AdvTree1 != null)
-                {
-                    _AdvTree1.AfterNodeSelect -= AdvTree1_AfterNodeSelect;
-                }
-
-                _AdvTree1 = value;
-                if (_AdvTree1 != null)
-                {
-                    _AdvTree1.AfterNodeSelect += AdvTree1_AfterNodeSelect;
-                }
-            }
-        }
-
-        private DevComponents.AdvTree.Node _Node1;
-
-        internal DevComponents.AdvTree.Node Node1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Node1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Node1 != null)
-                {
-                }
-
-                _Node1 = value;
-                if (_Node1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.AdvTree.NodeConnector _NodeConnector1;
-
-        internal DevComponents.AdvTree.NodeConnector NodeConnector1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _NodeConnector1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_NodeConnector1 != null)
-                {
-                }
-
-                _NodeConnector1 = value;
-                if (_NodeConnector1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ElementStyle _ElementStyle1;
-
-        internal DevComponents.DotNetBar.ElementStyle ElementStyle1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ElementStyle1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ElementStyle1 != null)
-                {
-                }
-
-                _ElementStyle1 = value;
-                if (_ElementStyle1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutControl _LayoutControl1;
-
-        internal DevComponents.DotNetBar.Layout.LayoutControl LayoutControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControl1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LayoutControl1 != null)
-                {
-                }
-
-                _LayoutControl1 = value;
-                if (_LayoutControl1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.Editors.IntegerInput _IntegerInput_PosY;
-
-        internal DevComponents.Editors.IntegerInput IntegerInput_PosY
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput_PosY;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_IntegerInput_PosY != null)
-                {
-                }
-
-                _IntegerInput_PosY = value;
-                if (_IntegerInput_PosY != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem2;
-
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LayoutControlItem2 != null)
-                {
-                }
-
-                _LayoutControlItem2 = value;
-                if (_LayoutControlItem2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_SavePosition;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_SavePosition
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_SavePosition;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_SavePosition != null)
-                {
-                    _ButtonX_SavePosition.Click -= ButtonX_SavePosition_Click;
-                }
-
-                _ButtonX_SavePosition = value;
-                if (_ButtonX_SavePosition != null)
-                {
-                    _ButtonX_SavePosition.Click += ButtonX_SavePosition_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutSpacerItem _LayoutSpacerItem1;
-
-        internal DevComponents.DotNetBar.Layout.LayoutSpacerItem LayoutSpacerItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutSpacerItem1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LayoutSpacerItem1 != null)
-                {
-                }
-
-                _LayoutSpacerItem1 = value;
-                if (_LayoutSpacerItem1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem3;
-
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LayoutControlItem3 != null)
-                {
-                }
-
-                _LayoutControlItem3 = value;
-                if (_LayoutControlItem3 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_RestorePosition;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_RestorePosition
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_RestorePosition;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_RestorePosition != null)
-                {
-                    _ButtonX_RestorePosition.Click -= ButtonX_RestorePosition_Click;
-                }
-
-                _ButtonX_RestorePosition = value;
-                if (_ButtonX_RestorePosition != null)
-                {
-                    _ButtonX_RestorePosition.Click += ButtonX_RestorePosition_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem4;
-
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LayoutControlItem4 != null)
-                {
-                }
-
-                _LayoutControlItem4 = value;
-                if (_LayoutControlItem4 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.Editors.IntegerInput _IntegerInput_PosX;
-
-        internal DevComponents.Editors.IntegerInput IntegerInput_PosX
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput_PosX;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_IntegerInput_PosX != null)
-                {
-                }
-
-                _IntegerInput_PosX = value;
-                if (_IntegerInput_PosX != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Layout.LayoutControlItem _LayoutControlItem1;
-
-        internal DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LayoutControlItem1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LayoutControlItem1 != null)
-                {
-                }
-
-                _LayoutControlItem1 = value;
-                if (_LayoutControlItem1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_ImportPosFromFile;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_ImportPosFromFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_ImportPosFromFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_ImportPosFromFile != null)
-                {
-                    _ButtonItem_ImportPosFromFile.Click -= ButtonItem_ImportPosFromFile_Click;
-                }
-
-                _ButtonItem_ImportPosFromFile = value;
-                if (_ButtonItem_ImportPosFromFile != null)
-                {
-                    _ButtonItem_ImportPosFromFile.Click += ButtonItem_ImportPosFromFile_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_ExportPosToFile;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_ExportPosToFile
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_ExportPosToFile;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_ExportPosToFile != null)
-                {
-                    _ButtonItem_ExportPosToFile.Click -= ButtonItem_ExportPosToFile_Click;
-                }
-
-                _ButtonItem_ExportPosToFile = value;
-                if (_ButtonItem_ExportPosToFile != null)
-                {
-                    _ButtonItem_ExportPosToFile.Click += ButtonItem_ExportPosToFile_Click;
-                }
-            }
-        }
     }
 }

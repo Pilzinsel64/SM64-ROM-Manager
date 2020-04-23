@@ -2,6 +2,7 @@
 using global::System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Newtonsoft.Json.Linq;
 
 namespace SM64_ROM_Manager.ModelImporterGUI.ImporterPresets
 {
@@ -9,45 +10,36 @@ namespace SM64_ROM_Manager.ModelImporterGUI.ImporterPresets
     {
         public void Save(ImporterProfile profile, string dir)
         {
-            var psmgr = new PatchScripts.PatchingManager();
-            XElement xml = XElement.Parse($"<m64custom name=\"{profile.Name}\" version=\"{profile.Version.ToString()}\"><description>{profile.Description}</description></m64custom>");
-            foreach (ImporterPreset preset in profile.Presets)
-            {
-                XElement xpreset = XElement.Parse($"<preset name=\"{preset.Name}\"><description>{preset.Description}</description><max_length>{preset.MaxLength.ToString("X")}</max_length><rom_address>{preset.RomAddress.ToString("X")}</rom_address><ram_address>{preset.RamAddress.ToString("X")}</ram_address></preset>");
-                if (preset.ScriptAfter is object)
-                {
-                    var xscript = psmgr.ScriptToXElement(preset.ScriptAfter);
-                    xscript.Name = "script_after";
-                    xpreset.Add(xscript);
-                }
-                
-                if (preset.ScriptBefore is object)
-                {
-                    var xscript = psmgr.ScriptToXElement(preset.ScriptBefore);
-                    xscript.Name = "script_before";
-                    xpreset.Add(xscript);
-                }
-
-                XElement xcolpointer = XElement.Parse($"<collision_pointers></collision_pointers>");
-                foreach (int colpointer in preset.CollisionPointers)
-                    xcolpointer.Add(XElement.Parse($"<ptr>{colpointer.ToString("X")}</ptr>"));
-                xpreset.Add(xcolpointer);
-                XElement xgeopointer = XElement.Parse($"<geometry_pointers></geometry_pointers>");
-                foreach (int geopointer in preset.GeometryPointers)
-                    xgeopointer.Add(XElement.Parse($"<ptr>{geopointer.ToString("X")}</ptr>"));
-                xpreset.Add(xgeopointer);
-                xml.Add(xpreset);
-            }
-
             if (string.IsNullOrEmpty(profile.FileName))
             {
-                profile.FileName = Path.Combine(dir, profile.Name + ".xml");
+                profile.FileName = Path.Combine(dir, profile.Name + ".json");
+            }
+            else if (Path.GetExtension(profile.FileName) == ".xml")
+            {
+                var newFileName = Path.ChangeExtension(profile.FileName, ".json");
+                File.Delete(profile.FileName);
+                profile.FileName = newFileName;
             }
 
-            xml.Save(profile.FileName);
+            File.WriteAllText(profile.FileName, JObject.FromObject(profile).ToString());
         }
 
         public ImporterProfile Read(string fileName)
+        {
+            switch (Path.GetExtension(fileName))
+            {
+                case ".json":
+                    var profile = JObject.Parse(File.ReadAllText(fileName)).ToObject<ImporterProfile>();
+                    profile.FileName = fileName;
+                    return profile;
+                case ".xml":
+                    return ParseProfile(fileName);
+                default:
+                    return null;
+            }
+        }
+
+        private ImporterProfile ParseProfile(string fileName)
         {
             var profile = new ImporterProfile();
             var xml = XDocument.Load(fileName);

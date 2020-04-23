@@ -38,8 +38,13 @@ namespace SM64_ROM_Manager.LevelEditor
 
         // C O N S T R U C T O R S
 
-        public InformationListDialog(EditModes editMode)
+        public InformationListDialog(EditModes editMode) : this(editMode, null)
         {
+        }
+
+        public InformationListDialog(EditModes editMode, ObjectComboList avaiableCombos)
+        {
+            this.avaiableCombos = avaiableCombos;
             InitializeComponent();
             SetUpPropertyGrid();
             this.editMode = editMode;
@@ -48,11 +53,6 @@ namespace SM64_ROM_Manager.LevelEditor
             SetUI();
             TextBoxX_Search.Select();
             base.UpdateAmbientColors();
-        }
-
-        public InformationListDialog(EditModes editMode, ObjectComboList avaiableCombos) : this(editMode)
-        {
-            this.avaiableCombos = avaiableCombos;
         }
 
         // P R O P E R T I E S
@@ -328,6 +328,30 @@ namespace SM64_ROM_Manager.LevelEditor
             // itemsList.Add(New LabelItem With {.Text = "User Defined Objects:", .FontBold = True, .ForeColor = Color.FromArgb(&HFF2B5DA8), .BeginGroup = False})
             foreach (object obj in CurrentCustomObjectList)
                 itemsList.Add(GetItemFrom(obj));
+
+            if (!EnableEdit && avaiableCombos is object)
+            {
+                foreach (ObjectCombo combo in avaiableCombos)
+                {
+                    if (EnableObjCombos)
+                    {
+                        if (!General.ObjectCombos.Contains(combo) && !General.ObjectCombosCustom.Contains(combo))
+                            itemsList.Add(GetItemFrom(combo));
+                    }
+                    else
+                    {
+                        if (General.BehaviorInfos.GetByBehaviorAddress(combo.BehaviorAddress) == null &&
+                            General.BehaviorInfosCustom.GetByBehaviorAddress(combo.BehaviorAddress) == null)
+                        {
+                            itemsList.Add(GetItemFrom(new BehaviorInfo
+                            {
+                                BehaviorAddress = combo.BehaviorAddress,
+                                Name = combo.Name
+                            }));
+                        }
+                    }
+                }
+            }
 
             // List Items
             ListItems();

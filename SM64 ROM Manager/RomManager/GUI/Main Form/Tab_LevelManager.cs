@@ -9,7 +9,7 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::SM64_ROM_Manager.EventArguments;
 using global::SM64_ROM_Manager.My.Resources;
 using global::SM64Lib.Levels;
-using global::SM64Lib.ObjectBanks.Data;
+using global::SM64Lib.Objects.ObjectBanks.Data;
 using SM64Lib.TextValueConverter;
 using System.Linq;
 

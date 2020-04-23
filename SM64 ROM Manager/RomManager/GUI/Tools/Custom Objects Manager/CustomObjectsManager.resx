@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxX_ModelID.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxX_BehavAddr.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="CheckBoxX_BehavBank.Text" xml:space="preserve">
+    <value>Select from Behavior Bank</value>
+  </data>
+  <data name="ButtonX_SelectCustomModelFromBank.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_BehavCustom.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="TextBoxX_Name.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ModelID.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SelectCustomModelFromBank.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem15.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_UploadToDatabase.Name" xml:space="preserve">
+    <value>ButtonItem_UploadToDatabase</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CustomModelID.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem11.Name" xml:space="preserve">
+    <value>layoutControlItem11</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SelectCustomModelFromBank.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="bar1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TextBoxX_Name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 4</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
+    <value>nodeConnector1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CustomModelID.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonX_SelectFromBehavBank.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 174</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Description.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="TextBoxX_ModelID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem16.Name" xml:space="preserve">
+    <value>layoutControlItem16</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="CheckBoxX_NoModel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Name.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_BehavAddr.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem6.Name" xml:space="preserve">
+    <value>layoutSpacerItem6</value>
+  </data>
+  <data name="bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="CheckBoxX_CustomModel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
+    <value>bar1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Name" xml:space="preserve">
+    <value>layoutControlItem10</value>
+  </data>
+  <data name="CheckBoxX_CustomModel.Text" xml:space="preserve">
+    <value>Select from Model Bank</value>
+  </data>
+  <data name="TextBoxX_Description.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextBoxX_Name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 20</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_ModelID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="ButtonX_SelectFromBehavBank.Text" xml:space="preserve">
+    <value>Select ...</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_ModelID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 267</value>
+  </data>
+  <data name="ButtonX_SelectCustomModelFromBank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 23</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Description.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportToFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="CheckBoxX_BehavCustom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="AdvTree_Objs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ModelID.Name" xml:space="preserve">
+    <value>TextBoxX_ModelID</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem13.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="bar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ButtonItem_DeleteObject.Text" xml:space="preserve">
+    <value>Delete Object</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem13.Name" xml:space="preserve">
+    <value>layoutControlItem13</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_BehavCustom.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        odbGnn+TxJV09MSWdP/ElnT/xJV09MOVc2/MmWYFAAAAAAAAAAAAAAAAxJZzScSWdNzElnT/xpl2/ue+
+        l//s0rT/xpl2/8SWdP/Fmnr/yKuTycy1pC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMu3
+        okrKrZXmxZp6/8SWdP/GmXb+576X/+zStP/GmXb9xJZ0/8SWdNzDlXVIAAAAAMSWdKzElnT/xJZ0/9iv
+        i//yxZv/8LeL///35v/87tX/2bST/8SWdP/ElnT/w5d0qwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAxJZ0rMSWdP/ElnT/2K+L//LFm//wt4v///fm//zu1f/ZtJP/xJZ0/8SWdP/Dl3SrxJZ0/8SW
+        dP/uw5r/8bmO//C3i//wt4v///fm///35v//9uX/9eHG/8SWdP/ElnT/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADElnT/xJZ0/+7Dmv/xuY7/8LeL//C3i///9+b///fm///25f/14cb/xJZ0/8SW
+        dP/ElnT/xJZ0//C3i//wt4v/8LeL//C3i///9+b///fm///35v//9+b/xJZ0/8SWdP8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMSWdP/ElnT/8LeL//C3i//wt4v/8LeL///35v//9+b///fm///3
+        5v/ElnT/xJZ0/8SWdP/ElnT/8LeL//C3i//wt4v/8LeL///35v//9+b///fm///35v/ElnT/xJZ0/wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxJZ0/8SWdP/wt4v/8LeL//C3i//wt4v///fm///3
+        5v//9+b///fm/8SWdP/ElnT/xJZ0/8SWdP/wt4v/8LeL//K8kf/51Kv//+/S///14v//9+b///fm/8SW
+        dP/ElnT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADElnT/xJZ0//C3i//wt4v/8ryR//nU
+        q///79L///Xi///35v//9+b/xJZ0/8SWdP/ElnT/xJZ0//G7j//40aj//ua////owv//6ML//+nE///w
+        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
+        Af//wAP//8AD///AA///wAP///AP///4H////n//
+</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CustomModel.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="CheckBoxX_CustomModelID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 267</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Behavior Address</value>
+  </data>
+  <data name="CheckBoxX_UseColPtrForBehav.Text" xml:space="preserve">
+    <value>Use Collision Pointer for the Behavior</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CustomModelID.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem4.Name" xml:space="preserve">
+    <value>layoutSpacerItem4</value>
+  </data>
+  <data name="&gt;&gt;layoutGroup2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutGroup, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem10.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem16.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem2.Name" xml:space="preserve">
+    <value>layoutSpacerItem2</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Name.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_DeleteObject.Name" xml:space="preserve">
+    <value>ButtonItem_DeleteObject</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 143</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_BehavAddr.Name" xml:space="preserve">
+    <value>TextBoxX_BehavAddr</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_NoModel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="bar1.AccessibleName" xml:space="preserve">
+    <value>DotNetBar Bar</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Description.Name" xml:space="preserve">
+    <value>TextBoxX_Description</value>
+  </data>
+  <data name="CheckBoxX_NoModel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ModelID.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="ButtonX_SelectFromBehavBank.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="TextBoxX_Name.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="AdvTree_Objs.Text" xml:space="preserve">
+    <value>advTree1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CustomModel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="bar1.AccessibleDescription" xml:space="preserve">
+    <value>DotNetBar Bar (bar1)</value>
+  </data>
+  <data name="AdvTree_Objs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ButtonX_SelectFromBehavBank.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Objs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="CheckBoxX_BehavBank.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="CheckBoxX_CustomModelID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_UseColPtrForBehav.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="CheckBoxX_BehavBank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 23</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_UseColPtrForBehav.Name" xml:space="preserve">
+    <value>CheckBoxX_UseColPtrForBehav</value>
+  </data>
+  <data name="CheckBoxX_NoModel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 236</value>
+  </data>
+  <data name="CheckBoxX_UseColPtrForBehav.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CustomModel.Name" xml:space="preserve">
+    <value>CheckBoxX_CustomModel</value>
+  </data>
+  <data name="bar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_BehavCustom.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SelectFromBehavBank.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_NoModel.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonItem_NewObject.Text" xml:space="preserve">
+    <value>New Object</value>
+  </data>
+  <data name="bar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>752, 24</value>
+  </data>
+  <data name="ButtonItem_ImportFromFile.Text" xml:space="preserve">
+    <value>Import from file ...</value>
+  </data>
+  <data name="ButtonX_SelectCustomModelFromBank.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 298</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CheckBoxX_CustomModelID.Text" xml:space="preserve">
+    <value>Set Model ID</value>
+  </data>
+  <data name="CheckBoxX_UseColPtrForBehav.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="CheckBoxX_NoModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonItem_ExportToFile.Text" xml:space="preserve">
+    <value>Export to file ...</value>
+  </data>
+  <data name="CheckBoxX_BehavBank.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem14.Name" xml:space="preserve">
+    <value>layoutControlItem14</value>
+  </data>
+  <data name="CheckBoxX_CustomModelID.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportFromDatabase.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="CheckBoxX_BehavCustom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 23</value>
+  </data>
+  <data name="buttonItem_Export.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Objs.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 24</value>
+  </data>
+  <data name="TextBoxX_ModelID.WatermarkText" xml:space="preserve">
+    <value>Model ID</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.WatermarkText" xml:space="preserve">
+    <value>Behavior Address</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Model ID</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem1.Name" xml:space="preserve">
+    <value>layoutSpacerItem1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Name.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CustomModel.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="CheckBoxX_CustomModel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 298</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_BehavCustom.Name" xml:space="preserve">
+    <value>CheckBoxX_BehavCustom</value>
+  </data>
+  <data name="CheckBoxX_NoModel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="TextBoxX_Description.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;buttonItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonX_SelectCustomModelFromBank.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="CheckBoxX_CustomModelID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 23</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem7.Name" xml:space="preserve">
+    <value>layoutSpacerItem7</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CheckBoxX_UseColPtrForBehav.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="resource.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;CheckBoxX_NoModel.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_BehavAddr.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="CheckBoxX_BehavBank.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="CheckBoxX_BehavCustom.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_BehavAddr.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonItem_UploadToDatabase.Text" xml:space="preserve">
+    <value>Upload to Database ...</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SelectFromBehavBank.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="buttonItem4.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="&gt;&gt;buttonItem4.Name" xml:space="preserve">
+    <value>buttonItem4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Custom Objects Manager</value>
+  </data>
+  <data name="CheckBoxX_NoModel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 23</value>
+  </data>
+  <data name="CheckBoxX_CustomModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_Description.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem3.Name" xml:space="preserve">
+    <value>layoutSpacerItem3</value>
+  </data>
+  <data name="CheckBoxX_CustomModel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 23</value>
+  </data>
+  <data name="TextBoxX_Description.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;CheckBoxX_UseColPtrForBehav.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="TextBoxX_ModelID.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="CheckBoxX_UseColPtrForBehav.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
+    <value>layoutControlItem1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_BehavBank.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="CheckBoxX_BehavCustom.Text" xml:space="preserve">
+    <value>Set Behavior Address</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Name" xml:space="preserve">
+    <value>layoutControlItem9</value>
+  </data>
+  <data name="TextBoxX_Description.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
+    <value>elementStyle1</value>
+  </data>
+  <data name="ButtonX_SelectCustomModelFromBank.Text" xml:space="preserve">
+    <value>Select ...</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;CheckBoxX_UseColPtrForBehav.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CustomObjectsManager</value>
+  </data>
+  <data name="CheckBoxX_BehavCustom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 143</value>
+  </data>
+  <data name="layoutGroup2.Text" xml:space="preserve">
+    <value>Behavior:</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_NewObject.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportToFile.Name" xml:space="preserve">
+    <value>ButtonItem_ExportToFile</value>
+  </data>
+  <data name="&gt;&gt;buttonItem_Export.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="CheckBoxX_BehavCustom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="AdvTree_Objs.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBoxX_Description.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="resource.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_BehavAddr.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CheckBoxX_CustomModel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem5.Name" xml:space="preserve">
+    <value>layoutSpacerItem5</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="CheckBoxX_UseColPtrForBehav.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 360</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_BehavBank.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="ButtonItem_ImportFromDatabase.Text" xml:space="preserve">
+    <value>Import from Database ...</value>
+  </data>
+  <data name="ButtonX_SelectFromBehavBank.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 23</value>
+  </data>
+  <data name="CheckBoxX_CustomModel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SelectCustomModelFromBank.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_BehavAddr.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem15.Name" xml:space="preserve">
+    <value>layoutControlItem15</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_Description.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 32</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ModelID.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="TextBoxX_Description.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;ButtonX_SelectFromBehavBank.Name" xml:space="preserve">
+    <value>ButtonX_SelectFromBehavBank</value>
+  </data>
+  <data name="&gt;&gt;buttonItem_Export.Name" xml:space="preserve">
+    <value>buttonItem_Export</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;AdvTree_Objs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_NoModel.Name" xml:space="preserve">
+    <value>CheckBoxX_NoModel</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="layoutControlItem16.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="CheckBoxX_CustomModelID.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportFromFile.Name" xml:space="preserve">
+    <value>ButtonItem_ImportFromFile</value>
+  </data>
+  <data name="AdvTree_Objs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 387</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 20</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Objs.Name" xml:space="preserve">
+    <value>AdvTree_Objs</value>
+  </data>
+  <data name="TextBoxX_BehavAddr.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ButtonX_SelectCustomModelFromBank.Name" xml:space="preserve">
+    <value>ButtonX_SelectCustomModelFromBank</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 387</value>
+  </data>
+  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="CheckBoxX_BehavBank.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CheckBoxX_CustomModel.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="CheckBoxX_BehavBank.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 174</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>752, 411</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_NewObject.Name" xml:space="preserve">
+    <value>ButtonItem_NewObject</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_DeleteObject.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_Description.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 72</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportFromDatabase.Name" xml:space="preserve">
+    <value>ButtonItem_ImportFromDatabase</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportFromFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_Description.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_Description.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_Description.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="CheckBoxX_CustomModelID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="CheckBoxX_UseColPtrForBehav.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="CheckBoxX_BehavCustom.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
+  </data>
+  <data name="&gt;&gt;bar1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem12.Name" xml:space="preserve">
+    <value>layoutControlItem12</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="CheckBoxX_UseColPtrForBehav.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 23</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem9.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutGroup2.Name" xml:space="preserve">
+    <value>layoutGroup2</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem14.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_BehavBank.Name" xml:space="preserve">
+    <value>CheckBoxX_BehavBank</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_CustomModelID.Name" xml:space="preserve">
+    <value>CheckBoxX_CustomModelID</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Name.Name" xml:space="preserve">
+    <value>TextBoxX_Name</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_UploadToDatabase.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SelectFromBehavBank.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem8.Name" xml:space="preserve">
+    <value>layoutSpacerItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="CheckBoxX_BehavBank.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="CheckBoxX_NoModel.Text" xml:space="preserve">
+    <value>Don't use a model</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_BehavBank.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TextBoxX_Description.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;TextBoxX_Description.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_Description.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="columnHeader3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>293, 17</value>
+  </metadata>
+  <metadata name="columnHeader1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="columnHeader2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 17</value>
+  </metadata>
+</root>

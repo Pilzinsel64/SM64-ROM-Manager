@@ -4,7 +4,7 @@ using Microsoft.VisualBasic;
 
 namespace SM64Lib.Script
 {
-    public class BaseCommandCollection<TCmd, eTypes> : List<BaseCommand<eTypes>>
+    public class BaseCommandCollection<TCmd, eTypes> : List<TCmd> where TCmd : BaseCommand<eTypes>
     {
         public bool IsDirty
         {
@@ -17,15 +17,16 @@ namespace SM64Lib.Script
         public override string ToString()
         {
             var Lines = new List<string>();
-            foreach (BaseCommand<eTypes> cmd in this)
+            foreach (TCmd cmd in this)
                 Lines.Add(cmd.ToString());
             return string.Join(Constants.vbNewLine, Lines.ToArray());
         }
 
         public void Close()
         {
-            foreach (BaseCommand<eTypes> cmd in this)
+            foreach (TCmd cmd in this)
                 cmd.Close();
+            Clear();
         }
     }
 }

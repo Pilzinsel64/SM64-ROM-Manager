@@ -95,6 +95,8 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             var controls = new Control[FlowLayoutPanel_Textures.Controls.Count];
             FlowLayoutPanel_Textures.Controls.CopyTo(controls, 0);
+            FlowLayoutPanel_Textures.SuspendLayout();
+
             foreach (Control c in controls)
             {
                 if (c is PictureBox)
@@ -132,6 +134,8 @@ namespace SM64_ROM_Manager.LevelEditor
                 lbl.MouseClick += (sender, e) => PictureBox_MouseClick(pb, e);
                 FlowLayoutPanel_Textures.Controls.Add(pb);
             }
+
+            FlowLayoutPanel_Textures.ResumeLayout();
         }
 
         private void ButtonItem_Clicked(object sender, EventArgs e)
@@ -220,7 +224,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 Filter = FileDialogFilters.FilterPictureFormats_Single,
                 FileName = CurTextureInfo.Name
             };
-            if (sfd.ShowDialog() == DialogResult.OK)
+            if (sfd.ShowDialog(this) == DialogResult.OK)
             {
                 ExportTexture(sfd.FileName);
             }
@@ -230,12 +234,12 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             if (CurTextureInfo.IsReadOnly)
             {
-                MessageBoxEx.Show("This texture is read-only. Probably it was loaded from a compressed MIO0-Bank.", "Import Texture", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxEx.Show(this, "This texture is read-only. Probably it was loaded from a compressed MIO0-Bank.", "Import Texture", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 var ofd = new OpenFileDialog() { Filter = FileDialogFilters.FilterPictureFormats_All + "|" + FileDialogFilters.FilterPictureFormats_Single };
-                if (ofd.ShowDialog() == DialogResult.OK)
+                if (ofd.ShowDialog(this) == DialogResult.OK)
                 {
                     ImportTexture(ofd.FileName, CurTexture);
                     TextureReplaced?.Invoke(this, new EventArgs());
@@ -250,10 +254,10 @@ namespace SM64_ROM_Manager.LevelEditor
                 IsFolderPicker = true,
                 DefaultFileName = CurBlock.Name
             };
-            if (ofd.ShowDialog() == CommonFileDialogResult.Ok)
+            if (ofd.ShowDialog(Handle) == CommonFileDialogResult.Ok)
             {
                 var filterselector = new FilesFilterDialog() { Filter = FileDialogFilters.FilterPictureFormats_Single };
-                if (filterselector.ShowDialog() == DialogResult.OK)
+                if (filterselector.ShowDialog(this) == DialogResult.OK)
                 {
                     ExportAllTextures(ofd.FileName, filterselector.FileExtension.Substring(1));
                 }
@@ -267,7 +271,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 IsFolderPicker = true,
                 DefaultFileName = CurBlock.Name
             };
-            if (ofd.ShowDialog() == CommonFileDialogResult.Ok)
+            if (ofd.ShowDialog(Handle) == CommonFileDialogResult.Ok)
             {
                 ImportAllTextures(ofd.FileName, FileDialogFilters.FilterPictureFormats_All.Substring(FileDialogFilters.FilterPictureFormats_All.IndexOf("|") + 1));
             }

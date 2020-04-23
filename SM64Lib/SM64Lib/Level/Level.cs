@@ -6,9 +6,9 @@ using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
-using global::SM64Lib.ObjectBanks.Data;
+using global::SM64Lib.Objects.ObjectBanks.Data;
 using global::SM64Lib.SegmentedBanking;
-using SM64Lib.ObjectBanks;
+using SM64Lib.Objects.ModelBanks;
 
 namespace SM64Lib.Levels
 {
@@ -45,7 +45,7 @@ namespace SM64Lib.Levels
         public bool OneBank0xESystemEnabled { get; set; } = true;
         public bool EnableGlobalObjectBank { get; set; } = false;
         public bool EnableLocalObjectBank { get; set; } = false;
-        public CustomObjectBank LocalObjectBank { get; private set; } = new CustomObjectBank();
+        public CustomModelBank LocalObjectBank { get; private set; } = new CustomModelBank();
 
         // O t h e r   P r o p e r t i e s
 

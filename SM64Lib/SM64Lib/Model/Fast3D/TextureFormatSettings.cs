@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using global::Newtonsoft.Json.Linq;
 using global::SM64Lib.Model.Conversion.Fast3DWriting;
+using SM64Lib.Model.Conversion;
 
 namespace SM64Lib.Model.Fast3D
 {
@@ -137,14 +138,6 @@ namespace SM64Lib.Model.Fast3D
                     newEntry.RotateFlip = (RotateFlipType)Convert.ToInt32(parts[8]);
                 return newEntry;
             }
-        }
-
-        public enum FaceCullingMode
-        {
-            None,
-            Front,
-            Back,
-            FrontAndBack = Front | Back
         }
     }
 }

@@ -5,14 +5,16 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::Pilz.S3DFileParser;
 using global::SM64Lib.Data;
 using global::SM64Lib.Geolayout;
+using System.Linq;
 
 namespace SM64Lib.Model.Fast3D
 {
+    [Newtonsoft.Json.JsonConverter(typeof(Json.Fast3DBufferJsonConverter))]
     public class Fast3DBuffer : MemoryStream
     {
         public Conversion.Fast3DWriting.Fast3DWriter.ConvertResult ConvertResult { get; set; } = null;
         public int Fast3DBankStart { get; set; } = 0xE000000;
-        public Geopointer[] DLPointers { get; set; } = Array.Empty<Geopointer>();
+        public Geopointer[] DLPointers { get; set; } = new Geopointer[] { };
 
         /// <summary>
         /// Creates a Fast3D Model from a Obj File
@@ -91,7 +93,7 @@ namespace SM64Lib.Model.Fast3D
             foreach (Geopointer geop in DLPointers)
             {
                 var geopointerSegBank = geop.SegPointer >> 24;
-                if (geopointerSegBank == 0xE || geopointerSegBank == Fast3DBankStart >> 24)
+                if (geopointerSegBank == Fast3DBankStart >> 24)
                 {
                     var ende = false;
                     Position = geop.SegPointer - Fast3DBankStart;

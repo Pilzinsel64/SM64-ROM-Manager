@@ -13,6 +13,7 @@ using global::SM64_ROM_Manager.My.Resources;
 using global::SM64_ROM_Manager.SettingsManager;
 using Z.Collections.Extensions;
 using Z.Core.Extensions;
+using System.Diagnostics;
 
 namespace SM64_ROM_Manager
 {
@@ -659,7 +660,7 @@ namespace SM64_ROM_Manager
             }
             else
             {
-                Controller.OpenGlobalObjectBankManager();
+                Controller.OpenGlobalModelBankManager();
             }
         }
 
@@ -696,6 +697,26 @@ namespace SM64_ROM_Manager
         private void ButtonItem_HudOptions_Click(object sender, EventArgs e)
         {
             Controller.OpenHUDOptions();
+        }
+
+        private void ButtonItem_GlobalBehaviorBank_Click(object sender, EventArgs e)
+        {
+            Controller.OpenGlobalBehaviorManager();
+        }
+
+        private void ButtonItem_CustomObjects_Click(object sender, EventArgs e)
+        {
+            Controller.OpenCustomObjectsManager();
+        }
+
+        private async void ButtonItem_TextureEditor_Click(object sender, EventArgs e)
+        {
+            await Controller.OpenTextureEditor();
+        }
+
+        private void ButtonItem_HackingDocuments_Click(object sender, EventArgs e)
+        {
+            Controller.CallPublicHackingDocuments();
         }
     }
 }

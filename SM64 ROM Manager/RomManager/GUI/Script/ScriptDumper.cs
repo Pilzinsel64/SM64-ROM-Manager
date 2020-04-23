@@ -12,7 +12,7 @@ using SM64Lib.TextValueConverter;
 
 namespace SM64_ROM_Manager
 {
-    public partial class ScriptDumper<TCmd, eTypes>
+    public partial class ScriptDumper<TCmd, eTypes> where TCmd : BaseCommand<eTypes>
     {
         public ScriptDumper()
         {

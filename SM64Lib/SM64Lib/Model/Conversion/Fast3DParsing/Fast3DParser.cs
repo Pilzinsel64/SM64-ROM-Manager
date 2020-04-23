@@ -269,10 +269,10 @@ namespace SM64Lib.Model.Conversion.Fast3DParsing
                     case CommandTypes.SetImage:
                         {
                             int newAddr = F3D_SETIMG.GetSegmentedAddress(cmd);
-                            //if ((uint)newAddr != 0xFFFFFFFF)
-                            //{
+                            if ((uint)newAddr != 0xFFFFFFFF)
+                            {
                                 curTexSegAddr = newAddr;
-                            //}
+                            }
 
                             break;
                         }

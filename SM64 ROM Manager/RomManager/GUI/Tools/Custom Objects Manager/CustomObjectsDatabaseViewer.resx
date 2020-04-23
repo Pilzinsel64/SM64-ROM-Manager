@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBoxX_Description.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="warningBox1.OptionsText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="textBoxX_Description.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="textBoxX_Description.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
+    <value>nodeConnector1</value>
+  </data>
+  <data name="&gt;&gt;warningBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="warningBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="textBoxX_Description.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;advTree_CustomObjects.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxX_Description.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonX_Import.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;itemListBox_CustomObjectFiles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;warningBox1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.WarningBox, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 29</value>
+  </data>
+  <data name="&gt;&gt;textBoxX_Description.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;CirProg.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CircularProgress, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Has Model</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;advTree_CustomObjects.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;itemListBox_CustomObjectFiles.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonX_Import.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="textBoxX_Description.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 347</value>
+  </data>
+  <data name="itemListBox_CustomObjectFiles.Text" xml:space="preserve">
+    <value>v</value>
+  </data>
+  <data name="CirProg.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="advTree_CustomObjects.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 285</value>
+  </data>
+  <data name="buttonX_Import.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 3</value>
+  </data>
+  <data name="textBoxX_Description.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="itemListBox_CustomObjectFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 33</value>
+  </data>
+  <data name="advTree_CustomObjects.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 33</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;warningBox1.Name" xml:space="preserve">
+    <value>warningBox1</value>
+  </data>
+  <data name="buttonX_Import.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="textBoxX_Description.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;advTree_CustomObjects.Name" xml:space="preserve">
+    <value>advTree_CustomObjects</value>
+  </data>
+  <data name="warningBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textBoxX_Description.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonX_Import.Name" xml:space="preserve">
+    <value>buttonX_Import</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="warningBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 33</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="itemListBox_CustomObjectFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;warningBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;itemListBox_CustomObjectFiles.Type" xml:space="preserve">
+    <value>SM64_ROM_Manager.Publics.Controls.ItemListBox, SM64 ROM Manager.Publics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="buttonX_Import.Text" xml:space="preserve">
+    <value>Import Objects</value>
+  </data>
+  <data name="CirProg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 177</value>
+  </data>
+  <data name="warningBox1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;itemListBox_CustomObjectFiles.Name" xml:space="preserve">
+    <value>itemListBox_CustomObjectFiles</value>
+  </data>
+  <data name="textBoxX_Description.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;CirProg.Name" xml:space="preserve">
+    <value>CirProg</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CirProg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 75</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAAAAEAIABoBAAAJgAAACAgAAABACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAADAE
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEsZ0NzLajgsy3o+vMt6PuzLeih9G5
+        ogsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADEk3YayJp3tMibebXKr5p8zLej6s23o7HLuaIszbijJMy3
+        o7TMtqPhya2YY8iad7TImne0xJN2GgAAAADGmXR9yJx48Oy+lfvz4Mf9yqF/+8egfZsAAAAAAAAAAAAA
+        AAAAAAAAx6GApcide/3svpX79OHH+8mffPDGmXR9xJZ0//K8kf/wt4v///fm///14v/ElnT/AAAAAAAA
+        AAAAAAAAAAAAAMSWdP/yvJH/8LeL///35v//9eL/xJZ0/8SWdP/wt4v/8r6S///14f//9+b/xJZ0/wAA
+        AAAAAAAAAAAAAAAAAADElnT/8LeL//K+kv//9eH///fm/8SWdP/ElnT/9dCo///nwf//6MP/++jL/8SW
+        dP8AAAAAAAAAAAAAAAAAAAAAxJZ0//XQqP//58H//+jD//voy//ElnT/xpp3fseaefXiwZ3/48Gd/Mea
+        efXGmnd+AAAAAAAAAAAAAAAAAAAAAMaad37Hmnn148Gd/OLBnf/Hmnn1xpp3fgAAAADIknYcyaOE/8ia
+        d7TIknYcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyJJ2HMiad7TJo4T/yJJ2HAAAAAAAAAAAAAAAAMy3
+        o/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzLej/wAAAAAAAAAAAAAAAAAA
+        AADMt6P6zMyZBQAAAAAAAAAAxJN2Gsiad7TImne0xJN2GgAAAAAAAAAAzMyZBcy3o/oAAAAAAAAAAAAA
+        AAAAAAAAzLajusy3opLEsZ0Nxpl0fcmbePTqvJP78+DF+8mefPLGmXR90LOhG8u4oqjMt6O5AAAAAAAA
+        AAAAAAAAAAAAAMa4qhLNtqOTzLej5sSWdP/xu5D/8LeL///35v/+9eL/xJZ0/8y3o/DMt6OV0rSlEQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMm1oSbElnT/8LeL//K+kv//9eH///fm/8SWdP/KuKArAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxJZ0//XQqP//58H//+jD//voy//ElnT/AAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMaad37Hmnn148Gd/OPBnfzHmnn1xpp3fgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyJJ2HMiad7TImne0yJJ2HAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPw/AADJkwAAg8EAAAPAAAADwAAAA8AAAIfhAADP8wAA3/sAAN57
+        AADMMwAA4AcAAPgfAAD4HwAA/D8AAP5/AAAoAAAAIAAAAEAAAAABACAAAAAAAIAQAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMy4
+        pUHLt6O3zLej9My3o/bMt6PDy7akVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM64
+        oy/Lt6O3zLej/8y3o//Mt6P5zLej9My3o//Mt6P/zLekuM+6pSUAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADGl3EbxZZ0qsWWdKrGl3EbAAAAAM61
+        pR/Nt6SizLej/cy3o//Mt6P3zLeji8m8oRPVqqoGzLekeMy3o/TMt6P/zLej+My2o4LGqqoJAAAAAMaX
+        cRvFlnSqxZZ0qsaXcRsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMmWYFw5Vzb8SVdPTElnT/xJZ0/8SW
+        dfTHooWyzLei8sy3o//Mt6P+zLekqs+6pSUAAAAAAAAAAAAAAAAAAAAAzLmmKMy3o73Mt6P/zLej/8y2
+        odbGnn+TxJV09MSWdP/ElnT/xJV09MOVc2/MmWYFAAAAAAAAAAAAAAAAxJZzScSWdNzElnT/xpl2/ue+
+        l//s0rT/xpl2/8SWdP/Fmnr/yKuTycy1pC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMu3
+        okrKrZXmxZp6/8SWdP/GmXb+576X/+zStP/GmXb9xJZ0/8SWdNzDlXVIAAAAAMSWdKzElnT/xJZ0/9iv
+        i//yxZv/8LeL///35v/87tX/2bST/8SWdP/ElnT/w5d0qwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAxJZ0rMSWdP/ElnT/2K+L//LFm//wt4v///fm//zu1f/ZtJP/xJZ0/8SWdP/Dl3SrxJZ0/8SW
+        dP/uw5r/8bmO//C3i//wt4v///fm///35v//9uX/9eHG/8SWdP/ElnT/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADElnT/xJZ0/+7Dmv/xuY7/8LeL//C3i///9+b///fm///25f/14cb/xJZ0/8SW
+        dP/ElnT/xJZ0//C3i//wt4v/8LeL//C3i///9+b///fm///35v//9+b/xJZ0/8SWdP8AAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMSWdP/ElnT/8LeL//C3i//wt4v/8LeL///35v//9+b///fm///3
+        5v/ElnT/xJZ0/8SWdP/ElnT/8LeL//C3i//wt4v/8LeL///35v//9+b///fm///35v/ElnT/xJZ0/wAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxJZ0/8SWdP/wt4v/8LeL//C3i//wt4v///fm///3
+        5v//9+b///fm/8SWdP/ElnT/xJZ0/8SWdP/wt4v/8LeL//K8kf/51Kv//+/S///14v//9+b///fm/8SW
+        dP/ElnT/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADElnT/xJZ0//C3i//wt4v/8ryR//nU
+        q///79L///Xi///35v//9+b/xJZ0/8SWdP/ElnT/xJZ0//G7j//40aj//ua////owv//6ML//+nE///w
+        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
+        Af//wAP//8AD///AA///wAP///AP///4H////n//
+</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
+    <value>elementStyle1</value>
+  </data>
+  <data name="advTree_CustomObjects.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;buttonX_Import.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CustomObjectsDatabaseViewer</value>
+  </data>
+  <data name="textBoxX_Description.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Custom Objects Database</value>
+  </data>
+  <data name="&gt;&gt;CirProg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="itemListBox_CustomObjectFiles.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="textBoxX_Description.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 114</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="warningBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="textBoxX_Description.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonX_Import.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 23</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 318</value>
+  </data>
+  <data name="advTree_CustomObjects.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="warningBox1.Text" xml:space="preserve">
+    <value>&lt;b&gt;Updates available!&lt;/b&gt; Click &lt;i&gt;Update &lt;/i&gt; to update your custom object database.</value>
+  </data>
+  <data name="&gt;&gt;buttonX_Import.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="itemListBox_CustomObjectFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 428</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 461</value>
+  </data>
+  <data name="&gt;&gt;advTree_CustomObjects.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CirProg.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;CirProg.Parent" xml:space="preserve">
+    <value>itemListBox_CustomObjectFiles</value>
+  </data>
+  <data name="textBoxX_Description.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxX_Description.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;textBoxX_Description.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textBoxX_Description.Name" xml:space="preserve">
+    <value>textBoxX_Description</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="columnHeader2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 17</value>
+  </metadata>
+  <metadata name="columnHeader1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>

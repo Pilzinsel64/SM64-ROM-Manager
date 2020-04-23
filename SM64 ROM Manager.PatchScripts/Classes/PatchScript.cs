@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using global::System.Collections.Specialized;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
     public class PatchProfile
     {
-
         /// <summary>
         /// The Name of the Profile.
         /// </summary>
@@ -21,6 +22,7 @@ namespace SM64_ROM_Manager.PatchScripts
         /// The version of this profile.
         /// </summary>
         /// <returns></returns>
+        [JsonConverter(typeof(VersionConverter))]
         public Version Version { get; set; } = new Version("1.0.0.0");
         /// <summary>
         /// The description of this profile
@@ -31,6 +33,7 @@ namespace SM64_ROM_Manager.PatchScripts
         /// The Xml file for this profile.
         /// </summary>
         /// <returns></returns>
+        [JsonIgnore]
         public string FileName { get; set; } = "";
     }
 
@@ -54,6 +57,7 @@ namespace SM64_ROM_Manager.PatchScripts
         /// Defines the syntax of the script.
         /// </summary>
         /// <returns></returns>
+        [JsonConverter(typeof(StringEnumConverter))]
         public ScriptType Type { get; set; } = ScriptType.TweakScript;
         /// <summary>
         /// The description of this Script.

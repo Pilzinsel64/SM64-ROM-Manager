@@ -192,30 +192,29 @@
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Ben.Demystifier, Version=0.1.0.0, Culture=neutral, PublicKeyToken=a6d206e05440431a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ben.Demystifier.0.1.4\lib\net45\Ben.Demystifier.dll</HintPath>
+      <HintPath>..\packages\Ben.Demystifier.0.1.6\lib\net45\Ben.Demystifier.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Design, Version=14.0.0.3, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
+    <Reference Include="DevComponents.DotNetBar.Design">
+      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+    <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
+      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Layout.Design">
-      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Schedule.dll</HintPath>
+      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Schedule.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="drsPwEnc">
       <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
     </Reference>
@@ -249,8 +248,8 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="OpenTK, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
-      <HintPath>..\packages\OpenTK.3.1.0\lib\net20\OpenTK.dll</HintPath>
+    <Reference Include="OpenTK, Version=3.2.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.2\lib\net20\OpenTK.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK.GLControl, Version=3.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenTK.GLControl.3.1.0\lib\net20\OpenTK.GLControl.dll</HintPath>
@@ -272,6 +271,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\Pilz.Win32.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
     </Reference>
@@ -283,7 +283,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
@@ -296,20 +296,23 @@
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Reflection.Metadata, Version=1.4.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Reflection.Metadata.1.7.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    <Reference Include="System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.8.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -453,16 +456,52 @@
     <Compile Include="RomManager\GUI\Other\ThankYouForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.Designer.cs">
-      <DependentUpon>AddressListEditor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.cs">
+    <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RomManager\GUI\Tools\Custom Bank Manager\CustomBankManager.Designer.cs">
-      <DependentUpon>CustomBankManager.cs</DependentUpon>
+    <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.Designer.cs">
+      <DependentUpon>BehaviorBankManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="RomManager\GUI\Tools\Custom Bank Manager\CustomBankManager.cs">
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.Designer.cs">
+      <DependentUpon>CustomObjectImportDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.Designer.cs">
+      <DependentUpon>CustomBehaviorSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomModelSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomModelSelector.Designer.cs">
+      <DependentUpon>CustomModelSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.Designer.cs">
+      <DependentUpon>CustomObjectImportPropsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.Designer.cs">
+      <DependentUpon>CustomObjectsDatabaseViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.Designer.cs">
+      <DependentUpon>AddressListEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Model Bank Manager\ModelBankManager.Designer.cs">
+      <DependentUpon>ModelBankManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Model Bank Manager\ModelBankManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RomManager\GUI\Main Form\Level Manager\ImportLevelDialog.Designer.cs">
@@ -516,6 +555,12 @@
     <Compile Include="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexPropertyClass.cs" />
     <Compile Include="RomManager\GUI\Settings\LevelEditorInputSettings.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.Designer.cs">
+      <DependentUpon>CustomObjectsManager.cs</DependentUpon>
     </Compile>
     <Compile Include="RomManager\GUI\Tools\HexEditor.Designer.cs">
       <DependentUpon>HexEditor.cs</DependentUpon>
@@ -577,6 +622,16 @@
     </Compile>
     <Compile Include="RomManager\GUI\Tools\TrajectoryEditor.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.de.Designer.cs">
+      <DependentUpon>BehaviorBankManagerLangRes.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BehaviorBankManagerLangRes.resx</DependentUpon>
     </Compile>
     <Compile Include="RomManager\Language Resources\Coins Properties\LangResCoinsManager.de.Designer.cs">
       <DependentUpon>LangResCoinsManager.de.resx</DependentUpon>
@@ -797,17 +852,56 @@
     <EmbeddedResource Include="RomManager\GUI\Other\ThankYouForm.resx">
       <DependentUpon>ThankYouForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.de.resx">
+    <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.de.resx">
+      <DependentUpon>BehaviorBankManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.resx">
+      <DependentUpon>BehaviorBankManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.de.resx">
+      <DependentUpon>CustomObjectImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.resx">
+      <DependentUpon>CustomObjectImportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.de.resx">
+      <DependentUpon>CustomBehaviorSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.resx">
+      <DependentUpon>CustomBehaviorSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomModelSelector.de.resx">
+      <DependentUpon>CustomModelSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomModelSelector.resx">
+      <DependentUpon>CustomModelSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.de.resx">
+      <DependentUpon>CustomObjectImportPropsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.resx">
+      <DependentUpon>CustomObjectImportPropsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.de.resx">
+      <DependentUpon>CustomObjectsDatabaseViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.resx">
+      <DependentUpon>CustomObjectsDatabaseViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.de.resx">
+      <DependentUpon>CustomObjectsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.de.resx">
       <DependentUpon>AddressListEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.resx">
+    <EmbeddedResource Include="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.resx">
       <DependentUpon>AddressListEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Bank Manager\CustomBankManager.de.resx">
-      <DependentUpon>CustomBankManager.cs</DependentUpon>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Model Bank Manager\ModelBankManager.de.resx">
+      <DependentUpon>ModelBankManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Bank Manager\CustomBankManager.resx">
-      <DependentUpon>CustomBankManager.cs</DependentUpon>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Model Bank Manager\ModelBankManager.resx">
+      <DependentUpon>ModelBankManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ImportLevelDialog.resx">
       <DependentUpon>ImportLevelDialog.cs</DependentUpon>
@@ -857,6 +951,9 @@
     <EmbeddedResource Include="RomManager\GUI\Other\Form_ErrorDialog.de.resx">
       <DependentUpon>Form_ErrorDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.resx">
+      <DependentUpon>CustomObjectsManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Tools\Form_SM64TextConverter.de.resx">
       <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
     </EmbeddedResource>
@@ -905,6 +1002,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Tools\TrajectoryEditor.resx">
       <DependentUpon>TrajectoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BehaviorBankManagerLangRes.de.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BehaviorBankManagerLangRes.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\Language Resources\Coins Properties\LangResCoinsManager.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1017,6 +1124,7 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.cs</LastGenOutput>
     </None>
+    <None Include="OpenTK.dll.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>SM64_ROM_Manager.My</CustomToolNamespace>
@@ -1025,7 +1133,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1131,6 +1238,11 @@
     <None Include="Resources\icons8_preview_pane_16px.png" />
     <None Include="Resources\icons8_checkmark_16px_1.png" />
     <None Include="Resources\icons8_property_script_32px.png" />
+    <None Include="Resources\icons8_static_view_level1_16px.png" />
+    <None Include="Resources\icons8_module_16px.png" />
+    <None Include="Resources\icons8_package_16px.png" />
+    <None Include="Resources\icons8_cube_16px.png" />
+    <None Include="Resources\icons8_300_degrees_16px.png" />
     <Content Include="RomManager\Others\RomMap.txt" />
   </ItemGroup>
   <ItemGroup>

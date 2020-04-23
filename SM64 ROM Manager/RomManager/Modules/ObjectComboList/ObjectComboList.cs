@@ -21,6 +21,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     {
                         Name = entry["Name"]?.ToString(),
                         ModelID = entry["ModelID"].Value<byte>(),
+                        ModelAddress = entry["ModelAddress"].Value<int>(),
                         BehaviorAddress = entry["Behavior"].Value<uint>(),
                         BParam1 = new ObjectCombo.BParam {Name = entry?["BP1_NAME"]?.ToString(), Description = entry?["BP1_DESCRIPTION"]?.ToString()},
                         BParam2 = new ObjectCombo.BParam {Name = entry?["BP2_NAME"]?.ToString(), Description = entry?["BP2_DESCRIPTION"]?.ToString()},

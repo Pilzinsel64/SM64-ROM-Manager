@@ -11,30 +11,15 @@ using global::Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN;
 using global::Pilz.S3DFileParser;
 using global::SM64_ROM_Manager.SettingsManager;
 using global::SM64Lib.Levels;
+using Image = System.Drawing.Image;
+using Bitmap = System.Drawing.Bitmap;
+using System.Collections.Generic;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
     public class OpenGLManager
     {
-        public OpenGLManager(Form targetForm, Control targetControl)
-        {
-            GLControl1 = new GLControl();
-            CameraPrivate = new Camera();
-            /* TODO ERROR: Skipped IfDirectiveTrivia */
-            RenderTimer = new System.Timers.Timer(20);
-            Main = (Form_AreaEditor)targetForm;
-            TargetControl = targetControl;
-            Main.KeyUp += ModelPreview_KeyUp;
-            InitializeGLControl();
-
-            /* TODO ERROR: Skipped IfDirectiveTrivia */
-            RenderTimer.SynchronizingObject = null;
-            RenderTimer.Start();
-            /* TODO ERROR: Skipped EndIfDirectiveTrivia */
-        }
-
         private Form_AreaEditor _Main;
-
         private Form_AreaEditor Main
         {
             [MethodImpl(MethodImplOptions.Synchronized)]
@@ -58,7 +43,6 @@ namespace SM64_ROM_Manager.LevelEditor
         }
 
         private Control _TargetControl;
-
         private Control TargetControl
         {
             [MethodImpl(MethodImplOptions.Synchronized)]
@@ -82,7 +66,6 @@ namespace SM64_ROM_Manager.LevelEditor
         }
 
         private GLControl _GLControl1;
-
         private GLControl GLControl1
         {
             [MethodImpl(MethodImplOptions.Synchronized)]
@@ -124,7 +107,6 @@ namespace SM64_ROM_Manager.LevelEditor
         }
 
         private Camera _CameraPrivate;
-
         private Camera CameraPrivate
         {
             [MethodImpl(MethodImplOptions.Synchronized)]
@@ -150,7 +132,6 @@ namespace SM64_ROM_Manager.LevelEditor
         }
 
         private System.Timers.Timer _RenderTimer;
-
         private System.Timers.Timer RenderTimer
         {
             [MethodImpl(MethodImplOptions.Synchronized)]
@@ -176,7 +157,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 }
             }
         }
-        /* TODO ERROR: Skipped EndIfDirectiveTrivia */
+        
         internal Matrix4 ProjMatrix = default;
         internal bool Ortho = false;
         internal float FOV = 1.048F;
@@ -185,8 +166,24 @@ namespace SM64_ROM_Manager.LevelEditor
         internal bool isMouseDown = false;
         internal float curScale = 1.0F;
 
+        private Renderer rndrDirectionArrow = null;
+
         public OpenGLManager(Form targetForm) : this(targetForm, targetForm)
         {
+        }
+
+        public OpenGLManager(Form targetForm, Control targetControl)
+        {
+            GLControl1 = new GLControl();
+            CameraPrivate = new Camera();
+            RenderTimer = new System.Timers.Timer(20);
+            Main = (Form_AreaEditor)targetForm;
+            TargetControl = targetControl;
+            Main.KeyUp += ModelPreview_KeyUp;
+            InitializeGLControl();
+
+            RenderTimer.SynchronizingObject = null;
+            RenderTimer.Start();
         }
 
         private MapManagement Maps
@@ -599,34 +596,33 @@ namespace SM64_ROM_Manager.LevelEditor
         internal void DrawAllObjects(bool drawPicking = false, bool DrawBoundingBox = true)
         {
             int index = 0;
+
             foreach (Managed3DObject n in Main.ManagedObjects)
             {
-                Renderer objModel;
+                Renderer objModel = null;
                 Color? col;
+                var otherMdls = new List<Renderer>();
+
                 if (Main.DrawObjectModels && Main.ObjectModels.ContainsKey(n.ModelID))
-                {
                     objModel = Main.ObjectModels[n.ModelID];
-                }
-                else
-                {
-                    objModel = null;
-                }
+                else if (Main.DrawDirectionArrow)
+                    otherMdls.Add(Main.ObjectModels[0]);
 
                 if (objModel is object && !objModel.HasRendered)
-                {
                     objModel.RenderModel();
+
+                foreach (var mdl in otherMdls)
+                {
+                    if (!mdl.HasRendered)
+                        mdl.RenderModel();
                 }
 
                 if (drawPicking)
-                {
                     col = Color.FromArgb(0x10000000 | index);
-                }
                 else
-                {
                     col = default;
-                }
 
-                n.Draw(FaceDrawMode, objModel, col, drawPicking, DrawBoundingBox);
+                n.Draw(FaceDrawMode, objModel, otherMdls, col, drawPicking, DrawBoundingBox);
                 index += 1;
             }
         }

@@ -4,11 +4,13 @@ using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib.Geolayout.Script;
 using global::SM64Lib.Geolayout.Script.Commands;
+using Newtonsoft.Json;
 
 namespace SM64Lib.Geolayout
 {
     public class Geolayout
     {
+        [JsonProperty]
         private int IndexForGeopointers = -1;
 
         public Geolayoutscript Geolayoutscript { get; set; } = new Geolayoutscript();
