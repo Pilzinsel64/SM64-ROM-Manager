@@ -64,6 +64,8 @@ namespace SM64_ROM_Manager
             base.UpdateAmbientColors();
             wType = Type;
             CheckBoxX_Water.Checked = true;
+            ComboBox_WaterType.SelectedIndex = 0;
+            IntegerInput_Scale.Value = 16;
         }
 
         public readonly WindowType wType = default;
@@ -77,8 +79,6 @@ namespace SM64_ROM_Manager
 
         private void Form_AddSpecialItem_Load(object sender, EventArgs e)
         {
-            ComboBox_WaterType.SelectedIndex = 0;
-            IntegerInput_Scale.Value = 16;
         }
 
         private void CheckBoxX_SpecialBoxType_CheckedChanged(object sender, DevComponents.DotNetBar.Controls.CheckBoxXChangeEventArgs e)
