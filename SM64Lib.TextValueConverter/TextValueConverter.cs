@@ -17,60 +17,20 @@ namespace SM64Lib.TextValueConverter
         {
             try
             {
-                Text = Text?.Trim();
+                Text = Text?.ToLower()?.Trim();
                 int IVM = useIVM > -1 ? useIVM : GetIntegerValueMode();
                 switch (true)
                 {
                     case object _ when Text.StartsWith("0x"):
                     case object _ when Text.StartsWith("&h"):
-                    case object _ when useIVM == 1:
-                    case object _ when useIVM == 2:
                         return Convert.ToInt32(Text.Substring(2), 16);
                     case object _ when Text.StartsWith("$"):
-                    case object _ when useIVM == 3:
                         return Convert.ToInt32(Text.Substring(1), 16);
                     case object _ when Text.StartsWith("0b"):
                     case object _ when Text.StartsWith("&b"):
                         return Convert.ToInt32(Text.Substring(2), 2);
                     default:
-                        if (IVM == 0 || useIVM == 0)
-                        {
-                            try
-                            {
-                                return Convert.ToInt32(Text);
-                            }
-                            catch (Exception)
-                            {
-                            }
-
-                            try
-                            {
-                                return Convert.ToInt32(Text, 16);
-                            }
-                            catch (Exception)
-                            {
-                            }
-                        }
-                        else
-                        {
-                            try
-                            {
-                                return Convert.ToInt32(Text, 16);
-                            }
-                            catch (Exception)
-                            {
-                            }
-
-                            try
-                            {
-                                return Convert.ToInt32(Text);
-                            }
-                            catch (Exception)
-                            {
-                            }
-                        }
-
-                        return 0;
+                        return Convert.ToInt32(Text);
                 }
             }
             catch (Exception)
