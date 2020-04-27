@@ -56,6 +56,7 @@ namespace SM64_ROM_Manager
             InitializeComponent();
             UpdateAmbientColors();
             StyleManager.UpdateAmbientColors(RichTextBoxEx_Script);
+            TabControl_Behav.Enabled = false;
 
             // Default Nodes
             AdvTree_Behaviors.Nodes.AddRange(new[] { nBehavCustom, nBehavVanilla });
