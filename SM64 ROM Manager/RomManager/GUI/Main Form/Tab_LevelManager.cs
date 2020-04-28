@@ -1003,6 +1003,7 @@ namespace SM64_ROM_Manager
             CheckBoxX_LM_Enable2DCamera.Visible = IsE;
             if (!IsE)
                 CheckBoxX_LM_Enable2DCamera.Value = false;
+            SaveAreaSettings();
         }
 
         private void LM_OpenAreaEditor()
