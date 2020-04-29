@@ -218,7 +218,7 @@ namespace SM64_ROM_Manager
                 if (CheckBoxX_NoModel.Checked)
                     customObject.ModelProps.ModelID = 0;
                 else if (CheckBoxX_CustomModelID.Checked)
-                    customObject.ModelProps.ModelID = Conversions.ToByte(ValueFromText(TextBoxX_ModelID.Text));
+                    customObject.ModelProps.ModelID = (byte)ValueFromText(TextBoxX_ModelID.Text);
 
                 Timer_PropsChanged.Start();
             }
