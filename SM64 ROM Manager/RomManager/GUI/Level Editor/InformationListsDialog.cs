@@ -434,7 +434,7 @@ namespace SM64_ROM_Manager.LevelEditor
         private void ListNewItems(string filter)
         {
             ItemList.SuspendLayout();
-            filter = filter.Trim();
+            filter = filter.Trim().ToLower();
 
             // Clear all items
             ItemList.Items.Clear();
