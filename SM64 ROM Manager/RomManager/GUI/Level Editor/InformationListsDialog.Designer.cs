@@ -79,7 +79,6 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonX_CancelSearch
             // 
-            this.ButtonX_CancelSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             resources.ApplyResources(this.ButtonX_CancelSearch, "ButtonX_CancelSearch");
             this.ButtonX_CancelSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX_CancelSearch.FocusCuesEnabled = false;
