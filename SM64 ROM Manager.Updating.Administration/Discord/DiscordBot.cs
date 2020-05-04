@@ -134,7 +134,7 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
 
             // Add message
             if (!string.IsNullOrEmpty(message))
-                msg += "\n\n " + message;
+                msg += "\n\n" + message;
 
             // Add changelog
             if (addChangelog && !string.IsNullOrEmpty(changelog))
