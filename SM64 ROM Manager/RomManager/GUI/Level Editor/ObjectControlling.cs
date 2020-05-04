@@ -177,7 +177,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
             else
             {
-                short newY = Conversions.ToShort(-Math.Truncate((e.Y - rotObj_Yaw_lastMouseY) * Main.ObjectMoveSpeed));
+                short newY = Conversions.ToShort(-Math.Truncate((double)(e.Y - rotObj_Yaw_lastMouseY)));
                 RotateObject(obj, new System.Numerics.Vector3(obj.Rotation.X, newY, obj.Rotation.Z));
             }
 
@@ -204,8 +204,9 @@ namespace SM64_ROM_Manager.LevelEditor
             float CX_2 = Conversions.ToSingle(Math.Sin(Main.Camera.Yaw + Math.PI / 2));
             float CZ_2 = Conversions.ToSingle(-Math.Cos(Main.Camera.Yaw + Math.PI / 2));
             float newX, newZ;
-            newX = Conversions.ToSingle(Math.Truncate(savedPos.X - Conversions.ToShort(Math.Truncate(CX * my * speedMult * Main.ObjectMoveSpeed)) - Conversions.ToShort(Math.Truncate(CX_2 * mx * speedMult * Main.ObjectMoveSpeed))));
-            newZ = Conversions.ToSingle(Math.Truncate(savedPos.Z - Conversions.ToShort(Math.Truncate(CZ * my * speedMult * Main.ObjectMoveSpeed)) - Conversions.ToShort(Math.Truncate(CZ_2 * mx * speedMult * Main.ObjectMoveSpeed))));
+            float moveSpeed = forRotation ? 1 : Main.ObjectMoveSpeed;
+            newX = Conversions.ToSingle(Math.Truncate(savedPos.X - Conversions.ToShort(Math.Truncate(CX * my * speedMult * moveSpeed)) - Conversions.ToShort(Math.Truncate(CX_2 * mx * speedMult * moveSpeed))));
+            newZ = Conversions.ToSingle(Math.Truncate(savedPos.Z - Conversions.ToShort(Math.Truncate(CZ * my * speedMult * moveSpeed)) - Conversions.ToShort(Math.Truncate(CZ_2 * mx * speedMult * moveSpeed))));
             if (!forRotation)
             {
                 var oldPos = obj.Position;
