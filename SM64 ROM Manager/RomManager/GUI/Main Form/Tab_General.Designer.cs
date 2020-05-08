@@ -55,10 +55,13 @@ namespace SM64_ROM_Manager
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.highlighter1 = new DevComponents.DotNetBar.Validator.Highlighter();
+            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.microChart1 = new DevComponents.DotNetBar.MicroChart();
             this.GroupPanel2.SuspendLayout();
             this.GroupPanel6.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_RomConfigStatus)).BeginInit();
+            this.groupPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupPanel2
@@ -342,10 +345,58 @@ namespace SM64_ROM_Manager
             this.highlighter1.ContainerControl = this;
             this.highlighter1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
+            // groupPanel3
+            // 
+            resources.ApplyResources(this.groupPanel3, "groupPanel3");
+            this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanel3.CanvasColor = System.Drawing.Color.Empty;
+            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.microChart1);
+            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel3.Name = "groupPanel3";
+            // 
+            // 
+            // 
+            this.groupPanel3.Style.BackColorGradientAngle = 90;
+            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderBottomWidth = 1;
+            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderLeftWidth = 1;
+            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderRightWidth = 1;
+            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderTopWidth = 1;
+            this.groupPanel3.Style.CornerDiameter = 4;
+            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // microChart1
+            // 
+            // 
+            // 
+            // 
+            this.microChart1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.microChart1.ChartType = DevComponents.DotNetBar.eMicroChartType.Pie;
+            resources.ApplyResources(this.microChart1, "microChart1");
+            this.microChart1.Name = "microChart1";
+            this.microChart1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
             // Tab_General
             // 
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.GroupPanel2);
+            this.Controls.Add(this.groupPanel3);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.GroupPanel6);
             this.Name = "Tab_General";
@@ -354,6 +405,7 @@ namespace SM64_ROM_Manager
             this.GroupPanel6.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_RomConfigStatus)).EndInit();
+            this.groupPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -393,5 +445,7 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelX labelX5;
         private PictureBox pictureBox_RomConfigStatus;
         private DevComponents.DotNetBar.Validator.Highlighter highlighter1;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
+        private DevComponents.DotNetBar.MicroChart microChart1;
     }
 }

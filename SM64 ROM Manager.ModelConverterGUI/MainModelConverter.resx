@@ -1050,34 +1050,6 @@ As higher the level and as bigger the model, as more space will be saved!</value
   <data name="&gt;&gt;LabelX10.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ColorPickerButton_ShadingAmbient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAqSURBVDhPY/j//z9FGEIAKXIwigEgmhQ8asCoASA8
-        HA0gB8MNIB//ZwAAsSyVh9SDH54AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="ColorPickerButton_ShadingAmbient.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 31</value>
-  </data>
-  <data name="ColorPickerButton_ShadingAmbient.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 23</value>
-  </data>
-  <data name="ColorPickerButton_ShadingAmbient.TabIndex" type="System.Int32, mscorlib">
-    <value>131</value>
-  </data>
-  <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.Name" xml:space="preserve">
-    <value>ColorPickerButton_ShadingAmbient</value>
-  </data>
-  <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.Parent" xml:space="preserve">
-    <value>Panel5</value>
-  </data>
-  <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="ButtonX_GraphicsEditor.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1162,6 +1134,9 @@ As higher the level and as bigger the model, as more space will be saved!</value
   <data name="&gt;&gt;ComboBox_FogTyp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="Panel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="ColorPickerButton_FogColor.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1192,9 +1167,6 @@ As higher the level and as bigger the model, as more space will be saved!</value
   </data>
   <data name="&gt;&gt;ColorPickerButton_FogColor.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="Panel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>205, 218</value>
@@ -1400,6 +1372,34 @@ As higher the level and as bigger the model, as more space will be saved!</value
   </data>
   <data name="&gt;&gt;ColorPickerButton_ShadingDiffuse.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="ColorPickerButton_ShadingAmbient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAqSURBVDhPY/j//z9FGEIAKXIwigEgmhQ8asCoASA8
+        HA0gB8MNIB//ZwAAsSyVh9SDH54AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="ColorPickerButton_ShadingAmbient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 31</value>
+  </data>
+  <data name="ColorPickerButton_ShadingAmbient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 23</value>
+  </data>
+  <data name="ColorPickerButton_ShadingAmbient.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.Name" xml:space="preserve">
+    <value>ColorPickerButton_ShadingAmbient</value>
+  </data>
+  <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.Parent" xml:space="preserve">
+    <value>Panel5</value>
+  </data>
+  <data name="&gt;&gt;ColorPickerButton_ShadingAmbient.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="Panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 218</value>
@@ -3392,6 +3392,9 @@ As higher the level and as bigger the model, as more space will be saved!</value
         MDEtMDU6MDDkOlH3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEyLTExLTIwVDA5OjAzOjUzLTA2OjAwpVUc
         +QAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

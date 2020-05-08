@@ -6,6 +6,14 @@ namespace SM64Lib.Script
 {
     public class BaseCommandCollection<TCmd, eTypes> : List<TCmd> where TCmd : BaseCommand<eTypes>
     {
+        public long Length
+        {
+            get
+            {
+                return this.Sum(n => n.Length);
+            }
+        }
+
         public bool IsDirty
         {
             get

@@ -369,6 +369,607 @@
   <data name="TabControl_LM_Area.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="labelX14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 161</value>
+  </data>
+  <data name="labelX14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="labelX14.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="labelX14.Text" xml:space="preserve">
+    <value>Reverb Level:</value>
+  </data>
+  <data name="&gt;&gt;labelX14.Name" xml:space="preserve">
+    <value>labelX14</value>
+  </data>
+  <data name="&gt;&gt;labelX14.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX14.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelX14.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ComboBoxEx_ReverbLevel.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBoxEx_ReverbLevel.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ComboBoxEx_ReverbLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 161</value>
+  </data>
+  <data name="ComboBoxEx_ReverbLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="ComboBoxEx_ReverbLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEx_ReverbLevel.Name" xml:space="preserve">
+    <value>ComboBoxEx_ReverbLevel</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEx_ReverbLevel.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEx_ReverbLevel.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEx_ReverbLevel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LabelX9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 135</value>
+  </data>
+  <data name="LabelX9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 20</value>
+  </data>
+  <data name="LabelX9.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="LabelX9.Text" xml:space="preserve">
+    <value>Dialog ID:</value>
+  </data>
+  <data name="LabelX9.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LabelX9.Name" xml:space="preserve">
+    <value>LabelX9</value>
+  </data>
+  <data name="&gt;&gt;LabelX9.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LabelX9.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;LabelX9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ComboBoxEx_LM_AreaBG.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ComboItem12.Text" xml:space="preserve">
+    <value>Level Background</value>
+  </data>
+  <data name="ComboItem13.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="ComboBoxEx_LM_AreaBG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 108</value>
+  </data>
+  <data name="ComboBoxEx_LM_AreaBG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="ComboBoxEx_LM_AreaBG.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.Name" xml:space="preserve">
+    <value>ComboBoxEx_LM_AreaBG</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 135</value>
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.Name" xml:space="preserve">
+    <value>TextBoxX_LM_ShowMsgID</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 108</value>
+  </data>
+  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="LabelX1.Text" xml:space="preserve">
+    <value>Area Background:</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
+    <value>LabelX1</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="SwitchButton_LM_ShowMsgEnabled.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 135</value>
+  </data>
+  <data name="SwitchButton_LM_ShowMsgEnabled.OffText" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="SwitchButton_LM_ShowMsgEnabled.OnText" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="SwitchButton_LM_ShowMsgEnabled.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="SwitchButton_LM_ShowMsgEnabled.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.Name" xml:space="preserve">
+    <value>SwitchButton_LM_ShowMsgEnabled</value>
+  </data>
+  <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 135</value>
+  </data>
+  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="LabelX2.Text" xml:space="preserve">
+    <value>Area Start Message:</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Name" xml:space="preserve">
+    <value>LabelX2</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="CheckBoxX_LM_Enable2DCamera.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 56</value>
+  </data>
+  <data name="CheckBoxX_LM_Enable2DCamera.OffText" xml:space="preserve">
+    <value>3D</value>
+  </data>
+  <data name="CheckBoxX_LM_Enable2DCamera.OnText" xml:space="preserve">
+    <value>2D</value>
+  </data>
+  <data name="CheckBoxX_LM_Enable2DCamera.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="CheckBoxX_LM_Enable2DCamera.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="CheckBoxX_LM_Enable2DCamera.Text" xml:space="preserve">
+    <value>Enable 2D-Camera</value>
+  </data>
+  <data name="CheckBoxX_LM_Enable2DCamera.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.Name" xml:space="preserve">
+    <value>CheckBoxX_LM_Enable2DCamera</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="LabelX6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 4</value>
+  </data>
+  <data name="LabelX6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="LabelX6.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="LabelX6.Text" xml:space="preserve">
+    <value>Default Terrain Type:</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Name" xml:space="preserve">
+    <value>LabelX6</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ComboBox_LM_Music.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBox_LM_Music.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ComboBox_LM_Music.Items" xml:space="preserve">
+    <value>No Background</value>
+  </data>
+  <data name="ComboBox_LM_Music.Items1" xml:space="preserve">
+    <value>Level Background</value>
+  </data>
+  <data name="ComboBox_LM_Music.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 82</value>
+  </data>
+  <data name="ComboBox_LM_Music.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="ComboBox_LM_Music.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 21</value>
+  </data>
+  <data name="ComboBox_LM_Music.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_Music.Name" xml:space="preserve">
+    <value>ComboBox_LM_Music</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_Music.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_Music.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_Music.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="LabelX7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 30</value>
+  </data>
+  <data name="LabelX7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="LabelX7.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="LabelX7.Text" xml:space="preserve">
+    <value>Environment Effects:</value>
+  </data>
+  <data name="&gt;&gt;LabelX7.Name" xml:space="preserve">
+    <value>LabelX7</value>
+  </data>
+  <data name="&gt;&gt;LabelX7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LabelX7.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;LabelX7.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Items" xml:space="preserve">
+    <value>Normal A (Stone floor)</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Items1" xml:space="preserve">
+    <value>Normal B (Wood floor)</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Items2" xml:space="preserve">
+    <value>Snow Terrain</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Items3" xml:space="preserve">
+    <value>Sand Terrain</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Items4" xml:space="preserve">
+    <value>Big Boo's Hount</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Items5" xml:space="preserve">
+    <value>Water Levels</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Items6" xml:space="preserve">
+    <value>Slippery Slide</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 4</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="ComboBox_LM_TerrainTyp.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_TerrainTyp.Name" xml:space="preserve">
+    <value>ComboBox_LM_TerrainTyp</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_TerrainTyp.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_TerrainTyp.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_TerrainTyp.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="LabelX8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 56</value>
+  </data>
+  <data name="LabelX8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="LabelX8.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="LabelX8.Text" xml:space="preserve">
+    <value>Camera Preset:</value>
+  </data>
+  <data name="&gt;&gt;LabelX8.Name" xml:space="preserve">
+    <value>LabelX8</value>
+  </data>
+  <data name="&gt;&gt;LabelX8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LabelX8.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;LabelX8.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Items" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Items1" xml:space="preserve">
+    <value>Snow</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Items2" xml:space="preserve">
+    <value>Blizzard</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Items3" xml:space="preserve">
+    <value>Beta Flower</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Items4" xml:space="preserve">
+    <value>Lava</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Items5" xml:space="preserve">
+    <value>Water-Related? (1)</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Items6" xml:space="preserve">
+    <value>Water-Related? (2)</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 30</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="ComboBox_LM_EnvironmentEffects.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.Name" xml:space="preserve">
+    <value>ComboBox_LM_EnvironmentEffects</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="LabelX11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 82</value>
+  </data>
+  <data name="LabelX11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="LabelX11.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="LabelX11.Text" xml:space="preserve">
+    <value>Music ID:</value>
+  </data>
+  <data name="&gt;&gt;LabelX11.Name" xml:space="preserve">
+    <value>LabelX11</value>
+  </data>
+  <data name="&gt;&gt;LabelX11.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;LabelX11.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;LabelX11.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items" xml:space="preserve">
+    <value>01 - Open Camera</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items1" xml:space="preserve">
+    <value>02 - Tick Tock Clock</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items2" xml:space="preserve">
+    <value>03 - Secret Aquarium</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items3" xml:space="preserve">
+    <value>04 - Inside Castle / Hauted House</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items4" xml:space="preserve">
+    <value>05 - Stationary</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items5" xml:space="preserve">
+    <value>06 - Mario Facing Object</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items6" xml:space="preserve">
+    <value>07 - Stationary</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items7" xml:space="preserve">
+    <value>08 - Underwater Camera</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items8" xml:space="preserve">
+    <value>09 - Peach Slide Camera</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items9" xml:space="preserve">
+    <value>0A - Inside Cannon</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items10" xml:space="preserve">
+    <value>0B - Bowser Fights, Distant</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items11" xml:space="preserve">
+    <value>0C - Close Camera, Crashes</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items12" xml:space="preserve">
+    <value>0D - Fixed Reference Point</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items13" xml:space="preserve">
+    <value>0E - Platfrom Levels / 2D-Camera</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items14" xml:space="preserve">
+    <value>0F - Stationary</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Items15" xml:space="preserve">
+    <value>10 - Free Roam Camera</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 56</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 21</value>
+  </data>
+  <data name="ComboBox_LM_CameraPreset.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_CameraPreset.Name" xml:space="preserve">
+    <value>ComboBox_LM_CameraPreset</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_CameraPreset.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_CameraPreset.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_LM_CameraPreset.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="ColorPickerButton_LM_BackgroundColor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAqSURBVDhPY/j//z9FGEIAKXIwigEgmhQ8asCoASA8
+        HA0gB8MNIB//ZwAAsSyVh9SDH54AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="ColorPickerButton_LM_BackgroundColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 107</value>
+  </data>
+  <data name="ColorPickerButton_LM_BackgroundColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 23</value>
+  </data>
+  <data name="ColorPickerButton_LM_BackgroundColor.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.Name" xml:space="preserve">
+    <value>ColorPickerButton_LM_BackgroundColor</value>
+  </data>
+  <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="TabControlPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControlPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="TabControlPanel4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="TabControlPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>502, 207</value>
+  </data>
+  <data name="TabControlPanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabItem4.Text" xml:space="preserve">
+    <value>Area Settings</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel4.Name" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel4.Parent" xml:space="preserve">
+    <value>TabControl_LM_Area</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Line2.Location" type="System.Drawing.Point, System.Drawing">
     <value>237, 4</value>
   </data>
@@ -515,9 +1116,6 @@
   </data>
   <data name="&gt;&gt;ButtonX_EditCollision.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="ButtonX_EditFast3D.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="ButtonX_EditFast3D.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 75</value>
@@ -715,557 +1313,7 @@
     <value>TabControl_LM_Area</value>
   </data>
   <data name="&gt;&gt;TabControlPanel5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LabelX9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>219, 135</value>
-  </data>
-  <data name="LabelX9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
-  </data>
-  <data name="LabelX9.TabIndex" type="System.Int32, mscorlib">
-    <value>97</value>
-  </data>
-  <data name="LabelX9.Text" xml:space="preserve">
-    <value>Dialog ID:</value>
-  </data>
-  <data name="LabelX9.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;LabelX9.Name" xml:space="preserve">
-    <value>LabelX9</value>
-  </data>
-  <data name="&gt;&gt;LabelX9.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX9.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;LabelX9.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ComboBoxEx_LM_AreaBG.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ComboItem12.Text" xml:space="preserve">
-    <value>Level Background</value>
-  </data>
-  <data name="ComboItem13.Text" xml:space="preserve">
-    <value>Color</value>
-  </data>
-  <data name="ComboBoxEx_LM_AreaBG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 108</value>
-  </data>
-  <data name="ComboBoxEx_LM_AreaBG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
-  </data>
-  <data name="ComboBoxEx_LM_AreaBG.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.Name" xml:space="preserve">
-    <value>ComboBoxEx_LM_AreaBG</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>273, 135</value>
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.TabIndex" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.Name" xml:space="preserve">
-    <value>TextBoxX_LM_ShowMsgID</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 108</value>
-  </data>
-  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 20</value>
-  </data>
-  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
-    <value>93</value>
-  </data>
-  <data name="LabelX1.Text" xml:space="preserve">
-    <value>Area Background:</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
-    <value>LabelX1</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="SwitchButton_LM_ShowMsgEnabled.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 135</value>
-  </data>
-  <data name="SwitchButton_LM_ShowMsgEnabled.OffText" xml:space="preserve">
-    <value>Off</value>
-  </data>
-  <data name="SwitchButton_LM_ShowMsgEnabled.OnText" xml:space="preserve">
-    <value>On</value>
-  </data>
-  <data name="SwitchButton_LM_ShowMsgEnabled.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="SwitchButton_LM_ShowMsgEnabled.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.Name" xml:space="preserve">
-    <value>SwitchButton_LM_ShowMsgEnabled</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 135</value>
-  </data>
-  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 20</value>
-  </data>
-  <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="LabelX2.Text" xml:space="preserve">
-    <value>Area Start Message:</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Name" xml:space="preserve">
-    <value>LabelX2</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="CheckBoxX_LM_Enable2DCamera.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 56</value>
-  </data>
-  <data name="CheckBoxX_LM_Enable2DCamera.OffText" xml:space="preserve">
-    <value>3D</value>
-  </data>
-  <data name="CheckBoxX_LM_Enable2DCamera.OnText" xml:space="preserve">
-    <value>2D</value>
-  </data>
-  <data name="CheckBoxX_LM_Enable2DCamera.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="CheckBoxX_LM_Enable2DCamera.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="CheckBoxX_LM_Enable2DCamera.Text" xml:space="preserve">
-    <value>Enable 2D-Camera</value>
-  </data>
-  <data name="CheckBoxX_LM_Enable2DCamera.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.Name" xml:space="preserve">
-    <value>CheckBoxX_LM_Enable2DCamera</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="LabelX6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 4</value>
-  </data>
-  <data name="LabelX6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 20</value>
-  </data>
-  <data name="LabelX6.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="LabelX6.Text" xml:space="preserve">
-    <value>Default Terrain Type:</value>
-  </data>
-  <data name="&gt;&gt;LabelX6.Name" xml:space="preserve">
-    <value>LabelX6</value>
-  </data>
-  <data name="&gt;&gt;LabelX6.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX6.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="ComboBox_LM_Music.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBox_LM_Music.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ComboBox_LM_Music.Items" xml:space="preserve">
-    <value>No Background</value>
-  </data>
-  <data name="ComboBox_LM_Music.Items1" xml:space="preserve">
-    <value>Level Background</value>
-  </data>
-  <data name="ComboBox_LM_Music.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 82</value>
-  </data>
-  <data name="ComboBox_LM_Music.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="ComboBox_LM_Music.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 21</value>
-  </data>
-  <data name="ComboBox_LM_Music.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_Music.Name" xml:space="preserve">
-    <value>ComboBox_LM_Music</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_Music.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_Music.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_Music.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="LabelX7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 30</value>
-  </data>
-  <data name="LabelX7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 20</value>
-  </data>
-  <data name="LabelX7.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="LabelX7.Text" xml:space="preserve">
-    <value>Environment Effects:</value>
-  </data>
-  <data name="&gt;&gt;LabelX7.Name" xml:space="preserve">
-    <value>LabelX7</value>
-  </data>
-  <data name="&gt;&gt;LabelX7.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX7.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;LabelX7.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Items" xml:space="preserve">
-    <value>Normal A (Stone floor)</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Items1" xml:space="preserve">
-    <value>Normal B (Wood floor)</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Items2" xml:space="preserve">
-    <value>Snow Terrain</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Items3" xml:space="preserve">
-    <value>Sand Terrain</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Items4" xml:space="preserve">
-    <value>Big Boo's Hount</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Items5" xml:space="preserve">
-    <value>Water Levels</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Items6" xml:space="preserve">
-    <value>Slippery Slide</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 4</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
-  </data>
-  <data name="ComboBox_LM_TerrainTyp.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_TerrainTyp.Name" xml:space="preserve">
-    <value>ComboBox_LM_TerrainTyp</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_TerrainTyp.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_TerrainTyp.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_TerrainTyp.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="LabelX8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 56</value>
-  </data>
-  <data name="LabelX8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 20</value>
-  </data>
-  <data name="LabelX8.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="LabelX8.Text" xml:space="preserve">
-    <value>Camera Preset:</value>
-  </data>
-  <data name="&gt;&gt;LabelX8.Name" xml:space="preserve">
-    <value>LabelX8</value>
-  </data>
-  <data name="&gt;&gt;LabelX8.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX8.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;LabelX8.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Items" xml:space="preserve">
-    <value>None</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Items1" xml:space="preserve">
-    <value>Snow</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Items2" xml:space="preserve">
-    <value>Blizzard</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Items3" xml:space="preserve">
-    <value>Beta Flower</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Items4" xml:space="preserve">
-    <value>Lava</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Items5" xml:space="preserve">
-    <value>Water-Related? (1)</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Items6" xml:space="preserve">
-    <value>Water-Related? (2)</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 30</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
-  </data>
-  <data name="ComboBox_LM_EnvironmentEffects.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.Name" xml:space="preserve">
-    <value>ComboBox_LM_EnvironmentEffects</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="LabelX11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 82</value>
-  </data>
-  <data name="LabelX11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 20</value>
-  </data>
-  <data name="LabelX11.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="LabelX11.Text" xml:space="preserve">
-    <value>Music ID:</value>
-  </data>
-  <data name="&gt;&gt;LabelX11.Name" xml:space="preserve">
-    <value>LabelX11</value>
-  </data>
-  <data name="&gt;&gt;LabelX11.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX11.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;LabelX11.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items" xml:space="preserve">
-    <value>01 - Open Camera</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items1" xml:space="preserve">
-    <value>02 - Tick Tock Clock</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items2" xml:space="preserve">
-    <value>03 - Secret Aquarium</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items3" xml:space="preserve">
-    <value>04 - Inside Castle / Hauted House</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items4" xml:space="preserve">
-    <value>05 - Stationary</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items5" xml:space="preserve">
-    <value>06 - Mario Facing Object</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items6" xml:space="preserve">
-    <value>07 - Stationary</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items7" xml:space="preserve">
-    <value>08 - Underwater Camera</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items8" xml:space="preserve">
-    <value>09 - Peach Slide Camera</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items9" xml:space="preserve">
-    <value>0A - Inside Cannon</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items10" xml:space="preserve">
-    <value>0B - Bowser Fights, Distant</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items11" xml:space="preserve">
-    <value>0C - Close Camera, Crashes</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items12" xml:space="preserve">
-    <value>0D - Fixed Reference Point</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items13" xml:space="preserve">
-    <value>0E - Platfrom Levels / 2D-Camera</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items14" xml:space="preserve">
-    <value>0F - Stationary</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Items15" xml:space="preserve">
-    <value>10 - Free Roam Camera</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 56</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 21</value>
-  </data>
-  <data name="ComboBox_LM_CameraPreset.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_CameraPreset.Name" xml:space="preserve">
-    <value>ComboBox_LM_CameraPreset</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_CameraPreset.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_CameraPreset.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_LM_CameraPreset.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="ColorPickerButton_LM_BackgroundColor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAqSURBVDhPY/j//z9FGEIAKXIwigEgmhQ8asCoASA8
-        HA0gB8MNIB//ZwAAsSyVh9SDH54AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="ColorPickerButton_LM_BackgroundColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 107</value>
-  </data>
-  <data name="ColorPickerButton_LM_BackgroundColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 23</value>
-  </data>
-  <data name="ColorPickerButton_LM_BackgroundColor.TabIndex" type="System.Int32, mscorlib">
-    <value>91</value>
-  </data>
-  <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.Name" xml:space="preserve">
-    <value>ColorPickerButton_LM_BackgroundColor</value>
-  </data>
-  <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ColorPickerButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="TabControlPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="TabControlPanel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
-  </data>
-  <data name="TabControlPanel4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="TabControlPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>502, 207</value>
-  </data>
-  <data name="TabControlPanel4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TabItem4.Text" xml:space="preserve">
-    <value>Area Settings</value>
-  </data>
-  <data name="&gt;&gt;TabControlPanel4.Name" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;TabControlPanel4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabControlPanel4.Parent" xml:space="preserve">
-    <value>TabControl_LM_Area</value>
-  </data>
-  <data name="&gt;&gt;TabControlPanel4.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="Button_LM_RemoveSpecial.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2207,9 +2255,9 @@
   <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -2282,12 +2330,6 @@
   <data name="&gt;&gt;ButtonItem26.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;TabItem5.Name" xml:space="preserve">
-    <value>TabItem5</value>
-  </data>
-  <data name="&gt;&gt;TabItem5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;ComboItem12.Name" xml:space="preserve">
     <value>ComboItem12</value>
   </data>
@@ -2304,6 +2346,12 @@
     <value>TabItem4</value>
   </data>
   <data name="&gt;&gt;TabItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabItem5.Name" xml:space="preserve">
+    <value>TabItem5</value>
+  </data>
+  <data name="&gt;&gt;TabItem5.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ColumnHeaderA1.Name" xml:space="preserve">

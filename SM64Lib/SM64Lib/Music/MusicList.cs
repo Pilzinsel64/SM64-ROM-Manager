@@ -33,6 +33,14 @@ namespace SM64Lib.Music
             }
         }
 
+        public long Length
+        {
+            get
+            {
+                return this.Sum(n => n.Lenght + 0x8) + 0x4;
+            }
+        }
+
         // M e t h o d s
 
         public void Read(RomManager rommgr)

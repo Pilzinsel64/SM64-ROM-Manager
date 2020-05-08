@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SM64Lib.ASM;
 using SM64Lib.Behaviors;
 using SM64Lib.Configuration;
 using SM64Lib.Objects.ModelBanks;
@@ -14,6 +15,8 @@ namespace SM64Lib.Objects.ObjectBanks
     {
         [JsonIgnore]
         public Dictionary<CustomModelConfig, CustomModelBank> DestModelBanks { get; } = new Dictionary<CustomModelConfig, CustomModelBank>();
+        [JsonIgnore]
+        public CustomAsmBank DestCustomAsmBank { get; set; } = null;
         [JsonIgnore]
         public BehaviorBank DestBehaviorBank { get; set; } = null;
         [JsonIgnore]

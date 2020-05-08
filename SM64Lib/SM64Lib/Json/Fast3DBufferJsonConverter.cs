@@ -2,6 +2,8 @@
 using SM64Lib.Model.Fast3D;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +30,12 @@ namespace SM64Lib.Json
             if (export?.Buffer is object)
             {
                 c.Position = 0;
-                c.Write(export.Buffer, 0, export.Buffer.Length);
+                
+                if (export.IsDeflateStream)
+                    General.DecompressData(export.Buffer, c);
+                else
+                    c.Write(export.Buffer, 0, export.Buffer.Length);
+
                 c.Position = 0;
             }
 
@@ -43,9 +50,10 @@ namespace SM64Lib.Json
             var buffer = (Fast3DBuffer)value;
             var export = new Fast3DBufferExport
             {
-                Buffer = buffer.ToArray(),
+                Buffer = General.CompressData(buffer, CompressionLevel.Fastest),
                 Fast3DBankStart = buffer.Fast3DBankStart,
-                DLPointers = buffer.DLPointers.ToList()
+                DLPointers = buffer.DLPointers.ToList(),
+                IsDeflateStream = true
             };
             buffer.Position = 0;
 
@@ -57,6 +65,7 @@ namespace SM64Lib.Json
             public byte[] Buffer { get; set; }
             public int Fast3DBankStart { get; set; }
             public List<Geolayout.Geopointer> DLPointers { get; set; }
+            public bool IsDeflateStream { get; set; } = false;
         }
     }
 }

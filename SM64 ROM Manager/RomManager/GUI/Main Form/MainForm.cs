@@ -718,5 +718,10 @@ namespace SM64_ROM_Manager
         {
             Controller.CallPublicHackingDocuments();
         }
+
+        private void ButtonItem_GlobalAsmCodes_Click(object sender, EventArgs e)
+        {
+            Controller.OpenCustomAsmCodes();
+        }
     }
 }

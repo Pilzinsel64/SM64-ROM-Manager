@@ -164,6 +164,7 @@
     <DefineConstants>TRACE;RelMono</DefineConstants>
     <WarningLevel>1</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|x64'">
     <DefineTrace>true</DefineTrace>
@@ -185,7 +186,7 @@
     <Optimize>true</Optimize>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
     <WarningLevel>1</WarningLevel>
@@ -194,6 +195,13 @@
   <ItemGroup>
     <Reference Include="Ben.Demystifier, Version=0.1.0.0, Culture=neutral, PublicKeyToken=a6d206e05440431a, processorArchitecture=MSIL">
       <HintPath>..\packages\Ben.Demystifier.0.1.6\lib\net45\Ben.Demystifier.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Charts.Design">
+      <HintPath>C:\DotNetBarNew\DevComponents.Charts.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Charts">
+      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Charts.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Design">
       <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
@@ -260,6 +268,9 @@
     </Reference>
     <Reference Include="Pilz.Drawing.Drawing3D.OpenGLFactory">
       <HintPath>..\Shared Libs\Pilz.Drawing.Drawing3D.OpenGLFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.IO">
+      <HintPath>..\Shared Libs\Pilz.IO.dll</HintPath>
     </Reference>
     <Reference Include="Pilz.Reflection.PluginSystem">
       <HintPath>..\Shared Libs\Pilz.Reflection.PluginSystem.dll</HintPath>
@@ -462,6 +473,36 @@
     <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.Designer.cs">
       <DependentUpon>BehaviorBankManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.Designer.cs">
+      <DependentUpon>BehaviorParameterInfoEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.Designer.cs">
+      <DependentUpon>CustomAsmCodeSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.Designer.cs">
+      <DependentUpon>AsmToHexConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.Designer.cs">
+      <DependentUpon>ChangeRomAreaForAsmCodesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.Designer.cs">
+      <DependentUpon>CustomAsmCodesManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -492,6 +533,8 @@
     <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.Designer.cs">
       <DependentUpon>CustomObjectsDatabaseViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsValueSelection.cs" />
+    <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsValueTypes.cs" />
     <Compile Include="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.Designer.cs">
       <DependentUpon>AddressListEditor.cs</DependentUpon>
     </Compile>
@@ -857,6 +900,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.resx">
       <DependentUpon>BehaviorBankManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.de.resx">
+      <DependentUpon>BehaviorParameterInfoEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.resx">
+      <DependentUpon>BehaviorParameterInfoEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.de.resx">
+      <DependentUpon>CustomAsmCodeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.resx">
+      <DependentUpon>CustomAsmCodeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.de.resx">
+      <DependentUpon>AsmToHexConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.resx">
+      <DependentUpon>AsmToHexConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.de.resx">
+      <DependentUpon>ChangeRomAreaForAsmCodesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.resx">
+      <DependentUpon>ChangeRomAreaForAsmCodesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.de.resx">
+      <DependentUpon>CustomAsmCodesManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.resx">
+      <DependentUpon>CustomAsmCodesManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.de.resx">
       <DependentUpon>CustomObjectImportDialog.cs</DependentUpon>
@@ -1243,6 +1316,9 @@
     <None Include="Resources\icons8_package_16px.png" />
     <None Include="Resources\icons8_cube_16px.png" />
     <None Include="Resources\icons8_300_degrees_16px.png" />
+    <None Include="Resources\icons8_code.ico" />
+    <None Include="Resources\icons8_code_16px.png" />
+    <None Include="Resources\icons8_thick_arrow_pointing_down_16px.png" />
     <Content Include="RomManager\Others\RomMap.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -1297,6 +1373,10 @@
     <ProjectReference Include="..\SM64Lib.N64Graphics\SM64Lib.N64Graphics.csproj">
       <Project>{d9258483-950c-46d1-a333-31f32492cd7e}</Project>
       <Name>SM64Lib.N64Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib.Text.Exporters\SM64Lib.Text.Exporters.csproj">
+      <Project>{E6305A1D-E5DA-4BB6-992E-3A341BC99A7B}</Project>
+      <Name>SM64Lib.Text.Exporters</Name>
     </ProjectReference>
     <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj">
       <Project>{e11312a8-5e8d-073f-0086-11d677519581}</Project>

@@ -12,6 +12,7 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::SM64_ROM_Manager.Publics;
 using Microsoft.VisualBasic;
 using static Microsoft.VisualBasic.CompilerServices.LikeOperator;
+using SM64Lib.Patching;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -32,7 +33,7 @@ namespace SM64_ROM_Manager.PatchScripts
         }
 
         // E v e n t s
-
+        
         public static event TweakBeforeApplyEventHandler TweakBeforeApply;
         public delegate void TweakBeforeApplyEventHandler();
 
@@ -110,10 +111,15 @@ namespace SM64_ROM_Manager.PatchScripts
             string pathTweaks = General.MyTweaksPath;
             var mgr = new PatchingManager();
             myPatchs.Clear();
+
+            var nullVersion = new Version("0.0.0.0");
+            var appVersion = new Version(Application.ProductVersion);
+
             foreach (string f in Directory.GetFiles(pathTweaks, "*.xml", SearchOption.AllDirectories).Concat(Directory.GetFiles(pathTweaks, "*.json", SearchOption.AllDirectories)))
             {
                 var p = mgr.Read(f);
-                myPatchs.Add(p);
+                if (p.MinVersion <= appVersion && (p.MaxVersion == nullVersion || p.MaxVersion >= appVersion))
+                    myPatchs.Add(p);
             }
 
             myPatchs = myPatchs.OrderBy(n => n.Name).ToList();
@@ -242,13 +248,15 @@ namespace SM64_ROM_Manager.PatchScripts
             ComboBoxEx_Scripts.SelectedItem = comboItem;
         }
 
-        private void AddNewPatch(string name, string description, Version version, string firstScriptName)
+        private void AddNewPatch(string name, string description, Version version, Version minAppVersion, Version maxAppVersion, string firstScriptName)
         {
             var patch = new PatchProfile()
             {
                 Name = name,
                 Description = description,
-                Version = version
+                Version = version,
+                MinVersion = minAppVersion,
+                MaxVersion = maxAppVersion
             };
             var script = new PatchScript() { Name = firstScriptName };
             patch.Scripts.Add(script);
@@ -299,7 +307,9 @@ namespace SM64_ROM_Manager.PatchScripts
             {
                 Titel = patch.Name,
                 Description = patch.Description,
-                Version = patch.Version
+                Version = patch.Version,
+                MinAppVersion = patch.MinVersion,
+                MaxAppVersion = patch.MaxVersion
             };
             if (editor.ShowDialog(this) == DialogResult.OK)
             {
@@ -309,6 +319,8 @@ namespace SM64_ROM_Manager.PatchScripts
                 patch.Name = editor.Titel.Trim();
                 patch.Description = editor.Description.Trim();
                 patch.Version = editor.Version;
+                patch.MinVersion = editor.MinAppVersion;
+                patch.MaxVersion = editor.MaxAppVersion;
 
                 if ((oldName ?? "") != (patch.Name ?? ""))
                 {
@@ -397,11 +409,12 @@ namespace SM64_ROM_Manager.PatchScripts
             {
                 Titel = "New Profile",
                 Description = string.Empty,
-                Version = new Version("1.0.0.0")
+                Version = new Version("1.0.0.0"),
+                MinAppVersion = new Version(Application.ProductVersion)
             };
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                AddNewPatch(frm.Titel, frm.Description, frm.Version, "New Script");
+                AddNewPatch(frm.Titel, frm.Description, frm.Version, frm.MinAppVersion, frm.MaxAppVersion, "New Script");
             }
         }
 
@@ -427,9 +440,11 @@ namespace SM64_ROM_Manager.PatchScripts
         private void ButtonX6_Click(object sender, EventArgs e)
         {
             var script = GetSelectedScript();
-            if (script is object)
+            var patch = GetSelectedPatch();
+
+            if (script is object && patch is object)
             {
-                var editor = new TweakScriptEditor(script, rommgr);
+                var editor = new TweakScriptEditor(script, rommgr, patch.EmbeddedFiles);
                 Flyout1.Close();
                 editor.ShowDialog(this);
                 ComboItem ci = (ComboItem)ComboBoxEx_Scripts.SelectedItem;
@@ -469,7 +484,17 @@ namespace SM64_ROM_Manager.PatchScripts
             {
                 TweakBeforeApply?.Invoke();
                 var mgr = new PatchingManager();
-                mgr.Patch(script, rommgr, owner, new Dictionary<string, object>() { { "romfile", rommgr.RomFile }, { "rommgr", rommgr }, { "profilepath", profile?.FileName } });
+                mgr.Patch(
+                    script,
+                    rommgr,
+                    owner,
+                    new Dictionary<string, object>() {
+                        { "romfile", rommgr.RomFile },
+                        { "rommgr", rommgr },
+                        { "profilepath", profile?.FileName },
+                        { "files", profile.EmbeddedFiles }
+                    },
+                    General.GetAdditionalReferencedAssemblied());
                 TweakAfterApply?.Invoke();
                 MessageBoxEx.Show(owner, "Patched successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

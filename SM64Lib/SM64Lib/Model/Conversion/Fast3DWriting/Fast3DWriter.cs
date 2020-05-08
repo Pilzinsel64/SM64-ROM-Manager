@@ -909,7 +909,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                         final.Data[9] = Conversions.ToByte(uInt & 0xFF);
                         final.Data[10] = Conversions.ToByte(vInt >> 8 & 0xFF);
                         final.Data[11] = Conversions.ToByte(vInt & 0xFF);
-                        if (vertcol is object)
+                        if (vertcol is object && !mat.EnableCrystalEffect)
                         {
                             final.Data[12] = vertcol.R;
                             final.Data[13] = vertcol.G;

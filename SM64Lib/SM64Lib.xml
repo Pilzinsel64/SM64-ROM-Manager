@@ -222,6 +222,126 @@
         <member name="F:SM64Lib.Model.ObjectInputSettings.ReduceDuplicateVerticesLevel.Level2">
             <summary>Reduce and push up. [Buggy]</summary>
         </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.Name">
+            <summary>
+            The Name of the Profile.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.Scripts">
+            <summary>
+            A list with scripts.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.Version">
+            <summary>
+            The version of this profile.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.MinVersion">
+            <summary>
+            The minimum ROM Manager version requied for this tweak.
+            </summary>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.MaxVersion">
+            <summary>
+            The maximum ROM Manager version allowed for this tweak.
+            </summary>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.Description">
+            <summary>
+            The description of this profile
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.FileName">
+            <summary>
+            The Xml file for this profile.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.EmbeddedFiles">
+            <summary>
+            Contains files embedded into this profile.
+            </summary>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.ID">
+            <summary>
+            Defines an uniquie ID to identify this tweak (e.g. for undo patch).
+            </summary>
+        </member>
+        <member name="T:SM64Lib.Patching.PatchScript">
+            <summary>
+            A Profile containing a script and some descriptions.
+            </summary>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchScript.Name">
+            <summary>
+            The Name of this Script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchScript.Script">
+            <summary>
+            The Script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchScript.Type">
+            <summary>
+            Defines the syntax of the script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchScript.Description">
+            <summary>
+            The description of this Script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchScript.References">
+            <summary>
+            A collection of Reference Assemblies to bind at compiling script.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchScript.ID">
+            <summary>
+            Defines an uniquie ID to identify this script (e.g. for undo patch).
+            </summary>
+        </member>
+        <member name="T:SM64Lib.Patching.ScriptType">
+            <summary>
+            Defines the script type, so the behavior on write it.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Patching.ScriptType.TweakScript">
+            <summary>
+            A tweak syntax known from the SM64 Editor.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Patching.ScriptType.VisualBasic">
+            <summary>
+            A Visual Basic code.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Patching.ScriptType.CSharp">
+            <summary>
+            A C# Code.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Patching.ScriptType.DynamicLinkLibrary">
+            <summary>
+            A DLL file containing the Code.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Patching.ScriptType.Armips">
+            <summary>
+            Code that can be applied using Armips.
+            </summary>
+        </member>
         <member name="M:SM64Lib.NPCs.CoinsManager.LoadCoinSettings">
             <summary>
             Loads all the properties from ROM.

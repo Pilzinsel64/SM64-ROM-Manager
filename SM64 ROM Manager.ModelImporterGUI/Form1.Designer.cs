@@ -63,22 +63,22 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.TextBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
-            this.ButtonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.labelX_Version = new DevComponents.DotNetBar.LabelX();
             this.LabelX5 = new DevComponents.DotNetBar.LabelX();
             this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.LabelX_Description = new DevComponents.DotNetBar.LabelX();
             this.LabelX_PatchName = new DevComponents.DotNetBar.LabelX();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Flyout1 = new DevComponents.DotNetBar.Controls.Flyout(this.components);
+            this.ButtonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX6 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX7 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX4 = new DevComponents.DotNetBar.ButtonX();
-            this.Flyout1 = new DevComponents.DotNetBar.Controls.Flyout(this.components);
-            this.labelX_Version = new DevComponents.DotNetBar.LabelX();
             this.Panel1.SuspendLayout();
             this.TableLayoutPanel2.SuspendLayout();
             this.TableLayoutPanel1.SuspendLayout();
@@ -189,14 +189,11 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.ButtonX_OpenRom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonX_OpenRom.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_OpenRom.FocusCuesEnabled = false;
+            this.ButtonX_OpenRom.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_folder_16px;
             this.ButtonX_OpenRom.Location = new System.Drawing.Point(187, 12);
             this.ButtonX_OpenRom.Name = "ButtonX_OpenRom";
             this.ButtonX_OpenRom.Size = new System.Drawing.Size(75, 23);
             this.ButtonX_OpenRom.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_OpenRom.Symbol = "58055";
-            this.ButtonX_OpenRom.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
-            this.ButtonX_OpenRom.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX_OpenRom.SymbolSize = 12F;
             this.ButtonX_OpenRom.TabIndex = 98;
             this.ButtonX_OpenRom.Text = "Load ...";
             this.ButtonX_OpenRom.Click += new System.EventHandler(this.ButtonX_OpenRom_Click);
@@ -212,8 +209,6 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.LabelX1.Location = new System.Drawing.Point(49, 12);
             this.LabelX1.Name = "LabelX1";
             this.LabelX1.Size = new System.Drawing.Size(132, 23);
-            this.LabelX1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
-            this.LabelX1.SymbolSize = 12F;
             this.LabelX1.TabIndex = 0;
             this.LabelX1.Text = "No file loaded!";
             // 
@@ -313,8 +308,6 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.ButtonX_ImportMdl.Name = "ButtonX_ImportMdl";
             this.ButtonX_ImportMdl.Size = new System.Drawing.Size(119, 23);
             this.ButtonX_ImportMdl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ImportMdl.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
-            this.ButtonX_ImportMdl.SymbolSize = 12F;
             this.ButtonX_ImportMdl.TabIndex = 106;
             this.ButtonX_ImportMdl.Text = "Import Model";
             this.ButtonX_ImportMdl.Click += new System.EventHandler(this.ButtonX_ImportMdl_Click);
@@ -330,8 +323,6 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.ButtonX_ConvertMdl.Name = "ButtonX_ConvertMdl";
             this.ButtonX_ConvertMdl.Size = new System.Drawing.Size(119, 23);
             this.ButtonX_ConvertMdl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ConvertMdl.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
-            this.ButtonX_ConvertMdl.SymbolSize = 12F;
             this.ButtonX_ConvertMdl.TabIndex = 107;
             this.ButtonX_ConvertMdl.Text = "Convert Model";
             this.ButtonX_ConvertMdl.Click += new System.EventHandler(this.ButtonX_ConvertMdl_Click);
@@ -452,63 +443,6 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.SuperTooltip1.DefaultTooltipSettings = new DevComponents.DotNetBar.SuperTooltipInfo("", "", "", null, null, DevComponents.DotNetBar.eTooltipColor.Gray);
             this.SuperTooltip1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
-            // ButtonX3
-            // 
-            this.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX3.FocusCuesEnabled = false;
-            this.ButtonX3.Location = new System.Drawing.Point(3, 3);
-            this.ButtonX3.MinimumSize = new System.Drawing.Size(20, 20);
-            this.ButtonX3.Name = "ButtonX3";
-            this.ButtonX3.Size = new System.Drawing.Size(20, 20);
-            this.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SuperTooltip1.SetSuperTooltip(this.ButtonX3, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Close Popup", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
-            this.ButtonX3.Symbol = "57676";
-            this.ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX3.SymbolSize = 12F;
-            this.ButtonX3.TabIndex = 39;
-            this.ButtonX3.Click += new System.EventHandler(this.ButtonX3_Click);
-            // 
-            // ButtonX2
-            // 
-            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX2.FocusCuesEnabled = false;
-            this.ButtonX2.Location = new System.Drawing.Point(112, 3);
-            this.ButtonX2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.ButtonX2.Name = "ButtonX2";
-            this.ButtonX2.Size = new System.Drawing.Size(115, 20);
-            this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SuperTooltip1.SetSuperTooltip(this.ButtonX2, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Edit Name & Description", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
-            this.ButtonX2.Symbol = "57680";
-            this.ButtonX2.SymbolColor = System.Drawing.Color.Goldenrod;
-            this.ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX2.SymbolSize = 12F;
-            this.ButtonX2.TabIndex = 45;
-            this.ButtonX2.Text = "Edit Preset Info";
-            this.ButtonX2.Click += new System.EventHandler(this.ButtonX2_Click);
-            // 
-            // ButtonX1
-            // 
-            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX1.FocusCuesEnabled = false;
-            this.ButtonX1.Location = new System.Drawing.Point(112, 29);
-            this.ButtonX1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.ButtonX1.Name = "ButtonX1";
-            this.ButtonX1.Size = new System.Drawing.Size(95, 20);
-            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SuperTooltip1.SetSuperTooltip(this.ButtonX1, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Edit Name & Description", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
-            this.ButtonX1.Symbol = "57697";
-            this.ButtonX1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
-            this.ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX1.SymbolSize = 12F;
-            this.ButtonX1.TabIndex = 46;
-            this.ButtonX1.Text = "Save Preset";
-            this.ButtonX1.Click += new System.EventHandler(this.ButtonX1_Click);
-            // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
@@ -523,6 +457,19 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.Panel1.Size = new System.Drawing.Size(298, 265);
             this.Panel1.TabIndex = 117;
             this.Panel1.Visible = false;
+            // 
+            // labelX_Version
+            // 
+            this.labelX_Version.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX_Version.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX_Version.Location = new System.Drawing.Point(3, 85);
+            this.labelX_Version.Name = "labelX_Version";
+            this.labelX_Version.Size = new System.Drawing.Size(381, 23);
+            this.labelX_Version.TabIndex = 53;
+            this.labelX_Version.Text = "Version:";
             // 
             // LabelX5
             // 
@@ -604,6 +551,63 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.TableLayoutPanel1.Size = new System.Drawing.Size(236, 52);
             this.TableLayoutPanel1.TabIndex = 47;
             // 
+            // Flyout1
+            // 
+            this.Flyout1.Content = this.Panel1;
+            this.Flyout1.DisplayMode = DevComponents.DotNetBar.Controls.eFlyoutDisplayMode.MouseHover;
+            this.Flyout1.DropShadow = false;
+            this.Flyout1.TargetControl = this.ComboBoxEx2;
+            this.Flyout1.PrepareContent += new System.EventHandler(this.Flyout1_PrepareContent);
+            this.Flyout1.FlyoutShowing += new DevComponents.DotNetBar.Controls.FlyoutShowingEventHandler(this.Flyout1_FlyoutShowing);
+            // 
+            // ButtonX4
+            // 
+            this.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX4.FocusCuesEnabled = false;
+            this.ButtonX4.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_plus_math_16px;
+            this.ButtonX4.Location = new System.Drawing.Point(242, 142);
+            this.ButtonX4.Name = "ButtonX4";
+            this.ButtonX4.Size = new System.Drawing.Size(20, 20);
+            this.ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX4.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX4.TabIndex = 42;
+            this.ButtonX4.Click += new System.EventHandler(this.ButtonX4_Click);
+            // 
+            // ButtonX3
+            // 
+            this.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX3.FocusCuesEnabled = false;
+            this.ButtonX3.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_cancel_16px;
+            this.ButtonX3.Location = new System.Drawing.Point(3, 3);
+            this.ButtonX3.MinimumSize = new System.Drawing.Size(20, 20);
+            this.ButtonX3.Name = "ButtonX3";
+            this.ButtonX3.Size = new System.Drawing.Size(20, 20);
+            this.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SuperTooltip1.SetSuperTooltip(this.ButtonX3, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Close Popup", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
+            this.ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX3.TabIndex = 39;
+            this.ButtonX3.Click += new System.EventHandler(this.ButtonX3_Click);
+            // 
+            // ButtonX1
+            // 
+            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX1.FocusCuesEnabled = false;
+            this.ButtonX1.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_save_16px;
+            this.ButtonX1.Location = new System.Drawing.Point(112, 29);
+            this.ButtonX1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.ButtonX1.Name = "ButtonX1";
+            this.ButtonX1.Size = new System.Drawing.Size(95, 20);
+            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SuperTooltip1.SetSuperTooltip(this.ButtonX1, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Edit Name & Description", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
+            this.ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX1.TabIndex = 46;
+            this.ButtonX1.Text = "Save Preset";
+            this.ButtonX1.Click += new System.EventHandler(this.ButtonX1_Click);
+            // 
             // ButtonX6
             // 
             this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -611,6 +615,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.ButtonX6.AutoExpandOnClick = true;
             this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX6.FocusCuesEnabled = false;
+            this.ButtonX6.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_edit_16px;
             this.ButtonX6.Location = new System.Drawing.Point(3, 3);
             this.ButtonX6.Name = "ButtonX6";
             this.ButtonX6.Size = new System.Drawing.Size(103, 20);
@@ -618,10 +623,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.ButtonX6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ButtonItem1,
             this.ButtonItem2});
-            this.ButtonX6.Symbol = "57680";
-            this.ButtonX6.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX6.SymbolSize = 12F;
             this.ButtonX6.TabIndex = 44;
             this.ButtonX6.Text = "Edit Script";
             // 
@@ -639,61 +641,39 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             this.ButtonItem2.Text = "Script \"After\"";
             this.ButtonItem2.Click += new System.EventHandler(this.ButtonItem2_Click);
             // 
+            // ButtonX2
+            // 
+            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX2.FocusCuesEnabled = false;
+            this.ButtonX2.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_edit_16px;
+            this.ButtonX2.Location = new System.Drawing.Point(112, 3);
+            this.ButtonX2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.ButtonX2.Name = "ButtonX2";
+            this.ButtonX2.Size = new System.Drawing.Size(115, 20);
+            this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SuperTooltip1.SetSuperTooltip(this.ButtonX2, new DevComponents.DotNetBar.SuperTooltipInfo("", "", "Edit Name & Description", null, null, DevComponents.DotNetBar.eTooltipColor.Gray, false, false, new System.Drawing.Size(0, 0)));
+            this.ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX2.TabIndex = 45;
+            this.ButtonX2.Text = "Edit Preset Info";
+            this.ButtonX2.Click += new System.EventHandler(this.ButtonX2_Click);
+            // 
             // ButtonX7
             // 
             this.ButtonX7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ButtonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX7.FocusCuesEnabled = false;
+            this.ButtonX7.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_delete_2_16px;
             this.ButtonX7.Location = new System.Drawing.Point(3, 29);
             this.ButtonX7.Name = "ButtonX7";
             this.ButtonX7.Size = new System.Drawing.Size(103, 20);
             this.ButtonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX7.Symbol = "57676";
-            this.ButtonX7.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ButtonX7.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX7.SymbolSize = 12F;
             this.ButtonX7.TabIndex = 45;
             this.ButtonX7.Text = "Delete Preset";
             this.ButtonX7.Click += new System.EventHandler(this.ButtonX7_Click);
-            // 
-            // ButtonX4
-            // 
-            this.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX4.FocusCuesEnabled = false;
-            this.ButtonX4.Location = new System.Drawing.Point(242, 142);
-            this.ButtonX4.Name = "ButtonX4";
-            this.ButtonX4.Size = new System.Drawing.Size(20, 20);
-            this.ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX4.Symbol = "57669";
-            this.ButtonX4.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
-            this.ButtonX4.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX4.SymbolSize = 12F;
-            this.ButtonX4.TabIndex = 42;
-            this.ButtonX4.Click += new System.EventHandler(this.ButtonX4_Click);
-            // 
-            // Flyout1
-            // 
-            this.Flyout1.Content = this.Panel1;
-            this.Flyout1.DisplayMode = DevComponents.DotNetBar.Controls.eFlyoutDisplayMode.MouseHover;
-            this.Flyout1.DropShadow = false;
-            this.Flyout1.TargetControl = this.ComboBoxEx2;
-            this.Flyout1.PrepareContent += new System.EventHandler(this.Flyout1_PrepareContent);
-            this.Flyout1.FlyoutShowing += new DevComponents.DotNetBar.Controls.FlyoutShowingEventHandler(this.Flyout1_FlyoutShowing);
-            // 
-            // labelX_Version
-            // 
-            this.labelX_Version.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX_Version.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX_Version.Location = new System.Drawing.Point(3, 85);
-            this.labelX_Version.Name = "labelX_Version";
-            this.labelX_Version.Size = new System.Drawing.Size(381, 23);
-            this.labelX_Version.TabIndex = 53;
-            this.labelX_Version.Text = "Version:";
             // 
             // ModelImporter
             // 

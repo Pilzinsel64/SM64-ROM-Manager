@@ -334,41 +334,34 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void GlControl1_Paint(object sender, PaintEventArgs e)
         {
-            GL.ClearColor(Settings.StyleManager.AlwaysKeepBlueColors ? Color.CornflowerBlue : Main.BackColor);
-            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-            GL.MatrixMode(MatrixMode.Projection);
-            GL.LoadMatrix(ref ProjMatrix);
-            GL.MatrixMode(MatrixMode.Modelview);
-            GL.LoadMatrix(ref camMtx);
-
-            // DrawSpecialBoxes()
-
-            var switchExpr = CurrentModelDrawMod;
-            switch (switchExpr)
+            if (!Main.isDeactivated)
             {
-                case ModelDrawMod.Collision:
-                    {
+                GL.ClearColor(Settings.StyleManager.AlwaysKeepBlueColors ? Color.CornflowerBlue : Main.BackColor);
+                GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+                GL.MatrixMode(MatrixMode.Projection);
+                GL.LoadMatrix(ref ProjMatrix);
+                GL.MatrixMode(MatrixMode.Modelview);
+                GL.LoadMatrix(ref camMtx);
+
+                // DrawSpecialBoxes()
+
+                var switchExpr = CurrentModelDrawMod;
+                switch (switchExpr)
+                {
+                    case ModelDrawMod.Collision:
                         if (Maps.rndrCollisionMap is object)
-                        {
                             Maps.rndrCollisionMap?.DrawModel(FaceDrawMode);
-                        }
-
                         break;
-                    }
 
-                case ModelDrawMod.VisualMap:
-                    {
+                    case ModelDrawMod.VisualMap:
                         if (Maps.rndrVisualMap is object)
-                        {
                             Maps.rndrVisualMap?.DrawModel(FaceDrawMode);
-                        }
-
                         break;
-                    }
-            }
+                }
 
-            DrawAllObjects();
-            GLControl1.SwapBuffers();
+                DrawAllObjects();
+                GLControl1.SwapBuffers();
+            }
         }
 
         public void SaveScreenshot(string fileName)

@@ -18,6 +18,7 @@ namespace SM64Lib.Levels
 {
     public class LevelManager : ILevelManager
     {
+        public bool EnableLoadingAreaReverb { get; set; } = true;
 
         /// <summary>
         /// Loads a ROM Manager Level from ROM.
@@ -267,6 +268,20 @@ namespace SM64Lib.Levels
 
             // Hardcoded Camera
             lvl.HardcodedCameraSettings = General.PatchClass.get_HardcodedCamera_Enabled(LevelID);
+
+            // Area Reverb
+            if (EnableLoadingAreaReverb)
+            {
+                foreach (var area in lvl.Areas)
+                {
+                    if (area is RMLevelArea && area.AreaID >= 1 && area.AreaID <= 3)
+                    {
+                        fs.Position = 0xEE0C0 + lvl.LevelID * 3 + area.AreaID - 1;
+                        ((RMLevelArea)area).ReverbLevel = (AreaReverbLevel)fs.ReadByte();
+                    }
+                }
+            }
+
             fs.Close();
         }
 
@@ -855,6 +870,20 @@ namespace SM64Lib.Levels
             output.Write(Conversions.ToUInteger(lvl.Bank0x19.RomEnd));
             output.Write(Conversions.ToUInteger(0x1900001C));
             output.Write(Conversions.ToUInteger(0x7040000));
+
+            // Write Area Reverb
+            if (EnableLoadingAreaReverb)
+            {
+                foreach (var area in lvl.Areas)
+                {
+                    if (area is RMLevelArea && area.AreaID >= 1 && area.AreaID <= 3)
+                    {
+                        output.Position = 0xEE0C0 + lvl.LevelID * 3 + area.AreaID - 1;
+                        output.Write((byte)((RMLevelArea)area).ReverbLevel);
+                    }
+                }
+            }
+
             return saveres;
         }
     }

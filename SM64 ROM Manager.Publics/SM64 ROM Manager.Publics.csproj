@@ -122,6 +122,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialog.Designer.cs">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
@@ -184,6 +190,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FileDialogFilters.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="InputDialog.resx">
+      <DependentUpon>InputDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -208,6 +217,10 @@
     <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj">
       <Project>{24562e87-ba35-0cf9-13dc-be9f85e735bb}</Project>
       <Name>SM64 ROM Manager.SettingsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj">
+      <Project>{E11312A8-5E8D-073F-0086-11D677519581}</Project>
+      <Name>SM64Lib.TextValueConverter</Name>
     </ProjectReference>
     <ProjectReference Include="..\SM64Lib\SM64Lib.csproj">
       <Project>{e29a037e-451d-05d8-12d2-fc9f72bd60ac}</Project>

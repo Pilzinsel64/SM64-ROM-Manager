@@ -91,30 +91,23 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             Ogl.MakeCurrent();
             bool loadAreaIDs = false;
+
             if (Main.CArea is null)
-            {
                 loadAreaIDs = true;
-            }
 
             if (Main.CLevel.Areas.Count != Main.ComboBoxItem_Area.Items.Count)
-            {
                 loadAreaIDs = true;
-            }
             else
             {
                 foreach (ComboItem ci in Main.ComboBoxItem_Area.Items)
                 {
                     if (!Main.CLevel.Areas.Contains((LevelArea)ci.Tag))
-                    {
                         loadAreaIDs = true;
-                    }
                 }
             }
 
             if (loadAreaIDs)
-            {
                 Main.LoadAreaIDs();
-            }
             else
             {
                 bool loadAreaMdl = false;
@@ -123,9 +116,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     hashCollisionMap = 0;
                     cCollisionMap = null;
                     if (Ogl.CurrentModelDrawMod == ModelDrawMod.Collision)
-                    {
                         loadAreaMdl = true;
-                    }
                 }
 
                 if (hashVisualMap != Main.CArea.AreaModel.Fast3DBuffer.GetBuffer().GetHashCode())
@@ -133,15 +124,13 @@ namespace SM64_ROM_Manager.LevelEditor
                     hashVisualMap = 0;
                     cVisualMap = null;
                     if (Ogl.CurrentModelDrawMod == ModelDrawMod.VisualMap)
-                    {
                         loadAreaMdl = true;
-                    }
                 }
 
                 if (loadAreaMdl)
-                {
                     Maps.LoadAreaModel();
-                }
+                else
+                    Ogl.Invalidate();
             }
         }
 

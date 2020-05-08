@@ -129,14 +129,11 @@
     <value>3, 3</value>
   </data>
   <data name="ItemPanel_RecentFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 517</value>
+    <value>202, 534</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ItemPanel_RecentFiles.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="ItemPanel_RecentFiles.Text" xml:space="preserve">
-    <value>ItemPanel1</value>
   </data>
   <data name="&gt;&gt;ItemPanel_RecentFiles.Name" xml:space="preserve">
     <value>ItemPanel_RecentFiles</value>
@@ -184,7 +181,7 @@
     <value>False</value>
   </data>
   <data name="Button_G_SaveGameName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 54</value>
+    <value>169, 54</value>
   </data>
   <data name="Button_G_SaveGameName.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 22</value>
@@ -238,7 +235,7 @@
     <value>86, 3</value>
   </data>
   <data name="LabelX_G_Filename.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 20</value>
+    <value>137, 20</value>
   </data>
   <data name="LabelX_G_Filename.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -265,7 +262,7 @@
     <value>20</value>
   </data>
   <data name="TextBoxX_G_GameName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 20</value>
+    <value>77, 20</value>
   </data>
   <data name="TextBoxX_G_GameName.TabIndex" type="System.Int32, mscorlib">
     <value>94</value>
@@ -289,7 +286,7 @@
     <value>86, 29</value>
   </data>
   <data name="LabelX_G_Filesize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 20</value>
+    <value>137, 20</value>
   </data>
   <data name="LabelX_G_Filesize.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -355,7 +352,7 @@
     <value>6</value>
   </data>
   <data name="GroupPanel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 66</value>
+    <value>316, 56</value>
   </data>
   <data name="GroupPanel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 100</value>
@@ -376,7 +373,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GroupPanel6.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="groupPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -436,7 +433,7 @@
     <value>112, 29</value>
   </data>
   <data name="labelX_RomConfigStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 20</value>
+    <value>109, 20</value>
   </data>
   <data name="labelX_RomConfigStatus.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -460,7 +457,7 @@
     <value>86, 3</value>
   </data>
   <data name="labelX_RomConfigFilepath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 20</value>
+    <value>135, 20</value>
   </data>
   <data name="labelX_RomConfigFilepath.TabIndex" type="System.Int32, mscorlib">
     <value>98</value>
@@ -484,7 +481,7 @@
     <value>86, 29</value>
   </data>
   <data name="labelX3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 20</value>
+    <value>135, 20</value>
   </data>
   <data name="labelX3.TabIndex" type="System.Int32, mscorlib">
     <value>97</value>
@@ -526,7 +523,7 @@
     <value>5</value>
   </data>
   <data name="groupPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 172</value>
+    <value>316, 162</value>
   </data>
   <data name="groupPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>250, 73</value>
@@ -547,7 +544,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupPanel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="highlighter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -555,6 +552,57 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="groupPanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="microChart1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="microChart1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="microChart1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 233</value>
+  </data>
+  <data name="microChart1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;microChart1.Name" xml:space="preserve">
+    <value>microChart1</value>
+  </data>
+  <data name="&gt;&gt;microChart1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.MicroChart, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;microChart1.Parent" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;microChart1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 241</value>
+  </data>
+  <data name="groupPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 250</value>
+  </data>
+  <data name="groupPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="groupPanel3.Text" xml:space="preserve">
+    <value>ROM Space</value>
+  </data>
+  <data name="&gt;&gt;groupPanel3.Name" xml:space="preserve">
+    <value>groupPanel3</value>
+  </data>
+  <data name="&gt;&gt;groupPanel3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.GroupPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;groupPanel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupPanel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>694, 546</value>
   </data>

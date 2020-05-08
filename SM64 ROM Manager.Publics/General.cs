@@ -30,8 +30,8 @@ namespace SM64_ROM_Manager.Publics
 
         public static Pilz.Reflection.PluginSystem.PluginManager PluginManager { get; private set; } = new Pilz.Reflection.PluginSystem.PluginManager();
 
-        [DllImport("user32.dll", EntryPoint = "SetProcessDPIAware")]
-        public static extern void SetDPIAware();
+        //[DllImport("user32.dll", EntryPoint = "SetProcessDPIAware")]
+        //public static extern void SetDPIAware();
 
         private static string pMyDataPath = string.Empty;
         private static string pMyToolsPath = string.Empty;
@@ -194,6 +194,7 @@ namespace SM64_ROM_Manager.Publics
             config.SetFilePath("SM64_ROM_Manager.ppf", Path.Combine(MyDataPath, @"Patchs\SM64_ROM_Manager.ppf"));
             config.SetFilePath("sm64extend.exe", Path.Combine(MyDataPath, @"Tools\sm64extend.exe"));
             config.SetFilePath("Original Level Pointers.bin", Path.Combine(MyDataPath, @"Other\Original Level Pointers.bin"));
+            config.SetFilePath("armips.exe", Path.Combine(MyToolsPath, @"armips.exe"));
         }
 
 #if RelMono
@@ -240,7 +241,7 @@ namespace SM64_ROM_Manager.Publics
         public static void DoDefaultInitsAfterApplicationStartup()
         {
 #if RelMono
-            SetServerCertificateValidationCallback()
+            SetServerCertificateValidationCallback();
 #endif
 
             Settings.SettingsConfigFilePath = Path.Combine(MyDataPath, "Settings.json");
@@ -257,6 +258,9 @@ namespace SM64_ROM_Manager.Publics
             // Set File Path Config
             SetSM64LibFilePathConfigs();
 
+            // Watch Events for PatchScriptManager
+            SM64Lib.Patching.PatchingManager.ProcessingInputValue += PatchingManager_ProcessingInputValue;
+
             // Set paths to Assimp-Libs
             Pilz.S3DFileParser.AssimpModule.AssimpLoader.PathToAssimpLib32 = Path.Combine(MyDataPath, @"Lib\Assimp32.dll");
             Pilz.S3DFileParser.AssimpModule.AssimpLoader.PathToAssimpLib64 = Path.Combine(MyDataPath, @"Lib\Assimp64.dll");
@@ -264,6 +268,16 @@ namespace SM64_ROM_Manager.Publics
             // Do waiting auto jobs
             JobToDoManager.ExecuteStartupJobsToDo();
             Settings.MySettingsManager.AutoSavingSettings += (_, __) => JobToDoManager.ExecuteExitJobsToDo();
+        }
+
+        private static void PatchingManager_ProcessingInputValue(object sender, SM64Lib.Patching.PatchScriptManagerProcessingInputValueEventArgs e)
+        {
+            var input = new InputDialog(e.ValueType, e.RomManager);
+            if (input.ShowDialog(e.Owner) == DialogResult.OK)
+            {
+                e.ReturnValue = input.ReturnValue;
+                e.SettedValue = true;
+            }
         }
 
         public static void SetCurrentLanguageCulture(string cultureName)
@@ -774,6 +788,14 @@ namespace SM64_ROM_Manager.Publics
             for (int i = byte.MaxValue; i >= 1; i += -1)
                 addAreaIfNotUsed(Conversions.ToByte(i));
             return ids;
+        }
+
+        public static string[] GetAdditionalReferencedAssemblied()
+        {
+            return new string[]
+            {
+                typeof(DevComponents.DotNetBar.OfficeForm).Assembly.Location
+            };
         }
 
         public class Bits

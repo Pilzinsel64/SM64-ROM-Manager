@@ -3,6 +3,7 @@ using global::System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using Newtonsoft.Json.Linq;
+using SM64Lib.Patching;
 
 namespace SM64_ROM_Manager.ModelImporterGUI.ImporterPresets
 {
@@ -115,9 +116,9 @@ namespace SM64_ROM_Manager.ModelImporterGUI.ImporterPresets
 
                     case var case9 when case9 == "extra":
                         {
-                            var script = new PatchScripts.PatchScript();
+                            var script = new PatchScript();
                             script.Name = "Extra Data";
-                            script.Type = PatchScripts.ScriptType.TweakScript;
+                            script.Type = ScriptType.TweakScript;
                             script.Script = element.Value;
                             mainPreset.ScriptAfter = script;
                             break;
@@ -159,7 +160,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI.ImporterPresets
         private ImporterPreset ParsePreset(XElement xpreset)
         {
             var preset = new ImporterPreset();
-            var psmgr = new PatchScripts.PatchingManager();
+            var psmgr = new PatchingManager();
             foreach (XAttribute attr in xpreset.Attributes())
             {
                 var switchExpr = attr.Name;

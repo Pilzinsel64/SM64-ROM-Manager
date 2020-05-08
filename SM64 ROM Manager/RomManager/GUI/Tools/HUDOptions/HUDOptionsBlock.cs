@@ -6,6 +6,7 @@ namespace SM64_ROM_Manager
         public string Name { get; set; }
         public int Type { get; set; }
         public HUDOptionsCords Cords { get; set; }
+        public HUDOptionsValueSelection ValueSelection { get; set; }
         public HUDOptionsBlock[] Childs { get; set; }
     }
 }

@@ -76,6 +76,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_CustomObjects = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem18 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_GlobalBehaviorBank = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_GlobalAsmCodes = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem22 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem9 = new DevComponents.DotNetBar.ButtonItem();
@@ -98,13 +99,13 @@ namespace SM64_ROM_Manager
             this.ButtonItem_BugReport = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_FeatureRequest = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem21 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_HackingDocuments = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_Supporter = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem30 = new DevComponents.DotNetBar.ButtonItem();
             this.Bar1 = new DevComponents.DotNetBar.Bar();
             this.LabelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.LabelItem_OtherInfoText = new DevComponents.DotNetBar.LabelItem();
             this.RibbonControl1 = new DevComponents.DotNetBar.RibbonControl();
-            this.ButtonItem_HackingDocuments = new DevComponents.DotNetBar.ButtonItem();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl1)).BeginInit();
             this.TabControl1.SuspendLayout();
@@ -267,13 +268,13 @@ namespace SM64_ROM_Manager
             this.Bar2.BarType = DevComponents.DotNetBar.eBarType.MenuBar;
             this.Bar2.IsMaximized = false;
             this.Bar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem2)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem7)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem22)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem12)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_Bar_Plugins)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem558)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem24))});
+            this.ButtonItem2,
+            this.ButtonItem7,
+            this.ButtonItem22,
+            this.ButtonItem12,
+            this.ButtonItem_Bar_Plugins,
+            this.ButtonItem558,
+            this.ButtonItem24});
             this.Bar2.MenuBar = true;
             this.Bar2.Name = "Bar2";
             this.Bar2.Stretch = true;
@@ -284,10 +285,10 @@ namespace SM64_ROM_Manager
             // 
             this.ButtonItem2.Name = "ButtonItem2";
             this.ButtonItem2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem3)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_SaveRom)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_LaunchROM)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem6))});
+            this.ButtonItem3,
+            this.ButtonItem_SaveRom,
+            this.ButtonItem_LaunchROM,
+            this.ButtonItem6});
             resources.ApplyResources(this.ButtonItem2, "ButtonItem2");
             // 
             // ButtonItem3
@@ -337,22 +338,23 @@ namespace SM64_ROM_Manager
             this.ButtonItem7.BeginGroup = true;
             this.ButtonItem7.Name = "ButtonItem7";
             this.ButtonItem7.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.LabelItem2)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem8)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem10)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem11)),
-            ((DevComponents.DotNetBar.BaseItem)(this.LabelItem3)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_ModelImporter)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem17)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_TrajectoryEditor)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem14)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem13)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem15)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem16)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_HudOptions)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_CustomObjects)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem18)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_GlobalBehaviorBank))});
+            this.LabelItem2,
+            this.ButtonItem8,
+            this.ButtonItem10,
+            this.ButtonItem11,
+            this.LabelItem3,
+            this.ButtonItem_ModelImporter,
+            this.ButtonItem17,
+            this.ButtonItem_TrajectoryEditor,
+            this.ButtonItem14,
+            this.ButtonItem13,
+            this.ButtonItem15,
+            this.ButtonItem16,
+            this.ButtonItem_HudOptions,
+            this.ButtonItem_CustomObjects,
+            this.ButtonItem18,
+            this.ButtonItem_GlobalBehaviorBank,
+            this.ButtonItem_GlobalAsmCodes});
             resources.ApplyResources(this.ButtonItem7, "ButtonItem7");
             // 
             // LabelItem2
@@ -475,14 +477,21 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.ButtonItem_GlobalBehaviorBank, "ButtonItem_GlobalBehaviorBank");
             this.ButtonItem_GlobalBehaviorBank.Click += new System.EventHandler(this.ButtonItem_GlobalBehaviorBank_Click);
             // 
+            // ButtonItem_GlobalAsmCodes
+            // 
+            this.ButtonItem_GlobalAsmCodes.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_code_16px;
+            this.ButtonItem_GlobalAsmCodes.Name = "ButtonItem_GlobalAsmCodes";
+            resources.ApplyResources(this.ButtonItem_GlobalAsmCodes, "ButtonItem_GlobalAsmCodes");
+            this.ButtonItem_GlobalAsmCodes.Click += new System.EventHandler(this.ButtonItem_GlobalAsmCodes_Click);
+            // 
             // ButtonItem22
             // 
             this.ButtonItem22.Name = "ButtonItem22";
             this.ButtonItem22.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem1)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem9)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_M64ToMidiConverter)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_TextureEditor))});
+            this.ButtonItem1,
+            this.ButtonItem9,
+            this.ButtonItem_M64ToMidiConverter,
+            this.ButtonItem_TextureEditor});
             resources.ApplyResources(this.ButtonItem22, "ButtonItem22");
             // 
             // ButtonItem1
@@ -518,7 +527,7 @@ namespace SM64_ROM_Manager
             // 
             this.ButtonItem12.Name = "ButtonItem12";
             this.ButtonItem12.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem23))});
+            this.ButtonItem23});
             resources.ApplyResources(this.ButtonItem12, "ButtonItem12");
             // 
             // ButtonItem23
@@ -534,7 +543,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_Bar_Plugins.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_Bar_Plugins.Name = "ButtonItem_Bar_Plugins";
             this.ButtonItem_Bar_Plugins.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem20))});
+            this.ButtonItem20});
             this.ButtonItem_Bar_Plugins.SymbolSize = 12F;
             resources.ApplyResources(this.ButtonItem_Bar_Plugins, "ButtonItem_Bar_Plugins");
             // 
@@ -550,14 +559,14 @@ namespace SM64_ROM_Manager
             this.ButtonItem558.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem558.Name = "ButtonItem558";
             this.ButtonItem558.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem25)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem5)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem19)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem4)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_Bar_EnableExpertMode)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem27)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem28)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem29))});
+            this.ButtonItem25,
+            this.ButtonItem5,
+            this.ButtonItem19,
+            this.ButtonItem4,
+            this.ButtonItem_Bar_EnableExpertMode,
+            this.ButtonItem27,
+            this.ButtonItem28,
+            this.ButtonItem29});
             this.ButtonItem558.SymbolSize = 12F;
             resources.ApplyResources(this.ButtonItem558, "ButtonItem558");
             // 
@@ -628,12 +637,12 @@ namespace SM64_ROM_Manager
             // 
             this.ButtonItem24.Name = "ButtonItem24";
             this.ButtonItem24.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_BugReport)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_FeatureRequest)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem21)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_HackingDocuments)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_Supporter)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem30))});
+            this.ButtonItem_BugReport,
+            this.ButtonItem_FeatureRequest,
+            this.ButtonItem21,
+            this.ButtonItem_HackingDocuments,
+            this.ButtonItem_Supporter,
+            this.ButtonItem30});
             resources.ApplyResources(this.ButtonItem24, "ButtonItem24");
             // 
             // ButtonItem_BugReport
@@ -653,6 +662,13 @@ namespace SM64_ROM_Manager
             this.ButtonItem21.Name = "ButtonItem21";
             resources.ApplyResources(this.ButtonItem21, "ButtonItem21");
             this.ButtonItem21.Click += new System.EventHandler(this.ButtonItem21_Click);
+            // 
+            // ButtonItem_HackingDocuments
+            // 
+            this.ButtonItem_HackingDocuments.BeginGroup = true;
+            this.ButtonItem_HackingDocuments.Name = "ButtonItem_HackingDocuments";
+            resources.ApplyResources(this.ButtonItem_HackingDocuments, "ButtonItem_HackingDocuments");
+            this.ButtonItem_HackingDocuments.Click += new System.EventHandler(this.ButtonItem_HackingDocuments_Click);
             // 
             // ButtonItem_Supporter
             // 
@@ -677,8 +693,8 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.Bar1, "Bar1");
             this.Bar1.IsMaximized = false;
             this.Bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.LabelItem1)),
-            ((DevComponents.DotNetBar.BaseItem)(this.LabelItem_OtherInfoText))});
+            this.LabelItem1,
+            this.LabelItem_OtherInfoText});
             this.Bar1.Name = "Bar1";
             this.Bar1.Stretch = true;
             this.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -723,13 +739,6 @@ namespace SM64_ROM_Manager
             this.RibbonControl1.SystemText.QatPlaceBelowRibbonText = resources.GetString("RibbonControl1.SystemText.QatPlaceBelowRibbonText");
             this.RibbonControl1.SystemText.QatRemoveItemText = resources.GetString("RibbonControl1.SystemText.QatRemoveItemText");
             this.RibbonControl1.TabGroupHeight = 14;
-            // 
-            // ButtonItem_HackingDocuments
-            // 
-            this.ButtonItem_HackingDocuments.BeginGroup = true;
-            this.ButtonItem_HackingDocuments.Name = "ButtonItem_HackingDocuments";
-            resources.ApplyResources(this.ButtonItem_HackingDocuments, "ButtonItem_HackingDocuments");
-            this.ButtonItem_HackingDocuments.Click += new System.EventHandler(this.ButtonItem_HackingDocuments_Click);
             // 
             // MainForm
             // 
@@ -892,5 +901,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonItem ButtonItem_CustomObjects;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_TextureEditor;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_HackingDocuments;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_GlobalAsmCodes;
     }
 }

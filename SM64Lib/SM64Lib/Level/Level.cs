@@ -92,6 +92,31 @@ namespace SM64Lib.Levels
             }
         }      
 
+        public long Length
+        {
+            get
+            {
+                long length = 0;
+
+                if (Bank0x19 is object)
+                    length += Bank0x19.Length;
+                else
+                    length += RomManagerSettings.DefaultLevelscriptSize;
+
+                if (LocalObjectBank is object)
+                    length += LocalObjectBank.Length;
+
+                foreach (var area in Areas)
+                {
+                    length += area.AreaModel.Length;
+                    if (OneBank0xESystemEnabled)
+                        length += area.Levelscript.Length;
+                }
+
+                return length;
+            }
+        }
+
         // C o n s t r u c t o r s
 
         protected Level(ushort LevelID, int LevelIndex)

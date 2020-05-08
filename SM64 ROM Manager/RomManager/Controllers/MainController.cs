@@ -625,6 +625,8 @@ namespace SM64_ROM_Manager
                     {
                         throw new RomCompatiblityException("Rom Length is incompatible!");
                     }
+                    else
+                        newrommgr.WritingNewProgramVersion += RomManager_WritingNewRomVersion;
                 }
 
                 if (!newrommgr.CheckROM())
@@ -635,6 +637,8 @@ namespace SM64_ROM_Manager
                 {
                     throw new RomCompatiblityException(SM64_ROM_Manager.My.Resources.Form_Main_Resources.Exception_RomWasUsedBySM64E);
                 }
+                
+                newrommgr.WritingNewProgramVersion -= RomManager_WritingNewRomVersion;
 
                 loadRecentROM = true;
                 Publics.Publics.AddRecentFile(Settings.RecentFiles.RecentROMs, Romfile);
@@ -654,6 +658,10 @@ namespace SM64_ROM_Manager
                 catch (ReadOnlyException ex)
                 {
                     MessageBoxEx.Show(ex.Message, "Loading ROM", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (InvalidMD5HashException ex)
+                {
+                    MessageBoxEx.Show(string.Format(Form_Main_Resources.MsgBox_InvalidRomHash, RomManager.SUPER_MARIO_64_U_MD5HASH), "Loading ROM", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception)
                 {
@@ -794,6 +802,15 @@ namespace SM64_ROM_Manager
             if (RomManager is object)
             {
                 var mgr = new CustomObjectsManager(RomManager.CustomObjects, RomManager);
+                mgr.Show();
+            }
+        }
+
+        public void OpenCustomAsmCodes()
+        {
+            if (RomManager is object)
+            {
+                var mgr = new CustomAsmCodesManager(RomManager.GlobalCustomAsmBank, RomManager);
                 mgr.Show();
             }
         }
@@ -1086,6 +1103,11 @@ namespace SM64_ROM_Manager
             var fn = Path.GetFileName(fp);
             var a = RomManager.IsNewROM || File.Exists(fp);
             return (fn, a);
+        }
+
+        public RomSpaceInfo GetRomSpaceInfo()
+        {
+            return RomManager?.GetRomSpaceInfo();
         }
 
         // L e v e l   M a n a g e r
@@ -1536,7 +1558,7 @@ namespace SM64_ROM_Manager
             }
         }
 
-        public void SaveLevelAreaSettings(int levelIndex, int areaIndex, TerrainTypes terrainTypes, byte musicID, EnvironmentEffects environmentEffects, CameraPresets cameraPrset, bool enable2DCamera, bool enableShowMsg, byte showMsgDialogID)
+        public void SaveLevelAreaSettings(int levelIndex, int areaIndex, TerrainTypes terrainTypes, byte musicID, EnvironmentEffects environmentEffects, CameraPresets cameraPrset, bool enable2DCamera, bool enableShowMsg, byte showMsgDialogID, AreaReverbLevel reverbLevel)
         {
             var lvl = GetLevelAndArea(levelIndex, areaIndex);
             var area = lvl.area;
@@ -1547,6 +1569,8 @@ namespace SM64_ROM_Manager
             area.Enable2DCamera = enable2DCamera;
             area.ShowMessage.Enabled = enableShowMsg;
             area.ShowMessage.DialogID = showMsgDialogID;
+            if (area is RMLevelArea)
+                ((RMLevelArea)area).ReverbLevel = reverbLevel;
             this.SetLevelscriptNeedToSave(lvl.level);
         }
 
@@ -1694,15 +1718,22 @@ namespace SM64_ROM_Manager
             StatusText = string.Empty;
         }
 
-        public (TerrainTypes terrainType, byte bgMusic, CameraPresets camPreset, EnvironmentEffects envEffect, bool enable2DCam, AreaBGs bgType, Color bgColor, bool enableShowMsg, byte showMsgDialogID) GetLevelAreaSettings(int levelIndex, int areaIndex)
+        public (byte areaID, TerrainTypes terrainType, byte bgMusic, CameraPresets camPreset, EnvironmentEffects envEffect, bool enable2DCam, AreaBGs bgType, Color bgColor, bool enableShowMsg, byte showMsgDialogID, AreaReverbLevel reverbLevel) GetLevelAreaSettings(int levelIndex, int areaIndex)
         {
             var area = GetLevelAndArea(levelIndex, areaIndex).area;
 
             // Set Area Segmented Banks
             area.SetSegmentedBanks(RomManager);
 
+            // Get Reverb level
+            AreaReverbLevel reverbLevel;
+            if (area is RMLevelArea)
+                reverbLevel = ((RMLevelArea)area).ReverbLevel;
+            else
+                reverbLevel = AreaReverbLevel.None;
+
             // Get Area Settings
-            return (area.TerrainType, area.BGMusic, area.Geolayout.CameraPreset, area.Geolayout.EnvironmentEffect, area.Enable2DCamera, area.Background.Type, area.Background.Color, area.ShowMessage.Enabled, area.ShowMessage.DialogID);
+            return (area.AreaID, area.TerrainType, area.BGMusic, area.Geolayout.CameraPreset, area.Geolayout.EnvironmentEffect, area.Enable2DCamera, area.Background.Type, area.Background.Color, area.ShowMessage.Enabled, area.ShowMessage.DialogID, reverbLevel);
         }
 
         public int GetLevelAreaScrollingTexturesCount(int levelIndex, int areaIndex)

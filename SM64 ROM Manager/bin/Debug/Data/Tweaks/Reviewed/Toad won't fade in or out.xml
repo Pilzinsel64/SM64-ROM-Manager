@@ -1,0 +1,3 @@
+<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Makes it so Toad won't fade in an out depending on distance. Code by JesusYoshi</description><patch>
+1E4FF4: 1A
+</patch></m64tweak>

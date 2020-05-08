@@ -13,5 +13,10 @@ namespace SM64Lib.Levels
                 return this.Where(n => n.NeedToSaveLevelscript || n.NeedToSaveBanks0E).Count() > 0;
             }
         }
+
+        public long Length
+        {
+            get => this.Sum(n => n.Length);
+        }
     }
 }

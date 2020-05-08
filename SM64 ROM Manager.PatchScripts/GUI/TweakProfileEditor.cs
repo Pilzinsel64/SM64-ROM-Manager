@@ -16,11 +16,22 @@ namespace SM64_ROM_Manager.PatchScripts
             base.UpdateAmbientColors();
 
             customValidator1.ValidateValue += CustomValidator1_ValidateValue;
+            customValidator2.ValidateValue += CustomValidator2_ValidateValue;
         }
 
         private void CustomValidator1_ValidateValue(object sender, DevComponents.DotNetBar.Validator.ValidateValueEventArgs e)
         {
-            e.IsValid = LikeOperator.LikeString(e.ControlToValidate.Text, "#*.#*.#*.#*", CompareMethod.Text);
+            e.IsValid = IsVersionValid(e.ControlToValidate.Text);
+        }
+
+        private void CustomValidator2_ValidateValue(object sender, DevComponents.DotNetBar.Validator.ValidateValueEventArgs e)
+        {
+            e.IsValid = IsVersionValid(e.ControlToValidate.Text) || string.IsNullOrEmpty(e.ControlToValidate.Text);
+        }
+
+        private bool IsVersionValid(string text)
+        {
+            return LikeOperator.LikeString(text, "#*.#*.#*.#*", CompareMethod.Text);
         }
 
         public string Titel
@@ -63,7 +74,36 @@ namespace SM64_ROM_Manager.PatchScripts
             }
         }
 
-        private void ButtonX2_Click(object sender, System.EventArgs e)
+        public Version MinAppVersion
+        {
+            get
+            {
+                Version.TryParse(textBoxX4.Text, out Version ver);
+                return ver;
+            }
+            set
+            {
+                if (value is object)
+                    textBoxX4.Text = value.ToString();
+            }
+        }
+
+        public Version MaxAppVersion
+        {
+            get
+            {
+                if (!Version.TryParse(textBoxX5.Text, out Version ver))
+                    ver = new Version("0.0.0.0");
+                return ver;
+            }
+            set
+            {
+                if (value is object && value != new Version("0.0.0.0"))
+                    textBoxX5.Text = value.ToString();
+            }
+        }
+
+        private void ButtonX2_Click(object sender, EventArgs e)
         {
             if (superValidator1.Validate())
                 DialogResult = System.Windows.Forms.DialogResult.OK;

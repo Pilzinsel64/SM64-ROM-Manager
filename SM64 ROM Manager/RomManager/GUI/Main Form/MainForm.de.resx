@@ -2334,7 +2334,7 @@
   <data name="ButtonItem16.Text" xml:space="preserve">
     <value>Münzeigenschaften</value>
   </data>
-  <data name="buttonItem26.Text" xml:space="preserve">
+  <data name="ButtonItem_CustomObjects.Text" xml:space="preserve">
     <value>Eigene Objekte</value>
   </data>
   <data name="ButtonItem18.Text" xml:space="preserve">
@@ -2342,6 +2342,9 @@
   </data>
   <data name="ButtonItem_GlobalBehaviorBank.Text" xml:space="preserve">
     <value>Globale Verhaltens-Bank</value>
+  </data>
+  <data name="buttonItem26.Text" xml:space="preserve">
+    <value>Globale ASM-Codes</value>
   </data>
   <data name="ButtonItem7.Text" xml:space="preserve">
     <value>Module</value>
@@ -4268,9 +4271,5 @@
         MDEtMDU6MDDkOlH3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEyLTExLTIwVDA5OjAzOjUzLTA2OjAwpVUc
         +QAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
 </root>

@@ -6,6 +6,8 @@ using global::DevComponents.DotNetBar;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64_ROM_Manager.My.Resources;
 using DevComponents.DotNetBar.Validator;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace SM64_ROM_Manager
 {
@@ -46,6 +48,7 @@ namespace SM64_ROM_Manager
         {
             InitializeComponent();
             ItemPanel_RecentFiles.Height = 534;
+            microChart1.DataPoints.Clear();
         }
 
         // C o n t r o l l e r   E v e n t s
@@ -54,6 +57,7 @@ namespace SM64_ROM_Manager
         {
             LabelX_G_Filename.Text = Path.GetFileName(Controller.Romfile);
             LoadRomConfigInfos();
+            LoadRomSpaceInfo();
         }
 
         private void Controller_RomLoading()
@@ -67,6 +71,7 @@ namespace SM64_ROM_Manager
         private void Controller_RomSaved()
         {
             LoadRomConfigInfos();
+            LoadRomSpaceInfo();
         }
 
         // F e a t u r e s
@@ -88,6 +93,36 @@ namespace SM64_ROM_Manager
                 pictureBox_RomConfigStatus.Image = MyIcons.icons8_delete_sign_16px;
                 highlighter1.SetHighlightColor(groupPanel1, eHighlightColor.Red);
             }
+        }
+
+        private void LoadRomSpaceInfo()
+        {
+            var info = Controller.GetRomSpaceInfo();
+
+            microChart1.PieChartStyle.SliceColors.Clear();
+            microChart1.PieChartStyle.SliceColors.AddRange(new Color[] {
+                Color.IndianRed,
+                Color.Violet,
+                Color.DarkBlue,
+                Color.Brown,
+                Color.DarkOliveGreen
+            });
+
+            microChart1.DataPoints = new List<double>() {
+                info.UsedLevelsSpace,
+                info.UsedMusicSpace,
+                info.UsedGlobalModelsSpace,
+                info.UsedGlobalBehaviorSpace,
+                info.FreeSpace
+            };
+
+            microChart1.DataPointTooltips = new List<string>() {
+                $"Levels ({info.UsedLevelsSpace * 100 / info.MaxAvailableSpace}%)",
+                $"Music ({info.UsedMusicSpace * 100 / info.MaxAvailableSpace}%)",
+                $"Global Model Bank ({info.UsedGlobalModelsSpace * 100 / info.MaxAvailableSpace}%)",
+                $"Global Behavior Bank ({info.UsedGlobalBehaviorSpace * 100 / info.MaxAvailableSpace}%)",
+                $"Free Space ({info.FreeSpace * 100 / info.MaxAvailableSpace}%)"
+            };
         }
 
         // G u i

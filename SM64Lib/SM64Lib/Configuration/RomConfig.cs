@@ -5,19 +5,32 @@ using global::Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using SM64Lib.Behaviors;
 using SM64Lib.Objects.ObjectBanks;
+using SM64Lib.ASM;
 
 namespace SM64Lib.Configuration
 {
     public class RomConfig
     {
-        public Dictionary<byte, LevelConfig> LevelConfigs { get; private set; } = new Dictionary<byte, LevelConfig>();
-        public MusicConfiguration MusicConfig { get; private set; } = new MusicConfiguration();
-        public string SelectedTextProfileInfo { get; set; } = string.Empty;
-        public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
+        // Levels
+        public Dictionary<byte, LevelConfig> LevelConfigs { get; } = new Dictionary<byte, LevelConfig>();
+
+        // Global Banks
         [JsonProperty("GlobalObjectBankConfig")]
-        public ObjectModelConfig GlobalModelBank { get; private set; } = new ObjectModelConfig();
-        public BehaviorBankConfig GlobalBehaviorBank { get; private set; } = new BehaviorBankConfig();
-        public CustomObjectCollection GlobalObjectBank { get; private set; } = new CustomObjectCollection();
+        public ObjectModelConfig GlobalModelBank { get; } = new ObjectModelConfig();
+        public BehaviorBankConfig GlobalBehaviorBank { get; } = new BehaviorBankConfig();
+        public CustomObjectCollection GlobalObjectBank { get; } = new CustomObjectCollection();
+        public CustomAsmBankConfig GlobalCustomAsmBank { get; } = new CustomAsmBankConfig();
+
+        // Music
+        public MusicConfiguration MusicConfig { get;  } = new MusicConfiguration();
+
+        // Texts
+        public string SelectedTextProfileInfo { get; set; } = string.Empty;
+
+        // Other
+        public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
+
+        // F e a t u r e s
 
         public LevelConfig GetLevelConfig(ushort levelID)
         {
@@ -32,6 +45,8 @@ namespace SM64Lib.Configuration
                 return conf;
             }
         }
+
+        // L o a d / S a v e
 
         public static RomConfig Load(string filePath)
         {

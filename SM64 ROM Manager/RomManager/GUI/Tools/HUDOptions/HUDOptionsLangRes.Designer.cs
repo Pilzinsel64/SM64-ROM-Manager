@@ -205,6 +205,150 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pause Menu Screen in Level ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Colorful PAUSE ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_ColorfulPause {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_ColorfulPause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Current Level Name ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_CurrentLevelName {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_CurrentLevelName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Current Star Name ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_CurrentStarName {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_CurrentStarName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Empty Star Symbol ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_EmptyStarSymbol {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_EmptyStarSymbol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Files Star Symbol ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_FilledStarSymbol {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_FilledStarSymbol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pause Menu ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die CAMERA ANGLE ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu_CameraAngle {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu_CameraAngle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die CONTINUE ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu_Continue {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu_Continue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die EXIT COURSE ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu_ExitCourse {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu_ExitCourse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die LAKITU-MARIO ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu_LakituMario {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu_LakituMario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die LAKITU-STOP ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu_LaktiuStop {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu_LaktiuStop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Navigation Direction ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu_NavigationDirection {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu_NavigationDirection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Normal (Fixed) ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu_NormalFixed {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu_NormalFixed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Normal (Up-Close) ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_Menu_NormalUpClose {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_Menu_NormalUpClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die My Score ähnelt.
+        /// </summary>
+        internal static string HUDPos_PauseMenu_MyScore {
+            get {
+                return ResourceManager.GetString("HUDPos_PauseMenu_MyScore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Counter ähnelt.
         /// </summary>
         internal static string HUDPos_Timer_Counter {
@@ -219,6 +363,24 @@ namespace SM64_ROM_Manager.My.Resources {
         internal static string HUDPos_Timer_Time {
             get {
                 return ResourceManager.GetString("HUDPos_Timer_Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Horizontal ähnelt.
+        /// </summary>
+        internal static string HUDPosVals_PauseMenu_Menu_NavigationDirection_Horizontal {
+            get {
+                return ResourceManager.GetString("HUDPosVals_PauseMenu_Menu_NavigationDirection_Horizontal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Vertical ähnelt.
+        /// </summary>
+        internal static string HUDPosVals_PauseMenu_Menu_NavigationDirection_Vertical {
+            get {
+                return ResourceManager.GetString("HUDPosVals_PauseMenu_Menu_NavigationDirection_Vertical", resourceCulture);
             }
         }
     }

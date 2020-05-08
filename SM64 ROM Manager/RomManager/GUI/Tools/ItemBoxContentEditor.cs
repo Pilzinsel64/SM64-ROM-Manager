@@ -23,7 +23,7 @@ namespace SM64_ROM_Manager
             base.UpdateAmbientColors();
             romMgr = rommgr;
             PropertyTree = AdvPropertyGrid1.PropertyTree;
-            bpMgr = new AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid1, General.ObjectCombos, nameof(ItemBoxContentEntry.BehavAddress), "BParam");
+            bpMgr = new AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid1, General.ObjectCombos, General.BehaviorInfos, nameof(ItemBoxContentEntry.BehavAddress), "BParam");
         }
 
         private AdvTree _PropertyTree;

@@ -11,6 +11,8 @@ using global::SM64_ROM_Manager.EventArguments;
 using global::SM64_ROM_Manager.My.Resources;
 using SM64Lib.TextValueConverter;
 using Z.Core.Extensions;
+using SM64Lib.Text;
+using System.IO;
 
 namespace SM64_ROM_Manager
 {
@@ -39,6 +41,7 @@ namespace SM64_ROM_Manager
 
                     _TMController.RequestReloadTextManagerLists -= Controller_RequestReloadTextManager;
                     _TMController.TextItemChanged -= Controller_TextItemChanged;
+                    _TMController.ManyTextItemsChanged -= Controller_ManyTextItemsChanged;
                     _TMController.RequestReloadTextManagerLineColors -= Controller_RequestReloadTextManagerLineColors;
                     _TMController.TextItemAdded -= Controller_TextItemAdded;
                     _TMController.TextItemRemoved -= Controller_TextItemRemoved;
@@ -50,6 +53,7 @@ namespace SM64_ROM_Manager
                 {
                     _TMController.RequestReloadTextManagerLists += Controller_RequestReloadTextManager;
                     _TMController.TextItemChanged += Controller_TextItemChanged;
+                    _TMController.ManyTextItemsChanged += Controller_ManyTextItemsChanged;
                     _TMController.RequestReloadTextManagerLineColors += Controller_RequestReloadTextManagerLineColors;
                     _TMController.TextItemAdded += Controller_TextItemAdded;
                     _TMController.TextItemRemoved += Controller_TextItemRemoved;
@@ -66,8 +70,17 @@ namespace SM64_ROM_Manager
 
         public Tab_TextManager()
         {
+            // Components
             InitializeComponent();
-            base.BackColor = Color.White;
+            base.BackColor = Color.Transparent;
+
+            var valuesSoundEffect = Enum.GetValues(typeof(SM64Lib.Text.DialogSoundEffect));
+            foreach (var value in valuesSoundEffect)
+                ComboBoxEx_SoundEffect.Items.Add(new ComboItem
+                {
+                    Tag = value,
+                    Text = Form_Main_Resources.ResourceManager.GetString($"SoundEffect_{Enum.GetName(typeof(SM64Lib.Text.DialogSoundEffect), value)}")
+                });
         }
 
         private void Controller_RequestReloadTextManager()
@@ -78,6 +91,12 @@ namespace SM64_ROM_Manager
         private void Controller_TextItemChanged(TextItemEventArgs e)
         {
             UpdateListViewItem(e.ItemIndex);
+            ShowCurTableBytes();
+        }
+
+        private void Controller_ManyTextItemsChanged()
+        {
+            UpdateAllListViewItems();
             ShowCurTableBytes();
         }
 
@@ -186,9 +205,11 @@ namespace SM64_ROM_Manager
         public void LoadTableEntries()
         {
             string tableName;
+
             var nameList = Array.Empty<string>();
             var col1 = ListViewEx_TM_TableEntries.Columns[1];
             var col2 = ListViewEx_TM_TableEntries.Columns[2];
+
             if (TabStrip_TextTable.Tabs.Count == 0) // First Init
             {
                 LoadTextProfileList();
@@ -199,12 +220,16 @@ namespace SM64_ROM_Manager
             TMController.StatusText = Form_Main_Resources.Status_LoadingTexts;
             TMController.LoadTextGroup(tableName);
             TMController.StatusText = Form_Main_Resources.Status_CreatingTextList;
+
             ListViewEx_TM_TableEntries.SuspendLayout();
             ListViewEx_TM_TableEntries.Items.Clear();
+
             string infos = TMController.GetTextGroupInfos(tableName).name;
             nameList = TMController.GetTextNameList(tableName);
+
             for (int i = 0, loopTo = TMController.GetTextGroupEntriesCount(tableName) - 1; i <= loopTo; i++)
                 AddTextListViewItem(tableName, i, nameList);
+
             if (nameList.Any())
             {
                 if (col1.Tag is object)
@@ -239,11 +264,10 @@ namespace SM64_ROM_Manager
             var itemInfos = TMController.GetTextItemInfos(tableName, tableIndex);
             string nameEntry = null;
             if (nameList.Count() > tableIndex)
-            {
                 nameEntry = nameList[tableIndex];
-            }
 
-            var newItem = new ListViewItem(new string[] { tableIndex.ToString(), nameEntry, itemInfos.text.Split(new[] { ControlChars.Cr, ControlChars.Lf }).FirstOrDefault() });
+            var newItem = new ListViewItem(new string[] { tableIndex.ToString(), string.Empty, string.Empty });
+            UpdateListViewItem(newItem, nameEntry, itemInfos.text, false);
             ListViewEx_TM_TableEntries.Items.Add(newItem);
         }
 
@@ -251,7 +275,22 @@ namespace SM64_ROM_Manager
         {
             var lvi = ListViewEx_TM_TableEntries.Items[index];
             var infos = TMController.GetTextItemInfos(GetSelectedIndicies().tableName, index);
-            lvi.SubItems[2].Text = infos.text;
+            UpdateListViewItem(lvi, infos.dialogDescription, infos.text, refresh);
+        }
+
+        private void UpdateListViewItem(ListViewItem lvi, string dialogDescription, string itemText, bool refresh = true)
+        {
+            if (string.IsNullOrEmpty(itemText))
+                itemText = "-";
+            else
+            {
+                var sr = new StringReader(itemText);
+                itemText = sr.ReadLine();
+                sr.Dispose();
+            }
+            lvi.SubItems[2].Text = itemText;
+            if (dialogDescription is string)
+                lvi.SubItems[1].Text = dialogDescription;
             if (refresh)
                 ListViewEx_TM_TableEntries.Refresh();
         }
@@ -259,7 +298,7 @@ namespace SM64_ROM_Manager
         private void UpdateAllListViewItems()
         {
             for (int i = 0, loopTo = ListViewEx_TM_TableEntries.Items.Count - 1; i <= loopTo; i++)
-                UpdateListViewItem(Conversions.ToInteger(false));
+                UpdateListViewItem(i, false);
             ListViewEx_TM_TableEntries.Refresh();
         }
 
@@ -313,10 +352,11 @@ namespace SM64_ROM_Manager
             if (!TM_LoadingItem && !TMController.IsChangingTab())
             {
                 var selIndicies = GetSelectedIndicies();
-                SM64Lib.Text.DialogVerticalPosition vPos = (SM64Lib.Text.DialogVerticalPosition)GetValueFromComboBox(ComboBoxEx_TM_DialogPosX.Text.Trim(), typeof(SM64Lib.Text.DialogVerticalPosition));
-                SM64Lib.Text.DialogHorizontalPosition hPos = (SM64Lib.Text.DialogHorizontalPosition)GetValueFromComboBox(ComboBoxEx_TM_DialogPosY.Text.Trim(), typeof(SM64Lib.Text.DialogHorizontalPosition));
+                var vPos = (DialogVerticalPosition)GetValueFromComboBox(ComboBoxEx_TM_DialogPosX.Text.Trim(), typeof(DialogVerticalPosition));
+                var hPos = (DialogHorizontalPosition)GetValueFromComboBox(ComboBoxEx_TM_DialogPosY.Text.Trim(), typeof(DialogHorizontalPosition));
+                var soundEffect = (DialogSoundEffect)((ComboItem)ComboBoxEx_SoundEffect.SelectedItem).Tag;
                 int linesPerSite = IntegerInput_TM_DialogSize.Value;
-                TMController.SetTextItemDialogData(selIndicies.tableName, selIndicies.tableIndex, vPos, hPos, linesPerSite);
+                TMController.SetTextItemDialogData(selIndicies.tableName, selIndicies.tableIndex, vPos, hPos, soundEffect, linesPerSite);
             }
         }
 
@@ -368,35 +408,71 @@ namespace SM64_ROM_Manager
             if (!string.IsNullOrEmpty(selectedIndicies.tableName) && selectedIndicies.tableIndex > -1)
             {
                 TM_LoadingItem = true;
+
                 var groupInfo = TMController.GetTextGroupInfos(selectedIndicies.tableName);
                 var itemInfo = TMController.GetTextItemInfos(selectedIndicies.tableName, selectedIndicies.tableIndex);
+
                 TextBoxX_TM_TextEditor.Text = itemInfo.text;
+
+                var isDescNull = itemInfo.dialogDescription == null;
+                TextBoxX_ItemDescription.ReadOnly = isDescNull && !TMController.UsingDefaultTextProfileInfo();
+                if (isDescNull)
+                    TextBoxX_ItemDescription.Text = TMController.GetTextNameList(selectedIndicies.tableName).ElementAtOrDefault(selectedIndicies.tableIndex);
+                else
+                    TextBoxX_ItemDescription.Text = itemInfo.dialogDescription;
+
                 if (groupInfo.isDialogGroup)
                 {
                     IntegerInput_TM_DialogSize.Value = itemInfo.linesPerSite;
+
                     int vIndex = Array.IndexOf(Enum.GetValues(typeof(SM64Lib.Text.DialogVerticalPosition)), itemInfo.verticalPosition);
                     if (vIndex >= 0)
-                    {
                         ComboBoxEx_TM_DialogPosX.SelectedIndex = vIndex;
-                    }
                     else
-                    {
                         ComboBoxEx_TM_DialogPosX.Text = TextValueConverter.TextFromValue((long)itemInfo.verticalPosition);
-                    }
 
                     int hIndex = Array.IndexOf(Enum.GetValues(typeof(SM64Lib.Text.DialogHorizontalPosition)), itemInfo.horizontalPosition);
                     if (hIndex >= 0)
-                    {
                         ComboBoxEx_TM_DialogPosY.SelectedIndex = hIndex;
-                    }
                     else
-                    {
                         ComboBoxEx_TM_DialogPosY.Text = TextValueConverter.TextFromValue((long)itemInfo.horizontalPosition);
+
+                    foreach (ComboItem cbitem in ComboBoxEx_SoundEffect.Items)
+                    {
+                        if ((DialogSoundEffect)cbitem.Tag == itemInfo.soundEffect)
+                            ComboBoxEx_SoundEffect.SelectedItem = cbitem;
                     }
                 }
 
                 TM_LoadingItem = false;
             }
+        }
+
+        private async void ExportTextTables(bool currentOnly)
+        {
+            var sfd_ExportTextTable = new SaveFileDialog
+            {
+                Filter = "Text file (*.txt)|*.txt|Excel file (*.xlsx)|*.xlsx"
+            };
+
+            if (sfd_ExportTextTable.ShowDialog(this) == DialogResult.OK)
+            {
+                if (currentOnly)
+                    await TMController.ExportTextTable(sfd_ExportTextTable.FileName, GetSelectedIndicies().tableName);
+                else
+                    await TMController.ExportAllTextTables(sfd_ExportTextTable.FileName);
+            }
+        }
+
+        private async void ImportTextTables()
+        {
+            var ofd_ExportTextTable = new OpenFileDialog
+            {
+                Filter = "Excel file (*.xlsx)|*.xlsx"
+            };
+
+            if (ofd_ExportTextTable.ShowDialog(this) == DialogResult.OK)
+                await TMController.ImportTextTables(ofd_ExportTextTable.FileName);
         }
 
         private void TabStrip1_SelectedTabChanged(object sender, TabStripTabChangedEventArgs e)
@@ -465,6 +541,40 @@ namespace SM64_ROM_Manager
                     TMController.SetCurrentTextProfileName(Conversions.ToString(ci.Tag));
                 }
             }
+        }
+
+        private void ButtonItem_ClearAllItems_Click(object sender, EventArgs e)
+        {
+            TMController.ClearTextItems(GetSelectedIndicies().tableName);
+        }
+
+        private void TextBoxX_ItemDescription_TextChanged(object sender, EventArgs e)
+        {
+            if (!TM_LoadingItem)
+            {
+                var sels = GetSelectedIndicies();
+                TMController.SetDialogItemDescription(sels.tableName, sels.tableIndex, TextBoxX_ItemDescription.Text.Trim());
+            }
+        }
+
+        private void ComboBoxEx_SoundEffect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SaveItemDialogData();
+        }
+
+        private void ButtonItem_ExportCurTable_Click(object sender, EventArgs e)
+        {
+            ExportTextTables(true);   
+        }
+
+        private void ButtonItem_ExportAllTables_Click(object sender, EventArgs e)
+        {
+            ExportTextTables(false);
+        }
+
+        private void ButtonItem_ImportFrom_Click(object sender, EventArgs e)
+        {
+            ImportTextTables();
         }
     }
 }

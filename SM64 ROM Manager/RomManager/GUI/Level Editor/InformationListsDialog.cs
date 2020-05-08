@@ -16,6 +16,7 @@ namespace SM64_ROM_Manager.LevelEditor
     public partial class InformationListDialog
     {
         private ObjectComboList avaiableCombos = null;
+        private BehaviorInfoList avaiableBehaviors = null;
         private EditModes editMode;
         private bool finishedLoading = false;
         private readonly List<BaseItem> objComboListItems = new List<BaseItem>();
@@ -38,13 +39,14 @@ namespace SM64_ROM_Manager.LevelEditor
 
         // C O N S T R U C T O R S
 
-        public InformationListDialog(EditModes editMode) : this(editMode, null)
+        public InformationListDialog(EditModes editMode) : this(editMode, null, null)
         {
         }
 
-        public InformationListDialog(EditModes editMode, ObjectComboList avaiableCombos)
+        public InformationListDialog(EditModes editMode, ObjectComboList avaiableCombos, BehaviorInfoList avaiableBehaviors)
         {
             this.avaiableCombos = avaiableCombos;
+            this.avaiableBehaviors = avaiableBehaviors;
             InitializeComponent();
             SetUpPropertyGrid();
             this.editMode = editMode;
@@ -329,26 +331,22 @@ namespace SM64_ROM_Manager.LevelEditor
             foreach (object obj in CurrentCustomObjectList)
                 itemsList.Add(GetItemFrom(obj));
 
-            if (!EnableEdit && avaiableCombos is object)
+            if (!EnableEdit)
             {
-                foreach (ObjectCombo combo in avaiableCombos)
+                if (EnableObjCombos && avaiableCombos is object)
                 {
-                    if (EnableObjCombos)
+                    foreach (ObjectCombo combo in avaiableCombos)
                     {
                         if (!General.ObjectCombos.Contains(combo) && !General.ObjectCombosCustom.Contains(combo))
                             itemsList.Add(GetItemFrom(combo));
                     }
-                    else
+                }
+                else if (EnableBehavs && avaiableBehaviors is object)
+                {
+                    foreach (BehaviorInfo behav in avaiableBehaviors)
                     {
-                        if (General.BehaviorInfos.GetByBehaviorAddress(combo.BehaviorAddress) == null &&
-                            General.BehaviorInfosCustom.GetByBehaviorAddress(combo.BehaviorAddress) == null)
-                        {
-                            itemsList.Add(GetItemFrom(new BehaviorInfo
-                            {
-                                BehaviorAddress = combo.BehaviorAddress,
-                                Name = combo.Name
-                            }));
-                        }
+                        if (!General.BehaviorInfos.Contains(behav) && !General.BehaviorInfosCustom.Contains(behav))
+                            itemsList.Add(GetItemFrom(behav));
                     }
                 }
             }

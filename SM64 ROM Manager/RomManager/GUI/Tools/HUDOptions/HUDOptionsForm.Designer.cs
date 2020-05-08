@@ -52,8 +52,10 @@ namespace SM64_ROM_Manager
             this.IntegerInput_PosY = new DevComponents.Editors.IntegerInput();
             this.ButtonX_SavePosition = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_RestorePosition = new DevComponents.DotNetBar.ButtonX();
-            this.LayoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.LayoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.ComboBoxEx_Values = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.LayoutControlItem_PosX = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.LayoutControlItem_PosY = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem_ComboBox = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.LayoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
             this.LayoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.LayoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
@@ -141,6 +143,8 @@ namespace SM64_ROM_Manager
             this.AdvTree1.BackgroundStyle.Class = "TreeBorderKey";
             this.AdvTree1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.AdvTree1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdvTree1.DragDropEnabled = false;
+            this.AdvTree1.DragDropNodeCopyEnabled = false;
             this.AdvTree1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.AdvTree1.Location = new System.Drawing.Point(0, 0);
             this.AdvTree1.Name = "AdvTree1";
@@ -177,6 +181,7 @@ namespace SM64_ROM_Manager
             this.LayoutControl1.Controls.Add(this.IntegerInput_PosY);
             this.LayoutControl1.Controls.Add(this.ButtonX_SavePosition);
             this.LayoutControl1.Controls.Add(this.ButtonX_RestorePosition);
+            this.LayoutControl1.Controls.Add(this.ComboBoxEx_Values);
             this.LayoutControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.LayoutControl1.Location = new System.Drawing.Point(312, 0);
             this.LayoutControl1.Name = "LayoutControl1";
@@ -184,8 +189,9 @@ namespace SM64_ROM_Manager
             // 
             // 
             this.LayoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] {
-            this.LayoutControlItem1,
-            this.LayoutControlItem2,
+            this.LayoutControlItem_PosX,
+            this.LayoutControlItem_PosY,
+            this.layoutControlItem_ComboBox,
             this.LayoutSpacerItem1,
             this.LayoutControlItem4,
             this.LayoutControlItem3});
@@ -226,12 +232,12 @@ namespace SM64_ROM_Manager
             // 
             this.ButtonX_SavePosition.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_SavePosition.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_SavePosition.Location = new System.Drawing.Point(115, 60);
+            this.ButtonX_SavePosition.Location = new System.Drawing.Point(115, 88);
             this.ButtonX_SavePosition.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonX_SavePosition.Name = "ButtonX_SavePosition";
-            this.ButtonX_SavePosition.Size = new System.Drawing.Size(75, 24);
+            this.ButtonX_SavePosition.Size = new System.Drawing.Size(75, 23);
             this.ButtonX_SavePosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_SavePosition.TabIndex = 4;
+            this.ButtonX_SavePosition.TabIndex = 5;
             this.ButtonX_SavePosition.Text = "Save";
             this.ButtonX_SavePosition.Click += new System.EventHandler(this.ButtonX_SavePosition_Click);
             // 
@@ -239,38 +245,63 @@ namespace SM64_ROM_Manager
             // 
             this.ButtonX_RestorePosition.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_RestorePosition.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_RestorePosition.Location = new System.Drawing.Point(32, 60);
+            this.ButtonX_RestorePosition.Location = new System.Drawing.Point(32, 88);
             this.ButtonX_RestorePosition.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonX_RestorePosition.Name = "ButtonX_RestorePosition";
-            this.ButtonX_RestorePosition.Size = new System.Drawing.Size(75, 24);
+            this.ButtonX_RestorePosition.Size = new System.Drawing.Size(75, 23);
             this.ButtonX_RestorePosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_RestorePosition.TabIndex = 3;
+            this.ButtonX_RestorePosition.TabIndex = 4;
             this.ButtonX_RestorePosition.Text = "Restore";
             this.ButtonX_RestorePosition.Click += new System.EventHandler(this.ButtonX_RestorePosition_Click);
             // 
-            // LayoutControlItem1
+            // ComboBoxEx_Values
             // 
-            this.LayoutControlItem1.Control = this.IntegerInput_PosX;
-            this.LayoutControlItem1.Height = 28;
-            this.LayoutControlItem1.MinSize = new System.Drawing.Size(64, 18);
-            this.LayoutControlItem1.Name = "LayoutControlItem1";
-            this.LayoutControlItem1.Text = "X:";
-            this.LayoutControlItem1.Width = 100;
-            this.LayoutControlItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            this.ComboBoxEx_Values.DisplayMember = "Text";
+            this.ComboBoxEx_Values.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxEx_Values.FormattingEnabled = true;
+            this.ComboBoxEx_Values.ItemHeight = 14;
+            this.ComboBoxEx_Values.Location = new System.Drawing.Point(4, 60);
+            this.ComboBoxEx_Values.Margin = new System.Windows.Forms.Padding(0);
+            this.ComboBoxEx_Values.Name = "ComboBoxEx_Values";
+            this.ComboBoxEx_Values.Size = new System.Drawing.Size(186, 20);
+            this.ComboBoxEx_Values.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBoxEx_Values.TabIndex = 2;
             // 
-            // LayoutControlItem2
+            // LayoutControlItem_PosX
             // 
-            this.LayoutControlItem2.Control = this.IntegerInput_PosY;
-            this.LayoutControlItem2.Height = 28;
-            this.LayoutControlItem2.MinSize = new System.Drawing.Size(64, 18);
-            this.LayoutControlItem2.Name = "LayoutControlItem2";
-            this.LayoutControlItem2.Text = "Y:";
-            this.LayoutControlItem2.Width = 100;
-            this.LayoutControlItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            this.LayoutControlItem_PosX.Control = this.IntegerInput_PosX;
+            this.LayoutControlItem_PosX.Height = 28;
+            this.LayoutControlItem_PosX.MinSize = new System.Drawing.Size(64, 18);
+            this.LayoutControlItem_PosX.Name = "LayoutControlItem_PosX";
+            this.LayoutControlItem_PosX.Text = "X:";
+            this.LayoutControlItem_PosX.Visible = false;
+            this.LayoutControlItem_PosX.Width = 100;
+            this.LayoutControlItem_PosX.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // LayoutControlItem_PosY
+            // 
+            this.LayoutControlItem_PosY.Control = this.IntegerInput_PosY;
+            this.LayoutControlItem_PosY.Height = 28;
+            this.LayoutControlItem_PosY.MinSize = new System.Drawing.Size(64, 18);
+            this.LayoutControlItem_PosY.Name = "LayoutControlItem_PosY";
+            this.LayoutControlItem_PosY.Text = "Y:";
+            this.LayoutControlItem_PosY.Visible = false;
+            this.LayoutControlItem_PosY.Width = 100;
+            this.LayoutControlItem_PosY.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem_ComboBox
+            // 
+            this.layoutControlItem_ComboBox.Control = this.ComboBoxEx_Values;
+            this.layoutControlItem_ComboBox.Height = 28;
+            this.layoutControlItem_ComboBox.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem_ComboBox.Name = "layoutControlItem_ComboBox";
+            this.layoutControlItem_ComboBox.Visible = false;
+            this.layoutControlItem_ComboBox.Width = 100;
+            this.layoutControlItem_ComboBox.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // LayoutSpacerItem1
             // 
-            this.LayoutSpacerItem1.Height = 32;
+            this.LayoutSpacerItem1.Height = 31;
             this.LayoutSpacerItem1.Name = "LayoutSpacerItem1";
             this.LayoutSpacerItem1.Width = 99;
             this.LayoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
@@ -278,7 +309,7 @@ namespace SM64_ROM_Manager
             // LayoutControlItem4
             // 
             this.LayoutControlItem4.Control = this.ButtonX_RestorePosition;
-            this.LayoutControlItem4.Height = 32;
+            this.LayoutControlItem4.Height = 31;
             this.LayoutControlItem4.MinSize = new System.Drawing.Size(32, 20);
             this.LayoutControlItem4.Name = "LayoutControlItem4";
             this.LayoutControlItem4.Width = 83;
@@ -391,7 +422,7 @@ namespace SM64_ROM_Manager
 
         private DevComponents.Editors.IntegerInput IntegerInput_PosY;
 
-        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem2;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem_PosY;
 
         private DevComponents.DotNetBar.ButtonX ButtonX_SavePosition;
 
@@ -405,11 +436,12 @@ namespace SM64_ROM_Manager
 
         private DevComponents.Editors.IntegerInput IntegerInput_PosX;
 
-        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem_PosX;
 
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ImportPosFromFile;
 
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportPosToFile;
-
+        private DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx_Values;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem_ComboBox;
     }
 }

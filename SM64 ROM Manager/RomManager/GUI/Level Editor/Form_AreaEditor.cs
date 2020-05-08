@@ -65,6 +65,7 @@ namespace SM64_ROM_Manager.LevelEditor
         internal Dictionary<byte, Renderer> ObjectModels { get; private set; } = new Dictionary<byte, Renderer>();
         internal Dictionary<ManagedSpecialBox, Renderer> SpecialBoxRenderers { get; private set; } = new Dictionary<ManagedSpecialBox, Renderer>();
         internal ObjectComboList MyObjectCombos { get; private set; } = new ObjectComboList();
+        internal BehaviorInfoList MyBehaviorInfos { get; private set; } = new BehaviorInfoList();
         internal Dictionary<byte, object> ObjectModelsToParse { get; private set; } = new Dictionary<byte, object>();
         internal List<string> MyLevelsList { get; private set; } = new List<string>();
         internal List<byte> KnownModelIDs { get; private set; } = new List<byte>();
@@ -335,7 +336,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
             // Init Object Properties Helper
             PropertyTree = AdvPropertyGrid1.PropertyTree;
-            bpMgr = new AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid1, MyObjectCombos, nameof(Managed3DObject.BehaviorID), "BParam");
+            bpMgr = new AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid1, MyObjectCombos, MyBehaviorInfos, nameof(Managed3DObject.BehaviorID), "BParam");
 
             // Get the PropertyTree of AdvPropertyGrid1
             PropertyTree = AdvPropertyGrid1.PropertyTree;
@@ -367,6 +368,7 @@ namespace SM64_ROM_Manager.LevelEditor
             General.LoadObjectCombosIfEmpty();
             await LoadObjectModels();
             LoadOtherObjectCombos();
+            LoadOtherBehaviorInfos();
             SortObjectCombosAlphabetlicly();
             LoadComboBoxObjComboEntries();
             LoadLevelsStringList();
@@ -407,19 +409,95 @@ namespace SM64_ROM_Manager.LevelEditor
             MyObjectCombos.AddRange(BuildObjectCombos(Rommgr.CustomObjects));
         }
 
+        internal void LoadOtherBehaviorInfos()
+        {
+            MyBehaviorInfos.AddRange(General.BehaviorInfos.Concat(General.BehaviorInfosCustom));
+            MyBehaviorInfos.AddRange(BuildBehaviorInfos(Rommgr.CustomObjects));
+        }
+
         internal static ObjectComboList BuildObjectCombos(CustomObjectCollection customObjectCollection)
         {
             var list = new ObjectComboList();
 
-            foreach (var customObject in customObjectCollection.CustomObjects)
+            if (customObjectCollection?.CustomObjects is object)
             {
-                var combo = new ObjectCombo
+                foreach (var customObject in customObjectCollection.CustomObjects)
                 {
-                    Name = customObject.Name,
-                    BehaviorAddress = (uint)customObject.BehaviorProps.BehaviorAddress,
-                    ModelID = customObject.ModelProps.ModelID
-                };
-                list.Add(combo);
+                    // Create Object Combo
+                    var combo = new ObjectCombo
+                    {
+                        Name = customObject.Name,
+                        BehaviorAddress = (uint)customObject.BehaviorProps.BehaviorAddress,
+                        ModelID = customObject.ModelProps.ModelID
+                    };
+
+                    // Copy B. Params
+                    void cpBPToCombo(SM64Lib.Behaviors.BehaviorParamInfo source, ObjectCombo.BParam destination)
+                    {
+                        if (source is object && destination is object)
+                        {
+                            destination.Name = source.Name;
+                            destination.Description = source.Description;
+                        }
+                    }
+                    if (!customObject.BehaviorProps.UseCustomAddress && customObject.BehaviorProps.Behavior is object)
+                    {
+                        cpBPToCombo(customObject.BehaviorProps.Behavior.ParamsInfo?.Param1, combo.BParam1);
+                        cpBPToCombo(customObject.BehaviorProps.Behavior.ParamsInfo?.Param2, combo.BParam2);
+                        cpBPToCombo(customObject.BehaviorProps.Behavior.ParamsInfo?.Param3, combo.BParam3);
+                        cpBPToCombo(customObject.BehaviorProps.Behavior.ParamsInfo?.Param4, combo.BParam4);
+                    }
+
+                    // Add to List
+                    list.Add(combo);
+                }
+            }
+
+            return list;
+        }
+
+        internal static BehaviorInfoList BuildBehaviorInfos(CustomObjectCollection customObjectCollection)
+        {
+            var list = new BehaviorInfoList();
+
+            if (customObjectCollection?.CustomObjects is object)
+            {
+                foreach (var customObject in customObjectCollection.CustomObjects)
+                {
+                    if (!customObject.BehaviorProps.UseCustomAddress && customObject.BehaviorProps.Behavior is object)
+                    {
+                        // Create Behavior Info
+                        var behavInfo = new BehaviorInfo
+                        {
+                            Name = customObject.BehaviorProps.Behavior.Name,
+                            BehaviorAddress = (uint)customObject.BehaviorProps.BehaviorAddress
+                        };
+
+                        // Copy B. Params
+                        void cpBPToBehavior(SM64Lib.Behaviors.BehaviorParamInfo source, BehaviorInfo.BParam destination)
+                        {
+                            if (source is object && destination is object)
+                            {
+                                destination.Name = source.Name;
+                                foreach (var srcVals in source.Values)
+                                {
+                                    destination.Values.Add(new BehaviorInfo.BParamValue
+                                    {
+                                        Name = srcVals.Name,
+                                        Value = srcVals.Value
+                                    });
+                                }
+                            }
+                        }
+                        cpBPToBehavior(customObject.BehaviorProps.Behavior.ParamsInfo?.Param1, behavInfo.BParam1);
+                        cpBPToBehavior(customObject.BehaviorProps.Behavior.ParamsInfo?.Param2, behavInfo.BParam2);
+                        cpBPToBehavior(customObject.BehaviorProps.Behavior.ParamsInfo?.Param3, behavInfo.BParam3);
+                        cpBPToBehavior(customObject.BehaviorProps.Behavior.ParamsInfo?.Param4, behavInfo.BParam4);
+
+                        // Add to List
+                        list.Add(behavInfo);
+                    }
+                }
             }
 
             return list;
@@ -582,8 +660,8 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             if (isDeactivated)
             {
-                maps.CheckAndLoadNew();
                 isDeactivated = false;
+                maps.CheckAndLoadNew();
             }
         }
 
@@ -2257,7 +2335,7 @@ namespace SM64_ROM_Manager.LevelEditor
             var objs = SelectedObjects;
             if (objs.Any())
             {
-                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableObjComboTab, MyObjectCombos);
+                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableObjComboTab, MyObjectCombos, null);
                 dialog.SelectedObjectCombo = MyObjectCombos.GetObjectComboOfObject(objs.First());
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
@@ -2279,8 +2357,8 @@ namespace SM64_ROM_Manager.LevelEditor
             var objs = SelectedObjects;
             if (objs.Any())
             {
-                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableBehavTab, MyObjectCombos);
-                dialog.SelectedBehavior = General.BehaviorInfos.GetByBehaviorAddress(objs.First().BehaviorID);
+                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableBehavTab, null, MyBehaviorInfos);
+                dialog.SelectedBehavior = MyBehaviorInfos.GetByBehaviorAddress(objs.First().BehaviorID);
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     // Store History Point
@@ -2824,7 +2902,7 @@ namespace SM64_ROM_Manager.LevelEditor
             var obj = SelectedObject;
             if (obj is object)
             {
-                var info = General.BehaviorInfos.GetByBehaviorAddress(obj.BehaviorID);
+                var info = MyBehaviorInfos.GetByBehaviorAddress(obj.BehaviorID);
                 for (byte i = 1; i <= 4; i++)
                 {
                     Node n = AdvPropertyGrid1.GetPropertyNode($"BParam{i}");

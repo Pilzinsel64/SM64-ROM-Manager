@@ -1,5 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Skip the screen which displays Mario's face and the title in the background. Also applies to the screen displayed after losing all lives. (Console Compatible version from SM64e 2.1)</description><patch>// Second Screen
-269F4C: 34 04 00 00 01 10 00 14 00 26 9E A0 00 26 A3 A0 14 00 02 0C
-
-// Game Over
-269FD8: 34 04 00 00 01 10 00 14 00 26 9E A0 00 26 A3 A0 14 00 02 0C</patch></m64tweak>

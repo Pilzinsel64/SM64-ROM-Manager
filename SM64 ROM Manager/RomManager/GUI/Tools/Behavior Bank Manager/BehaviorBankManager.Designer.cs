@@ -46,9 +46,25 @@ namespace SM64_ROM_Manager
             this.TextBoxX_BehavName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX_BehavColPtr = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.checkBoxX_BehavEnableColPtr = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.ListViewEx_CustomAsmFunctions = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ButtonX_AddCustomAsmFunction = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_RemoveCustomAsmFunction = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_LoopCustomAsmFunction = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_EditParamInfos = new DevComponents.DotNetBar.ButtonX();
             this.layoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutSpacerItem2 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
+            this.layoutControlItem8 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutSpacerItem3 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
+            this.layoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
+            this.layoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutGroup1 = new DevComponents.DotNetBar.Layout.LayoutGroup();
+            this.layoutControlItem5 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem6 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem7 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.TabItem_BehavProps = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.ButtonX_SaveScript = new DevComponents.DotNetBar.ButtonX();
@@ -202,6 +218,11 @@ namespace SM64_ROM_Manager
             this.layoutControl1.Controls.Add(this.TextBoxX_BehavName);
             this.layoutControl1.Controls.Add(this.textBoxX_BehavColPtr);
             this.layoutControl1.Controls.Add(this.checkBoxX_BehavEnableColPtr);
+            this.layoutControl1.Controls.Add(this.ListViewEx_CustomAsmFunctions);
+            this.layoutControl1.Controls.Add(this.ButtonX_AddCustomAsmFunction);
+            this.layoutControl1.Controls.Add(this.ButtonX_RemoveCustomAsmFunction);
+            this.layoutControl1.Controls.Add(this.ButtonX_LoopCustomAsmFunction);
+            this.layoutControl1.Controls.Add(this.ButtonX_EditParamInfos);
             resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.ForeColor = System.Drawing.Color.Black;
             this.layoutControl1.Name = "layoutControl1";
@@ -211,7 +232,13 @@ namespace SM64_ROM_Manager
             this.layoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutSpacerItem2,
+            this.layoutControlItem8,
+            this.layoutSpacerItem3,
+            this.layoutSpacerItem1,
+            this.layoutControlItem4,
+            this.layoutGroup1});
             // 
             // TextBoxX_BehavName
             // 
@@ -257,6 +284,73 @@ namespace SM64_ROM_Manager
             this.checkBoxX_BehavEnableColPtr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX_BehavEnableColPtr.CheckedChanged += new System.EventHandler(this.CheckBoxX_BehavEnableColPtr_CheckedChanged);
             // 
+            // ListViewEx_CustomAsmFunctions
+            // 
+            // 
+            // 
+            // 
+            this.ListViewEx_CustomAsmFunctions.Border.Class = "ListViewBorder";
+            this.ListViewEx_CustomAsmFunctions.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ListViewEx_CustomAsmFunctions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.ListViewEx_CustomAsmFunctions.DisabledBackColor = System.Drawing.Color.Empty;
+            this.ListViewEx_CustomAsmFunctions.FullRowSelect = true;
+            this.ListViewEx_CustomAsmFunctions.HideSelection = false;
+            resources.ApplyResources(this.ListViewEx_CustomAsmFunctions, "ListViewEx_CustomAsmFunctions");
+            this.ListViewEx_CustomAsmFunctions.Name = "ListViewEx_CustomAsmFunctions";
+            this.ListViewEx_CustomAsmFunctions.UseCompatibleStateImageBehavior = false;
+            this.ListViewEx_CustomAsmFunctions.View = System.Windows.Forms.View.Details;
+            this.ListViewEx_CustomAsmFunctions.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_CustomAsmFunctions_SelectedIndexChanged);
+            // 
+            // columnHeader3
+            // 
+            resources.ApplyResources(this.columnHeader3, "columnHeader3");
+            // 
+            // columnHeader4
+            // 
+            resources.ApplyResources(this.columnHeader4, "columnHeader4");
+            // 
+            // ButtonX_AddCustomAsmFunction
+            // 
+            this.ButtonX_AddCustomAsmFunction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_AddCustomAsmFunction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_AddCustomAsmFunction.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            resources.ApplyResources(this.ButtonX_AddCustomAsmFunction, "ButtonX_AddCustomAsmFunction");
+            this.ButtonX_AddCustomAsmFunction.Name = "ButtonX_AddCustomAsmFunction";
+            this.ButtonX_AddCustomAsmFunction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_AddCustomAsmFunction.Click += new System.EventHandler(this.ButtonX_AddCustomAsmFunction_Click);
+            // 
+            // ButtonX_RemoveCustomAsmFunction
+            // 
+            this.ButtonX_RemoveCustomAsmFunction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_RemoveCustomAsmFunction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.ButtonX_RemoveCustomAsmFunction, "ButtonX_RemoveCustomAsmFunction");
+            this.ButtonX_RemoveCustomAsmFunction.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonX_RemoveCustomAsmFunction.Name = "ButtonX_RemoveCustomAsmFunction";
+            this.ButtonX_RemoveCustomAsmFunction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_RemoveCustomAsmFunction.Click += new System.EventHandler(this.ButtonX_RemoveCustomAsmFunction_Click);
+            // 
+            // ButtonX_LoopCustomAsmFunction
+            // 
+            this.ButtonX_LoopCustomAsmFunction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_LoopCustomAsmFunction.AutoCheckOnClick = true;
+            this.ButtonX_LoopCustomAsmFunction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.ButtonX_LoopCustomAsmFunction, "ButtonX_LoopCustomAsmFunction");
+            this.ButtonX_LoopCustomAsmFunction.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_repeat_16px;
+            this.ButtonX_LoopCustomAsmFunction.Name = "ButtonX_LoopCustomAsmFunction";
+            this.ButtonX_LoopCustomAsmFunction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_LoopCustomAsmFunction.CheckedChanged += new System.EventHandler(this.ButtonX_LoopCustomAsmFunction_CheckedChanged);
+            // 
+            // ButtonX_EditParamInfos
+            // 
+            this.ButtonX_EditParamInfos.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_EditParamInfos.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.ButtonX_EditParamInfos, "ButtonX_EditParamInfos");
+            this.ButtonX_EditParamInfos.Name = "ButtonX_EditParamInfos";
+            this.ButtonX_EditParamInfos.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_EditParamInfos.Click += new System.EventHandler(this.ButtonX_EditParamInfos_Click);
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.TextBoxX_BehavName;
@@ -283,7 +377,89 @@ namespace SM64_ROM_Manager
             this.layoutControlItem3.Height = 28;
             this.layoutControlItem3.MinSize = new System.Drawing.Size(64, 18);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Width = 100;
+            this.layoutControlItem3.Width = 80;
+            // 
+            // layoutSpacerItem2
+            // 
+            this.layoutSpacerItem2.Height = 28;
+            this.layoutSpacerItem2.Name = "layoutSpacerItem2";
+            this.layoutSpacerItem2.Width = 1;
+            this.layoutSpacerItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.ButtonX_EditParamInfos;
+            this.layoutControlItem8.Height = 31;
+            this.layoutControlItem8.MinSize = new System.Drawing.Size(32, 20);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            resources.ApplyResources(this.layoutControlItem8, "layoutControlItem8");
+            this.layoutControlItem8.TextPadding = new System.Windows.Forms.Padding(0, 5, 0, -5);
+            this.layoutControlItem8.Width = 200;
+            // 
+            // layoutSpacerItem3
+            // 
+            this.layoutSpacerItem3.Height = 31;
+            this.layoutSpacerItem3.Name = "layoutSpacerItem3";
+            this.layoutSpacerItem3.Width = 99;
+            this.layoutSpacerItem3.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutSpacerItem1
+            // 
+            this.layoutSpacerItem1.Height = 31;
+            this.layoutSpacerItem1.Name = "layoutSpacerItem1";
+            this.layoutSpacerItem1.Width = 100;
+            this.layoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.ListViewEx_CustomAsmFunctions;
+            this.layoutControlItem4.Height = 100;
+            this.layoutControlItem4.HeightType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.SharedTextSizeEnabled = false;
+            resources.ApplyResources(this.layoutControlItem4, "layoutControlItem4");
+            this.layoutControlItem4.TextPosition = DevComponents.DotNetBar.Layout.eLayoutPosition.Top;
+            this.layoutControlItem4.Width = 99;
+            this.layoutControlItem4.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutGroup1
+            // 
+            this.layoutGroup1.Height = 120;
+            this.layoutGroup1.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] {
+            this.layoutControlItem5,
+            this.layoutControlItem6,
+            this.layoutControlItem7});
+            this.layoutGroup1.MinSize = new System.Drawing.Size(120, 32);
+            this.layoutGroup1.Name = "layoutGroup1";
+            this.layoutGroup1.TextPosition = DevComponents.DotNetBar.Layout.eLayoutPosition.Top;
+            this.layoutGroup1.Width = 50;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.ButtonX_AddCustomAsmFunction;
+            this.layoutControlItem5.Height = 31;
+            this.layoutControlItem5.MinSize = new System.Drawing.Size(32, 20);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Width = 100;
+            this.layoutControlItem5.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.ButtonX_RemoveCustomAsmFunction;
+            this.layoutControlItem6.Height = 31;
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(32, 20);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Width = 100;
+            this.layoutControlItem6.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.ButtonX_LoopCustomAsmFunction;
+            this.layoutControlItem7.Height = 31;
+            this.layoutControlItem7.MinSize = new System.Drawing.Size(32, 20);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Width = 112;
             // 
             // TabItem_BehavProps
             // 
@@ -401,5 +577,21 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.Validator.Highlighter highlighter_Script;
         private DevComponents.DotNetBar.LabelItem labelItem1;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_NewBehav_SolidObject;
+        private DevComponents.DotNetBar.Layout.LayoutSpacerItem layoutSpacerItem1;
+        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_CustomAsmFunctions;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private DevComponents.DotNetBar.ButtonX ButtonX_AddCustomAsmFunction;
+        private DevComponents.DotNetBar.ButtonX ButtonX_RemoveCustomAsmFunction;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem4;
+        private DevComponents.DotNetBar.Layout.LayoutGroup layoutGroup1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem5;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem6;
+        private DevComponents.DotNetBar.ButtonX ButtonX_LoopCustomAsmFunction;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem7;
+        private DevComponents.DotNetBar.Layout.LayoutSpacerItem layoutSpacerItem2;
+        private DevComponents.DotNetBar.ButtonX ButtonX_EditParamInfos;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem8;
+        private DevComponents.DotNetBar.Layout.LayoutSpacerItem layoutSpacerItem3;
     }
 }

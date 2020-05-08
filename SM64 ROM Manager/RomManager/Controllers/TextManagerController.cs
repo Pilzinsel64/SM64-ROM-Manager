@@ -10,6 +10,9 @@ using global::SM64_ROM_Manager.EventArguments;
 using global::SM64Lib;
 using global::SM64Lib.Text;
 using global::SM64Lib.Text.Profiles;
+using Z.Collections.Extensions;
+using System.Threading.Tasks;
+using SM64Lib.Text.Exporters;
 
 namespace SM64_ROM_Manager
 {
@@ -53,6 +56,9 @@ namespace SM64_ROM_Manager
         public event TextItemChangedEventHandler TextItemChanged;
         public delegate void TextItemChangedEventHandler(TextItemEventArgs e);
 
+        public event ManyTextItemsChangedEventHandler ManyTextItemsChanged;
+        public delegate void ManyTextItemsChangedEventHandler();
+
         public event TextItemAddedEventHandler TextItemAdded;
         public delegate void TextItemAddedEventHandler(TextItemEventArgs e);
 
@@ -67,6 +73,8 @@ namespace SM64_ROM_Manager
         private string dialogNamesFilePath = string.Empty;
         private bool forceUppercaseForActAndLevelNames = true;
         private bool autoDetectStartEndQuotationMarks = true;
+        private List<RomManager> knownRomManagers = new List<RomManager>();
+        private bool needToSaveCurrentTextProfileInfo = false;
 
         // P r o p e r t i e s
 
@@ -122,7 +130,21 @@ namespace SM64_ROM_Manager
                     M64TextEncoding.AutoDetectStartEndQuotationMarks = AutoDetectStartEndQuotationMarks;
                 }
 
+                if (!knownRomManagers.Contains(e.RomManager))
+                {
+                    knownRomManagers.Add(e.RomManager);
+                    e.RomManager.AfterRomSave += RomManager_AfterRomSave;
+                }
+
                 return e.RomManager;
+            }
+        }
+
+        private void RomManager_AfterRomSave(RomManager sender, EventArgs e)
+        {
+            if (needToSaveCurrentTextProfileInfo)
+            {
+                MyTextProfiles.SaveTextProfile(GetCurrentTextProfile());
             }
         }
 
@@ -336,23 +358,37 @@ namespace SM64_ROM_Manager
             RomManager.LoadTextGroup(tableName);
         }
 
+        private void LoadAllTextGroups()
+        {
+            foreach (var tgi in RomManager.TextInfoProfile.AllGroups)
+                RomManager.LoadTextGroup(tgi.Name);
+        }
+
         public int GetTextGroupEntriesCount(string tableName)
         {
             return (int)RomManager.LoadTextGroup(tableName)?.Count;
         }
 
-        public (string text, DialogHorizontalPosition horizontalPosition, DialogVerticalPosition verticalPosition, int linesPerSite) GetTextItemInfos(string tableName, int itemIndex)
+        public (string text, DialogHorizontalPosition horizontalPosition, DialogVerticalPosition verticalPosition, DialogSoundEffect soundEffect, int linesPerSite, string dialogDescription) GetTextItemInfos(string tableName, int itemIndex)
         {
             var item = RomManager.LoadTextGroup(tableName)?.ElementAtOrDefault(itemIndex);
             DialogHorizontalPosition hPos = default;
             DialogVerticalPosition vPos = default;
             int lines = default;
+            string dialogDescription = null;
+            DialogSoundEffect soundEffect = default;
+
             if (item is TextTableDialogItem)
             {
                 TextTableDialogItem dialogItem = (TextTableDialogItem)item;
+
                 hPos = dialogItem.HorizontalPosition;
                 vPos = dialogItem.VerticalPosition;
+                soundEffect = dialogItem.SoundEffect;
                 lines = dialogItem.LinesPerSite;
+
+                if (dialogItem.TextGroupInfo.ItemDescriptionsList.Any())
+                    dialogDescription = dialogItem.TextGroupInfo.ItemDescriptionsList[itemIndex];
             }
 
             if (item is TextTableItem)
@@ -363,31 +399,38 @@ namespace SM64_ROM_Manager
             {
             }
 
-            return (item.Text, hPos, vPos, lines);
+            return (item.Text, hPos, vPos, soundEffect, lines, dialogDescription);
         }
 
         public string[] GetTextNameList(string tableName)
         {
             var group = GetTextGroup(tableName);
             var nameList = new List<string>();
+
             if (group.TextGroupInfo is TextTableGroupInfo)
             {
                 TextTableGroupInfo tg = (TextTableGroupInfo)group.TextGroupInfo;
-                if (!string.IsNullOrEmpty(tg.ItemDescriptions))
-                {
-                    var sr = new StringReader(tg.ItemDescriptions);
-                    string line = sr.ReadLine();
-                    while (!(line is null))
-                    {
-                        nameList.Add(line);
-                        line = sr.ReadLine();
-                    }
-
-                    sr.Close();
-                }
+                nameList.AddRange(tg.ItemDescriptionsList);
             }
 
             return nameList.ToArray();
+        }
+
+        public void SetDialogItemDescription(string tableName, int tableIndex, string description)
+        {
+            var group = GetTextGroup(tableName);
+            var item = group[tableIndex];
+
+            if (item?.TextGroupInfo is TextTableGroupInfo)
+            {
+                var info = (TextTableGroupInfo)item.TextGroupInfo;
+                if (info.ItemDescriptionsList.Count > tableIndex)
+                {
+                    info.ItemDescriptionsList[tableIndex] = description.Trim();
+                    TextItemChanged?.Invoke(new TextItemEventArgs(tableName, tableIndex));
+                    needToSaveCurrentTextProfileInfo = true;
+                }
+            }
         }
 
         public void SetTextItemText(string tableName, int tableIndex, string text)
@@ -399,12 +442,13 @@ namespace SM64_ROM_Manager
             TextItemChanged?.Invoke(new TextItemEventArgs(tableName, tableIndex));
         }
 
-        public void SetTextItemDialogData(string tableName, int tableIndex, DialogVerticalPosition vPos, DialogHorizontalPosition hPos, int linesPerSite)
+        public void SetTextItemDialogData(string tableName, int tableIndex, DialogVerticalPosition vPos, DialogHorizontalPosition hPos, DialogSoundEffect soundEffect, int linesPerSite)
         {
             var group = GetTextGroup(tableName);
             TextTableDialogItem item = (TextTableDialogItem)group[tableIndex];
             item.VerticalPosition = vPos;
             item.HorizontalPosition = hPos;
+            item.SoundEffect = soundEffect;
             item.LinesPerSite = linesPerSite;
             group.NeedToSave = true;
             TextItemChanged?.Invoke(new TextItemEventArgs(Conversions.ToString(tableIndex), tableIndex));
@@ -435,6 +479,17 @@ namespace SM64_ROM_Manager
             var group = GetTextGroup(tableName);
             group.RemoveAt(tableIndex);
             TextItemRemoved?.Invoke(new TextItemEventArgs(tableName, tableIndex));
+        }
+
+        public void ClearTextItems(string tableName)
+        {
+            var group = GetTextGroup(tableName);
+            if (group is object)
+            {
+                foreach (var item in group)
+                    item.Text = string.Empty;
+            }
+            ManyTextItemsChanged?.Invoke();
         }
 
         public IEnumerable<string> GetAllTextProfileNames()
@@ -480,6 +535,46 @@ namespace SM64_ROM_Manager
             }
 
             return prof;
+        }
+
+        public bool UsingDefaultTextProfileInfo()
+        {
+            return GetCurrentTextProfile() == MyTextProfiles.Manager.DefaultTextProfileInfo;
+        }
+
+        public async Task ExportTextTable(string destFilePath, string tableName)
+        {
+            await ExportTextTables(destFilePath, new[] { GetTextGroup(tableName) });
+        }
+
+        public async Task ExportAllTextTables(string destFilePath)
+        {
+            LoadAllTextGroups();
+            await ExportTextTables(destFilePath, RomManager.TextGroups.ToArray());
+        }
+
+        private async Task ExportTextTables(string destFilePath, TextGroup[] groups)
+        {
+            var extLower = Path.GetExtension(destFilePath)?.ToLower();
+            switch (extLower)
+            {
+                case ".txt":
+                    var txtExporter = new TxtExporter();
+                    await txtExporter.Export(destFilePath, groups);
+                    break;
+                case ".xlsx":
+                    var excelExporter = new ExcelExporter();
+                    await excelExporter.Export(destFilePath, groups);
+                    break;
+            }
+        }
+
+        public async Task ImportTextTables(string filePath)
+        {
+            LoadAllTextGroups();
+            var excelExporter = new ExcelExporter();
+            await excelExporter.Import(filePath, RomManager.TextGroups.ToArray());
+            ManyTextItemsChanged?.Invoke();
         }
     }
 }

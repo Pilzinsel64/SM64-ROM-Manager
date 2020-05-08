@@ -10,41 +10,42 @@ using global::FastColoredTextBoxNS;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib;
+using System.Threading.Tasks;
+using SM64Lib.Patching;
+using Pilz.IO;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
     public partial class TweakScriptEditor
     {
 
-        private ObjectCatalog frmObjectCatalog = null;
-
-        // C o n s t r u c t o r s
-
-        public TweakScriptEditor(PatchScript script, RomManager rommgr)
-        {
-            // G u i
-            base.Load += TweakScriptEditor_Load;
-            base.FormClosing += TweakScriptEditor_FormClosing;
-            this.rommgr = rommgr;
-            this.script = script;
-
-            // Create Temp Script
-            CopyScript(script, tempScript);
-            SuspendLayout();
-            InitializeComponent();
-            CodeEditor = new FastColoredTextBox();
-            CodeEditor.Language = Language.Custom;
-            CodeEditor.Dock = DockStyle.Fill;
-            CodeEditor.BorderStyle = BorderStyle.FixedSingle;
-            Panel2.Controls.Add(CodeEditor);
-            base.UpdateAmbientColors();
-            ResumeLayout(false);
-        }
-
         // F i e l d s
 
-        private FastColoredTextBox _CodeEditor;
+        private ObjectCatalog frmObjectCatalog = null;
+        private PatchScript script;
+        private PatchScript tempScript = new PatchScript();
+        private RomManager rommgr;
+        private EmbeddedFilesContainer filesContainer;
+        private bool ntsScript = false;
+        private bool ntsDescription = false;
+        private bool ntsName = false;
+        private bool ntsType = false;
+        private bool ntsReferences = false;
+        private bool runInTestMode = true;
 
+        // P r o p e r t i e s
+
+        public bool WantToSave = false;
+
+        public bool NeedToSave
+        {
+            get
+            {
+                return ntsScript || ntsDescription || ntsName || ntsType || ntsReferences;
+            }
+        }
+
+        private FastColoredTextBox _CodeEditor;
         private FastColoredTextBox CodeEditor
         {
             [MethodImpl(MethodImplOptions.Synchronized)]
@@ -69,26 +70,35 @@ namespace SM64_ROM_Manager.PatchScripts
             }
         }
 
-        private PatchScript script;
-        private PatchScript tempScript = new PatchScript();
-        private RomManager rommgr;
-        private bool ntsScript = false;
-        private bool ntsDescription = false;
-        private bool ntsName = false;
-        private bool ntsType = false;
-        private bool ntsReferences = false;
-        private bool runInTestMode = true;
+        // C o n s t r u c t o r s
 
-        // P r o p e r t i e s
-
-        public bool WantToSave = false;
-
-        public bool NeedToSave
+        public TweakScriptEditor(PatchScript script, RomManager rommgr) : this(script, rommgr, null)
         {
-            get
-            {
-                return ntsScript || ntsDescription || ntsName || ntsType || ntsReferences;
-            }
+        }
+
+        public TweakScriptEditor(PatchScript script, RomManager rommgr, EmbeddedFilesContainer filesContainer)
+        {
+            this.filesContainer = filesContainer;
+
+            // G u i
+            base.Load += TweakScriptEditor_Load;
+            base.FormClosing += TweakScriptEditor_FormClosing;
+            this.rommgr = rommgr;
+            this.script = script;
+
+            // Create Temp Script
+            CopyScript(script, tempScript);
+            SuspendLayout();
+            InitializeComponent();
+            CodeEditor = new FastColoredTextBox();
+            CodeEditor.Language = Language.Custom;
+            CodeEditor.Dock = DockStyle.Fill;
+            CodeEditor.BorderStyle = BorderStyle.FixedSingle;
+            Panel2.Controls.Add(CodeEditor);
+            LayoutControlItem4.Visible = false;
+            layoutControlItem5.Visible = false;
+            base.UpdateAmbientColors();
+            ResumeLayout(false);
         }
 
         // F e a t u r e s
@@ -141,6 +151,57 @@ namespace SM64_ROM_Manager.PatchScripts
             }
         }
 
+        private void LoadEmbeddedFiles()
+        {
+            if (filesContainer is object)
+            {
+                ListViewEx_EmbeddedFiles.BeginUpdate();
+                ListViewEx_EmbeddedFiles.Items.Clear();
+
+                foreach (var fileName in filesContainer.AllFileNames)
+                {
+                    var item =
+                    ListViewEx_EmbeddedFiles.Items.Add(
+                        new ListViewItem(fileName)
+                        {
+                            Tag = fileName
+                        });
+                }
+
+                ListViewEx_EmbeddedFiles.EndUpdate();
+            }
+        }
+
+        private async Task AddEmbeddedFile(string filePath)
+        {
+            var fileName = Path.GetFileName(filePath);
+
+            if (!filesContainer.HasFile(fileName) || MessageBoxEx.Show(this, "The file you are adding does already exist. If you continue the existing embedded file gets overwritten. Do you want to continue?", "Overwrite embedded file", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (await filesContainer.AddFileAsync(fileName, filePath))
+                    LoadEmbeddedFiles();
+            }
+        }
+
+        private void RemoveEmbeddedFile(string fileName)
+        {
+            if (!string.IsNullOrEmpty(fileName))
+                filesContainer.RemoveFile(fileName);
+        }
+
+        private string GetSelectedEmbeddedFile()
+        {
+            var fileName = string.Empty;
+
+            foreach (ListViewItem item in ListViewEx_EmbeddedFiles.SelectedItems)
+            {
+                if (string.IsNullOrEmpty(fileName) && item.Tag is string && !string.IsNullOrEmpty((string)item.Tag))
+                    fileName = (string)item.Tag;
+            }
+
+            return fileName;
+        }
+
         private void LoadAllData()
         {
             TextBoxX_ScriptName.Text = tempScript.Name;
@@ -179,6 +240,7 @@ namespace SM64_ROM_Manager.PatchScripts
             ntsDescription = false;
             ntsType = false;
             LoadReferences();
+            LoadEmbeddedFiles();
         }
 
         private void SaveAllData()
@@ -323,7 +385,7 @@ End Module
         private void TestScript()
         {
             var mgr = new PatchingManager();
-            var res = mgr.CompileScript(tempScript);
+            var res = mgr.CompileScript(tempScript, Publics.General.GetAdditionalReferencedAssemblied());
             string msg = "";
             eTaskDialogIcon icon;
             string title;
@@ -423,6 +485,7 @@ End Module
 
             bool isDotNet = CheckBoxX_CSharpScript.Checked || CheckBoxX_VBScript.Checked;
             LayoutControlItem4.Visible = isDotNet;
+            layoutControlItem5.Visible = isDotNet && filesContainer is object;
             ButtonItem_CheckForErrors.Enabled = isDotNet;
         }
 
@@ -530,6 +593,18 @@ End Module
             }
 
             frmObjectCatalog.Show();
+        }
+
+        private async void ButtonX_AddEmbeddedFile_Click(object sender, EventArgs e)
+        {
+            var ofd_LoadEmbeddedFile = new OpenFileDialog();
+            if (ofd_LoadEmbeddedFile.ShowDialog(this) == DialogResult.OK)
+                await AddEmbeddedFile(ofd_LoadEmbeddedFile.FileName);
+        }
+
+        private void ButtonX_RemoveEmbeddedFile_Click(object sender, EventArgs e)
+        {
+            RemoveEmbeddedFile(GetSelectedEmbeddedFile());
         }
     }
 }
