@@ -11,6 +11,7 @@ using SM64Lib.Objects.ObjectBanks;
 using SM64Lib;
 using static SM64Lib.TextValueConverter.TextValueConverter;
 using Z.Collections.Extensions;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace SM64_ROM_Manager
 {
@@ -29,17 +30,26 @@ namespace SM64_ROM_Manager
 
             InitializeComponent();
 
+            var disableControls = string.Empty;
             TextBoxX_Name.Text = customObject.Name;
-            if (!customObject.ModelProps.UseCustomModelID && customObject.ModelProps.Model is object && import.CustomModels.ContainsKey(customObject.ModelProps.Model))
-                TextBoxX_ModelID.Text = TextFromValue(import.CustomModels[customObject.ModelProps.Model].ModelID);
-            else
+            
+            if (customObject.ModelProps.UseCustomModelID && customObject.ModelProps.ModelID != 0)
             {
-                foreach (Control control in Controls)
+                TextBoxX_ModelID.Text = TextFromValue(customObject.ModelProps.ModelID);
+                disableControls = "mdl_custommdl";
+            }
+            else if (!customObject.ModelProps.UseCustomModelID && customObject.ModelProps.Model is object && import.Data.CustomModels.ContainsKey(customObject.ModelProps.Model))
+                TextBoxX_ModelID.Text = TextFromValue(import.Data.CustomModels[customObject.ModelProps.Model].ModelID);
+            else
+                disableControls = "mdl*";
+
+            if (!string.IsNullOrEmpty(disableControls))
+            {
+                foreach (Control control in panel1.Controls)
                 {
-                    if (control.Tag == "mdl")
+                    if (LikeOperator.LikeString((string)control.Tag, disableControls, Microsoft.VisualBasic.CompareMethod.Text))
                         control.Visible = false;
                 }
-                TextBoxX_Name.Left = Left - 3;
             }
 
             hasInit = true;
@@ -48,7 +58,12 @@ namespace SM64_ROM_Manager
         private void TextBoxX_ModelID_TextChanged(object sender, EventArgs e)
         {
             if (hasInit)
-                import.CustomModels[customObject.ModelProps.Model].ModelID = (byte)ValueFromText(TextBoxX_ModelID.Text);
+            {
+                if (customObject.ModelProps.UseCustomModelID)
+                    customObject.ModelProps.ModelID = (byte)ValueFromText(TextBoxX_ModelID.Text);
+                else
+                    import.Data.CustomModels[customObject.ModelProps.Model].ModelID = (byte)ValueFromText(TextBoxX_ModelID.Text);
+            }
         }
 
         private void ButtonX1_Click(object sender, EventArgs e)

@@ -16,6 +16,8 @@ namespace SM64Lib.Behaviors
         public bool IsVanilla { get; set; } = false;
         public string Name { get; set; } = string.Empty;
         public int FixedLength { get; set; } = -1;
+        public List<CustomAsmAreaLinkOptions> CustomAsmLinks { get; } = new List<CustomAsmAreaLinkOptions>();
+        public BehaviorParamsInfo ParamsInfo { get; } = new BehaviorParamsInfo();
 
         public Behavior FindBehavior()
         {

@@ -19,7 +19,6 @@ namespace SM64_ROM_Manager.ApplyPPF
         {
             if (Assembly.GetExecutingAssembly() == Assembly.GetEntryAssembly())
             {
-                General.SetDPIAware();
                 Settings.SettingsConfigFilePath = Path.Combine(General.MyDataPath, "Settings.json");
                 StyleManager.Style = eStyle.Metro;
                 StyleManager.MetroColorGeneratorParameters = Settings.StyleManager.MetroColorParams;

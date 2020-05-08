@@ -197,6 +197,9 @@
   <data name="IntegerInput_TM_DialogSize.ButtonFreeText.Tooltip" xml:space="preserve">
     <value />
   </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>Sound-Effekt:</value>
+  </data>
   <data name="GroupPanel_TM_DialogProps.Text" xml:space="preserve">
     <value>Dialogeigenschaften</value>
   </data>
@@ -235,5 +238,56 @@
   </data>
   <data name="ButtonItem_CurProfile.Text" xml:space="preserve">
     <value>Profil</value>
+  </data>
+  <data name="ButtonItem_AddTextItem.Text" xml:space="preserve">
+    <value>Neues Item</value>
+  </data>
+  <data name="ButtonItem_RemoveTextItem.Text" xml:space="preserve">
+    <value>Item löschen</value>
+  </data>
+  <data name="ButtonItem_ClearAllItems.Text" xml:space="preserve">
+    <value>Text aller Items leeren</value>
+  </data>
+  <data name="ButtonItem_ExportCurTable.Text" xml:space="preserve">
+    <value>Aktuelle Tabelle exportieren ...</value>
+  </data>
+  <data name="ButtonItem_ExportAllTables.Text" xml:space="preserve">
+    <value>Alle Tabllen exportieren ...</value>
+  </data>
+  <data name="ButtonItem_ImportFrom.Text" xml:space="preserve">
+    <value>Importieren ...</value>
+  </data>
+  <data name="ButtonItem_AddButtons.Text" xml:space="preserve">
+    <value>Knöpfe</value>
+  </data>
+  <data name="ButtonItem9.Text" xml:space="preserve">
+    <value>Pfeile</value>
+  </data>
+  <data name="ButtonItem10.Text" xml:space="preserve">
+    <value>Andere</value>
+  </data>
+  <data name="TextBoxX_ItemDescription.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBoxX_ItemDescription.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_ItemDescription.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_ItemDescription.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_ItemDescription.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBoxX_ItemDescription.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_ItemDescription.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_ItemDescription.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
   </data>
 </root>

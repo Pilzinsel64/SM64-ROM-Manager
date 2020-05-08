@@ -17,7 +17,6 @@ namespace SM64_ROM_Manager
 {
     public partial class Tab_LevelManager
     {
-
         // F l a g s
 
         private bool LM_LoadingAreaList = false;
@@ -338,6 +337,16 @@ namespace SM64_ROM_Manager
             TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_C, 0, 0);
             TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_D, 1, 0);
             TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_9, 2, 0);
+
+            var reverbLevels = Enum.GetValues(typeof(AreaReverbLevel));
+            for (int i = 0; i < reverbLevels.Length; i++)
+            {
+                ComboBoxEx_ReverbLevel.Items.Add(new ComboItem
+                {
+                    Text = i == 0 ? "None" : $"Level {i}",
+                    Tag = reverbLevels.GetValue(i)
+                });
+            }
         }
 
         // F e a t u r e s   &   G U I
@@ -644,7 +653,16 @@ namespace SM64_ROM_Manager
         {
             if (AllowSavingAreaSettings)
             {
-                Controller.SaveLevelAreaSettings(CurrentLevelIndex, CurrentAreaIndex, (SM64Lib.Geolayout.TerrainTypes)ComboBox_LM_TerrainTyp.SelectedIndex, Conversions.ToByte(ComboBox_LM_Music.SelectedIndex), General.GetEnvironmentTypeOfIndex(ComboBox_LM_EnvironmentEffects.SelectedIndex), General.GetCameraPresetTypeOfIndex(ComboBox_LM_CameraPreset.SelectedIndex), CheckBoxX_LM_Enable2DCamera.Value, SwitchButton_LM_ShowMsgEnabled.Value, Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX_LM_ShowMsgID.Text)));
+                Controller.SaveLevelAreaSettings(
+                    CurrentLevelIndex,
+                    CurrentAreaIndex,
+                    (SM64Lib.Geolayout.TerrainTypes)ComboBox_LM_TerrainTyp.SelectedIndex,
+                    Conversions.ToByte(ComboBox_LM_Music.SelectedIndex),
+                    General.GetEnvironmentTypeOfIndex(ComboBox_LM_EnvironmentEffects.SelectedIndex),
+                    General.GetCameraPresetTypeOfIndex(ComboBox_LM_CameraPreset.SelectedIndex),
+                    CheckBoxX_LM_Enable2DCamera.Value, SwitchButton_LM_ShowMsgEnabled.Value,
+                    Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX_LM_ShowMsgID.Text)),
+                    (AreaReverbLevel)(ComboBoxEx_ReverbLevel.SelectedItem as ComboItem)?.Tag);
             }
         }
 
@@ -716,6 +734,14 @@ namespace SM64_ROM_Manager
                 SwitchButton_LM_ShowMsgEnabled.Value = infos.enableShowMsg;
                 TextBoxX_LM_ShowMsgID.Text = TextValueConverter.TextFromValue(infos.showMsgDialogID);
                 UpdateShowMsgControlsVisible(infos.enableShowMsg);
+
+                // Area Reverg
+                foreach (ComboItem cbitem in ComboBoxEx_ReverbLevel.Items)
+                {
+                    if ((AreaReverbLevel)cbitem.Tag == infos.reverbLevel)
+                        ComboBoxEx_ReverbLevel.SelectedItem = cbitem;
+                }
+                ComboBoxEx_ReverbLevel.Enabled = infos.areaID >= 1 && infos.areaID <= 3;
 
                 // Model Infos
                 LoadScrollTexCount();

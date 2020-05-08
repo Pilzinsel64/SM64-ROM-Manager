@@ -48,7 +48,7 @@
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Name = "labelX2";
-            this.labelX2.Tag = "mdl";
+            this.labelX2.Tag = "mdl_customid";
             this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // TextBoxX_ModelID
@@ -61,7 +61,7 @@
             this.TextBoxX_ModelID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TextBoxX_ModelID.Name = "TextBoxX_ModelID";
             this.TextBoxX_ModelID.PreventEnterBeep = true;
-            this.TextBoxX_ModelID.Tag = "mdl";
+            this.TextBoxX_ModelID.Tag = "mdl_customid";
             this.TextBoxX_ModelID.TextChanged += new System.EventHandler(this.TextBoxX_ModelID_TextChanged);
             // 
             // ButtonX_ChangeDestModelBank
@@ -71,7 +71,7 @@
             this.ButtonX_ChangeDestModelBank.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_ChangeDestModelBank.Name = "ButtonX_ChangeDestModelBank";
             this.ButtonX_ChangeDestModelBank.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ChangeDestModelBank.Tag = "mdl";
+            this.ButtonX_ChangeDestModelBank.Tag = "mdl_custommdl";
             this.ButtonX_ChangeDestModelBank.Click += new System.EventHandler(this.ButtonX1_Click);
             // 
             // labelX1
@@ -91,7 +91,7 @@
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Name = "labelX3";
-            this.labelX3.Tag = "mdl";
+            this.labelX3.Tag = "mdl_custommdl";
             this.labelX3.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // TextBoxX_Name
@@ -122,6 +122,7 @@
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.labelX1);
             this.panel1.Controls.Add(this.labelX2);
@@ -129,7 +130,6 @@
             this.panel1.Controls.Add(this.labelX3);
             this.panel1.Controls.Add(this.TextBoxX_Name);
             this.panel1.Controls.Add(this.TextBoxX_ModelID);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // CustomObjectImportPropsEditor

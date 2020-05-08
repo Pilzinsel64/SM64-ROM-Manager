@@ -232,7 +232,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="textBoxX_BehavColPtr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
+    <value>202, 20</value>
   </data>
   <data name="textBoxX_BehavColPtr.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -250,13 +250,13 @@
     <value>5</value>
   </data>
   <data name="checkBoxX_BehavEnableColPtr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 32</value>
+    <value>306, 32</value>
   </data>
   <data name="checkBoxX_BehavEnableColPtr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="checkBoxX_BehavEnableColPtr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 20</value>
+    <value>72, 20</value>
   </data>
   <data name="checkBoxX_BehavEnableColPtr.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -276,6 +276,153 @@
   <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="ListViewEx_CustomAsmFunctions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 139</value>
+  </data>
+  <data name="ListViewEx_CustomAsmFunctions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ListViewEx_CustomAsmFunctions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 215</value>
+  </data>
+  <data name="ListViewEx_CustomAsmFunctions.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ListViewEx_CustomAsmFunctions.Name" xml:space="preserve">
+    <value>ListViewEx_CustomAsmFunctions</value>
+  </data>
+  <data name="&gt;&gt;ListViewEx_CustomAsmFunctions.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ListViewEx_CustomAsmFunctions.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ListViewEx_CustomAsmFunctions.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 126</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 23</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Name" xml:space="preserve">
+    <value>ButtonX_AddCustomAsmFunction</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 157</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 23</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Name" xml:space="preserve">
+    <value>ButtonX_RemoveCustomAsmFunction</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 188</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 23</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Text" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Name" xml:space="preserve">
+    <value>ButtonX_LoopCustomAsmFunction</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 60</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditParamInfos.Name" xml:space="preserve">
+    <value>ButtonX_EditParamInfos</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditParamInfos.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditParamInfos.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditParamInfos.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -287,6 +434,12 @@
   </data>
   <data name="layoutControlItem2.Text" xml:space="preserve">
     <value>Collision Pointer:</value>
+  </data>
+  <data name="layoutControlItem8.Text" xml:space="preserve">
+    <value>Parameter Infos:</value>
+  </data>
+  <data name="layoutControlItem4.Text" xml:space="preserve">
+    <value>Custom ASM Functions:</value>
   </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>382, 358</value>
@@ -608,6 +761,18 @@
   <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
+    <value>columnHeader4</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
     <value>layoutControlItem1</value>
   </data>
@@ -624,6 +789,60 @@
     <value>layoutControlItem3</value>
   </data>
   <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem2.Name" xml:space="preserve">
+    <value>layoutSpacerItem2</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem3.Name" xml:space="preserve">
+    <value>layoutSpacerItem3</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem1.Name" xml:space="preserve">
+    <value>layoutSpacerItem1</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutGroup1.Name" xml:space="preserve">
+    <value>layoutGroup1</value>
+  </data>
+  <data name="&gt;&gt;layoutGroup1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutGroup, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TabItem_BehavProps.Name" xml:space="preserve">

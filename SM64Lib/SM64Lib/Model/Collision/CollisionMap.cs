@@ -7,7 +7,7 @@ using global::System.Numerics;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.CompilerServices;
 using global::Pilz.S3DFileParser;
-using global::SM64_ROM_Manager.Extensions;
+using global::SM64Lib.Extensions;
 using global::SM64Lib.Data;
 
 namespace SM64Lib.Model.Collision

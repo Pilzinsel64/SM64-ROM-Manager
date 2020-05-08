@@ -36,25 +36,45 @@ namespace SM64Lib.Text
             if (TextGroupInfo.TableType == TextTableType.Dialogs)
             {
                 data.Position = TextGroupInfo.Data.TableRomOffset;
-                for (int i = 1, loopTo = TextGroupInfo.Data.TableMaxItems; i <= loopTo; i++)
+                for (int i = 0; i < TextGroupInfo.Data.TableMaxItems; i++)
                 {
                     int entryPointer = (int)(data.ReadInt32() - BankRamStart + BankRomStart);
                     int lastPos = Conversions.ToInteger(data.Position);
+
                     data.Position = entryPointer;
                     data.Position = entryPointer + 12;
+
                     int addr = data.ReadInt32();
                     if (addr != 0)
                     {
                         var bytes = GetTextData(data, (int)(addr - BankRamStart + BankRomStart), true);
                         var newItem = new TextTableDialogItem(bytes, TextGroupInfo);
                         data.Position = entryPointer + 0x3;
+
+                        // The unknown value
                         newItem.UnknownValue = data.ReadByte();
+
+                        // Lines per Site
                         newItem.LinesPerSite = data.ReadByte();
+
                         data.Position += 1;
+
+                        // Position
                         newItem.VerticalPosition = (DialogVerticalPosition)data.ReadInt16();
                         newItem.HorizontalPosition = (DialogHorizontalPosition)data.ReadInt16();
+
                         data.Position += 6;
+
+                        // Sound effect
+                        if (TextGroupInfo.DialogData.HasSoundEffects && TextGroupInfo.DialogData.SoundEffectTable != -1)
+                        {
+                            data.Position = TextGroupInfo.DialogData.SoundEffectTable + i;
+                            newItem.SoundEffect = (DialogSoundEffect)data.ReadByte();
+                        }
+
+                        // Add item
                         Add(newItem);
+
                         data.Position = lastPos;
                     }
                 }
@@ -97,14 +117,16 @@ namespace SM64Lib.Text
         {
             int DataRomOffset, lastTableOffset, lastTable2Offset;
             uint BankRomStart, BankRamStart;
+
             lastTableOffset = TextGroupInfo.Data.TableRomOffset;
             DataRomOffset = TextGroupInfo.Data.DataRomOffset;
             BankRamStart = TextGroupInfo.Segmented.BankAddress;
             BankRomStart = Conversions.ToUInteger(TextGroupInfo.Segmented.BankStartRom);
+
             if (TextGroupInfo.TableType == TextTableType.Dialogs)
             {
                 lastTable2Offset = (int)TextGroupInfo.DialogData?.TableRomOffset;
-                for (int i = 0, loopTo = Count - 1; i <= loopTo; i++)
+                for (int i = 0; i < Count; i++)
                 {
                     TextTableDialogItem textitem = (TextTableDialogItem)this.ElementAtOrDefault(i);
 
@@ -147,6 +169,13 @@ namespace SM64Lib.Text
                     if (textitem is object)
                         WriteTextItem(data, DataRomOffset, textitem);
                     DataRomOffset += textitem.Data.Length;
+
+                    // Sound Effect
+                    if (TextGroupInfo.DialogData.HasSoundEffects && TextGroupInfo.DialogData.SoundEffectTable != -1)
+                    {
+                        data.Position = TextGroupInfo.DialogData.SoundEffectTable + i;
+                        data.Write((byte)textitem.SoundEffect);
+                    }
                 }
             }
             else

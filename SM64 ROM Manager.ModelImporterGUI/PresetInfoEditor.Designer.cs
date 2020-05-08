@@ -28,7 +28,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
         }
 
         // Required by the Windows Form Designer
-        private System.ComponentModel.IContainer components;
+        private System.ComponentModel.IContainer components = new System.ComponentModel.Container();
 
         // NOTE: The following procedure is required by the Windows Form Designer
         // It can be modified using the Windows Form Designer.  
@@ -36,264 +36,182 @@ namespace SM64_ROM_Manager.ModelImporterGUI
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoEditor));
-            _LabelX1 = new DevComponents.DotNetBar.LabelX();
-            _TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _LabelX2 = new DevComponents.DotNetBar.LabelX();
-            _TextBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TableLayoutPanel1 = new TableLayoutPanel();
-            _ButtonX2 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX1 = new DevComponents.DotNetBar.ButtonX();
-            _TableLayoutPanel1.SuspendLayout();
-            SuspendLayout();
-            // 
-            // LabelX1
-            // 
-            // 
-            // 
-            // 
-            _LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX1.Location = new Point(12, 12);
-            _LabelX1.Name = "LabelX1";
-            _LabelX1.Size = new Size(458, 23);
-            _LabelX1.TabIndex = 0;
-            _LabelX1.Text = "Name:";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoEditor));
+            this.TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TextBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.layoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
+            this.layoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
+            this.layoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControl1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // TextBoxX1
             // 
-            _TextBoxX1.BackColor = Color.White;
+            this.TextBoxX1.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX1.Border.Class = "TextBoxBorder";
-            _TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX1.DisabledBackColor = Color.White;
-            _TextBoxX1.ForeColor = Color.Black;
-            _TextBoxX1.Location = new Point(12, 41);
-            _TextBoxX1.Name = "TextBoxX1";
-            _TextBoxX1.PreventEnterBeep = true;
-            _TextBoxX1.Size = new Size(458, 20);
-            _TextBoxX1.TabIndex = 1;
-            // 
-            // LabelX2
-            // 
-            // 
-            // 
-            // 
-            _LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX2.Location = new Point(12, 67);
-            _LabelX2.Name = "LabelX2";
-            _LabelX2.Size = new Size(458, 23);
-            _LabelX2.TabIndex = 2;
-            _LabelX2.Text = "Description:";
+            this.TextBoxX1.Border.Class = "TextBoxBorder";
+            this.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX1.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX1.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxX1.Location = new System.Drawing.Point(84, 4);
+            this.TextBoxX1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.TextBoxX1.Name = "TextBoxX1";
+            this.TextBoxX1.PreventEnterBeep = true;
+            this.TextBoxX1.Size = new System.Drawing.Size(315, 20);
+            this.TextBoxX1.TabIndex = 0;
             // 
             // TextBoxX2
             // 
-            _TextBoxX2.BackColor = Color.White;
+            this.TextBoxX2.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX2.Border.Class = "TextBoxBorder";
-            _TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX2.DisabledBackColor = Color.White;
-            _TextBoxX2.ForeColor = Color.Black;
-            _TextBoxX2.Location = new Point(12, 96);
-            _TextBoxX2.Multiline = true;
-            _TextBoxX2.Name = "TextBoxX2";
-            _TextBoxX2.PreventEnterBeep = true;
-            _TextBoxX2.Size = new Size(458, 204);
-            _TextBoxX2.TabIndex = 3;
-            // 
-            // TableLayoutPanel1
-            // 
-            _TableLayoutPanel1.AutoSize = true;
-            _TableLayoutPanel1.ColumnCount = 2;
-            _TableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            _TableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            _TableLayoutPanel1.Controls.Add(_ButtonX2, 0, 0);
-            _TableLayoutPanel1.Controls.Add(_ButtonX1, 1, 0);
-            _TableLayoutPanel1.Location = new Point(308, 306);
-            _TableLayoutPanel1.Name = "TableLayoutPanel1";
-            _TableLayoutPanel1.RowCount = 1;
-            _TableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100.0F));
-            _TableLayoutPanel1.Size = new Size(162, 29);
-            _TableLayoutPanel1.TabIndex = 4;
+            this.TextBoxX2.Border.Class = "TextBoxBorder";
+            this.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX2.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX2.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxX2.Location = new System.Drawing.Point(84, 32);
+            this.TextBoxX2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.TextBoxX2.Multiline = true;
+            this.TextBoxX2.Name = "TextBoxX2";
+            this.TextBoxX2.PreventEnterBeep = true;
+            this.TextBoxX2.Size = new System.Drawing.Size(315, 229);
+            this.TextBoxX2.TabIndex = 1;
             // 
             // ButtonX2
             // 
-            _ButtonX2.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX2.DialogResult = DialogResult.OK;
-            _ButtonX2.Location = new Point(3, 3);
-            _ButtonX2.Name = "ButtonX2";
-            _ButtonX2.Size = new Size(75, 23);
-            _ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX2.Symbol = "58826";
-            _ButtonX2.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX2.SymbolSize = 12.0F;
-            _ButtonX2.TabIndex = 1;
-            _ButtonX2.Text = "Okay";
+            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX2.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.ButtonX2.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_checkmark_16px_1;
+            this.ButtonX2.Location = new System.Drawing.Point(241, 269);
+            this.ButtonX2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ButtonX2.Name = "ButtonX2";
+            this.ButtonX2.Size = new System.Drawing.Size(75, 23);
+            this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX2.TabIndex = 3;
+            this.ButtonX2.Text = "Okay";
             // 
             // ButtonX1
             // 
-            _ButtonX1.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX1.DialogResult = DialogResult.Cancel;
-            _ButtonX1.Location = new Point(84, 3);
-            _ButtonX1.Name = "ButtonX1";
-            _ButtonX1.Size = new Size(75, 23);
-            _ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX1.Symbol = "58829";
-            _ButtonX1.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(150)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)));
-            _ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX1.SymbolSize = 12.0F;
-            _ButtonX1.TabIndex = 0;
-            _ButtonX1.Text = "Cancel";
+            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.ButtonX1.Image = global::SM64_ROM_Manager.ModelImporterGUI.My.Resources.Resources.icons8_delete_sign_16px;
+            this.ButtonX1.Location = new System.Drawing.Point(324, 269);
+            this.ButtonX1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ButtonX1.Name = "ButtonX1";
+            this.ButtonX1.Size = new System.Drawing.Size(75, 23);
+            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX1.TabIndex = 4;
+            this.ButtonX1.Text = "Cancel";
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.BackColor = System.Drawing.Color.Transparent;
+            this.layoutControl1.Controls.Add(this.TextBoxX1);
+            this.layoutControl1.Controls.Add(this.TextBoxX2);
+            this.layoutControl1.Controls.Add(this.ButtonX2);
+            this.layoutControl1.Controls.Add(this.ButtonX1);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            // 
+            // 
+            // 
+            this.layoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutSpacerItem1,
+            this.layoutControlItem3,
+            this.layoutControlItem4});
+            this.layoutControl1.Size = new System.Drawing.Size(403, 296);
+            this.layoutControl1.TabIndex = 5;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.TextBoxX1;
+            this.layoutControlItem1.Height = 28;
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(120, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Text = "Name:";
+            this.layoutControlItem1.Width = 100;
+            this.layoutControlItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.TextBoxX2;
+            this.layoutControlItem2.Height = 100;
+            this.layoutControlItem2.HeightType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            this.layoutControlItem2.MinSize = new System.Drawing.Size(120, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Text = "Beschreibung:";
+            this.layoutControlItem2.Width = 100;
+            this.layoutControlItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutSpacerItem1
+            // 
+            this.layoutSpacerItem1.Height = 31;
+            this.layoutSpacerItem1.Name = "layoutSpacerItem1";
+            this.layoutSpacerItem1.Width = 99;
+            this.layoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.ButtonX2;
+            this.layoutControlItem3.Height = 31;
+            this.layoutControlItem3.MinSize = new System.Drawing.Size(32, 20);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Width = 83;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.ButtonX1;
+            this.layoutControlItem4.Height = 31;
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(32, 20);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Width = 83;
             // 
             // InfoEditor
             // 
-            AutoScaleDimensions = new SizeF(6.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(482, 347);
-            ControlBox = false;
-            Controls.Add(_TableLayoutPanel1);
-            Controls.Add(_TextBoxX2);
-            Controls.Add(_LabelX2);
-            Controls.Add(_TextBoxX1);
-            Controls.Add(_LabelX1);
-            DoubleBuffered = true;
-            EnableGlass = false;
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "InfoEditor";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Tweak Editor";
-            TopLeftCornerSize = 0;
-            TopRightCornerSize = 0;
-            _TableLayoutPanel1.ResumeLayout(false);
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(403, 296);
+            this.ControlBox = false;
+            this.Controls.Add(this.layoutControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "InfoEditor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Tweak Editor";
+            this.TopLeftCornerSize = 0;
+            this.TopRightCornerSize = 0;
+            this.layoutControl1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
-        private DevComponents.DotNetBar.ButtonX _ButtonX2;
+        private DevComponents.DotNetBar.ButtonX ButtonX2;
 
-        internal DevComponents.DotNetBar.ButtonX ButtonX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX2;
-            }
+        private DevComponents.DotNetBar.ButtonX ButtonX1;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _ButtonX2 = value;
-            }
-        }
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX1;
 
-        private DevComponents.DotNetBar.ButtonX _ButtonX1;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _ButtonX1 = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX1;
-
-        private DevComponents.DotNetBar.LabelX LabelX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LabelX1 = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX1;
-
-        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _TextBoxX1 = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX2;
-
-        private DevComponents.DotNetBar.LabelX LabelX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _LabelX2 = value;
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX2;
-
-        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _TextBoxX2 = value;
-            }
-        }
-
-        private TableLayoutPanel _TableLayoutPanel1;
-
-        private TableLayoutPanel TableLayoutPanel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TableLayoutPanel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                _TableLayoutPanel1 = value;
-            }
-        }
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX2;
+        private DevComponents.DotNetBar.Layout.LayoutControl layoutControl1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem2;
+        private DevComponents.DotNetBar.Layout.LayoutSpacerItem layoutSpacerItem1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem3;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem4;
     }
 }

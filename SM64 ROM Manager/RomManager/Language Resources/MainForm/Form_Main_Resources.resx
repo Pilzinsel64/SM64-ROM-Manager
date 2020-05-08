@@ -165,6 +165,10 @@
   <data name="MsgBox_InvalidBgImageSize_Title" xml:space="preserve">
     <value>Invalid size</value>
   </data>
+  <data name="MsgBox_InvalidRomHash" xml:space="preserve">
+    <value>The MD5 Hash of your ROM is invalid. Please try getting your ROM from an other site. It has to be 8MB and following MD5 checksum:
+{0}</value>
+  </data>
   <data name="MsgBox_LimitSequenceCountReached" xml:space="preserve">
     <value>The limit of possible music sequences in the original game is 127. Do you want to add more anyway?</value>
   </data>
@@ -233,6 +237,42 @@
   </data>
   <data name="Notify_ShouldLoadRomFirst" xml:space="preserve">
     <value>You must open a ROM first!</value>
+  </data>
+  <data name="SoundEffect_BobOmb" xml:space="preserve">
+    <value>Bob-Omb</value>
+  </data>
+  <data name="SoundEffect_Boo" xml:space="preserve">
+    <value>Boo</value>
+  </data>
+  <data name="SoundEffect_BowserFight" xml:space="preserve">
+    <value>Bowser Fight</value>
+  </data>
+  <data name="SoundEffect_BowserIntroDoors" xml:space="preserve">
+    <value>Bowser (Intro/Doors)</value>
+  </data>
+  <data name="SoundEffect_KingBobOmb" xml:space="preserve">
+    <value>King Bob-Omb</value>
+  </data>
+  <data name="SoundEffect_KoopaTheQuick" xml:space="preserve">
+    <value>Koopa The Quick</value>
+  </data>
+  <data name="SoundEffect_Monkey" xml:space="preserve">
+    <value>Monkey</value>
+  </data>
+  <data name="SoundEffect_Penguin" xml:space="preserve">
+    <value>Penguin</value>
+  </data>
+  <data name="SoundEffect_Sign" xml:space="preserve">
+    <value>Sign</value>
+  </data>
+  <data name="SoundEffect_WhompKing" xml:space="preserve">
+    <value>Whomp King</value>
+  </data>
+  <data name="SoundEffect_Wiggler" xml:space="preserve">
+    <value>Wiggler</value>
+  </data>
+  <data name="SoundEffect_Yoshi" xml:space="preserve">
+    <value>Yoshi</value>
   </data>
   <data name="Status_CalculatingTextSpace" xml:space="preserve">
     <value>Calculating space...</value>

@@ -31,8 +31,12 @@ namespace SM64_ROM_Manager.PatchScripts
         private void CreateImageList()
         {
             ImageList_RefSymbols.Images.Clear();
-            foreach (DictionaryEntry kvp in ReflectionSymbols.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true))
-                ImageList_RefSymbols.Images.Add((string)kvp.Key, (Image)kvp.Value);
+            try
+            {
+                foreach (DictionaryEntry kvp in ReflectionSymbols.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true))
+                    ImageList_RefSymbols.Images.Add((string)kvp.Key, (Image)kvp.Value);
+            }
+            catch (Exception) { }
         }
 
         private void LoadCatalog()

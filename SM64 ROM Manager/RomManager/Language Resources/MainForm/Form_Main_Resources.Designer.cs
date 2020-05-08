@@ -205,6 +205,16 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The MD5 Hash of your ROM is invalid. Please try getting your ROM from an other site. It has to be 8MB and following MD5 checksum:
+        ///{0} ähnelt.
+        /// </summary>
+        public static string MsgBox_InvalidRomHash {
+            get {
+                return ResourceManager.GetString("MsgBox_InvalidRomHash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The limit of possible music sequences in the original game is 127. Do you want to add more anyway? ähnelt.
         /// </summary>
         public static string MsgBox_LimitSequenceCountReached {
@@ -408,6 +418,114 @@ namespace SM64_ROM_Manager.My.Resources {
         public static string Notify_ShouldLoadRomFirst {
             get {
                 return ResourceManager.GetString("Notify_ShouldLoadRomFirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bob-Omb ähnelt.
+        /// </summary>
+        public static string SoundEffect_BobOmb {
+            get {
+                return ResourceManager.GetString("SoundEffect_BobOmb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Boo ähnelt.
+        /// </summary>
+        public static string SoundEffect_Boo {
+            get {
+                return ResourceManager.GetString("SoundEffect_Boo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bowser Fight ähnelt.
+        /// </summary>
+        public static string SoundEffect_BowserFight {
+            get {
+                return ResourceManager.GetString("SoundEffect_BowserFight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bowser (Intro/Doors) ähnelt.
+        /// </summary>
+        public static string SoundEffect_BowserIntroDoors {
+            get {
+                return ResourceManager.GetString("SoundEffect_BowserIntroDoors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die King Bob-Omb ähnelt.
+        /// </summary>
+        public static string SoundEffect_KingBobOmb {
+            get {
+                return ResourceManager.GetString("SoundEffect_KingBobOmb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Koopa The Quick ähnelt.
+        /// </summary>
+        public static string SoundEffect_KoopaTheQuick {
+            get {
+                return ResourceManager.GetString("SoundEffect_KoopaTheQuick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Monkey ähnelt.
+        /// </summary>
+        public static string SoundEffect_Monkey {
+            get {
+                return ResourceManager.GetString("SoundEffect_Monkey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Penguin ähnelt.
+        /// </summary>
+        public static string SoundEffect_Penguin {
+            get {
+                return ResourceManager.GetString("SoundEffect_Penguin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sign ähnelt.
+        /// </summary>
+        public static string SoundEffect_Sign {
+            get {
+                return ResourceManager.GetString("SoundEffect_Sign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Whomp King ähnelt.
+        /// </summary>
+        public static string SoundEffect_WhompKing {
+            get {
+                return ResourceManager.GetString("SoundEffect_WhompKing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Wiggler ähnelt.
+        /// </summary>
+        public static string SoundEffect_Wiggler {
+            get {
+                return ResourceManager.GetString("SoundEffect_Wiggler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Yoshi ähnelt.
+        /// </summary>
+        public static string SoundEffect_Yoshi {
+            get {
+                return ResourceManager.GetString("SoundEffect_Yoshi", resourceCulture);
             }
         }
         

@@ -14,11 +14,15 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::Pilz.S3DFileParser;
 using global::SM64Lib;
 using Newtonsoft.Json.Linq;
+using Pilz.IO;
 
-namespace SM64_ROM_Manager.PatchScripts
+namespace SM64Lib.Patching
 {
     public class PatchingManager
     {
+        public delegate void PatchScriptManagerProcessingInputValueEventHandler(object sender, PatchScriptManagerProcessingInputValueEventArgs e);
+        public static event PatchScriptManagerProcessingInputValueEventHandler ProcessingInputValue;
+
         public void Save(PatchProfile patch, string dir)
         {
             if (string.IsNullOrEmpty(patch.FileName))
@@ -129,12 +133,12 @@ namespace SM64_ROM_Manager.PatchScripts
             return script;
         }
 
-        public void Patch(PatchScript script, IWin32Window owner, IReadOnlyDictionary<string, object> @params)
+        public void Patch(PatchScript script, IWin32Window owner, IReadOnlyDictionary<string, object> @params, string[] additionalAssemblyReferences)
         {
-            Patch(script, null, owner, @params);
+            Patch(script, null, owner, @params, additionalAssemblyReferences);
         }
 
-        public void Patch(PatchScript script, RomManager rommgr, IWin32Window owner, IReadOnlyDictionary<string, object> @params)
+        public void Patch(PatchScript script, RomManager rommgr, IWin32Window owner, IReadOnlyDictionary<string, object> @params, string[] additionalAssemblyReferences)
         {
             if (script is null)
             {
@@ -230,48 +234,42 @@ namespace SM64_ROM_Manager.PatchScripts
 
                                                 default:
                                                     {
-                                                        string infoText = "";
-                                                        var inputType = InputDialog.InputValueType.Byte;
+                                                        var inputType = InputValueType.Byte;
                                                         var switchExpr2 = parts[0].Trim();
                                                         switch (switchExpr2)
                                                         {
                                                             case "8":
-                                                                infoText = "Input a 8 Bit value (Byte)";
-                                                                inputType = InputDialog.InputValueType.Byte;
+                                                                inputType = InputValueType.Byte;
                                                                 break;
                                                             case "16":
-                                                                infoText = "Input a 16 Bit value (2 Bytes)";
-                                                                inputType = InputDialog.InputValueType.UInt16;
+                                                                inputType = InputValueType.UInt16;
                                                                 break;
                                                             case "32":
-                                                                infoText = "Input a 32 Bit value (4 Bytes)";
-                                                                inputType = InputDialog.InputValueType.UInt32;
+                                                                inputType = InputValueType.UInt32;
                                                                 break;
                                                             case "half":
-                                                                infoText = "Input a float value";
-                                                                inputType = InputDialog.InputValueType.Single;
+                                                                inputType = InputValueType.Single;
                                                                 break;
                                                             case "string":
-                                                                infoText = "Input a string";
-                                                                inputType = InputDialog.InputValueType.String;
+                                                                inputType = InputValueType.String;
                                                                 break;
                                                             case "sequence":
-                                                                infoText = "Input a Sequence ID";
-                                                                inputType = InputDialog.InputValueType.Sequence;
+                                                                inputType = InputValueType.Sequence;
                                                                 break;
                                                             case "level":
-                                                                infoText = "Input a Level ID";
-                                                                inputType = InputDialog.InputValueType.LevelID;
+                                                                inputType = InputValueType.LevelID;
                                                                 break;
                                                         }
 
-                                                        var input = new InputDialog(inputType, rommgr, null, infoText);
-                                                        input.Text = parts.ElementAtOrDefault(1)?.Trim()?.Trim('"', '[', ']');
-                                                        if (input.ShowDialog(owner) == DialogResult.OK)
+                                                        var titel = parts.ElementAtOrDefault(1)?.Trim()?.Trim('"', '[', ']');
+                                                        var processingEventArgs = new PatchScriptManagerProcessingInputValueEventArgs(inputType, titel, rommgr, owner);
+                                                        ProcessingInputValue?.Invoke(this, processingEventArgs);
+
+                                                        if (processingEventArgs.SettedValue)
                                                         {
-                                                            if (inputType == InputDialog.InputValueType.String)
+                                                            if (inputType == InputValueType.String)
                                                             {
-                                                                byte[] barr = (byte[])System.Text.Encoding.ASCII.GetBytes((string)input.ReturnValue);
+                                                                byte[] barr = System.Text.Encoding.ASCII.GetBytes((string)processingEventArgs.ReturnValue);
                                                                 foreach (byte b in barr)
                                                                     newVal += b.ToString("X2");
                                                             }
@@ -280,19 +278,19 @@ namespace SM64_ROM_Manager.PatchScripts
                                                                 string barr = "";
                                                                 switch (inputType)
                                                                 {
-                                                                    case InputDialog.InputValueType.Byte:
-                                                                    case InputDialog.InputValueType.Sequence:
-                                                                        barr = Conversions.ToByte(input.ReturnValue).ToString("X2");
+                                                                    case InputValueType.Byte:
+                                                                    case InputValueType.Sequence:
+                                                                        barr = Conversions.ToByte(processingEventArgs.ReturnValue).ToString("X2");
                                                                         break;
-                                                                    case InputDialog.InputValueType.UInt16:
-                                                                    case InputDialog.InputValueType.LevelID:
-                                                                        barr = Conversions.ToUShort(input.ReturnValue).ToString("X4");
+                                                                    case InputValueType.UInt16:
+                                                                    case InputValueType.LevelID:
+                                                                        barr = Conversions.ToUShort(processingEventArgs.ReturnValue).ToString("X4");
                                                                         break;
-                                                                    case InputDialog.InputValueType.Single:
-                                                                        barr = Conversions.ToSingle(input.ReturnValue).ToString("X4");
+                                                                    case InputValueType.Single:
+                                                                        barr = Conversions.ToSingle(processingEventArgs.ReturnValue).ToString("X4");
                                                                         break;
-                                                                    case InputDialog.InputValueType.UInt32:
-                                                                        barr = Conversions.ToUInteger(input.ReturnValue).ToString("X8");
+                                                                    case InputValueType.UInt32:
+                                                                        barr = Conversions.ToUInteger(processingEventArgs.ReturnValue).ToString("X8");
                                                                         break;
                                                                 }
 
@@ -336,7 +334,7 @@ namespace SM64_ROM_Manager.PatchScripts
                 case ScriptType.VisualBasic:
                 case ScriptType.CSharp:
                     {
-                        var assembly = GetAssembly(script);
+                        var assembly = GetAssembly(script, additionalAssemblyReferences);
                         if (assembly is object)
                         {
                             ExecuteScript(assembly, @params);
@@ -347,24 +345,7 @@ namespace SM64_ROM_Manager.PatchScripts
 
                 case ScriptType.Armips:
                     {
-                        string createText =
-$@".Open ""{romfile}"", 0
-.n64
-{script.Script}
-.Close";
-                        string tmpAsmFile = Path.GetTempFileName();
-                        File.WriteAllText(tmpAsmFile, createText);
-                        var p = new Process();
-                        p.StartInfo.FileName = Path.Combine(Publics.General.MyToolsPath, "armips.exe");
-                        p.StartInfo.Arguments = $"-root \"{Path.GetDirectoryName(Conversions.ToString(@params["profilepath"]))}\" \"{tmpAsmFile}\"";
-                        p.StartInfo.UseShellExecute = false;
-                        p.StartInfo.CreateNoWindow = true;
-                        p.Start();
-                        while (!p.HasExited)
-                        {
-                        }
-
-                        File.Delete(tmpAsmFile);
+                        RunArmips(script.Script, romfile, Path.GetDirectoryName(Conversions.ToString(@params["profilepath"])));
                         break;
                     }
             }
@@ -372,7 +353,7 @@ $@".Open ""{romfile}"", 0
             General.PatchClass.UpdateChecksum(romfile);
         }
 
-        public CompilerResults CompileScript(PatchScript script)
+        public CompilerResults CompileScript(PatchScript script, string[] additionalAssemblyReferences)
         {
             CodeDomProvider cp;
             var switchExpr = script.Type;
@@ -427,8 +408,11 @@ $@".Open ""{romfile}"", 0
             options.ReferencedAssemblies.Add("System.IO.dll");
             options.ReferencedAssemblies.Add("System.Drawing.dll");
             options.ReferencedAssemblies.Add(typeof(Object3D).Assembly.Location);
-            options.ReferencedAssemblies.Add(typeof(DevComponents.DotNetBar.OfficeForm).Assembly.Location);
             options.ReferencedAssemblies.Add(typeof(RomManager).Assembly.Location);
+            options.ReferencedAssemblies.Add(typeof(EmbeddedFilesContainer).Assembly.Location);
+
+            if (additionalAssemblyReferences is object)
+                options.ReferencedAssemblies.AddRange(additionalAssemblyReferences);
 
             // Alternative???
             // For Each asm As Assembly In AppDomain.CurrentDomain.GetAssemblies
@@ -446,9 +430,9 @@ $@".Open ""{romfile}"", 0
             return cp.CompileAssemblyFromSource(options, script.Script);
         }
 
-        public Assembly GetAssembly(PatchScript script)
+        public Assembly GetAssembly(PatchScript script, string[] additionalAssemblyReferences)
         {
-            var res = CompileScript(script);
+            var res = CompileScript(script, additionalAssemblyReferences);
             if (res.Errors.Count == 0)
             {
                 return res.CompiledAssembly;
@@ -491,6 +475,37 @@ $@".Open ""{romfile}"", 0
             {
                 fs.Close();
             }
+        }
+
+        private static void RunArmips(string script, string filePath, string rootPath)
+        {
+            string createText =
+$@".Open ""{filePath}"", 0
+.n64
+{script}
+.Close";
+            string tmpAsmFile = Path.GetTempFileName();
+            File.WriteAllText(tmpAsmFile, createText);
+            var p = new Process();
+            p.StartInfo.FileName = Path.Combine(General.MyFilePaths["armips.exe"]);
+            p.StartInfo.Arguments = $"-root \"{rootPath}\" \"{tmpAsmFile}\"";
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.CreateNoWindow = true;
+            p.Start();
+            while (!p.HasExited)
+            {
+            }
+
+            File.Delete(tmpAsmFile);
+        }
+
+        public static byte[] ConvertAsmToBytes(string script)
+        {
+            string tmpBinFile = Path.GetTempFileName();
+            RunArmips(script, tmpBinFile, Path.GetDirectoryName(tmpBinFile));
+            var bytes = File.ReadAllBytes(tmpBinFile);
+            File.Delete(tmpBinFile);
+            return bytes;
         }
     }
 }

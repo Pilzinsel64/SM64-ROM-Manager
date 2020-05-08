@@ -7,6 +7,7 @@ using global::SM64Lib.Data;
 using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
 using global::SM64Lib.SegmentedBanking;
+using Newtonsoft.Json;
 
 namespace SM64Lib.Objects.ModelBanks
 {
@@ -17,6 +18,25 @@ namespace SM64Lib.Objects.ModelBanks
         public SegmentedBank CurSeg { get; private set; } = null;
         public bool NeedToSave { get; set; } = false;
         public Levelscript Levelscript { get; private set; } = new Levelscript();
+
+        [JsonIgnore]
+        public int Length
+        {
+            get
+            {
+                var length = General.HexRoundUp1(CalcLevelscriptLength());
+
+                foreach (var mdl in Models)
+                    length += General.HexRoundUp1(mdl.Model.Length) + General.HexRoundUp1(mdl.Geolayout.Length + 0x40);
+
+                return length;
+            }
+        }
+
+        private int CalcLevelscriptLength()
+        {
+            return General.HexRoundUp1(Models.Count * 8 + 4);
+        }
 
         public SegmentedBank WriteToSeg(byte bankID)
         {
@@ -47,7 +67,7 @@ namespace SM64Lib.Objects.ModelBanks
             Config.CustomObjectConfigs.Clear();
 
             // Calculate space of Levelscript
-            lvlScriptLength = (uint)(General.HexRoundUp1(Models.Count * 8 + 4));
+            lvlScriptLength = (uint)CalcLevelscriptLength();
 
             // Start Custom Objects
             data.Position = offset + lvlScriptLength;

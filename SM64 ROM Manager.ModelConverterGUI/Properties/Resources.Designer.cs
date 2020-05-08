@@ -89,5 +89,15 @@ namespace SM64_ROM_Manager.ModelConverterGUI.My.Resources {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_folder_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_folder_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

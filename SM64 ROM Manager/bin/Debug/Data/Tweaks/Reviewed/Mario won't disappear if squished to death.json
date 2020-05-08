@@ -1,0 +1,14 @@
+{
+  "Name": "Mario doesn't despawn when squished to death",
+  "Scripts": [
+    {
+      "Name": "Enable",
+      "Script": ".orga 0x15BF4\r\nnop\r\n.orga 0x15DCC\r\nnop",
+      "Type": "Armips",
+      "Description": "Enables the tweak",
+      "References": []
+    }
+  ],
+  "Version": "1.0.0.0",
+  "Description": "If Mario dies by being squished, he will not despawn. Useful if you want a death warp in the same level as a thwomp or whomp (by someone2639)"
+}

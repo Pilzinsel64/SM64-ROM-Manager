@@ -14,6 +14,8 @@ using global::SM64_ROM_Manager.Publics;
 using global::SM64Lib.Geolayout;
 using global::SM64Lib.Model;
 using global::SM64Lib.TextValueConverter;
+using Z.Collections.Extensions;
+using SM64Lib.Patching;
 
 namespace SM64_ROM_Manager.ModelImporterGUI
 {
@@ -56,7 +58,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 if (!string.IsNullOrEmpty(value))
                 {
                     LabelX1.Text = Path.GetFileName(value);
-                    LabelX1.Symbol = "";
+                    LabelX1.Image = My.Resources.Resources.icons8_checkmark_16px_1;
                 }
             }
         }
@@ -97,22 +99,36 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             if (resMdl is object)
             {
                 mdl = resMdl?.mdl;
-                ButtonX_ConvertMdl.Symbol = "";
+                ButtonX_ConvertMdl.Image = My.Resources.Resources.icons8_checkmark_16px_1;
                 ButtonX_ImportMdl.Enabled = true;
             }
         }
 
         private void ButtonX_ImportMdl_Click(object sender, EventArgs e)
         {
-            ButtonX_ImportMdl.Symbol = "";
+            ButtonX_ImportMdl.Image = null;
             var pap = SelectedProfileAndPreset();
             var profile = pap.profile;
             var preset = pap.preset;
             int romAddr = preset.RomAddress; // ValueFromText(TextBoxX_RomAddr.Text)
             int bankAddr = preset.RamAddress; // ValueFromText(TextBoxX_BankAddr.Text)
             int maxLength = preset.MaxLength; // ValueFromText(TextBoxX_MaxLength.Text)
-            var pm = new PatchScripts.PatchingManager();
-            var scriptparams = new Dictionary<string, object>() { { "romfile", RomFile }, { "presetName", preset.Name }, { "presetDescription", preset.Description }, { "RomAddress", preset.RomAddress }, { "RamAddress", preset.RamAddress }, { "MaxLength", preset.MaxLength }, { "CollisionPointersArray", preset.CollisionPointers.ToArray() }, { "GeoPointersArray", preset.GeometryPointers.ToArray() }, { "ConvertedModelLength", mdl.Length }, { "ConvertedModel", mdl }, { "profilepath", profile.FileName } };
+            var pm = new PatchingManager();
+            var scriptparams = new Dictionary<string, object>() {
+                { "romfile", RomFile },
+                { "presetName", preset.Name },
+                { "presetDescription", preset.Description },
+                { "RomAddress", preset.RomAddress },
+                { "RamAddress", preset.RamAddress },
+                { "MaxLength", preset.MaxLength },
+                { "CollisionPointersArray", preset.CollisionPointers.ToArray() },
+                { "GeoPointersArray", preset.GeometryPointers.ToArray() },
+                { "ConvertedModelLength", mdl.Length },
+                { "ConvertedModel", mdl },
+                { "profilepath", profile.FileName },
+                { "files", profile.EmbeddedFiles }
+            };
+
             if (maxLength > 0 && mdl.Length > maxLength)
             {
                 MessageBoxEx.Show("Model is bigger then the max allowed length!", "Model too big", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -125,7 +141,8 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             if (preset.ScriptBefore is object && !string.IsNullOrEmpty(preset.ScriptBefore.Script))
             {
                 WriteOutput("Executing Script ...");
-                pm.Patch(preset.ScriptBefore, this, scriptparams);
+                scriptparams.AddOrUpdate("script", preset.ScriptBefore);
+                pm.Patch(preset.ScriptBefore, this, scriptparams, General.GetAdditionalReferencedAssemblied());
             }
 
             int col = -1;
@@ -186,7 +203,8 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             if (preset.ScriptAfter is object && !string.IsNullOrEmpty(preset.ScriptAfter.Script))
             {
                 WriteOutput("Executing Script ...");
-                pm.Patch(preset.ScriptAfter, this, scriptparams);
+                scriptparams.AddOrUpdate("script", preset.ScriptAfter);
+                pm.Patch(preset.ScriptAfter, this, scriptparams, General.GetAdditionalReferencedAssemblied());
             }
 
             if (col > -1)
@@ -200,7 +218,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             WriteOutput(DateAndTime.Now.ToShortTimeString() + " - Done");
 
             // MessageBoxEx.Show("Model has been imported succesfully!", "Model imported", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            ButtonX_ImportMdl.Symbol = "";
+            ButtonX_ImportMdl.Image = My.Resources.Resources.icons8_checkmark_16px_1;
         }
 
         private void LoadPresets()
@@ -216,13 +234,17 @@ namespace SM64_ROM_Manager.ModelImporterGUI
 
             var mgr = new ImporterProfileManager();
             var files = Directory.GetFiles(General.MyImporterPresetsPath, "*", SearchOption.AllDirectories);
+            var nullVersion = new Version("0.0.0.0");
+            var appVersion = new Version(Application.ProductVersion);
+
             foreach (string f in files)
             {
                 var ext = Path.GetExtension(f);
                 if (ext == ".json" || ext == ".xml")
                 {
                     var preset = mgr.Read(f);
-                    presets.Add(preset);
+                    if (preset.MinVersion <= appVersion && (preset.MaxVersion == nullVersion || preset.MaxVersion >= appVersion))
+                        presets.Add(preset);
                 }
             }
 
@@ -297,11 +319,11 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             Flyout1.Close();
         }
 
-        private void EditScript(ref PatchScripts.PatchScript script)
+        private void EditScript(ref PatchScript script, ImporterProfile profile)
         {
             if (script is null)
-                script = new PatchScripts.PatchScript();
-            var editor = new PatchScripts.TweakScriptEditor(script, rommgr);
+                script = new PatchScript();
+            var editor = new PatchScripts.TweakScriptEditor(script, rommgr, profile.EmbeddedFiles);
             if (editor.ShowDialog(this) == DialogResult.OK)
             {
                 if (editor.NeedToSave)
@@ -313,18 +335,18 @@ namespace SM64_ROM_Manager.ModelImporterGUI
 
         private void ButtonItem2_Click(object sender, EventArgs e)
         {
-            var p = SelectedPreset();
-            var argscript = p.ScriptAfter;
-            EditScript(ref argscript);
-            p.ScriptAfter = argscript;
+            var p = SelectedProfileAndPreset();
+            var argscript = p.preset.ScriptAfter;
+            EditScript(ref argscript, p.profile);
+            p.preset.ScriptAfter = argscript;
         }
 
         private void ButtonItem1_Click(object sender, EventArgs e)
         {
-            var p = SelectedPreset();
-            var argscript = p.ScriptBefore;
-            EditScript(ref argscript);
-            p.ScriptBefore = argscript;
+            var p = SelectedProfileAndPreset();
+            var argscript = p.preset.ScriptBefore;
+            EditScript(ref argscript, p.profile);
+            p.preset.ScriptBefore = argscript;
         }
 
         private void ButtonX2_Click(object sender, EventArgs e)
@@ -335,12 +357,16 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             editor.Titel = profile.Name;
             editor.Description = profile.Description;
             editor.Version = profile.Version;
+            editor.MinAppVersion = profile.MinVersion;
+            editor.MaxAppVersion = profile.MaxVersion;
 
             if (editor.ShowDialog(this) == DialogResult.OK)
             {
                 profile.Name = editor.Titel.Trim();
                 profile.Description = editor.Description.Trim();
                 profile.Version = editor.Version;
+                profile.MinVersion = editor.MinAppVersion;
+                profile.MaxVersion = editor.MaxAppVersion;
                 ((ComboItem)ComboBoxEx2.SelectedItem).Text = profile.Name;
                 ShowProfileInfo(SelectedProfile());
                 SaveProfile(profile);

@@ -68,6 +68,9 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Pilz.IO">
+      <HintPath>..\Shared Libs\Pilz.IO.dll</HintPath>
+    </Reference>
     <Reference Include="Pilz.Simple3DFileParser">
       <HintPath>..\Shared Libs\Pilz.Simple3DFileParser.dll</HintPath>
     </Reference>
@@ -127,11 +130,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SM64Lib\ASM\CustomAsmArea.cs" />
+    <Compile Include="SM64Lib\ASM\CustomAsmAreaConfig.cs" />
+    <Compile Include="SM64Lib\ASM\CustomAsmBank.cs" />
+    <Compile Include="SM64Lib\ASM\CustomAsmBankConfig.cs" />
     <Compile Include="SM64Lib\Behaviors\Behavior.cs" />
     <Compile Include="SM64Lib\Behaviors\BehaviorBank.cs" />
     <Compile Include="SM64Lib\Behaviors\BehaviorBankConfig.cs" />
     <Compile Include="SM64Lib\Behaviors\BehaviorConfig.cs" />
     <Compile Include="SM64Lib\Behaviors\BehaviorCreationTypes.cs" />
+    <Compile Include="SM64Lib\Behaviors\BehaviorParamValue.cs" />
+    <Compile Include="SM64Lib\Behaviors\BehaviorParamInfo.cs" />
+    <Compile Include="SM64Lib\Behaviors\BehaviorParamsInfo.cs" />
+    <Compile Include="SM64Lib\Behaviors\CustomAsmAreaLinkOptions.cs" />
     <Compile Include="SM64Lib\Behaviors\Script\Behaviorscript.cs" />
     <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommand.cs" />
     <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandCollection.cs" />
@@ -147,6 +158,7 @@
     <Compile Include="SM64Lib\Configuration\ScrollTexConfig.cs" />
     <Compile Include="SM64Lib\Data\BinaryFile.cs" />
     <Compile Include="SM64Lib\Data\System\Bits.cs" />
+    <Compile Include="SM64Lib\Exceptions\InvalidMD5HashException.cs" />
     <Compile Include="SM64Lib\FilePathsConfiguration.cs" />
     <Compile Include="SM64Lib\General.cs" />
     <Compile Include="SM64Lib\Geolayout\BackgroundIDs.cs" />
@@ -166,6 +178,7 @@
     <Compile Include="SM64Lib\Json\GeolayoutscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\BehaviorscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\Fast3DBufferJsonConverter.cs" />
+    <Compile Include="SM64Lib\Level\AreaReverbLevel.cs" />
     <Compile Include="SM64Lib\Level\ILevelManager.cs" />
     <Compile Include="SM64Lib\Level\LevelList.cs" />
     <Compile Include="SM64Lib\Level\LevelSaveResult.cs" />
@@ -203,6 +216,8 @@
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObject.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectCollection.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectBehaviorProps.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectExportData.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectExportOptions.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectImport.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectExport.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectModelProps.cs" />
@@ -210,6 +225,11 @@
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataList.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataListCollection.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankData.cs" />
+    <Compile Include="SM64Lib\Patching\InputValueType.cs" />
+    <Compile Include="SM64Lib\Patching\PatchScript.cs" />
+    <Compile Include="SM64Lib\Patching\PatchScriptManager.cs" />
+    <Compile Include="SM64Lib\Patching\PatchScriptManagerProcessingInputValueEventArgs.cs" />
+    <Compile Include="SM64Lib\RomSpaceInfo.cs" />
     <Compile Include="SM64Lib\RomVersion.cs" />
     <Compile Include="SM64Lib\EventArguments\RomVersionEventArgs.cs" />
     <Compile Include="SM64Lib\Model\Conversion\Fast3DWriting\DisplaylistProps.cs" />
@@ -271,6 +291,7 @@
     <Compile Include="SM64Lib\Objects\StarManager.cs" />
     <Compile Include="SM64Lib\Data\System\SwapInts.cs" />
     <Compile Include="SM64Lib\Text\DialogHorizontalPosition.cs" />
+    <Compile Include="SM64Lib\Text\DialogSoundEffects.cs" />
     <Compile Include="SM64Lib\Text\DialogVerticalPosition.cs" />
     <Compile Include="SM64Lib\Text\Profiles\TextArrayItemInfo.cs" />
     <Compile Include="SM64Lib\Text\Profiles\TextTableDialogDataInfo.cs" />
@@ -329,7 +350,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Collision\" />
+    <Folder Include="Behaviors\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

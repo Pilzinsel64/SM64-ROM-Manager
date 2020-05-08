@@ -22,5 +22,18 @@ namespace SM64Lib.Behaviors.Script
                 cmd.Write(pointer);
             }
         }
+        public class X0C
+        {
+            public static int GetAsmPointer(BehaviorscriptCommand cmd)
+            {
+                cmd.Position = 4;
+                return cmd.ReadInt32();
+            }
+            public static void SetAsmPointer(BehaviorscriptCommand cmd, int pointer)
+            {
+                cmd.Position = 4;
+                cmd.Write(pointer);
+            }
+        }
     }
 }

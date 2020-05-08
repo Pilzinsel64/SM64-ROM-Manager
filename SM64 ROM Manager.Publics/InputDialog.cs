@@ -6,8 +6,9 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib;
 using global::SM64Lib.Music;
 using SM64Lib.TextValueConverter;
+using SM64Lib.Patching;
 
-namespace SM64_ROM_Manager.PatchScripts
+namespace SM64_ROM_Manager.Publics
 {
     internal partial class InputDialog
     {
@@ -16,11 +17,37 @@ namespace SM64_ROM_Manager.PatchScripts
         public object ReturnValue { get; set; } = null;
         public InputValueType ValueType { get; set; } = InputValueType.Byte;
 
-        public InputDialog(InputValueType valType, RomManager rommgr, object defaultValue = null, string infoText = null)
+        public InputDialog(InputValueType valType, RomManager rommgr, object defaultValue = null)
         {
             InitializeComponent();
             ValueType = valType;
             this.rommgr = rommgr;
+
+            string infoText = string.Empty;
+            switch (valType)
+            {
+                case InputValueType.Byte:
+                    infoText = "Input a 8 Bit value (Byte)";
+                    break;
+                case InputValueType.UInt16:
+                    infoText = "Input a 16 Bit value (2 Bytes)";
+                    break;
+                case InputValueType.UInt32:
+                    infoText = "Input a 32 Bit value (4 Bytes)";
+                    break;
+                case InputValueType.Single:
+                    infoText = "Input a float value";
+                    break;
+                case InputValueType.String:
+                    infoText = "Input a string";
+                    break;
+                case InputValueType.Sequence:
+                    infoText = "Input a Sequence ID";
+                    break;
+                case InputValueType.LevelID:
+                    infoText = "Input a Level ID";
+                    break;
+            }
 
             switch (valType)
             {
@@ -174,19 +201,8 @@ namespace SM64_ROM_Manager.PatchScripts
             }
             else
             {
-                MessageBoxEx.Show("The value you entered is invalid!", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxEx.Show(this, "The value you entered is invalid!", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        public enum InputValueType
-        {
-            Byte,
-            UInt16,
-            UInt32,
-            Single,
-            String,
-            Sequence,
-            LevelID
         }
     }
 }

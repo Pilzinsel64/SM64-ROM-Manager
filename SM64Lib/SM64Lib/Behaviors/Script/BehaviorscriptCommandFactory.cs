@@ -15,5 +15,18 @@ namespace SM64Lib.Behaviors.Script
                 BehaviorscriptCommandFunctions.X2A.SetCollisionPointer(cmd, collisionPointer);
             return cmd;
         }
+
+        public static BehaviorscriptCommand Build_x08()
+        {
+            return new BehaviorscriptCommand("08 00 00 00");
+        }
+
+        public static BehaviorscriptCommand Build_x0C(int asmPointer = -1)
+        {
+            var cmd = new BehaviorscriptCommand("0C 00 00 00 00 00 00 00");
+            if (asmPointer != -1)
+                BehaviorscriptCommandFunctions.X2A.SetCollisionPointer(cmd, asmPointer);
+            return cmd;
+        }
     }
 }

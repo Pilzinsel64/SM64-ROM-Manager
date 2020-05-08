@@ -139,7 +139,7 @@
     <value>CheckBoxX1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX1.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -169,7 +169,7 @@
     <value>LabelX4</value>
   </data>
   <data name="&gt;&gt;LabelX4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -199,7 +199,7 @@
     <value>LabelX3</value>
   </data>
   <data name="&gt;&gt;LabelX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -226,7 +226,7 @@
     <value>CircularProgress1</value>
   </data>
   <data name="&gt;&gt;CircularProgress1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CircularProgress, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.CircularProgress, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CircularProgress1.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -253,7 +253,7 @@
     <value>ButtonX3</value>
   </data>
   <data name="&gt;&gt;ButtonX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX3.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -280,7 +280,7 @@
     <value>ButtonX2</value>
   </data>
   <data name="&gt;&gt;ButtonX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX2.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -310,7 +310,7 @@
     <value>ButtonX1</value>
   </data>
   <data name="&gt;&gt;ButtonX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX1.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -334,7 +334,7 @@
     <value>LabelX2</value>
   </data>
   <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -358,7 +358,7 @@
     <value>LabelX1</value>
   </data>
   <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -2153,6 +2153,6 @@
     <value>ApplyPPFDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

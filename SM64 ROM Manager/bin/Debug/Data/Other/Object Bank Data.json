@@ -299,7 +299,8 @@
     {
       "Name": "Moneybags",
       "Objects": [
-        "Moneybags"
+        "Moneybags",
+        "Chill Bully"
       ],
       "Commands": [
         {

@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="columnHeader1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <metadata name="columnHeader2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 17</value>
+  </metadata>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AdvTree_Codes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="AdvTree_Codes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="AdvTree_Codes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 387</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AdvTree_Codes.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="AdvTree_Codes.Text" xml:space="preserve">
+    <value>advTree1</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Codes.Name" xml:space="preserve">
+    <value>AdvTree_Codes</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Codes.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Codes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Codes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="bar1.AccessibleDescription" xml:space="preserve">
+    <value>DotNetBar Bar (bar1)</value>
+  </data>
+  <data name="bar1.AccessibleName" xml:space="preserve">
+    <value>DotNetBar Bar</value>
+  </data>
+  <data name="bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="bar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="ButtonItem_Add.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="ButtonItem_Remove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonItem_EditHex.Text" xml:space="preserve">
+    <value>Edit Hex</value>
+  </data>
+  <data name="ButtonItem_EditName.Text" xml:space="preserve">
+    <value>Edit name</value>
+  </data>
+  <data name="ButtonItem_Edit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ButtonItem_ChangeRomAreaForAsm.Text" xml:space="preserve">
+    <value>Change ROM Area for ASM Codes</value>
+  </data>
+  <data name="ButtonItem_AsmToHexConverter.Text" xml:space="preserve">
+    <value>ASM to Hex Converter</value>
+  </data>
+  <data name="ButtonItem_Tools.Text" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="bar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="bar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>334, 24</value>
+  </data>
+  <data name="bar1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
+    <value>bar1</value>
+  </data>
+  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bar1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>334, 411</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAAAAEAIABoBAAAJgAAACAgAAABACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAADAE
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAANjFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv/Yxa//2MWv/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/2MWv/9jFr/9cTkL/XE5C/1xOQv9ualn/ZFpM/3l5
+        Zv+Sn4X/XE5C/1xOQv9jWEr/bmpZ/1xOQv9cTkL/XE5C/9jFr//Yxa//XE5C/1xOQv97fGj/s9Gu/3Nx
+        Xv9oYFH/tNOv/15RRP9cTkL/bmlY/7HOq/97fGj/XE5C/1xOQv/Yxa//2MWv/1xOQv+JkXn/sMyq/2xn
+        Vv9cTkL/XE5C/6jBoP93dmP/XE5C/1xOQv9qY1T/sMyp/4mRef9cTkL/2MWv/9jFr/9cTkL/iZN6/7HO
+        q/9sZ1b/XE5C/1xOQv+Hj3f/l6iM/1xOQv9cTkL/a2RU/7HOq/+Jk3r/XE5C/9jFr//Yxa//XE5C/1xO
+        Qv95eWb/s9Ku/3RyYP9cTkL/aGBR/7bVsf9eUEX/b2lZ/7LPrP94eGX/XE5C/1xOQv/Yxa//2MWv/1xO
+        Qv9cTkL/XE5C/29pWf9kWkz/XE5C/1xOQv+Zqo7/a2RU/2NYSv9vaVn/XE5C/1xOQv9cTkL/2MWv/9jF
+        r/9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/9jF
+        r//Yxa//XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv/Yxa//2MWv/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAoAAAAIAAAAEAAAAABACAAAAAAAIAQAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAANjFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv/Yxa//2MWv/9jFr//Yxa//XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/9jFr//Yxa//2MWv/9jF
+        r/9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/2MWv/9jF
+        r//Yxa//2MWv/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv/Yxa//2MWv/9jFr//Yxa//XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv+DiXL/pLqb/2JXSv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/9jFr//Yxa//2MWv/9jFr/9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9hVUj/n7KV/3t8
+        aP9cTkL/XE5C/6W8nP+94Lr/f4Ru/1xOQv9cTkL/XE5C/1xOQv9cTkL/dHFf/56xk/9hVUj/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/2MWv/9jFr//Yxa//2MWv/1xOQv9cTkL/XE5C/1xOQv9cTkL/aWJS/63J
+        p/+94Lr/r8up/2BTR/9cTkL/hIp0/73guv+gtZb/XE5C/1xOQv9cTkL/XE5C/1xOQv+iuJj/veC6/63J
+        p/9pYlL/XE5C/1xOQv9cTkL/XE5C/1xOQv/Yxa//2MWv/9jFr//Yxa//XE5C/1xOQv9cTkL/XE5C/21o
+        WP+y0K3/veC6/6zGpf9nX1D/XE5C/1xOQv9lW03/vN65/7vduP9jWEr/XE5C/1xOQv9cTkL/XE5C/2FW
+        SP+kupv/veC6/7LQrf9taFj/XE5C/1xOQv9cTkL/XE5C/9jFr//Yxa//2MWv/9jFr/9cTkL/XE5C/1xO
+        Qv93dmT/uNi0/73guv+iuJj/YVZI/1xOQv9cTkL/XE5C/1xOQv+juJr/veC6/4KHcf9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/19TRv+dsJL/veC6/7jYtP93dmT/XE5C/1xOQv9cTkL/2MWv/9jFr//Yxa//2MWv/1xO
+        Qv9cTkL/iZN6/7zfuf+94Lr/kZyD/1xPQv9cTkL/XE5C/1xOQv9cTkL/XE5C/4GHcP+94Lr/pLma/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/11PQ/+OmoD/veC6/73fuv+Iknn/XE5C/1xOQv/Yxa//2MWv/9jF
+        r//Yxa//XE5C/1xOQv+Gjnb/vN65/73guv+Qm4L/XU9D/1xOQv9cTkL/XE5C/1xOQv9cTkL/Y1hK/7ve
+        t/+73bj/ZFpM/1xOQv9cTkL/XE5C/1xOQv9cTkL/XU9D/5Cbgv+94Lr/vN65/4aOdv9cTkL/XE5C/9jF
+        r//Yxa//2MWv/9jFr/9cTkL/XE5C/1xOQv96e2j/udm1/73guv+cr5L/XlJF/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/oLSX/73guv+Fi3T/XE5C/1xOQv9cTkL/XE5C/11QQ/+Xp4v/veC6/7nZtf96e2j/XE5C/1xO
+        Qv9cTkL/2MWv/9jFr//Yxa//2MWv/1xOQv9cTkL/XE5C/1xOQv9wbFv/s9Ku/73guv+nvZ7/Y1hK/1xO
+        Qv9cTkL/XE5C/1xOQv9/g23/veC6/6W9nf9cTkL/XE5C/1xOQv9eUkX/nbCS/73guv+z0q7/cGxb/1xO
+        Qv9cTkL/XE5C/1xOQv/Yxa//2MWv/9jFr//Yxa//XE5C/1xOQv9cTkL/XE5C/1xOQv9mXU7/qsOj/73g
+        uv+wzKn/YFNH/1xOQv9cTkL/XE5C/2JWSf+627b/vd+6/2ZcTv9cTkL/XE5C/6K4mf+94Lr/qcOi/2Zc
+        Tv9cTkL/XE5C/1xOQv9cTkL/XE5C/9jFr//Yxa//2MWv/9jFr/9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9gVUf/nbCT/3p8Z/9cTkL/XE5C/1xOQv9cTkL/XE5C/56xk/+94Lr/h453/1xOQv9cTkL/dHJg/52v
+        kv9gVUf/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/2MWv/9jFr//Yxa//2MWv/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/dXVi/42Yf/9qY1P/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv/Yxa//2MWv/9jFr//Yxa//XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/9jFr//Yxa//2MWv/9jF
+        r/9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/2MWv/9jF
+        r//Yxa//2MWv/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv/Yxa//2MWv/9jFr//Yxa//XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/9jFr//Yxa//2MWv/9jFr/9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/2MWv/9jFr//Yxa//2MWv/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xO
+        Qv9cTkL/XE5C/1xOQv9cTkL/XE5C/1xOQv/Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jFr//Yxa//2MWv/9jF
+        r//Yxa//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Custom Asm Codes</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
+    <value>nodeConnector1</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
+    <value>elementStyle1</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Add.Name" xml:space="preserve">
+    <value>ButtonItem_Add</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Add.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Remove.Name" xml:space="preserve">
+    <value>ButtonItem_Remove</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Remove.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Edit.Name" xml:space="preserve">
+    <value>ButtonItem_Edit</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Edit.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_EditHex.Name" xml:space="preserve">
+    <value>ButtonItem_EditHex</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_EditHex.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_EditName.Name" xml:space="preserve">
+    <value>ButtonItem_EditName</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_EditName.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Tools.Name" xml:space="preserve">
+    <value>ButtonItem_Tools</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Tools.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ChangeRomAreaForAsm.Name" xml:space="preserve">
+    <value>ButtonItem_ChangeRomAreaForAsm</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ChangeRomAreaForAsm.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_AsmToHexConverter.Name" xml:space="preserve">
+    <value>ButtonItem_AsmToHexConverter</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_AsmToHexConverter.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>CustomAsmCodesManager</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

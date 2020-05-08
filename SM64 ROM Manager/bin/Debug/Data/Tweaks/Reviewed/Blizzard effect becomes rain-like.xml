@@ -1,0 +1,4 @@
+<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Makes the snow effect seen in CCM act more like rain. Texture location is at DA90BC. By hamius8000</description><patch>
+99B2A: 00 00
+99BCA: FF F0
+</patch></m64tweak>

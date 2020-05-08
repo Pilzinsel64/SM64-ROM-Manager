@@ -1,4 +1,5 @@
-﻿using SM64Lib.Data;
+﻿using Newtonsoft.Json;
+using SM64Lib.Data;
 using SM64Lib.SegmentedBanking;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,12 @@ namespace SM64Lib.Behaviors
     {
         public BehaviorBankConfig Config { get; private set; }
         public List<Behavior> Behaviors { get; } = new List<Behavior>();
+
+        [JsonIgnore]
+        public long Length
+        {
+            get => Behaviors.Sum(n => n.Length);
+        }
 
         public BehaviorBank(BehaviorBankConfig config)
         {
@@ -87,7 +94,6 @@ namespace SM64Lib.Behaviors
 
                     Behaviors.Add(behav);
                 }
-
             }
         }
 

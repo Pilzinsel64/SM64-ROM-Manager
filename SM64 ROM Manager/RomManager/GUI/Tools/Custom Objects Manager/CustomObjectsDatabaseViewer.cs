@@ -17,7 +17,7 @@ namespace SM64_ROM_Manager
 {
     public partial class CustomObjectsDatabaseViewer : OfficeForm
     {
-        // Events
+        // E v e n t s
 
         public delegate void ImportClickedEventHandler(CustomObjectImport import);
         public event ImportClickedEventHandler ImportClicked;
@@ -79,14 +79,23 @@ namespace SM64_ROM_Manager
                 itemListBox_CustomObjectFiles.SelectedItem = itemListBox_CustomObjectFiles.Items[0];
         }
 
+        private void LoadImport(CustomObjectImport import)
+        {
+            import.Decompress();
+            LoadObjects(import);
+        }
+
         private void LoadObjects(CustomObjectImport import)
         {
             advTree_CustomObjects.BeginUpdate();
             advTree_CustomObjects.Nodes.Clear();
 
-            if (import is object)
+            var isNotNull = import is object;
+            panel1.Enabled = isNotNull;
+
+            if (isNotNull)
             {
-                foreach (var customObject in import.CustomObjects)
+                foreach (var customObject in import.Data.CustomObjects)
                 {
                     var n = new Node
                     {
@@ -106,7 +115,6 @@ namespace SM64_ROM_Manager
         {
             var isNull = customObject == null;
             textBoxX_Description.Text = isNull ? string.Empty : customObject.Description;
-            panel1.Enabled = !isNull;
         }
 
         private CustomObjectImport GetSelectedImport()
@@ -171,7 +179,7 @@ namespace SM64_ROM_Manager
 
         private void ItemListBox_CustomObjectFiles_SelectedItemChanged(object sender, EventArgs e)
         {
-            LoadObjects(GetSelectedImport());
+            LoadImport(GetSelectedImport());
         }
 
         private void ButtonX_Import_Click(object sender, EventArgs e)

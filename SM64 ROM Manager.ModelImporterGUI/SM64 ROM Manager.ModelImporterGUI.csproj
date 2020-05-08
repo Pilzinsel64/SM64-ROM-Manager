@@ -26,6 +26,7 @@
     <DocumentationFile>SM64 Model Importer.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +38,7 @@
     <DocumentationFile>SM64 Model Importer.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
     <DefineConstants>TRACE</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -62,10 +64,18 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
+    <Prefer32Bit>false</Prefer32Bit>
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout.Design">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="DevComponents.DotNetBar.Design, Version=14.0.0.3, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -78,6 +88,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.IO">
+      <HintPath>..\Shared Libs\Pilz.IO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -92,6 +105,9 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="Z.ExtensionMethods.WithNamespace, Version=2.1.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.ExtensionMethods.WithNamespace.2.1.1\lib\net45\Z.ExtensionMethods.WithNamespace.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -177,6 +193,14 @@
   <ItemGroup>
     <Content Include="1443729764_forest_mushroom.ico" />
     <Content Include="if_3d_objects_102518.ico" />
+    <None Include="Resources\icons8_folder_16px.png" />
+    <None Include="Resources\icons8_cancel_16px.png" />
+    <None Include="Resources\icons8_checkmark_16px_1.png" />
+    <None Include="Resources\icons8_save_16px.png" />
+    <None Include="Resources\icons8_edit_16px.png" />
+    <None Include="Resources\icons8_delete_2_16px.png" />
+    <None Include="Resources\icons8_delete_sign_16px.png" />
+    <None Include="Resources\icons8_plus_math_16px.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SM64 ROM Manager.ModelConverterGUI\SM64 ROM Manager.ModelConverterGUI.csproj">

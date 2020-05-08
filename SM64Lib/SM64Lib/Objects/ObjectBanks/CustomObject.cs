@@ -19,7 +19,7 @@ namespace SM64Lib.Objects.ObjectBanks
             var behav = BehaviorProps.Behavior?.FindBehavior();
             if (BehaviorProps.UseCollisionPointerOfModel && BehaviorProps.Behavior is object && (!BehaviorProps.Behavior.IsVanilla || behav.EnableCollisionPointer) && ModelProps.Model is object)
             {
-                var mdl = ModelProps.Model.FindModel();
+                var mdl = ModelProps.Model?.FindModel();
 
                 if (mdl?.Model?.Collision is object && mdl.CollisionPointer != -1)
                 {

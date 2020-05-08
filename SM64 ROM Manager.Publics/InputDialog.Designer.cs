@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Microsoft.VisualBasic.CompilerServices;
 
-namespace SM64_ROM_Manager.PatchScripts
+namespace SM64_ROM_Manager.Publics
 {
     [DesignerGenerated()]
     internal partial class InputDialog : DevComponents.DotNetBar.OfficeForm

@@ -14,13 +14,16 @@ namespace SM64_ROM_Manager.LevelEditor
 {
     internal class AdvPropGrid_ObjectPropertiesHelper
     {
-        public AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid advPropGrid, ObjectComboList objComboList, string behaviorPropName, string bParamPropName)
+        public AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid advPropGrid, ObjectComboList objComboList, BehaviorInfoList behaviors, string behaviorPropName, string bParamPropName)
         {
             CbEditorBParam1 = null;
             CbEditorBParam2 = null;
+            CbEditorBParam3 = null;
+            CbEditorBParam4 = null;
             CbEditorBehavAddr = null;
             AdvPropertyGrid1 = advPropGrid;
             myObjectCombos = objComboList;
+            myBehaviors = behaviors;
             this.behaviorPropName = behaviorPropName;
             this.bParamPropName = bParamPropName;
             General.LoadBehaviorInfosIfEmpty();
@@ -33,10 +36,16 @@ namespace SM64_ROM_Manager.LevelEditor
             bpeditor.EditorCreating += ContentSelectorEditor_EditorCreating;
             var bp1PropSet = new PropertySettings(bParamPropName + Conversions.ToString(1));
             var bp2PropSet = new PropertySettings(bParamPropName + Conversions.ToString(2));
+            var bp3PropSet = new PropertySettings(bParamPropName + Conversions.ToString(3));
+            var bp4PropSet = new PropertySettings(bParamPropName + Conversions.ToString(4));
             bp1PropSet.ValueEditor = bpeditor;
             bp2PropSet.ValueEditor = bpeditor;
+            bp3PropSet.ValueEditor = bpeditor;
+            bp4PropSet.ValueEditor = bpeditor;
             AdvPropertyGrid1.PropertySettings.Add(bp1PropSet);
             AdvPropertyGrid1.PropertySettings.Add(bp2PropSet);
+            AdvPropertyGrid1.PropertySettings.Add(bp3PropSet);
+            AdvPropertyGrid1.PropertySettings.Add(bp4PropSet);
 
             // Add Behavior Address Editor to Property Grid
             var behavaddreditor = new ContentSelectorEditor();
@@ -63,6 +72,7 @@ namespace SM64_ROM_Manager.LevelEditor
         private bool hasFirstFocued = false;
         private readonly Dictionary<string, EventHandler> registredHandlers = new Dictionary<string, EventHandler>();
         private readonly ObjectComboList myObjectCombos;
+        private readonly BehaviorInfoList myBehaviors;
         private AdvPropertyGrid _AdvPropertyGrid1;
 
         private AdvPropertyGrid AdvPropertyGrid1
@@ -149,6 +159,62 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
+        private ContentSelectorEditor.ComboBoxEditor _CbEditorBParam3;
+
+        internal ContentSelectorEditor.ComboBoxEditor CbEditorBParam3
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _CbEditorBParam3;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_CbEditorBParam3 != null)
+                {
+                    _CbEditorBParam3.DataColumnCreated -= CbEditorBehavAddr_DataColumnCreated;
+                    _CbEditorBParam3.NeedValues -= ProvideBParamContentList;
+                }
+
+                _CbEditorBParam3 = value;
+                if (_CbEditorBParam3 != null)
+                {
+                    _CbEditorBParam3.DataColumnCreated += CbEditorBehavAddr_DataColumnCreated;
+                    _CbEditorBParam3.NeedValues += ProvideBParamContentList;
+                }
+            }
+        }
+
+        private ContentSelectorEditor.ComboBoxEditor _CbEditorBParam4;
+
+        internal ContentSelectorEditor.ComboBoxEditor CbEditorBParam4
+        {
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            get
+            {
+                return _CbEditorBParam4;
+            }
+
+            [MethodImpl(MethodImplOptions.Synchronized)]
+            set
+            {
+                if (_CbEditorBParam4 != null)
+                {
+                    _CbEditorBParam4.DataColumnCreated -= CbEditorBehavAddr_DataColumnCreated;
+                    _CbEditorBParam4.NeedValues -= ProvideBParamContentList;
+                }
+
+                _CbEditorBParam4 = value;
+                if (_CbEditorBParam4 != null)
+                {
+                    _CbEditorBParam4.DataColumnCreated += CbEditorBehavAddr_DataColumnCreated;
+                    _CbEditorBParam4.NeedValues += ProvideBParamContentList;
+                }
+            }
+        }
+
         private ContentSelectorEditor.ComboBoxEditor _CbEditorBehavAddr;
 
         internal ContentSelectorEditor.ComboBoxEditor CbEditorBehavAddr
@@ -174,8 +240,6 @@ namespace SM64_ROM_Manager.LevelEditor
                 }
             }
         }
-
-        private Dictionary<string, byte> bp1Values, bp2Values;
 
         private uint CurBehavAddr
         {
@@ -219,16 +283,20 @@ namespace SM64_ROM_Manager.LevelEditor
                 switch (switchExpr)
                 {
                     case nameof(CbEditorBParam1):
-                        {
-                            editor = CbEditorBParam1;
-                            break;
-                        }
+                        editor = CbEditorBParam1;
+                        break;
 
                     case nameof(CbEditorBParam2):
-                        {
-                            editor = CbEditorBParam2;
-                            break;
-                        }
+                        editor = CbEditorBParam2;
+                        break;
+
+                    case nameof(CbEditorBParam3):
+                        editor = CbEditorBParam3;
+                        break;
+
+                    case nameof(CbEditorBParam4):
+                        editor = CbEditorBParam4;
+                        break;
 
                     default:
                         {
@@ -286,6 +354,40 @@ namespace SM64_ROM_Manager.LevelEditor
                         break;
                     }
 
+                case var case3 when case3 == bParamPropName + Conversions.ToString(3):
+                    {
+                        if (CbEditorBParam3 != e.Editor)
+                        {
+                            CbEditorBParam3 = e.Editor;
+                            CbEditorBParam3.ValueType = TypeCode.Byte;
+                            CbEditorBParam3.DisplayMember = nameof(BehaviorInfo.BParamValue.ValueText);
+                            CbEditorBParam3.ValueMember = nameof(BehaviorInfo.BParamValue.Value);
+                            CbEditorBParam3.DropDownColumns = nameof(BehaviorInfo.BParamValue.ValueText) + "," + nameof(BehaviorInfo.BParamValue.Name);
+                            CbEditorBParam3.DropDownColumnsHeaders = $"Value{Constants.vbNewLine}Name";
+                            CbEditorBParam3.DropDownHeight = 300;
+                            CbEditorBParam3.DropDownWidth = 200;
+                        }
+
+                        break;
+                    }
+
+                case var case4 when case4 == bParamPropName + Conversions.ToString(4):
+                    {
+                        if (CbEditorBParam4 != e.Editor)
+                        {
+                            CbEditorBParam4 = e.Editor;
+                            CbEditorBParam4.ValueType = TypeCode.Byte;
+                            CbEditorBParam4.DisplayMember = nameof(BehaviorInfo.BParamValue.ValueText);
+                            CbEditorBParam4.ValueMember = nameof(BehaviorInfo.BParamValue.Value);
+                            CbEditorBParam4.DropDownColumns = nameof(BehaviorInfo.BParamValue.ValueText) + "," + nameof(BehaviorInfo.BParamValue.Name);
+                            CbEditorBParam4.DropDownColumnsHeaders = $"Value{Constants.vbNewLine}Name";
+                            CbEditorBParam4.DropDownHeight = 300;
+                            CbEditorBParam4.DropDownWidth = 200;
+                        }
+
+                        break;
+                    }
+
                 case var case2 when case2 == behaviorPropName:
                     {
                         if (CbEditorBehavAddr != e.Editor)
@@ -299,7 +401,7 @@ namespace SM64_ROM_Manager.LevelEditor
                             CbEditorBehavAddr.DropDownColumnsHeaders = $"Address{Constants.vbNewLine}Name";
                             CbEditorBehavAddr.DropDownHeight = 400;
                             CbEditorBehavAddr.DropDownWidth = 300;
-                            CbEditorBehavAddr.DataSource = General.BehaviorInfos;
+                            CbEditorBehavAddr.DataSource = myBehaviors;
                             // CbEditorBehavAddr.MultiColumnDisplayControl.Columns(0).AutoSize()
                             // LoadBehaviorAddressesList()
                         }
@@ -317,24 +419,24 @@ namespace SM64_ROM_Manager.LevelEditor
             switch (switchExpr)
             {
                 case var @case when @case == bParamPropName + Conversions.ToString(1):
-                    {
-                        if (CbEditorBParam1 is object)
-                        {
-                            e.Editor = CbEditorBParam1;
-                        }
-
-                        break;
-                    }
+                    if (CbEditorBParam1 is object)
+                        e.Editor = CbEditorBParam1;
+                    break;
 
                 case var case1 when case1 == bParamPropName + Conversions.ToString(2):
-                    {
-                        if (CbEditorBParam2 is object)
-                        {
-                            e.Editor = CbEditorBParam2;
-                        }
+                    if (CbEditorBParam2 is object)
+                        e.Editor = CbEditorBParam2;
+                    break;
 
-                        break;
-                    }
+                case var @case3 when @case3 == bParamPropName + Conversions.ToString(3):
+                    if (CbEditorBParam3 is object)
+                        e.Editor = CbEditorBParam3;
+                    break;
+
+                case var case4 when case4 == bParamPropName + Conversions.ToString(4):
+                    if (CbEditorBParam4 is object)
+                        e.Editor = CbEditorBParam4;
+                    break;
 
                 case var case2 when case2 == behaviorPropName:
                     {
@@ -483,10 +585,12 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             if (!hasFirstFocued)
             {
-                if (CbEditorBParam1 is object && CbEditorBParam2 is object)
+                if (CbEditorBParam1 is object && CbEditorBParam2 is object && CbEditorBParam3 is object && CbEditorBParam4 is object)
                 {
                     // CbEditorBParam1.Focus()
                     // CbEditorBParam2.Focus()
+                    // CbEditorBParam3.Focus()
+                    // CbEditorBParam4.Focus()
                     hasFirstFocued = true;
                 }
             }
@@ -506,17 +610,17 @@ namespace SM64_ROM_Manager.LevelEditor
             if (sender.Tag == null || (uint)sender.Tag != addr)
             {
                 if (sender == CbEditorBParam1)
-                {
                     bpname = bParamPropName + Conversions.ToString(1);
-                }
                 else if (sender == CbEditorBParam2)
-                {
                     bpname = bParamPropName + Conversions.ToString(2);
-                }
+                else if (sender == CbEditorBParam3)
+                    bpname = bParamPropName + Conversions.ToString(3);
+                else if (sender == CbEditorBParam4)
+                    bpname = bParamPropName + Conversions.ToString(4);
 
                 if (!string.IsNullOrEmpty(bpname))
                 {
-                    var info = General.BehaviorInfos.GetByBehaviorAddress(addr);
+                    var info = myBehaviors.GetByBehaviorAddress(addr);
                     if (info is object)
                     {
                         BehaviorInfo.BParam param = (BehaviorInfo.BParam)info.GetValue(bpname);

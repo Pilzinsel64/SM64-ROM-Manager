@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using global::System.Collections.Specialized;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Pilz.IO;
 
-namespace SM64_ROM_Manager.PatchScripts
+namespace SM64Lib.Patching
 {
     public class PatchProfile
     {
@@ -25,6 +26,16 @@ namespace SM64_ROM_Manager.PatchScripts
         [JsonConverter(typeof(VersionConverter))]
         public Version Version { get; set; } = new Version("1.0.0.0");
         /// <summary>
+        /// The minimum ROM Manager version requied for this tweak.
+        /// </summary>
+        [JsonConverter(typeof(VersionConverter))]
+        public Version MinVersion { get; set; } = new Version("1.0.0.0");
+        /// <summary>
+        /// The maximum ROM Manager version allowed for this tweak.
+        /// </summary>
+        [JsonConverter(typeof(VersionConverter))]
+        public Version MaxVersion { get; set; } = new Version("0.0.0.0");
+        /// <summary>
         /// The description of this profile
         /// </summary>
         /// <returns></returns>
@@ -35,6 +46,14 @@ namespace SM64_ROM_Manager.PatchScripts
         /// <returns></returns>
         [JsonIgnore]
         public string FileName { get; set; } = "";
+        /// <summary>
+        /// Contains files embedded into this profile.
+        /// </summary>
+        public EmbeddedFilesContainer EmbeddedFiles { get; } = new EmbeddedFilesContainer();
+        /// <summary>
+        /// Defines an uniquie ID to identify this tweak (e.g. for undo patch).
+        /// </summary>
+        public int ID { get; set; } = -1;
     }
 
     /// <summary>
@@ -69,6 +88,10 @@ namespace SM64_ROM_Manager.PatchScripts
         /// </summary>
         /// <returns></returns>
         public StringCollection References { get; set; } = new StringCollection();
+        /// <summary>
+        /// Defines an uniquie ID to identify this script (e.g. for undo patch).
+        /// </summary>
+        public int ID { get; set; } = -1;
     }
 
     /// <summary>

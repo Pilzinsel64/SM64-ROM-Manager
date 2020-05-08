@@ -44,14 +44,14 @@ namespace SM64_ROM_Manager
                     Width = flowLayoutPanel1.Width - 6
                 });
 
-                foreach (var customObject in kvp.Value.CustomObjects)
+                foreach (var customObject in kvp.Value.Data.CustomObjects)
                 {
                     flowLayoutPanel1.Controls.Add(
                         new CustomObjectImportPropsEditor(customObject, kvp.Value, romManager)
-                    {
-                        BackColor = Color.Transparent,
-                        Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right
-                    });
+                        {
+                            BackColor = Color.Transparent,
+                            Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right
+                        });
                 }
             }
         }

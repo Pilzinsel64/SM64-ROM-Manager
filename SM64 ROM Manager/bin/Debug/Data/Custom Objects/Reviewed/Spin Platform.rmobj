@@ -1,0 +1,715 @@
+{
+  "$id": "1",
+  "Name": "Spin Plattform",
+  "CustomObjects": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "Name": "Spin Plattform",
+        "Description": "Made by Pilzinsel64",
+        "BehaviorProps": {
+          "BehaviorAddress": 0,
+          "Behavior": {
+            "$id": "4",
+            "BankAddress": 318789308,
+            "IsVanilla": false,
+            "Name": "Spin Plattform",
+            "FixedLength": -1,
+            "CustomAsmLinks": [
+              {
+                "$id": "5",
+                "CustomAsm": {
+                  "$id": "6",
+                  "Config": {
+                    "Name": "Spin on jump on it",
+                    "RamAddress": 4227072,
+                    "RomAddress": 18907136,
+                    "Length": 164
+                  },
+                  "AreaBytes": "J73/6K+/ABQMCo8/AAAAADwDgDaMYxFgEEAAEQAAAAA8BIA0hISvoDCEgAAQgAAMAAAAADwBQwisYQFMjGsBRAALXAAAKwggPAqANK1Bsbw8CxCANWsIpBAAAA+tS7F8jGoBTBFAAAwAAAAAPAuANMVisbA8AURKRIEgAEYEEIDlYsaojWyxsI1tseAVjQACAAAAAKxgAUyPvwAUA+AACCe9ABg="
+                },
+                "Loop": true
+              }
+            ]
+          },
+          "UseCustomAddress": false,
+          "UseCollisionPointerOfModel": true
+        },
+        "ModelProps": {
+          "ModelID": 0,
+          "Model": {
+            "$id": "7",
+            "Name": "Wirbelplattform",
+            "CollisionPointerDestinations": [
+              18898952
+            ]
+          },
+          "UseCustomModelID": false
+        }
+      }
+    ]
+  },
+  "ExportDate": "2020-04-27T11:06:13.5473138Z",
+  "Version": "1.0.0.0",
+  "CustomModels": {
+    "$id": "8",
+    "$values": [
+      {
+        "Key": {
+          "$ref": "7"
+        },
+        "Value": {
+          "$id": "9",
+          "Config": {
+            "$ref": "7"
+          },
+          "Geolayout": {
+            "$id": "10",
+            "IndexForGeopointers": 2,
+            "Geolayoutscript": {
+              "$id": "11",
+              "$values": [
+                {
+                  "$id": "12",
+                  "Buffer": "IAAPoA==",
+                  "BankAddress": 117445648
+                },
+                {
+                  "$id": "13",
+                  "Buffer": "BAAAAA==",
+                  "BankAddress": 117445652
+                },
+                {
+                  "$id": "14",
+                  "Buffer": "BQAAAA==",
+                  "BankAddress": 117445664
+                },
+                {
+                  "$id": "15",
+                  "Buffer": "AQAAAA==",
+                  "BankAddress": 117445668
+                }
+              ]
+            },
+            "CameraPreset": 1,
+            "EnvironmentEffect": 0,
+            "GeopointerOffsets": {
+              "$id": "16",
+              "$values": []
+            },
+            "Geopointers": {
+              "$id": "17",
+              "$values": [
+                {
+                  "$id": "18",
+                  "Layer": 1,
+                  "SegPointer": 117445072,
+                  "ModelScale": {
+                    "$id": "19",
+                    "X": 1.0,
+                    "Y": 1.0,
+                    "Z": 1.0
+                  },
+                  "ModelOffset": {
+                    "$id": "20",
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  }
+                }
+              ]
+            },
+            "NewGeoOffset": 5136,
+            "Closed": false,
+            "Length": 24
+          },
+          "Model": {
+            "$id": "21",
+            "Collision": {
+              "$id": "22",
+              "Mesh": {
+                "$id": "23",
+                "Vertices": {
+                  "$id": "24",
+                  "$values": [
+                    {
+                      "$id": "25",
+                      "X": -50,
+                      "Y": 0,
+                      "Z": 87,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 0
+                    },
+                    {
+                      "$id": "26",
+                      "X": 44,
+                      "Y": 13,
+                      "Z": 77,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 1
+                    },
+                    {
+                      "$id": "27",
+                      "X": -44,
+                      "Y": 13,
+                      "Z": 77,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 2
+                    },
+                    {
+                      "$id": "28",
+                      "X": 50,
+                      "Y": 0,
+                      "Z": 87,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 3
+                    },
+                    {
+                      "$id": "29",
+                      "X": 100,
+                      "Y": 0,
+                      "Z": 0,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 4
+                    },
+                    {
+                      "$id": "30",
+                      "X": 88,
+                      "Y": 13,
+                      "Z": 0,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 5
+                    },
+                    {
+                      "$id": "31",
+                      "X": 50,
+                      "Y": 0,
+                      "Z": -87,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 6
+                    },
+                    {
+                      "$id": "32",
+                      "X": 44,
+                      "Y": 13,
+                      "Z": -77,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 7
+                    },
+                    {
+                      "$id": "33",
+                      "X": -44,
+                      "Y": 13,
+                      "Z": -77,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 8
+                    },
+                    {
+                      "$id": "34",
+                      "X": -50,
+                      "Y": 0,
+                      "Z": -87,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 9
+                    },
+                    {
+                      "$id": "35",
+                      "X": -88,
+                      "Y": 13,
+                      "Z": 0,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 10
+                    },
+                    {
+                      "$id": "36",
+                      "X": -100,
+                      "Y": 0,
+                      "Z": 0,
+                      "ParentList": {
+                        "$ref": "24"
+                      },
+                      "Index": 11
+                    }
+                  ]
+                },
+                "Triangles": {
+                  "$id": "37",
+                  "$values": [
+                    {
+                      "$id": "38",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "39",
+                        "$values": [
+                          {
+                            "$ref": "25"
+                          },
+                          {
+                            "$ref": "26"
+                          },
+                          {
+                            "$ref": "27"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 0
+                    },
+                    {
+                      "$id": "40",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "41",
+                        "$values": [
+                          {
+                            "$ref": "26"
+                          },
+                          {
+                            "$ref": "25"
+                          },
+                          {
+                            "$ref": "28"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 1
+                    },
+                    {
+                      "$id": "42",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "43",
+                        "$values": [
+                          {
+                            "$ref": "29"
+                          },
+                          {
+                            "$ref": "26"
+                          },
+                          {
+                            "$ref": "28"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 2
+                    },
+                    {
+                      "$id": "44",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "45",
+                        "$values": [
+                          {
+                            "$ref": "26"
+                          },
+                          {
+                            "$ref": "29"
+                          },
+                          {
+                            "$ref": "30"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 3
+                    },
+                    {
+                      "$id": "46",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "47",
+                        "$values": [
+                          {
+                            "$ref": "31"
+                          },
+                          {
+                            "$ref": "30"
+                          },
+                          {
+                            "$ref": "29"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 4
+                    },
+                    {
+                      "$id": "48",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "49",
+                        "$values": [
+                          {
+                            "$ref": "30"
+                          },
+                          {
+                            "$ref": "31"
+                          },
+                          {
+                            "$ref": "32"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 5
+                    },
+                    {
+                      "$id": "50",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "51",
+                        "$values": [
+                          {
+                            "$ref": "31"
+                          },
+                          {
+                            "$ref": "33"
+                          },
+                          {
+                            "$ref": "32"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 6
+                    },
+                    {
+                      "$id": "52",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "53",
+                        "$values": [
+                          {
+                            "$ref": "33"
+                          },
+                          {
+                            "$ref": "31"
+                          },
+                          {
+                            "$ref": "34"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 7
+                    },
+                    {
+                      "$id": "54",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "55",
+                        "$values": [
+                          {
+                            "$ref": "32"
+                          },
+                          {
+                            "$ref": "26"
+                          },
+                          {
+                            "$ref": "30"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 8
+                    },
+                    {
+                      "$id": "56",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "57",
+                        "$values": [
+                          {
+                            "$ref": "34"
+                          },
+                          {
+                            "$ref": "35"
+                          },
+                          {
+                            "$ref": "33"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 9
+                    },
+                    {
+                      "$id": "58",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "59",
+                        "$values": [
+                          {
+                            "$ref": "27"
+                          },
+                          {
+                            "$ref": "33"
+                          },
+                          {
+                            "$ref": "35"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 10
+                    },
+                    {
+                      "$id": "60",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "61",
+                        "$values": [
+                          {
+                            "$ref": "33"
+                          },
+                          {
+                            "$ref": "27"
+                          },
+                          {
+                            "$ref": "32"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 11
+                    },
+                    {
+                      "$id": "62",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "63",
+                        "$values": [
+                          {
+                            "$ref": "32"
+                          },
+                          {
+                            "$ref": "27"
+                          },
+                          {
+                            "$ref": "26"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 12
+                    },
+                    {
+                      "$id": "64",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "65",
+                        "$values": [
+                          {
+                            "$ref": "35"
+                          },
+                          {
+                            "$ref": "34"
+                          },
+                          {
+                            "$ref": "36"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 13
+                    },
+                    {
+                      "$id": "66",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "67",
+                        "$values": [
+                          {
+                            "$ref": "36"
+                          },
+                          {
+                            "$ref": "27"
+                          },
+                          {
+                            "$ref": "35"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 14
+                    },
+                    {
+                      "$id": "68",
+                      "CollisionType": 0,
+                      "ColParams": "AAA=",
+                      "Vertices": {
+                        "$id": "69",
+                        "$values": [
+                          {
+                            "$ref": "27"
+                          },
+                          {
+                            "$ref": "36"
+                          },
+                          {
+                            "$ref": "25"
+                          }
+                        ]
+                      },
+                      "ParentList": {
+                        "$ref": "37"
+                      },
+                      "Index": 15
+                    }
+                  ]
+                }
+              },
+              "SpecialBoxes": {
+                "$id": "70",
+                "$values": []
+              },
+              "Length": 192
+            },
+            "Fast3DBuffer": {
+              "$id": "71",
+              "Buffer": "f39/AH9/fwD///8A////AElJSQAAAAAAq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6ONigmBB3kHeQeJyaONq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6uNmouBR3kHgQeSSauNq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vNmsuBR3kHgUeay6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPmouBR3kHiYmjTavPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rjaNNow2jDaMNq42rzavPq8+rz6vPq8+rz6vNkkuBB4EHkourz6vPq8+rz6vPq8+rz6vPq8+rz6vPq42jDZJLicmBR4FHgUeBR4GJigmbC6uNq8+rz6vPq8+rz6ONicl5B4GJo02rz6vPq8+rz6vPq8+rz6vPq8+jTYoJgUd5B3kHeQeBB4EHeQd5B3kHgUeKCaNNq8+rz6vPq8+rz5sLgUeBB5KLq8+rz6vPq8+rz6vPq8+rzZrLgYd5B4EHgUeJyZJJkouSi5JJicmBR3kHeQeBh5sLq8+rz6vPq8+rjYnJeQeJyauNq8+rz6vPq8+rz6vNmouBR3kHgUeKCaMNq42rzavPq8+rzauNmwuKCYEHeQeBh5sLq8+rz6vPq8+Si4EHgUejTavPq8+rz6vPq8+ay4FHeQeBh5rLq82rz6vPq82jTaMNmwujTauNq42SS4EHeQeJyaONq8+rz6vPo02BR4EHmsurz6vPq8+rz6NNgYl5B4GHow2rz6vPq8+jTYoJgYeBR4FHgUeJyZrLq42KCYEHgQeSi6vPq8+rz6uNgYl5B5KLq8+rz6vPq82KCYEHgUeay6vPq8+rz5sLgYmBB3kHgQeBR4EHeQeBR5qLow2BR3kHicmrjavPq8+rzYnJeQeKCavNq8+rz6MNgUeBB4oJq82rz6vPo02Bh3kHgQeKCZrLow2ay4nJgQeBR5sLigl5B4FHo02rz6vPq82JyXkHicmrzavPq8+SS4EHgUejTavPq8+rzYoJeQeBB5JJow2rTauNq82jTYnJgQeSSZqLgQeBR5sLq8+rz6vNicl5B4oJq82rz6uNgYl5B4oJq82rz6vPow2BR3kHicmjC5rLowuay6NNq82ay4EHigmSi4EHgUebC6vPq8+rjYnJeQeSCavNq8+jDYFHgQeay6vPq8+rz5KLgQeBB5JJkouay5KLo02rjavNmwuBR4oJkouBB4FHow2rz6vPo02BR4EHkourz6vPmwuBB4FHow2rz6vPq82SSXkHgQeSi5IJmsuSSaNNq82rjZJJgUeSi4oJeQeBiaNNq8+rz5rLgQeBR6MNq8+rz5qLgQeBR6NNq8+rz6vNkgl5B4EHkouSCZJLkkuKCZqLigmBR4nJkouBR3kHigmrzavPq82KCXkHgYmjTavPq8+ai3kHgYerjavPq8+rz5KLeQeBB5JLkouBiZKLkkuJyYnJkkuay4nJeQeBR6MNq8+rz5sLgUeBB5JLq8+rz6vPmouBB4GHo42rz6vPq8+ay4EHeQeJyaMLicmBR5JJmsuay5JJgUd5B4FHmourz6vPo42JyXkHgUejDavPq8+rz5rLgQeBR6NNq8+rz6vPo42JyXkHgUeai6MNicmBB4FHgUeBB4EHgYmay6vNq8+rjZJJgQeBB5KLq8+rz6vPq8+jDYFHgQebC6vPq8+rz6vPmouBB3kHgYeay6NNmsuKCYnJigmSi6NNq8+rz6ONkkmBB3kHicmjjavPq8+rz6vPo02BR4EHkkurz6vPq8+rz6uNicmBB4EHgYeai6ONq82rzavNq8+rz6uNmwuJyYEHeQeJyaNNq8+rz6vPq8+rz6vNicl5B4nJq42rz6vPq8+rz6NNicmBB3kHgUeJyZKLmsubC5sLkouJyYFHeQeBB4nJo02rz6vPq8+rz6vPq8+rz5rLgQeBR5sLq8+rz6vPq8+rz6NNigmBR3kHeQeBB4EHgUeBB4EHeQeBB4FHkkujTavPq8+rz6vPq8+rz6vPq8+jTYGHeQeJyauNq8+rz6vPq8+rz6vNmwuKCYGHgUeBB4EHgQeBR4GJkkujDavNq8+rz6vPq8+rz6vPq8+rz6vPq8+SS4EHgQeai6vPq8+rz6vPq8+rz6vPq82jTZsLmsuay5rLow2jTavPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPo02Bh3kHgUejDavPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPkouBB3kHiYmjTavPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6ONicl5B3kHicmjDavPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz5sLgUd5B3kHgYeay6uNq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz5qLgQd5B3kHgUeKCaONq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq8+rz6vPq88AAAAAAAAAAGpHakdyh1nDcodyh1nDWcN6x4MJgwmTS5NLk0t6x0FBUYFyh3KHcodyh2pHcodiRWpHYkWLCXrJgwmDCYsJYkVqR2pHakdZw3rHesliBVnDcoeLCYMJk0ubjZNLesdRgVGBakdqR3KHcodiBWpHYkViRWJFcodyh3KHcoeDCWJFakdiRWJFUYF6yYMJYgViBWpHiwl6x5NLm42bjXrHQUFRgXKHYkVqR2pHWcNiRWIFYgViRXKHgwl6x3KHgwliRWpHYgViBVGBeseDCWIFakdiRYsJgwmLCZNLm42LCUFBYgVyh3KHeslyh2IFakdiRWpHeseLCYMJesdiRXKHYkVqR2IFUYFRgXKHiwlqR3KHYkWTS4sJiwt6yZNLiwtBQWpHgwlyh3rJesdiRWJFYgV6x4MJesmLCYsLesdiBVnDakdiBVGBYgVyh4sJcodyh2pHk0uDCYsLesm0D7QPQUFyh4sLgwl6yXKHYkViRWJFiwt6x4MJk0uTS5NLcodZw2JFWcNZw3KHesmLCXrJesdqR4MJcoeDCYMJtA+0D0FBcoeLC4sLiwuTS4MJesdiRYsLcodyh5NLiwuLCXrHWcNyh2JFakdyh3KHiwuDCXrJcod6yYMJk0uLC7QPtA9BQXKHgwmLC4MJiwmLC3rJYkWLC3rJakeLCYMJm42DCWIFeslqR3KHgwlyh5NLgwl6yXKHakeDCZNLk0u0D7QPQUGDCXrJiwuLCZuNk0uDCWJFiwuLCXKHgwmDCZuNk0tyh4sLgwmLC5NLeseLCXrJgwl6yWpHiwuTS5NLtA+0D0FBgwl6yYMJiwmLC4sLcodiBYsJgwlyh4MJcoe0D5uNesmLC4MJk0ubjXKHgwl6yXrJcodBQZuNm42LCbQPm41BQYMJgwmDCYsLk0uLCXrHYkWLCYMJcod6x3KHm42bjXrJiwuDCZNLm416x4sJgwmDCZNLUYGbjZNLiwm0D3KHQUF6yYMJesmDCYsJeslyh2JFiwlyh3rHesl6x5uNk0t6yYMJesmLC5uNcod6yXrJesmTS1GBtA+TS4MJtA9RgUFBeseDCYsJiwuLC4MJeslqR4sJeseDCXrHgwm0D5NLcoeLC4MJiwubjXKHcodyh3KHiwtRgbQPk0uLCbQPUYFiRXrJiwuLCYsLiwlyh3KHcoeLCXKHesdyh3rHm42bjXrJiwuDCYsLm41qR2pHakdqR3rJUYG0D4sLiwm0D1GBesl6yYsJgwmLCYMJcod6yXKHiwliRXKHcoeDCZuNk0t6yYsLgwmDCZNLgwlyh3KHesmDCVnDtA+DCYsJtA9RgXrJcoeLCYMJiwmDCXrHeslyh3rHUYF6x3rHiwmTS5uNesmDCXrHesmTS4sLcod6yYMJiwtiBbQPgwmTS7QPUYFZw3KHiwmDCYMJiwl6yXKHakdqR2IFk0uDCYsLk0ubjXrJiwl6yYMJiwt6yWpHcodyh4MJYgW0D4sJgwm0D1GBYgWDCYsLgwmLCYsJesd6x3KHakd6x5uNiwuLCZNLm41yh5NLiwuLC5NLeslqR3KHakdyh2IFm42DCXrHiwlRgWIFcoeLC4sJiwuLC3rHcodyh3rHk0u0D5NLcoeDCZuNYkWTS5NLiwuLC3rHakeDCXKHeslqR7QPiwl6x4MJYkVqR3rJgwmDCYMJiwtyh2pHakd6x4sJm41yh3rHesebjVnDk0uLC4sLiwl6x2IFcodqR3KHakebjYsJiwtyh3KHakdyh3rJgwmDCYMJYgViBWJFgwl6x5uNcod6x3rJtA9Zw5NLk0uLCXrJYkVZw2pHYkViBVGBiwtyh3rHakeTS3KHYkV6yXKHesdyh1nDWcNZw3KHakeTS2JFakdqR5NLWcODCYMJcodqR2IFYgVyh2pHcodRgZNLcod6x4MJk0tiRWIFakdiBWpHakdZw1GBWcN6yXKHgwlZw2JFakeLCVGBesd6x2JFakdqR2JFcodyh3rJUYFiRYMJeseLCYMJYkVZw2IFWcNqR2IFUYFRgVGBakeDCYsLYgViBWpHgwlRgWpHakdqR3rHcodqR2pHakdyh2IFWcODCYsJiwtyh2IFQUFZw1nDYgVZw1nDUYFRgWIFcoeTS2JFYgVqR4sJUYFqR2pHakdyh2pHYgViBWJFakdiRVGBgwmLC3KHYkViBUFBYgViBWpHYkVRgVGBUYFiRXKHiwlqR1nDYkWLCUFBYgViBWJFcodyh2IFWcNiBYsLeslRgXrHiwtiRXrHWcNBQWJFYgViRWpHWcNRgVGBYgV6x4MJcodiRXKHgwlRgWJFYkViRWJFYkViBVGBYgWLC4MJWcN6x4sLYkVyh0FBUYFiRWIFakdqR1nDUYFRgVnDesd6x2pHesd6yYsJakdiRWJFYkViRWJFakdRgWIFiwmDCVnDgwmTS3KHYkVBQVnDYgViBWIFakdZw1nDQUFZw3rHesdyh4sJiwmTS2pHakdqR2JFYkVqR2pHUYFRgXKHakdiBYMJk0uDCWJFQUFRgWJFYkViBWpHYgVZw0FBYkWLCYMJesmLCYsJk0tqR2pHakdiRWJFakdyh1nDUYFyh3rHcoeDCZNLgwl6x0FBUYFqR2JFYkVyh2pHYgVBQWpHiwmLCYMJiwuLC5NLakdqR2pHYkViRWJFcodZw1GBakd6x3KHiwmTS4MJesdBQVGBakdqR2pHcodqR2IFUYFqR4sLiwmDCYsLk0uTS2pHACwADf+zAAD+2wBZIW3H/wAsAA0ATQAA/tsDaiFtOf8AWAANAAAAAP++AeFBbQD//9QADQBNAAD9FgNq3205///UAA3/swAA/RYAWd9tx///qAANAAAAAPw0AeG/bQD/ACwADf+zAAD+2wBZIW3H///OAAAAVwAA/vABq9FWUf8ALAANAE0AAADSAXghbTn//9QADQBNAAD/DgF43205/wAyAAAAVwAAAPABqy9WUf8AZAAAAAAAAAHw//BdVgD/AFgADQAAAAABtf/wQW0A/wAyAAD/qQAAAPD+NS9Wr/8AWAANAAAAAAG1//BBbQD/ADIAAP+pAAAA8P41L1av/wAsAA3/swAAANL+aCFtx///1AAN/7MAAP8O/mjfbcf//84AAP+pAAD+8P410Vav//+oAA0AAAAA/iv/8L9tAP//nAAAAAAAAP3w//CjVgD//5wAAAAAAAD98P/wo1YA///UAA0ATQAA/w4BeN9tOf//qAANAAAAAP4r//C/bQD//84AAABXAAD+8AGr0VZR/+cAAAAAAAAAtwAAAAAAAAC7AAAB/////+gAAAAAAAAA5gAAAAAAAAADiAAQBwAAIAOGABAHAAAo/BJ+JP///f79EAAABwAAOPUQAAAHAAAA5gAAAAAAAADzAAAABz/xAOcAAAAAAAAA9RAQAAABQFDyAAAAAAfAfARgAHAHABBAvwAAAAAAChS/AAAAAB4oMr8AAAAAKB4AvwAAAAA8Hgr9EAAABwAIQPUQAAAHAAAA5gAAAAAAAADzAAAABz/xAOcAAAAAAAAA9RAQAAABQFDyAAAAAAfAfARgAHAHABCwvwAAAAAAChS/AAAAAAoAHr8AAAAAKAoevwAAAAAKKDK/AAAAADwyKARgAHAHABEgvwAAAAAAChS/AAAAAAoeFL8AAAAAHgoovwAAAAAoMh6/AAAAADIoPAQwAEAHABGQvwAAAAAAChS/AAAAAAoAHvz//////nk8uwAAAP////+4AAAAAAAAAAAAAAAAAAAA",
+              "Fast3DBankStart": 117440544,
+              "DLPointers": {
+                "$id": "72",
+                "$values": [
+                  {
+                    "$ref": "18"
+                  }
+                ]
+              }
+            },
+            "Length": 5088
+          },
+          "ModelID": 96,
+          "ModelBankOffset": 32,
+          "GeolayoutBankOffset": 5136,
+          "CollisionPointer": 117445440
+        }
+      }
+    ]
+  },
+  "Behaviors": {
+    "$id": "73",
+    "$values": [
+      {
+        "Key": {
+          "$ref": "4"
+        },
+        "Value": {
+          "$id": "74",
+          "Config": {
+            "$ref": "4"
+          },
+          "Script": [
+            {
+              "$id": "75",
+              "Buffer": "AAkAAA==",
+              "BankAddress": 0
+            },
+            {
+              "$id": "76",
+              "Buffer": "KgAAAAcAE0A=",
+              "BankAddress": 0
+            },
+            {
+              "$id": "77",
+              "Buffer": "CAAAAA==",
+              "BankAddress": 0
+            },
+            {
+              "$id": "78",
+              "Buffer": "DAAAAIBAgAA=",
+              "BankAddress": 0
+            },
+            {
+              "$id": "79",
+              "Buffer": "DAAAAIA4Ocw=",
+              "BankAddress": 0
+            },
+            {
+              "$id": "80",
+              "Buffer": "CQAAAA==",
+              "BankAddress": 0
+            }
+          ],
+          "CollisionPointer": 117445440,
+          "EnableCollisionPointer": true,
+          "BehaviorAddressDestinations": {
+            "$id": "81",
+            "$values": []
+          }
+        }
+      }
+    ]
+  }
+}

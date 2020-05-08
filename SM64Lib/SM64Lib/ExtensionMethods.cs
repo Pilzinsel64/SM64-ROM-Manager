@@ -1,5 +1,5 @@
 ﻿
-namespace SM64_ROM_Manager.Extensions
+namespace SM64Lib.Extensions
 {
     public static class Int16Extensions
     {

@@ -72,7 +72,7 @@ namespace SM64_ROM_Manager
                     {
                         var nMdl = GetNode(mdl);
                         n.Nodes.Add(nMdl);
-                        if (nMdl is object)
+                        if (mdl.Config == Model)
                             nToSelect = nMdl;
                     }
                 }

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64tweak name="Skip Mario Screen (Console Compatible)" description="Skip the screen which displays Mario's face and the title in the background. Also applies to the screen displayed after losing all lives. (New Console friendly version from aglab2)" version="2.0.0.0">
+  <patch name="" description="" type="0" references="">// Second Screen
+269F18: 01 10 00 14 00 26 9E A0 00 26 A3 A0 14 00 02 0C
+
+// Game Over
+269FA4: 01 10 00 14 00 26 9E A0 00 26 A3 A0 14 00 02 0C</patch>
+</m64tweak>

@@ -70,6 +70,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_code_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_coins_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -325,6 +330,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_repeat_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_save_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -361,6 +371,11 @@
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_text_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_thick_arrow_pointing_down_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
@@ -663,6 +678,86 @@
               Sucht eine lokalisierte Zeichenfolge, die Timer ähnelt.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Pause Menu Screen in Level ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_ColorfulPause">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Colorful PAUSE ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_CurrentLevelName">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Current Level Name ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_CurrentStarName">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Current Star Name ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_EmptyStarSymbol">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Empty Star Symbol ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_FilledStarSymbol">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Files Star Symbol ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Pause Menu ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu_CameraAngle">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die CAMERA ANGLE ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu_Continue">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die CONTINUE ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu_ExitCourse">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die EXIT COURSE ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu_LakituMario">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die LAKITU-MARIO ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu_LaktiuStop">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die LAKITU-STOP ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu_NavigationDirection">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Navigation Direction ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu_NormalFixed">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Normal (Fixed) ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_Menu_NormalUpClose">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Normal (Up-Close) ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_PauseMenu_MyScore">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die My Score ähnelt.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Timer_Counter">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die Counter ähnelt.
@@ -671,6 +766,16 @@
         <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPos_Timer_Time">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die Time ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPosVals_PauseMenu_Menu_NavigationDirection_Horizontal">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Horizontal ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.HUDOptionsLangRes.HUDPosVals_PauseMenu_Menu_NavigationDirection_Vertical">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Vertical ähnelt.
             </summary>
         </member>
         <member name="T:SM64_ROM_Manager.My.Resources.BehaviorBankManagerLangRes">
@@ -844,6 +949,12 @@
               Sucht eine lokalisierte Zeichenfolge, die Invalid size ähnelt.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_InvalidRomHash">
+             <summary>
+               Sucht eine lokalisierte Zeichenfolge, die The MD5 Hash of your ROM is invalid. Please try getting your ROM from an other site. It has to be 8MB and following MD5 checksum:
+            {0} ähnelt.
+             </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_LimitSequenceCountReached">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die The limit of possible music sequences in the original game is 127. Do you want to add more anyway? ähnelt.
@@ -957,6 +1068,66 @@
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Notify_ShouldLoadRomFirst">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die You must open a ROM first! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_BobOmb">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Bob-Omb ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_Boo">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Boo ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_BowserFight">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Bowser Fight ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_BowserIntroDoors">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Bowser (Intro/Doors) ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_KingBobOmb">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die King Bob-Omb ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_KoopaTheQuick">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Koopa The Quick ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_Monkey">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Monkey ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_Penguin">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Penguin ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_Sign">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Sign ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_WhompKing">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Whomp King ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_Wiggler">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Wiggler ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_Yoshi">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Yoshi ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Status_CalculatingTextSpace">
@@ -1297,6 +1468,91 @@
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
         <member name="M:SM64_ROM_Manager.BehaviorBankManager.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.BehaviorParameterInfoEditor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.BehaviorParameterInfoEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.BehaviorParameterInfoEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.CustomAsmCodeSelector.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.CustomAsmCodeSelector.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.CustomAsmCodeSelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.AsmToHexConverter.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.AsmToHexConverter.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.AsmToHexConverter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.ChangeRomAreaForAsmCodesDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.ChangeRomAreaForAsmCodesDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.ChangeRomAreaForAsmCodesDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.CustomAsmCodesManager.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.CustomAsmCodesManager.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.CustomAsmCodesManager.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.

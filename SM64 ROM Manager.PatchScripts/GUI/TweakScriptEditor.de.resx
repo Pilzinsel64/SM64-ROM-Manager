@@ -200,6 +200,9 @@
   <data name="LayoutControlItem4.Text" xml:space="preserve">
     <value>Optionale Verweise:</value>
   </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>Eingebettete Dateien:</value>
+  </data>
   <data name="resource.Text" xml:space="preserve">
     <value />
   </data>

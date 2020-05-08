@@ -39,6 +39,24 @@ namespace SM64_ROM_Manager
             return GetPositionRet;
         }
 
+        public object GetValue(HUDOptionsBlock b)
+        {
+            object value = -1;
+
+            if (b?.ValueSelection is HUDOptionsValueSelection && (bool)binaryData?.CanRead)
+            {
+                binaryData.Position = b.ValueSelection.RomPos;
+                switch (b.ValueSelection.ValueType)
+                {
+                    case HUDOptionsValueTypes.Byte:
+                        value = binaryData.ReadByte();
+                        break;
+                }
+            }
+
+            return value;
+        }
+
         public void SetPosition(HUDOptionsBlock b, Point p)
         {
             if (b?.Cords is object && binaryData?.CanWrite == true)
@@ -53,6 +71,20 @@ namespace SM64_ROM_Manager
                 {
                     binaryData.Position = (long)b.Cords.RomPosY;
                     binaryData.Write(Conversions.ToShort(p.Y));
+                }
+            }
+        }
+
+        public void SetValue(HUDOptionsBlock b, object value)
+        {
+            if (b?.ValueSelection is HUDOptionsValueSelection && (bool)binaryData?.CanWrite)
+            {
+                binaryData.Position = b.ValueSelection.RomPos;
+                switch (b.ValueSelection.ValueType)
+                {
+                    case HUDOptionsValueTypes.Byte:
+                        binaryData.Write((byte)value);
+                        break;
                 }
             }
         }
