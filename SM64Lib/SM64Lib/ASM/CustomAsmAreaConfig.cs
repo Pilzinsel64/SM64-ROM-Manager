@@ -9,6 +9,7 @@ namespace SM64Lib.ASM
 {
     public class CustomAsmAreaConfig
     {
+        public string ID { get; set; }
         public string Name { get; set; }
         [JsonProperty]
         public int RamAddress { get; internal set; } = -1;

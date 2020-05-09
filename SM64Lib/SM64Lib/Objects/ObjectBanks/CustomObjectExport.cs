@@ -20,7 +20,7 @@ namespace SM64Lib.Objects.ObjectBanks
         public DateTime ExportDate { get; set; }
         [JsonConverter(typeof(Newtonsoft.Json.Converters.VersionConverter))]
         public Version Version { get; set; } = new Version("1.0.0.0");
-        public int ID { get; set; } = -1;
+        public string ID { get; set; }
 
         [JsonIgnore]
         public CustomObjectExportData Data { get; private set; } = new CustomObjectExportData();

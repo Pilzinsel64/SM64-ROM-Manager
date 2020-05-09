@@ -53,7 +53,7 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Defines an uniquie ID to identify this tweak (e.g. for undo patch).
         /// </summary>
-        public int ID { get; set; } = -1;
+        public string ID { get; set; }
     }
 
     /// <summary>
@@ -61,7 +61,6 @@ namespace SM64Lib.Patching
     /// </summary>
     public class PatchScript
     {
-
         /// <summary>
         /// The Name of this Script.
         /// </summary>
@@ -91,7 +90,7 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Defines an uniquie ID to identify this script (e.g. for undo patch).
         /// </summary>
-        public int ID { get; set; } = -1;
+        public string ID { get; set; }
     }
 
     /// <summary>
