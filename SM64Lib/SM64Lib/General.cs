@@ -52,16 +52,6 @@ namespace SM64Lib
             }
         }
 
-        public static int GenerateUniquieID<T>()
-        {
-            var sn = TryGetSerialNumberOfFirstHardDrive();
-            var dateTime = DateTime.UtcNow.ToString();
-            var type = typeof(T).ToString();
-            var together = sn + dateTime + type;
-            var hash = together.GetHashCode();
-            return hash;
-        }
-
         public static string GenerateUniquieID<T>(string var = "")
         {
             var sn = TryGetSerialNumberOfFirstHardDrive();
@@ -88,6 +78,28 @@ namespace SM64Lib
             }
 
             return sn;
+        }
+
+        public static string ComputeMD5Hash(string filePath)
+        {
+            var md5 = MD5.Create();
+            string res;
+            FileStream fs;
+
+            try
+            {
+                fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                res = BitConverter.ToString(md5.ComputeHash(fs)).Replace("-", string.Empty).ToLowerInvariant();
+            }
+            catch (Exception)
+            {
+                fs = null;
+                res = string.Empty;
+            }
+
+            fs?.Close();
+            md5.Dispose();
+            return res;
         }
 
         public static void CopyBitmap(Bitmap src, Bitmap dest)
