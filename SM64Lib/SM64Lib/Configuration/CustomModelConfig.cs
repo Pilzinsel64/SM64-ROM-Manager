@@ -9,6 +9,7 @@ namespace SM64Lib.Configuration
         internal delegate void RequestModelEventHandler(CustomModelConfig config, RequestModelEventArgs request);
         internal static event RequestModelEventHandler RequestModel;
 
+        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<CustomModelConfig>))]
         public UniquieID<CustomModelConfig> ID { get; set; } = new UniquieID<CustomModelConfig>();
         public string Name { get; set; } = string.Empty;
         public List<int> CollisionPointerDestinations { get; private set; } = new List<int>();

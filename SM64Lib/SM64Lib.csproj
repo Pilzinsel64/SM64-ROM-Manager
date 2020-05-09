@@ -176,6 +176,7 @@
     <Compile Include="SM64Lib\Json\ArrayReferencePreservngConverter.cs" />
     <Compile Include="SM64Lib\Json\ComplexDictionarJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\BaseCommandJsonConverter.cs" />
+    <Compile Include="SM64Lib\Json\UniquiIDStringJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\GeolayoutscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\BehaviorscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\Fast3DBufferJsonConverter.cs" />

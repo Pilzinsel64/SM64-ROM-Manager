@@ -9,6 +9,7 @@ namespace SM64Lib.Objects.ObjectBanks
 {
     public class CustomObject
     {
+        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<CustomObject>))]
         public UniquieID<CustomObject> ID { get; set; } = new UniquieID<CustomObject>();
         public string Name { get; set; }
         public string Description { get; set; }

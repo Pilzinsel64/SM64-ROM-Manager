@@ -53,6 +53,7 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Defines an uniquie ID to identify this tweak (e.g. for undo patch).
         /// </summary>
+        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<PatchProfile>))]
         public UniquieID<PatchProfile> ID { get; set; } = new UniquieID<PatchProfile>();
     }
 
@@ -90,6 +91,7 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Defines an uniquie ID to identify this script (e.g. for undo patch).
         /// </summary>
+        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<PatchScript>))]
         public UniquieID<PatchScript> ID { get; set; } = new UniquieID<PatchScript>();
     }
 

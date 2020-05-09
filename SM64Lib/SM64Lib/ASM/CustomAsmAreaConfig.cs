@@ -9,6 +9,7 @@ namespace SM64Lib.ASM
 {
     public class CustomAsmAreaConfig
     {
+        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<CustomAsmAreaConfig>))]
         public UniquieID<CustomAsmAreaConfig> ID { get; set; } = new UniquieID<CustomAsmAreaConfig>();
         public string Name { get; set; }
         [JsonProperty]

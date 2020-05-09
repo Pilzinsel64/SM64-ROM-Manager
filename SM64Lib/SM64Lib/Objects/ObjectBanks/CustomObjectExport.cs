@@ -20,6 +20,7 @@ namespace SM64Lib.Objects.ObjectBanks
         public DateTime ExportDate { get; set; }
         [JsonConverter(typeof(Newtonsoft.Json.Converters.VersionConverter))]
         public Version Version { get; set; } = new Version("1.0.0.0");
+        [JsonConverter(typeof(UniquiIDStringJsonConverter<CustomObjectExport>))]
         public UniquieID<CustomObjectExport> ID { get; set; } = new UniquieID<CustomObjectExport>();
 
         [JsonIgnore]

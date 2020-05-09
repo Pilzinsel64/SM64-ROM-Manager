@@ -10,7 +10,7 @@ namespace SM64Lib
     public class UniquieID<TargetType>
     {
         [JsonProperty]
-        public string ID { get; private set; }
+        public string ID { get; internal set; }
 
         [JsonIgnore]
         public bool HasID { get => !string.IsNullOrEmpty(ID); }
