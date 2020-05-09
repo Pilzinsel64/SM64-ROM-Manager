@@ -350,6 +350,7 @@ namespace SM64_ROM_Manager
         {
             // Create behavior
             var behav = new Behavior(type);
+            behav.Config.ID.Generate();
             bank.Behaviors.Add(behav);
             rommgr.CalculateGlobalBehaviorBankAddresses();
 

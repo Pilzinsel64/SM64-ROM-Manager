@@ -132,6 +132,7 @@ namespace SM64_ROM_Manager
             // Create Asm Area
             var asm = new CustomAsmArea();
             asm.Config.Name = "New Custom Asm Area";
+            asm.Config.ID.Generate();
 
             // Add Area
             asmBank.Areas.Add(asm);

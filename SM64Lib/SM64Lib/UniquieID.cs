@@ -17,6 +17,10 @@ namespace SM64Lib
 
         public void Generate()
             => ID = General.GenerateUniquieID<TargetType>();
+        public void GenerateIfNull()
+        {
+            if (!HasID) Generate();
+        }
 
         public override string ToString() => ID;
 

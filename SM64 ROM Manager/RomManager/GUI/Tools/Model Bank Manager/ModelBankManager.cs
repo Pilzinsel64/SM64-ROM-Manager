@@ -105,6 +105,7 @@ namespace SM64_ROM_Manager
         private void CreateCustomObject()
         {
             var obj = new CustomModel();
+            obj.Config.ID.Generate();
             obj.GenerateNewGeolayout();
             ButtonItem item;
             if (ImportNewModel(obj))

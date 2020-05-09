@@ -34,6 +34,7 @@ namespace SM64Lib.ASM
                 foreach (var areaConfig in Config.Areas)
                 {
                     var area = new CustomAsmArea(areaConfig);
+                    area.Config.ID.GenerateIfNull();
                     area.Load(data, Config);
                     Areas.Add(area);
                 }

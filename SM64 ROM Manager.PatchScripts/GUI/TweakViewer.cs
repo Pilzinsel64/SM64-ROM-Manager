@@ -239,6 +239,7 @@ namespace SM64_ROM_Manager.PatchScripts
         private void AddNewScript(string name, PatchProfile patch)
         {
             var script = new PatchScript();
+            script.ID.Generate();
             script.Name = name;
             patch.Scripts.Add(script);
             var comboItem = new ComboItem();
@@ -258,7 +259,9 @@ namespace SM64_ROM_Manager.PatchScripts
                 MinVersion = minAppVersion,
                 MaxVersion = maxAppVersion
             };
+            patch.ID.Generate();
             var script = new PatchScript() { Name = firstScriptName };
+            script.ID.Generate();
             patch.Scripts.Add(script);
             var btnItem = GetButtonItemFromPatch(patch);
             ItemListBox1.Items.Add(btnItem);

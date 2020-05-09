@@ -78,12 +78,13 @@ namespace SM64Lib.Behaviors
                 {
                     bankOffset = (int)data.Position;
                     config.BankAddress = (bankID << 24) | bankOffset;
+                    behav.Config.IsVanilla = true;
                 }
                 else
+                {
                     bankOffset = config.BankAddress & 0xffffff;
-
-                if (isVanilla)
-                    behav.Config.IsVanilla = true;
+                    if (!behav.Config.IsVanilla && !config.ID.HasID) config.ID.Generate();
+                }
 
                 var lastBehav = Behaviors.LastOrDefault();
 

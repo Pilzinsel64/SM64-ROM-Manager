@@ -352,6 +352,7 @@ namespace SM64_ROM_Manager
             {
                 Name = "New Object"
             };
+            obj.ID.Generate();
             customObjectCollection.CustomObjects.Add(obj);
 
             var n = GetNode(obj);
