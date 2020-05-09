@@ -8,6 +8,8 @@ using global::SM64Lib.Patching;
 using System.IO;
 using System.IO.Compression;
 using System.Security.Cryptography;
+using System.Management;
+using System.Text;
 
 namespace SM64Lib
 {
@@ -50,28 +52,42 @@ namespace SM64Lib
             }
         }
 
-        public static string ComputeMD5Hash(string filePath)
+        public static int GenerateUniquieID<T>()
         {
+            var sn = TryGetSerialNumberOfFirstHardDrive();
+            var dateTime = DateTime.UtcNow.ToString();
+            var type = typeof(T).ToString();
+            var together = sn + dateTime + type;
+            var hash = together.GetHashCode();
+            return hash;
+        }
+
+        public static string GenerateUniquieID<T>(string var = "")
+        {
+            var sn = TryGetSerialNumberOfFirstHardDrive();
+            var dateTime = DateTime.UtcNow.ToString("yyyyMMddHHmmssfffffff");
+            var type = typeof(T).ToString();
+            var together = sn + dateTime + type + var;
+
             var md5 = MD5.Create();
-            string res;
-            FileStream fs;
-
-            try
-            {
-                fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-                res = BitConverter.ToString(md5.ComputeHash(fs)).Replace("-", string.Empty).ToLowerInvariant();
-                Console.WriteLine("Result: " + res);
-            }
-            catch (Exception)
-            {
-                fs = null;
-                res = string.Empty;
-                Console.WriteLine("Error at calculating hash!");
-            }
-
-            fs?.Close();
+            var hash = BitConverter.ToString(md5.ComputeHash(Encoding.Default.GetBytes(together))).Replace("-", string.Empty);
             md5.Dispose();
-            return res;
+
+            return hash;
+        }
+
+        private static string TryGetSerialNumberOfFirstHardDrive()
+        {
+            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PhysicalMedia");
+            var sn = string.Empty;
+
+            foreach (ManagementObject wmi_HD in searcher.Get())
+            {
+                if (string.IsNullOrEmpty(sn) && wmi_HD["SerialNumber"] != null)
+                    sn = wmi_HD["SerialNumber"].ToString().Trim();
+            }
+
+            return sn;
         }
 
         public static void CopyBitmap(Bitmap src, Bitmap dest)
