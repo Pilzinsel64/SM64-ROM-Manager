@@ -52,7 +52,7 @@ namespace SM64Lib
             }
         }
 
-        public static string GenerateUniquieID<T>(string var = "")
+        internal static string GenerateUniquieID<T>(string var = "")
         {
             var sn = TryGetSerialNumberOfFirstHardDrive();
             var dateTime = DateTime.UtcNow.ToString("yyyyMMddHHmmssfffffff");

@@ -12,7 +12,7 @@ namespace SM64Lib.Behaviors
         internal delegate void RequestModelEventHandler(BehaviorConfig config, RequestBehaviorEventArgs request);
         internal static event RequestModelEventHandler RequestBehavior;
 
-        public string ID { get; set; }
+        public UniquieID<BehaviorConfig> ID { get; set; } = new UniquieID<BehaviorConfig>();
         public int BankAddress { get; set; } = -1;
         public bool IsVanilla { get; set; } = false;
         public string Name { get; set; } = string.Empty;

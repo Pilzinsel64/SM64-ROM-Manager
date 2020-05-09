@@ -9,7 +9,7 @@ namespace SM64Lib.Objects.ObjectBanks
 {
     public class CustomObject
     {
-        public string ID { get; set; }
+        public UniquieID<CustomObject> ID { get; set; } = new UniquieID<CustomObject>();
         public string Name { get; set; }
         public string Description { get; set; }
         public CustomObjectBehaviorProps BehaviorProps { get; private set; } = new CustomObjectBehaviorProps();

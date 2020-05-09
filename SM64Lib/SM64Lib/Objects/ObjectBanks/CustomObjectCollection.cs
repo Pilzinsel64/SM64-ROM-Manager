@@ -63,6 +63,7 @@ namespace SM64Lib.Objects.ObjectBanks
             }
 
             export.Compress();
+            export.ID.Generate();
 
             File.WriteAllText(filePath, JObject.FromObject(export).ToString());
         }

@@ -53,7 +53,7 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Defines an uniquie ID to identify this tweak (e.g. for undo patch).
         /// </summary>
-        public string ID { get; set; }
+        public UniquieID<PatchProfile> ID { get; set; } = new UniquieID<PatchProfile>();
     }
 
     /// <summary>
@@ -90,7 +90,7 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Defines an uniquie ID to identify this script (e.g. for undo patch).
         /// </summary>
-        public string ID { get; set; }
+        public UniquieID<PatchScript> ID { get; set; } = new UniquieID<PatchScript>();
     }
 
     /// <summary>

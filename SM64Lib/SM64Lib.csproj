@@ -315,6 +315,7 @@
     <Compile Include="SM64Lib\Trajectories\Trajectories.cs" />
     <Compile Include="SM64Lib\Trajectories\Trajectory.cs" />
     <Compile Include="SM64Lib\Trajectories\TrajectoryName.cs" />
+    <Compile Include="SM64Lib\UniquieID.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
