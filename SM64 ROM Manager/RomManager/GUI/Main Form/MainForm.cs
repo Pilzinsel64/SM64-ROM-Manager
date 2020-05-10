@@ -44,8 +44,9 @@ namespace SM64_ROM_Manager
             tabMusicManager.Controller = Controller;
 
             // Set my style
-            SetStyleManagerStyle();
-            Controller.TextManagerController.SendRequestReloadTextManagerLineColors();
+            UpdateAmbientColors();
+            UpdatedAmbientColors += (_, __)
+                => Controller.TextManagerController.SendRequestReloadTextManagerLineColors();
 
             // Resume drawing
             ResumeLayout();
@@ -116,14 +117,6 @@ namespace SM64_ROM_Manager
 
         private bool finishedLoading = false;
         private bool changingTab = false;
-
-        private void SetStyleManagerStyle()
-        {
-            base.UpdateAmbientColors();
-            tabTextManager.Line_TM_Green.ForeColor = Color.Green;
-            tabTextManager.Line_TM_Warning1.ForeColor = Color.Orange;
-            tabTextManager.Line_TM_Warning2.ForeColor = Color.Red;
-        }
 
         private void Controller_StatusTextChanged(StatusTextChangedEventArgs e)
         {
