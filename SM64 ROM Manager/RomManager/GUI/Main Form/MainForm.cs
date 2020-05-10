@@ -49,7 +49,7 @@ namespace SM64_ROM_Manager
                 => Controller.TextManagerController.SendRequestReloadTextManagerLineColors();
 
             // Resume drawing
-            ResumeLayout();
+            ResumeLayout(false);
         }
 
         private MainController _Controller;
