@@ -128,8 +128,9 @@ namespace SM64Lib.Objects.ObjectBanks
                     destModelBank.Models.Add(import.Data.CustomModels[cobj.ModelProps.Model]);
                     destModelBank.NeedToSave = true;
 
-                // Add Custom Object
-                CustomObjects.Add(cobj);
+                    // Add Custom Object
+                    CustomObjects.Add(cobj);
+                }
             }
         }
     }
