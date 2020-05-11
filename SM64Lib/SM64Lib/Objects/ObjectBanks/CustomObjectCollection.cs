@@ -102,7 +102,6 @@ namespace SM64Lib.Objects.ObjectBanks
                     {
                         var behav = import.DestBehaviorBank.GetBehaviorByBankAddress(cobj.BehaviorProps.BehaviorAddress);
                         cobj.BehaviorProps.Behavior = behav.Config;
-                        cobj.BehaviorProps.Behavior.IsVanilla = false;
                     }
                     else if (import.Data.Behaviors.ContainsKey(cobj.BehaviorProps.Behavior))
                     {
