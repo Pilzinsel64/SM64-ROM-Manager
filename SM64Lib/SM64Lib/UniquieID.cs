@@ -27,5 +27,8 @@ namespace SM64Lib
         public static implicit operator string(UniquieID<TargetType> id)    => id.ID;
         public static implicit operator UniquieID<TargetType>(string id)    => new UniquieID<TargetType>() { ID = id };
         public static implicit operator UniquieID<TargetType>(int id)       => new UniquieID<TargetType>() { ID = Convert.ToString(id) };
+
+        public static bool operator ==(UniquieID<TargetType> left, UniquieID<TargetType> right) => left.ID == right.ID;
+        public static bool operator !=(UniquieID<TargetType> left, UniquieID<TargetType> right) => left.ID != right.ID;
     }
 }

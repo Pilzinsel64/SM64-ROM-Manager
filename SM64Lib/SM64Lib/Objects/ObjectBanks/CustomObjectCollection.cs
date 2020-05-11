@@ -88,6 +88,9 @@ namespace SM64Lib.Objects.ObjectBanks
 
         public void Import(CustomObjectImport import)
         {
+            Dictionary<string, object> oldObjects = new Dictionary<string, object>();
+
+            // Decompress import
             DecompressImport(import);
             
             foreach (var cobj in import.Data.CustomObjects)
@@ -103,10 +106,17 @@ namespace SM64Lib.Objects.ObjectBanks
                     }
                     else if (import.Data.Behaviors.ContainsKey(cobj.BehaviorProps.Behavior))
                     {
-                        var behav = import.Data.Behaviors[cobj.BehaviorProps.Behavior];
-                        import.DestBehaviorBank.Behaviors.Add(behav);
+                        var behav       = import.Data.Behaviors[cobj.BehaviorProps.Behavior];
+                        var behavExist  = import.DestBehaviorBank.GetBehaviorByID(cobj.BehaviorProps.Behavior.ID);
+
+                        if (import.OverwriteExistingObjecs && behavExist is object)
+                            behav.CopyPropertiesTo(behavExist);
+                        else
+                            import.DestBehaviorBank.Behaviors.Add(behav);
+
                         if (behav.Config.CustomAsmLinks.Any())
                             import.DestCustomAsmBank.Areas.AddRangeIfNotContains(behav.Config.CustomAsmLinks.Select(n => n.CustomAsm).ToArray());
+
                         behav.ParseScript();
                     }
                     cobj.BehaviorProps.BehaviorAddress = -1;
@@ -118,7 +128,6 @@ namespace SM64Lib.Objects.ObjectBanks
                     var destModelBank = import.DestModelBanks[cobj.ModelProps.Model];
                     destModelBank.Models.Add(import.Data.CustomModels[cobj.ModelProps.Model]);
                     destModelBank.NeedToSave = true;
-                }
 
                 // Add Custom Object
                 CustomObjects.Add(cobj);

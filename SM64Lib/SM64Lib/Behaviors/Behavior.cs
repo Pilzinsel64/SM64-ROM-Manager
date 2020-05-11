@@ -224,5 +224,10 @@ namespace SM64Lib.Behaviors
             }
         }
 
+        public void CopyPropertiesTo(Behavior dest)
+        {
+
+        }
+
     }
 }
