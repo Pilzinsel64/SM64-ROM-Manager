@@ -753,7 +753,7 @@ namespace SM64Lib
                 if (rom.ReadInt32() != value)
                 {
                     rom.Position -= 4;
-                    rom.Write(seg.RomEnd);
+                    rom.Write(value);
                     needToRecalcChecksum2 = true;
                 }
             }
