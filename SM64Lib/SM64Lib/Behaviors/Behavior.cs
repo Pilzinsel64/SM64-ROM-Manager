@@ -57,6 +57,7 @@ namespace SM64Lib.Behaviors
             {
                 case BehaviorCreationTypes.SolidObject:
                     Script.Add(new BehaviorscriptCommand("00 09 00 00"));
+                    Script.Add(new BehaviorscriptCommand("11 01 00 01"));
                     Script.Add(new BehaviorscriptCommand("2a 00 00 00 00 00 00 00"));
                     Script.Add(new BehaviorscriptCommand("08 00 00 00"));
                     Script.Add(new BehaviorscriptCommand("0c 00 00 00 80 38 39 cc"));
