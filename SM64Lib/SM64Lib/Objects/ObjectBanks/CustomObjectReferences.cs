@@ -13,10 +13,15 @@ namespace SM64Lib.Objects.ObjectBanks
 {
     public class CustomObjectReferences
     {
-        public CustomObject[] ReferenceObjects { get; }
-        public BehaviorConfig[] ReferenceBehaviors { get; }
-        public CustomAsmArea[] ReferenceAsmAreas { get; }
-        public CustomModelConfig[] ReferenceModels { get; }
+        public IReadOnlyCollection<CustomObject> ReferenceObjects { get; }
+        public IReadOnlyCollection<BehaviorConfig> ReferenceBehaviors { get; }
+        public IReadOnlyCollection<CustomAsmArea> ReferenceAsmAreas { get; }
+        public IReadOnlyCollection<CustomModelConfig> ReferenceModels { get; }
+
+        public bool HasReferences
+        {
+            get => ReferenceObjects.Any() || ReferenceBehaviors.Any() || ReferenceAsmAreas.Any() || ReferenceModels.Any();
+        }
 
         private CustomObjectReferences(CustomObject[] refObject, BehaviorConfig[] refBehaviors, CustomAsmArea[] refAsmAreas, CustomModelConfig[] refModels)
         {
@@ -24,6 +29,25 @@ namespace SM64Lib.Objects.ObjectBanks
             ReferenceBehaviors = refBehaviors;
             ReferenceAsmAreas = refAsmAreas;
             ReferenceModels = refModels;
+        }
+
+        private void DeleteReferences(RomManager rommgr)
+        {
+            var refObjs = ReferenceObjects.ToArray();
+            var refBehavs = ReferenceBehaviors.Select(n => n.FindBehavior()).TakeWhile(n => n is object).ToArray();
+            var refAsmAreas = ReferenceAsmAreas.ToArray();
+            var refMdls = ReferenceModels.Select(n => n.FindModel()).TakeWhile(n => n is object).ToArray();
+
+            rommgr.CustomObjects.CustomObjects.RemoveRangeIfContains(refObjs);
+            rommgr.GlobalBehaviorBank.Behaviors.RemoveRangeIfContains(refBehavs);
+            rommgr.GlobalCustomAsmBank.Areas.RemoveRangeIfContains(refAsmAreas);
+            rommgr.GlobalModelBank.Models.RemoveRangeIfContains(refMdls);
+
+            foreach (var lvl in rommgr.Levels)
+            {
+                if (lvl.LocalObjectBank is object)
+                    lvl.LocalObjectBank.Models.RemoveRangeIfContains(ReferenceModels.Select(n => n.FindModel()).ToArray());
+            }
         }
 
         public static CustomObjectReferences Find(CustomObject[] customObjects, RomManager rommgr)
@@ -41,14 +65,14 @@ namespace SM64Lib.Objects.ObjectBanks
                     if (!refBehaviors.Contains(behavConfig))
                     {
                         refBehaviors.Add(behavConfig);
-                        CheckBehaviors(rommgr.CustomObjects, behavConfig, refObjects);
+                        FindReferenceCustomModels(rommgr.CustomObjects, behavConfig, refObjects);
 
                         foreach (var asmArea in behavConfig.CustomAsmLinks)
                         {
                             if (!refAsmAreas.Contains(asmArea.CustomAsm))
                             {
                                 refAsmAreas.Add(asmArea.CustomAsm);
-                                CheckAsmAreas(rommgr.GlobalBehaviorBank, asmArea.CustomAsm, refBehaviors);
+                                FIndReferenceBehaviors(rommgr.GlobalBehaviorBank, asmArea.CustomAsm, refBehaviors);
                             }
                         }
                     }
@@ -60,7 +84,7 @@ namespace SM64Lib.Objects.ObjectBanks
                     if (!refModels.Contains(modelConfig))
                     {
                         refModels.Add(modelConfig);
-                        CheckModels(rommgr.CustomObjects, modelConfig, refObjects);
+                        FindReferenceCustomModels(rommgr.CustomObjects, modelConfig, refObjects);
                     }
                 }
 
@@ -69,7 +93,7 @@ namespace SM64Lib.Objects.ObjectBanks
             return new CustomObjectReferences(refObjects.ToArray(), refBehaviors.ToArray(), refAsmAreas.ToArray(), refModels.ToArray());
         }
 
-        private static void CheckBehaviors(CustomObjectCollection collection, BehaviorConfig behavior, List<CustomObject> refObjects)
+        private static void FindReferenceCustomModels(CustomObjectCollection collection, BehaviorConfig behavior, List<CustomObject> refObjects)
         {
             foreach (var customObject in collection.CustomObjects)
             {
@@ -78,7 +102,7 @@ namespace SM64Lib.Objects.ObjectBanks
             }
         }
 
-        private static void CheckAsmAreas(BehaviorBank bank, CustomAsmArea asmArea, List<BehaviorConfig> refBehaviors)
+        private static void FIndReferenceBehaviors(BehaviorBank bank, CustomAsmArea asmArea, List<BehaviorConfig> refBehaviors)
         {
             foreach (var behav in bank.Behaviors)
             {
@@ -90,7 +114,7 @@ namespace SM64Lib.Objects.ObjectBanks
             }
         }
 
-        private static void CheckModels(CustomObjectCollection collection, CustomModelConfig model, List<CustomObject> refObjects)
+        private static void FindReferenceCustomModels(CustomObjectCollection collection, CustomModelConfig model, List<CustomObject> refObjects)
         {
             foreach (var customObject in collection.CustomObjects)
             {
