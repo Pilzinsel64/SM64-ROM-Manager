@@ -223,6 +223,7 @@
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectImport.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectExport.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectModelProps.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectReferences.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataCommand.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataList.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataListCollection.cs" />
