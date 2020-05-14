@@ -31,7 +31,7 @@ namespace SM64Lib.Objects.ObjectBanks
             ReferenceModels = refModels;
         }
 
-        private void DeleteReferences(RomManager rommgr)
+        public void DeleteReferences(RomManager rommgr)
         {
             var refObjs = ReferenceObjects.ToArray();
             var refBehavs = ReferenceBehaviors.Select(n => n.FindBehavior()).TakeWhile(n => n is object).ToArray();

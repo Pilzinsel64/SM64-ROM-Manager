@@ -382,15 +382,45 @@ namespace SM64_ROM_Manager
         private void ButtonItem_DeleteObject_Click(object sender, EventArgs e)
         {
             var customObject = this.customObject;
-            var n = FindNode(customObject);
+            var refs = CustomObjectReferences.Find(new[] { customObject }, rommgr);
+            var needReloadList = refs.ReferenceObjects.Any();
+            var allowRemove = true;
+            var allowRemoveReferences = false;
 
-            if (n is object)
-                n.Remove();
+            if (refs.HasReferences)
+            {
+                var response = MessageBoxEx.Show(this, "The object you want to remove has some references. Do you also want to remove all referenced Behaviors, Custom ASM Codes, Custom Models and Custom Objects?", "Delete Custom Object References", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                switch (response)
+                {
+                    case DialogResult.Cancel:
+                        allowRemove = false;
+                        break;
+                    case DialogResult.Yes:
+                        allowRemoveReferences = true;
+                        break;
+                }
+            }
 
-            customObjectCollection.CustomObjects.RemoveIfContains(customObject);
+            if (allowRemove)
+            {
+                if (!needReloadList)
+                {
+                    var n = FindNode(customObject);
+                    if (n is object)
+                        n.Remove();
+                }
 
-            customObject = null;
-            LoadObjectProps();
+                customObjectCollection.CustomObjects.RemoveIfContains(customObject);
+
+                if (refs.HasReferences && allowRemoveReferences)
+                    refs.DeleteReferences(rommgr);
+
+                customObject = null;
+                LoadObjectProps();
+
+                if (refs.HasReferences && allowRemoveReferences)
+                    LoadObjects();
+            }
         }
 
         private void ButtonItem_ExportToFile_Click(object sender, EventArgs e)
