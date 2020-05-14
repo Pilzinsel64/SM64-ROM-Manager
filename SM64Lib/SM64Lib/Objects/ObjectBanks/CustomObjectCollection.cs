@@ -88,7 +88,7 @@ namespace SM64Lib.Objects.ObjectBanks
 
         public void Import(CustomObjectImport import)
         {
-            Dictionary<string, object> oldObjects = new Dictionary<string, object>();
+            //Dictionary<string, object> oldObjects = new Dictionary<string, object>();
 
             // Decompress import
             DecompressImport(import);
@@ -105,12 +105,12 @@ namespace SM64Lib.Objects.ObjectBanks
                     }
                     else if (import.Data.Behaviors.ContainsKey(cobj.BehaviorProps.Behavior))
                     {
-                        var behav       = import.Data.Behaviors[cobj.BehaviorProps.Behavior];
-                        var behavExist  = import.DestBehaviorBank.GetBehaviorByID(cobj.BehaviorProps.Behavior.ID);
+                        var behav = import.Data.Behaviors[cobj.BehaviorProps.Behavior];
+                        //var behavExist = import.DestBehaviorBank.GetBehaviorByID(cobj.BehaviorProps.Behavior.ID);
 
-                        if (import.OverwriteExistingObjecs && behavExist is object)
-                            behav.CopyPropertiesTo(behavExist);
-                        else
+                        //if (import.OverwriteExistingObjecs && behavExist is object)
+                        //    behav.CopyPropertiesTo(behavExist);
+                        //else
                             import.DestBehaviorBank.Behaviors.Add(behav);
 
                         if (behav.Config.CustomAsmLinks.Any())
