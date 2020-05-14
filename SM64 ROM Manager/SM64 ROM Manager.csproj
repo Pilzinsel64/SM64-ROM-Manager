@@ -686,6 +686,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LangResCoinsManager.resx</DependentUpon>
     </Compile>
+    <Compile Include="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.Designer.cs">
+      <DependentUpon>CustomObjectsManagerLangRes.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomObjectsManagerLangRes.resx</DependentUpon>
+    </Compile>
     <Compile Include="RomManager\Language Resources\MainForm\Form_Main_Resources.de.Designer.cs">
       <DependentUpon>Form_Main_Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -1095,6 +1105,16 @@
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LangResCoinsManager.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomObjectsManagerLangRes.de.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CustomObjectsManagerLangRes.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\Language Resources\Global\Global_Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>

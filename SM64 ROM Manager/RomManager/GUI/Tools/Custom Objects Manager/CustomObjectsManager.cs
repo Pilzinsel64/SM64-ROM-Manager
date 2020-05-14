@@ -20,6 +20,7 @@ using Microsoft.WindowsAPICodePack.Dialogs.Controls;
 using SM64_ROM_Manager.PatchScripts;
 using Pilz.IO;
 using SM64Lib.Patching;
+using SM64_ROM_Manager.My.Resources;
 
 namespace SM64_ROM_Manager
 {
@@ -350,7 +351,7 @@ namespace SM64_ROM_Manager
         {
             var obj = new CustomObject
             {
-                Name = "New Object"
+                Name = CustomObjectsManagerLangRes.NewObjectTitel
             };
             obj.ID.Generate();
             customObjectCollection.CustomObjects.Add(obj);
@@ -389,7 +390,7 @@ namespace SM64_ROM_Manager
 
             if (refs.HasReferences)
             {
-                var response = MessageBoxEx.Show(this, "The object you want to remove has some references. Do you also want to remove all referenced Behaviors, Custom ASM Codes, Custom Models and Custom Objects?", "Delete Custom Object References", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                var response = MessageBoxEx.Show(this, CustomObjectsManagerLangRes.MsgBox_RemoveReferences, CustomObjectsManagerLangRes.MsgBox_Remove_Titel, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 switch (response)
                 {
                     case DialogResult.Cancel:
@@ -428,13 +429,13 @@ namespace SM64_ROM_Manager
             var isMultiselect = IsMultiselect();
             CommonFileDialog sfd_SM64RM_ExportCustomObjectToFile;
             var tbxName = new CommonFileDialogTextBox("rmobj.name", customObject.Name);
-            var btnAddScript = new CommonFileDialogButton("rmobj.script", "Setup Script") { IsProminent = true };
+            var btnAddScript = new CommonFileDialogButton("rmobj.script", CustomObjectsManagerLangRes.Button_SetupScript) { IsProminent = true };
 
             btnAddScript.Click += BtnAddScript_Click;
             export_EmbeddedFiles = new EmbeddedFilesContainer();
             export_Script = new PatchScript();
 
-            if (isMultiselect && MessageBoxEx.Show(this, "You are going to export multiple custom objects. Do you want to save all objects to one single file (Yes) or do you want to save every single object to one file (No)?", "Export Custom Objects", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (isMultiselect && MessageBoxEx.Show(this, CustomObjectsManagerLangRes.MsgBox_ExportSingleFiles, CustomObjectsManagerLangRes.MsgBox_Export_Titel, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 sfd_SM64RM_ExportCustomObjectToFile = new CommonOpenFileDialog() { IsFolderPicker = true };
             else
             {
