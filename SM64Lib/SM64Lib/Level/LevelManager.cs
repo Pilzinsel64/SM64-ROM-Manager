@@ -107,7 +107,7 @@ namespace SM64Lib.Levels
                                 customBGEnd = endAddr - 0x140;
                                 break;
                             case 0x7: // Global Object Bank
-                                if (rommgr.GlobalModelBank is object && startAddr == rommgr.GlobalModelBank.CurSeg.RomStart && endAddr == rommgr.GlobalModelBank.CurSeg.RomEnd)
+                                if (rommgr.GlobalModelBank?.CurSeg is object && startAddr == rommgr.GlobalModelBank.CurSeg.RomStart && endAddr == rommgr.GlobalModelBank.CurSeg.RomEnd)
                                 {
                                     lvl.EnableGlobalObjectBank = true;
                                     lvl.LastGobCmdSegLoad = c;
