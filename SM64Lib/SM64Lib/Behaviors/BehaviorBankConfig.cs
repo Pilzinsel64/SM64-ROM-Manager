@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +11,20 @@ namespace SM64Lib.Behaviors
     {
         public bool IsVanilla { get; set; } = true;
         public List<BehaviorConfig> BehaviorConfigs { get; } = new List<BehaviorConfig>();
+
+        [JsonProperty(nameof(Enabled))]
+        private bool enabled = false;
+        public void Enable() => enabled = true;
+
+        [JsonIgnore]
+        public bool Enabled
+        {
+            get
+            {
+                if (!enabled && !IsVanilla)
+                    enabled = true;
+                return enabled;
+            }
+        }
     }
 }

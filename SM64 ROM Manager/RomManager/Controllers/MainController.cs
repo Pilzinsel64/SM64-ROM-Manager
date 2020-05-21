@@ -827,6 +827,25 @@ namespace SM64_ROM_Manager
             frmHUD.ShowDialog();
         }
 
+        public bool IsGlobalBehaviorBankEnabled()
+        {
+            return RomManager.RomConfig.GlobalBehaviorBank.Enabled;
+        }
+
+        public void EnableGlobalBehaviorBank()
+        {
+            if (RomManager is object)
+            {
+                RomManager.RomConfig.GlobalBehaviorBank.Enable();
+                RomManager.LoadGlobalBehaviorBank();
+            }
+        }
+
+        public bool HasRomLoaded()
+        {
+            return RomManager is object;
+        }
+
         // T o o l s
 
         public void OpenTweakViewer()

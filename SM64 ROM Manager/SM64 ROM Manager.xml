@@ -909,6 +909,16 @@
               Sucht eine lokalisierte Zeichenfolge, die M64 to MIDI success ähnelt.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_EnableGlobalBehaviorBank">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The Global Behavior Bank is disabled right now. Do you want to enable it?&lt;br/&gt;Note:&lt;br/&gt;- You will not be able to disable it again.&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_EnableGlobalBehaviorBank_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Enable Global Behavior Bank ähnelt.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_ErrorSavingSequence">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die An error occurred while saving the sequence. ähnelt.

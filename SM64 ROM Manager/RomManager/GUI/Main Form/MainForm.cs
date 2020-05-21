@@ -694,7 +694,21 @@ namespace SM64_ROM_Manager
 
         private void ButtonItem_GlobalBehaviorBank_Click(object sender, EventArgs e)
         {
-            Controller.OpenGlobalBehaviorManager();
+            if (Controller.HasRomLoaded())
+            {
+                var open = false;
+
+                if (Controller.IsGlobalBehaviorBankEnabled())
+                    open = true;
+                else if (MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_EnableGlobalBehaviorBank, Form_Main_Resources.MsgBox_EnableGlobalBehaviorBank_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Controller.EnableGlobalBehaviorBank();
+                    open = true;
+                }
+
+                if (open)
+                    Controller.OpenGlobalBehaviorManager();
+            }
         }
 
         private void ButtonItem_CustomObjects_Click(object sender, EventArgs e)

@@ -412,8 +412,11 @@ namespace SM64Lib
                 GlobalCustomAsmBank.Save(this);
 
                 // Global Behavior Bank
-                SaveGlobalBehaviorBank(ref lastpos);
-                General.HexRoundUp2(ref lastpos);
+                if (RomConfig.GlobalBehaviorBank.Enabled)
+                {
+                    SaveGlobalBehaviorBank(ref lastpos);
+                    General.HexRoundUp2(ref lastpos);
+                }
 
                 // Update checksum
                 if (needUpdateChecksum)
@@ -764,24 +767,28 @@ namespace SM64Lib
 
         public void LoadGlobalBehaviorBank()
         {
-            var rom = GetBinaryRom(FileAccess.Read);
-
-            // Get Bank Address & Length from ROM
-            rom.Position = 0x2ABCD4;
-            var seg = new SegmentedBank(0x13)
-            {
-                RomStart = rom.ReadInt32(),
-                RomEnd = rom.ReadInt32()
-            };
-            seg.ReadData(rom.BaseStream);
-            rom.Close();
-
-            // Read Behavior Bank
             GlobalBehaviorBank = new BehaviorBank(RomConfig.GlobalBehaviorBank);
-            if(RomConfig.GlobalBehaviorBank.IsVanilla)
-                GlobalBehaviorBank.ReadVanillaBank(seg);
-            else
-                GlobalBehaviorBank.ReadBank(seg, 0);
+
+            if (GlobalBehaviorBank.Config.Enabled)
+            {
+                var rom = GetBinaryRom(FileAccess.Read);
+
+                // Get Bank Address & Length from ROM
+                rom.Position = 0x2ABCD4;
+                var seg = new SegmentedBank(0x13)
+                {
+                    RomStart = rom.ReadInt32(),
+                    RomEnd = rom.ReadInt32()
+                };
+                seg.ReadData(rom.BaseStream);
+                rom.Close();
+
+                // Read Behavior Bank
+                if (RomConfig.GlobalBehaviorBank.IsVanilla)
+                    GlobalBehaviorBank.ReadVanillaBank(seg);
+                else
+                    GlobalBehaviorBank.ReadBank(seg, 0);
+            }
         }
 
         private void SaveGlobalBehaviorBank(ref int offset)

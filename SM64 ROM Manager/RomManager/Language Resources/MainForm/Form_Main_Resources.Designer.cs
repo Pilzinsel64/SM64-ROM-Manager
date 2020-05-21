@@ -133,6 +133,24 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The Global Behavior Bank is disabled right now. Do you want to enable it?&lt;br/&gt;Note:&lt;br/&gt;- You will not be able to disable it again.&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
+        /// </summary>
+        public static string MsgBox_EnableGlobalBehaviorBank {
+            get {
+                return ResourceManager.GetString("MsgBox_EnableGlobalBehaviorBank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Enable Global Behavior Bank ähnelt.
+        /// </summary>
+        public static string MsgBox_EnableGlobalBehaviorBank_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_EnableGlobalBehaviorBank_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die An error occurred while saving the sequence. ähnelt.
         /// </summary>
         public static string MsgBox_ErrorSavingSequence {

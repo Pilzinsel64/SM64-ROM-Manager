@@ -141,6 +141,12 @@
   <data name="MsgBox_ConvertToMidi_Succes_Titel" xml:space="preserve">
     <value>M64 to MIDI success</value>
   </data>
+  <data name="MsgBox_EnableGlobalBehaviorBank" xml:space="preserve">
+    <value>The Global Behavior Bank is disabled right now. Do you want to enable it?&lt;br/&gt;Note:&lt;br/&gt;- You will not be able to disable it again.&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM.</value>
+  </data>
+  <data name="MsgBox_EnableGlobalBehaviorBank_Title" xml:space="preserve">
+    <value>Enable Global Behavior Bank</value>
+  </data>
   <data name="MsgBox_ErrorSavingSequence" xml:space="preserve">
     <value>An error occurred while saving the sequence.</value>
   </data>
