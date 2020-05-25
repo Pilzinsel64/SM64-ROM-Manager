@@ -3184,9 +3184,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 foreach (var kvp in maps.cVisualMap.Materials)
                 {
                     if (kvp.Value.Image is object)
-                    {
                         block.Textures.Add(kvp.Value);
-                    }
                 }
 
                 catLevelTextures.Blocks.Add(block);
@@ -3195,6 +3193,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // Add all other textures
             if (ObjectModels.Any())
             {
+                var addedTextureAddresses = new List<int>();
                 var block = new TextureEditor.TextureBlock();
                 block.Name = "Object Models";
                 foreach (var kvpp in ObjectModels)
@@ -3203,7 +3202,13 @@ namespace SM64_ROM_Manager.LevelEditor
                     {
                         if (kvp.Value.Image is object)
                         {
-                            block.Textures.Add(kvp.Value);
+                            var info = kvp.Value.Tag as SM64Lib.Model.Conversion.Fast3DParsing.TextureLoadedInfos;
+                            var hasInfo = info is object;
+                            if (!hasInfo || !addedTextureAddresses.Contains(info.TextureRomAddress))
+                            {
+                                block.Textures.AddIfNotContains(kvp.Value);
+                                if (hasInfo) addedTextureAddresses.Add(info.TextureRomAddress);
+                            }
                         }
                     }
                 }
@@ -3212,9 +3217,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
 
             if (catLevelTextures.Blocks.Any())
-            {
                 categories.Add(catLevelTextures);
-            }
 
             return categories;
         }
