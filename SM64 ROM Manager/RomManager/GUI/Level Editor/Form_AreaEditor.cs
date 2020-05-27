@@ -3011,14 +3011,14 @@ namespace SM64_ROM_Manager.LevelEditor
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        internal void ButtonItem8_Click(object sender, EventArgs e)
+        internal void ButtonItem_AddDeathFloor_Click(object sender, EventArgs e)
         {
-            var input = new Form_SetUpPoint("Death Floor Height", false, true, false, 0, 0, 0);
-            if (input.ShowDialog() == DialogResult.OK)
-            {
-                short height = Conversions.ToShort(input.IntegerInput_Y.Value);
-                AddDeathFloorAt(height, true);
-            }
+            AddDeathFloor(true);
+        }
+
+        private void ButtonItem_AddDeathFloorWithExtBounds_Click(object sender, EventArgs e)
+        {
+            AddDeathFloor(false);
         }
 
         internal void ButtonItem4_Click(object sender, EventArgs e)
@@ -3036,6 +3036,16 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 short typ = Conversions.ToShort(TextValueConverter.ValueFromText(input.ValueTextBox.Text));
                 RemoveCollisionTrianglesWithCollisionType(Conversions.ToByte(typ));
+            }
+        }
+
+        internal void AddDeathFloor(bool vanillaBounds)
+        {
+            var input = new Form_SetUpPoint("Death Floor Height", false, true, false, 0, 0, 0);
+            if (input.ShowDialog() == DialogResult.OK)
+            {
+                short height = Conversions.ToShort(input.IntegerInput_Y.Value);
+                AddDeathFloorAt(height, vanillaBounds);
             }
         }
 
@@ -3371,6 +3381,5 @@ namespace SM64_ROM_Manager.LevelEditor
 
             frm.Show();
         }
-
     }
 }
