@@ -77,6 +77,7 @@ namespace SM64_ROM_Manager
             SwitchButton_AutoDetectStartEndQuotationMarks.Value = Settings.TextManager.AutoDetectStartEndQuotationMarks;
             TextBoxX_ProxyUsr.Text = Settings.Network.ProxyUsername;
             TextBoxX_ProxyPwd.Text = string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted) ? string.Empty : crypter.DecryptData(Settings.Network.ProxyPasswordEncrypted);
+
             var curLoaderModule = Publics.Publics.GetLoaderModuleFromID(Settings.FileParser.FileLoaderModule);
             foreach (ComboItem item in ComboBoxEx_LoaderModule.Items)
             {
@@ -214,6 +215,19 @@ namespace SM64_ROM_Manager
                     }
             }
 
+            switch (Settings.General.RecalcChecksumBehavior)
+            {
+                case SM64Lib.RecalcChecksumBehavior.Never:
+                    comboBoxEx_RecalcChecksumBehavior.SelectedIndex = 0;
+                    break;
+                case SM64Lib.RecalcChecksumBehavior.Always:
+                    comboBoxEx_RecalcChecksumBehavior.SelectedIndex = 1;
+                    break;
+                case SM64Lib.RecalcChecksumBehavior.Auto:
+                    comboBoxEx_RecalcChecksumBehavior.SelectedIndex = 2;
+                    break;
+            }
+
             finishedLoading = true;
         }
 
@@ -231,6 +245,7 @@ namespace SM64_ROM_Manager
             Settings.TextManager.AutoDetectStartEndQuotationMarks = SwitchButton_AutoDetectStartEndQuotationMarks.Value;
             Settings.Network.ProxyUsername = TextBoxX_ProxyUsr.Text.Trim();
             Settings.Network.ProxyPasswordEncrypted = string.IsNullOrEmpty(TextBoxX_ProxyPwd.Text) ? string.Empty : crypter.EncryptData(TextBoxX_ProxyPwd.Text);
+
             var switchExpr = ComboBoxEx1.SelectedIndex;
             switch (switchExpr)
             {
@@ -335,6 +350,19 @@ namespace SM64_ROM_Manager
                         Settings.Network.MinimumUpdateChannel = Updating.Channels.Alpha;
                         break;
                     }
+            }
+
+            switch (comboBoxEx_RecalcChecksumBehavior.SelectedIndex)
+            {
+                case 0:
+                    Settings.General.RecalcChecksumBehavior = SM64Lib.RecalcChecksumBehavior.Never;
+                    break;
+                case 1:
+                    Settings.General.RecalcChecksumBehavior = SM64Lib.RecalcChecksumBehavior.Always;
+                    break;
+                case 2:
+                    Settings.General.RecalcChecksumBehavior = SM64Lib.RecalcChecksumBehavior.Auto;
+                    break;
             }
 
             ComboItem selLangItem = (ComboItem)ComboBoxEx_Language.SelectedItem;

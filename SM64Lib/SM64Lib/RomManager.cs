@@ -365,7 +365,7 @@ namespace SM64Lib
         /// </summary>
         /// <param name="IgnoreNeedToSave">If True, everything will be saved even if there are no changes.</param>
         /// <param name="DontPatchUpdates">If True, Update Patches will be ignored.</param>
-        public void SaveRom(bool IgnoreNeedToSave = false, bool DontPatchUpdates = false)
+        public void SaveRom(bool IgnoreNeedToSave = false, bool DontPatchUpdates = false, RecalcChecksumBehavior recalcChecksumBehavior = RecalcChecksumBehavior.Auto)
         {
             if (!RaiseBeforeRomSave())
             {
@@ -375,9 +375,7 @@ namespace SM64Lib
                     // Patch update-patches
                     foreach (KeyValuePair<string, RomVersion> kvp in dicUpdatePatches.Where(n => n.Value > ProgramVersion).OrderBy(n => n.Key))
                     {
-                        /* TODO ERROR: Skipped WarningDirectiveTrivia */
                         General.PatchClass.ApplyPPF(RomFile, Path.Combine(General.MyFilePaths["Update Patches Folder"], kvp.Value.Filename));
-                        /* TODO ERROR: Skipped WarningDirectiveTrivia */
                         needUpdateChecksum = true;
                     }
                 }
@@ -419,7 +417,7 @@ namespace SM64Lib
                 }
 
                 // Update checksum
-                if (needUpdateChecksum)
+                if (recalcChecksumBehavior == RecalcChecksumBehavior.Always || (recalcChecksumBehavior == RecalcChecksumBehavior.Auto && needUpdateChecksum))
                     General.PatchClass.UpdateChecksum(RomFile);
 
                 // Write Rom.config

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SM64Lib;
+using System;
 
 namespace SM64_ROM_Manager.SettingsManager
 {
@@ -12,6 +13,7 @@ namespace SM64_ROM_Manager.SettingsManager
         public string Language { get; set; }
         public NotificationMode RomChangedNotification { get; set; }
         public Version LastThankYouPageSeen { get; set; }
+        public RecalcChecksumBehavior RecalcChecksumBehavior { get; set; }
 
         public void ResetValues()
         {
@@ -25,6 +27,7 @@ namespace SM64_ROM_Manager.SettingsManager
             Language = string.Empty;
             RomChangedNotification = NotificationMode.Popup;
             LastThankYouPageSeen = null;
+            RecalcChecksumBehavior = RecalcChecksumBehavior.Always;
         }
     }
 }

@@ -417,7 +417,7 @@
             <param name="access"></param>
             <returns></returns>
         </member>
-        <member name="M:SM64Lib.RomManager.SaveRom(System.Boolean,System.Boolean)">
+        <member name="M:SM64Lib.RomManager.SaveRom(System.Boolean,System.Boolean,SM64Lib.RecalcChecksumBehavior)">
             <summary>
             Saves the ROM.
             </summary>

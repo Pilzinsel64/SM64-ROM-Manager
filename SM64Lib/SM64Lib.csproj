@@ -231,6 +231,7 @@
     <Compile Include="SM64Lib\Patching\PatchScript.cs" />
     <Compile Include="SM64Lib\Patching\PatchScriptManager.cs" />
     <Compile Include="SM64Lib\Patching\PatchScriptManagerProcessingInputValueEventArgs.cs" />
+    <Compile Include="SM64Lib\RecalcChecksumBehavior.cs" />
     <Compile Include="SM64Lib\RomSpaceInfo.cs" />
     <Compile Include="SM64Lib\RomVersion.cs" />
     <Compile Include="SM64Lib\EventArguments\RomVersionEventArgs.cs" />
