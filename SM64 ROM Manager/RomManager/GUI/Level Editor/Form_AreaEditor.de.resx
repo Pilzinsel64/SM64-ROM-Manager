@@ -2396,4 +2396,10 @@
   <data name="ButtonItem3.Text" xml:space="preserve">
     <value>Level-Editor beenden</value>
   </data>
+  <data name="ButtonItem_ButtonItem_AddDeathFloor.Text" xml:space="preserve">
+    <value>Todesboden hinzufügen</value>
+  </data>
+  <data name="ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Text" xml:space="preserve">
+    <value>Todesboden mit erweiterten Grenzen hinzufügen</value>
+  </data>
 </root>
