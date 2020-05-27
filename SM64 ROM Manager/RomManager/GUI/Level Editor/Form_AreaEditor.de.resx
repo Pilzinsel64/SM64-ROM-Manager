@@ -126,484 +126,42 @@
   <data name="ColumnHeader6.Text" xml:space="preserve">
     <value>Zu Warp-ID</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ListViewEx_Warps.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ColumnHeader3.Text" xml:space="preserve">
     <value>Combo-Name</value>
   </data>
-  <data name="ListViewEx_Objects.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="CircularProgress1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Panel_GLControl.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Slider_CamMoveSpeed.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Slider_CamMoveSpeed.Text" xml:space="preserve">
-    <value>Kamerabewegung: 100%</value>
-  </data>
-  <data name="ButtonX5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX6.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX7.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX8.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PanelEx5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>681, 3</value>
-  </data>
-  <data name="PanelEx5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="LabelItem1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="LabelItem1.Text" xml:space="preserve">
-    <value>Kamera-Modis:</value>
-  </data>
-  <data name="ButtonItem_CamOrbit.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_CamFly.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_CamFly.Text" xml:space="preserve">
-    <value>Fliegen</value>
-  </data>
-  <data name="LabelItem2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="LabelItem2.Text" xml:space="preserve">
-    <value>Sichtrichtung:</value>
-  </data>
-  <data name="ButtonItem_CamTop.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_CamTop.Text" xml:space="preserve">
-    <value>Oben</value>
-  </data>
-  <data name="ButtonItem_CamButtom.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_CamButtom.Text" xml:space="preserve">
-    <value>Unten</value>
-  </data>
-  <data name="ButtonItem_CamLeft.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_CamLeft.Text" xml:space="preserve">
-    <value>Links</value>
-  </data>
-  <data name="ButtonItem_CamRight.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_CamRight.Text" xml:space="preserve">
-    <value>Rechts</value>
-  </data>
-  <data name="ButtonItem_CamFront.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_CamFront.Text" xml:space="preserve">
-    <value>Vorne</value>
-  </data>
-  <data name="ButtonItem_CamBack.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_CamBack.Text" xml:space="preserve">
-    <value>Hinten</value>
-  </data>
-  <data name="ButtonX_CamMode.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="LabelX14.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="LabelX14.Text" xml:space="preserve">
-    <value>Kameramodus:</value>
-  </data>
-  <data name="PanelEx4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>846, 3</value>
-  </data>
-  <data name="PanelEx4.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_KeepOnButtom.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_KeepOnTop.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_KeepOnGround.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_DropToBottom.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_DropToBottom.Text" xml:space="preserve">
-    <value>Absetzen niedrigste</value>
-  </data>
-  <data name="ButtonX_DropToTop.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_DropToTop.Text" xml:space="preserve">
-    <value>Absetzen höchste</value>
-  </data>
-  <data name="ButtonX_DropToGround.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_DropToGround.Text" xml:space="preserve">
-    <value>Absetzen nächste</value>
-  </data>
-  <data name="PanelEx3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Slider_ObjMoveSpeed.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Slider_ObjMoveSpeed.Text" xml:space="preserve">
-    <value>Objektbewegung: 100%</value>
-  </data>
-  <data name="ButtonX1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX4.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PanelEx2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PictureBox_CamCntrWheel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>656, 3</value>
-  </data>
-  <data name="PictureBox_CamCntrWheel.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PictureBox_CamMoveCross.Location" type="System.Drawing.Point, System.Drawing">
-    <value>550, 3</value>
-  </data>
-  <data name="PictureBox_CamMoveCross.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PictureBox_ObjRotWheel.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PictureBox_ObjRotCross.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PictureBox_ObjCntrWheel.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PictureBox_ObjCntrCross.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PanelEx1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>935, 106</value>
-  </data>
-  <data name="PanelEx1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PanelDockContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>935, 106</value>
-  </data>
-  <data name="PanelDockContainer2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar_Controls.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="DockContainerItem2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar_Controls.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="DockSite4.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PanelDockContainer3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar_AreaViewer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="DockContainerItem3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar_AreaViewer.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="DockSite9.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="AdvPropertyGrid1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PanelDockContainer10.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="DockContainerItem7.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar2.AccessibleDescription" xml:space="preserve">
-    <value>Objekte (Bar2)</value>
-  </data>
-  <data name="Bar2.AccessibleName" xml:space="preserve">
-    <value>Objekte</value>
-  </data>
-  <data name="Panel1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PanelDockContainer7.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Panel2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PanelDockContainer1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="DockContainerItem4.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="DockContainerItem4.Text" xml:space="preserve">
-    <value>Objekte</value>
-  </data>
-  <data name="DockContainerItem1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="Bar2.Text" xml:space="preserve">
-    <value>Objekte</value>
-  </data>
-  <data name="DockSite1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem9.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem9.Text" xml:space="preserve">
-    <value>Kopieren</value>
-  </data>
-  <data name="ButtonItem37.Text" xml:space="preserve">
-    <value>Einfügen (Standart)</value>
-  </data>
-  <data name="ButtonItem63.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem63.Text" xml:space="preserve">
-    <value>Command bearbeiten</value>
-  </data>
-  <data name="ButtonItem_ChangeObjectCombo.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_ChangeObjectCombo.Text" xml:space="preserve">
-    <value>Objekt-Combo ändern ...</value>
-  </data>
-  <data name="ButtonItem30.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem30.Text" xml:space="preserve">
-    <value>Verhalten ändern ...</value>
-  </data>
-  <data name="ButtonItem33.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem33.Text" xml:space="preserve">
-    <value>Objekt-Combo speichern ...</value>
-  </data>
-  <data name="ButtonItem64.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem64.Text" xml:space="preserve">
-    <value>Zurücksetzen zu Standart</value>
-  </data>
-  <data name="ButtonItem65.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem65.Text" xml:space="preserve">
-    <value>Entfernen</value>
-  </data>
-  <data name="ButtonItem68.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem68.Text" xml:space="preserve">
-    <value>Objekt-Modell exportieren</value>
-  </data>
-  <data name="ButtonItem_CM_Objects.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem6.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem6.Text" xml:space="preserve">
-    <value>Kopieren</value>
-  </data>
-  <data name="ButtonItem5.Text" xml:space="preserve">
-    <value>Einfügen (Standart)</value>
-  </data>
-  <data name="ButtonItem7.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem7.Text" xml:space="preserve">
-    <value>Command bearbeiten</value>
-  </data>
-  <data name="ButtonItem23.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem23.Text" xml:space="preserve">
-    <value>Entfernen</value>
-  </data>
-  <data name="ButtonItem1_CM_Warps.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem24.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem24.Text" xml:space="preserve">
-    <value>Gehe zu Eckpunkt 1</value>
-  </data>
-  <data name="ButtonItem25.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem25.Text" xml:space="preserve">
-    <value>Gehe zu Eckpunkt 2</value>
-  </data>
-  <data name="ButtonItem26.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem26.Text" xml:space="preserve">
-    <value>Gehe zu Eckpunkt 3</value>
-  </data>
-  <data name="ButtonItem22.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ContextMenuBar1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="DockSite3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="DockSite2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="DockSite5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="DockSite6.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="DockSite8.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem35.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar29.Location" type="System.Drawing.Point, System.Drawing">
     <value>1107, 0</value>
-  </data>
-  <data name="RibbonBar29.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem_CopyObjCmdAsHex.Text" xml:space="preserve">
     <value>Kopiere Command als Hex-Array</value>
   </data>
-  <data name="ButtonItem_ObjectsEditorCmd.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem_ObjectsEditorCmd.Text" xml:space="preserve">
     <value>Command bearbeiten</value>
-  </data>
-  <data name="ButtonItem_ResetObjToDefault.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem_ResetObjToDefault.Text" xml:space="preserve">
     <value>Zurücksetzen zu Standart-Object</value>
   </data>
-  <data name="ItemContainer11.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar9.Location" type="System.Drawing.Point, System.Drawing">
     <value>925, 0</value>
-  </data>
-  <data name="RibbonBar9.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonBar9.Text" xml:space="preserve">
     <value>Skript</value>
   </data>
-  <data name="ButtonItem_DropToGround.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem_DropToGround.Text" xml:space="preserve">
     <value>Absetzen zur nächsten Fläche</value>
-  </data>
-  <data name="ButtonItem_DropToTop.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem_DropToTop.Text" xml:space="preserve">
     <value>Absetzen zur höchsten Fläche</value>
   </data>
-  <data name="ButtonItem_DropToBottom.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem_DropToBottom.Text" xml:space="preserve">
     <value>Absetzen zur niedrigsten Fläche</value>
-  </data>
-  <data name="ItemContainer14.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_KeepOnGround.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_KeepOnTop.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_KeepOnButtom.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ItemContainer15.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonBar18.Location" type="System.Drawing.Point, System.Drawing">
     <value>803, 0</value>
   </data>
-  <data name="RibbonBar18.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar18.Text" xml:space="preserve">
     <value>Absetzen auf Fläche</value>
-  </data>
-  <data name="ButtonItem_ExportObjectModel.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem_ExportObjectModel.Text" xml:space="preserve">
     <value>Objektmodell exportieren</value>
@@ -611,59 +169,32 @@
   <data name="RibbonBar7.Location" type="System.Drawing.Point, System.Drawing">
     <value>723, 0</value>
   </data>
-  <data name="RibbonBar7.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar7.Text" xml:space="preserve">
     <value>Modell</value>
-  </data>
-  <data name="ButtonItem_ObjectsRemove.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem_ObjectsRemove.Text" xml:space="preserve">
     <value>Objekt(e) entfernen</value>
   </data>
-  <data name="ButtonItem27.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem27.Text" xml:space="preserve">
     <value>Alle leeren Objekte entfernen</value>
-  </data>
-  <data name="ButtonItem28.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem28.Text" xml:space="preserve">
     <value>Alle nichtgenutzte Objekte entfernen</value>
   </data>
-  <data name="ItemContainer21.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar8.Location" type="System.Drawing.Point, System.Drawing">
     <value>522, 0</value>
-  </data>
-  <data name="RibbonBar8.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonBar8.Text" xml:space="preserve">
     <value>Entfernen</value>
   </data>
-  <data name="ButtonItem31.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem31.Text" xml:space="preserve">
     <value>Objekt-Combo ändern</value>
-  </data>
-  <data name="ButtonItem32.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem32.Text" xml:space="preserve">
     <value>Verhalten ändern</value>
   </data>
   <data name="RibbonBar27.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 0</value>
-  </data>
-  <data name="RibbonBar27.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonBar27.Text" xml:space="preserve">
     <value>Listen</value>
@@ -674,38 +205,11 @@
   <data name="ButtonItem_ObjectsCopy.Text" xml:space="preserve">
     <value>Objekt kopieren</value>
   </data>
-  <data name="ButtonItem_PasteObjCombo.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_PasteObjModelID.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_PasteObjBehavID.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_PasteObjBParams.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_PasteObjActs.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_PasteObjPos.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_PasteObjRot.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="buttonItem55.Text" xml:space="preserve">
     <value>Einfügen (Spezial)</value>
   </data>
-  <data name="ButtonItem44.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem44.Text" xml:space="preserve">
     <value>Zwischenablage leeren</value>
-  </data>
-  <data name="ItemContainer7.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonBar3.Location" type="System.Drawing.Point, System.Drawing">
     <value>198, 0</value>
@@ -713,365 +217,126 @@
   <data name="RibbonBar3.Text" xml:space="preserve">
     <value>Zwischenablage</value>
   </data>
-  <data name="ButtonX_ObjectsAdd.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonX_ObjectsAdd.Text" xml:space="preserve">
     <value>Objekt hinzufügen</value>
-  </data>
-  <data name="ButtonItem38.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem39.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem40.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ItemContainer5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem41.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem42.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem43.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ItemContainer6.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 84</value>
   </data>
-  <data name="RibbonBar1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar1.Text" xml:space="preserve">
     <value>Objekte hinzufügen</value>
-  </data>
-  <data name="RibbonPanel1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_AddDeathFloorWithExtBounds.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_AddDeathFloorWithExtBounds.Text" xml:space="preserve">
-    <value>Todesboden hinzufügen mit erweiterten Grenzen</value>
-  </data>
-  <data name="ButtonItem_AddDeathFloor.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_AddDeathFloor.Text" xml:space="preserve">
-    <value>Todesboden hinzufügen</value>
-  </data>
-  <data name="ButtonItem4.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem4.Text" xml:space="preserve">
-    <value>Alle Todesböden entfernen</value>
-  </data>
-  <data name="ItemContainer16.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar25.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar25.Text" xml:space="preserve">
-    <value>Todesböden</value>
-  </data>
-  <data name="ButtonItem11.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem11.Text" xml:space="preserve">
-    <value>Alle Flächen mit bestimmten Typ löschen</value>
-  </data>
-  <data name="ItemContainer17.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar24.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar24.Text" xml:space="preserve">
-    <value>Werkzeug</value>
-  </data>
-  <data name="ButtonItem85.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem85.Text" xml:space="preserve">
-    <value>Kollision importieren</value>
-  </data>
-  <data name="ButtonItem86.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem86.Text" xml:space="preserve">
-    <value>Kollision Exportieren</value>
-  </data>
-  <data name="RibbonBar17.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar17.Text" xml:space="preserve">
-    <value>Modell</value>
-  </data>
-  <data name="RibbonPanel4.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="CheckBoxItem_PerspectiveMode.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="CheckBoxItem_PerspectiveMode.Text" xml:space="preserve">
-    <value>Perspektiven-Modus</value>
-  </data>
-  <data name="CheckBoxItem_OrthoMode.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="CheckBoxItem_OrthoMode.Text" xml:space="preserve">
-    <value>Ortho-Modus</value>
-  </data>
-  <data name="ItemContainer4.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar23.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar23.Text" xml:space="preserve">
-    <value>Kamera</value>
-  </data>
-  <data name="ButtonItem2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem2.Text" xml:space="preserve">
-    <value>Vollbild aktivieren</value>
-  </data>
-  <data name="RibbonBar22.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar22.Text" xml:space="preserve">
-    <value>Fenster</value>
-  </data>
-  <data name="ButtonItem1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem1.Text" xml:space="preserve">
-    <value>Screenshot machen</value>
-  </data>
-  <data name="RibbonBar21.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_DrawBackfaces.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_DrawBackfaces.Text" xml:space="preserve">
-    <value>Rückseiten zeichnen</value>
-  </data>
-  <data name="ButtonItem_DrawObjects.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_DrawObjects.Text" xml:space="preserve">
-    <value>Objekte zeichnen</value>
-  </data>
-  <data name="ItemContainer2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_DrawFill.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_DrawFill.Text" xml:space="preserve">
-    <value>Füllungen zeichnen</value>
-  </data>
-  <data name="ButtonItem_DrawOutline.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_DrawOutline.Text" xml:space="preserve">
-    <value>Außenlinien zeichnen</value>
-  </data>
-  <data name="ItemContainer3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar20.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar20.Text" xml:space="preserve">
-    <value>Optionen</value>
-  </data>
-  <data name="ButtonItem_ViewVisualMap.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_ViewVisualMap.Text" xml:space="preserve">
-    <value>Visuelle Map</value>
-  </data>
-  <data name="ButtonItem_ViewColMap.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_ViewColMap.Text" xml:space="preserve">
-    <value>Kollision</value>
-  </data>
-  <data name="ItemContainer1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar19.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar19.Text" xml:space="preserve">
-    <value>Modelle</value>
-  </data>
-  <data name="RibbonPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1241, 87</value>
-  </data>
-  <data name="RibbonPanel6.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_GeolayoutScriptDumps.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem_GeolayoutScriptDumps.Text" xml:space="preserve">
     <value>Skript-Dumps anzeigen</value>
   </data>
-  <data name="ribbonBar13.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ribbonBar13.Text" xml:space="preserve">
     <value>Script-Dumps</value>
   </data>
-  <data name="ButtonItem34.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RibbonPanel7.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="RibbonBar28.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="CheckBoxItem_PerspectiveMode.Text" xml:space="preserve">
+    <value>Perspektiven-Modus</value>
   </data>
-  <data name="RibbonPanel7.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="CheckBoxItem_OrthoMode.Text" xml:space="preserve">
+    <value>Ortho-Modus</value>
   </data>
-  <data name="ButtonItem36.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RibbonBar23.Text" xml:space="preserve">
+    <value>Kamera</value>
   </data>
-  <data name="RibbonBar30.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="ButtonItem2.Text" xml:space="preserve">
+    <value>Vollbild aktivieren</value>
   </data>
-  <data name="ButtonItem_ImportModel.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RibbonBar22.Text" xml:space="preserve">
+    <value>Fenster</value>
   </data>
-  <data name="ButtonItem_ImportModel.Text" xml:space="preserve">
-    <value>Modell importieren</value>
+  <data name="ButtonItem1.Text" xml:space="preserve">
+    <value>Screenshot machen</value>
   </data>
-  <data name="ButtonItem_ImportVisualMap.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="ButtonItem_DrawBackfaces.Text" xml:space="preserve">
+    <value>Rückseiten zeichnen</value>
   </data>
-  <data name="ButtonItem_ImportVisualMap.Text" xml:space="preserve">
-    <value>Visuelle Map importieren</value>
+  <data name="ButtonItem_DrawObjects.Text" xml:space="preserve">
+    <value>Objekte zeichnen</value>
   </data>
-  <data name="ButtonItem_ImportCollision.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="ButtonItem_DrawFill.Text" xml:space="preserve">
+    <value>Füllungen zeichnen</value>
   </data>
-  <data name="ButtonItem_ImportCollision.Text" xml:space="preserve">
-    <value>Kollision importieren</value>
+  <data name="ButtonItem_DrawOutline.Text" xml:space="preserve">
+    <value>Außenlinien zeichnen</value>
   </data>
-  <data name="ButtonItem47.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RibbonBar20.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="ButtonItem_ViewVisualMap.Text" xml:space="preserve">
+    <value>Visuelle Map</value>
+  </data>
+  <data name="ButtonItem_ViewColMap.Text" xml:space="preserve">
+    <value>Kollision</value>
+  </data>
+  <data name="RibbonBar19.Text" xml:space="preserve">
+    <value>Modelle</value>
   </data>
   <data name="ButtonItem47.Text" xml:space="preserve">
     <value>Importieren</value>
   </data>
-  <data name="ButtonItem_ExportVisualMap.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_ExportVisualMap.Text" xml:space="preserve">
-    <value>Visuelle Map exportieren</value>
-  </data>
-  <data name="ButtonItem_ExportCollision.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_ExportCollision.Text" xml:space="preserve">
-    <value>Kollision exportieren</value>
-  </data>
-  <data name="ButtonItem53.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem53.Text" xml:space="preserve">
     <value>Exportieren</value>
-  </data>
-  <data name="RibbonBar6.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonBar6.Text" xml:space="preserve">
     <value>Modell</value>
   </data>
-  <data name="ComboBoxItem_Area.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ItemContainer9.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_AddArea.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem_AddArea.Text" xml:space="preserve">
     <value>Bereich hinzufügen</value>
-  </data>
-  <data name="ButtonItem_RemoveArea.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem_RemoveArea.Text" xml:space="preserve">
     <value>Aktuellen Bereich löschen</value>
   </data>
-  <data name="ItemContainer8.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="ButtonItem8.Text" xml:space="preserve">
+    <value>Todesboden hinzufügen</value>
   </data>
-  <data name="RibbonBar5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="ButtonItem4.Text" xml:space="preserve">
+    <value>Alle Todesböden entfernen</value>
   </data>
-  <data name="RibbonPanel5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RibbonBar25.Text" xml:space="preserve">
+    <value>Todesböden</value>
+  </data>
+  <data name="ButtonItem11.Text" xml:space="preserve">
+    <value>Alle Flächen mit bestimmten Typ löschen</value>
+  </data>
+  <data name="RibbonBar24.Text" xml:space="preserve">
+    <value>Werkzeug</value>
+  </data>
+  <data name="ButtonItem85.Text" xml:space="preserve">
+    <value>Kollision importieren</value>
+  </data>
+  <data name="ButtonItem86.Text" xml:space="preserve">
+    <value>Kollision Exportieren</value>
+  </data>
+  <data name="RibbonBar17.Text" xml:space="preserve">
+    <value>Modell</value>
   </data>
   <data name="ButtonItem_CopyWarpCmdAsHex.Text" xml:space="preserve">
     <value>Kopiere Command als Hex-Array</value>
   </data>
-  <data name="ButtonX_WarpsEditCmd.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonX_WarpsEditCmd.Text" xml:space="preserve">
     <value>Command bearbeiten</value>
-  </data>
-  <data name="ButtonItem69.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem69.Text" xml:space="preserve">
     <value>Zurücksetzen zu Standart-Warp</value>
   </data>
-  <data name="ItemContainer10.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar2.Text" xml:space="preserve">
     <value>Skript</value>
-  </data>
-  <data name="ButtonItem29.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem29.Text" xml:space="preserve">
     <value>Als Pausemenü-Warp setzen</value>
   </data>
-  <data name="ItemContainer22.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar26.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar26.Text" xml:space="preserve">
     <value>Werkzeug</value>
   </data>
-  <data name="ButtonX_WarpsRemove.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonX_WarpsRemove.Text" xml:space="preserve">
     <value>Warp entfernen</value>
-  </data>
-  <data name="RibbonBar10.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonBar10.Text" xml:space="preserve">
     <value>Entfernen</value>
@@ -1082,140 +347,35 @@
   <data name="ButtonX_WarpsCopy.Text" xml:space="preserve">
     <value>Warp kopieren</value>
   </data>
-  <data name="ButtonItem_PasteWarpDestLevel.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_PasteWarpDestArea.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_PasteWarpDestWarp.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ButtonItem73.Text" xml:space="preserve">
     <value>Einfügen (Spezial)</value>
-  </data>
-  <data name="ButtonItem81.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem81.Text" xml:space="preserve">
     <value>Zwischenablage leeren</value>
   </data>
-  <data name="ItemContainer12.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar11.Text" xml:space="preserve">
     <value>Zwischenablage</value>
-  </data>
-  <data name="ButtonX_WarpsAddConnectedWarp.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_WarpsAddPaintingWarp.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_WarpsAddInstantWarp.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_WarpsAdd.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar12.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonPanel2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem83.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem84.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="ButtonItem84.Text" xml:space="preserve">
     <value>Zu ausgewähltem Objekt setzen</value>
   </data>
-  <data name="ItemContainer13.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonBar4.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonBar4.Text" xml:space="preserve">
     <value>Standart Startposition</value>
-  </data>
-  <data name="RibbonBar16.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonPanel3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonTabItem3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonTabItem5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonTabItem5.Text" xml:space="preserve">
     <value>Bereich</value>
   </data>
-  <data name="RibbonTabItem_Objects.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonTabItem_Objects.Text" xml:space="preserve">
     <value>Objekte</value>
-  </data>
-  <data name="RibbonTabItem_Warps.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonTabItem_Collision.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RibbonTabItem_Collision.Text" xml:space="preserve">
     <value>Kollision</value>
   </data>
-  <data name="RibbonTabItem6.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RibbonTabItem6.Text" xml:space="preserve">
     <value>Ansicht</value>
   </data>
-  <data name="RibbonTabItem1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem95.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_SaveRom.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_SaveRom.Text" xml:space="preserve">
-    <value>ROM Speichern</value>
-  </data>
-  <data name="ButtonItem_LaunchROM.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_LaunchROM.Text" xml:space="preserve">
-    <value>ROM Öffnen</value>
-  </data>
-  <data name="ButtonItem3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem3.Text" xml:space="preserve">
-    <value>Level-Editor beenden</value>
-  </data>
-  <data name="ApplicationButton1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="ApplicationButton1.Text" xml:space="preserve">
     <value>Datei</value>
-  </data>
-  <data name="ButtonItem_Undo.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem_Redo.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RibbonControl1.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3074,22 +2234,166 @@
         +QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="$this.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Level-Editor</value>
   </data>
-  <data name="DockContainerItem6.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="PanelDockContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>935, 106</value>
   </data>
-  <data name="GalleryContainer2.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="Bar_Controls.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
-  <data name="LabelItem3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="PanelEx1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>935, 106</value>
   </data>
-  <data name="ButtonItem13.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="PanelEx5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>681, 3</value>
+  </data>
+  <data name="Slider_CamMoveSpeed.Text" xml:space="preserve">
+    <value>Kamerabewegung: 100%</value>
+  </data>
+  <data name="PanelEx4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>846, 3</value>
+  </data>
+  <data name="LabelItem1.Text" xml:space="preserve">
+    <value>Kamera-Modis:</value>
+  </data>
+  <data name="ButtonItem_CamFly.Text" xml:space="preserve">
+    <value>Fliegen</value>
+  </data>
+  <data name="LabelItem2.Text" xml:space="preserve">
+    <value>Sichtrichtung:</value>
+  </data>
+  <data name="ButtonItem_CamTop.Text" xml:space="preserve">
+    <value>Oben</value>
+  </data>
+  <data name="ButtonItem_CamButtom.Text" xml:space="preserve">
+    <value>Unten</value>
+  </data>
+  <data name="ButtonItem_CamLeft.Text" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="ButtonItem_CamRight.Text" xml:space="preserve">
+    <value>Rechts</value>
+  </data>
+  <data name="ButtonItem_CamFront.Text" xml:space="preserve">
+    <value>Vorne</value>
+  </data>
+  <data name="ButtonItem_CamBack.Text" xml:space="preserve">
+    <value>Hinten</value>
+  </data>
+  <data name="LabelX14.Text" xml:space="preserve">
+    <value>Kameramodus:</value>
+  </data>
+  <data name="ButtonX_DropToBottom.Text" xml:space="preserve">
+    <value>Absetzen niedrigste</value>
+  </data>
+  <data name="ButtonX_DropToTop.Text" xml:space="preserve">
+    <value>Absetzen höchste</value>
+  </data>
+  <data name="ButtonX_DropToGround.Text" xml:space="preserve">
+    <value>Absetzen nächste</value>
+  </data>
+  <data name="Slider_ObjMoveSpeed.Text" xml:space="preserve">
+    <value>Objektbewegung: 100%</value>
+  </data>
+  <data name="PictureBox_CamCntrWheel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 3</value>
+  </data>
+  <data name="PictureBox_CamMoveCross.Location" type="System.Drawing.Point, System.Drawing">
+    <value>550, 3</value>
+  </data>
+  <data name="Bar_AreaViewer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="Bar2.AccessibleDescription" xml:space="preserve">
+    <value>Objekte (Bar2)</value>
+  </data>
+  <data name="Bar2.AccessibleName" xml:space="preserve">
+    <value>Objekte</value>
+  </data>
+  <data name="Bar2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="DockContainerItem4.Text" xml:space="preserve">
+    <value>Objekte</value>
+  </data>
+  <data name="Bar2.Text" xml:space="preserve">
+    <value>Objekte</value>
+  </data>
+  <data name="ButtonItem37.Text" xml:space="preserve">
+    <value>Einfügen (Standart)</value>
+  </data>
+  <data name="ButtonItem5.Text" xml:space="preserve">
+    <value>Einfügen (Standart)</value>
+  </data>
+  <data name="ButtonItem9.Text" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="ButtonItem63.Text" xml:space="preserve">
+    <value>Command bearbeiten</value>
+  </data>
+  <data name="ButtonItem_ChangeObjectCombo.Text" xml:space="preserve">
+    <value>Objekt-Combo ändern ...</value>
+  </data>
+  <data name="ButtonItem30.Text" xml:space="preserve">
+    <value>Verhalten ändern ...</value>
+  </data>
+  <data name="ButtonItem33.Text" xml:space="preserve">
+    <value>Objekt-Combo speichern ...</value>
+  </data>
+  <data name="ButtonItem64.Text" xml:space="preserve">
+    <value>Zurücksetzen zu Standart</value>
+  </data>
+  <data name="ButtonItem65.Text" xml:space="preserve">
+    <value>Entfernen</value>
+  </data>
+  <data name="ButtonItem68.Text" xml:space="preserve">
+    <value>Objekt-Modell exportieren</value>
+  </data>
+  <data name="ButtonItem6.Text" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="ButtonItem7.Text" xml:space="preserve">
+    <value>Command bearbeiten</value>
+  </data>
+  <data name="ButtonItem23.Text" xml:space="preserve">
+    <value>Entfernen</value>
+  </data>
+  <data name="ButtonItem24.Text" xml:space="preserve">
+    <value>Gehe zu Eckpunkt 1</value>
+  </data>
+  <data name="ButtonItem25.Text" xml:space="preserve">
+    <value>Gehe zu Eckpunkt 2</value>
+  </data>
+  <data name="ButtonItem26.Text" xml:space="preserve">
+    <value>Gehe zu Eckpunkt 3</value>
+  </data>
+  <data name="ButtonItem_ImportModel.Text" xml:space="preserve">
+    <value>Modell importieren</value>
+  </data>
+  <data name="ButtonItem_ImportVisualMap.Text" xml:space="preserve">
+    <value>Visuelle Map importieren</value>
+  </data>
+  <data name="ButtonItem_ImportCollision.Text" xml:space="preserve">
+    <value>Kollision importieren</value>
+  </data>
+  <data name="ButtonItem_ExportVisualMap.Text" xml:space="preserve">
+    <value>Visuelle Map exportieren</value>
+  </data>
+  <data name="ButtonItem_ExportCollision.Text" xml:space="preserve">
+    <value>Kollision exportieren</value>
+  </data>
+  <data name="ButtonItem_SaveRom.Text" xml:space="preserve">
+    <value>ROM Speichern</value>
+  </data>
+  <data name="ButtonItem_LaunchROM.Text" xml:space="preserve">
+    <value>ROM Öffnen</value>
+  </data>
+  <data name="ButtonItem3.Text" xml:space="preserve">
+    <value>Level-Editor beenden</value>
   </data>
 </root>
