@@ -28,14 +28,11 @@ namespace SM64Lib.Levels
             var br = new BinaryReader(s);
             var boxlist = new List<SpecialBox>();
             s.Position = TabelStart;
+
             if (SwapInts.SwapInt32(br.ReadInt32()) == 0x1010101)
-            {
                 return Array.Empty<SpecialBox>();
-            }
             else
-            {
                 s.Position -= 0x4;
-            }
 
             while (SwapInts.SwapUInt16(br.ReadUInt16()) != 0xFFFF)
             {
@@ -44,14 +41,11 @@ namespace SM64Lib.Levels
                 tbox.Type = Type;
                 int lastpos = (int)(s.Position + 0x4);
                 s.Position = SwapInts.SwapInt32(br.ReadInt32()) - 0x19000000 + Levelscriptstart;
+
                 if (Type == SpecialBoxType.Water)
-                {
                     tbox.InvisibleWater = SwapInts.SwapInt32(br.ReadInt32()) == 0x0;
-                }
                 else
-                {
                     s.Position += 0x4;
-                }
 
                 s.Position += 0x2;
                 tbox.Scale = SwapInts.SwapInt16(br.ReadInt16());

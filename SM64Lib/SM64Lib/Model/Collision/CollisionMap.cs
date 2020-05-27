@@ -128,6 +128,7 @@ namespace SM64Lib.Model.Collision
         private static BoxData[] ReadBoxData(BinaryData s, BoxDataType type)
         {
             var spBoxes = new List<BoxData>();
+
             for (int i = 1, loopTo = s.ReadInt16(); i <= loopTo; i++)
             {
                 var wb = new BoxData();
@@ -274,10 +275,8 @@ namespace SM64Lib.Model.Collision
 
             // S P E C I A L   B O X E S
 
-            if (SpecialBoxes.Count > 0)
-            {
-                WriteBoxData(data, SpecialBoxes.OrderBy(n => n.Type));
-            }
+            if (SpecialBoxes.Any())
+                WriteBoxData(data, SpecialBoxes);
 
             // E N D   C O L L I S I O N   D A T A
 
@@ -288,18 +287,24 @@ namespace SM64Lib.Model.Collision
         {
             if (bodex.Any())
             {
-                data.Write(Conversions.ToShort(0x44));
-                data.Write(Conversions.ToShort(bodex.Count()));
                 foreach (BoxDataType t in Enum.GetValues(typeof(BoxDataType)))
                 {
-                    foreach (var wb in bodex.Where(n => n.Type == t))
+                    var filteredBoxes = bodex.Where(n => n.Type == t);
+
+                    if (filteredBoxes.Any())
                     {
-                        data.Write(wb.Index);
-                        data.Write(wb.X1);
-                        data.Write(wb.Z1);
-                        data.Write(wb.X2);
-                        data.Write(wb.Z2);
-                        data.Write(wb.Y);
+                        data.Write(Conversions.ToShort(t));
+                        data.Write(Conversions.ToShort(filteredBoxes.Count()));
+
+                        foreach (var wb in filteredBoxes)
+                        {
+                            data.Write(wb.Index);
+                            data.Write(wb.X1);
+                            data.Write(wb.Z1);
+                            data.Write(wb.X2);
+                            data.Write(wb.Z2);
+                            data.Write(wb.Y);
+                        }
                     }
                 }
             }
