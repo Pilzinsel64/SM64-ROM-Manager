@@ -435,6 +435,22 @@ namespace SM64Lib
             GlobalBehaviorBank.CalculateBehaviorBankAddresses(0x13000000, this);
         }
 
+        public void DisableGlobalBehaviorBank()
+        {
+            if (GlobalBehaviorBank.Config.Enabled)
+            {
+                // Reset Pointers
+                var rom = GetBinaryRom(FileAccess.ReadWrite);
+                rom.Position = 0x2ABCD4;
+                rom.Write(0x219E00);
+                rom.Write(0x21F4C0);
+                rom.Close();
+
+                // Set enabled false
+                GlobalBehaviorBank.Config.Disable();
+            }
+        }
+
         private void WriteVersion(RomVersion newVersion)
         {
             myProgramVersion = newVersion;

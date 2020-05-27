@@ -15,6 +15,12 @@ namespace SM64Lib.Behaviors
         [JsonProperty(nameof(Enabled))]
         private bool enabled = false;
         public void Enable() => enabled = true;
+        internal void Disable()
+        {
+            enabled = false;
+            IsVanilla = true;
+            BehaviorConfigs.Clear();
+        }
 
         [JsonIgnore]
         public bool Enabled
