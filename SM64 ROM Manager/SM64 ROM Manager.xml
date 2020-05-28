@@ -863,6 +863,52 @@
               Sucht eine lokalisierte Zeichenfolge, die 3D Coins has been removed successfully! ähnelt.
             </summary>
         </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.Button_SetupScript">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Setup Script ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.MsgBox_Export_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Export Custom Objects ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.MsgBox_ExportSingleFiles">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die You are going to export multiple custom objects. Do you want to save all objects to one single file (Yes) or do you want to save every single object to one file (No)? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.MsgBox_Remove_Titel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Delete Custom Object ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.MsgBox_RemoveReferences">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The object you want to remove has some references. Do you also want to remove all referenced Behaviors, Custom ASM Codes, Custom Models and Custom Objects? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.NewObjectTitel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die New Object ähnelt.
+            </summary>
+        </member>
         <member name="T:SM64_ROM_Manager.My.Resources.Form_Main_Resources">
             <summary>
               Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
