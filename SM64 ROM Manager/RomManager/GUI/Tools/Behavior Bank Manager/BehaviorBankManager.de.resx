@@ -117,43 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="DevComponents.DotNetBar2" name="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null" />
-  <data name="ButtonX_SaveScript.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ButtonX_SaveScript.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="ButtonX_SaveScript.Text" xml:space="preserve">
     <value>Speichern</value>
   </data>
-  <data name="RichTextBoxEx_Script.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="RichTextBoxEx_Script.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="tabControlPanel2.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="tabControlPanel2.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="TabItem_BehavScript.Text" xml:space="preserve">
     <value>Skript</value>
-  </data>
-  <data name="bar1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="bar1.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="labelItem1.Text" xml:space="preserve">
-    <value>Vorlage</value>
-  </data>
-  <data name="ButtonItem_NewBehav_SolidObject.Text" xml:space="preserve">
-    <value>Solides Objekt</value>
   </data>
   <data name="ButtonItem_NewBehav.Text" xml:space="preserve">
     <value>Neues Verhalten</value>
@@ -161,45 +129,20 @@
   <data name="ButtonItem_RemoveBehav.Text" xml:space="preserve">
     <value>Verhalten entfernen</value>
   </data>
+  <data name="ButtonItem_Advanced.Text" xml:space="preserve">
+    <value>Erweitert</value>
+  </data>
+  <data name="labelItem1.Text" xml:space="preserve">
+    <value>Vorlage</value>
+  </data>
+  <data name="ButtonItem_NewBehav_SolidObject.Text" xml:space="preserve">
+    <value>Solides Objekt</value>
+  </data>
+  <data name="ButtonItem_DisableGlobaleBehaviorBank.Text" xml:space="preserve">
+    <value>Globale Verhaltens-Bank deaktivieren</value>
+  </data>
   <data name="columnHeader2.Text" xml:space="preserve">
     <value>Adresse</value>
-  </data>
-  <data name="AdvTree_Behaviors.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="AdvTree_Behaviors.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TextBoxX_BehavName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_BehavName.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="TextBoxX_BehavName.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="TextBoxX_BehavName.Location" type="System.Drawing.Point, System.Drawing">
@@ -208,47 +151,11 @@
   <data name="TextBoxX_BehavName.Size" type="System.Drawing.Size, System.Drawing">
     <value>276, 20</value>
   </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textBoxX_BehavColPtr.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="textBoxX_BehavColPtr.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 32</value>
   </data>
   <data name="textBoxX_BehavColPtr.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 20</value>
-  </data>
-  <data name="checkBoxX_BehavEnableColPtr.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="checkBoxX_BehavEnableColPtr.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="checkBoxX_BehavEnableColPtr.Text" xml:space="preserve">
     <value>Aktiviert</value>
@@ -256,59 +163,26 @@
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>Wdh.</value>
   </data>
-  <data name="ListViewEx_CustomAsmFunctions.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ListViewEx_CustomAsmFunctions.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="ButtonX_AddCustomAsmFunction.Text" xml:space="preserve">
     <value>Hinzufügen</value>
-  </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="ButtonX_RemoveCustomAsmFunction.Text" xml:space="preserve">
     <value>Entfernen</value>
   </data>
-  <data name="ButtonX_LoopCustomAsmFunction.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ButtonX_LoopCustomAsmFunction.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="ButtonX_LoopCustomAsmFunction.Text" xml:space="preserve">
     <value>Wiederholung</value>
-  </data>
-  <data name="ButtonX_EditParamInfos.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ButtonX_EditParamInfos.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="ButtonX_EditParamInfos.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 60</value>
   </data>
   <data name="ButtonX_EditParamInfos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 23</value>
+    <value>94, 23</value>
   </data>
   <data name="ButtonX_EditParamInfos.Text" xml:space="preserve">
     <value>Bearbeiten</value>
   </data>
-  <data name="layoutControl1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="layoutControl1.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="TabItem_BehavProps.Text" xml:space="preserve">
+    <value>Eigenschaften</value>
   </data>
   <data name="layoutControlItem2.Text" xml:space="preserve">
     <value>Kollisions-Pointer:</value>
@@ -318,33 +192,6 @@
   </data>
   <data name="layoutControlItem4.Text" xml:space="preserve">
     <value>Benutzerdefinierte ASM-Funktionen:</value>
-  </data>
-  <data name="resource.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="resource.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="tabControlPanel1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="tabControlPanel1.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TabItem_BehavProps.Text" xml:space="preserve">
-    <value>Eigenschaften</value>
-  </data>
-  <data name="TabControl_Behav.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="TabControl_Behav.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="$this.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="$this.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -19,8 +19,7 @@ namespace SM64_ROM_Manager.LevelEditor
     public partial class TextureEditor
     {
         public event TextureReplacedEventHandler TextureReplaced;
-
-        public delegate void TextureReplacedEventHandler(object sender, EventArgs e);
+        public delegate void TextureReplacedEventHandler(object sender, TextureReplacedEventArgs e);
 
         private readonly RomManager rommgr = null;
         private ButtonItem lastClickedButton = null;
@@ -242,7 +241,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 if (ofd.ShowDialog(this) == DialogResult.OK)
                 {
                     ImportTexture(ofd.FileName, CurTexture);
-                    TextureReplaced?.Invoke(this, new EventArgs());
+                    TextureReplaced?.Invoke(this, new TextureReplacedEventArgs(CurBlock, CurTexture));
                 }
             }
         }
@@ -366,7 +365,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     ImportTexture(f, tex);
                 }
 
-                TextureReplaced?.Invoke(this, new EventArgs());
+                TextureReplaced?.Invoke(this, new TextureReplacedEventArgs(CurBlock, CurTexture));
             }
         }
 
@@ -449,6 +448,17 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             public string Name { get; set; } = "";
             public List<TextureBlock> Blocks { get; private set; } = new List<TextureBlock>();
+        }
+
+        public class TextureReplacedEventArgs
+        {
+            public TextureBlock Block { get; private set; }
+            public Material Texture { get; private set; }
+            public TextureReplacedEventArgs(TextureBlock block, Material texture)
+            {
+                Block = block;
+                Texture = texture;
+            }
         }
     }
 }

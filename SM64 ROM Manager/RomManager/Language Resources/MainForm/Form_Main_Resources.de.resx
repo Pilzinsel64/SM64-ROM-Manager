@@ -188,7 +188,7 @@
     <value>Maximum erreicht</value>
   </data>
   <data name="MsgBox_PrepaireRom" xml:space="preserve">
-    <value>Die ROM wird nun vorbereitet, damit sie geladen werden kann.</value>
+    <value>Die ROM wird nun vorbereitet, damit sie geladen werden kann.&lt;br/&gt;&lt;br/&gt;Bitte beachte folgendes:&lt;br/&gt;Während die ROM vorbereitet wird, wird eine zusätzliche Datei generiert. Sie trägt den Namen deiner ROM-Datei mit der Erweiterung ".config".&lt;br/&gt;Diese Datei beinhaltet einige wichtige Einstellungen und anderes Zeug um diverse Funktionen im ROM Manager zu ermöglichen.&lt;br/&gt;Wenn Du diese .config-Datei löschst, ist es möglich, dass einige Einstellungen im ROM Manager weg sind oder diverse Module nicht mehr funktionen. Auch Fehlermeldungen könnten die Folge sein.&lt;br/&gt;Demnach, wenn du &lt;u&gt;deine ROM-Datei umbenennst&lt;/u&gt;, denke immer daran &lt;u&gt;auch die .config-Datei umzubenennen&lt;/u&gt; sodass der Name der .config-Datei mit dem Namen der ROM-Datei übereinstimmt.&lt;br/&gt;Wenn du &lt;u&gt;deine ROM kopierst&lt;/u&gt;, denke auch immer daran &lt;u&gt;die .config Datei zu kopieren&lt;/u&gt; und den Namen dieser an den Namen der ROM anzugleichen.&lt;br/&gt;If you &lt;u&gt;copy your ROM&lt;/u&gt; file, also &lt;u&gt;copy the config&lt;/u&gt; file and ensure the file name matches the copied ROM file.</value>
   </data>
   <data name="MsgBox_PrepaireRom_Title" xml:space="preserve">
     <value>ROM vorbereiten</value>

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Msg_DisableGlobalBehaviorBank" xml:space="preserve">
+    <value>Sicher, dass Du die globale Verhaltens-Bank deaktivieren möchtest?&lt;br/&gt;Die Zeiger werden zurück auf die Original-Bank 0x13 gesetzt. Dieser Schritt kann nicht rückgängig gemacht werden.&lt;br/&gt;Du kannst die globale Verhaltens-Bank jederzeit wieder aktivieren, allerdings werden dann wieder die originalen Verhalten aus der originalen Bank 0x13 hergenommen.</value>
+  </data>
+  <data name="Msg_DisableGlobalBehaviorBank_Titel" xml:space="preserve">
+    <value>Globale Verhaltens-Bank deaktivieren</value>
+  </data>
   <data name="Msg_ErrorCompilingScript" xml:space="preserve">
     <value>Ein Fehler ist aufgetreten während der Kompilierung deines Scripts. Prüfe folgende Punkte nach:
 - Jedes Byte muss seperate stehen: 01 0A C9 ...

@@ -60,6 +60,8 @@ namespace SM64_ROM_Manager
             UpdateAmbientColors();
             StyleManager.UpdateAmbientColors(RichTextBoxEx_Script);
             TabControl_Behav.Enabled = false;
+            ButtonItem_DisableGlobaleBehaviorBank.Visible = IsEditingGlobalBehaviorBank();
+            ButtonItem_Advanced.Visible = ButtonItem_Advanced.VisibleSubItems != 0;
 
             // Default Nodes
             AdvTree_Behaviors.Nodes.AddRange(new[] { nBehavCustom, nBehavVanilla });
@@ -469,6 +471,12 @@ namespace SM64_ROM_Manager
             curBehav?.Config.CustomAsmLinks.RemoveIfContains(link);
         }
 
+        private bool IsEditingGlobalBehaviorBank()
+            => rommgr is object && rommgr.GlobalBehaviorBank == bank;
+
+        private void DisableGlobalBehaviorBank()
+            => rommgr.DisableGlobalBehaviorBank();
+
         // G U I
 
         private void BehaviorBankManager_Shown(object sender, EventArgs e)
@@ -577,6 +585,15 @@ namespace SM64_ROM_Manager
         private void ButtonX_EditParamInfos_Click(object sender, EventArgs e)
         {
             new BehaviorParameterInfoEditor(curBehav.Config.ParamsInfo).ShowDialog(this);
+        }
+
+        private void ButtonItem_DisableGlobaleBehaviorBank_Click(object sender, EventArgs e)
+        {
+            if (MessageBoxEx.Show(this, BehaviorBankManagerLangRes.Msg_DisableGlobalBehaviorBank, BehaviorBankManagerLangRes.Msg_DisableGlobalBehaviorBank_Titel, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                DisableGlobalBehaviorBank();
+                Close();
+            }
         }
     }
 }

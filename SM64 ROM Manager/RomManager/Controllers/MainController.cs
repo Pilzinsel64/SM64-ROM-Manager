@@ -827,6 +827,25 @@ namespace SM64_ROM_Manager
             frmHUD.ShowDialog();
         }
 
+        public bool IsGlobalBehaviorBankEnabled()
+        {
+            return RomManager.RomConfig.GlobalBehaviorBank.Enabled;
+        }
+
+        public void EnableGlobalBehaviorBank()
+        {
+            if (RomManager is object)
+            {
+                RomManager.RomConfig.GlobalBehaviorBank.Enable();
+                RomManager.LoadGlobalBehaviorBank();
+            }
+        }
+
+        public bool HasRomLoaded()
+        {
+            return RomManager is object;
+        }
+
         // T o o l s
 
         public void OpenTweakViewer()
@@ -1092,7 +1111,8 @@ namespace SM64_ROM_Manager
             var myVersion = new Version(Application.ProductVersion);
             if (Settings.General.LastThankYouPageSeen is null || Settings.General.LastThankYouPageSeen < myVersion)
             {
-                OpenThankYouPage();
+                if (!Debugger.IsAttached)
+                    OpenThankYouPage();
                 Settings.General.LastThankYouPageSeen = myVersion;
             }
         }

@@ -3013,12 +3013,12 @@ namespace SM64_ROM_Manager.LevelEditor
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         internal void ButtonItem8_Click(object sender, EventArgs e)
         {
-            var input = new Form_SetUpPoint("Death Floor Height", false, true, false, 0, 0, 0);
-            if (input.ShowDialog() == DialogResult.OK)
-            {
-                short height = Conversions.ToShort(input.IntegerInput_Y.Value);
-                AddDeathFloorAt(height);
-            }
+            AddDeathFloor(true);
+        }
+
+        private void ButtonItem_ButtonItem_AddDeathFloorWithExtBounds_Click(object sender, EventArgs e)
+        {
+            AddDeathFloor(false);
         }
 
         internal void ButtonItem4_Click(object sender, EventArgs e)
@@ -3039,7 +3039,17 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        internal void AddDeathFloorAt(short height)
+        internal void AddDeathFloor(bool vanillaBounds)
+        {
+            var input = new Form_SetUpPoint("Death Floor Height", false, true, false, 0, 0, 0);
+            if (input.ShowDialog() == DialogResult.OK)
+            {
+                short height = Conversions.ToShort(input.IntegerInput_Y.Value);
+                AddDeathFloorAt(height, vanillaBounds);
+            }
+        }
+
+        internal void AddDeathFloorAt(short height, bool vanillaBounds)
         {
             // Create vertices
             var v1 = new SM64Lib.Model.Collision.Vertex();
@@ -3064,18 +3074,19 @@ namespace SM64_ROM_Manager.LevelEditor
             f2.CollisionType = 0xA;
 
             // Set coordinates to vertices
-
-            v1.X = short.MaxValue;
-            v1.Z = short.MaxValue;
+            var minVal = vanillaBounds ? (short)-8192 : short.MinValue;
+            var maxVal = vanillaBounds ? (short)8192 : short.MaxValue;
+            v1.X = maxVal;
+            v1.Z = maxVal;
             v1.Y = height;
-            v2.X = short.MaxValue;
-            v2.Z = short.MinValue;
+            v2.X = maxVal;
+            v2.Z = minVal;
             v2.Y = height;
-            v3.X = short.MinValue;
-            v3.Z = short.MinValue;
+            v3.X = minVal;
+            v3.Z = minVal;
             v3.Y = height;
-            v4.X = short.MinValue;
-            v4.Z = short.MaxValue;
+            v4.X = minVal;
+            v4.Z = maxVal;
             v4.Y = height;
 
             // Create collections
@@ -3184,9 +3195,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 foreach (var kvp in maps.cVisualMap.Materials)
                 {
                     if (kvp.Value.Image is object)
-                    {
                         block.Textures.Add(kvp.Value);
-                    }
                 }
 
                 catLevelTextures.Blocks.Add(block);
@@ -3195,6 +3204,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // Add all other textures
             if (ObjectModels.Any())
             {
+                var addedTextureAddresses = new List<int>();
                 var block = new TextureEditor.TextureBlock();
                 block.Name = "Object Models";
                 foreach (var kvpp in ObjectModels)
@@ -3203,7 +3213,13 @@ namespace SM64_ROM_Manager.LevelEditor
                     {
                         if (kvp.Value.Image is object)
                         {
-                            block.Textures.Add(kvp.Value);
+                            var info = kvp.Value.Tag as SM64Lib.Model.Conversion.Fast3DParsing.TextureLoadedInfos;
+                            var hasInfo = info is object;
+                            if (!hasInfo || !addedTextureAddresses.Contains(info.TextureRomAddress))
+                            {
+                                block.Textures.AddIfNotContains(kvp.Value);
+                                if (hasInfo) addedTextureAddresses.Add(info.TextureRomAddress);
+                            }
                         }
                     }
                 }
@@ -3212,9 +3228,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
 
             if (catLevelTextures.Blocks.Any())
-            {
                 categories.Add(catLevelTextures);
-            }
 
             return categories;
         }
@@ -3367,6 +3381,5 @@ namespace SM64_ROM_Manager.LevelEditor
 
             frm.Show();
         }
-
     }
 }

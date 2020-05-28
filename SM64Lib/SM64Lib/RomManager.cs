@@ -365,7 +365,7 @@ namespace SM64Lib
         /// </summary>
         /// <param name="IgnoreNeedToSave">If True, everything will be saved even if there are no changes.</param>
         /// <param name="DontPatchUpdates">If True, Update Patches will be ignored.</param>
-        public void SaveRom(bool IgnoreNeedToSave = false, bool DontPatchUpdates = false)
+        public void SaveRom(bool IgnoreNeedToSave = false, bool DontPatchUpdates = false, RecalcChecksumBehavior recalcChecksumBehavior = RecalcChecksumBehavior.Auto)
         {
             if (!RaiseBeforeRomSave())
             {
@@ -375,9 +375,7 @@ namespace SM64Lib
                     // Patch update-patches
                     foreach (KeyValuePair<string, RomVersion> kvp in dicUpdatePatches.Where(n => n.Value > ProgramVersion).OrderBy(n => n.Key))
                     {
-                        /* TODO ERROR: Skipped WarningDirectiveTrivia */
                         General.PatchClass.ApplyPPF(RomFile, Path.Combine(General.MyFilePaths["Update Patches Folder"], kvp.Value.Filename));
-                        /* TODO ERROR: Skipped WarningDirectiveTrivia */
                         needUpdateChecksum = true;
                     }
                 }
@@ -412,11 +410,14 @@ namespace SM64Lib
                 GlobalCustomAsmBank.Save(this);
 
                 // Global Behavior Bank
-                SaveGlobalBehaviorBank(ref lastpos);
-                General.HexRoundUp2(ref lastpos);
+                if (RomConfig.GlobalBehaviorBank.Enabled)
+                {
+                    SaveGlobalBehaviorBank(ref lastpos);
+                    General.HexRoundUp2(ref lastpos);
+                }
 
                 // Update checksum
-                if (needUpdateChecksum)
+                if (recalcChecksumBehavior == RecalcChecksumBehavior.Always || (recalcChecksumBehavior == RecalcChecksumBehavior.Auto && needUpdateChecksum))
                     General.PatchClass.UpdateChecksum(RomFile);
 
                 // Write Rom.config
@@ -430,6 +431,22 @@ namespace SM64Lib
         public void CalculateGlobalBehaviorBankAddresses()
         {
             GlobalBehaviorBank.CalculateBehaviorBankAddresses(0x13000000, this);
+        }
+
+        public void DisableGlobalBehaviorBank()
+        {
+            if (GlobalBehaviorBank.Config.Enabled)
+            {
+                // Reset Pointers
+                var rom = GetBinaryRom(FileAccess.ReadWrite);
+                rom.Position = 0x2ABCD4;
+                rom.Write(0x219E00);
+                rom.Write(0x21F4C0);
+                rom.Close();
+
+                // Set enabled false
+                GlobalBehaviorBank.Config.Disable();
+            }
         }
 
         private void WriteVersion(RomVersion newVersion)
@@ -753,7 +770,7 @@ namespace SM64Lib
                 if (rom.ReadInt32() != value)
                 {
                     rom.Position -= 4;
-                    rom.Write(seg.RomEnd);
+                    rom.Write(value);
                     needToRecalcChecksum2 = true;
                 }
             }
@@ -764,24 +781,28 @@ namespace SM64Lib
 
         public void LoadGlobalBehaviorBank()
         {
-            var rom = GetBinaryRom(FileAccess.Read);
-
-            // Get Bank Address & Length from ROM
-            rom.Position = 0x2ABCD4;
-            var seg = new SegmentedBank(0x13)
-            {
-                RomStart = rom.ReadInt32(),
-                RomEnd = rom.ReadInt32()
-            };
-            seg.ReadData(rom.BaseStream);
-            rom.Close();
-
-            // Read Behavior Bank
             GlobalBehaviorBank = new BehaviorBank(RomConfig.GlobalBehaviorBank);
-            if(RomConfig.GlobalBehaviorBank.IsVanilla)
-                GlobalBehaviorBank.ReadVanillaBank(seg);
-            else
-                GlobalBehaviorBank.ReadBank(seg, 0);
+
+            if (GlobalBehaviorBank.Config.Enabled)
+            {
+                var rom = GetBinaryRom(FileAccess.Read);
+
+                // Get Bank Address & Length from ROM
+                rom.Position = 0x2ABCD4;
+                var seg = new SegmentedBank(0x13)
+                {
+                    RomStart = rom.ReadInt32(),
+                    RomEnd = rom.ReadInt32()
+                };
+                seg.ReadData(rom.BaseStream);
+                rom.Close();
+
+                // Read Behavior Bank
+                if (RomConfig.GlobalBehaviorBank.IsVanilla)
+                    GlobalBehaviorBank.ReadVanillaBank(seg);
+                else
+                    GlobalBehaviorBank.ReadBank(seg, 0);
+            }
         }
 
         private void SaveGlobalBehaviorBank(ref int offset)

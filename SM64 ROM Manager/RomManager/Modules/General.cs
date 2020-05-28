@@ -336,7 +336,9 @@ namespace SM64_ROM_Manager
                     dontpatchupdates = false;
                 }
 
-                rommgr.SaveRom(DontPatchUpdates: dontpatchupdates);
+                rommgr.SaveRom(
+                    DontPatchUpdates: dontpatchupdates,
+                    recalcChecksumBehavior: Settings.General.RecalcChecksumBehavior);
                 RomWatcher.EnableRaisingEvents = true;
             }
         }

@@ -35,6 +35,8 @@ namespace SM64_ROM_Manager
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.ButtonItem_NewBehav_SolidObject = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_RemoveBehav = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_Advanced = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_DisableGlobaleBehaviorBank = new DevComponents.DotNetBar.ButtonItem();
             this.AdvTree_Behaviors = new DevComponents.AdvTree.AdvTree();
             this.columnHeader1 = new DevComponents.AdvTree.ColumnHeader();
             this.columnHeader2 = new DevComponents.AdvTree.ColumnHeader();
@@ -88,10 +90,13 @@ namespace SM64_ROM_Manager
             this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.bar1.AntiAlias = true;
             this.bar1.BarType = DevComponents.DotNetBar.eBarType.MenuBar;
+            this.highlighter_Script.SetHighlightColor(this.bar1, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("bar1.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.bar1, ((bool)(resources.GetObject("bar1.HighlightOnFocus"))));
             this.bar1.IsMaximized = false;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ButtonItem_NewBehav,
-            this.ButtonItem_RemoveBehav});
+            this.ButtonItem_RemoveBehav,
+            this.ButtonItem_Advanced});
             this.bar1.MenuBar = true;
             this.bar1.Name = "bar1";
             this.bar1.Stretch = true;
@@ -100,43 +105,59 @@ namespace SM64_ROM_Manager
             // 
             // ButtonItem_NewBehav
             // 
+            resources.ApplyResources(this.ButtonItem_NewBehav, "ButtonItem_NewBehav");
             this.ButtonItem_NewBehav.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_NewBehav.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
             this.ButtonItem_NewBehav.Name = "ButtonItem_NewBehav";
             this.ButtonItem_NewBehav.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.labelItem1,
             this.ButtonItem_NewBehav_SolidObject});
-            resources.ApplyResources(this.ButtonItem_NewBehav, "ButtonItem_NewBehav");
             // 
             // labelItem1
             // 
             this.labelItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.labelItem1.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
             this.labelItem1.BorderType = DevComponents.DotNetBar.eBorderType.SingleLine;
+            resources.ApplyResources(this.labelItem1, "labelItem1");
             this.labelItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(110)))));
             this.labelItem1.Name = "labelItem1";
             this.labelItem1.PaddingBottom = 1;
             this.labelItem1.PaddingLeft = 10;
             this.labelItem1.PaddingTop = 1;
             this.labelItem1.SingleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            resources.ApplyResources(this.labelItem1, "labelItem1");
             // 
             // ButtonItem_NewBehav_SolidObject
             // 
-            this.ButtonItem_NewBehav_SolidObject.Name = "ButtonItem_NewBehav_SolidObject";
             resources.ApplyResources(this.ButtonItem_NewBehav_SolidObject, "ButtonItem_NewBehav_SolidObject");
+            this.ButtonItem_NewBehav_SolidObject.Name = "ButtonItem_NewBehav_SolidObject";
             this.ButtonItem_NewBehav_SolidObject.Click += new System.EventHandler(this.ButtonItem_NewBehav_SolidObject_Click);
             // 
             // ButtonItem_RemoveBehav
             // 
+            resources.ApplyResources(this.ButtonItem_RemoveBehav, "ButtonItem_RemoveBehav");
             this.ButtonItem_RemoveBehav.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_RemoveBehav.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
             this.ButtonItem_RemoveBehav.Name = "ButtonItem_RemoveBehav";
-            resources.ApplyResources(this.ButtonItem_RemoveBehav, "ButtonItem_RemoveBehav");
             this.ButtonItem_RemoveBehav.Click += new System.EventHandler(this.ButtonItem_RemoveBehav_Click);
+            // 
+            // ButtonItem_Advanced
+            // 
+            resources.ApplyResources(this.ButtonItem_Advanced, "ButtonItem_Advanced");
+            this.ButtonItem_Advanced.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_Advanced.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
+            this.ButtonItem_Advanced.Name = "ButtonItem_Advanced";
+            this.ButtonItem_Advanced.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_DisableGlobaleBehaviorBank});
+            // 
+            // ButtonItem_DisableGlobaleBehaviorBank
+            // 
+            resources.ApplyResources(this.ButtonItem_DisableGlobaleBehaviorBank, "ButtonItem_DisableGlobaleBehaviorBank");
+            this.ButtonItem_DisableGlobaleBehaviorBank.Name = "ButtonItem_DisableGlobaleBehaviorBank";
+            this.ButtonItem_DisableGlobaleBehaviorBank.Click += new System.EventHandler(this.ButtonItem_DisableGlobaleBehaviorBank_Click);
             // 
             // AdvTree_Behaviors
             // 
+            resources.ApplyResources(this.AdvTree_Behaviors, "AdvTree_Behaviors");
             this.AdvTree_Behaviors.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
             this.AdvTree_Behaviors.BackColor = System.Drawing.SystemColors.Window;
             // 
@@ -146,9 +167,10 @@ namespace SM64_ROM_Manager
             this.AdvTree_Behaviors.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.AdvTree_Behaviors.Columns.Add(this.columnHeader1);
             this.AdvTree_Behaviors.Columns.Add(this.columnHeader2);
-            resources.ApplyResources(this.AdvTree_Behaviors, "AdvTree_Behaviors");
             this.AdvTree_Behaviors.DragDropEnabled = false;
             this.AdvTree_Behaviors.DragDropNodeCopyEnabled = false;
+            this.highlighter_Script.SetHighlightColor(this.AdvTree_Behaviors, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("AdvTree_Behaviors.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.AdvTree_Behaviors, ((bool)(resources.GetObject("AdvTree_Behaviors.HighlightOnFocus"))));
             this.AdvTree_Behaviors.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.AdvTree_Behaviors.Name = "AdvTree_Behaviors";
             this.AdvTree_Behaviors.NodesConnector = this.nodeConnector1;
@@ -181,12 +203,14 @@ namespace SM64_ROM_Manager
             // 
             // TabControl_Behav
             // 
+            resources.ApplyResources(this.TabControl_Behav, "TabControl_Behav");
             this.TabControl_Behav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TabControl_Behav.CanReorderTabs = true;
             this.TabControl_Behav.Controls.Add(this.tabControlPanel1);
             this.TabControl_Behav.Controls.Add(this.tabControlPanel2);
-            resources.ApplyResources(this.TabControl_Behav, "TabControl_Behav");
             this.TabControl_Behav.ForeColor = System.Drawing.Color.Black;
+            this.highlighter_Script.SetHighlightColor(this.TabControl_Behav, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("TabControl_Behav.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.TabControl_Behav, ((bool)(resources.GetObject("TabControl_Behav.HighlightOnFocus"))));
             this.TabControl_Behav.Name = "TabControl_Behav";
             this.TabControl_Behav.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.TabControl_Behav.SelectedTabIndex = 0;
@@ -199,9 +223,11 @@ namespace SM64_ROM_Manager
             // 
             // tabControlPanel1
             // 
+            resources.ApplyResources(this.tabControlPanel1, "tabControlPanel1");
             this.tabControlPanel1.Controls.Add(this.layoutControl1);
             this.tabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.tabControlPanel1, "tabControlPanel1");
+            this.highlighter_Script.SetHighlightColor(this.tabControlPanel1, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("tabControlPanel1.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.tabControlPanel1, ((bool)(resources.GetObject("tabControlPanel1.HighlightOnFocus"))));
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
@@ -214,6 +240,7 @@ namespace SM64_ROM_Manager
             // 
             // layoutControl1
             // 
+            resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.BackColor = System.Drawing.Color.Transparent;
             this.layoutControl1.Controls.Add(this.TextBoxX_BehavName);
             this.layoutControl1.Controls.Add(this.textBoxX_BehavColPtr);
@@ -223,8 +250,9 @@ namespace SM64_ROM_Manager
             this.layoutControl1.Controls.Add(this.ButtonX_RemoveCustomAsmFunction);
             this.layoutControl1.Controls.Add(this.ButtonX_LoopCustomAsmFunction);
             this.layoutControl1.Controls.Add(this.ButtonX_EditParamInfos);
-            resources.ApplyResources(this.layoutControl1, "layoutControl1");
             this.layoutControl1.ForeColor = System.Drawing.Color.Black;
+            this.highlighter_Script.SetHighlightColor(this.layoutControl1, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("layoutControl1.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.layoutControl1, ((bool)(resources.GetObject("layoutControl1.HighlightOnFocus"))));
             this.layoutControl1.Name = "layoutControl1";
             // 
             // 
@@ -239,39 +267,62 @@ namespace SM64_ROM_Manager
             this.layoutSpacerItem1,
             this.layoutControlItem4,
             this.layoutGroup1});
+            this.layoutControl1.RootGroup.Text = resources.GetString("resource.Text");
+            this.layoutControl1.RootGroup.Tooltip = resources.GetString("resource.Tooltip");
             // 
             // TextBoxX_BehavName
             // 
+            resources.ApplyResources(this.TextBoxX_BehavName, "TextBoxX_BehavName");
             this.TextBoxX_BehavName.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.TextBoxX_BehavName.Border.Class = "TextBoxBorder";
             this.TextBoxX_BehavName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX_BehavName.ButtonCustom.DisplayPosition = ((int)(resources.GetObject("TextBoxX_BehavName.ButtonCustom.DisplayPosition")));
+            this.TextBoxX_BehavName.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("TextBoxX_BehavName.ButtonCustom.Image")));
+            this.TextBoxX_BehavName.ButtonCustom.Text = resources.GetString("TextBoxX_BehavName.ButtonCustom.Text");
+            this.TextBoxX_BehavName.ButtonCustom.Tooltip = resources.GetString("TextBoxX_BehavName.ButtonCustom.Tooltip");
+            this.TextBoxX_BehavName.ButtonCustom2.DisplayPosition = ((int)(resources.GetObject("TextBoxX_BehavName.ButtonCustom2.DisplayPosition")));
+            this.TextBoxX_BehavName.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("TextBoxX_BehavName.ButtonCustom2.Image")));
+            this.TextBoxX_BehavName.ButtonCustom2.Text = resources.GetString("TextBoxX_BehavName.ButtonCustom2.Text");
+            this.TextBoxX_BehavName.ButtonCustom2.Tooltip = resources.GetString("TextBoxX_BehavName.ButtonCustom2.Tooltip");
             this.TextBoxX_BehavName.DisabledBackColor = System.Drawing.Color.White;
             this.TextBoxX_BehavName.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.TextBoxX_BehavName, "TextBoxX_BehavName");
+            this.highlighter_Script.SetHighlightColor(this.TextBoxX_BehavName, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("TextBoxX_BehavName.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.TextBoxX_BehavName, ((bool)(resources.GetObject("TextBoxX_BehavName.HighlightOnFocus"))));
             this.TextBoxX_BehavName.Name = "TextBoxX_BehavName";
             this.TextBoxX_BehavName.PreventEnterBeep = true;
             this.TextBoxX_BehavName.TextChanged += new System.EventHandler(this.TextBoxX_BehavName_TextChanged);
             // 
             // textBoxX_BehavColPtr
             // 
+            resources.ApplyResources(this.textBoxX_BehavColPtr, "textBoxX_BehavColPtr");
             this.textBoxX_BehavColPtr.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
             this.textBoxX_BehavColPtr.Border.Class = "TextBoxBorder";
             this.textBoxX_BehavColPtr.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX_BehavColPtr.ButtonCustom.DisplayPosition = ((int)(resources.GetObject("textBoxX_BehavColPtr.ButtonCustom.DisplayPosition")));
+            this.textBoxX_BehavColPtr.ButtonCustom.Image = ((System.Drawing.Image)(resources.GetObject("textBoxX_BehavColPtr.ButtonCustom.Image")));
+            this.textBoxX_BehavColPtr.ButtonCustom.Text = resources.GetString("textBoxX_BehavColPtr.ButtonCustom.Text");
+            this.textBoxX_BehavColPtr.ButtonCustom.Tooltip = resources.GetString("textBoxX_BehavColPtr.ButtonCustom.Tooltip");
+            this.textBoxX_BehavColPtr.ButtonCustom2.DisplayPosition = ((int)(resources.GetObject("textBoxX_BehavColPtr.ButtonCustom2.DisplayPosition")));
+            this.textBoxX_BehavColPtr.ButtonCustom2.Image = ((System.Drawing.Image)(resources.GetObject("textBoxX_BehavColPtr.ButtonCustom2.Image")));
+            this.textBoxX_BehavColPtr.ButtonCustom2.Text = resources.GetString("textBoxX_BehavColPtr.ButtonCustom2.Text");
+            this.textBoxX_BehavColPtr.ButtonCustom2.Tooltip = resources.GetString("textBoxX_BehavColPtr.ButtonCustom2.Tooltip");
             this.textBoxX_BehavColPtr.DisabledBackColor = System.Drawing.Color.White;
             this.textBoxX_BehavColPtr.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.textBoxX_BehavColPtr, "textBoxX_BehavColPtr");
+            this.highlighter_Script.SetHighlightColor(this.textBoxX_BehavColPtr, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("textBoxX_BehavColPtr.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.textBoxX_BehavColPtr, ((bool)(resources.GetObject("textBoxX_BehavColPtr.HighlightOnFocus"))));
             this.textBoxX_BehavColPtr.Name = "textBoxX_BehavColPtr";
             this.textBoxX_BehavColPtr.PreventEnterBeep = true;
             this.textBoxX_BehavColPtr.TextChanged += new System.EventHandler(this.TextBoxX_BehavColPtr_TextChanged);
             // 
             // checkBoxX_BehavEnableColPtr
             // 
+            resources.ApplyResources(this.checkBoxX_BehavEnableColPtr, "checkBoxX_BehavEnableColPtr");
             // 
             // 
             // 
@@ -279,13 +330,15 @@ namespace SM64_ROM_Manager
             this.checkBoxX_BehavEnableColPtr.Checked = true;
             this.checkBoxX_BehavEnableColPtr.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxX_BehavEnableColPtr.CheckValue = "Y";
-            resources.ApplyResources(this.checkBoxX_BehavEnableColPtr, "checkBoxX_BehavEnableColPtr");
+            this.highlighter_Script.SetHighlightColor(this.checkBoxX_BehavEnableColPtr, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("checkBoxX_BehavEnableColPtr.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.checkBoxX_BehavEnableColPtr, ((bool)(resources.GetObject("checkBoxX_BehavEnableColPtr.HighlightOnFocus"))));
             this.checkBoxX_BehavEnableColPtr.Name = "checkBoxX_BehavEnableColPtr";
             this.checkBoxX_BehavEnableColPtr.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.checkBoxX_BehavEnableColPtr.CheckedChanged += new System.EventHandler(this.CheckBoxX_BehavEnableColPtr_CheckedChanged);
             // 
             // ListViewEx_CustomAsmFunctions
             // 
+            resources.ApplyResources(this.ListViewEx_CustomAsmFunctions, "ListViewEx_CustomAsmFunctions");
             // 
             // 
             // 
@@ -297,7 +350,8 @@ namespace SM64_ROM_Manager
             this.ListViewEx_CustomAsmFunctions.DisabledBackColor = System.Drawing.Color.Empty;
             this.ListViewEx_CustomAsmFunctions.FullRowSelect = true;
             this.ListViewEx_CustomAsmFunctions.HideSelection = false;
-            resources.ApplyResources(this.ListViewEx_CustomAsmFunctions, "ListViewEx_CustomAsmFunctions");
+            this.highlighter_Script.SetHighlightColor(this.ListViewEx_CustomAsmFunctions, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("ListViewEx_CustomAsmFunctions.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.ListViewEx_CustomAsmFunctions, ((bool)(resources.GetObject("ListViewEx_CustomAsmFunctions.HighlightOnFocus"))));
             this.ListViewEx_CustomAsmFunctions.Name = "ListViewEx_CustomAsmFunctions";
             this.ListViewEx_CustomAsmFunctions.UseCompatibleStateImageBehavior = false;
             this.ListViewEx_CustomAsmFunctions.View = System.Windows.Forms.View.Details;
@@ -313,19 +367,23 @@ namespace SM64_ROM_Manager
             // 
             // ButtonX_AddCustomAsmFunction
             // 
+            resources.ApplyResources(this.ButtonX_AddCustomAsmFunction, "ButtonX_AddCustomAsmFunction");
             this.ButtonX_AddCustomAsmFunction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_AddCustomAsmFunction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.highlighter_Script.SetHighlightColor(this.ButtonX_AddCustomAsmFunction, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("ButtonX_AddCustomAsmFunction.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.ButtonX_AddCustomAsmFunction, ((bool)(resources.GetObject("ButtonX_AddCustomAsmFunction.HighlightOnFocus"))));
             this.ButtonX_AddCustomAsmFunction.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            resources.ApplyResources(this.ButtonX_AddCustomAsmFunction, "ButtonX_AddCustomAsmFunction");
             this.ButtonX_AddCustomAsmFunction.Name = "ButtonX_AddCustomAsmFunction";
             this.ButtonX_AddCustomAsmFunction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_AddCustomAsmFunction.Click += new System.EventHandler(this.ButtonX_AddCustomAsmFunction_Click);
             // 
             // ButtonX_RemoveCustomAsmFunction
             // 
+            resources.ApplyResources(this.ButtonX_RemoveCustomAsmFunction, "ButtonX_RemoveCustomAsmFunction");
             this.ButtonX_RemoveCustomAsmFunction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_RemoveCustomAsmFunction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            resources.ApplyResources(this.ButtonX_RemoveCustomAsmFunction, "ButtonX_RemoveCustomAsmFunction");
+            this.highlighter_Script.SetHighlightColor(this.ButtonX_RemoveCustomAsmFunction, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("ButtonX_RemoveCustomAsmFunction.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.ButtonX_RemoveCustomAsmFunction, ((bool)(resources.GetObject("ButtonX_RemoveCustomAsmFunction.HighlightOnFocus"))));
             this.ButtonX_RemoveCustomAsmFunction.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
             this.ButtonX_RemoveCustomAsmFunction.Name = "ButtonX_RemoveCustomAsmFunction";
             this.ButtonX_RemoveCustomAsmFunction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -333,10 +391,12 @@ namespace SM64_ROM_Manager
             // 
             // ButtonX_LoopCustomAsmFunction
             // 
+            resources.ApplyResources(this.ButtonX_LoopCustomAsmFunction, "ButtonX_LoopCustomAsmFunction");
             this.ButtonX_LoopCustomAsmFunction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_LoopCustomAsmFunction.AutoCheckOnClick = true;
             this.ButtonX_LoopCustomAsmFunction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            resources.ApplyResources(this.ButtonX_LoopCustomAsmFunction, "ButtonX_LoopCustomAsmFunction");
+            this.highlighter_Script.SetHighlightColor(this.ButtonX_LoopCustomAsmFunction, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("ButtonX_LoopCustomAsmFunction.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.ButtonX_LoopCustomAsmFunction, ((bool)(resources.GetObject("ButtonX_LoopCustomAsmFunction.HighlightOnFocus"))));
             this.ButtonX_LoopCustomAsmFunction.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_repeat_16px;
             this.ButtonX_LoopCustomAsmFunction.Name = "ButtonX_LoopCustomAsmFunction";
             this.ButtonX_LoopCustomAsmFunction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -344,9 +404,11 @@ namespace SM64_ROM_Manager
             // 
             // ButtonX_EditParamInfos
             // 
+            resources.ApplyResources(this.ButtonX_EditParamInfos, "ButtonX_EditParamInfos");
             this.ButtonX_EditParamInfos.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_EditParamInfos.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            resources.ApplyResources(this.ButtonX_EditParamInfos, "ButtonX_EditParamInfos");
+            this.highlighter_Script.SetHighlightColor(this.ButtonX_EditParamInfos, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("ButtonX_EditParamInfos.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.ButtonX_EditParamInfos, ((bool)(resources.GetObject("ButtonX_EditParamInfos.HighlightOnFocus"))));
             this.ButtonX_EditParamInfos.Name = "ButtonX_EditParamInfos";
             this.ButtonX_EditParamInfos.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_EditParamInfos.Click += new System.EventHandler(this.ButtonX_EditParamInfos_Click);
@@ -377,12 +439,14 @@ namespace SM64_ROM_Manager
             this.layoutControlItem3.Height = 28;
             this.layoutControlItem3.MinSize = new System.Drawing.Size(64, 18);
             this.layoutControlItem3.Name = "layoutControlItem3";
+            resources.ApplyResources(this.layoutControlItem3, "layoutControlItem3");
             this.layoutControlItem3.Width = 80;
             // 
             // layoutSpacerItem2
             // 
             this.layoutSpacerItem2.Height = 28;
             this.layoutSpacerItem2.Name = "layoutSpacerItem2";
+            resources.ApplyResources(this.layoutSpacerItem2, "layoutSpacerItem2");
             this.layoutSpacerItem2.Width = 1;
             this.layoutSpacerItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
@@ -400,6 +464,7 @@ namespace SM64_ROM_Manager
             // 
             this.layoutSpacerItem3.Height = 31;
             this.layoutSpacerItem3.Name = "layoutSpacerItem3";
+            resources.ApplyResources(this.layoutSpacerItem3, "layoutSpacerItem3");
             this.layoutSpacerItem3.Width = 99;
             this.layoutSpacerItem3.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
@@ -407,6 +472,7 @@ namespace SM64_ROM_Manager
             // 
             this.layoutSpacerItem1.Height = 31;
             this.layoutSpacerItem1.Name = "layoutSpacerItem1";
+            resources.ApplyResources(this.layoutSpacerItem1, "layoutSpacerItem1");
             this.layoutSpacerItem1.Width = 100;
             this.layoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
@@ -432,6 +498,7 @@ namespace SM64_ROM_Manager
             this.layoutControlItem7});
             this.layoutGroup1.MinSize = new System.Drawing.Size(120, 32);
             this.layoutGroup1.Name = "layoutGroup1";
+            resources.ApplyResources(this.layoutGroup1, "layoutGroup1");
             this.layoutGroup1.TextPosition = DevComponents.DotNetBar.Layout.eLayoutPosition.Top;
             this.layoutGroup1.Width = 50;
             // 
@@ -441,6 +508,7 @@ namespace SM64_ROM_Manager
             this.layoutControlItem5.Height = 31;
             this.layoutControlItem5.MinSize = new System.Drawing.Size(32, 20);
             this.layoutControlItem5.Name = "layoutControlItem5";
+            resources.ApplyResources(this.layoutControlItem5, "layoutControlItem5");
             this.layoutControlItem5.Width = 100;
             this.layoutControlItem5.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
@@ -450,6 +518,7 @@ namespace SM64_ROM_Manager
             this.layoutControlItem6.Height = 31;
             this.layoutControlItem6.MinSize = new System.Drawing.Size(32, 20);
             this.layoutControlItem6.Name = "layoutControlItem6";
+            resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
             this.layoutControlItem6.Width = 100;
             this.layoutControlItem6.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
@@ -459,6 +528,7 @@ namespace SM64_ROM_Manager
             this.layoutControlItem7.Height = 31;
             this.layoutControlItem7.MinSize = new System.Drawing.Size(32, 20);
             this.layoutControlItem7.Name = "layoutControlItem7";
+            resources.ApplyResources(this.layoutControlItem7, "layoutControlItem7");
             this.layoutControlItem7.Width = 112;
             // 
             // TabItem_BehavProps
@@ -469,10 +539,12 @@ namespace SM64_ROM_Manager
             // 
             // tabControlPanel2
             // 
+            resources.ApplyResources(this.tabControlPanel2, "tabControlPanel2");
             this.tabControlPanel2.Controls.Add(this.ButtonX_SaveScript);
             this.tabControlPanel2.Controls.Add(this.RichTextBoxEx_Script);
             this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.tabControlPanel2, "tabControlPanel2");
+            this.highlighter_Script.SetHighlightColor(this.tabControlPanel2, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("tabControlPanel2.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.tabControlPanel2, ((bool)(resources.GetObject("tabControlPanel2.HighlightOnFocus"))));
             this.tabControlPanel2.Name = "tabControlPanel2";
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
@@ -485,21 +557,25 @@ namespace SM64_ROM_Manager
             // 
             // ButtonX_SaveScript
             // 
-            this.ButtonX_SaveScript.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             resources.ApplyResources(this.ButtonX_SaveScript, "ButtonX_SaveScript");
+            this.ButtonX_SaveScript.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_SaveScript.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.highlighter_Script.SetHighlightColor(this.ButtonX_SaveScript, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("ButtonX_SaveScript.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.ButtonX_SaveScript, ((bool)(resources.GetObject("ButtonX_SaveScript.HighlightOnFocus"))));
             this.ButtonX_SaveScript.Name = "ButtonX_SaveScript";
             this.ButtonX_SaveScript.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_SaveScript.Click += new System.EventHandler(this.ButtonX_SaveScript_Click);
             // 
             // RichTextBoxEx_Script
             // 
+            resources.ApplyResources(this.RichTextBoxEx_Script, "RichTextBoxEx_Script");
             // 
             // 
             // 
             this.RichTextBoxEx_Script.BackgroundStyle.Class = "RichTextBoxBorder";
             this.RichTextBoxEx_Script.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.RichTextBoxEx_Script, "RichTextBoxEx_Script");
+            this.highlighter_Script.SetHighlightColor(this.RichTextBoxEx_Script, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("RichTextBoxEx_Script.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this.RichTextBoxEx_Script, ((bool)(resources.GetObject("RichTextBoxEx_Script.HighlightOnFocus"))));
             this.RichTextBoxEx_Script.Name = "RichTextBoxEx_Script";
             this.RichTextBoxEx_Script.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1031{\\fonttbl{\\f0\\fnil\\fcharset0 Consolas;}}" +
     "\r\n\\viewkind4\\uc1\\pard\\f0\\fs17\\par\r\n}\r\n";
@@ -525,6 +601,7 @@ namespace SM64_ROM_Manager
             // highlighter_Script
             // 
             this.highlighter_Script.ContainerControl = this.tabControlPanel2;
+            resources.ApplyResources(this.highlighter_Script, "highlighter_Script");
             this.highlighter_Script.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             // 
             // BehaviorBankManager
@@ -533,6 +610,8 @@ namespace SM64_ROM_Manager
             this.Controls.Add(this.TabControl_Behav);
             this.Controls.Add(this.AdvTree_Behaviors);
             this.Controls.Add(this.bar1);
+            this.highlighter_Script.SetHighlightColor(this, ((DevComponents.DotNetBar.Validator.eHighlightColor)(resources.GetObject("$this.HighlightColor"))));
+            this.highlighter_Script.SetHighlightOnFocus(this, ((bool)(resources.GetObject("$this.HighlightOnFocus"))));
             this.Name = "BehaviorBankManager";
             this.TopLeftCornerSize = 0;
             this.TopRightCornerSize = 0;
@@ -593,5 +672,7 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonX ButtonX_EditParamInfos;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem8;
         private DevComponents.DotNetBar.Layout.LayoutSpacerItem layoutSpacerItem3;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_Advanced;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_DisableGlobaleBehaviorBank;
     }
 }

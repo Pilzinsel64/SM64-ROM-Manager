@@ -197,30 +197,30 @@
       <HintPath>..\packages\Ben.Demystifier.0.1.6\lib\net45\Ben.Demystifier.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.Charts.Design">
-      <HintPath>C:\DotNetBarNew\DevComponents.Charts.Design.dll</HintPath>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.Charts.Design.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Charts">
-      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Charts.dll</HintPath>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Charts.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Design">
-      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar.Schedule.dll</HintPath>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Schedule.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="drsPwEnc">

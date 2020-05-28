@@ -246,7 +246,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.RibbonBar25 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer16 = new DevComponents.DotNetBar.ItemContainer();
-            this.ButtonItem8 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ButtonItem_AddDeathFloor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonBar24 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer17 = new DevComponents.DotNetBar.ItemContainer();
@@ -290,6 +290,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem_Undo = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_Redo = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem13 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds = new DevComponents.DotNetBar.ButtonItem();
             this.Panel_GLControl.SuspendLayout();
             this.DockSite4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Bar_Controls)).BeginInit();
@@ -1670,10 +1671,10 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonControl1.CanCustomize = false;
             this.RibbonControl1.CaptionVisible = true;
             this.RibbonControl1.Controls.Add(this.RibbonPanel1);
-            this.RibbonControl1.Controls.Add(this.RibbonPanel7);
-            this.RibbonControl1.Controls.Add(this.RibbonPanel6);
-            this.RibbonControl1.Controls.Add(this.RibbonPanel5);
             this.RibbonControl1.Controls.Add(this.RibbonPanel4);
+            this.RibbonControl1.Controls.Add(this.RibbonPanel6);
+            this.RibbonControl1.Controls.Add(this.RibbonPanel7);
+            this.RibbonControl1.Controls.Add(this.RibbonPanel5);
             this.RibbonControl1.Controls.Add(this.RibbonPanel2);
             this.RibbonControl1.Controls.Add(this.RibbonPanel3);
             resources.ApplyResources(this.RibbonControl1, "RibbonControl1");
@@ -2969,7 +2970,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ItemContainer16.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
             this.ItemContainer16.Name = "ItemContainer16";
             this.ItemContainer16.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem8,
+            this.ButtonItem_ButtonItem_AddDeathFloor,
             this.ButtonItem4});
             // 
             // 
@@ -2980,14 +2981,16 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             this.ItemContainer16.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // ButtonItem8
+            // ButtonItem_ButtonItem_AddDeathFloor
             // 
-            this.ButtonItem8.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem8.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem8.Name = "ButtonItem8";
-            this.ButtonItem8.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem8, "ButtonItem8");
-            this.ButtonItem8.Click += new System.EventHandler(this.ButtonItem8_Click);
+            this.ButtonItem_ButtonItem_AddDeathFloor.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_ButtonItem_AddDeathFloor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_ButtonItem_AddDeathFloor.Name = "ButtonItem_ButtonItem_AddDeathFloor";
+            this.ButtonItem_ButtonItem_AddDeathFloor.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds});
+            this.ButtonItem_ButtonItem_AddDeathFloor.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloor, "ButtonItem_ButtonItem_AddDeathFloor");
+            this.ButtonItem_ButtonItem_AddDeathFloor.Click += new System.EventHandler(this.ButtonItem8_Click);
             // 
             // ButtonItem4
             // 
@@ -3556,6 +3559,13 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem13.SubItemsExpandWidth = 14;
             resources.ApplyResources(this.ButtonItem13, "ButtonItem13");
             // 
+            // ButtonItem_ButtonItem_AddDeathFloorWithExtBounds
+            // 
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Name = "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds";
+            resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds, "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds");
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Click += new System.EventHandler(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds_Click);
+            // 
             // Form_AreaEditor
             // 
             resources.ApplyResources(this, "$this");
@@ -3843,7 +3853,7 @@ namespace SM64_ROM_Manager.LevelEditor
         internal DevComponents.DotNetBar.ButtonItem ButtonItem11;
         internal DevComponents.DotNetBar.RibbonBar RibbonBar25;
         internal DevComponents.DotNetBar.ItemContainer ItemContainer16;
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem8;
+        internal DevComponents.DotNetBar.ButtonItem ButtonItem_ButtonItem_AddDeathFloor;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem4;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem13;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem22;
@@ -3878,6 +3888,7 @@ namespace SM64_ROM_Manager.LevelEditor
         internal DevComponents.DotNetBar.ButtonItem ButtonItem35;
         private DevComponents.DotNetBar.RibbonBar ribbonBar13;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_GeolayoutScriptDumps;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_ButtonItem_AddDeathFloorWithExtBounds;
     }
 
 }

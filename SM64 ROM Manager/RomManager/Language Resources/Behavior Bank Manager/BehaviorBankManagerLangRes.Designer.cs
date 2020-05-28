@@ -62,6 +62,24 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Are you sure to disable the global behavior bank?&lt;br/&gt;The pointers will be resetted to vanilla. After this step is done, you can&apos;t revert it.&lt;br/&gt;You can re-enable the global behavior bank every time, but then it will be created from the vanilla bank 0x13 again. ähnelt.
+        /// </summary>
+        internal static string Msg_DisableGlobalBehaviorBank {
+            get {
+                return ResourceManager.GetString("Msg_DisableGlobalBehaviorBank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Disable Global Behavior Bank ähnelt.
+        /// </summary>
+        internal static string Msg_DisableGlobalBehaviorBank_Titel {
+            get {
+                return ResourceManager.GetString("Msg_DisableGlobalBehaviorBank_Titel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die An error happend at compiling your behavior script. Ensure folling points:
         ///- Every byte has to be seperate: 01 0A C9 ...
         ///- Every command in your script must have the correct length

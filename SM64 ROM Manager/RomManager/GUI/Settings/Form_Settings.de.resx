@@ -144,6 +144,45 @@
   <data name="LabelX6.Text" xml:space="preserve">
     <value>Standart Kameramodus:</value>
   </data>
+  <data name="labelX18.Text" xml:space="preserve">
+    <value>Prüfsumme neuberechnen beim Speichern der ROM:</value>
+  </data>
+  <data name="LabelX12.Text" xml:space="preserve">
+    <value>Info bei ROM-Änderungen von externen Programmen:</value>
+  </data>
+  <data name="LabelX11.Text" xml:space="preserve">
+    <value>Sprache:</value>
+  </data>
+  <data name="ButtonX4.Text" xml:space="preserve">
+    <value>&lt;div padding="0,0,-1,0"&gt;&lt;font color="#C0504D"&gt;Alle Einstellungen zurücksetzen&lt;/font&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="LabelX10.Text" xml:space="preserve">
+    <value>Automatische Antwort bei Update-Patches:</value>
+  </data>
+  <data name="TabItem1.Text" xml:space="preserve">
+    <value>Allgemein</value>
+  </data>
+  <data name="comboItem15.Text" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="comboItem16.Text" xml:space="preserve">
+    <value>Immer</value>
+  </data>
+  <data name="comboItem17.Text" xml:space="preserve">
+    <value>Wenn nötig (Auto)</value>
+  </data>
+  <data name="ComboItem4.Text" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>Keine (Fragen)</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>Nein</value>
+  </data>
   <data name="labelX17.Text" xml:space="preserve">
     <value>Automatisch Start-/Endhochkomma identifizieren:</value>
   </data>
@@ -165,32 +204,8 @@
   <data name="TabItem7.Text" xml:space="preserve">
     <value>Text-Manager</value>
   </data>
-  <data name="LabelX12.Text" xml:space="preserve">
-    <value>Info bei ROM-Änderungen von externen Programmen:</value>
-  </data>
-  <data name="LabelX11.Text" xml:space="preserve">
-    <value>Sprache:</value>
-  </data>
-  <data name="ButtonX4.Text" xml:space="preserve">
-    <value>&lt;div padding="0,0,-1,0"&gt;&lt;font color="#C0504D"&gt;Alle Einstellungen zurücksetzen&lt;/font&gt;&lt;/div&gt;</value>
-  </data>
-  <data name="LabelX10.Text" xml:space="preserve">
-    <value>Automatische Antwort bei Update-Patches:</value>
-  </data>
-  <data name="TabItem1.Text" xml:space="preserve">
-    <value>Allgemein</value>
-  </data>
-  <data name="ComboItem4.Text" xml:space="preserve">
-    <value>Aus</value>
-  </data>
-  <data name="ComboItem1.Text" xml:space="preserve">
-    <value>Keine (Fragen)</value>
-  </data>
-  <data name="ComboItem2.Text" xml:space="preserve">
-    <value>Ja</value>
-  </data>
-  <data name="ComboItem3.Text" xml:space="preserve">
-    <value>Nein</value>
+  <data name="TabItem2.Text" xml:space="preserve">
+    <value>Bereichseditor</value>
   </data>
   <data name="TextBoxX_ProxyPwd.WatermarkText" xml:space="preserve">
     <value>Passwort</value>
@@ -221,9 +236,6 @@
   </data>
   <data name="TabItem3.Text" xml:space="preserve">
     <value>Levelmanager</value>
-  </data>
-  <data name="TabItem2.Text" xml:space="preserve">
-    <value>Bereichseditor</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

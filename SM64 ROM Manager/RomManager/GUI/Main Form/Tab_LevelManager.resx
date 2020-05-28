@@ -712,7 +712,7 @@
     <value>Sand Terrain</value>
   </data>
   <data name="ComboBox_LM_TerrainTyp.Items4" xml:space="preserve">
-    <value>Big Boo's Hount</value>
+    <value>Big Boos Haunt</value>
   </data>
   <data name="ComboBox_LM_TerrainTyp.Items5" xml:space="preserve">
     <value>Water Levels</value>
@@ -2255,9 +2255,9 @@
   <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
