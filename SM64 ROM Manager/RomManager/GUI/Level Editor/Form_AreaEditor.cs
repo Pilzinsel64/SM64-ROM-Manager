@@ -199,6 +199,16 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
+        internal bool EnableSlideMovementForObjects
+        {
+            get => checkBoxItem_MvObjSlide.Checked;
+        }
+
+        internal bool EnableSlideMovementForCamera
+        {
+            get => checkBoxItem_MvCamSlide.Checked;
+        }
+
         public bool DrawObjectModels
         {
             get

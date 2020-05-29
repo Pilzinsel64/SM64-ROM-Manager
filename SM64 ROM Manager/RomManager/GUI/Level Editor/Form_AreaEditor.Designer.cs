@@ -60,6 +60,9 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Slider_CamMoveSpeed = new DevComponents.DotNetBar.Controls.Slider();
             this.ButtonX5 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX6 = new DevComponents.DotNetBar.ButtonX();
+            this.labelItem5 = new DevComponents.DotNetBar.LabelItem();
+            this.checkBoxItem_MvCamPrecise = new DevComponents.DotNetBar.CheckBoxItem();
+            this.checkBoxItem_MvCamSlide = new DevComponents.DotNetBar.CheckBoxItem();
             this.ButtonX7 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX8 = new DevComponents.DotNetBar.ButtonX();
             this.PanelEx4 = new DevComponents.DotNetBar.PanelEx();
@@ -86,6 +89,9 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Slider_ObjMoveSpeed = new DevComponents.DotNetBar.Controls.Slider();
             this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
+            this.checkBoxItem_MvObjPrecise = new DevComponents.DotNetBar.CheckBoxItem();
+            this.checkBoxItem_MvObjSlide = new DevComponents.DotNetBar.CheckBoxItem();
             this.ButtonX4 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX3 = new DevComponents.DotNetBar.ButtonX();
             this.PictureBox_CamCntrWheel = new System.Windows.Forms.PictureBox();
@@ -201,11 +207,6 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem41 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem42 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem43 = new DevComponents.DotNetBar.ButtonItem();
-            this.RibbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar13 = new DevComponents.DotNetBar.RibbonBar();
-            this.ButtonItem_GeolayoutScriptDumps = new DevComponents.DotNetBar.ButtonItem();
-            this.RibbonBar28 = new DevComponents.DotNetBar.RibbonBar();
-            this.ButtonItem34 = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.RibbonBar23 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer4 = new DevComponents.DotNetBar.ItemContainer();
@@ -226,6 +227,23 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ItemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.ButtonItem_ViewVisualMap = new DevComponents.DotNetBar.CheckBoxItem();
             this.ButtonItem_ViewColMap = new DevComponents.DotNetBar.CheckBoxItem();
+            this.RibbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.RibbonBar25 = new DevComponents.DotNetBar.RibbonBar();
+            this.ItemContainer16 = new DevComponents.DotNetBar.ItemContainer();
+            this.ButtonItem_ButtonItem_AddDeathFloor = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem4 = new DevComponents.DotNetBar.ButtonItem();
+            this.RibbonBar24 = new DevComponents.DotNetBar.RibbonBar();
+            this.ItemContainer17 = new DevComponents.DotNetBar.ItemContainer();
+            this.ButtonItem11 = new DevComponents.DotNetBar.ButtonItem();
+            this.RibbonBar17 = new DevComponents.DotNetBar.RibbonBar();
+            this.ButtonItem85 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem86 = new DevComponents.DotNetBar.ButtonItem();
+            this.RibbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar13 = new DevComponents.DotNetBar.RibbonBar();
+            this.ButtonItem_GeolayoutScriptDumps = new DevComponents.DotNetBar.ButtonItem();
+            this.RibbonBar28 = new DevComponents.DotNetBar.RibbonBar();
+            this.ButtonItem34 = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.RibbonBar30 = new DevComponents.DotNetBar.RibbonBar();
             this.ButtonItem36 = new DevComponents.DotNetBar.ButtonItem();
@@ -243,17 +261,6 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ComboBoxItem_Area = new DevComponents.DotNetBar.ComboBoxItem();
             this.ButtonItem_AddArea = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_RemoveArea = new DevComponents.DotNetBar.ButtonItem();
-            this.RibbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.RibbonBar25 = new DevComponents.DotNetBar.RibbonBar();
-            this.ItemContainer16 = new DevComponents.DotNetBar.ItemContainer();
-            this.ButtonItem_ButtonItem_AddDeathFloor = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem4 = new DevComponents.DotNetBar.ButtonItem();
-            this.RibbonBar24 = new DevComponents.DotNetBar.RibbonBar();
-            this.ItemContainer17 = new DevComponents.DotNetBar.ItemContainer();
-            this.ButtonItem11 = new DevComponents.DotNetBar.ButtonItem();
-            this.RibbonBar17 = new DevComponents.DotNetBar.RibbonBar();
-            this.ButtonItem85 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem86 = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.RibbonBar2 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer10 = new DevComponents.DotNetBar.ItemContainer();
@@ -290,7 +297,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem_Undo = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_Redo = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem13 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
             this.Panel_GLControl.SuspendLayout();
             this.DockSite4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Bar_Controls)).BeginInit();
@@ -325,10 +332,10 @@ namespace SM64_ROM_Manager.LevelEditor
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).BeginInit();
             this.RibbonControl1.SuspendLayout();
             this.RibbonPanel1.SuspendLayout();
-            this.RibbonPanel7.SuspendLayout();
             this.RibbonPanel6.SuspendLayout();
-            this.RibbonPanel5.SuspendLayout();
             this.RibbonPanel4.SuspendLayout();
+            this.RibbonPanel7.SuspendLayout();
+            this.RibbonPanel5.SuspendLayout();
             this.RibbonPanel2.SuspendLayout();
             this.RibbonPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -593,10 +600,34 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX6.FocusCuesEnabled = false;
+            this.ButtonX6.Image = ((System.Drawing.Image)(resources.GetObject("ButtonX6.Image")));
             resources.ApplyResources(this.ButtonX6, "ButtonX6");
             this.ButtonX6.Name = "ButtonX6";
             this.ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX6.Click += new System.EventHandler(this.ButtonX_SetCamMoveSpeed);
+            this.ButtonX6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.labelItem5,
+            this.checkBoxItem_MvCamPrecise,
+            this.checkBoxItem_MvCamSlide});
+            // 
+            // labelItem5
+            // 
+            this.labelItem5.GlobalItem = false;
+            this.labelItem5.Name = "labelItem5";
+            resources.ApplyResources(this.labelItem5, "labelItem5");
+            // 
+            // checkBoxItem_MvCamPrecise
+            // 
+            this.checkBoxItem_MvCamPrecise.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxItem_MvCamPrecise.GlobalItem = false;
+            this.checkBoxItem_MvCamPrecise.Name = "checkBoxItem_MvCamPrecise";
+            resources.ApplyResources(this.checkBoxItem_MvCamPrecise, "checkBoxItem_MvCamPrecise");
+            // 
+            // checkBoxItem_MvCamSlide
+            // 
+            this.checkBoxItem_MvCamSlide.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxItem_MvCamSlide.GlobalItem = false;
+            this.checkBoxItem_MvCamSlide.Name = "checkBoxItem_MvCamSlide";
+            resources.ApplyResources(this.checkBoxItem_MvCamSlide, "checkBoxItem_MvCamSlide");
             // 
             // ButtonX7
             // 
@@ -875,10 +906,36 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX2.FocusCuesEnabled = false;
+            this.ButtonX2.Image = ((System.Drawing.Image)(resources.GetObject("ButtonX2.Image")));
             resources.ApplyResources(this.ButtonX2, "ButtonX2");
             this.ButtonX2.Name = "ButtonX2";
             this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX2.Click += new System.EventHandler(this.ButtonX_SetObjMoveSpeed);
+            this.ButtonX2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.labelItem4,
+            this.checkBoxItem_MvObjPrecise,
+            this.checkBoxItem_MvObjSlide});
+            // 
+            // labelItem4
+            // 
+            this.labelItem4.GlobalItem = false;
+            this.labelItem4.Name = "labelItem4";
+            resources.ApplyResources(this.labelItem4, "labelItem4");
+            // 
+            // checkBoxItem_MvObjPrecise
+            // 
+            this.checkBoxItem_MvObjPrecise.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxItem_MvObjPrecise.Checked = true;
+            this.checkBoxItem_MvObjPrecise.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxItem_MvObjPrecise.GlobalItem = false;
+            this.checkBoxItem_MvObjPrecise.Name = "checkBoxItem_MvObjPrecise";
+            resources.ApplyResources(this.checkBoxItem_MvObjPrecise, "checkBoxItem_MvObjPrecise");
+            // 
+            // checkBoxItem_MvObjSlide
+            // 
+            this.checkBoxItem_MvObjSlide.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxItem_MvObjSlide.GlobalItem = false;
+            this.checkBoxItem_MvObjSlide.Name = "checkBoxItem_MvObjSlide";
+            resources.ApplyResources(this.checkBoxItem_MvObjSlide, "checkBoxItem_MvObjSlide");
             // 
             // ButtonX4
             // 
@@ -1671,8 +1728,8 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonControl1.CanCustomize = false;
             this.RibbonControl1.CaptionVisible = true;
             this.RibbonControl1.Controls.Add(this.RibbonPanel1);
-            this.RibbonControl1.Controls.Add(this.RibbonPanel4);
             this.RibbonControl1.Controls.Add(this.RibbonPanel6);
+            this.RibbonControl1.Controls.Add(this.RibbonPanel4);
             this.RibbonControl1.Controls.Add(this.RibbonPanel7);
             this.RibbonControl1.Controls.Add(this.RibbonPanel5);
             this.RibbonControl1.Controls.Add(this.RibbonPanel2);
@@ -2251,101 +2308,6 @@ namespace SM64_ROM_Manager.LevelEditor
             resources.ApplyResources(this.ButtonItem43, "ButtonItem43");
             this.ButtonItem43.Click += new System.EventHandler(this.ButtonX_ObjectsAdd_Click);
             // 
-            // RibbonPanel7
-            // 
-            this.RibbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.RibbonPanel7.Controls.Add(this.ribbonBar13);
-            this.RibbonPanel7.Controls.Add(this.RibbonBar28);
-            resources.ApplyResources(this.RibbonPanel7, "RibbonPanel7");
-            this.RibbonPanel7.Name = "RibbonPanel7";
-            // 
-            // 
-            // 
-            this.RibbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ribbonBar13
-            // 
-            this.ribbonBar13.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar13.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.ribbonBar13, "ribbonBar13");
-            this.ribbonBar13.DragDropSupport = true;
-            this.ribbonBar13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_GeolayoutScriptDumps});
-            this.ribbonBar13.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.ribbonBar13.Name = "ribbonBar13";
-            this.ribbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.ribbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ButtonItem_GeolayoutScriptDumps
-            // 
-            this.ButtonItem_GeolayoutScriptDumps.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_property_script_32px;
-            this.ButtonItem_GeolayoutScriptDumps.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.ButtonItem_GeolayoutScriptDumps.Name = "ButtonItem_GeolayoutScriptDumps";
-            this.ButtonItem_GeolayoutScriptDumps.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem_GeolayoutScriptDumps, "ButtonItem_GeolayoutScriptDumps");
-            this.ButtonItem_GeolayoutScriptDumps.Click += new System.EventHandler(this.ButtonItem_GeolayoutScriptDumps_Click);
-            // 
-            // RibbonBar28
-            // 
-            this.RibbonBar28.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.RibbonBar28.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RibbonBar28.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.RibbonBar28, "RibbonBar28");
-            this.RibbonBar28.DragDropSupport = true;
-            this.RibbonBar28.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem34});
-            this.RibbonBar28.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.RibbonBar28.Name = "RibbonBar28";
-            this.RibbonBar28.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.RibbonBar28.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar28.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ButtonItem34
-            // 
-            this.ButtonItem34.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem34.Image = global::SM64_ROM_Manager.My.Resources.MyOldIcons.EditPicture_32px;
-            this.ButtonItem34.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.ButtonItem34.Name = "ButtonItem34";
-            this.ButtonItem34.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem34, "ButtonItem34");
-            this.ButtonItem34.Click += new System.EventHandler(this.ButtonItem34_Click);
-            // 
             // RibbonPanel6
             // 
             this.RibbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -2680,6 +2642,295 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem_ViewColMap.CheckedChanged += new DevComponents.DotNetBar.CheckBoxChangeEventHandler(this.ViewModeButtonItems_CheckChanged);
             this.ButtonItem_ViewColMap.Click += new System.EventHandler(this.SomeButtonItems_Click);
             // 
+            // RibbonPanel4
+            // 
+            this.RibbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.RibbonPanel4.Controls.Add(this.RibbonBar25);
+            this.RibbonPanel4.Controls.Add(this.RibbonBar24);
+            this.RibbonPanel4.Controls.Add(this.RibbonBar17);
+            resources.ApplyResources(this.RibbonPanel4, "RibbonPanel4");
+            this.RibbonPanel4.Name = "RibbonPanel4";
+            // 
+            // 
+            // 
+            this.RibbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // RibbonBar25
+            // 
+            this.RibbonBar25.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.RibbonBar25.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonBar25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.RibbonBar25.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.RibbonBar25, "RibbonBar25");
+            this.RibbonBar25.DragDropSupport = true;
+            this.RibbonBar25.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ItemContainer16});
+            this.RibbonBar25.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.RibbonBar25.Name = "RibbonBar25";
+            this.RibbonBar25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.RibbonBar25.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonBar25.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ItemContainer16
+            // 
+            // 
+            // 
+            // 
+            this.ItemContainer16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ItemContainer16.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.ItemContainer16.Name = "ItemContainer16";
+            this.ItemContainer16.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_ButtonItem_AddDeathFloor,
+            this.ButtonItem4});
+            // 
+            // 
+            // 
+            this.ItemContainer16.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ItemContainer16.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ButtonItem_ButtonItem_AddDeathFloor
+            // 
+            this.ButtonItem_ButtonItem_AddDeathFloor.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_ButtonItem_AddDeathFloor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_ButtonItem_AddDeathFloor.Name = "ButtonItem_ButtonItem_AddDeathFloor";
+            this.ButtonItem_ButtonItem_AddDeathFloor.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds});
+            this.ButtonItem_ButtonItem_AddDeathFloor.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloor, "ButtonItem_ButtonItem_AddDeathFloor");
+            this.ButtonItem_ButtonItem_AddDeathFloor.Click += new System.EventHandler(this.ButtonItem8_Click);
+            // 
+            // ButtonItem_ButtonItem_AddDeathFloorWithExtBounds
+            // 
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Name = "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds";
+            resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds, "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds");
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Click += new System.EventHandler(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds_Click);
+            // 
+            // ButtonItem4
+            // 
+            this.ButtonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem4.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_2_16px;
+            this.ButtonItem4.Name = "ButtonItem4";
+            resources.ApplyResources(this.ButtonItem4, "ButtonItem4");
+            this.ButtonItem4.Click += new System.EventHandler(this.ButtonItem4_Click);
+            // 
+            // RibbonBar24
+            // 
+            this.RibbonBar24.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.RibbonBar24.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonBar24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.RibbonBar24.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.RibbonBar24, "RibbonBar24");
+            this.RibbonBar24.DragDropSupport = true;
+            this.RibbonBar24.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ItemContainer17});
+            this.RibbonBar24.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.RibbonBar24.Name = "RibbonBar24";
+            this.RibbonBar24.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.RibbonBar24.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonBar24.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ItemContainer17
+            // 
+            // 
+            // 
+            // 
+            this.ItemContainer17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ItemContainer17.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.ItemContainer17.Name = "ItemContainer17";
+            this.ItemContainer17.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem11});
+            // 
+            // 
+            // 
+            this.ItemContainer17.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ItemContainer17.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ButtonItem11
+            // 
+            this.ButtonItem11.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem11.Name = "ButtonItem11";
+            this.ButtonItem11.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.ButtonItem11, "ButtonItem11");
+            this.ButtonItem11.Click += new System.EventHandler(this.ButtonItem11_Click);
+            // 
+            // RibbonBar17
+            // 
+            this.RibbonBar17.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.RibbonBar17.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonBar17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.RibbonBar17.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.RibbonBar17, "RibbonBar17");
+            this.RibbonBar17.DragDropSupport = true;
+            this.RibbonBar17.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem85,
+            this.ButtonItem86});
+            this.RibbonBar17.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.RibbonBar17.Name = "RibbonBar17";
+            this.RibbonBar17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.RibbonBar17.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonBar17.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ButtonItem85
+            // 
+            this.ButtonItem85.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_32px;
+            this.ButtonItem85.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.ButtonItem85.Name = "ButtonItem85";
+            resources.ApplyResources(this.ButtonItem85, "ButtonItem85");
+            this.ButtonItem85.Click += new System.EventHandler(this.ButtonItem_ImportModel_Click);
+            // 
+            // ButtonItem86
+            // 
+            this.ButtonItem86.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_32px;
+            this.ButtonItem86.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.ButtonItem86.Name = "ButtonItem86";
+            resources.ApplyResources(this.ButtonItem86, "ButtonItem86");
+            // 
+            // RibbonPanel7
+            // 
+            this.RibbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.RibbonPanel7.Controls.Add(this.ribbonBar13);
+            this.RibbonPanel7.Controls.Add(this.RibbonBar28);
+            resources.ApplyResources(this.RibbonPanel7, "RibbonPanel7");
+            this.RibbonPanel7.Name = "RibbonPanel7";
+            // 
+            // 
+            // 
+            this.RibbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ribbonBar13
+            // 
+            this.ribbonBar13.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar13.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.ribbonBar13, "ribbonBar13");
+            this.ribbonBar13.DragDropSupport = true;
+            this.ribbonBar13.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_GeolayoutScriptDumps});
+            this.ribbonBar13.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ribbonBar13.Name = "ribbonBar13";
+            this.ribbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.ribbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ButtonItem_GeolayoutScriptDumps
+            // 
+            this.ButtonItem_GeolayoutScriptDumps.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_property_script_32px;
+            this.ButtonItem_GeolayoutScriptDumps.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.ButtonItem_GeolayoutScriptDumps.Name = "ButtonItem_GeolayoutScriptDumps";
+            this.ButtonItem_GeolayoutScriptDumps.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.ButtonItem_GeolayoutScriptDumps, "ButtonItem_GeolayoutScriptDumps");
+            this.ButtonItem_GeolayoutScriptDumps.Click += new System.EventHandler(this.ButtonItem_GeolayoutScriptDumps_Click);
+            // 
+            // RibbonBar28
+            // 
+            this.RibbonBar28.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.RibbonBar28.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonBar28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.RibbonBar28.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.RibbonBar28, "RibbonBar28");
+            this.RibbonBar28.DragDropSupport = true;
+            this.RibbonBar28.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem34});
+            this.RibbonBar28.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.RibbonBar28.Name = "RibbonBar28";
+            this.RibbonBar28.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.RibbonBar28.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.RibbonBar28.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ButtonItem34
+            // 
+            this.ButtonItem34.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem34.Image = global::SM64_ROM_Manager.My.Resources.MyOldIcons.EditPicture_32px;
+            this.ButtonItem34.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.ButtonItem34.Name = "ButtonItem34";
+            this.ButtonItem34.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.ButtonItem34, "ButtonItem34");
+            this.ButtonItem34.Click += new System.EventHandler(this.ButtonItem34_Click);
+            // 
             // RibbonPanel5
             // 
             this.RibbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -2911,193 +3162,6 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem_RemoveArea.Name = "ButtonItem_RemoveArea";
             resources.ApplyResources(this.ButtonItem_RemoveArea, "ButtonItem_RemoveArea");
             this.ButtonItem_RemoveArea.Click += new System.EventHandler(this.ButtonItem_RemoveArea_Click);
-            // 
-            // RibbonPanel4
-            // 
-            this.RibbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.RibbonPanel4.Controls.Add(this.RibbonBar25);
-            this.RibbonPanel4.Controls.Add(this.RibbonBar24);
-            this.RibbonPanel4.Controls.Add(this.RibbonBar17);
-            resources.ApplyResources(this.RibbonPanel4, "RibbonPanel4");
-            this.RibbonPanel4.Name = "RibbonPanel4";
-            // 
-            // 
-            // 
-            this.RibbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // RibbonBar25
-            // 
-            this.RibbonBar25.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.RibbonBar25.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RibbonBar25.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.RibbonBar25, "RibbonBar25");
-            this.RibbonBar25.DragDropSupport = true;
-            this.RibbonBar25.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ItemContainer16});
-            this.RibbonBar25.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.RibbonBar25.Name = "RibbonBar25";
-            this.RibbonBar25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.RibbonBar25.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar25.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ItemContainer16
-            // 
-            // 
-            // 
-            // 
-            this.ItemContainer16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ItemContainer16.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.ItemContainer16.Name = "ItemContainer16";
-            this.ItemContainer16.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_ButtonItem_AddDeathFloor,
-            this.ButtonItem4});
-            // 
-            // 
-            // 
-            this.ItemContainer16.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ItemContainer16.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ButtonItem_ButtonItem_AddDeathFloor
-            // 
-            this.ButtonItem_ButtonItem_AddDeathFloor.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_ButtonItem_AddDeathFloor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem_ButtonItem_AddDeathFloor.Name = "ButtonItem_ButtonItem_AddDeathFloor";
-            this.ButtonItem_ButtonItem_AddDeathFloor.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds});
-            this.ButtonItem_ButtonItem_AddDeathFloor.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloor, "ButtonItem_ButtonItem_AddDeathFloor");
-            this.ButtonItem_ButtonItem_AddDeathFloor.Click += new System.EventHandler(this.ButtonItem8_Click);
-            // 
-            // ButtonItem4
-            // 
-            this.ButtonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem4.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_2_16px;
-            this.ButtonItem4.Name = "ButtonItem4";
-            resources.ApplyResources(this.ButtonItem4, "ButtonItem4");
-            this.ButtonItem4.Click += new System.EventHandler(this.ButtonItem4_Click);
-            // 
-            // RibbonBar24
-            // 
-            this.RibbonBar24.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.RibbonBar24.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RibbonBar24.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.RibbonBar24, "RibbonBar24");
-            this.RibbonBar24.DragDropSupport = true;
-            this.RibbonBar24.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ItemContainer17});
-            this.RibbonBar24.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.RibbonBar24.Name = "RibbonBar24";
-            this.RibbonBar24.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.RibbonBar24.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar24.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ItemContainer17
-            // 
-            // 
-            // 
-            // 
-            this.ItemContainer17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ItemContainer17.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
-            this.ItemContainer17.Name = "ItemContainer17";
-            this.ItemContainer17.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem11});
-            // 
-            // 
-            // 
-            this.ItemContainer17.TitleMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ItemContainer17.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ButtonItem11
-            // 
-            this.ButtonItem11.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem11.Name = "ButtonItem11";
-            this.ButtonItem11.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.ButtonItem11, "ButtonItem11");
-            this.ButtonItem11.Click += new System.EventHandler(this.ButtonItem11_Click);
-            // 
-            // RibbonBar17
-            // 
-            this.RibbonBar17.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.RibbonBar17.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RibbonBar17.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.RibbonBar17, "RibbonBar17");
-            this.RibbonBar17.DragDropSupport = true;
-            this.RibbonBar17.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem85,
-            this.ButtonItem86});
-            this.RibbonBar17.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.RibbonBar17.Name = "RibbonBar17";
-            this.RibbonBar17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.RibbonBar17.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.RibbonBar17.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // ButtonItem85
-            // 
-            this.ButtonItem85.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_32px;
-            this.ButtonItem85.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.ButtonItem85.Name = "ButtonItem85";
-            resources.ApplyResources(this.ButtonItem85, "ButtonItem85");
-            this.ButtonItem85.Click += new System.EventHandler(this.ButtonItem_ImportModel_Click);
-            // 
-            // ButtonItem86
-            // 
-            this.ButtonItem86.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_32px;
-            this.ButtonItem86.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.ButtonItem86.Name = "ButtonItem86";
-            resources.ApplyResources(this.ButtonItem86, "ButtonItem86");
             // 
             // RibbonPanel2
             // 
@@ -3559,12 +3623,10 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem13.SubItemsExpandWidth = 14;
             resources.ApplyResources(this.ButtonItem13, "ButtonItem13");
             // 
-            // ButtonItem_ButtonItem_AddDeathFloorWithExtBounds
+            // buttonItem8
             // 
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Name = "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds";
-            resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds, "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds");
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Click += new System.EventHandler(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds_Click);
+            this.buttonItem8.GlobalItem = false;
+            this.buttonItem8.Name = "buttonItem8";
             // 
             // Form_AreaEditor
             // 
@@ -3627,10 +3689,10 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonControl1.ResumeLayout(false);
             this.RibbonControl1.PerformLayout();
             this.RibbonPanel1.ResumeLayout(false);
-            this.RibbonPanel7.ResumeLayout(false);
             this.RibbonPanel6.ResumeLayout(false);
-            this.RibbonPanel5.ResumeLayout(false);
             this.RibbonPanel4.ResumeLayout(false);
+            this.RibbonPanel7.ResumeLayout(false);
+            this.RibbonPanel5.ResumeLayout(false);
             this.RibbonPanel2.ResumeLayout(false);
             this.RibbonPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -3889,6 +3951,13 @@ namespace SM64_ROM_Manager.LevelEditor
         private DevComponents.DotNetBar.RibbonBar ribbonBar13;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_GeolayoutScriptDumps;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ButtonItem_AddDeathFloorWithExtBounds;
+        private DevComponents.DotNetBar.ButtonItem buttonItem8;
+        private DevComponents.DotNetBar.LabelItem labelItem5;
+        private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvCamPrecise;
+        private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvCamSlide;
+        private DevComponents.DotNetBar.LabelItem labelItem4;
+        private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvObjPrecise;
+        private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvObjSlide;
     }
 
 }
