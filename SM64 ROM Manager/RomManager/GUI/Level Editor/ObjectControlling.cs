@@ -112,7 +112,10 @@ namespace SM64_ROM_Manager.LevelEditor
                 for (int mo_s_incr = 0, loopTo = Main.SelectedObjects.Length - 1; mo_s_incr <= loopTo; mo_s_incr++)
                 {
                     var obj = Main.SelectedObjects[mo_s_incr];
-                    moveObjectY(obj, e.Location, moveObj_saved[mo_s_incr], false);
+                    if (Main.EnableSlideMovementForObjects)
+                        SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2)), moveObj_saved[mo_s_incr], false);
+                    else
+                        moveObjectY(obj, e.Location, moveObj_saved[mo_s_incr], false);
                 }
 
                 if (Main.KeepObjectOnGround)
@@ -178,6 +181,25 @@ namespace SM64_ROM_Manager.LevelEditor
             else
             {
                 short newY = Conversions.ToShort(-Math.Truncate((double)(e.Y - rotObj_Yaw_lastMouseY)));
+                RotateObject(obj, new System.Numerics.Vector3(obj.Rotation.X, newY, obj.Rotation.Z));
+            }
+
+            Main.ogl.UpdateOrbitCamera();
+        }
+
+        private void SlideMoveObjectY(Managed3DObject obj, Point e, Point zeroPoint, System.Numerics.Vector3 savedPos, bool forRotation)
+        {
+            var mvy = zeroPoint.Y - e.Y;
+            if (mvy < zeroPoint.Y) mvy = -mvy;
+
+            if (!forRotation)
+            {
+                short newY = Conversions.ToShort(obj.PositionY - Conversions.ToShort(Math.Truncate(mvy * Main.ObjectMoveSpeed)));
+                obj.Position = new System.Numerics.Vector3(obj.Position.X, newY, obj.Position.Z);
+            }
+            else
+            {
+                short newY = Conversions.ToShort(-Math.Truncate(0.5F * mvy));
                 RotateObject(obj, new System.Numerics.Vector3(obj.Rotation.X, newY, obj.Rotation.Z));
             }
 
@@ -271,7 +293,10 @@ namespace SM64_ROM_Manager.LevelEditor
                         var obj = Main.SelectedObjects.ElementAtOrDefault(mo_s_incr);
                         if (obj is object)
                         {
-                            moveObjectY(obj, e.Location, moveObj_saved[mo_s_incr], true);
+                            if (Main.EnableSlideMovementForObjects)
+                                SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2)), moveObj_saved[mo_s_incr], true);
+                            else
+                                moveObjectY(obj, e.Location, moveObj_saved[mo_s_incr], true);
                         }
                     }
 
