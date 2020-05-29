@@ -597,7 +597,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonX6
             // 
-            this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX6.AutoExpandOnClick = true;
             this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX6.FocusCuesEnabled = false;
             this.ButtonX6.Image = ((System.Drawing.Image)(resources.GetObject("ButtonX6.Image")));
@@ -618,6 +618,8 @@ namespace SM64_ROM_Manager.LevelEditor
             // checkBoxItem_MvCamPrecise
             // 
             this.checkBoxItem_MvCamPrecise.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxItem_MvCamPrecise.Checked = true;
+            this.checkBoxItem_MvCamPrecise.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBoxItem_MvCamPrecise.GlobalItem = false;
             this.checkBoxItem_MvCamPrecise.Name = "checkBoxItem_MvCamPrecise";
             resources.ApplyResources(this.checkBoxItem_MvCamPrecise, "checkBoxItem_MvCamPrecise");
@@ -667,7 +669,6 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonX_CamMode
             // 
-            this.ButtonX_CamMode.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_CamMode.AutoExpandOnClick = true;
             this.ButtonX_CamMode.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX_CamMode.FocusCuesEnabled = false;
@@ -903,7 +904,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonX2
             // 
-            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX2.AutoExpandOnClick = true;
             this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX2.FocusCuesEnabled = false;
             this.ButtonX2.Image = ((System.Drawing.Image)(resources.GetObject("ButtonX2.Image")));
