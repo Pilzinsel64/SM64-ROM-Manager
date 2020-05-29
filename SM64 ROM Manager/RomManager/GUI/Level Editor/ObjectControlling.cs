@@ -113,7 +113,10 @@ namespace SM64_ROM_Manager.LevelEditor
                 {
                     var obj = Main.SelectedObjects[mo_s_incr];
                     if (Main.EnableSlideMovementForObjects)
-                        SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2)), moveObj_saved[mo_s_incr], false);
+                    {
+                        var zeroPoint = Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2));
+                        SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), zeroPoint, moveObj_saved[mo_s_incr], false);
+                    }
                     else
                         moveObjectY(obj, e.Location, moveObj_saved[mo_s_incr], false);
                 }
@@ -160,7 +163,13 @@ namespace SM64_ROM_Manager.LevelEditor
                     int mo_s_incr = 0;
                     foreach (object obj in Main.SelectedObjects)
                     {
-                        moveObjectXZ((Managed3DObject)obj, ((Control)sender).PointToClient(Cursor.Position), moveObj_saved[mo_s_incr], false);
+                        if (Main.EnableSlideMovementForObjects)
+                        {
+                            var zeroPoint = Main.PictureBox_ObjCntrCross.PointToScreen(new Point(Main.PictureBox_ObjCntrCross.Width / 2, Main.PictureBox_ObjCntrCross.Height / 2));
+                            SlideMoveObjectXZ((Managed3DObject)obj, Cursor.Position, zeroPoint, moveObj_saved[mo_s_incr], false);
+                        }
+                        else
+                            moveObjectXZ((Managed3DObject)obj, ((Control)sender).PointToClient(Cursor.Position), moveObj_saved[mo_s_incr], false);
                         mo_s_incr += 1;
                     }
 
@@ -240,6 +249,41 @@ namespace SM64_ROM_Manager.LevelEditor
                 speedMult = 0.5F;
                 var oldRot = obj.Rotation;
                 var newRot = new System.Numerics.Vector3(newX, oldRot.Y, newZ);
+                SetObjectRotation(obj, newRot);
+            }
+
+            Main.ogl.UpdateOrbitCamera();
+        }
+
+        private void SlideMoveObjectXZ(Managed3DObject obj, Point e, Point zeroPoint, System.Numerics.Vector3 savedPos, bool forRotation)
+        {
+            int mx, my;
+
+            mx = zeroPoint.X - e.X;
+            if (mx < zeroPoint.X) mx = -mx;
+
+            my = zeroPoint.Y - e.Y;
+            if (my < zeroPoint.Y) my = -my;
+
+            float newX, newZ;
+            System.Numerics.Vector3 oldPos;
+
+            if (!forRotation)
+                oldPos = obj.Position;
+            else
+                oldPos = obj.Rotation;
+
+            newX = Conversions.ToSingle(Math.Truncate(oldPos.X - Conversions.ToShort(Math.Truncate(mx * Main.ObjectMoveSpeed))));
+            newZ = Conversions.ToSingle(Math.Truncate(oldPos.Z - Conversions.ToShort(Math.Truncate(my * Main.ObjectMoveSpeed))));
+
+            if (!forRotation)
+            {
+                var newPos = new System.Numerics.Vector3(Conversions.ToShort(newX), oldPos.Y, Conversions.ToShort(newZ));
+                SetObjectPosition(obj, newPos);
+            }
+            else
+            {
+                var newRot = new System.Numerics.Vector3(newX, oldPos.Y, newZ);
                 SetObjectRotation(obj, newRot);
             }
 
@@ -335,7 +379,13 @@ namespace SM64_ROM_Manager.LevelEditor
                         var obj = Main.SelectedObjects.ElementAtOrDefault(mo_s_incr);
                         if (obj is object)
                         {
-                            moveObjectXZ(obj, ((Control)sender).PointToClient(Cursor.Position), moveObj_saved[mo_s_incr], true);
+                            if (Main.EnableSlideMovementForObjects)
+                            {
+                                var zeroPoint = Main.PictureBox_ObjRotCross.PointToScreen(new Point(Main.PictureBox_ObjRotCross.Width / 2, Main.PictureBox_ObjRotCross.Height / 2));
+                                SlideMoveObjectXZ((Managed3DObject)obj, Cursor.Position, zeroPoint, moveObj_saved[mo_s_incr], true);
+                            }
+                            else
+                                moveObjectXZ(obj, ((Control)sender).PointToClient(Cursor.Position), moveObj_saved[mo_s_incr], true);
                             mo_s_incr += 1;
                         }
                     }
