@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>The Grand Star that the final Bowser fight drops warps Mario instead of starting a cutscene. In order to use this, in your hack's 3rd Bowser fight, go to editor, go to the warps tab (the one next to the objects tab and the collision tab). Create a warp with ID 0, and then set the destination of the warp to someplace valid, note that the End Cake screen is a valid destination. This tweak is identical to the Grand Star Warps to Credits Level tweak, barring requiring to set up the warp without aid of the tweak and being a little safer to apply.
-</description><patch>21B522: 20
-</patch></m64tweak>
