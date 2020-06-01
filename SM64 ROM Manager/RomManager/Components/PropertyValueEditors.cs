@@ -355,51 +355,51 @@ namespace SM64_ROM_Manager.PropertyValueEditors
                         }
                     }
 
-                    var switchExpr = ValueType;
-                    switch (switchExpr)
+                    try
+                    {
+                        switch (ValueType)
+                        {
+                            case TypeCode.Int32:
+                                return Conversions.ToInteger(val);
+                            case TypeCode.UInt32:
+                                return Conversions.ToUInteger(val);
+                            case TypeCode.Byte:
+                                return Conversions.ToByte(val);
+                            case TypeCode.SByte:
+                                return Conversions.ToSByte(val);
+                            case TypeCode.Int16:
+                                return Conversions.ToShort(val);
+                            case TypeCode.UInt16:
+                                return Conversions.ToUShort(val);
+                            case TypeCode.Int64:
+                                return Conversions.ToLong(val);
+                            case TypeCode.UInt64:
+                                return Conversions.ToULong(val);
+                        }
+                    }
+                    catch (OverflowException) { }
+
+                    switch (ValueType)
                     {
                         case TypeCode.Int32:
-                            {
-                                return Conversions.ToInteger(val);
-                            }
-
+                            return 0;
                         case TypeCode.UInt32:
-                            {
-                                return Conversions.ToUInteger(val);
-                            }
-
+                            return 0U;
                         case TypeCode.Byte:
-                            {
-                                return Conversions.ToByte(val);
-                            }
-
+                            return (byte)0;
                         case TypeCode.SByte:
-                            {
-                                return Conversions.ToSByte(val);
-                            }
-
+                            return (sbyte)0;
                         case TypeCode.Int16:
-                            {
-                                return Conversions.ToShort(val);
-                            }
-
+                            return (short)0;
                         case TypeCode.UInt16:
-                            {
-                                return Conversions.ToUShort(val);
-                            }
-
+                            return (ushort)0;
                         case TypeCode.Int64:
-                            {
-                                return Conversions.ToLong(val);
-                            }
-
+                            return 0L;
                         case TypeCode.UInt64:
-                            {
-                                return Conversions.ToULong(val);
-                            }
+                            return 0UL;
+                        default:
+                            return 0;
                     }
-
-                    return 0;
                 }
 
                 set
