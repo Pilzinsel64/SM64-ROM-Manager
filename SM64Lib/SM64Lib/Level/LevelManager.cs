@@ -248,22 +248,14 @@ namespace SM64Lib.Levels
                 a.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(brToUse.BaseStream, SpecialBoxType.ToxicHaze, bank0x19RomStart, bank0x19RomStart + 0x6280 + 0x50 * a.AreaID));
                 a.SpecialBoxes.AddRange(SpecialBoxList.ReadTable(brToUse.BaseStream, SpecialBoxType.Mist, bank0x19RomStart, bank0x19RomStart + 0x6500 + 0x50 * a.AreaID));
 
-                // Load boxdata from collision
-                void findBoxData(SpecialBoxType sbType, Model.Collision.BoxDataType bdType)
+                for (int i = 0; i < a.SpecialBoxes.Count; i++)
                 {
-                    var boxes = a.AreaModel.Collision.SpecialBoxes.Where(n => n.Type == bdType);
-                    var specBoxes = a.SpecialBoxes.Where(n => n.Type == sbType);
-
-                    for (int i = 0; i < specBoxes.Count(); i++)
+                    var boxdata = a.AreaModel.Collision.SpecialBoxes.ElementAtOrDefault(i);
+                    if (boxdata is object)
                     {
-                        var boxdata = boxes.ElementAtOrDefault(i);
-                        if (boxdata is object)
-                            specBoxes.ElementAt(i).Y = boxdata.Y;
+                        a.SpecialBoxes[i].Y = boxdata.Y;
                     }
                 }
-                findBoxData(SpecialBoxType.Water, Model.Collision.BoxDataType.Water);
-                findBoxData(SpecialBoxType.ToxicHaze, Model.Collision.BoxDataType.ToxicHaze);
-                findBoxData(SpecialBoxType.Mist, Model.Collision.BoxDataType.Mist);
             }
 
             // One-Bank-0xE-System
@@ -318,7 +310,7 @@ namespace SM64Lib.Levels
 
                 // Add the new water boxes
                 a.AreaModel.Collision.SpecialBoxes.Clear();
-                var TableIndex = new[] { 0, 0, 0 };
+                var TableIndex = new[] { 0, 0x32, 0x33 };
                 foreach (SpecialBox sp in a.SpecialBoxes)
                 {
                     var boxdata = new Model.Collision.BoxData
@@ -345,7 +337,7 @@ namespace SM64Lib.Levels
                     }
 
                     a.AreaModel.Collision.SpecialBoxes.Add(boxdata);
-                    TableIndex[(int)sp.Type] += 1;
+                    //TableIndex[(int)sp.Type] += 1;
                 }
 
                 // Write Area Model
@@ -831,7 +823,7 @@ namespace SM64Lib.Levels
             int CurrentBoxOffset = 0x6A00;
             foreach (LevelArea a in lvl.Areas)
             {
-                var TableIndex = new[] { 0, 0, 0 };
+                var TableIndex = new[] { 0, 0x32, 0x33 };
                 var TableOffset = new[] { 0x6000 + 0x50 * a.AreaID, 0x6280 + 0x50 * a.AreaID, 0x6500 + 0x50 * a.AreaID };
                 
                 foreach (SpecialBoxType t in Enum.GetValues(typeof(SpecialBoxType)))
