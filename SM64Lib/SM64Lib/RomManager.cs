@@ -365,6 +365,7 @@ namespace SM64Lib
         /// </summary>
         /// <param name="IgnoreNeedToSave">If True, everything will be saved even if there are no changes.</param>
         /// <param name="DontPatchUpdates">If True, Update Patches will be ignored.</param>
+        /// <param name="recalcChecksumBehavior"></param>
         public void SaveRom(bool IgnoreNeedToSave = false, bool DontPatchUpdates = false, RecalcChecksumBehavior recalcChecksumBehavior = RecalcChecksumBehavior.Auto)
         {
             if (!RaiseBeforeRomSave())
