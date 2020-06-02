@@ -9,7 +9,6 @@ namespace SM64Lib.Model.Collision
         public short Z1 { get; set; }
         public short Z2 { get; set; }
         public short Y { get; set; }
-        public short Index { get; set; }
 
         public BoxData()
         {
@@ -18,7 +17,6 @@ namespace SM64Lib.Model.Collision
             Z1 = 8192;
             Z2 = -8192;
             Y = 0;
-            Index = 0;
         }
 
         public BoxData(Levels.SpecialBox SpecialBox, short Y)

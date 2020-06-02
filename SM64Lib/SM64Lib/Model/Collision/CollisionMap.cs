@@ -106,10 +106,10 @@ namespace SM64Lib.Model.Collision
                     case 0x44: // W A T E R   B O X E S
                         SpecialBoxes.AddRange(ReadBoxData(s));
                         break;
-                    case 0x33: // M I S T
+                    case 0x33: // M I S T               - Compatibility with old buggy RM versions
                         SpecialBoxes.AddRange(ReadBoxData(s));
                         break;
-                    case 0x32: // T O X I C   H A Z E
+                    case 0x32: // T O X I C   H A Z E   - Compatibility with old buggy RM versions
                         SpecialBoxes.AddRange(ReadBoxData(s));
                         break;
                 }
@@ -132,15 +132,15 @@ namespace SM64Lib.Model.Collision
             for (int i = 1, loopTo = s.ReadInt16(); i <= loopTo; i++)
             {
                 var wb = new BoxData();
-                short index = s.ReadInt16();
-                if (index < 0)
+                short type = s.ReadInt16();
+                if (type < 0) // Compatibility with old buggy RM versions
                 {
-                    if (index < 0x32)
-                        index = 0;
-                    else if (index > 0x33)
-                        index = 0x33;
+                    if (type < 0x32)
+                        type = 0;
+                    else if (type > 0x33)
+                        type = 0x33;
                 }
-                wb.Type = (BoxDataType)index;
+                wb.Type = (BoxDataType)type;
                 wb.X1 = s.ReadInt16();
                 wb.Z1 = s.ReadInt16();
                 wb.X2 = s.ReadInt16();
@@ -299,7 +299,7 @@ namespace SM64Lib.Model.Collision
             {
                 foreach (var wb in bodex.Where(n => n.Type == t))
                 {
-                    data.Write(wb.Index);
+                    data.Write(Conversions.ToShort(wb.Type));
                     data.Write(wb.X1);
                     data.Write(wb.Z1);
                     data.Write(wb.X2);

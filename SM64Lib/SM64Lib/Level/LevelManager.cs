@@ -310,7 +310,6 @@ namespace SM64Lib.Levels
 
                 // Add the new water boxes
                 a.AreaModel.Collision.SpecialBoxes.Clear();
-                var TableIndex = new[] { 0, 0x32, 0x33 };
                 foreach (SpecialBox sp in a.SpecialBoxes)
                 {
                     var boxdata = new Model.Collision.BoxData
@@ -320,7 +319,6 @@ namespace SM64Lib.Levels
                         Z1 = sp.Z1,
                         Z2 = sp.Z2,
                         Y = sp.Y,
-                        Index = Conversions.ToShort(TableIndex[(int)sp.Type])
                     };
 
                     switch (sp.Type)
@@ -337,7 +335,6 @@ namespace SM64Lib.Levels
                     }
 
                     a.AreaModel.Collision.SpecialBoxes.Add(boxdata);
-                    //TableIndex[(int)sp.Type] += 1;
                 }
 
                 // Write Area Model
