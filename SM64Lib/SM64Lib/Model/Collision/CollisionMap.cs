@@ -135,7 +135,7 @@ namespace SM64Lib.Model.Collision
                 short index = s.ReadInt16();
                 if (index < 0)
                 {
-                    if (index > 0x32)
+                    if (index < 0x32)
                         index = 0;
                     else if (index > 0x33)
                         index = 0x33;
