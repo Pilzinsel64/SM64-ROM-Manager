@@ -91,6 +91,7 @@ namespace SM64Lib.Model.Fast3D
 
         public class Entry
         {
+            public bool Include { get; set; } = true;
             public string MaterialName { get; set; } = "";
             public string TextureFormat { get; set; } = "";
             public bool IsScrollingTexture { get; set; } = false;
