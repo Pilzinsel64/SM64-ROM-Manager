@@ -382,9 +382,7 @@ namespace SM64Lib
                 }
 
                 // Write Version
-                var romVerEventArgs = new RomVersionEventArgs(ProgramVersion);
-                WritingNewProgramVersion?.Invoke(this, romVerEventArgs);
-                WriteVersion(romVerEventArgs.RomVersion);
+                WriteNewVersion();
 
                 // Texts
                 SaveAllTextGroups(ref needUpdateChecksum);
@@ -448,6 +446,13 @@ namespace SM64Lib
                 // Set enabled false
                 GlobalBehaviorBank.Config.Disable();
             }
+        }
+
+        private void WriteNewVersion()
+        {
+            var romVerEventArgs = new RomVersionEventArgs(ProgramVersion);
+            WritingNewProgramVersion?.Invoke(this, romVerEventArgs);
+            WriteVersion(romVerEventArgs.RomVersion);
         }
 
         private void WriteVersion(RomVersion newVersion)
@@ -972,6 +977,9 @@ namespace SM64Lib
 
             // Update Checksum
             General.PatchClass.UpdateChecksum(RomFile);
+
+            WriteNewVersion();
+            SaveRomConfig();
         }
 
         /// <summary>
