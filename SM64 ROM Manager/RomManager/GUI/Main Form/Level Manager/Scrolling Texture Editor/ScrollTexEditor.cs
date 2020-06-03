@@ -351,13 +351,16 @@ namespace SM64_ROM_Manager
         private void CheckBoxItem_ViewMode_Simplified_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
         {
             simplifiedView = CheckBoxItem_ViewMode_Simplified.Checked;
-            SetIgnoredProperties();
+            SetUIViewMode();
             LoadScrollTexts();
         }
 
-        private void SetIgnoredProperties()
+        private void SetUIViewMode()
         {
             propSettings_VertexPointer.Visible = propSettings_FacesCount.Visible = propSettings_GroupID.Visible = !simplifiedView;
+
+            ButtonItem_AddNew.Visible = !simplifiedView;
+            bar1.Refresh();
         }
 
         private void AdvPropertyGrid1_PropertiesLoaded(object sender, EventArgs e)

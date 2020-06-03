@@ -49,9 +49,9 @@ namespace SM64_ROM_Manager
             this.ColumnHeader_VertexPointer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader_Vertices = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bar1 = new DevComponents.DotNetBar.Bar();
-            this.ButtonItem44 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem43 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AddNew = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_Remove = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem_Options = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.CheckBoxItem_ViewMode_Simplified = new DevComponents.DotNetBar.CheckBoxItem();
             this.CheckBoxItem_ViewMode_Expert = new DevComponents.DotNetBar.CheckBoxItem();
@@ -66,25 +66,22 @@ namespace SM64_ROM_Manager
             // 
             // SplitContainer1
             // 
-            resources.ApplyResources(this.SplitContainer1, "SplitContainer1");
             this.SplitContainer1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.SplitContainer1, "SplitContainer1");
             this.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.SplitContainer1.Name = "SplitContainer1";
             // 
             // SplitContainer1.Panel1
             // 
-            resources.ApplyResources(this.SplitContainer1.Panel1, "SplitContainer1.Panel1");
             this.SplitContainer1.Panel1.Controls.Add(this.ListViewEx_LM_ScrollTexList);
             this.SplitContainer1.Panel1.Controls.Add(this.bar1);
             // 
             // SplitContainer1.Panel2
             // 
-            resources.ApplyResources(this.SplitContainer1.Panel2, "SplitContainer1.Panel2");
             this.SplitContainer1.Panel2.Controls.Add(this.AdvPropertyGrid1);
             // 
             // ListViewEx_LM_ScrollTexList
             // 
-            resources.ApplyResources(this.ListViewEx_LM_ScrollTexList, "ListViewEx_LM_ScrollTexList");
             this.ListViewEx_LM_ScrollTexList.BackColor = System.Drawing.Color.White;
             // 
             // 
@@ -101,6 +98,7 @@ namespace SM64_ROM_Manager
             this.ColumnHeader_VertexPointer,
             this.ColumnHeader_Vertices});
             this.ListViewEx_LM_ScrollTexList.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.ListViewEx_LM_ScrollTexList, "ListViewEx_LM_ScrollTexList");
             this.ListViewEx_LM_ScrollTexList.FocusCuesEnabled = false;
             this.ListViewEx_LM_ScrollTexList.ForeColor = System.Drawing.Color.Black;
             this.ListViewEx_LM_ScrollTexList.FullRowSelect = true;
@@ -153,88 +151,84 @@ namespace SM64_ROM_Manager
             this.bar1.BarType = DevComponents.DotNetBar.eBarType.MenuBar;
             this.bar1.IsMaximized = false;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem44,
-            this.ButtonItem43,
-            this.buttonItem1});
+            this.ButtonItem_AddNew,
+            this.ButtonItem_Remove,
+            this.buttonItem_Options});
             this.bar1.MenuBar = true;
             this.bar1.Name = "bar1";
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabStop = false;
             // 
-            // ButtonItem44
+            // ButtonItem_AddNew
             // 
-            resources.ApplyResources(this.ButtonItem44, "ButtonItem44");
-            this.ButtonItem44.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem44.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem44.Name = "ButtonItem44";
-            this.ButtonItem44.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlN);
-            this.ButtonItem44.SubItemsExpandWidth = 14;
-            this.ButtonItem44.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
-            this.ButtonItem44.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonItem44.SymbolSize = 12F;
-            this.ButtonItem44.Click += new System.EventHandler(this.ButtonItem44_Click);
+            this.ButtonItem_AddNew.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_AddNew.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_AddNew.Name = "ButtonItem_AddNew";
+            this.ButtonItem_AddNew.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlN);
+            this.ButtonItem_AddNew.SubItemsExpandWidth = 14;
+            this.ButtonItem_AddNew.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.ButtonItem_AddNew.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonItem_AddNew.SymbolSize = 12F;
+            resources.ApplyResources(this.ButtonItem_AddNew, "ButtonItem_AddNew");
+            this.ButtonItem_AddNew.Click += new System.EventHandler(this.ButtonItem44_Click);
             // 
-            // ButtonItem43
+            // ButtonItem_Remove
             // 
-            resources.ApplyResources(this.ButtonItem43, "ButtonItem43");
-            this.ButtonItem43.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem43.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.ButtonItem43.Name = "ButtonItem43";
-            this.ButtonItem43.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
-            this.ButtonItem43.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ButtonItem43.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonItem43.SymbolSize = 12F;
-            this.ButtonItem43.Click += new System.EventHandler(this.ButtonItem43_Click);
+            this.ButtonItem_Remove.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_Remove.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonItem_Remove.Name = "ButtonItem_Remove";
+            this.ButtonItem_Remove.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
+            this.ButtonItem_Remove.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ButtonItem_Remove.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonItem_Remove.SymbolSize = 12F;
+            resources.ApplyResources(this.ButtonItem_Remove, "ButtonItem_Remove");
+            this.ButtonItem_Remove.Click += new System.EventHandler(this.ButtonItem43_Click);
             // 
-            // buttonItem1
+            // buttonItem_Options
             // 
-            resources.ApplyResources(this.buttonItem1, "buttonItem1");
-            this.buttonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem1.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_settings_16px;
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem_Options.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem_Options.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_settings_16px;
+            this.buttonItem_Options.Name = "buttonItem_Options";
+            this.buttonItem_Options.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.labelItem1,
             this.CheckBoxItem_ViewMode_Simplified,
             this.CheckBoxItem_ViewMode_Expert});
+            resources.ApplyResources(this.buttonItem_Options, "buttonItem_Options");
             // 
             // labelItem1
             // 
             this.labelItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.labelItem1.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
             this.labelItem1.BorderType = DevComponents.DotNetBar.eBorderType.SingleLine;
-            resources.ApplyResources(this.labelItem1, "labelItem1");
             this.labelItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(21)))), ((int)(((byte)(110)))));
             this.labelItem1.Name = "labelItem1";
             this.labelItem1.PaddingBottom = 1;
             this.labelItem1.PaddingLeft = 10;
             this.labelItem1.PaddingTop = 1;
             this.labelItem1.SingleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            resources.ApplyResources(this.labelItem1, "labelItem1");
             // 
             // CheckBoxItem_ViewMode_Simplified
             // 
-            resources.ApplyResources(this.CheckBoxItem_ViewMode_Simplified, "CheckBoxItem_ViewMode_Simplified");
             this.CheckBoxItem_ViewMode_Simplified.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.CheckBoxItem_ViewMode_Simplified.Checked = true;
             this.CheckBoxItem_ViewMode_Simplified.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckBoxItem_ViewMode_Simplified.Name = "CheckBoxItem_ViewMode_Simplified";
+            resources.ApplyResources(this.CheckBoxItem_ViewMode_Simplified, "CheckBoxItem_ViewMode_Simplified");
             this.CheckBoxItem_ViewMode_Simplified.CheckedChanged += new DevComponents.DotNetBar.CheckBoxChangeEventHandler(this.CheckBoxItem_ViewMode_Simplified_CheckedChanged);
             // 
             // CheckBoxItem_ViewMode_Expert
             // 
-            resources.ApplyResources(this.CheckBoxItem_ViewMode_Expert, "CheckBoxItem_ViewMode_Expert");
             this.CheckBoxItem_ViewMode_Expert.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.CheckBoxItem_ViewMode_Expert.Name = "CheckBoxItem_ViewMode_Expert";
+            resources.ApplyResources(this.CheckBoxItem_ViewMode_Expert, "CheckBoxItem_ViewMode_Expert");
             // 
             // AdvPropertyGrid1
             // 
             resources.ApplyResources(this.AdvPropertyGrid1, "AdvPropertyGrid1");
             this.AdvPropertyGrid1.GridLinesColor = System.Drawing.Color.WhiteSmoke;
             this.AdvPropertyGrid1.Name = "AdvPropertyGrid1";
-            this.AdvPropertyGrid1.SystemText.AlphabeticalToolbarTooltip = resources.GetString("AdvPropertyGrid1.SystemText.AlphabeticalToolbarTooltip");
-            this.AdvPropertyGrid1.SystemText.CategorizeToolbarTooltip = resources.GetString("AdvPropertyGrid1.SystemText.CategorizeToolbarTooltip");
-            this.AdvPropertyGrid1.SystemText.ErrorSettingPropertyValueTooltip = resources.GetString("AdvPropertyGrid1.SystemText.ErrorSettingPropertyValueTooltip");
-            this.AdvPropertyGrid1.SystemText.SearchBoxWatermarkText = resources.GetString("AdvPropertyGrid1.SystemText.SearchBoxWatermarkText");
             this.AdvPropertyGrid1.ConvertPropertyValueToString += new DevComponents.DotNetBar.ConvertValueEventHandler(this.AdvPropertyGrid1_ConvertPropertyValueToString);
             this.AdvPropertyGrid1.ConvertFromStringToPropertyValue += new DevComponents.DotNetBar.ConvertValueEventHandler(this.AdvPropertyGrid1_ConvertFromStringToPropertyValue);
             this.AdvPropertyGrid1.PropertyValueChanged += new System.ComponentModel.PropertyChangedEventHandler(this.AdvPropertyGrid1_PropertyValueChanged);
@@ -279,13 +273,13 @@ namespace SM64_ROM_Manager
 
         private ColumnHeader ColumnHeader_Vertices;
 
-        private DevComponents.DotNetBar.ButtonItem ButtonItem44;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_AddNew;
 
-        private DevComponents.DotNetBar.ButtonItem ButtonItem43;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_Remove;
 
         private SplitContainer SplitContainer1;
         private DevComponents.DotNetBar.Bar bar1;
-        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.ButtonItem buttonItem_Options;
         private DevComponents.DotNetBar.LabelItem labelItem1;
         private DevComponents.DotNetBar.CheckBoxItem CheckBoxItem_ViewMode_Simplified;
         private DevComponents.DotNetBar.CheckBoxItem CheckBoxItem_ViewMode_Expert;
