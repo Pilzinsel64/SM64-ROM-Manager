@@ -109,7 +109,6 @@ namespace SM64_ROM_Manager
             this.ListViewEx_LM_ScrollTexList.UseCompatibleStateImageBehavior = false;
             this.ListViewEx_LM_ScrollTexList.View = System.Windows.Forms.View.Details;
             this.ListViewEx_LM_ScrollTexList.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_LM_ScrollTexList_SelectedIndexChanged);
-            this.ListViewEx_LM_ScrollTexList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ListViewEx_LM_ScrollTexList_MouseClick);
             // 
             // ColumnHeader_Number
             // 
@@ -232,8 +231,6 @@ namespace SM64_ROM_Manager
             this.AdvPropertyGrid1.ConvertPropertyValueToString += new DevComponents.DotNetBar.ConvertValueEventHandler(this.AdvPropertyGrid1_ConvertPropertyValueToString);
             this.AdvPropertyGrid1.ConvertFromStringToPropertyValue += new DevComponents.DotNetBar.ConvertValueEventHandler(this.AdvPropertyGrid1_ConvertFromStringToPropertyValue);
             this.AdvPropertyGrid1.PropertyValueChanged += new System.ComponentModel.PropertyChangedEventHandler(this.AdvPropertyGrid1_PropertyValueChanged);
-            this.AdvPropertyGrid1.PropertiesLoaded += new System.EventHandler(this.AdvPropertyGrid1_PropertiesLoaded);
-            this.AdvPropertyGrid1.Click += new System.EventHandler(this.AdvPropertyGrid1_Click);
             // 
             // ScrollTexEditor
             // 

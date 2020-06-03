@@ -340,14 +340,6 @@ namespace SM64_ROM_Manager
             ScrollTexAdded?.Invoke(this, new EventArgs());
         }
 
-        private void ListViewEx_LM_ScrollTexList_MouseClick(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void AdvPropertyGrid1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void CheckBoxItem_ViewMode_Simplified_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
         {
             simplifiedView = CheckBoxItem_ViewMode_Simplified.Checked;
@@ -361,10 +353,6 @@ namespace SM64_ROM_Manager
 
             ButtonItem_AddNew.Visible = !simplifiedView;
             bar1.Refresh();
-        }
-
-        private void AdvPropertyGrid1_PropertiesLoaded(object sender, EventArgs e)
-        {
         }
     }
 }
