@@ -890,6 +890,9 @@
     <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.resx">
       <DependentUpon>ObjectBankSelectorBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.de.resx">
+      <DependentUpon>ScrollTexEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Main Form\MainForm.de.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
