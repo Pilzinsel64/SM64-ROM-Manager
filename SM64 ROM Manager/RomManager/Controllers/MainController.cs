@@ -1245,7 +1245,7 @@ namespace SM64_ROM_Manager
         {
             var lvl = GetLevelAndArea(levelIndex, areaIndex);
             var sb = lvl.area.SpecialBoxes.ElementAt(sbIndex);
-            if (lvl is object && sb is object)
+            if (lvl.area is object && sb is object)
             {
                 void method()
                 {
