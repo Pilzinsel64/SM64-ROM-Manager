@@ -1244,13 +1244,16 @@ namespace SM64_ROM_Manager
         public void EditLevelAreaSpecialItem(int levelIndex, int areaIndex, int sbIndex)
         {
             var lvl = GetLevelAndArea(levelIndex, areaIndex);
-            var sb = lvl.area.SpecialBoxes[sbIndex];
-            void method()
+            var sb = lvl.area.SpecialBoxes.ElementAt(sbIndex);
+            if (lvl is object && sb is object)
             {
-                this.SetLevelscriptNeedToSave(lvl.level);
-                LevelSpecialItemChanged?.Invoke(new SM64_ROM_Manager.EventArguments.SpecialItemEventArgs(sbIndex, levelIndex, areaIndex));
-            };
-            AddEditLevelAreaSpecialItem(sb, method);
+                void method()
+                {
+                    this.SetLevelscriptNeedToSave(lvl.level);
+                    LevelSpecialItemChanged?.Invoke(new SM64_ROM_Manager.EventArguments.SpecialItemEventArgs(sbIndex, levelIndex, areaIndex));
+                };
+                AddEditLevelAreaSpecialItem(sb, method);
+            }
         }
 
         private void AddEditLevelAreaSpecialItem(SpecialBox sb, Action finishMethod)
