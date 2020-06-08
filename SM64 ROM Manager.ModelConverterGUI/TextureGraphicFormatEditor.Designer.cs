@@ -96,8 +96,8 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             // 
             // Button_SaveColsettings
             // 
-            resources.ApplyResources(this.Button_SaveColsettings, "Button_SaveColsettings");
             this.Button_SaveColsettings.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.Button_SaveColsettings, "Button_SaveColsettings");
             this.Button_SaveColsettings.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_SaveColsettings.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Button_SaveColsettings.FocusCuesEnabled = false;
@@ -293,13 +293,13 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             // 
             // Panel1
             // 
-            resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.Panel1.Controls.Add(this.panel_MatOptions);
             this.Panel1.Controls.Add(this.checkBoxX_Include);
             this.Panel1.Controls.Add(this.Button_SaveColsettings);
             this.Panel1.Controls.Add(this.PictureBox1);
             this.Panel1.Controls.Add(this.ListViewEx1);
+            resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
             // 
             // panel_MatOptions
@@ -362,8 +362,8 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             // 
             // ContextMenuBar1
             // 
-            resources.ApplyResources(this.ContextMenuBar1, "ContextMenuBar1");
             this.ContextMenuBar1.AntiAlias = true;
+            resources.ApplyResources(this.ContextMenuBar1, "ContextMenuBar1");
             this.ContextMenuBar1.IsMaximized = false;
             this.ContextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ButtonItem_CM_SelDL});
@@ -374,17 +374,17 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             // 
             // ButtonItem_CM_SelDL
             // 
-            resources.ApplyResources(this.ButtonItem_CM_SelDL, "ButtonItem_CM_SelDL");
             this.ButtonItem_CM_SelDL.AutoExpandOnClick = true;
             this.ButtonItem_CM_SelDL.Name = "ButtonItem_CM_SelDL";
             this.ButtonItem_CM_SelDL.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ButtonItem1});
+            resources.ApplyResources(this.ButtonItem_CM_SelDL, "ButtonItem_CM_SelDL");
             // 
             // ButtonItem1
             // 
-            resources.ApplyResources(this.ButtonItem1, "ButtonItem1");
             this.ButtonItem1.Image = global::SM64_ROM_Manager.ModelConverterGUI.My.Resources.Resources.icons8_edit_16px;
             this.ButtonItem1.Name = "ButtonItem1";
+            resources.ApplyResources(this.ButtonItem1, "ButtonItem1");
             this.ButtonItem1.Click += new System.EventHandler(this.ButtonItem_EditCustomDisplaylists_Click);
             // 
             // TextureGraphicFormatEditor
