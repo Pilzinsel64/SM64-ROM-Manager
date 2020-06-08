@@ -2322,29 +2322,29 @@
   <data name="ButtonItem_ModelImporter.Text" xml:space="preserve">
     <value>Model-Importer</value>
   </data>
-  <data name="ButtonItem_TrajectoryEditor.Text" xml:space="preserve">
-    <value>Pfad-Editor</value>
-  </data>
-  <data name="ButtonItem14.Text" xml:space="preserve">
-    <value>Itembox-Content-Editor</value>
-  </data>
-  <data name="ButtonItem13.Text" xml:space="preserve">
-    <value>Sternposition-Editor</value>
+  <data name="ButtonItem_CustomObjects.Text" xml:space="preserve">
+    <value>Eigene Objekte</value>
   </data>
   <data name="ButtonItem16.Text" xml:space="preserve">
     <value>Münzeigenschaften</value>
   </data>
-  <data name="ButtonItem_CustomObjects.Text" xml:space="preserve">
-    <value>Eigene Objekte</value>
+  <data name="ButtonItem_TrajectoryEditor.Text" xml:space="preserve">
+    <value>Pfad-Editor</value>
+  </data>
+  <data name="ButtonItem13.Text" xml:space="preserve">
+    <value>Sternposition-Editor</value>
+  </data>
+  <data name="labelItem4.Text" xml:space="preserve">
+    <value>Expertenmodule:</value>
+  </data>
+  <data name="ButtonItem14.Text" xml:space="preserve">
+    <value>Itembox-Content-Editor</value>
   </data>
   <data name="ButtonItem18.Text" xml:space="preserve">
     <value>Globale Modell-Bank</value>
   </data>
   <data name="ButtonItem_GlobalBehaviorBank.Text" xml:space="preserve">
     <value>Globale Verhaltens-Bank</value>
-  </data>
-  <data name="buttonItem26.Text" xml:space="preserve">
-    <value>Globale ASM-Codes</value>
   </data>
   <data name="ButtonItem7.Text" xml:space="preserve">
     <value>Module</value>
