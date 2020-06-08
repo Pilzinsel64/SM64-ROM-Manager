@@ -298,6 +298,17 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
+        private ObjectComboList allObjectCombos = new ObjectComboList();
+        internal ObjectComboList AllObjectCombos
+        {
+            get
+            {
+                if (!allObjectCombos.Any())
+                    allObjectCombos.AddRange(General.ObjectCombos.Concat(General.ObjectCombosCustom));
+                return allObjectCombos;
+            }
+        }
+
         public Form_AreaEditor(SM64Lib.RomManager rommgr, Level Level, byte LevelID, byte AreaID)
         {
             Timer_ListViewEx_Objects_SelectionChanged = new System.Timers.Timer() { AutoReset = false, SynchronizingObject = this, Interval = 40 };
@@ -1417,7 +1428,7 @@ namespace SM64_ROM_Manager.LevelEditor
             int i = 0;
             foreach (var objj in CArea.Objects)
             {
-                var objNew = new Managed3DObject(objj, MyObjectCombos);
+                var objNew = new Managed3DObject(objj, AllObjectCombos);
                 ManagedObjects.Add(objNew);
                 var lvi = new ListViewItem();
                 lvi.Tag = objNew;
@@ -1576,7 +1587,7 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             if (objIndex > -1)
                 lvi.SubItems[0].Text = Conversions.ToString(objIndex + 1);
-            var combo = MyObjectCombos.GetObjectComboOfObject(obj);
+            var combo = AllObjectCombos.GetObjectComboOfObject(obj);
             string txt = "";
             if (combo is null || combo == ObjectComboList.UnknownCombo)
             {
@@ -2418,7 +2429,7 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 var newObjCmd = new LevelscriptCommand(LevelArea.DefaultNormal3DObject);
                 CArea.Objects.Add(newObjCmd);
-                var newObj = new Managed3DObject(newObjCmd, MyObjectCombos);
+                var newObj = new Managed3DObject(newObjCmd, AllObjectCombos);
                 ManagedObjects.Add(newObj);
                 newobjects.Add(newObj);
                 var lvi = new ListViewItem();
@@ -2445,7 +2456,7 @@ namespace SM64_ROM_Manager.LevelEditor
             foreach (int index in ListViewEx_Objects.SelectedIndices)
             {
                 var newObj = new LevelscriptCommand(LevelArea.DefaultNormal3DObject);
-                var new3DObj = new Managed3DObject(newObj, MyObjectCombos);
+                var new3DObj = new Managed3DObject(newObj, AllObjectCombos);
                 CArea.Objects[index] = newObj;
                 ManagedObjects[index] = new3DObj;
                 oldObjects.Add(ManagedObjects[index]);

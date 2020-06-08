@@ -104,13 +104,13 @@ namespace SM64Lib.Model.Collision
                     case 0x43: // S P E C I A L   O B J E C T                               
                         break;
                     case 0x44: // W A T E R   B O X E S
-                        SpecialBoxes.AddRange(ReadBoxData(s, BoxDataType.Water));
+                        SpecialBoxes.AddRange(ReadBoxData(s));
                         break;
-                    case 0x33: // M I S T
-                        SpecialBoxes.AddRange(ReadBoxData(s, BoxDataType.Mist));
+                    case 0x33: // M I S T               - Compatibility with old buggy RM versions
+                        SpecialBoxes.AddRange(ReadBoxData(s));
                         break;
-                    case 0x32: // T O X I C   H A Z E
-                        SpecialBoxes.AddRange(ReadBoxData(s, BoxDataType.ToxicHaze));
+                    case 0x32: // T O X I C   H A Z E   - Compatibility with old buggy RM versions
+                        SpecialBoxes.AddRange(ReadBoxData(s));
                         break;
                 }
             }
@@ -125,15 +125,22 @@ namespace SM64Lib.Model.Collision
             return t;
         }
 
-        private static BoxData[] ReadBoxData(BinaryData s, BoxDataType type)
+        private static BoxData[] ReadBoxData(BinaryData s)
         {
             var spBoxes = new List<BoxData>();
 
             for (int i = 1, loopTo = s.ReadInt16(); i <= loopTo; i++)
             {
                 var wb = new BoxData();
-                short index = s.ReadInt16();
-                wb.Type = type;
+                short type = s.ReadInt16();
+                if (type < 0) // Compatibility with old buggy RM versions
+                {
+                    if (type < 0x32)
+                        type = 0;
+                    else if (type > 0x33)
+                        type = 0x33;
+                }
+                wb.Type = (BoxDataType)type;
                 wb.X1 = s.ReadInt16();
                 wb.Z1 = s.ReadInt16();
                 wb.X2 = s.ReadInt16();
@@ -285,27 +292,19 @@ namespace SM64Lib.Model.Collision
 
         private static void WriteBoxData(BinaryData data, IEnumerable<BoxData> bodex)
         {
-            if (bodex.Any())
+            data.Write((short)0x44);
+            data.Write(Conversions.ToShort(bodex.Count()));
+
+            foreach (BoxDataType t in Enum.GetValues(typeof(BoxDataType)))
             {
-                foreach (BoxDataType t in Enum.GetValues(typeof(BoxDataType)))
+                foreach (var wb in bodex.Where(n => n.Type == t))
                 {
-                    var filteredBoxes = bodex.Where(n => n.Type == t);
-
-                    if (filteredBoxes.Any())
-                    {
-                        data.Write(Conversions.ToShort(t));
-                        data.Write(Conversions.ToShort(filteredBoxes.Count()));
-
-                        foreach (var wb in filteredBoxes)
-                        {
-                            data.Write(wb.Index);
-                            data.Write(wb.X1);
-                            data.Write(wb.Z1);
-                            data.Write(wb.X2);
-                            data.Write(wb.Z2);
-                            data.Write(wb.Y);
-                        }
-                    }
+                    data.Write(Conversions.ToShort(wb.Type));
+                    data.Write(wb.X1);
+                    data.Write(wb.Z1);
+                    data.Write(wb.X2);
+                    data.Write(wb.Z2);
+                    data.Write(wb.Y);
                 }
             }
         }

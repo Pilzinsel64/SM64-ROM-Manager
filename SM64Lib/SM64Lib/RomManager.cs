@@ -365,6 +365,7 @@ namespace SM64Lib
         /// </summary>
         /// <param name="IgnoreNeedToSave">If True, everything will be saved even if there are no changes.</param>
         /// <param name="DontPatchUpdates">If True, Update Patches will be ignored.</param>
+        /// <param name="recalcChecksumBehavior"></param>
         public void SaveRom(bool IgnoreNeedToSave = false, bool DontPatchUpdates = false, RecalcChecksumBehavior recalcChecksumBehavior = RecalcChecksumBehavior.Auto)
         {
             if (!RaiseBeforeRomSave())
@@ -381,9 +382,7 @@ namespace SM64Lib
                 }
 
                 // Write Version
-                var romVerEventArgs = new RomVersionEventArgs(ProgramVersion);
-                WritingNewProgramVersion?.Invoke(this, romVerEventArgs);
-                WriteVersion(romVerEventArgs.RomVersion);
+                WriteNewVersion();
 
                 // Texts
                 SaveAllTextGroups(ref needUpdateChecksum);
@@ -447,6 +446,13 @@ namespace SM64Lib
                 // Set enabled false
                 GlobalBehaviorBank.Config.Disable();
             }
+        }
+
+        private void WriteNewVersion()
+        {
+            var romVerEventArgs = new RomVersionEventArgs(ProgramVersion);
+            WritingNewProgramVersion?.Invoke(this, romVerEventArgs);
+            WriteVersion(romVerEventArgs.RomVersion);
         }
 
         private void WriteVersion(RomVersion newVersion)
@@ -971,6 +977,9 @@ namespace SM64Lib
 
             // Update Checksum
             General.PatchClass.UpdateChecksum(RomFile);
+
+            WriteNewVersion();
+            SaveRomConfig();
         }
 
         /// <summary>

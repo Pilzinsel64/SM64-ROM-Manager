@@ -495,7 +495,8 @@ namespace SM64_ROM_Manager.PatchScripts
                         { "romfile", rommgr.RomFile },
                         { "rommgr", rommgr },
                         { "profilepath", profile?.FileName },
-                        { "files", profile.EmbeddedFiles }
+                        { "files", profile.EmbeddedFiles },
+                        { "owner", owner }
                     },
                     General.GetAdditionalReferencedAssemblied());
                 TweakAfterApply?.Invoke();
