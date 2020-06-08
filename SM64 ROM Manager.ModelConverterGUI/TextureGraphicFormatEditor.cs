@@ -19,6 +19,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
     public partial class TextureGraphicFormatEditor
     {
 
+        private LabelX labelX_TexSize;
         private Object3D obj3d = null;
         private bool loadingtexItemSettings = false;
         private bool hasInit = false;
@@ -45,12 +46,12 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             base.Shown += Form_Shown;
             SuspendLayout();
             InitializeComponent();
-            StyleManager.UpdateAmbientColors(this);
             obj3d = obj;
             AcceptButton = Button_SaveColsettings;
             LoadDisplayListTypes();
             LoadN64TextureFormatTypes();
             LoadRotateFlip();
+            AddPicBoxLabel();
             base.UpdateAmbientColors();
             hasInit = true;
             ResumeLayout();
@@ -59,6 +60,17 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private void Form_Shown(object sender, EventArgs e)
         {
             LoadTexturesFromModel();
+        }
+
+        private void AddPicBoxLabel()
+        {
+            labelX_TexSize = new LabelX
+            {
+                TextAlignment = StringAlignment.Center,
+                Dock = DockStyle.Bottom,
+                Height = 23
+            };
+            PictureBox1.Controls.Add(labelX_TexSize);
         }
 
         private void LoadDisplayListTypes()
@@ -206,10 +218,12 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                     }
 
                     PictureBox1.Image = realImg;
+                    labelX_TexSize.Text = $"{realImg.Width} x {realImg.Height}";
                 }
                 else
                 {
                     PictureBox1.Image = null;
+                    labelX_TexSize.Text = string.Empty;
                     LabelX1.Text = string.Empty;
                 }
 
