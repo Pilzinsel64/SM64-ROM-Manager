@@ -384,7 +384,7 @@ namespace SM64_ROM_Manager
         {
             var customObject = this.customObject;
             var refs = CustomObjectReferences.Find(new[] { customObject }, rommgr);
-            var needReloadList = refs.ReferenceObjects.Any();
+            var needReloadList = refs.ReferenceObjects.Count > 1;
             var allowRemove = true;
             var allowRemoveReferences = false;
 
@@ -420,6 +420,9 @@ namespace SM64_ROM_Manager
                 LoadObjectProps();
 
                 if (refs.HasReferences && allowRemoveReferences)
+                    LoadObjects();
+
+                if (needReloadList)
                     LoadObjects();
             }
         }
