@@ -60,8 +60,8 @@ namespace SM64_ROM_Manager
             this.ListBoxAdv_LM_Levels = new SM64_ROM_Manager.Publics.Controls.ItemListBox();
             this.TabControl_LM_Area = new DevComponents.DotNetBar.TabControl();
             this.TabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
+            this.Slider_AreaReverbLevel = new DevComponents.DotNetBar.Controls.Slider();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.ComboBoxEx_ReverbLevel = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.LabelX9 = new DevComponents.DotNetBar.LabelX();
             this.ComboBoxEx_LM_AreaBG = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.ComboItem12 = new DevComponents.Editors.ComboItem();
@@ -464,8 +464,8 @@ namespace SM64_ROM_Manager
             // 
             // TabControlPanel4
             // 
+            this.TabControlPanel4.Controls.Add(this.Slider_AreaReverbLevel);
             this.TabControlPanel4.Controls.Add(this.labelX14);
-            this.TabControlPanel4.Controls.Add(this.ComboBoxEx_ReverbLevel);
             this.TabControlPanel4.Controls.Add(this.LabelX9);
             this.TabControlPanel4.Controls.Add(this.ComboBoxEx_LM_AreaBG);
             this.TabControlPanel4.Controls.Add(this.TextBoxX_LM_ShowMsgID);
@@ -494,6 +494,21 @@ namespace SM64_ROM_Manager
             this.TabControlPanel4.Style.GradientAngle = 90;
             this.TabControlPanel4.TabItem = this.TabItem4;
             // 
+            // Slider_AreaReverbLevel
+            // 
+            this.Slider_AreaReverbLevel.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.Slider_AreaReverbLevel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.Slider_AreaReverbLevel.LabelPosition = DevComponents.DotNetBar.eSliderLabelPosition.Right;
+            resources.ApplyResources(this.Slider_AreaReverbLevel, "Slider_AreaReverbLevel");
+            this.Slider_AreaReverbLevel.Maximum = 9;
+            this.Slider_AreaReverbLevel.Name = "Slider_AreaReverbLevel";
+            this.Slider_AreaReverbLevel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Slider_AreaReverbLevel.Value = 0;
+            this.Slider_AreaReverbLevel.ValueChanged += new System.EventHandler(this.Slider_AreaReverbLevel_ValueChanged);
+            // 
             // labelX14
             // 
             this.labelX14.BackColor = System.Drawing.Color.Transparent;
@@ -504,18 +519,6 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.labelX14, "labelX14");
             this.labelX14.Name = "labelX14";
             this.labelX14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // ComboBoxEx_ReverbLevel
-            // 
-            this.ComboBoxEx_ReverbLevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ComboBoxEx_ReverbLevel.DropDownHeight = 150;
-            this.ComboBoxEx_ReverbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxEx_ReverbLevel.ForeColor = System.Drawing.Color.Black;
-            this.ComboBoxEx_ReverbLevel.FormattingEnabled = true;
-            resources.ApplyResources(this.ComboBoxEx_ReverbLevel, "ComboBoxEx_ReverbLevel");
-            this.ComboBoxEx_ReverbLevel.Name = "ComboBoxEx_ReverbLevel";
-            this.ComboBoxEx_ReverbLevel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBoxEx_ReverbLevel.SelectedIndexChanged += new System.EventHandler(this.Controls_HandleToSaveAreaSettings);
             // 
             // LabelX9
             // 
@@ -1756,6 +1759,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.Controls.Line line4;
         private DevComponents.DotNetBar.ButtonX ButtonX_EditCollision;
         private DevComponents.DotNetBar.LabelX labelX14;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx_ReverbLevel;
+        private DevComponents.DotNetBar.Controls.Slider Slider_AreaReverbLevel;
     }
 }

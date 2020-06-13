@@ -369,6 +369,27 @@
   <data name="TabControl_LM_Area.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="Slider_AreaReverbLevel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 160</value>
+  </data>
+  <data name="Slider_AreaReverbLevel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 23</value>
+  </data>
+  <data name="Slider_AreaReverbLevel.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;Slider_AreaReverbLevel.Name" xml:space="preserve">
+    <value>Slider_AreaReverbLevel</value>
+  </data>
+  <data name="&gt;&gt;Slider_AreaReverbLevel.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.Slider, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Slider_AreaReverbLevel.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;Slider_AreaReverbLevel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="labelX14.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 161</value>
   </data>
@@ -379,7 +400,7 @@
     <value>99</value>
   </data>
   <data name="labelX14.Text" xml:space="preserve">
-    <value>Reverb Level:</value>
+    <value>Echo Level:</value>
   </data>
   <data name="&gt;&gt;labelX14.Name" xml:space="preserve">
     <value>labelX14</value>
@@ -391,33 +412,6 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;labelX14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ComboBoxEx_ReverbLevel.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBoxEx_ReverbLevel.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ComboBoxEx_ReverbLevel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 161</value>
-  </data>
-  <data name="ComboBoxEx_ReverbLevel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
-  </data>
-  <data name="ComboBoxEx_ReverbLevel.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx_ReverbLevel.Name" xml:space="preserve">
-    <value>ComboBoxEx_ReverbLevel</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx_ReverbLevel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx_ReverbLevel.Parent" xml:space="preserve">
-    <value>TabControlPanel4</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx_ReverbLevel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="LabelX9.Location" type="System.Drawing.Point, System.Drawing">
@@ -2255,9 +2249,9 @@
   <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
