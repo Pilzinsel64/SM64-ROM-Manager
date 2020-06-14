@@ -1163,7 +1163,7 @@ namespace SM64_ROM_Manager
 
         public void OpenAreaEditor(int levelIndex, int areaIndex)
         {
-            if (levelIndex >= 0)
+            if (levelIndex >= 0 && areaIndex >= 0)
             {
                 var curLvl = RomManager.Levels[levelIndex];
                 LevelEditor.Form_AreaEditor openAreaEditor = (LevelEditor.Form_AreaEditor)GetAreaEditor(curLvl);
