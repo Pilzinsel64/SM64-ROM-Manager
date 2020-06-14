@@ -786,14 +786,9 @@ namespace SM64_ROM_Manager
                     // Load Level Bachground
                     ComboBoxEx_LM_BGMode.SelectedIndex = info.bgMode;
                     UpdateBackgroundControlsVisible(info.bgMode);
-                    if (info.bgMode == 1 || info.bgOriginal == SM64Lib.Geolayout.BackgroundIDs.Custom)
-                    {
-                        PictureBox_BGImage.Image = info.bgImage;
-                    }
-                    else
-                    {
+                    PictureBox_BGImage.Image = info.bgImage;
+                    if (info.bgMode != 1 && info.bgOriginal != SM64Lib.Geolayout.BackgroundIDs.Custom)
                         ComboBox_LM_LevelBG.SelectedIndex = General.GetBackgroundIndexOfID(info.bgOriginal);
-                    }
 
                     // Load Level Name
                     LabelX_TargetLevel.Text = Controller.GetLevelName(levelIndex);

@@ -1493,7 +1493,7 @@ namespace SM64_ROM_Manager
         public void SetLevelBackgroundMode(int levelIndex, int mode)
         {
             var lvl = GetLevelAndArea(levelIndex, -1).level;
-            Image image = null;
+
             switch (mode)
             {
                 case 0: // Game Image
@@ -1503,13 +1503,13 @@ namespace SM64_ROM_Manager
                         break;
                     }
 
-                case 1: // Custom Image
-                    {
-                        lvl.Background.Enabled = true;
-                        lvl.Background.IsCustom = true;
-                        image = lvl.Background.GetImage();
-                        break;
-                    }
+                //case 1: // Custom Image
+                //    {
+                //        lvl.Background.Enabled = true;
+                //        lvl.Background.IsCustom = true;
+                //        lvl.Background.GetImage();
+                //        break;
+                //    }
 
                 case 2: // Disable
                     {

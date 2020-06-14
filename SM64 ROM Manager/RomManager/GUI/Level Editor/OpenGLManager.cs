@@ -596,9 +596,6 @@ namespace SM64_ROM_Manager.LevelEditor
                 Color? col;
                 var otherMdls = new List<Renderer>();
 
-                if (n.ModelID == 0x4B)
-                    Console.Write(string.Empty);
-
                 if (Main.DrawObjectModels && Main.ObjectModels.ContainsKey(n.ModelID))
                     objModel = Main.ObjectModels[n.ModelID];
                 else if (Main.DrawDirectionArrow)
