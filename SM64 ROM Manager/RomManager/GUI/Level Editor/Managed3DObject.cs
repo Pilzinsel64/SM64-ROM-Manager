@@ -262,10 +262,10 @@ namespace SM64_ROM_Manager
             }
         }
 
-        public Managed3DObject(LevelscriptCommand cmd, ObjectComboList objComboList)
+        public Managed3DObject(LevelscriptCommand cmd, ObjectComboList comboList)
         {
             Command = cmd;
-            myObjectCombos = objComboList;
+            myObjectCombos = comboList;
             LoadProperties();
         }
 

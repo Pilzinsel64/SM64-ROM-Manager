@@ -294,7 +294,11 @@ namespace SM64_ROM_Manager.LevelEditor
             get
             {
                 if (!allObjectCombos.Any())
-                    allObjectCombos.AddRange(General.ObjectCombos.Concat(General.ObjectCombosCustom));
+                {
+                    allObjectCombos.AddRange(General.ObjectCombos);
+                    allObjectCombos.AddRange(General.ObjectCombosCustom);
+                    allObjectCombos.AddRange(BuildObjectCombos(Rommgr.CustomObjects));
+                }
                 return allObjectCombos;
             }
         }
