@@ -78,13 +78,13 @@ namespace SM64_ROM_Manager
                 case StarNames.GiantPiranhaPlants:
                     return "Giant Piranha Plants";
                 case StarNames.PenguinMother:
-                    return "Penguin Mother and Race";
+                    return "Penguin Mother";
                 case StarNames.WigglerBoss:
                     return "Wiggler Boss";
                 case StarNames.PeachSlideStar:
                     return "Slide Star (Collision 33/34)";
                 case StarNames.BigPenguinRace:
-                    return "Penguin Mother and Race";
+                    return "Penguin Race";
                 case StarNames.TreasureChests:
                     return "4 Treasure Chests";
                 case StarNames.BooInHauntedHouse:
