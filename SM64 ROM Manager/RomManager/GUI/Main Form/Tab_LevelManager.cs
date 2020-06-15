@@ -339,7 +339,7 @@ namespace SM64_ROM_Manager
             TableLayoutPanel_ObjectBankSelectorBoxes.Controls.Add(ObjectBankSelectorBox_9, 2, 0);
 
             var reverbLevels = Enum.GetValues(typeof(AreaReverbLevel));
-            Slider_AreaReverbLevel.Maximum = reverbLevels.Length;
+            Slider_AreaReverbLevel.Maximum = reverbLevels.Length - 1;
         }
 
         // F e a t u r e s   &   G U I
