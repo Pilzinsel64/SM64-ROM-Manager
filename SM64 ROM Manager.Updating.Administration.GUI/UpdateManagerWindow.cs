@@ -427,12 +427,13 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             var frm = new PackageDescriptionEditor()
             {
                 Titel = desc.name,
-                Description = desc.description
+                Description = desc.description,
+                DescriptionType = desc.descriptionType
             };
 
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                manager.SetPackageDescription(version, frm.Titel, frm.Description);
+                manager.SetPackageDescription(version, frm.Titel, frm.Description, frm.DescriptionType);
                 await LoadPackageList();
             }
         }

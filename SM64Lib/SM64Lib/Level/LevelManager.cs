@@ -299,6 +299,7 @@ namespace SM64Lib.Levels
             var lid = rommgr.LevelInfoData.GetByLevelID(lvl.LevelID);
 
             // Write Area Model & Update Scrolling Texture Vertex Pointers & Write Custom Object Bank
+            var CollisionBoxTableIndex = new[] { 0, 0x32, 0x33 };
             foreach (LevelArea a in lvl.Areas)
             {
                 a.SpecialBoxes.SortByHeight();
@@ -319,6 +320,7 @@ namespace SM64Lib.Levels
                         Z1 = sp.Z1,
                         Z2 = sp.Z2,
                         Y = sp.Y,
+                        Index = (short)CollisionBoxTableIndex[(int)sp.Type]
                     };
 
                     switch (sp.Type)
@@ -335,6 +337,7 @@ namespace SM64Lib.Levels
                     }
 
                     a.AreaModel.Collision.SpecialBoxes.Add(boxdata);
+                    CollisionBoxTableIndex[(int)sp.Type] += 1;
                 }
 
                 // Write Area Model

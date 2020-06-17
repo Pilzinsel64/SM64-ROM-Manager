@@ -107,6 +107,8 @@
     <Compile Include="MyPaths.cs" />
     <Compile Include="UpdateInfo.cs" />
     <Compile Include="UpdateInstaller\UpdateInstallerConfig.cs" />
+    <Compile Include="UpdateNotes.cs" />
+    <Compile Include="UpdateNotesContentType.cs" />
     <Compile Include="UpdatePackageInfo.cs" />
   </ItemGroup>
   <ItemGroup>

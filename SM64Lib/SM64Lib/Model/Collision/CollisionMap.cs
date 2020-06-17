@@ -299,7 +299,7 @@ namespace SM64Lib.Model.Collision
             {
                 foreach (var wb in bodex.Where(n => n.Type == t))
                 {
-                    data.Write(Conversions.ToShort(wb.Type));
+                    data.Write(wb.Index);
                     data.Write(wb.X1);
                     data.Write(wb.Z1);
                     data.Write(wb.X2);

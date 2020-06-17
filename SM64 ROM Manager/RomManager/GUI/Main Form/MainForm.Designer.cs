@@ -68,14 +68,14 @@ namespace SM64_ROM_Manager
             this.ButtonItem_ModelImporter = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem17 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_CustomObjects = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem14 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem16 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_TrajectoryEditor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem13 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_TrajectoryEditor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_HudOptions = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem15 = new DevComponents.DotNetBar.ButtonItem();
-            this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
-            this.ButtonItem14 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem18 = new DevComponents.DotNetBar.ButtonItem();
+            this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
             this.ButtonItem_GlobalBehaviorBank = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_GlobalAsmCodes = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem22 = new DevComponents.DotNetBar.ButtonItem();
@@ -347,13 +347,13 @@ namespace SM64_ROM_Manager
             this.ButtonItem_ModelImporter,
             this.ButtonItem17,
             this.ButtonItem_CustomObjects,
+            this.ButtonItem18,
             this.ButtonItem14,
             this.ButtonItem16,
             this.ButtonItem13,
             this.ButtonItem_TrajectoryEditor,
             this.ButtonItem_HudOptions,
             this.ButtonItem15,
-            this.ButtonItem18,
             this.labelItem4,
             this.ButtonItem_GlobalBehaviorBank,
             this.ButtonItem_GlobalAsmCodes});
@@ -423,6 +423,13 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.ButtonItem_CustomObjects, "ButtonItem_CustomObjects");
             this.ButtonItem_CustomObjects.Click += new System.EventHandler(this.ButtonItem_CustomObjects_Click);
             // 
+            // ButtonItem14
+            // 
+            this.ButtonItem14.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_package_16px;
+            this.ButtonItem14.Name = "ButtonItem14";
+            resources.ApplyResources(this.ButtonItem14, "ButtonItem14");
+            this.ButtonItem14.Click += new System.EventHandler(this.ButtonItem14_Click);
+            // 
             // ButtonItem16
             // 
             this.ButtonItem16.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_coins_16px;
@@ -430,19 +437,19 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.ButtonItem16, "ButtonItem16");
             this.ButtonItem16.Click += new System.EventHandler(this.ButtonItem16_Click);
             // 
-            // ButtonItem_TrajectoryEditor
-            // 
-            this.ButtonItem_TrajectoryEditor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_node_16px;
-            this.ButtonItem_TrajectoryEditor.Name = "ButtonItem_TrajectoryEditor";
-            resources.ApplyResources(this.ButtonItem_TrajectoryEditor, "ButtonItem_TrajectoryEditor");
-            this.ButtonItem_TrajectoryEditor.Click += new System.EventHandler(this.ButtonItem_TrajectoryEditor_Click);
-            // 
             // ButtonItem13
             // 
             this.ButtonItem13.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_filled_star_location_16px;
             this.ButtonItem13.Name = "ButtonItem13";
             resources.ApplyResources(this.ButtonItem13, "ButtonItem13");
             this.ButtonItem13.Click += new System.EventHandler(this.ButtonItem13_Click);
+            // 
+            // ButtonItem_TrajectoryEditor
+            // 
+            this.ButtonItem_TrajectoryEditor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_node_16px;
+            this.ButtonItem_TrajectoryEditor.Name = "ButtonItem_TrajectoryEditor";
+            resources.ApplyResources(this.ButtonItem_TrajectoryEditor, "ButtonItem_TrajectoryEditor");
+            this.ButtonItem_TrajectoryEditor.Click += new System.EventHandler(this.ButtonItem_TrajectoryEditor_Click);
             // 
             // ButtonItem_HudOptions
             // 
@@ -458,6 +465,13 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.ButtonItem15, "ButtonItem15");
             this.ButtonItem15.Click += new System.EventHandler(this.ButtonItem15_Click);
             // 
+            // ButtonItem18
+            // 
+            this.ButtonItem18.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_cube_16px;
+            this.ButtonItem18.Name = "ButtonItem18";
+            resources.ApplyResources(this.ButtonItem18, "ButtonItem18");
+            this.ButtonItem18.Click += new System.EventHandler(this.ButtonItem18_Click);
+            // 
             // labelItem4
             // 
             this.labelItem4.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
@@ -468,20 +482,6 @@ namespace SM64_ROM_Manager
             this.labelItem4.PaddingTop = 1;
             this.labelItem4.SingleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             resources.ApplyResources(this.labelItem4, "labelItem4");
-            // 
-            // ButtonItem14
-            // 
-            this.ButtonItem14.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_package_16px;
-            this.ButtonItem14.Name = "ButtonItem14";
-            resources.ApplyResources(this.ButtonItem14, "ButtonItem14");
-            this.ButtonItem14.Click += new System.EventHandler(this.ButtonItem14_Click);
-            // 
-            // ButtonItem18
-            // 
-            this.ButtonItem18.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_cube_16px;
-            this.ButtonItem18.Name = "ButtonItem18";
-            resources.ApplyResources(this.ButtonItem18, "ButtonItem18");
-            this.ButtonItem18.Click += new System.EventHandler(this.ButtonItem18_Click);
             // 
             // ButtonItem_GlobalBehaviorBank
             // 

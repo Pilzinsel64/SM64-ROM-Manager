@@ -18,17 +18,14 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         // F i e l d s
 
         private readonly DiscordBot bot;
-        private readonly string versionName, changelog;
-        private readonly ApplicationVersion version;
+        private readonly UpdatePackageInfo package;
 
         // C o n s t r u c t o r
 
-        public DiscordPostDialog(DiscordBot bot, string versionName, string changelog, ApplicationVersion version)
+        public DiscordPostDialog(DiscordBot bot, UpdatePackageInfo package)
         {
             this.bot = bot;
-            this.versionName = versionName;
-            this.version = version;
-            this.changelog = changelog;
+            this.package = package;
 
             InitializeComponent();
             UpdateAmbientColors();
@@ -79,8 +76,9 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
                 var selNode = advTree1.SelectedNode;
                 ulong gID = (ulong)selNode.Parent.Tag;
                 ulong cID = (ulong)selNode.Tag;
+                var msg = textBoxX_Msg.Text;
 
-                await bot.SendUpdateNotification(versionName, version, changelog, gID, cID, textBoxX_AppName.Text, textBoxX_Msg.Text, checkBoxX_AddChangelog.Checked, checkBoxX_PingAtEveryone.Checked);
+                await bot.SendUpdateNotification(package, gID, cID, textBoxX_AppName.Text, msg, checkBoxX_AddChangelog.Checked, checkBoxX_PingAtEveryone.Checked);
 
                 MessageBoxEx.Show(this, "Nachricht erfolgreich gesendet.", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;
