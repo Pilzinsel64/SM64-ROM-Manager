@@ -115,7 +115,7 @@ namespace SM64_ROM_Manager.Updating.Client.GUI
             var dres = default(DialogResult);
             parentForm.Invoke(new Action(() =>
             {
-                var dialog = new UpdatesAvailableDialog(MyAppIcon, UpdateClient.CurrentVersion.Version.ToString(), UpdateClient.CurrentVersion.Channel.ToString(), Conversions.ToString(UpdateClient.CurrentVersion.Build), pkg.Version.Version.ToString(), pkg.Version.Channel.ToString(), Conversions.ToString(pkg.Version.Build), pkg.Changelog, UpdateClient.InstallAsAdmin);
+                var dialog = new UpdatesAvailableDialog(MyAppIcon, UpdateClient.CurrentVersion.Version.ToString(), UpdateClient.CurrentVersion.Channel.ToString(), Conversions.ToString(UpdateClient.CurrentVersion.Build), pkg.Version.Version.ToString(), pkg.Version.Channel.ToString(), Conversions.ToString(pkg.Version.Build), pkg.Notes, UpdateClient.InstallAsAdmin);
                 dres = dialog.ShowDialog(parentForm);
             }));
             if (dres != DialogResult.OK)
