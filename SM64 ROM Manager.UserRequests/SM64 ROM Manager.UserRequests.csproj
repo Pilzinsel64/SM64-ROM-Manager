@@ -64,8 +64,8 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="WebDav.Client, Version=2.6.0.0, Culture=neutral, PublicKeyToken=daed9acc7deb9472, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebDav.Client.2.6.0\lib\net45\WebDav.Client.dll</HintPath>
+    <Reference Include="WebDav.Client, Version=2.7.0.0, Culture=neutral, PublicKeyToken=daed9acc7deb9472, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebDav.Client.2.7.0\lib\net45\WebDav.Client.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

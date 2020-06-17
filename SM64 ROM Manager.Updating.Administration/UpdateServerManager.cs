@@ -358,17 +358,24 @@ namespace SM64_ROM_Manager.Updating.Administration
             return info;
         }
 
-        public (string name, string description) GetPackageDescription(ApplicationVersion version)
+        public (string name, string description, UpdateNotesContentType descriptionType) GetPackageDescription(ApplicationVersion version)
         {
             var pkg = GetUpdatePackageInfo(version);
-            return (pkg?.Name, pkg?.Changelog);
+            if (pkg is object)
+                return (pkg.Name, pkg.Notes.Content, pkg.Notes.ContentType);
+            else
+                return default;
         }
 
-        public void SetPackageDescription(ApplicationVersion version, string name, string description)
+        public void SetPackageDescription(ApplicationVersion version, string name, string description, UpdateNotesContentType descriptionType)
         {
             var pkg = GetOrCreateUpdatePackageInfo(version);
-            pkg.Name = name;
-            pkg.Changelog = description;
+            if (pkg is object)
+            {
+                pkg.Name = name;
+                pkg.Notes.Content = description;
+                pkg.Notes.ContentType = descriptionType;
+            }
         }
 
         public async Task<bool> ChangePackageVersion(ApplicationVersion currentVersion, ApplicationVersion newVersion)
