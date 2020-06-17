@@ -104,8 +104,8 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="WebDav.Client, Version=2.6.0.0, Culture=neutral, PublicKeyToken=daed9acc7deb9472, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebDav.Client.2.6.0\lib\net45\WebDav.Client.dll</HintPath>
+    <Reference Include="WebDav.Client, Version=2.7.0.0, Culture=neutral, PublicKeyToken=daed9acc7deb9472, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebDav.Client.2.7.0\lib\net45\WebDav.Client.dll</HintPath>
     </Reference>
     <Reference Include="Z.ExtensionMethods.WithNamespace, Version=2.1.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
       <HintPath>..\packages\Z.ExtensionMethods.WithNamespace.2.1.1\lib\net45\Z.ExtensionMethods.WithNamespace.dll</HintPath>

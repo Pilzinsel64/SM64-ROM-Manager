@@ -169,7 +169,7 @@
     <value>LabelX1</value>
   </data>
   <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -196,7 +196,7 @@
     <value>LabelX_NewVersion</value>
   </data>
   <data name="&gt;&gt;LabelX_NewVersion.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_NewVersion.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -223,7 +223,7 @@
     <value>LabelX_NewChannel</value>
   </data>
   <data name="&gt;&gt;LabelX_NewChannel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_NewChannel.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -250,7 +250,7 @@
     <value>LabelX_NewBuild</value>
   </data>
   <data name="&gt;&gt;LabelX_NewBuild.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_NewBuild.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -277,7 +277,7 @@
     <value>LabelX_CurrentVersion</value>
   </data>
   <data name="&gt;&gt;LabelX_CurrentVersion.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_CurrentVersion.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -304,7 +304,7 @@
     <value>LabelX_CurrentChannel</value>
   </data>
   <data name="&gt;&gt;LabelX_CurrentChannel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_CurrentChannel.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -331,7 +331,7 @@
     <value>LabelX_CurrentBuild</value>
   </data>
   <data name="&gt;&gt;LabelX_CurrentBuild.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_CurrentBuild.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -339,28 +339,28 @@
   <data name="&gt;&gt;LabelX_CurrentBuild.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="RichTextBoxEx_Changelog.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="Panel_Changelog.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 143</value>
   </data>
-  <data name="RichTextBoxEx_Changelog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Panel_Changelog.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RichTextBoxEx_Changelog.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Panel_Changelog.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 230</value>
   </data>
-  <data name="RichTextBoxEx_Changelog.TabIndex" type="System.Int32, mscorlib">
+  <data name="Panel_Changelog.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;RichTextBoxEx_Changelog.Name" xml:space="preserve">
-    <value>RichTextBoxEx_Changelog</value>
+  <data name="&gt;&gt;Panel_Changelog.Name" xml:space="preserve">
+    <value>Panel_Changelog</value>
   </data>
-  <data name="&gt;&gt;RichTextBoxEx_Changelog.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.RichTextBoxEx, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;Panel_Changelog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RichTextBoxEx_Changelog.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Panel_Changelog.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
   </data>
-  <data name="&gt;&gt;RichTextBoxEx_Changelog.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Panel_Changelog.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="ButtonX_Install.Location" type="System.Drawing.Point, System.Drawing">
@@ -382,7 +382,7 @@
     <value>ButtonX_Install</value>
   </data>
   <data name="&gt;&gt;ButtonX_Install.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX_Install.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -409,7 +409,7 @@
     <value>ButtonX_Cancel</value>
   </data>
   <data name="&gt;&gt;ButtonX_Cancel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX_Cancel.Parent" xml:space="preserve">
     <value>LayoutControl1</value>
@@ -460,7 +460,7 @@
     <value>LayoutControl1</value>
   </data>
   <data name="&gt;&gt;LayoutControl1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControl1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1025,78 +1025,78 @@
     <value>LayoutControlItem1</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem2.Name" xml:space="preserve">
     <value>LayoutControlItem2</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem3.Name" xml:space="preserve">
     <value>LayoutControlItem3</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem4.Name" xml:space="preserve">
     <value>LayoutControlItem4</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem5.Name" xml:space="preserve">
     <value>LayoutControlItem5</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem6.Name" xml:space="preserve">
     <value>LayoutControlItem6</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem6.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem7.Name" xml:space="preserve">
     <value>LayoutControlItem7</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem7.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem8.Name" xml:space="preserve">
     <value>LayoutControlItem8</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem8.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem9.Name" xml:space="preserve">
     <value>LayoutControlItem9</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem9.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutSpacerItem1.Name" xml:space="preserve">
     <value>LayoutSpacerItem1</value>
   </data>
   <data name="&gt;&gt;LayoutSpacerItem1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem10.Name" xml:space="preserve">
     <value>LayoutControlItem10</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem10.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem11.Name" xml:space="preserve">
     <value>LayoutControlItem11</value>
   </data>
   <data name="&gt;&gt;LayoutControlItem11.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>UpdatesAvailableDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -79,8 +79,9 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
                 var selNode = advTree1.SelectedNode;
                 ulong gID = (ulong)selNode.Parent.Tag;
                 ulong cID = (ulong)selNode.Tag;
+                var msg = textBoxX_Msg.Text;
 
-                await bot.SendUpdateNotification(versionName, version, changelog, gID, cID, textBoxX_AppName.Text, textBoxX_Msg.Text, checkBoxX_AddChangelog.Checked, checkBoxX_PingAtEveryone.Checked);
+                await bot.SendUpdateNotification(versionName, version, changelog, gID, cID, textBoxX_AppName.Text, msg, checkBoxX_AddChangelog.Checked, checkBoxX_PingAtEveryone.Checked);
 
                 MessageBoxEx.Show(this, "Nachricht erfolgreich gesendet.", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DialogResult = DialogResult.OK;

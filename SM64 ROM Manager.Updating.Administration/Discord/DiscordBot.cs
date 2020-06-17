@@ -114,13 +114,18 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
             return dic;
         }
 
+        private string GetPingMessage(ulong? pingRole)
+        {
+            return pingRole != null ? $"<@&{pingRole ?? default}>" : string.Empty;
+        }
+
         private async Task<string> BuildUpdateMsg(string versionName, ApplicationVersion version, string changelog, ulong guildID, ulong channelID, string appName, string message, bool addChangelog, ulong? pingRole)
         {
             string msg = string.Empty;
 
             // Add ping
             if (pingRole != null)
-                msg += $"<@&{pingRole}>\n\n";
+                msg += $"<{GetPingMessage(pingRole)}\n\n";
             
             // Add version as titel
             var versionString = version.ToString();
@@ -156,7 +161,7 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
             return msg;
         }
 
-        public async Task SendUpdateNotification(string versionName, ApplicationVersion version, string changelog, ulong guildID, ulong channelID, string appName, string message, bool addChangelog, bool pingEveryone)
+        public async Task SendUpdateNotification(UpdatePackageInfo package, ulong guildID, ulong channelID, string appName, string message, bool addChangelog, bool pingEveryone)
         {
             ulong? pingRole;
             var updateNotifyRoleLower = Config.UpdateNotificationRoll.ToLower();
@@ -166,11 +171,72 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
             else
                 pingRole = null;
 
-            string msg = await BuildUpdateMsg(versionName, version, changelog, guildID, channelID, appName, message, addChangelog, pingRole);
+            string msg = GetPingMessage(pingRole); //await BuildUpdateMsg(versionName, version, changelog, guildID, channelID, appName, message, addChangelog, pingRole);
+            var embed = await BuildEmbed(package, appName, message, addChangelog);
             var channel = Client.GetGuild(guildID)?.GetTextChannel(channelID);
 
+            if (string.IsNullOrEmpty(msg))
+                msg = null;
+
             if (channel != null)
-                await channel.SendMessageAsync(msg);
+                await channel.SendMessageAsync(text:msg, embed:embed);
+        }
+
+        private async Task<Embed> BuildEmbed(UpdatePackageInfo package, string appName, string message, bool addChangelog)
+        {
+            var embed = new EmbedBuilder();
+
+            // Add titel
+            var versionString = package.Version.ToString();
+            if (package.Version.Channel == Channels.Stable && package.Version.Build == 1)
+                versionString = versionString.Remove(versionString.IndexOf(" "));
+            var strTitle = $"**Update:** {appName} **Version __{versionString}__**";
+
+            if (!string.IsNullOrEmpty(package.Name))
+                strTitle += $"\n{package.Name}";
+
+            embed.Title = strTitle;
+
+            // Add Description
+            if (!string.IsNullOrEmpty(message))
+                embed.Description += message;
+
+            // Add changelog
+            if (addChangelog && !string.IsNullOrEmpty(package.Notes.Content) && package.Notes.ContentType != UpdateNotesContentType.HTML)
+            {
+                var sr = new StringReader(package.Notes.Content);
+                var sw = new StringWriter();
+
+                while (sr.Peek() != -1)
+                {
+                    var line = await sr.ReadLineAsync();
+
+                    if (package.Notes.ContentType == UpdateNotesContentType.Markdown && line.Length > 0)
+                        ProcessMarkdownLine(ref line);
+
+                    await sw.WriteLineAsync(line);
+                }
+
+                var changelog = sw.ToString();
+                if (changelog.Length <= 2048)
+                    embed.AddField("Changelog:", changelog);
+
+                sr.Close();
+                sw.Close();
+            }
+
+            // Author
+            // ...
+
+            return embed.Build();
+        }
+
+        private void ProcessMarkdownLine(ref string line)
+        {
+            line = line.TrimStart('#', ' ');
+            line = line.Replace("[ ] ", string.Empty);
+            line = line.Replace("[x] ", string.Empty);
+            line = line.Replace("[!", "[");
         }
     }
 }
