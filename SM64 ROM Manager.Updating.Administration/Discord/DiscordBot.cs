@@ -119,47 +119,47 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
             return pingRole != null ? $"<@&{pingRole ?? default}>" : string.Empty;
         }
 
-        private async Task<string> BuildUpdateMsg(string versionName, ApplicationVersion version, string changelog, ulong guildID, ulong channelID, string appName, string message, bool addChangelog, ulong? pingRole)
-        {
-            string msg = string.Empty;
+        //private async Task<string> BuildUpdateMsg(string versionName, ApplicationVersion version, string changelog, ulong guildID, ulong channelID, string appName, string message, bool addChangelog, ulong? pingRole)
+        //{
+        //    string msg = string.Empty;
 
-            // Add ping
-            if (pingRole != null)
-                msg += $"<{GetPingMessage(pingRole)}\n\n";
+        //    // Add ping
+        //    if (pingRole != null)
+        //        msg += $"<{GetPingMessage(pingRole)}\n\n";
             
-            // Add version as titel
-            var versionString = version.ToString();
-            if (version.Channel == Channels.Stable && version.Build == 1)
-                versionString = versionString.Remove(versionString.IndexOf(" "));
-            msg += $"**Update:** {appName} **Version __{versionString}__**";
+        //    // Add version as titel
+        //    var versionString = version.ToString();
+        //    if (version.Channel == Channels.Stable && version.Build == 1)
+        //        versionString = versionString.Remove(versionString.IndexOf(" "));
+        //    msg += $"**Update:** {appName} **Version __{versionString}__**";
 
-            // Add titel
-            if (!string.IsNullOrEmpty(versionName))
-                msg += $"\n> {versionName}";
+        //    // Add titel
+        //    if (!string.IsNullOrEmpty(versionName))
+        //        msg += $"\n> {versionName}";
 
-            // Add message
-            if (!string.IsNullOrEmpty(message))
-                msg += "\n\n" + message;
+        //    // Add message
+        //    if (!string.IsNullOrEmpty(message))
+        //        msg += "\n\n" + message;
 
-            // Add changelog
-            if (addChangelog && !string.IsNullOrEmpty(changelog))
-            {
-                var sr = new StringReader(changelog);
-                var sw = new StringWriter();
+        //    // Add changelog
+        //    if (addChangelog && !string.IsNullOrEmpty(changelog))
+        //    {
+        //        var sr = new StringReader(changelog);
+        //        var sw = new StringWriter();
 
-                while (sr.Peek() != -1)
-                {
-                    var line = await sr.ReadLineAsync();
-                    await sw.WriteLineAsync($"> {line}");
-                }
+        //        while (sr.Peek() != -1)
+        //        {
+        //            var line = await sr.ReadLineAsync();
+        //            await sw.WriteLineAsync($"> {line}");
+        //        }
 
-                msg += "\n\nChangelog:\n" + sw.ToString();
-                sr.Close();
-                sw.Close();
-            }
+        //        msg += "\n\nChangelog:\n" + sw.ToString();
+        //        sr.Close();
+        //        sw.Close();
+        //    }
 
-            return msg;
-        }
+        //    return msg;
+        //}
 
         public async Task SendUpdateNotification(UpdatePackageInfo package, ulong guildID, ulong channelID, string appName, string message, bool addChangelog, bool pingEveryone)
         {
