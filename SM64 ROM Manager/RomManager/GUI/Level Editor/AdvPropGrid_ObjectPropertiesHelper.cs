@@ -9,6 +9,7 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::SM64_ROM_Manager.PropertyValueEditors;
 using global::SM64_ROM_Manager.SettingsManager;
 using global::SM64Lib.TextValueConverter;
+using System.Linq;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -71,7 +72,7 @@ namespace SM64_ROM_Manager.LevelEditor
         private string behaviorPropName, bParamPropName;
         private bool hasFirstFocued = false;
         private readonly Dictionary<string, EventHandler> registredHandlers = new Dictionary<string, EventHandler>();
-        private readonly ObjectComboList myObjectCombos;
+        private ObjectComboList myObjectCombos;
         private readonly BehaviorInfoList myBehaviors;
         private AdvPropertyGrid _AdvPropertyGrid1;
 
@@ -256,14 +257,21 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public void LoadComboBoxObjComboEntries(ObjectComboList objComboList)
         {
-            var myObjectCombosString = new List<string>();
-            foreach (ObjectCombo c in objComboList)
-                myObjectCombosString.Add(c.Name);
+            myObjectCombos = objComboList;
+
+            // Remove old property settings
+            foreach (var ps in AdvPropertyGrid1.PropertySettings.ToArray())
+            {
+                if (ps.PropertyName == nameof(Managed3DObject.ObjectCombo))
+                    AdvPropertyGrid1.PropertySettings.Remove(ps);
+            }
 
             // Set Property Settings on AdvPropertyGrid1
-            var propSet = new PropertySettings("ObjectCombo");
-            var editor = new ComboBoxPropertyEditor(myObjectCombosString.ToArray());
+            var propSet = new PropertySettings(nameof(Managed3DObject.ObjectCombo));
+            var items = objComboList.Select(n => new ComboItem { Text = n.Name, Tag = n }).ToArray();
+            var editor = new ComboBoxPropertyEditor(items);
             editor.DropDownWidth = 300;
+            editor.SelectedType = SelectedTypes.SelectedComboItem;
             propSet.ValueEditor = editor;
             AdvPropertyGrid1.PropertySettings.Add(propSet);
         }
@@ -457,78 +465,41 @@ namespace SM64_ROM_Manager.LevelEditor
             switch (switchExpr)
             {
                 case var @case when @case == typeof(bool):
-                    {
-                        if ((e.StringValue ?? "") == "Yes")
-                        {
-                            e.TypedValue = true;
-                        }
-                        else
-                        {
-                            e.TypedValue = false;
-                        }
-
-                        break;
-                    }
-
+                    if ((e.StringValue ?? "") == "Yes")
+                        e.TypedValue = true;
+                    else
+                        e.TypedValue = false;
+                    break;
                 case var case1 when case1 == typeof(byte):
-                    {
-                        e.TypedValue = Conversions.ToByte(TextValueConverter.ValueFromText(e.StringValue.Trim()));
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToByte(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    break;
                 case var case2 when case2 == typeof(sbyte):
-                    {
-                        e.TypedValue = Conversions.ToSByte(TextValueConverter.ValueFromText(e.StringValue.Trim()));
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToSByte(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    break;
                 case var case3 when case3 == typeof(short):
-                    {
-                        e.TypedValue = Conversions.ToShort(TextValueConverter.ValueFromText(e.StringValue.Trim()));
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToShort(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    break;
                 case var case4 when case4 == typeof(ushort):
-                    {
-                        e.TypedValue = Conversions.ToUShort(TextValueConverter.ValueFromText(e.StringValue.Trim()));
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToUShort(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    break;
                 case var case5 when case5 == typeof(int):
-                    {
-                        e.TypedValue = Conversions.ToInteger(TextValueConverter.ValueFromText(e.StringValue.Trim()));
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToInteger(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    break;
                 case var case6 when case6 == typeof(uint):
-                    {
-                        e.TypedValue = Conversions.ToUInteger(TextValueConverter.ValueFromText(e.StringValue.Trim()));
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToUInteger(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    break;
                 case var case7 when case7 == typeof(float):
-                    {
-                        e.TypedValue = Conversions.ToSingle(e.StringValue.Trim());
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToSingle(e.StringValue.Trim());
+                    break;
                 case var case8 when case8 == typeof(double):
-                    {
-                        e.TypedValue = Conversions.ToDouble(e.StringValue.Trim());
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToDouble(e.StringValue.Trim());
+                    break;
                 case var case9 when case9 == typeof(decimal):
-                    {
-                        e.TypedValue = Conversions.ToDecimal(e.StringValue.Trim());
-                        break;
-                    }
-
+                    e.TypedValue = Conversions.ToDecimal(e.StringValue.Trim());
+                    break;
                 default:
-                    {
-                        isConverted = false;
-                        break;
-                    }
+                    isConverted = false;
+                    break;
             }
 
             e.IsConverted = isConverted;
@@ -542,41 +513,32 @@ namespace SM64_ROM_Manager.LevelEditor
                 switch (switchExpr)
                 {
                     case var @case when @case == typeof(bool):
-                        {
-                            if (Conversions.ToBoolean(e.TypedValue))
-                                e.StringValue = "Yes";
-                            else
-                                e.StringValue = "No";
-
-                            e.IsConverted = true;
-                            break;
-                        }
-
+                        if (Conversions.ToBoolean(e.TypedValue))
+                            e.StringValue = "Yes";
+                        else
+                            e.StringValue = "No";
+                        e.IsConverted = true;
+                        break;
                     case var case1 when case1 == typeof(byte):
                     case var case2 when case2 == typeof(sbyte):
                     case var case3 when case3 == typeof(short):
                     case var case4 when case4 == typeof(ushort):
                     case var case5 when case5 == typeof(int):
                     case var case6 when case6 == typeof(uint):
+                        if ((e.PropertyName ?? "") == (behaviorPropName ?? ""))
                         {
-                            if ((e.PropertyName ?? "") == (behaviorPropName ?? ""))
-                            {
-                            }
-                            // e.StringValue = TextFromValue(e.TypedValue, If(Settings.General.IntegerValueMode >= 1, Settings.General.IntegerValueMode, 1))
-                            // e.IsConverted = True
-                            else if (LikeOperator.LikeString(e.PropertyName, "Position?", CompareMethod.Binary) || LikeOperator.LikeString(e.PropertyName, "Rotation?", CompareMethod.Binary))
-                            {
-                                e.StringValue = Conversions.ToString(e.TypedValue);
-                                e.IsConverted = true;
-                            }
-                            else
-                            {
-                                e.StringValue = TextValueConverter.TextFromValue(Conversions.ToLong(e.TypedValue));
-                                e.IsConverted = true;
-                            }
-
-                            break;
                         }
+                        else if (LikeOperator.LikeString(e.PropertyName, "Position?", CompareMethod.Binary) || LikeOperator.LikeString(e.PropertyName, "Rotation?", CompareMethod.Binary))
+                        {
+                            e.StringValue = Conversions.ToString(e.TypedValue);
+                            e.IsConverted = true;
+                        }
+                        else
+                        {
+                            e.StringValue = TextValueConverter.TextFromValue(Conversions.ToLong(e.TypedValue));
+                            e.IsConverted = true;
+                        }
+                        break;
                 }
             }
         }

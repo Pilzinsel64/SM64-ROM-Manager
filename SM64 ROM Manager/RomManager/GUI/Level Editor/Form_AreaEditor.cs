@@ -394,16 +394,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void LoadComboBoxObjComboEntries()
         {
-            var myObjectCombosString = new List<string>();
-            foreach (ObjectCombo c in MyObjectCombos)
-                myObjectCombosString.Add(c.Name);
-
-            // Set Property Settings on AdvPropertyGrid1
-            var propSet = new PropertySettings("ObjectCombo");
-            var editor = new ComboBoxPropertyEditor(myObjectCombosString.ToArray());
-            editor.DropDownWidth = 300;
-            propSet.ValueEditor = editor;
-            AdvPropertyGrid1.PropertySettings.Add(propSet);
+            bpMgr.LoadComboBoxObjComboEntries(MyObjectCombos);
         }
 
         internal void SortObjectCombosAlphabetlicly()
@@ -2359,7 +2350,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
                     // Change Object Combo by Name
                     foreach (Managed3DObject obj in SelectedObjects)
-                        obj.ObjectCombo = dialog.SelectedObjectCombo.Name;
+                        obj.ObjectCombo = dialog.SelectedObjectCombo;
 
                     UpdateObjectListViewItems();
                     ShowObjectProperties();

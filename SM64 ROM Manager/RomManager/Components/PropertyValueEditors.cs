@@ -17,6 +17,7 @@ namespace SM64_ROM_Manager.PropertyValueEditors
     internal enum SelectedTypes
     {
         SelectedItem,
+        SelectedComboItem,
         SelectedIndex
     }
 
@@ -56,23 +57,13 @@ namespace SM64_ROM_Manager.PropertyValueEditors
 
             public Font EditorFont
             {
-                get
-                {
-                    return Font;
-                }
-
-                set
-                {
-                    Font = value;
-                }
+                get => Font;
+                set => Font = value;
             }
 
             public bool IsEditorFocused
             {
-                get
-                {
-                    return Focused;
-                }
+                get => Focused;
             }
 
             public object EditValue
@@ -85,38 +76,33 @@ namespace SM64_ROM_Manager.PropertyValueEditors
                         switch (switchExpr)
                         {
                             case SelectedTypes.SelectedIndex:
-                                {
-                                    return SelectedIndex.ToString(); // SelectedTypes.SelectedItem
-                                }
-
-                            default:
-                                {
-                                    return SelectedItem;
-                                }
+                                return SelectedIndex.ToString(); // SelectedTypes.SelectedItem
+                            case SelectedTypes.SelectedComboItem:
+                                return (SelectedItem as ComboItem)?.Tag;
+                            case SelectedTypes.SelectedItem:
+                                return SelectedItem;
                         }
                     }
-                    else
-                    {
-                        return null;
-                    }
+                    return null;
                 }
-
                 set
                 {
                     var switchExpr = SelectedType;
                     switch (switchExpr)
                     {
                         case SelectedTypes.SelectedIndex:
+                            SelectedIndex = Conversions.ToInteger(value);
+                            break;
+                        case SelectedTypes.SelectedComboItem:
+                            foreach (ComboItem item in Items)
                             {
-                                SelectedIndex = Conversions.ToInteger(value);
-                                break;
+                                if (item.Tag == value)
+                                    SelectedItem = item;
                             }
-
+                            break;
                         case SelectedTypes.SelectedItem:
-                            {
-                                SelectedItem = value;
-                                break;
-                            }
+                            SelectedItem = value;
+                            break;
                     }
                 }
             }
@@ -130,19 +116,19 @@ namespace SM64_ROM_Manager.PropertyValueEditors
 
             protected override void OnSelectedIndexChanged(EventArgs e)
             {
-                OnEditSelectedValueChanged(e);
+                OnEditSelectedValueChanged();
                 base.OnSelectedIndexChanged(e);
             }
 
             protected override void OnSelectedItemChanged(EventArgs e)
             {
-                OnEditSelectedValueChanged(e);
+                OnEditSelectedValueChanged();
                 base.OnSelectedItemChanged(e);
             }
 
-            private void OnEditSelectedValueChanged(EventArgs e)
+            private void OnEditSelectedValueChanged()
             {
-                EditValueChanged?.Invoke(this, e);
+                EditValueChanged?.Invoke(this, new ValueEditorEditValueChangedEventArgs(true));
             }
         }
     }
@@ -502,19 +488,6 @@ namespace SM64_ROM_Manager.PropertyValueEditors
             }
         }
     }
-
-    // Friend Class PropertyIntegerEditorX
-    // Inherits PropertyIntegerEditor
-
-    // Public Overrides Function CreateEditor(propertyDescriptor As PropertyDescriptor, targetObject As Object) As IPropertyValueEditor
-    // Dim editor As IPropertyValueEditor = MyBase.CreateEditor(propertyDescriptor, targetObject)
-
-    // 'Set Horizontal Text Alignment
-    // editor.SetValue("InputHorizontalAlignment", eHorizontalAlignment.Left)
-
-    // Return editor
-    // End Function
-    // End Class
 
     internal class PropertyIntegerEditorX : PropertyValueEditor
     {
