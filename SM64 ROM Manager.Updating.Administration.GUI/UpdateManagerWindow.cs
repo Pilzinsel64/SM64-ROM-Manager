@@ -376,8 +376,8 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             if (discordBot is object)
             {
                 var version = GetSelectedPackageVersion();
-                var desc = manager.GetPackageDescription(version);
-                var frm = new DiscordPostDialog(discordBot, desc.name, desc.description, version);
+                var pkg = manager.GetUpdatePackageInfo(version);
+                var frm = new DiscordPostDialog(discordBot, pkg);
                 frm.ShowDialog();
             }
             else
