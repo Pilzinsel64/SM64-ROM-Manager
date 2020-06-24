@@ -12,7 +12,7 @@ namespace SM64_ROM_Manager
             InitializeComponent();
         }
 
-        private const string WebAddress = "https://pilzinsel64.com/thank-you.html";
+        private const string WebAddress = "https://pilzinsel64.com/thank-you/";
         private bool loaded = false;
 
         private void ThankYouForm_Load(object sender, EventArgs e)
