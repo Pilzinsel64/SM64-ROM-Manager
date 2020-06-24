@@ -76,7 +76,13 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public ObjectCombo GetObjectComboOfObject(Managed3DObject obj)
         {
-            return GetObjectComboOfObject(obj.ModelID, obj.BehaviorID);
+            foreach (var objcombo in this)
+            {
+                if (objcombo.ID == obj.ObjectCombo.ID)
+                    return objcombo;
+            }
+
+            return UnknownCombo;
         }
 
         public ObjectCombo GetObjectComboOfObject(byte modelID, uint behavID)

@@ -405,7 +405,7 @@
     <Compile Include="RomManager\GUI\Coins Settings\Coins Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RomManager\GUI\Level Editor\AdvPropGrid_BehaviorManager.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\AdvPropGrid_ObjectPropertiesHelper.cs" />
     <Compile Include="RomManager\GUI\Level Editor\FormScriptDumps.cs">
       <SubType>Form</SubType>
     </Compile>
