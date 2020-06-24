@@ -362,9 +362,7 @@ namespace SM64_ROM_Manager
         private void RomManager_WritingNewRomVersion(RomManager sender, RomVersionEventArgs e)
         {
             var v = e.RomVersion;
-            v.Version = Assembly.GetEntryAssembly().GetName().Version;
-            v.DevelopmentStage = Conversions.ToInteger(SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage);
-            v.DevelopmentBuild = Conversions.ToInteger(SM64_ROM_Manager.My.Resources.Resources.DevelopmentBuild);
+            v = PatchNewRomVersion(v);
             e.RomVersion = v;
         }
 
@@ -467,6 +465,21 @@ namespace SM64_ROM_Manager
                 if (openBinaryDatas.Count == 0)
                     General.EnableRomWatcher();
             }
+        }
+
+        private RomVersion GetNewRomVersion()
+        {
+            var v = new RomVersion();
+            v = PatchNewRomVersion(v);
+            return v;
+        }
+
+        private RomVersion PatchNewRomVersion(RomVersion v)
+        {
+            v.Version = Assembly.GetEntryAssembly().GetName().Version;
+            v.DevelopmentStage = Conversions.ToInteger(Resources.DevelopmentStage);
+            v.DevelopmentBuild = Conversions.ToInteger(Resources.DevelopmentBuild);
+            return v;
         }
 
         // M a i n   F e a t u r e s
@@ -844,6 +857,13 @@ namespace SM64_ROM_Manager
         public bool HasRomLoaded()
         {
             return RomManager is object;
+        }
+
+        public bool IsRomVersionCompatible()
+        {
+            if (RomManager is object)
+                return RomManager.ProgramVersion > GetNewRomVersion();
+            return true;
         }
 
         // T o o l s

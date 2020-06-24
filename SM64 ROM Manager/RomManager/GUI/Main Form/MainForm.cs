@@ -137,6 +137,9 @@ namespace SM64_ROM_Manager
             ButtonItem_LaunchROM.Enabled = true;
             RefreshAppTitel();
             TabControl_Main_SelectedIndexChanged(TabControl1, null);
+
+            if (Controller.IsRomVersionCompatible())
+                MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_RomUsedInNewerVersion, Form_Main_Resources.MsgBox_RomUsedInNewerVersion_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void Controller_RecentFilesChanged()

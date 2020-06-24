@@ -306,6 +306,8 @@ namespace SM64_ROM_Manager
                 if (!rommgr.GlobalBehaviorBank.Config.Enabled)
                 {
                     if (MessageBoxEx.Show(this, MsgBox_ObjectsNeedGlobalBehavBank, MsgBox_ObjectsNeedGlobalBehavBank_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                        rommgr.GlobalBehaviorBank.Config.Enable();
+                    else
                         enableImport = false;
                 }
 

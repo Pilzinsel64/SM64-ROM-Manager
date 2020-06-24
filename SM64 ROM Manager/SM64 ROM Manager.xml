@@ -524,7 +524,7 @@
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentBuild">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die 1 ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die 2 ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage">
@@ -894,6 +894,16 @@
               Sucht eine lokalisierte Zeichenfolge, die You are going to export multiple custom objects. Do you want to save all objects to one single file (Yes) or do you want to save every single object to one file (No)? ähnelt.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.MsgBox_ObjectsNeedGlobalBehavBank">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die This object needs the Global Behavior Bank activated. Should it get activated?&lt;br/&gt;&lt;br/&gt;Note:&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.MsgBox_ObjectsNeedGlobalBehavBank_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Global Behavior Bank requied ähnelt.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes.MsgBox_Remove_Titel">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die Delete Custom Object ähnelt.
@@ -967,7 +977,7 @@
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_EnableGlobalBehaviorBank">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die The Global Behavior Bank is disabled right now. Do you want to enable it?&lt;br/&gt;Note:&lt;br/&gt;- You will not be able to disable it again.&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die The Global Behavior Bank is disabled right now. Do you want to enable it?&lt;br/&gt;&lt;br/&gt;Note:&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_EnableGlobalBehaviorBank_Title">
@@ -1089,6 +1099,16 @@
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomRemoved_Titel">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die ROM deleted ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomUsedInNewerVersion">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die This ROM has been used in a newer version of SM64 ROM Manager. If you save your ROM in an older (this) version it is possible that you will losse some data or some data may break. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_RomUsedInNewerVersion_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Detected newer version ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_TextsOverLimit">
