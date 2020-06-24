@@ -94,10 +94,14 @@ namespace SM64_ROM_Manager.PropertyValueEditors
                             SelectedIndex = Conversions.ToInteger(value);
                             break;
                         case SelectedTypes.SelectedComboItem:
+                            var found = false;
                             foreach (ComboItem item in Items)
                             {
-                                if (item.Tag == value)
+                                if (!found && item.Tag == value)
+                                {
                                     SelectedItem = item;
+                                    found = true;
+                                }
                             }
                             break;
                         case SelectedTypes.SelectedItem:
@@ -116,19 +120,19 @@ namespace SM64_ROM_Manager.PropertyValueEditors
 
             protected override void OnSelectedIndexChanged(EventArgs e)
             {
-                OnEditSelectedValueChanged();
+                OnEditSelectedValueChanged(e);
                 base.OnSelectedIndexChanged(e);
             }
 
             protected override void OnSelectedItemChanged(EventArgs e)
             {
-                OnEditSelectedValueChanged();
+                OnEditSelectedValueChanged(e);
                 base.OnSelectedItemChanged(e);
             }
 
-            private void OnEditSelectedValueChanged()
+            private void OnEditSelectedValueChanged(EventArgs e)
             {
-                EditValueChanged?.Invoke(this, new ValueEditorEditValueChangedEventArgs(true));
+                EditValueChanged?.Invoke(this, e);
             }
         }
     }

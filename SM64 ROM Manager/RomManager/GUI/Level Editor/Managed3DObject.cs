@@ -47,9 +47,7 @@ namespace SM64_ROM_Manager
             }
         }
 
-        [DisplayName("Object Combo")]
-        [Category("Object Combo")]
-        [Description("Indicates the combination of Model ID and Behavior ID.")]
+        [Browsable(false)]
         public ObjectCombo ObjectCombo
         {
             get
@@ -57,9 +55,8 @@ namespace SM64_ROM_Manager
                 if (myObjectCombo is object)
                     return myObjectCombo;
                 else
-                    return myObjectCombos.GetObjectComboOfObject(this);
+                    return myObjectCombos.GetObjectComboOfObject(ModelID, BehaviorID);
             }
-
             set
             {
                 if (value == null)
@@ -73,6 +70,21 @@ namespace SM64_ROM_Manager
                 // Enable this object if it isn't enabled
                 if (!AnyActs)
                     AllActs = true;
+            }
+        }
+
+        [DisplayName("Object Combo")]
+        [Category("Object Combo")]
+        [Description("Indicates the combination of Model ID and Behavior ID.")]
+        public string ObjectComboID
+        {
+            get
+            {
+                return ObjectCombo?.ID.ID;
+            }
+            set
+            {
+                ObjectCombo = myObjectCombos.FirstOrDefault(n => n.ID == value);
             }
         }
 

@@ -262,13 +262,19 @@ namespace SM64_ROM_Manager.LevelEditor
             // Remove old property settings
             foreach (var ps in AdvPropertyGrid1.PropertySettings.ToArray())
             {
-                if (ps.PropertyName == nameof(Managed3DObject.ObjectCombo))
+                if (ps.PropertyName == nameof(Managed3DObject.ObjectCombo) || ps.PropertyName == nameof(Managed3DObject.ObjectComboID))
                     AdvPropertyGrid1.PropertySettings.Remove(ps);
             }
 
-            // Set Property Settings on AdvPropertyGrid1
-            var propSet = new PropertySettings(nameof(Managed3DObject.ObjectCombo));
-            var items = objComboList.Select(n => new ComboItem { Text = n.Name, Tag = n }).ToArray();
+            // Set property settings for ObjectCombo
+            AdvPropertyGrid1.PropertySettings.Add(new PropertySettings(nameof(Managed3DObject.ObjectCombo))
+            {
+                Visible = false
+            });
+
+            // Set property settings for ObjectComboIndex
+            var propSet = new PropertySettings(nameof(Managed3DObject.ObjectComboID));
+            var items = objComboList.Select(n => new ComboItem { Text = n.Name, Tag = n.ID.ID }).ToArray();
             var editor = new ComboBoxPropertyEditor(items);
             editor.DropDownWidth = 300;
             editor.SelectedType = SelectedTypes.SelectedComboItem;
