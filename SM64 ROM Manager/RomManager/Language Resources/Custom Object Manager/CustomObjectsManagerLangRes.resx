@@ -126,6 +126,12 @@
   <data name="MsgBox_Export_Titel" xml:space="preserve">
     <value>Export Custom Objects</value>
   </data>
+  <data name="MsgBox_ObjectsNeedGlobalBehavBank" xml:space="preserve">
+    <value>This object needs the Global Behavior Bank activated. Should it get activated?&lt;br/&gt;&lt;br/&gt;Note:&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM.</value>
+  </data>
+  <data name="MsgBox_ObjectsNeedGlobalBehavBank_Title" xml:space="preserve">
+    <value>Global Behavior Bank requied</value>
+  </data>
   <data name="MsgBox_RemoveReferences" xml:space="preserve">
     <value>The object you want to remove has some references. Do you also want to remove all referenced Behaviors, Custom ASM Codes, Custom Models and Custom Objects?</value>
   </data>

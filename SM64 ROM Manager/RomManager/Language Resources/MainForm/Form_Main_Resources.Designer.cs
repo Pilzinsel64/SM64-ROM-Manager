@@ -133,7 +133,7 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die The Global Behavior Bank is disabled right now. Do you want to enable it?&lt;br/&gt;Note:&lt;br/&gt;- You will not be able to disable it again.&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The Global Behavior Bank is disabled right now. Do you want to enable it?&lt;br/&gt;&lt;br/&gt;Note:&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
         /// </summary>
         public static string MsgBox_EnableGlobalBehaviorBank {
             get {
@@ -355,6 +355,24 @@ namespace SM64_ROM_Manager.My.Resources {
         public static string MsgBox_RomRemoved_Titel {
             get {
                 return ResourceManager.GetString("MsgBox_RomRemoved_Titel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This ROM has been used in a newer version of SM64 ROM Manager. If you save your ROM in an older (this) version it is possible that you will losse some data or some data may break. ähnelt.
+        /// </summary>
+        public static string MsgBox_RomUsedInNewerVersion {
+            get {
+                return ResourceManager.GetString("MsgBox_RomUsedInNewerVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Detected newer version ähnelt.
+        /// </summary>
+        public static string MsgBox_RomUsedInNewerVersion_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_RomUsedInNewerVersion_Title", resourceCulture);
             }
         }
         

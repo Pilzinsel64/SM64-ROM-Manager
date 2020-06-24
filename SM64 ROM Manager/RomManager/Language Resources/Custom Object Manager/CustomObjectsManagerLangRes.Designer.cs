@@ -89,6 +89,24 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This object needs the Global Behavior Bank activated. Should it get activated?&lt;br/&gt;&lt;br/&gt;Note:&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
+        /// </summary>
+        internal static string MsgBox_ObjectsNeedGlobalBehavBank {
+            get {
+                return ResourceManager.GetString("MsgBox_ObjectsNeedGlobalBehavBank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Global Behavior Bank requied ähnelt.
+        /// </summary>
+        internal static string MsgBox_ObjectsNeedGlobalBehavBank_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_ObjectsNeedGlobalBehavBank_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Delete Custom Object ähnelt.
         /// </summary>
         internal static string MsgBox_Remove_Titel {

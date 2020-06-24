@@ -126,6 +126,12 @@
   <data name="MsgBox_Export_Titel" xml:space="preserve">
     <value>Objekte exportieren</value>
   </data>
+  <data name="MsgBox_ObjectsNeedGlobalBehavBank" xml:space="preserve">
+    <value>Dieses Objekt benötigt die Globale Verhaltens-Bank. Möchtest Du sie aktivieren?&lt;br/&gt;&lt;br/&gt;Hinweis:&lt;br/&gt;- Wenn Du sie aktivierst, werden alle existierenden Verhalten werden in eine neue Segmented-Bank kopiert, welche die originale ersetzt.&lt;br/&gt;- Alle existierenden Verhalten werden beim Speichern der ROM nicht neu geordnet.</value>
+  </data>
+  <data name="MsgBox_ObjectsNeedGlobalBehavBank_Title" xml:space="preserve">
+    <value>Globale Verhaltens-Bank benötigt</value>
+  </data>
   <data name="MsgBox_RemoveReferences" xml:space="preserve">
     <value>Das Objekt, welches Du löschen möchtest, hat noch Referenzen. Möchtest du alle referenzierten Verthalten, ASM-Codes, Modelle und Objekte gleich mit löschen?</value>
   </data>
