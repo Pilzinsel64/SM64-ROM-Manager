@@ -273,8 +273,12 @@ namespace SM64_ROM_Manager.LevelEditor
             else
                 oldPos = obj.Rotation;
 
-            newX = Conversions.ToSingle(Math.Truncate(oldPos.X - Conversions.ToShort(Math.Truncate(mx * Main.ObjectMoveSpeed))));
-            newZ = Conversions.ToSingle(Math.Truncate(oldPos.Z - Conversions.ToShort(Math.Truncate(my * Main.ObjectMoveSpeed))));
+            float CX = Conversions.ToSingle(Math.Sin(Main.Camera.Yaw));
+            float CZ = Conversions.ToSingle(Math.Cos(Main.Camera.Yaw));
+            float CX_2 = Conversions.ToSingle(Math.Sin(Main.Camera.Yaw + Math.PI / 2));
+            float CZ_2 = Conversions.ToSingle(Math.Cos(Main.Camera.Yaw + Math.PI / 2));
+            newX = Conversions.ToSingle(Math.Truncate(oldPos.X - Conversions.ToShort(Math.Truncate(CX * mx * Main.ObjectMoveSpeed)) - Conversions.ToShort(Math.Truncate(CX_2 * mx * Main.ObjectMoveSpeed))));
+            newZ = Conversions.ToSingle(Math.Truncate(oldPos.Z - Conversions.ToShort(Math.Truncate(CZ * my * Main.ObjectMoveSpeed)) - Conversions.ToShort(Math.Truncate(CZ_2 * my * Main.ObjectMoveSpeed))));
 
             if (!forRotation)
             {
