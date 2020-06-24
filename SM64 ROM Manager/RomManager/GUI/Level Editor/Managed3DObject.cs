@@ -22,6 +22,8 @@ namespace SM64_ROM_Manager
 
         [Browsable(false)]
         private ObjectComboList myObjectCombos;
+        [Browsable(false)]
+        private ObjectCombo myObjectCombo = null;
 
         [ReadOnly(true)]
         [Category("Address")]
@@ -45,28 +47,44 @@ namespace SM64_ROM_Manager
             }
         }
 
-        [DisplayName("Object Combo")]
-        [Category("Object Combo")]
-        [Description("Indicates the combination of Model ID and Behavior ID.")]
-        public string ObjectCombo
+        [Browsable(false)]
+        public ObjectCombo ObjectCombo
         {
             get
             {
-                return myObjectCombos.GetObjectComboOfObject(this).Name;
+                if (myObjectCombo is object)
+                    return myObjectCombo;
+                else
+                    return myObjectCombos.GetObjectComboOfObject(ModelID, BehaviorID);
             }
-
             set
             {
-                var oc = myObjectCombos.FirstOrDefault(n => (n.Name ?? "") == (value ?? ""));
-                if (oc is object)
-                {
-                    ModelID = oc.ModelID;
-                    BehaviorID = oc.BehaviorAddress;
-                }
+                if (value == null)
+                    value = ObjectComboList.UnknownCombo;
+
+                ModelID = value.ModelID;
+                BehaviorID = value.BehaviorAddress;
+
+                myObjectCombo = value;
 
                 // Enable this object if it isn't enabled
                 if (!AnyActs)
                     AllActs = true;
+            }
+        }
+
+        [DisplayName("Object Combo")]
+        [Category("Object Combo")]
+        [Description("Indicates the combination of Model ID and Behavior ID.")]
+        public string ObjectComboID
+        {
+            get
+            {
+                return ObjectCombo?.ID.ID;
+            }
+            set
+            {
+                ObjectCombo = myObjectCombos.FirstOrDefault(n => n.ID == value);
             }
         }
 

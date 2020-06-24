@@ -29,7 +29,7 @@ namespace SM64_ROM_Manager.Updating.Client.GUI
         }
 
         // Wird vom Windows Form-Designer benötigt.
-        private System.ComponentModel.IContainer components;
+        private System.ComponentModel.IContainer components = new System.ComponentModel.Container();
 
         // Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
         // Das Bearbeiten ist mit dem Windows Form-Designer möglich.  

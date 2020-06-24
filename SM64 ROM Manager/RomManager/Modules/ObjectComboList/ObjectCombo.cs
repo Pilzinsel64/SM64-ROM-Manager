@@ -1,8 +1,14 @@
 ﻿
+using Newtonsoft.Json;
+using SM64Lib;
+
 namespace SM64_ROM_Manager.LevelEditor
 {
     public class ObjectCombo
     {
+        [JsonIgnore]
+        public UniquieID<ObjectCombo> ID { get; set; } = new UniquieID<ObjectCombo>() { GenerateOnGet = true, SimpleMode = true };
+
         public string Name { get; set; } = "Unknown Combo";
         public byte ModelID { get; set; } = 0;
         public int ModelAddress { get; set; } = 0;
