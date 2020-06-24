@@ -7,12 +7,14 @@ namespace SM64_ROM_Manager.SettingsManager
         public CameraMode DefaultCameraMode { get; set; }
         public System.Windows.Forms.FormWindowState DefaultWindowMode { get; set; }
         public bool RibbonControlExpanded { get; set; }
+        public bool EnableSlideMovementByDefaultForObjects { get; set; }
 
         public void ResetValues()
         {
             DefaultCameraMode = CameraMode.ORBIT;
             DefaultWindowMode = System.Windows.Forms.FormWindowState.Normal;
             RibbonControlExpanded = true;
+            EnableSlideMovementByDefaultForObjects = false;
         }
     }
 }

@@ -204,6 +204,21 @@
   <data name="&gt;&gt;ListViewEx_Objects.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="CircularProgress1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="CircularProgress1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>443, 302</value>
+  </data>
+  <data name="CircularProgress1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 75</value>
+  </data>
+  <data name="CircularProgress1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="CircularProgress1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;CircularProgress1.Name" xml:space="preserve">
     <value>CircularProgress1</value>
   </data>
@@ -238,33 +253,6 @@
     <value>PanelDockContainer3</value>
   </data>
   <data name="&gt;&gt;Panel_GLControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="CircularProgress1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="CircularProgress1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>443, 302</value>
-  </data>
-  <data name="CircularProgress1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 75</value>
-  </data>
-  <data name="CircularProgress1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="CircularProgress1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;CircularProgress1.Name" xml:space="preserve">
-    <value>CircularProgress1</value>
-  </data>
-  <data name="&gt;&gt;CircularProgress1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CircularProgress, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CircularProgress1.Parent" xml:space="preserve">
-    <value>Panel_GLControl</value>
-  </data>
-  <data name="&gt;&gt;CircularProgress1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="ComboItem1.Text" xml:space="preserve">
@@ -445,6 +433,48 @@
   <data name="PanelEx4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="ButtonX_CamMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 53</value>
+  </data>
+  <data name="ButtonX_CamMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 23</value>
+  </data>
+  <data name="LabelItem1.Text" xml:space="preserve">
+    <value>Camera Mode</value>
+  </data>
+  <data name="ButtonItem_CamOrbit.Text" xml:space="preserve">
+    <value>Orbit</value>
+  </data>
+  <data name="ButtonItem_CamFly.Text" xml:space="preserve">
+    <value>Fly</value>
+  </data>
+  <data name="LabelItem2.Text" xml:space="preserve">
+    <value>Look Direction</value>
+  </data>
+  <data name="ButtonItem_CamTop.Text" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="ButtonItem_CamButtom.Text" xml:space="preserve">
+    <value>Buttom</value>
+  </data>
+  <data name="ButtonItem_CamLeft.Text" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="ButtonItem_CamRight.Text" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="ButtonItem_CamFront.Text" xml:space="preserve">
+    <value>Front</value>
+  </data>
+  <data name="ButtonItem_CamBack.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="ButtonX_CamMode.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="ButtonX_CamMode.Text" xml:space="preserve">
+    <value>Orbit</value>
+  </data>
   <data name="&gt;&gt;ButtonX_CamMode.Name" xml:space="preserve">
     <value>ButtonX_CamMode</value>
   </data>
@@ -456,6 +486,18 @@
   </data>
   <data name="&gt;&gt;ButtonX_CamMode.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="LabelX14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 24</value>
+  </data>
+  <data name="LabelX14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="LabelX14.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="LabelX14.Text" xml:space="preserve">
+    <value>Camera Mode:</value>
   </data>
   <data name="&gt;&gt;LabelX14.Name" xml:space="preserve">
     <value>LabelX14</value>
@@ -490,6 +532,15 @@
   <data name="&gt;&gt;PanelEx4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="ButtonX_KeepOnButtom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 68</value>
+  </data>
+  <data name="ButtonX_KeepOnButtom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="ButtonX_KeepOnButtom.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
   <data name="&gt;&gt;ButtonX_KeepOnButtom.Name" xml:space="preserve">
     <value>ButtonX_KeepOnButtom</value>
   </data>
@@ -501,6 +552,15 @@
   </data>
   <data name="&gt;&gt;ButtonX_KeepOnButtom.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="ButtonX_KeepOnTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 39</value>
+  </data>
+  <data name="ButtonX_KeepOnTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="ButtonX_KeepOnTop.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
   </data>
   <data name="&gt;&gt;ButtonX_KeepOnTop.Name" xml:space="preserve">
     <value>ButtonX_KeepOnTop</value>
@@ -514,6 +574,15 @@
   <data name="&gt;&gt;ButtonX_KeepOnTop.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="ButtonX_KeepOnGround.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 10</value>
+  </data>
+  <data name="ButtonX_KeepOnGround.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="ButtonX_KeepOnGround.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
   <data name="&gt;&gt;ButtonX_KeepOnGround.Name" xml:space="preserve">
     <value>ButtonX_KeepOnGround</value>
   </data>
@@ -525,6 +594,18 @@
   </data>
   <data name="&gt;&gt;ButtonX_KeepOnGround.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="ButtonX_DropToBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 68</value>
+  </data>
+  <data name="ButtonX_DropToBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 23</value>
+  </data>
+  <data name="ButtonX_DropToBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="ButtonX_DropToBottom.Text" xml:space="preserve">
+    <value>Drop To Bottom</value>
   </data>
   <data name="&gt;&gt;ButtonX_DropToBottom.Name" xml:space="preserve">
     <value>ButtonX_DropToBottom</value>
@@ -538,6 +619,18 @@
   <data name="&gt;&gt;ButtonX_DropToBottom.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="ButtonX_DropToTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 39</value>
+  </data>
+  <data name="ButtonX_DropToTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 23</value>
+  </data>
+  <data name="ButtonX_DropToTop.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="ButtonX_DropToTop.Text" xml:space="preserve">
+    <value>Drop To Top</value>
+  </data>
   <data name="&gt;&gt;ButtonX_DropToTop.Name" xml:space="preserve">
     <value>ButtonX_DropToTop</value>
   </data>
@@ -549,6 +642,18 @@
   </data>
   <data name="&gt;&gt;ButtonX_DropToTop.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="ButtonX_DropToGround.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 10</value>
+  </data>
+  <data name="ButtonX_DropToGround.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 23</value>
+  </data>
+  <data name="ButtonX_DropToGround.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="ButtonX_DropToGround.Text" xml:space="preserve">
+    <value>Drop To Nearest</value>
   </data>
   <data name="&gt;&gt;ButtonX_DropToGround.Name" xml:space="preserve">
     <value>ButtonX_DropToGround</value>
@@ -583,6 +688,18 @@
   <data name="&gt;&gt;PanelEx3.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="Slider_ObjMoveSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 17</value>
+  </data>
+  <data name="Slider_ObjMoveSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 41</value>
+  </data>
+  <data name="Slider_ObjMoveSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="Slider_ObjMoveSpeed.Text" xml:space="preserve">
+    <value>Object Move Speed: 100%</value>
+  </data>
   <data name="&gt;&gt;Slider_ObjMoveSpeed.Name" xml:space="preserve">
     <value>Slider_ObjMoveSpeed</value>
   </data>
@@ -594,6 +711,18 @@
   </data>
   <data name="&gt;&gt;Slider_ObjMoveSpeed.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="ButtonX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 61</value>
+  </data>
+  <data name="ButtonX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 23</value>
+  </data>
+  <data name="ButtonX1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="ButtonX1.Text" xml:space="preserve">
+    <value>100%</value>
   </data>
   <data name="&gt;&gt;ButtonX1.Name" xml:space="preserve">
     <value>ButtonX1</value>
@@ -607,6 +736,34 @@
   <data name="&gt;&gt;ButtonX1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="ButtonX2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE/t
+        UL2OAVEUvq0l2S38FIuH4B0kEjNjJfMgEsHcaeZ5NCIzd5JZi4IGqxIq0XsKzncdBfFXi6+Z3O/vnDPi
+        DSGq7aBoSdUtNaI4U3cBH/yG9AuasGTwZ0q1Nx01MDz/Q5M3AJ28Q/b3NWm3+p9EzDQp1cT2RgktXAA8
+        dPgMqabIsURneN0v01X/x5JgfFmCtcHzkPlZ+ARaL0m3LbWJ1rPrnRh4fPE+hsMFhunANfx4UZqMK570
+        C7PlqghvlJedMMXW2zBafp4CW13iqB2XbSqu/82Wx6g1wyxCCNMPW5uyl2HpeVhulMPtKGPqNSHEAasp
+        ijn/xHVXAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ButtonX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 61</value>
+  </data>
+  <data name="ButtonX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 23</value>
+  </data>
+  <data name="labelItem4.Text" xml:space="preserve">
+    <value>Movement mode:</value>
+  </data>
+  <data name="checkBoxItem_MvObjPrecise.Text" xml:space="preserve">
+    <value>Precise</value>
+  </data>
+  <data name="checkBoxItem_MvObjSlide.Text" xml:space="preserve">
+    <value>Slide</value>
+  </data>
+  <data name="ButtonX2.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
   <data name="&gt;&gt;ButtonX2.Name" xml:space="preserve">
     <value>ButtonX2</value>
   </data>
@@ -619,6 +776,18 @@
   <data name="&gt;&gt;ButtonX2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="ButtonX4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 61</value>
+  </data>
+  <data name="ButtonX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 23</value>
+  </data>
+  <data name="ButtonX4.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="ButtonX4.Text" xml:space="preserve">
+    <value>300%</value>
+  </data>
   <data name="&gt;&gt;ButtonX4.Name" xml:space="preserve">
     <value>ButtonX4</value>
   </data>
@@ -630,6 +799,18 @@
   </data>
   <data name="&gt;&gt;ButtonX4.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="ButtonX3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 61</value>
+  </data>
+  <data name="ButtonX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 23</value>
+  </data>
+  <data name="ButtonX3.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="ButtonX3.Text" xml:space="preserve">
+    <value>20%</value>
   </data>
   <data name="&gt;&gt;ButtonX3.Name" xml:space="preserve">
     <value>ButtonX3</value>
@@ -937,6 +1118,48 @@
   <data name="&gt;&gt;DockSite4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="Bar_AreaViewer.AccessibleDescription" xml:space="preserve">
+    <value>DotNetBar Bar (Bar_AreaViewer)</value>
+  </data>
+  <data name="Bar_AreaViewer.AccessibleName" xml:space="preserve">
+    <value>DotNetBar Bar</value>
+  </data>
+  <data name="PanelDockContainer3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="PanelDockContainer3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>961, 679</value>
+  </data>
+  <data name="PanelDockContainer3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer3.Name" xml:space="preserve">
+    <value>PanelDockContainer3</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.PanelDockContainer, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer3.Parent" xml:space="preserve">
+    <value>Bar_AreaViewer</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Bar_AreaViewer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="DockContainerItem3.Text" xml:space="preserve">
+    <value>Area View</value>
+  </data>
+  <data name="Bar_AreaViewer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Bar_AreaViewer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>967, 685</value>
+  </data>
+  <data name="Bar_AreaViewer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;Bar_AreaViewer.Name" xml:space="preserve">
     <value>Bar_AreaViewer</value>
   </data>
@@ -973,6 +1196,87 @@
   <data name="&gt;&gt;DockSite9.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="Bar1.AccessibleDescription" xml:space="preserve">
+    <value>Properties (Bar1)</value>
+  </data>
+  <data name="Bar1.AccessibleName" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="AdvPropertyGrid1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AdvPropertyGrid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="AdvPropertyGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 518</value>
+  </data>
+  <data name="AdvPropertyGrid1.SystemText.AlphabeticalToolbarTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="AdvPropertyGrid1.SystemText.CategorizeToolbarTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="AdvPropertyGrid1.SystemText.ErrorSettingPropertyValueTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="AdvPropertyGrid1.SystemText.SearchBoxWatermarkText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="AdvPropertyGrid1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Name" xml:space="preserve">
+    <value>AdvPropertyGrid1</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.AdvPropertyGrid, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Parent" xml:space="preserve">
+    <value>PanelDockContainer10</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PanelDockContainer10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 23</value>
+  </data>
+  <data name="PanelDockContainer10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 518</value>
+  </data>
+  <data name="PanelDockContainer10.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer10.Name" xml:space="preserve">
+    <value>PanelDockContainer10</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer10.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.PanelDockContainer, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer10.Parent" xml:space="preserve">
+    <value>Bar1</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer10.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="DockContainerItem7.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Bar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 276</value>
+  </data>
+  <data name="Bar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 544</value>
+  </data>
+  <data name="Bar1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Bar1.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
   <data name="&gt;&gt;Bar1.Name" xml:space="preserve">
     <value>Bar1</value>
   </data>
@@ -984,6 +1288,129 @@
   </data>
   <data name="&gt;&gt;Bar1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="Bar2.AccessibleDescription" xml:space="preserve">
+    <value>Objects (Bar2)</value>
+  </data>
+  <data name="Bar2.AccessibleName" xml:space="preserve">
+    <value>Objects</value>
+  </data>
+  <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 222</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>PanelDockContainer7</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PanelDockContainer7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 48</value>
+  </data>
+  <data name="PanelDockContainer7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 222</value>
+  </data>
+  <data name="PanelDockContainer7.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer7.Name" xml:space="preserve">
+    <value>PanelDockContainer7</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.PanelDockContainer, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer7.Parent" xml:space="preserve">
+    <value>Bar2</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 222</value>
+  </data>
+  <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
+    <value>PanelDockContainer1</value>
+  </data>
+  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PanelDockContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 48</value>
+  </data>
+  <data name="PanelDockContainer1.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>265, 200</value>
+  </data>
+  <data name="PanelDockContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 222</value>
+  </data>
+  <data name="PanelDockContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PanelDockContainer1.Text" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer1.Name" xml:space="preserve">
+    <value>PanelDockContainer1</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.PanelDockContainer, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer1.Parent" xml:space="preserve">
+    <value>Bar2</value>
+  </data>
+  <data name="&gt;&gt;PanelDockContainer1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Bar2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="DockContainerItem4.Text" xml:space="preserve">
+    <value>Objects</value>
+  </data>
+  <data name="DockContainerItem1.Text" xml:space="preserve">
+    <value>Warps</value>
+  </data>
+  <data name="Bar2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Bar2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 273</value>
+  </data>
+  <data name="Bar2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Bar2.Text" xml:space="preserve">
+    <value>Objects</value>
   </data>
   <data name="&gt;&gt;Bar2.Name" xml:space="preserve">
     <value>Bar2</value>
@@ -1036,11 +1463,129 @@
   <data name="ContextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
+  <data name="ButtonItem9.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <metadata name="SuperTooltip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>315, 17</value>
+  </metadata>
+  <data name="SuperTooltip1.DefaultTooltipSettings" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonItem37.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ButtonItem37.SuperTooltip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonItem37.SuperTooltip2" xml:space="preserve">
+    <value>"Default" means, it will be pasted following:
+
+- Model-ID
+- Behavior-ID
+- B. Params
+- Acts</value>
+  </data>
+  <data name="ButtonItem37.SuperTooltip3" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ButtonItem37.SuperTooltip4" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <assembly alias="DevComponents.DotNetBar2" name="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null" />
+  <data name="ButtonItem37.SuperTooltip5" type="DevComponents.DotNetBar.eTooltipColor, DevComponents.DotNetBar2">
+    <value>Gray</value>
+  </data>
+  <data name="ButtonItem37.SuperTooltip6" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonItem37.SuperTooltip7" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonItem37.SuperTooltip8" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ButtonItem37.Text" xml:space="preserve">
+    <value>Paste (Default)</value>
+  </data>
+  <data name="ButtonItem63.Text" xml:space="preserve">
+    <value>Edit Command</value>
+  </data>
+  <data name="ButtonItem_ChangeObjectCombo.Text" xml:space="preserve">
+    <value>Change Object Combo ...</value>
+  </data>
+  <data name="ButtonItem30.Text" xml:space="preserve">
+    <value>Change Behavior ...</value>
+  </data>
+  <data name="ButtonItem33.Text" xml:space="preserve">
+    <value>Remember Object Combo ...</value>
+  </data>
+  <data name="ButtonItem64.Text" xml:space="preserve">
+    <value>Reset to Default</value>
+  </data>
+  <data name="ButtonItem65.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonItem68.Text" xml:space="preserve">
+    <value>Export Object Model</value>
+  </data>
   <data name="ButtonItem_CM_Objects.Text" xml:space="preserve">
     <value>Objects</value>
   </data>
+  <data name="ButtonItem6.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ButtonItem5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ButtonItem5.SuperTooltip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonItem5.SuperTooltip2" xml:space="preserve">
+    <value>"Default" means, it will be pasted following:
+
+- Destination Level
+- Destination Area
+- Destination Warp</value>
+  </data>
+  <data name="ButtonItem5.SuperTooltip3" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ButtonItem5.SuperTooltip4" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ButtonItem5.SuperTooltip5" type="DevComponents.DotNetBar.eTooltipColor, DevComponents.DotNetBar2">
+    <value>Gray</value>
+  </data>
+  <data name="ButtonItem5.SuperTooltip6" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonItem5.SuperTooltip7" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonItem5.SuperTooltip8" type="System.Drawing.Size, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ButtonItem5.Text" xml:space="preserve">
+    <value>Paste (Default)</value>
+  </data>
+  <data name="ButtonItem7.Text" xml:space="preserve">
+    <value>Edit Command</value>
+  </data>
+  <data name="ButtonItem23.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
   <data name="ButtonItem1_CM_Warps.Text" xml:space="preserve">
     <value>Warps</value>
+  </data>
+  <data name="ButtonItem24.Text" xml:space="preserve">
+    <value>Point to Vertex 1</value>
+  </data>
+  <data name="ButtonItem25.Text" xml:space="preserve">
+    <value>Point to Vertex 2</value>
+  </data>
+  <data name="ButtonItem26.Text" xml:space="preserve">
+    <value>Point to Vertex 3</value>
   </data>
   <data name="ButtonItem22.Text" xml:space="preserve">
     <value>Faces</value>
@@ -1237,7 +1782,6 @@
   <data name="ButtonItem_CopyObjCmdAsHex.SuperTooltip4" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <assembly alias="DevComponents.DotNetBar2" name="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null" />
   <data name="ButtonItem_CopyObjCmdAsHex.SuperTooltip5" type="DevComponents.DotNetBar.eTooltipColor, DevComponents.DotNetBar2">
     <value>Gray</value>
   </data>
@@ -1454,6 +1998,27 @@
   <data name="ButtonItem_ObjectsCopy.Text" xml:space="preserve">
     <value>Copy Object</value>
   </data>
+  <data name="ButtonItem_PasteObjCombo.Text" xml:space="preserve">
+    <value>Object Combo</value>
+  </data>
+  <data name="ButtonItem_PasteObjModelID.Text" xml:space="preserve">
+    <value>Model-ID</value>
+  </data>
+  <data name="ButtonItem_PasteObjBehavID.Text" xml:space="preserve">
+    <value>Behavior-ID</value>
+  </data>
+  <data name="ButtonItem_PasteObjBParams.Text" xml:space="preserve">
+    <value>B. Params</value>
+  </data>
+  <data name="ButtonItem_PasteObjActs.Text" xml:space="preserve">
+    <value>Acts</value>
+  </data>
+  <data name="ButtonItem_PasteObjPos.Text" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ButtonItem_PasteObjRot.Text" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
   <data name="buttonItem55.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1483,12 +2048,6 @@
   </data>
   <data name="RibbonBar3.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 84</value>
-  </data>
-  <metadata name="SuperTooltip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>315, 17</value>
-  </metadata>
-  <data name="SuperTooltip1.DefaultTooltipSettings" xml:space="preserve">
-    <value />
   </data>
   <data name="RibbonBar3.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1799,6 +2358,9 @@
   <data name="RibbonBar25.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <data name="ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Text" xml:space="preserve">
+    <value>Add Death Floor with extended boundaries</value>
+  </data>
   <data name="ButtonItem_ButtonItem_AddDeathFloor.Text" xml:space="preserve">
     <value>Add Death Floor</value>
   </data>
@@ -2048,8 +2610,23 @@
   <data name="RibbonBar6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <data name="ButtonItem_ImportModel.Text" xml:space="preserve">
+    <value>Import Model</value>
+  </data>
+  <data name="ButtonItem_ImportVisualMap.Text" xml:space="preserve">
+    <value>Import Visual Map</value>
+  </data>
+  <data name="ButtonItem_ImportCollision.Text" xml:space="preserve">
+    <value>Import Collision</value>
+  </data>
   <data name="ButtonItem47.Text" xml:space="preserve">
     <value>Import</value>
+  </data>
+  <data name="ButtonItem_ExportVisualMap.Text" xml:space="preserve">
+    <value>Export Visual Map</value>
+  </data>
+  <data name="ButtonItem_ExportCollision.Text" xml:space="preserve">
+    <value>Export Collision</value>
   </data>
   <data name="ButtonItem53.Text" xml:space="preserve">
     <value>Export</value>
@@ -2300,6 +2877,15 @@
   <data name="ButtonX_WarpsCopy.Text" xml:space="preserve">
     <value>Copy Warp</value>
   </data>
+  <data name="ButtonItem_PasteWarpDestLevel.Text" xml:space="preserve">
+    <value>Dest. Level</value>
+  </data>
+  <data name="ButtonItem_PasteWarpDestArea.Text" xml:space="preserve">
+    <value>Dest. Area</value>
+  </data>
+  <data name="ButtonItem_PasteWarpDestWarp.Text" xml:space="preserve">
+    <value>Dest. Warp</value>
+  </data>
   <data name="ButtonItem73.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -2368,6 +2954,15 @@
   </data>
   <data name="RibbonBar12.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
+  </data>
+  <data name="ButtonX_WarpsAddConnectedWarp.Text" xml:space="preserve">
+    <value>Connected Warp</value>
+  </data>
+  <data name="ButtonX_WarpsAddPaintingWarp.Text" xml:space="preserve">
+    <value>Painting Warp</value>
+  </data>
+  <data name="ButtonItem_WarpsAddInstantWarp.Text" xml:space="preserve">
+    <value>Instant Warp</value>
   </data>
   <data name="ButtonX_WarpsAdd.Text" xml:space="preserve">
     <value>Warp</value>
@@ -2548,6 +3143,18 @@
   </data>
   <data name="RibbonControl1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 3</value>
+  </data>
+  <data name="ButtonItem_SaveRom.Text" xml:space="preserve">
+    <value>Save ROM</value>
+  </data>
+  <data name="ButtonItem_LaunchROM.Text" xml:space="preserve">
+    <value>Launch ROM</value>
+  </data>
+  <data name="ButtonItem3.AlternateShortCutText" xml:space="preserve">
+    <value>Alt+F4</value>
+  </data>
+  <data name="ButtonItem3.Text" xml:space="preserve">
+    <value>Close Level Editor</value>
   </data>
   <data name="ApplicationButton1.Text" xml:space="preserve">
     <value>File</value>
@@ -5501,858 +6108,8 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.RibbonForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonX_CamMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 53</value>
-  </data>
-  <data name="ButtonX_CamMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 23</value>
-  </data>
-  <data name="ButtonX_CamMode.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="ButtonX_CamMode.Text" xml:space="preserve">
-    <value>Orbit</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_CamMode.Name" xml:space="preserve">
-    <value>ButtonX_CamMode</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_CamMode.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_CamMode.Parent" xml:space="preserve">
-    <value>PanelEx4</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_CamMode.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LabelItem1.Text" xml:space="preserve">
-    <value>Camera Mode</value>
-  </data>
-  <data name="ButtonItem_CamOrbit.Text" xml:space="preserve">
-    <value>Orbit</value>
-  </data>
-  <data name="ButtonItem_CamFly.Text" xml:space="preserve">
-    <value>Fly</value>
-  </data>
-  <data name="LabelItem2.Text" xml:space="preserve">
-    <value>Look Direction</value>
-  </data>
-  <data name="ButtonItem_CamTop.Text" xml:space="preserve">
-    <value>Top</value>
-  </data>
-  <data name="ButtonItem_CamButtom.Text" xml:space="preserve">
-    <value>Buttom</value>
-  </data>
-  <data name="ButtonItem_CamLeft.Text" xml:space="preserve">
-    <value>Left</value>
-  </data>
-  <data name="ButtonItem_CamRight.Text" xml:space="preserve">
-    <value>Right</value>
-  </data>
-  <data name="ButtonItem_CamFront.Text" xml:space="preserve">
-    <value>Front</value>
-  </data>
-  <data name="ButtonItem_CamBack.Text" xml:space="preserve">
-    <value>Back</value>
-  </data>
-  <data name="LabelX14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 24</value>
-  </data>
-  <data name="LabelX14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="LabelX14.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="LabelX14.Text" xml:space="preserve">
-    <value>Camera Mode:</value>
-  </data>
-  <data name="&gt;&gt;LabelX14.Name" xml:space="preserve">
-    <value>LabelX14</value>
-  </data>
-  <data name="&gt;&gt;LabelX14.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX14.Parent" xml:space="preserve">
-    <value>PanelEx4</value>
-  </data>
-  <data name="&gt;&gt;LabelX14.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ButtonX_KeepOnButtom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 68</value>
-  </data>
-  <data name="ButtonX_KeepOnButtom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="ButtonX_KeepOnButtom.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnButtom.Name" xml:space="preserve">
-    <value>ButtonX_KeepOnButtom</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnButtom.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnButtom.Parent" xml:space="preserve">
-    <value>PanelEx3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnButtom.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ButtonX_KeepOnTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 39</value>
-  </data>
-  <data name="ButtonX_KeepOnTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="ButtonX_KeepOnTop.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnTop.Name" xml:space="preserve">
-    <value>ButtonX_KeepOnTop</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnTop.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnTop.Parent" xml:space="preserve">
-    <value>PanelEx3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnTop.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ButtonX_KeepOnGround.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 10</value>
-  </data>
-  <data name="ButtonX_KeepOnGround.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="ButtonX_KeepOnGround.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnGround.Name" xml:space="preserve">
-    <value>ButtonX_KeepOnGround</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnGround.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnGround.Parent" xml:space="preserve">
-    <value>PanelEx3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_KeepOnGround.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ButtonX_DropToBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 68</value>
-  </data>
-  <data name="ButtonX_DropToBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 23</value>
-  </data>
-  <data name="ButtonX_DropToBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="ButtonX_DropToBottom.Text" xml:space="preserve">
-    <value>Drop To Bottom</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToBottom.Name" xml:space="preserve">
-    <value>ButtonX_DropToBottom</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToBottom.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToBottom.Parent" xml:space="preserve">
-    <value>PanelEx3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToBottom.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ButtonX_DropToTop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 39</value>
-  </data>
-  <data name="ButtonX_DropToTop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 23</value>
-  </data>
-  <data name="ButtonX_DropToTop.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="ButtonX_DropToTop.Text" xml:space="preserve">
-    <value>Drop To Top</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToTop.Name" xml:space="preserve">
-    <value>ButtonX_DropToTop</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToTop.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToTop.Parent" xml:space="preserve">
-    <value>PanelEx3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToTop.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="ButtonX_DropToGround.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 10</value>
-  </data>
-  <data name="ButtonX_DropToGround.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 23</value>
-  </data>
-  <data name="ButtonX_DropToGround.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="ButtonX_DropToGround.Text" xml:space="preserve">
-    <value>Drop To Nearest</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToGround.Name" xml:space="preserve">
-    <value>ButtonX_DropToGround</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToGround.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToGround.Parent" xml:space="preserve">
-    <value>PanelEx3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_DropToGround.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="Slider_ObjMoveSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 17</value>
-  </data>
-  <data name="Slider_ObjMoveSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 41</value>
-  </data>
-  <data name="Slider_ObjMoveSpeed.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="Slider_ObjMoveSpeed.Text" xml:space="preserve">
-    <value>Object Move Speed: 100%</value>
-  </data>
-  <data name="&gt;&gt;Slider_ObjMoveSpeed.Name" xml:space="preserve">
-    <value>Slider_ObjMoveSpeed</value>
-  </data>
-  <data name="&gt;&gt;Slider_ObjMoveSpeed.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.Slider, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Slider_ObjMoveSpeed.Parent" xml:space="preserve">
-    <value>PanelEx2</value>
-  </data>
-  <data name="&gt;&gt;Slider_ObjMoveSpeed.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ButtonX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 61</value>
-  </data>
-  <data name="ButtonX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 23</value>
-  </data>
-  <data name="ButtonX1.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="ButtonX1.Text" xml:space="preserve">
-    <value>100%</value>
-  </data>
-  <data name="&gt;&gt;ButtonX1.Name" xml:space="preserve">
-    <value>ButtonX1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX1.Parent" xml:space="preserve">
-    <value>PanelEx2</value>
-  </data>
-  <data name="&gt;&gt;ButtonX1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ButtonX2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE/t
-        UL2OAVEUvq0l2S38FIuH4B0kEjNjJfMgEsHcaeZ5NCIzd5JZi4IGqxIq0XsKzncdBfFXi6+Z3O/vnDPi
-        DSGq7aBoSdUtNaI4U3cBH/yG9AuasGTwZ0q1Nx01MDz/Q5M3AJ28Q/b3NWm3+p9EzDQp1cT2RgktXAA8
-        dPgMqabIsURneN0v01X/x5JgfFmCtcHzkPlZ+ARaL0m3LbWJ1rPrnRh4fPE+hsMFhunANfx4UZqMK570
-        C7PlqghvlJedMMXW2zBafp4CW13iqB2XbSqu/82Wx6g1wyxCCNMPW5uyl2HpeVhulMPtKGPqNSHEAasp
-        ijn/xHVXAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="ButtonX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 61</value>
-  </data>
-  <data name="ButtonX2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 23</value>
-  </data>
-  <data name="ButtonX2.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;ButtonX2.Name" xml:space="preserve">
-    <value>ButtonX2</value>
-  </data>
-  <data name="&gt;&gt;ButtonX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX2.Parent" xml:space="preserve">
-    <value>PanelEx2</value>
-  </data>
-  <data name="&gt;&gt;ButtonX2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelItem4.Text" xml:space="preserve">
-    <value>Movement mode:</value>
-  </data>
-  <data name="checkBoxItem_MvObjPrecise.Text" xml:space="preserve">
-    <value>Precise</value>
-  </data>
-  <data name="checkBoxItem_MvObjSlide.Text" xml:space="preserve">
-    <value>Slide</value>
-  </data>
-  <data name="ButtonX4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 61</value>
-  </data>
-  <data name="ButtonX4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 23</value>
-  </data>
-  <data name="ButtonX4.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="ButtonX4.Text" xml:space="preserve">
-    <value>300%</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.Name" xml:space="preserve">
-    <value>ButtonX4</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.Parent" xml:space="preserve">
-    <value>PanelEx2</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ButtonX3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 61</value>
-  </data>
-  <data name="ButtonX3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 23</value>
-  </data>
-  <data name="ButtonX3.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="ButtonX3.Text" xml:space="preserve">
-    <value>20%</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.Name" xml:space="preserve">
-    <value>ButtonX3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.Parent" xml:space="preserve">
-    <value>PanelEx2</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Bar_AreaViewer.AccessibleDescription" xml:space="preserve">
-    <value>DotNetBar Bar (Bar_AreaViewer)</value>
-  </data>
-  <data name="Bar_AreaViewer.AccessibleName" xml:space="preserve">
-    <value>DotNetBar Bar</value>
-  </data>
-  <data name="PanelDockContainer3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="PanelDockContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>961, 679</value>
-  </data>
-  <data name="PanelDockContainer3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer3.Name" xml:space="preserve">
-    <value>PanelDockContainer3</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.PanelDockContainer, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer3.Parent" xml:space="preserve">
-    <value>Bar_AreaViewer</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Bar_AreaViewer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="DockContainerItem3.Text" xml:space="preserve">
-    <value>Area View</value>
-  </data>
-  <data name="Bar_AreaViewer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Bar_AreaViewer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>967, 685</value>
-  </data>
-  <data name="Bar_AreaViewer.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Bar_AreaViewer.Name" xml:space="preserve">
-    <value>Bar_AreaViewer</value>
-  </data>
-  <data name="&gt;&gt;Bar_AreaViewer.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Bar_AreaViewer.Parent" xml:space="preserve">
-    <value>DockSite9</value>
-  </data>
-  <data name="&gt;&gt;Bar_AreaViewer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Bar1.AccessibleDescription" xml:space="preserve">
-    <value>Properties (Bar1)</value>
-  </data>
-  <data name="Bar1.AccessibleName" xml:space="preserve">
-    <value>Properties</value>
-  </data>
-  <data name="&gt;&gt;AdvPropertyGrid1.Name" xml:space="preserve">
-    <value>AdvPropertyGrid1</value>
-  </data>
-  <data name="&gt;&gt;AdvPropertyGrid1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.AdvPropertyGrid, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AdvPropertyGrid1.Parent" xml:space="preserve">
-    <value>PanelDockContainer10</value>
-  </data>
-  <data name="&gt;&gt;AdvPropertyGrid1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PanelDockContainer10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 23</value>
-  </data>
-  <data name="PanelDockContainer10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 518</value>
-  </data>
-  <data name="PanelDockContainer10.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer10.Name" xml:space="preserve">
-    <value>PanelDockContainer10</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer10.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.PanelDockContainer, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer10.Parent" xml:space="preserve">
-    <value>Bar1</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer10.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="DockContainerItem7.Text" xml:space="preserve">
-    <value>Properties</value>
-  </data>
-  <data name="Bar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 276</value>
-  </data>
-  <data name="Bar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 544</value>
-  </data>
-  <data name="Bar1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Bar1.Text" xml:space="preserve">
-    <value>Properties</value>
-  </data>
-  <data name="&gt;&gt;Bar1.Name" xml:space="preserve">
-    <value>Bar1</value>
-  </data>
-  <data name="&gt;&gt;Bar1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Bar1.Parent" xml:space="preserve">
-    <value>DockSite1</value>
-  </data>
-  <data name="&gt;&gt;Bar1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="AdvPropertyGrid1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="AdvPropertyGrid1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="AdvPropertyGrid1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 518</value>
-  </data>
-  <data name="AdvPropertyGrid1.SystemText.AlphabeticalToolbarTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="AdvPropertyGrid1.SystemText.CategorizeToolbarTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="AdvPropertyGrid1.SystemText.ErrorSettingPropertyValueTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="AdvPropertyGrid1.SystemText.SearchBoxWatermarkText" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="AdvPropertyGrid1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;AdvPropertyGrid1.Name" xml:space="preserve">
-    <value>AdvPropertyGrid1</value>
-  </data>
-  <data name="&gt;&gt;AdvPropertyGrid1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.AdvPropertyGrid, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AdvPropertyGrid1.Parent" xml:space="preserve">
-    <value>PanelDockContainer10</value>
-  </data>
-  <data name="&gt;&gt;AdvPropertyGrid1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Bar2.AccessibleDescription" xml:space="preserve">
-    <value>Objects (Bar2)</value>
-  </data>
-  <data name="Bar2.AccessibleName" xml:space="preserve">
-    <value>Objects</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>PanelDockContainer7</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PanelDockContainer7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 48</value>
-  </data>
-  <data name="PanelDockContainer7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 222</value>
-  </data>
-  <data name="PanelDockContainer7.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer7.Name" xml:space="preserve">
-    <value>PanelDockContainer7</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer7.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.PanelDockContainer, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer7.Parent" xml:space="preserve">
-    <value>Bar2</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
-    <value>Panel2</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
-    <value>PanelDockContainer1</value>
-  </data>
-  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PanelDockContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 48</value>
-  </data>
-  <data name="PanelDockContainer1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>265, 200</value>
-  </data>
-  <data name="PanelDockContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 222</value>
-  </data>
-  <data name="PanelDockContainer1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="PanelDockContainer1.Text" xml:space="preserve">
-    <value>Area</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer1.Name" xml:space="preserve">
-    <value>PanelDockContainer1</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.PanelDockContainer, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer1.Parent" xml:space="preserve">
-    <value>Bar2</value>
-  </data>
-  <data name="&gt;&gt;PanelDockContainer1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Bar2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="DockContainerItem4.Text" xml:space="preserve">
-    <value>Objects</value>
-  </data>
-  <data name="DockContainerItem1.Text" xml:space="preserve">
-    <value>Warps</value>
-  </data>
-  <data name="Bar2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Bar2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 273</value>
-  </data>
-  <data name="Bar2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Bar2.Text" xml:space="preserve">
-    <value>Objects</value>
-  </data>
-  <data name="&gt;&gt;Bar2.Name" xml:space="preserve">
-    <value>Bar2</value>
-  </data>
-  <data name="&gt;&gt;Bar2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Bar2.Parent" xml:space="preserve">
-    <value>DockSite1</value>
-  </data>
-  <data name="&gt;&gt;Bar2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 222</value>
-  </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>PanelDockContainer7</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 222</value>
-  </data>
-  <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Name" xml:space="preserve">
-    <value>Panel2</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel2.Parent" xml:space="preserve">
-    <value>PanelDockContainer1</value>
-  </data>
-  <data name="&gt;&gt;Panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="DockContainerItem6.Text" xml:space="preserve">
     <value>Renderer</value>
-  </data>
-  <data name="ButtonItem_PasteObjCombo.Text" xml:space="preserve">
-    <value>Object Combo</value>
-  </data>
-  <data name="ButtonItem_PasteObjModelID.Text" xml:space="preserve">
-    <value>Model-ID</value>
-  </data>
-  <data name="ButtonItem_PasteObjBehavID.Text" xml:space="preserve">
-    <value>Behavior-ID</value>
-  </data>
-  <data name="ButtonItem_PasteObjBParams.Text" xml:space="preserve">
-    <value>B. Params</value>
-  </data>
-  <data name="ButtonItem_PasteObjActs.Text" xml:space="preserve">
-    <value>Acts</value>
-  </data>
-  <data name="ButtonItem_PasteObjPos.Text" xml:space="preserve">
-    <value>Position</value>
-  </data>
-  <data name="ButtonItem_PasteObjRot.Text" xml:space="preserve">
-    <value>Rotation</value>
-  </data>
-  <data name="ButtonItem_PasteWarpDestLevel.Text" xml:space="preserve">
-    <value>Dest. Level</value>
-  </data>
-  <data name="ButtonItem_PasteWarpDestArea.Text" xml:space="preserve">
-    <value>Dest. Area</value>
-  </data>
-  <data name="ButtonItem_PasteWarpDestWarp.Text" xml:space="preserve">
-    <value>Dest. Warp</value>
-  </data>
-  <metadata name="SuperTooltip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>315, 17</value>
-  </metadata>
-  <data name="ButtonItem37.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem37.SuperTooltip1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ButtonItem37.SuperTooltip2" xml:space="preserve">
-    <value>"Default" means, it will be pasted following:
-
-- Model-ID
-- Behavior-ID
-- B. Params
-- Acts</value>
-  </data>
-  <data name="ButtonItem37.SuperTooltip3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem37.SuperTooltip4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem37.SuperTooltip5" type="DevComponents.DotNetBar.eTooltipColor, DevComponents.DotNetBar2">
-    <value>Gray</value>
-  </data>
-  <data name="ButtonItem37.SuperTooltip6" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ButtonItem37.SuperTooltip7" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ButtonItem37.SuperTooltip8" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ButtonItem37.Text" xml:space="preserve">
-    <value>Paste (Default)</value>
-  </data>
-  <data name="ButtonItem5.SuperTooltip" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem5.SuperTooltip1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ButtonItem5.SuperTooltip2" xml:space="preserve">
-    <value>"Default" means, it will be pasted following:
-
-- Destination Level
-- Destination Area
-- Destination Warp</value>
-  </data>
-  <data name="ButtonItem5.SuperTooltip3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem5.SuperTooltip4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonItem5.SuperTooltip5" type="DevComponents.DotNetBar.eTooltipColor, DevComponents.DotNetBar2">
-    <value>Gray</value>
-  </data>
-  <data name="ButtonItem5.SuperTooltip6" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ButtonItem5.SuperTooltip7" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ButtonItem5.SuperTooltip8" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ButtonItem5.Text" xml:space="preserve">
-    <value>Paste (Default)</value>
-  </data>
-  <data name="ButtonItem9.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="ButtonItem63.Text" xml:space="preserve">
-    <value>Edit Command</value>
-  </data>
-  <data name="ButtonItem_ChangeObjectCombo.Text" xml:space="preserve">
-    <value>Change Object Combo ...</value>
-  </data>
-  <data name="ButtonItem30.Text" xml:space="preserve">
-    <value>Change Behavior ...</value>
-  </data>
-  <data name="ButtonItem33.Text" xml:space="preserve">
-    <value>Remember Object Combo ...</value>
-  </data>
-  <data name="ButtonItem64.Text" xml:space="preserve">
-    <value>Reset to Default</value>
-  </data>
-  <data name="ButtonItem65.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="ButtonItem68.Text" xml:space="preserve">
-    <value>Export Object Model</value>
-  </data>
-  <data name="ButtonItem6.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="ButtonItem7.Text" xml:space="preserve">
-    <value>Edit Command</value>
-  </data>
-  <data name="ButtonItem23.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="ButtonItem24.Text" xml:space="preserve">
-    <value>Point to Vertex 1</value>
-  </data>
-  <data name="ButtonItem25.Text" xml:space="preserve">
-    <value>Point to Vertex 2</value>
-  </data>
-  <data name="ButtonItem26.Text" xml:space="preserve">
-    <value>Point to Vertex 3</value>
-  </data>
-  <data name="ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Text" xml:space="preserve">
-    <value>Add Death Floor with extended boundaries</value>
-  </data>
-  <data name="ButtonItem_ImportModel.Text" xml:space="preserve">
-    <value>Import Model</value>
-  </data>
-  <data name="ButtonItem_ImportVisualMap.Text" xml:space="preserve">
-    <value>Import Visual Map</value>
-  </data>
-  <data name="ButtonItem_ImportCollision.Text" xml:space="preserve">
-    <value>Import Collision</value>
-  </data>
-  <data name="ButtonItem_ExportVisualMap.Text" xml:space="preserve">
-    <value>Export Visual Map</value>
-  </data>
-  <data name="ButtonItem_ExportCollision.Text" xml:space="preserve">
-    <value>Export Collision</value>
-  </data>
-  <data name="ButtonX_WarpsAddConnectedWarp.Text" xml:space="preserve">
-    <value>Connected Warp</value>
-  </data>
-  <data name="ButtonX_WarpsAddPaintingWarp.Text" xml:space="preserve">
-    <value>Painting Warp</value>
-  </data>
-  <data name="ButtonItem_WarpsAddInstantWarp.Text" xml:space="preserve">
-    <value>Instant Warp</value>
-  </data>
-  <data name="ButtonItem_SaveRom.Text" xml:space="preserve">
-    <value>Save ROM</value>
-  </data>
-  <data name="ButtonItem_LaunchROM.Text" xml:space="preserve">
-    <value>Launch ROM</value>
-  </data>
-  <data name="ButtonItem3.AlternateShortCutText" xml:space="preserve">
-    <value>Alt+F4</value>
-  </data>
-  <data name="ButtonItem3.Text" xml:space="preserve">
-    <value>Close Level Editor</value>
   </data>
   <data name="ButtonItem13.Text" xml:space="preserve">
     <value> 1 Vertex</value>

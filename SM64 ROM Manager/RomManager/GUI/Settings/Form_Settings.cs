@@ -77,6 +77,7 @@ namespace SM64_ROM_Manager
             SwitchButton_AutoDetectStartEndQuotationMarks.Value = Settings.TextManager.AutoDetectStartEndQuotationMarks;
             TextBoxX_ProxyUsr.Text = Settings.Network.ProxyUsername;
             TextBoxX_ProxyPwd.Text = string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted) ? string.Empty : crypter.DecryptData(Settings.Network.ProxyPasswordEncrypted);
+            comboBoxEx_DefaultObjMoveMode.SelectedIndex = Settings.AreaEditor.EnableSlideMovementByDefaultForObjects ? 1 : 0;
 
             var curLoaderModule = Publics.Publics.GetLoaderModuleFromID(Settings.FileParser.FileLoaderModule);
             foreach (ComboItem item in ComboBoxEx_LoaderModule.Items)
@@ -238,6 +239,7 @@ namespace SM64_ROM_Manager
             Settings.Network.AutoUpdates = SwitchButton_SearchUpdates.Value;
             Settings.AreaEditor.DefaultCameraMode = (Pilz.Drawing.Drawing3D.OpenGLFactory.CameraN.CameraMode)ComboBox_AreaEditor_DefaultCameraMode.SelectedIndex;
             Settings.AreaEditor.DefaultWindowMode = ComboBox_AreaEditor_DefaultWindowMode.SelectedIndex == 1 ? FormWindowState.Maximized : FormWindowState.Normal;
+            Settings.AreaEditor.EnableSlideMovementByDefaultForObjects = comboBoxEx_DefaultObjMoveMode.SelectedIndex == 1;
             Settings.FileParser.FileLoaderModule = Publics.Publics.GetLoaderIDFromModule((File3DLoaderModule)((ComboItem)ComboBoxEx_LoaderModule.SelectedItem).Tag);
             Settings.FileParser.FileExporterModule = Publics.Publics.GetExporterIDFromModule((File3DLoaderModule)((ComboItem)ComboBoxEx_ExporterModule.SelectedItem).Tag);
             Settings.ModelConverter.UseLegacyCollisionDescriptions = SwitchButton_UseLegacyCollisionDescriptions.Value;

@@ -597,6 +597,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonX6
             // 
+            this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX6.AutoExpandOnClick = true;
             this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX6.FocusCuesEnabled = false;
@@ -629,6 +630,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.checkBoxItem_MvCamSlide.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.checkBoxItem_MvCamSlide.GlobalItem = false;
             this.checkBoxItem_MvCamSlide.Name = "checkBoxItem_MvCamSlide";
+            this.checkBoxItem_MvCamSlide.Visible = false;
             resources.ApplyResources(this.checkBoxItem_MvCamSlide, "checkBoxItem_MvCamSlide");
             // 
             // ButtonX7
@@ -669,6 +671,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonX_CamMode
             // 
+            this.ButtonX_CamMode.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_CamMode.AutoExpandOnClick = true;
             this.ButtonX_CamMode.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX_CamMode.FocusCuesEnabled = false;
@@ -904,6 +907,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonX2
             // 
+            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX2.AutoExpandOnClick = true;
             this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX2.FocusCuesEnabled = false;

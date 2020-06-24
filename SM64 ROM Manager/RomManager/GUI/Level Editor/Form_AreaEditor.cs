@@ -202,11 +202,25 @@ namespace SM64_ROM_Manager.LevelEditor
         internal bool EnableSlideMovementForObjects
         {
             get => checkBoxItem_MvObjSlide.Checked;
+            set
+            {
+                if (value != EnableSlideMovementForObjects)
+                    checkBoxItem_MvObjSlide.Checked = true;
+                else
+                    checkBoxItem_MvObjPrecise.Checked = true;
+            }
         }
 
         internal bool EnableSlideMovementForCamera
         {
             get => checkBoxItem_MvCamSlide.Checked;
+            set
+            {
+                if (value != EnableSlideMovementForCamera)
+                    checkBoxItem_MvCamSlide.Checked = true;
+                else
+                    checkBoxItem_MvCamPrecise.Checked = true;
+            }
         }
 
         public bool DrawObjectModels
@@ -351,6 +365,9 @@ namespace SM64_ROM_Manager.LevelEditor
                 PanelEx1.Style.BackColor1.Color = Color.LightSteelBlue;
                 PanelEx1.Style.BackColor2.Color = Color.LightSteelBlue;
             }
+
+            // Set default movement mode
+            EnableSlideMovementForObjects = Settings.AreaEditor.EnableSlideMovementByDefaultForObjects;
 
             // Add Groups to ListView Controls
             ListViewEx_Warps.Groups.AddRange(new[] { lvg_ConnectedWarps, lvg_WarpsForGame, lvg_PaintingWarps, lvg_InstantWarps });
