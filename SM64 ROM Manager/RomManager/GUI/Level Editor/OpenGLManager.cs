@@ -159,8 +159,7 @@ namespace SM64_ROM_Manager.LevelEditor
         }
         
         internal Matrix4 ProjMatrix = default;
-        internal bool Ortho = false;
-        internal float FOV = 1.048F;
+        internal float FOV { get; set; } = 1.048F;
         internal Matrix4 camMtx = Matrix4.Identity;
         internal Vector3 savedCamPos = new Vector3();
         internal bool isMouseDown = false;
@@ -267,7 +266,7 @@ namespace SM64_ROM_Manager.LevelEditor
             TargetControl.Controls.Add(GLControl1);
             GLControl1.CreateControl();
             GLControl1.Enabled = false;
-            UpdateProjMatrix();
+            UpdateProjMatrix(false);
             Camera.UpdateMatrix(ref camMtx);
         }
 
@@ -278,7 +277,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public void Update()
         {
-            GLControl1.Update();
+            GLControl1.Invalidate();
         }
 
         public void MakeCurrent()
@@ -286,13 +285,11 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControl1.MakeCurrent();
         }
 
-        public void ChangeViewMode(bool ortho)
+        public void ChangeViewMode()
         {
             if (GLControl1 is object)
             {
-                Ortho = ortho;
                 UpdateProjMatrix();
-                GLControl1?.Update();
             }
         }
 
@@ -406,19 +403,12 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControl1.Context.Update(GLControl1.WindowInfo);
             GL.Viewport(0, 0, GLControl1.Width, GLControl1.Height);
             UpdateProjMatrix();
-            GLControl1.Invalidate();
         }
 
-        public void UpdateProjMatrix()
+        public void UpdateProjMatrix(bool update = true)
         {
-            if (Ortho)
-            {
-                ProjMatrix = Matrix4.CreateOrthographic(GLControl1.Width * 4, GLControl1.Height * 4, 100.0F, 100000.0F);
-            }
-            else
-            {
-                ProjMatrix = Matrix4.CreatePerspectiveFieldOfView(FOV, (float)(GLControl1.Width / (double)GLControl1.Height), 100.0F, 100000.0F);
-            }
+            ProjMatrix = Matrix4.CreatePerspectiveFieldOfView(FOV, (float)(GLControl1.Width / (double)GLControl1.Height), 100.0F, 100000.0F);
+            if (update) Update();
         }
 
         private void glControl1_Wheel(object sender, MouseEventArgs e)

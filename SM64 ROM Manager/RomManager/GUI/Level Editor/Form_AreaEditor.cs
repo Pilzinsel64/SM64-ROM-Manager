@@ -3414,5 +3414,13 @@ namespace SM64_ROM_Manager.LevelEditor
 
             frm.Show();
         }
+
+        private void SliderItem_FOV_ValueChanged(object sender, EventArgs e)
+        {
+            var value = sliderItem_FOV.Value;
+            ogl.FOV = value * ((float)Math.PI / 180.0f);
+            ogl.ChangeViewMode();
+            sliderItem_FOV.Text = "FOV: " + value;
+        }
     }
 }

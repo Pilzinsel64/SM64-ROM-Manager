@@ -210,8 +210,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.RibbonBar23 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer4 = new DevComponents.DotNetBar.ItemContainer();
-            this.CheckBoxItem_PerspectiveMode = new DevComponents.DotNetBar.CheckBoxItem();
-            this.CheckBoxItem_OrthoMode = new DevComponents.DotNetBar.CheckBoxItem();
+            this.sliderItem_FOV = new DevComponents.DotNetBar.SliderItem();
             this.RibbonBar22 = new DevComponents.DotNetBar.RibbonBar();
             this.ButtonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonBar21 = new DevComponents.DotNetBar.RibbonBar();
@@ -630,8 +629,8 @@ namespace SM64_ROM_Manager.LevelEditor
             this.checkBoxItem_MvCamSlide.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.checkBoxItem_MvCamSlide.GlobalItem = false;
             this.checkBoxItem_MvCamSlide.Name = "checkBoxItem_MvCamSlide";
-            this.checkBoxItem_MvCamSlide.Visible = false;
             resources.ApplyResources(this.checkBoxItem_MvCamSlide, "checkBoxItem_MvCamSlide");
+            this.checkBoxItem_MvCamSlide.Visible = false;
             // 
             // ButtonX7
             // 
@@ -2374,8 +2373,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ItemContainer4.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
             this.ItemContainer4.Name = "ItemContainer4";
             this.ItemContainer4.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.CheckBoxItem_PerspectiveMode,
-            this.CheckBoxItem_OrthoMode});
+            this.sliderItem_FOV});
             // 
             // 
             // 
@@ -2386,19 +2384,15 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ItemContainer4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ItemContainer4.VerticalItemAlignment = DevComponents.DotNetBar.eVerticalItemsAlignment.Middle;
             // 
-            // CheckBoxItem_PerspectiveMode
+            // sliderItem_FOV
             // 
-            this.CheckBoxItem_PerspectiveMode.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.CheckBoxItem_PerspectiveMode.Checked = true;
-            this.CheckBoxItem_PerspectiveMode.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CheckBoxItem_PerspectiveMode.Name = "CheckBoxItem_PerspectiveMode";
-            resources.ApplyResources(this.CheckBoxItem_PerspectiveMode, "CheckBoxItem_PerspectiveMode");
-            // 
-            // CheckBoxItem_OrthoMode
-            // 
-            this.CheckBoxItem_OrthoMode.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.CheckBoxItem_OrthoMode.Name = "CheckBoxItem_OrthoMode";
-            resources.ApplyResources(this.CheckBoxItem_OrthoMode, "CheckBoxItem_OrthoMode");
+            this.sliderItem_FOV.LabelWidth = 50;
+            this.sliderItem_FOV.Maximum = 170;
+            this.sliderItem_FOV.Minimum = 10;
+            this.sliderItem_FOV.Name = "sliderItem_FOV";
+            resources.ApplyResources(this.sliderItem_FOV, "sliderItem_FOV");
+            this.sliderItem_FOV.Value = 60;
+            this.sliderItem_FOV.ValueChanged += new System.EventHandler(this.SliderItem_FOV_ValueChanged);
             // 
             // RibbonBar22
             // 
@@ -3911,8 +3905,6 @@ namespace SM64_ROM_Manager.LevelEditor
         internal DevComponents.DotNetBar.ButtonItem ButtonItem1;
         internal DevComponents.DotNetBar.RibbonBar RibbonBar23;
         internal DevComponents.DotNetBar.ItemContainer ItemContainer4;
-        internal DevComponents.DotNetBar.CheckBoxItem CheckBoxItem_PerspectiveMode;
-        internal DevComponents.DotNetBar.CheckBoxItem CheckBoxItem_OrthoMode;
         internal DevComponents.DotNetBar.RibbonBar RibbonBar22;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem2;
         internal DevComponents.DotNetBar.RibbonBar RibbonBar24;
@@ -3963,6 +3955,7 @@ namespace SM64_ROM_Manager.LevelEditor
         private DevComponents.DotNetBar.LabelItem labelItem4;
         private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvObjPrecise;
         private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvObjSlide;
+        private DevComponents.DotNetBar.SliderItem sliderItem_FOV;
     }
 
 }

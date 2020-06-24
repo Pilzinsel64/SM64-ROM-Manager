@@ -74,8 +74,6 @@ namespace SM64_ROM_Manager.LevelEditor
             Main.PictureBox_CamMoveCross.MouseUp += PictureBox_CamMoveCross_MouseUp;
             Main.PictureBox_CamMoveCross.MouseMove += PictureBox_CamMoveCross_MouseMove;
             Main.Camera.NeedSelectedObject += Camera_NeedSelectedObject;
-            Main.CheckBoxItem_PerspectiveMode.CheckedChanged += CheckBoxItem_PerspectiveMode_CheckedChanged;
-            Main.CheckBoxItem_OrthoMode.CheckedChanged += CheckBoxItem_OrthoMode_CheckedChanged;
         }
 
         private void SaveObjectPositionToList()
@@ -457,22 +455,6 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 Main.ogl.SetCameraMode(CameraMode.FLY);
                 WasInOrbitMode = true;
-            }
-        }
-
-        private void CheckBoxItem_PerspectiveMode_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
-        {
-            if (((CheckBoxItem)sender).Checked)
-            {
-                Main.ogl.ChangeViewMode(false);
-            }
-        }
-
-        private void CheckBoxItem_OrthoMode_CheckedChanged(object sender, CheckBoxChangeEventArgs e)
-        {
-            if (((CheckBoxItem)sender).Checked)
-            {
-                Main.ogl.ChangeViewMode(true);
             }
         }
     }
