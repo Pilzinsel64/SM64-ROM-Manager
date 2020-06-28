@@ -65,6 +65,7 @@ namespace SM64_ROM_Manager.LevelEditor
         internal Dictionary<byte, Renderer> ObjectModels { get; private set; } = new Dictionary<byte, Renderer>();
         internal Dictionary<ManagedSpecialBox, Renderer> SpecialBoxRenderers { get; private set; } = new Dictionary<ManagedSpecialBox, Renderer>();
         internal ObjectComboList MyObjectCombos { get; private set; } = new ObjectComboList();
+        internal ObjectComboList CustomObjectsObjectCombos { get; } = new ObjectComboList();
         internal BehaviorInfoList MyBehaviorInfos { get; private set; } = new BehaviorInfoList();
         internal Dictionary<byte, object> ObjectModelsToParse { get; private set; } = new Dictionary<byte, object>();
         internal List<string> MyLevelsList { get; private set; } = new List<string>();
@@ -421,11 +422,9 @@ namespace SM64_ROM_Manager.LevelEditor
             MyBehaviorInfos.AddRange(BuildBehaviorInfos(Rommgr.CustomObjects));
         }
 
-        internal static ObjectComboList BuildObjectCombos(CustomObjectCollection customObjectCollection)
+        internal ObjectComboList BuildObjectCombos(CustomObjectCollection customObjectCollection)
         {
-            var list = new ObjectComboList();
-
-            if (customObjectCollection?.CustomObjects is object)
+            if (!CustomObjectsObjectCombos.Any() && customObjectCollection?.CustomObjects is object)
             {
                 foreach (var customObject in customObjectCollection.CustomObjects)
                 {
@@ -455,11 +454,11 @@ namespace SM64_ROM_Manager.LevelEditor
                     }
 
                     // Add to List
-                    list.Add(combo);
+                    CustomObjectsObjectCombos.Add(combo);
                 }
             }
 
-            return list;
+            return CustomObjectsObjectCombos;
         }
 
         internal static BehaviorInfoList BuildBehaviorInfos(CustomObjectCollection customObjectCollection)
