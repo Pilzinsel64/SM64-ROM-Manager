@@ -1051,8 +1051,8 @@ namespace SM64_ROM_Manager
 
         public void OpenThankYouPage()
         {
-            var frm = new SM64_ROM_Manager.ThankYouForm();
-            frm.ShowDialog(mainForm);
+            const string webAddress = "https://pilzinsel64.com/thank-you/";
+            Process.Start(webAddress);
         }
 
         private void RomWatcher_Changed(object sender, FileSystemEventArgs e)

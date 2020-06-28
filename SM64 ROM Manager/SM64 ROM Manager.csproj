@@ -461,12 +461,6 @@
     <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RomManager\GUI\Other\ThankYouForm.Designer.cs">
-      <DependentUpon>ThankYouForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RomManager\GUI\Other\ThankYouForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -901,9 +895,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.resx">
       <DependentUpon>TextProfilesManagerDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\GUI\Other\ThankYouForm.resx">
-      <DependentUpon>ThankYouForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.de.resx">
       <DependentUpon>BehaviorBankManager.cs</DependentUpon>
