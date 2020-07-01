@@ -36,6 +36,7 @@ namespace SM64_ROM_Manager
 
             // Init Components
             InitializeComponent();
+            TabControl1.Dock = DockStyle.Fill;
 
             // Set instance on Tabs   
             tabGeneral.Controller = Controller;
