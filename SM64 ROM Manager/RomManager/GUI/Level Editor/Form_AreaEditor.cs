@@ -65,6 +65,7 @@ namespace SM64_ROM_Manager.LevelEditor
         internal Dictionary<byte, Renderer> ObjectModels { get; private set; } = new Dictionary<byte, Renderer>();
         internal Dictionary<ManagedSpecialBox, Renderer> SpecialBoxRenderers { get; private set; } = new Dictionary<ManagedSpecialBox, Renderer>();
         internal ObjectComboList MyObjectCombos { get; private set; } = new ObjectComboList();
+        internal ObjectComboList CustomObjectsObjectCombos { get; } = new ObjectComboList();
         internal BehaviorInfoList MyBehaviorInfos { get; private set; } = new BehaviorInfoList();
         internal Dictionary<byte, object> ObjectModelsToParse { get; private set; } = new Dictionary<byte, object>();
         internal List<string> MyLevelsList { get; private set; } = new List<string>();
@@ -340,7 +341,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // Initialize Components
             InitializeComponent();
             SelectedList = ListViewEx_Objects;
-
+            
             // Create Modules
             ogl = new OpenGLManager(this, Panel_GLControl);
             objectControlling = new ObjectControlling(this);
@@ -360,7 +361,7 @@ namespace SM64_ROM_Manager.LevelEditor
             WindowState = Settings.AreaEditor.DefaultWindowMode;
 
             // Setup some Styles
-            if (Settings.StyleManager.AlwaysKeepBlueColors)
+            if (!Settings.StyleManager.IsDarkTheme())
             {
                 PanelEx1.Style.BackColor1.Color = Color.LightSteelBlue;
                 PanelEx1.Style.BackColor2.Color = Color.LightSteelBlue;
@@ -388,6 +389,8 @@ namespace SM64_ROM_Manager.LevelEditor
 
             // Resume drawing
             ResumeLayout();
+
+            RibbonControl1.AutoSyncSize();
 
             // Add event to remember loaded area displaylist dumps
             General.LoadedAreaVisualMapDisplayLists += General_LoadedAreaVisualMapDisplayLists;
@@ -448,11 +451,9 @@ namespace SM64_ROM_Manager.LevelEditor
             MyBehaviorInfos.AddRange(BuildBehaviorInfos(Rommgr.CustomObjects));
         }
 
-        internal static ObjectComboList BuildObjectCombos(CustomObjectCollection customObjectCollection)
+        internal ObjectComboList BuildObjectCombos(CustomObjectCollection customObjectCollection)
         {
-            var list = new ObjectComboList();
-
-            if (customObjectCollection?.CustomObjects is object)
+            if (!CustomObjectsObjectCombos.Any() && customObjectCollection?.CustomObjects is object)
             {
                 foreach (var customObject in customObjectCollection.CustomObjects)
                 {
@@ -482,11 +483,11 @@ namespace SM64_ROM_Manager.LevelEditor
                     }
 
                     // Add to List
-                    list.Add(combo);
+                    CustomObjectsObjectCombos.Add(combo);
                 }
             }
 
-            return list;
+            return CustomObjectsObjectCombos;
         }
 
         internal static BehaviorInfoList BuildBehaviorInfos(CustomObjectCollection customObjectCollection)
@@ -781,12 +782,21 @@ namespace SM64_ROM_Manager.LevelEditor
         private async Task LoadCustomObjectBankModel(CustomModel obj)
         {
             var mdl = new Object3D();
+            var data = new BinaryStreamData(obj.Model.Fast3DBuffer);
             foreach (Geopointer gp in obj.Geolayout.Geopointers)
-                await LoadDisplaylist(gp, mdl);
+                await LoadDisplaylist(data, gp, mdl);
             AddObject3DWithRendererIfNotNull(mdl, obj.ModelID);
         }
 
         private async Task<DisplayList> LoadDisplaylist(Geopointer pointer, Object3D mdl)
+        {
+            var dl = new DisplayList();
+            await dl.TryFromStreamAsync(pointer, Rommgr, default);
+            await dl.TryToObject3DAsync(mdl, Rommgr, default);
+            return dl;
+        }
+
+        private async Task<DisplayList> LoadDisplaylist(BinaryData data, Geopointer pointer, Object3D mdl)
         {
             var dl = new DisplayList();
             await dl.TryFromStreamAsync(pointer, Rommgr, default);

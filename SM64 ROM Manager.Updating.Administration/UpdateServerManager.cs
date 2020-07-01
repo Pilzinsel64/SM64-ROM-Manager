@@ -343,7 +343,7 @@ namespace SM64_ROM_Manager.Updating.Administration
             return info;
         }
 
-        private UpdatePackageInfo GetUpdatePackageInfo(ApplicationVersion version)
+        public UpdatePackageInfo GetUpdatePackageInfo(ApplicationVersion version)
         {
             return UpdateInfo.Packages.FirstOrDefault((n) => n.Version == version);
         }

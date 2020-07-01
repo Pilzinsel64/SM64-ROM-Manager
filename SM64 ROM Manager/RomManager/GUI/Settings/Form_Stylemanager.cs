@@ -52,7 +52,7 @@ namespace SM64_ROM_Manager
                 ComboBoxEx1.SelectedIndex = 0;
             }
 
-            if (Settings.StyleManager.UseWindows10Style)
+            if (Settings.StyleManager.UseSystemTheme)
             {
                 CheckBoxX1.Checked = true;
             }
@@ -71,7 +71,7 @@ namespace SM64_ROM_Manager
                 return;
             MetroColorGeneratorParameters newTheme = (MetroColorGeneratorParameters)((ComboItem)ComboBoxEx1.SelectedItem).Tag;
             Settings.StyleManager.MetroColorParams = newTheme;
-            Settings.StyleManager.UseWindows10Style = CheckBoxX1.Checked;
+            Settings.StyleManager.UseSystemTheme = CheckBoxX1.Checked;
             Publics.Publics.SetVisualTheme();
             foreach (Form frm in Application.OpenForms)
             {

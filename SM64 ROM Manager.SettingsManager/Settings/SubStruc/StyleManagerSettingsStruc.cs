@@ -2,6 +2,7 @@
 using System.Linq;
 using global::DevComponents.DotNetBar;
 using global::DevComponents.DotNetBar.Metro.ColorTables;
+using Newtonsoft.Json;
 
 namespace SM64_ROM_Manager.SettingsManager
 {
@@ -9,13 +10,14 @@ namespace SM64_ROM_Manager.SettingsManager
     {
         public bool AlwaysKeepBlueColors { get; set; }
         public MetroColorGeneratorParameters MetroColorParams { get; set; }
-        public bool UseWindows10Style { get; set; }
+        [JsonProperty("UseWindows10Style")]
+        public bool UseSystemTheme { get; set; }
 
         public void ResetValues()
         {
             AlwaysKeepBlueColors = false;
             MetroColorParams = VisualThemeLight; // MetroColorGeneratorParameters.Office2016Purple
-            UseWindows10Style = true;
+            UseSystemTheme = true;
         }
 
         public bool IsDarkTheme()

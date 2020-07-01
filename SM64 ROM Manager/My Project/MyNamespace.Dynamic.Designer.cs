@@ -331,29 +331,6 @@ namespace SM64_ROM_Manager.My
             }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
-            public ThankYouForm m_ThankYouForm;
-
-            public ThankYouForm ThankYouForm
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_ThankYouForm = MyForms.Create__Instance__(m_ThankYouForm);
-                    return m_ThankYouForm;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_ThankYouForm)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_ThankYouForm);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
             public ValueInputDialog m_ValueInputDialog;
 
             public ValueInputDialog ValueInputDialog

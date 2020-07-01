@@ -423,9 +423,9 @@ namespace SM64_ROM_Manager
             foreach (ListViewItem lvi in ListViewEx_LM_Specials.Items)
             {
                 if ((int)lvi.Tag == itemIndex)
-                {
                     toRemove.Add(lvi);
-                }
+                else if ((int)lvi.Tag > itemIndex)
+                    lvi.Tag = (int)lvi.Tag - 1;
             }
 
             toRemove.ForEach(n => ListViewEx_LM_Specials.Items.Remove(n));
