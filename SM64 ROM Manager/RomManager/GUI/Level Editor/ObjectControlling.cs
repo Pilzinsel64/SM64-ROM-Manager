@@ -46,6 +46,12 @@ namespace SM64_ROM_Manager.LevelEditor
         private bool moveCam_strafe_mouseDown = false;
 
         public bool WasInOrbitMode { get; set; } = false;
+        public bool EnableRedraw { get; set; } = true;
+
+        public bool IsMovingObject
+        {
+            get => moveObj_mouseDown || moveObj_UpDown_mouseDown;
+        }
 
         public ObjectControlling(Form_AreaEditor main)
         {
@@ -89,6 +95,59 @@ namespace SM64_ROM_Manager.LevelEditor
             foreach (Managed3DObject obj in Main.SelectedObjects)
                 moveObj_saved.Add(obj.Rotation);
         }
+        public void SlideMoveObjects(bool allowRedraw = false)
+        {
+            if (Main.EnableSlideMovementForObjects)
+            {
+                if (moveObj_mouseDown)
+                {
+                    Main.Invoke(new Action(() =>
+                    {
+                        EnableRedraw = allowRedraw;
+                        var p = Main.PictureBox_ObjCntrCross.PointToClient(Cursor.Position);
+                        PictureBox_ObjCntrCross_MouseMove(this, new MouseEventArgs(MouseButtons.Left, 0, p.X, p.Y, 0));
+                        allowRedraw = true;
+                    }));
+                }
+                else if (moveObj_UpDown_mouseDown)
+                {
+                    Main.Invoke(new Action(() =>
+                    {
+                        EnableRedraw = allowRedraw;
+                        var p = Main.PictureBox_ObjCntrWheel.PointToClient(Cursor.Position);
+                        PictureBox_ObjCntrWheel_MouseMove(this, new MouseEventArgs(MouseButtons.Left, 0, p.X, p.Y, 0));
+                        allowRedraw = true;
+                    }));
+                }
+            }
+        }
+
+        public void SlideRotateObjects(bool allowRedraw = false)
+        {
+            if (Main.EnableSlideMovementForObjects)
+            {
+                if (rotObj_mouseDown)
+                {
+                    Main.Invoke(new Action(() =>
+                    {
+                        EnableRedraw = allowRedraw;
+                        var p = Main.PictureBox_ObjRotCross.PointToClient(Cursor.Position);
+                        PictureBox_ObjRotCross_MouseMove(this, new MouseEventArgs(MouseButtons.Left, 0, p.X, p.Y, 0));
+                        allowRedraw = true;
+                    }));
+                }
+                else if (rotObj_Yaw_mouseDown)
+                {
+                    Main.Invoke(new Action(() =>
+                    {
+                        EnableRedraw = allowRedraw;
+                        var p = Main.PictureBox_ObjRotWheel.PointToClient(Cursor.Position);
+                        PictureBox_ObjRotWheel_MouseMove(this, new MouseEventArgs(MouseButtons.Left, 0, p.X, p.Y, 0));
+                        allowRedraw = true;
+                    }));
+                }
+            }
+        }
 
         public void PictureBox_ObjCntrWheel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -103,6 +162,7 @@ namespace SM64_ROM_Manager.LevelEditor
             moveObj_UpDown_mouseDown = false;
         }
 
+
         public void PictureBox_ObjCntrWheel_MouseMove(object sender, MouseEventArgs e)
         {
             if (moveObj_UpDown_mouseDown)
@@ -112,8 +172,11 @@ namespace SM64_ROM_Manager.LevelEditor
                     var obj = Main.SelectedObjects[mo_s_incr];
                     if (Main.EnableSlideMovementForObjects)
                     {
-                        var zeroPoint = Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2));
-                        SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), zeroPoint, moveObj_saved[mo_s_incr], false);
+                        if (sender == this)
+                        {
+                            var zeroPoint = Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2));
+                            SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), zeroPoint, moveObj_saved[mo_s_incr], false);
+                        }
                     }
                     else
                         moveObjectY(obj, e.Location, moveObj_saved[mo_s_incr], false);
@@ -163,8 +226,11 @@ namespace SM64_ROM_Manager.LevelEditor
                     {
                         if (Main.EnableSlideMovementForObjects)
                         {
-                            var zeroPoint = Main.PictureBox_ObjCntrCross.PointToScreen(new Point(Main.PictureBox_ObjCntrCross.Width / 2, Main.PictureBox_ObjCntrCross.Height / 2));
-                            SlideMoveObjectXZ((Managed3DObject)obj, Cursor.Position, zeroPoint, moveObj_saved[mo_s_incr], false);
+                            if (sender == this)
+                            {
+                                var zeroPoint = Main.PictureBox_ObjCntrCross.PointToScreen(new Point(Main.PictureBox_ObjCntrCross.Width / 2, Main.PictureBox_ObjCntrCross.Height / 2));
+                                SlideMoveObjectXZ((Managed3DObject)obj, Cursor.Position, zeroPoint, moveObj_saved[mo_s_incr], false);
+                            }
                         }
                         else
                             moveObjectXZ((Managed3DObject)obj, ((Control)sender).PointToClient(Cursor.Position), moveObj_saved[mo_s_incr], false);
@@ -340,7 +406,10 @@ namespace SM64_ROM_Manager.LevelEditor
                         if (obj is object)
                         {
                             if (Main.EnableSlideMovementForObjects)
-                                SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2)), moveObj_saved[mo_s_incr], true);
+                            {
+                                if (sender == this)
+                                    SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2)), moveObj_saved[mo_s_incr], true);
+                            }
                             else
                                 moveObjectY(obj, e.Location, moveObj_saved[mo_s_incr], true);
                         }
@@ -383,8 +452,11 @@ namespace SM64_ROM_Manager.LevelEditor
                         {
                             if (Main.EnableSlideMovementForObjects)
                             {
-                                var zeroPoint = Main.PictureBox_ObjRotCross.PointToScreen(new Point(Main.PictureBox_ObjRotCross.Width / 2, Main.PictureBox_ObjRotCross.Height / 2));
-                                SlideMoveObjectXZ((Managed3DObject)obj, Cursor.Position, zeroPoint, moveObj_saved[mo_s_incr], true);
+                                if (sender == this)
+                                {
+                                    var zeroPoint = Main.PictureBox_ObjRotCross.PointToScreen(new Point(Main.PictureBox_ObjRotCross.Width / 2, Main.PictureBox_ObjRotCross.Height / 2));
+                                    SlideMoveObjectXZ((Managed3DObject)obj, Cursor.Position, zeroPoint, moveObj_saved[mo_s_incr], true);
+                                }
                             }
                             else
                                 moveObjectXZ(obj, ((Control)sender).PointToClient(Cursor.Position), moveObj_saved[mo_s_incr], true);
