@@ -408,7 +408,10 @@ namespace SM64_ROM_Manager.LevelEditor
                             if (Main.EnableSlideMovementForObjects)
                             {
                                 if (sender == this)
-                                    SlideMoveObjectY(obj, (sender as Control).PointToScreen(e.Location), Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(0, Main.PictureBox_ObjCntrWheel.Height / 2)), moveObj_saved[mo_s_incr], true);
+                                {
+                                    var zeroPoint = Main.PictureBox_ObjCntrWheel.PointToScreen(new Point(Main.PictureBox_ObjCntrWheel.Width / 2, Main.PictureBox_ObjCntrWheel.Height / 2));
+                                    SlideMoveObjectY(obj, Cursor.Position, zeroPoint, moveObj_saved[mo_s_incr], true);
+                                }
                             }
                             else
                                 moveObjectY(obj, e.Location, moveObj_saved[mo_s_incr], true);
