@@ -30,7 +30,7 @@ namespace SM64_ROM_Manager.LevelEditor
             General.LoadBehaviorInfosIfEmpty();
             General.LoadObjectCombosIfEmpty();
             LoadComboBoxObjComboEntries(objComboList);
-
+            
             // Add B. Param Editors to Property Grid
             var bpeditor = new ContentSelectorEditor();
             bpeditor.EditorCreated += ContentSelectorEditor_EditorCreated;
@@ -258,7 +258,7 @@ namespace SM64_ROM_Manager.LevelEditor
         public void LoadComboBoxObjComboEntries(ObjectComboList objComboList)
         {
             myObjectCombos = objComboList;
-
+            
             // Remove old property settings
             foreach (var ps in AdvPropertyGrid1.PropertySettings.ToArray())
             {

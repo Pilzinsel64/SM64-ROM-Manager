@@ -2945,37 +2945,29 @@ namespace SM64_ROM_Manager.LevelEditor
             var switchExpr = e.PropertyName;
             switch (switchExpr)
             {
-                case "AllActs":
-                case "Act1":
-                case "Act2":
-                case "Act3":
-                case "Act4":
-                case "Act5":
-                case "Act6":
-                    {
-                        AdvPropertyGrid1_RefreshPropertyValues();
-                        break;
-                    }
-
-                case "Rotation":
-                case "Position":
-                    {
-                        ogl.UpdateOrbitCamera();
-                        ogl.Invalidate();
-                        break;
-                    }
-
-                case "ObjectCombo":
-                case "ModelID":
-                case "BehaviorID":
-                    {
-                        CheckObjCombo();
-                        UpdateBParamNames();
-                        AdvPropertyGrid1_RefreshPropertyValues();
-                        ogl.UpdateOrbitCamera();
-                        ogl.Invalidate();
-                        break;
-                    }
+                case nameof(Managed3DObject.AllActs):
+                case nameof(Managed3DObject.Act1):
+                case nameof(Managed3DObject.Act2):
+                case nameof(Managed3DObject.Act3):
+                case nameof(Managed3DObject.Act4):
+                case nameof(Managed3DObject.Act5):
+                case nameof(Managed3DObject.Act6):
+                    AdvPropertyGrid1_RefreshPropertyValues();
+                    break;
+                case nameof(Managed3DObject.Rotation):
+                case nameof(Managed3DObject.Position):
+                    ogl.UpdateOrbitCamera();
+                    ogl.Invalidate();
+                    break;
+                case nameof(Managed3DObject.ObjectComboID):
+                case nameof(Managed3DObject.ModelID):
+                case nameof(Managed3DObject.BehaviorID):
+                    CheckObjCombo();
+                    UpdateBParamNames();
+                    AdvPropertyGrid1_RefreshPropertyValues();
+                    ogl.UpdateOrbitCamera();
+                    ogl.Invalidate();
+                    break;
             }
 
             UpdateObjectListViewItems();
@@ -2990,19 +2982,14 @@ namespace SM64_ROM_Manager.LevelEditor
             var switchExpr = e.PropertyName;
             switch (switchExpr)
             {
-                case "ObjectCombo":
-                case "ModelID":
-                case "BehaviorID":
-                    {
-                        StoreObjectHistoryPoint(AdvPropertyGrid1.SelectedObjects, new[] { "ModelID", "BehaviorID" });
-                        break;
-                    }
-
+                case nameof(Managed3DObject.ObjectComboID):
+                case nameof(Managed3DObject.ModelID):
+                case nameof(Managed3DObject.BehaviorID):
+                    StoreObjectHistoryPoint(AdvPropertyGrid1.SelectedObjects, new[] { "ModelID", "BehaviorID" });
+                    break;
                 default:
-                    {
-                        StoreObjectHistoryPoint(AdvPropertyGrid1.SelectedObjects, e.PropertyName);
-                        break;
-                    }
+                    StoreObjectHistoryPoint(AdvPropertyGrid1.SelectedObjects, e.PropertyName);
+                    break;
             }
         }
 
