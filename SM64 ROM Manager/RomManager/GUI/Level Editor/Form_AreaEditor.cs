@@ -317,7 +317,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // Initialize Components
             InitializeComponent();
             SelectedList = ListViewEx_Objects;
-
+            
             // Create Modules
             ogl = new OpenGLManager(this, Panel_GLControl);
             objectControlling = new ObjectControlling(this);
@@ -337,7 +337,7 @@ namespace SM64_ROM_Manager.LevelEditor
             WindowState = Settings.AreaEditor.DefaultWindowMode;
 
             // Setup some Styles
-            if (Settings.StyleManager.AlwaysKeepBlueColors)
+            if (!Settings.StyleManager.IsDarkTheme())
             {
                 PanelEx1.Style.BackColor1.Color = Color.LightSteelBlue;
                 PanelEx1.Style.BackColor2.Color = Color.LightSteelBlue;
@@ -362,6 +362,8 @@ namespace SM64_ROM_Manager.LevelEditor
 
             // Resume drawing
             ResumeLayout();
+
+            RibbonControl1.AutoSyncSize();
 
             // Add event to remember loaded area displaylist dumps
             General.LoadedAreaVisualMapDisplayLists += General_LoadedAreaVisualMapDisplayLists;
@@ -753,12 +755,21 @@ namespace SM64_ROM_Manager.LevelEditor
         private async Task LoadCustomObjectBankModel(CustomModel obj)
         {
             var mdl = new Object3D();
+            var data = new BinaryStreamData(obj.Model.Fast3DBuffer);
             foreach (Geopointer gp in obj.Geolayout.Geopointers)
-                await LoadDisplaylist(gp, mdl);
+                await LoadDisplaylist(data, gp, mdl);
             AddObject3DWithRendererIfNotNull(mdl, obj.ModelID);
         }
 
         private async Task<DisplayList> LoadDisplaylist(Geopointer pointer, Object3D mdl)
+        {
+            var dl = new DisplayList();
+            await dl.TryFromStreamAsync(pointer, Rommgr, default);
+            await dl.TryToObject3DAsync(mdl, Rommgr, default);
+            return dl;
+        }
+
+        private async Task<DisplayList> LoadDisplaylist(BinaryData data, Geopointer pointer, Object3D mdl)
         {
             var dl = new DisplayList();
             await dl.TryFromStreamAsync(pointer, Rommgr, default);

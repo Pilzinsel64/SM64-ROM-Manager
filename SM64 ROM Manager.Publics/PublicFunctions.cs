@@ -54,7 +54,7 @@ namespace SM64_ROM_Manager.Publics
         public static void SetVisualTheme()
         {
             MetroColorGeneratorParameters? setTheme = default;
-            if (Settings.StyleManager.UseWindows10Style)
+            if (Settings.StyleManager.UseSystemTheme)
             {
                 var curVers = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion", false);
                 if (Conversions.ToString(curVers.GetValue("ProductName", "-")).StartsWith("Windows 10"))
@@ -64,16 +64,11 @@ namespace SM64_ROM_Manager.Publics
                     switch (useapptheme)
                     {
                         case 0:
-                            {
-                                setTheme = StyleManagerSettingsStruc.VisualThemeDark;
-                                break;
-                            }
-
+                            setTheme = StyleManagerSettingsStruc.VisualThemeDark;
+                            break;
                         case 1:
-                            {
-                                setTheme = StyleManagerSettingsStruc.VisualThemeLight;
-                                break;
-                            }
+                            setTheme = StyleManagerSettingsStruc.VisualThemeLight;
+                            break;
                     }
 
                     if (regKeyMonitor_WatchWindowsTheme is null)
@@ -90,15 +85,11 @@ namespace SM64_ROM_Manager.Publics
             }
 
             if (setTheme is null)
-            {
                 setTheme = Settings.StyleManager.MetroColorParams;
-            }
             else
-            {
                 Settings.StyleManager.MetroColorParams = (MetroColorGeneratorParameters)setTheme;
-            }
 
-            StyleManager.Style = eStyle.Metro;
+            StyleManager.Style = eStyle.Office2016;
             StyleManager.MetroColorGeneratorParameters = (MetroColorGeneratorParameters)setTheme;
             foreach (Form frm in Application.OpenForms)
                 StyleManager.UpdateAmbientColors(frm);

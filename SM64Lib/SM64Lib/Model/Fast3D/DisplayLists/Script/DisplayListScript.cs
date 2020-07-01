@@ -2,34 +2,45 @@
 using global::System.IO;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib.SegmentedBanking;
+using SM64Lib.Data;
 
 namespace SM64Lib.Model.Fast3D.DisplayLists.Script
 {
     public class DisplayListScript : List<DisplayListCommand>
     {
-        public void FromStream(RomManager rommgr, int segAddress, byte? AreaID)
+        public void FromStream(object input, int segAddress, byte? AreaID)
         {
             Close();
 
+            var rommgr = input as RomManager;
+            var data = input as BinaryData;
             var lastPositions = new Stack<int>();
-            var curSeg = FromStream_GetSegBank(rommgr, segAddress, AreaID);
+            SegmentedBank curSeg = null;
 
-            if (curSeg is null) return;
+            void getSegBank(int segAddr)
+            {
+                if (rommgr is object)
+                {
+                    curSeg = FromStream_GetSegBank(rommgr, segAddress, AreaID);
+                    data = new BinaryStreamData(curSeg.Data);
+                }
+            }
 
-            curSeg.Data.Position = curSeg.BankOffsetFromSegAddr(segAddress);
+            getSegBank(segAddress);
+            data.Position = curSeg is object ? curSeg.BankOffsetFromSegAddr(segAddress) : segAddress & 0xffffff;
 
             bool continueDo = true;
-            while (curSeg.Data.Position < curSeg.Length && continueDo)
+            while (data.Position < curSeg.Length && continueDo)
             {
                 // Read Command
                 var cmdbytes = new byte[8];
-                curSeg.Data.Read(cmdbytes, 0, cmdbytes.Length);
+                data.Read(cmdbytes);
 
                 // Create & Add Command
                 var cmd = new DisplayListCommand(cmdbytes)
                 {
-                    RomAddress = (int)(curSeg.RomStart + curSeg.Data.Position),
-                    BankAddress = (int)(curSeg.BankAddress + curSeg.Data.Position)
+                    RomAddress =  (int)(curSeg?.RomStart    ?? 0 + data.Position),
+                    BankAddress = (int)(curSeg?.BankAddress ?? 0 + data.Position)
                 };
                 Add(cmd);
 
@@ -50,24 +61,18 @@ namespace SM64Lib.Model.Fast3D.DisplayLists.Script
                             cmd.Position = 4;
                             int segAddr = cmd.ReadInt32();
                             cmd.Position = 0;
-                            curSeg = FromStream_GetSegBank(rommgr, segAddr, AreaID);
+                            getSegBank(segAddr);
+
                             if (curSeg is object)
                             {
                                 if (cmdbytes[1] != 1)
-                                {
-                                    lastPositions.Push(Conversions.ToInteger(curSeg.Data.Position));
-                                }
+                                    lastPositions.Push(Conversions.ToInteger(data.Position));
                                 else
-                                {
                                     lastPositions.Clear();
-                                }
-
-                                curSeg.Data.Position = curSeg.BankOffsetFromSegAddr(segAddr);
+                                data.Position = curSeg.BankOffsetFromSegAddr(segAddr);
                             }
                             else
-                            {
                                 break;
-                            }
 
                             break;
                         }
@@ -75,14 +80,9 @@ namespace SM64Lib.Model.Fast3D.DisplayLists.Script
                     case CommandTypes.EndDisplaylist:
                         {
                             if (lastPositions.Count > 0)
-                            {
                                 curSeg.Data.Position = lastPositions.Pop();
-                            }
                             else
-                            {
                                 continueDo = false;
-                            }
-
                             break;
                         }
                 }
@@ -91,8 +91,14 @@ namespace SM64Lib.Model.Fast3D.DisplayLists.Script
 
         private SegmentedBank FromStream_GetSegBank(RomManager rommgr, int segAddr, byte? areaID)
         {
-            var seg = rommgr.GetSegBank(Conversions.ToByte(segAddr >> 24), areaID);
-            seg?.ReadDataIfNull(rommgr.RomFile);
+            SegmentedBank seg = null;
+            
+            if (rommgr is object)
+            {
+                seg = rommgr.GetSegBank(Conversions.ToByte(segAddr >> 24), areaID);
+                seg?.ReadDataIfNull(rommgr.RomFile);
+            }
+
             return seg;
         }
 
