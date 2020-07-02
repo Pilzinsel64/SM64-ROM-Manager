@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using SM64Lib.Behaviors;
 using SM64Lib.Objects.ObjectBanks;
 using SM64Lib.ASM;
+using SM64Lib.Objects.ObjectBanks.Data;
 
 namespace SM64Lib.Configuration
 {
@@ -29,6 +30,7 @@ namespace SM64Lib.Configuration
 
         // Other
         public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
+        public ObjectBankDataListCollection ObjectBankInfoData { get; } = new ObjectBankDataListCollection();
 
         // F e a t u r e s
 

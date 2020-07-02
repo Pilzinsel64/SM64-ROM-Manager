@@ -639,9 +639,9 @@ namespace SM64Lib
                 {
                     case 0x19:
                         if (IsSM64EditorMode)
-                            lvl = new SM64ELevel(ldi.ID, ldi.Index);
+                            lvl = new SM64ELevel(ldi.ID, ldi.Index, this);
                         else
-                            lvl = new RMLevel(RomConfig.GetLevelConfig(ldi.ID));
+                            lvl = new RMLevel(RomConfig.GetLevelConfig(ldi.ID), this);
                         LevelManager.LoadLevel(lvl, this, ldi.ID, offset);
                         lvl.LastRomOffset = curLvlSeg.RomStart; // Original Level
                         break;
@@ -849,7 +849,7 @@ namespace SM64Lib
         /// <param name="LevelID">The ID of the Level.</param>
         public Level AddLevel(byte LevelID)
         {
-            var newLevel = new RMLevel(LevelID, LevelInfoData.GetByLevelID(LevelID).Index); // GetLevelIndexFromID(LevelID)
+            var newLevel = new RMLevel(LevelID, LevelInfoData.GetByLevelID(LevelID).Index, this); // GetLevelIndexFromID(LevelID)
             Levels.Add(newLevel);
             if (levelIDsToReset.Contains(LevelID))
             {

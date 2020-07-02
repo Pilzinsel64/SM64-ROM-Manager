@@ -13,12 +13,12 @@ namespace SM64Lib.Levels
             set => Config.LevelName = value;
         }
 
-        public RMLevel(ushort LevelID, int LevelIndex) : base(LevelID, LevelIndex)
+        public RMLevel(ushort LevelID, int LevelIndex, RomManager rommgr) : base(LevelID, LevelIndex, rommgr)
         {
             Config = new LevelConfig();
         }
 
-        public RMLevel(LevelConfig config) : base()
+        public RMLevel(LevelConfig config, RomManager rommgr) : base(rommgr)
         {
             Config = config;
         }

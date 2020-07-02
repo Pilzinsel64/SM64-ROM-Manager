@@ -174,7 +174,7 @@ namespace SM64_ROM_Manager
                                 {
 
                                     // Create mew Level
-                                    newLvl = new RMLevel(levelinfo.ID, levelinfo.Index);
+                                    newLvl = new RMLevel(levelinfo.ID, levelinfo.Index, rommgr);
 
                                     // Create new Areas & Copy Area Data
                                     foreach (LevelArea a in lvl.Areas)

@@ -46,6 +46,7 @@ namespace SM64Lib.Levels
         public bool EnableGlobalObjectBank { get; set; } = false;
         public bool EnableLocalObjectBank { get; set; } = false;
         public CustomModelBank LocalObjectBank { get; private set; } = new CustomModelBank();
+        public RomManager RomManager { get; set; }
 
         // O t h e r   P r o p e r t i e s
 
@@ -119,7 +120,7 @@ namespace SM64Lib.Levels
 
         // C o n s t r u c t o r s
 
-        protected Level(ushort LevelID, int LevelIndex)
+        protected Level(ushort LevelID, int LevelIndex, RomManager rommgr) : this(rommgr)
         {
             this.LevelID = LevelID;
             CreateNewLevelscript();
@@ -127,8 +128,9 @@ namespace SM64Lib.Levels
             ActSelector = General.ActSelectorDefaultValues[LevelIndex];
         }
 
-        protected Level()
+        protected Level(RomManager rommgr)
         {
+            RomManager = rommgr;
         }
 
         // M e t h o d s
@@ -164,7 +166,7 @@ namespace SM64Lib.Levels
                 withBlock.Add(new LevelscriptCommand(new byte[] { 0x2, 0x4, 0x0, 0x0 }));
 
                 // Add the general object bank
-                ChangeObjectBank(null, General.ObjectBankData[Conversions.ToByte(0xB)]?.FirstOrDefault());
+                ChangeObjectBank(null, RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xB)]?.FirstOrDefault());
             }
 
             foreach (LevelscriptCommand c in Levelscript)
@@ -265,7 +267,7 @@ namespace SM64Lib.Levels
 
         protected ObjectBankData FindObjectBankData(byte bankID)
         {
-            var list = General.ObjectBankData[bankID];
+            var list = RomManager.RomConfig.ObjectBankInfoData[bankID];
             var Found = new List<bool>();
             foreach (ObjectBankData obd in list)
             {

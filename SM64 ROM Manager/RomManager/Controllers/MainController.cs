@@ -37,6 +37,7 @@ using SM64Lib.TextValueConverter;
 using Z.Core.Extensions;
 using SM64_ROM_Manager.My.Resources;
 using System.Diagnostics;
+using SM64Lib.Objects.ObjectBanks.Data;
 
 namespace SM64_ROM_Manager
 {
@@ -153,7 +154,6 @@ namespace SM64_ROM_Manager
         private readonly SM64_ROM_Manager.MainForm mainForm;
         private readonly UpdateClient updateClient;
         private RomManager _RomManager;
-        private bool loadedObjectBankData = false;
         private bool addedTweakViewerEvents = false;
         private TextManagerController tmc = null;
 
@@ -977,7 +977,7 @@ namespace SM64_ROM_Manager
 
         public void OpenObjectBankDataEditor()
         {
-            var editor = new SM64_ROM_Manager.ObjectBankDataEditor(SM64Lib.General.ObjectBankData);
+            var editor = new ObjectBankDataEditor(RomManager.RomConfig.ObjectBankInfoData);
             var removedObds = new List<SM64Lib.Objects.ObjectBanks.Data.ObjectBankData>();
             var changedObds = new List<SM64Lib.Objects.ObjectBanks.Data.ObjectBankData>();
 
@@ -988,11 +988,27 @@ namespace SM64_ROM_Manager
             // Show Editor
             editor.ShowDialog();
 
-            // Save Obd
-            SaveObjectBankData();
-
             // Set removed and changed Obds in Levels to Null
-            void setObdsToNull(List<SM64Lib.Objects.ObjectBanks.Data.ObjectBankData> dic, bool remove) { if (RomManager is object) { foreach (Level lvl in RomManager.Levels) { foreach (byte bankID in lvl.LoadedObjectBanks.Keys.ToArray()) { foreach (SM64Lib.Objects.ObjectBanks.Data.ObjectBankData obd in dic) { var curObd = lvl.GetObjectBankData(bankID); if (curObd == obd) { lvl.ChangeObjectBankData(bankID, remove ? null : curObd); } } } } } };
+            void setObdsToNull(List<SM64Lib.Objects.ObjectBanks.Data.ObjectBankData> dic, bool remove)
+            {
+                if (RomManager is object)
+                {
+                    foreach (Level lvl in RomManager.Levels)
+                    {
+                        foreach (byte bankID in lvl.LoadedObjectBanks.Keys.ToArray())
+                        {
+                            foreach (SM64Lib.Objects.ObjectBanks.Data.ObjectBankData obd in dic)
+                            {
+                                var curObd = lvl.GetObjectBankData(bankID);
+                                if (curObd == obd)
+                                {
+                                    lvl.ChangeObjectBankData(bankID, remove ? null : curObd);
+                                }
+                            }
+                        }
+                    }
+                }
+            };
             setObdsToNull(removedObds, true);
             setObdsToNull(changedObds, false);
 
@@ -1329,18 +1345,17 @@ namespace SM64_ROM_Manager
             return (sb.Type, sb.WaterType, sb.X1, sb.Z1, sb.X2, sb.Z2, sb.Y, sb.Scale, sb.Alpha, sb.InvisibleWater);
         }
 
-        public void LoadObjectBankData()
+        private void LoadLegacyObjectBankData()
         {
-            if (!loadedObjectBankData)
-            {
-                SM64Lib.General.ObjectBankData.Load(Path.Combine(Publics.General.MyDataPath, @"Other\Object Bank Data.json"));
-                loadedObjectBankData = true;
-            }
+            var p = Path.Combine(Publics.General.MyDataPath, @"Other\Object Bank Data.json");
+            if (!RomManager.RomConfig.ObjectBankInfoData.Any())
+                RomManager?.RomConfig.ObjectBankInfoData.Load(p);
         }
 
-        private void SaveObjectBankData()
+        public ObjectBankDataListCollection GetObjectBankData()
         {
-            SM64Lib.General.ObjectBankData.Save(Path.Combine(Publics.General.MyDataPath, @"Other\Object Bank Data.json"));
+            LoadLegacyObjectBankData();
+            return RomManager?.RomConfig.ObjectBankInfoData;
         }
 
         public int GetLevelsCount()
@@ -1501,9 +1516,9 @@ namespace SM64_ROM_Manager
             lvl.HardcodedCameraSettings = enableHardcodedCamera;
 
             // Object Banks
-            lvl.ChangeObjectBankData(0xC, SM64Lib.General.ObjectBankData[Conversions.ToByte(0xC)].ElementAtOrDefault(objBank0x0C - 1));
-            lvl.ChangeObjectBankData(0xD, SM64Lib.General.ObjectBankData[Conversions.ToByte(0xD)].ElementAtOrDefault(objBank0x0D - 1));
-            lvl.ChangeObjectBankData(0x9, SM64Lib.General.ObjectBankData[Conversions.ToByte(0x9)].ElementAtOrDefault(enableGlobalObjectBank || enableLocalObjectBank ? -1 : objBank0x0E - 1));
+            lvl.ChangeObjectBankData(0xC, RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xC)].ElementAtOrDefault(objBank0x0C - 1));
+            lvl.ChangeObjectBankData(0xD, RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xD)].ElementAtOrDefault(objBank0x0D - 1));
+            lvl.ChangeObjectBankData(0x9, RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0x9)].ElementAtOrDefault(enableGlobalObjectBank || enableLocalObjectBank ? -1 : objBank0x0E - 1));
             lvl.EnableGlobalObjectBank = enableGlobalObjectBank;
             lvl.EnableLocalObjectBank = enableLocalObjectBank;
 
@@ -1843,7 +1858,11 @@ namespace SM64_ROM_Manager
         public (int objBank0x0C, int objBank0x0D, int objBank0x0E, bool enableGlobalObjectBank, bool enableLocalObjectBank) GetLevelObjectBankDataSettings(int levelIndex)
         {
             var lvl = GetLevelAndArea(levelIndex).level;
-            return (SM64Lib.General.ObjectBankData[Conversions.ToByte(0xC)].IndexOf(lvl.GetObjectBankData(0xC)) + 1, SM64Lib.General.ObjectBankData[Conversions.ToByte(0xD)].IndexOf(lvl.GetObjectBankData(0xD)) + 1, SM64Lib.General.ObjectBankData[Conversions.ToByte(0x9)].IndexOf(lvl.GetObjectBankData(0x9)) + 1, lvl.EnableGlobalObjectBank, lvl.EnableLocalObjectBank);
+            return (
+                RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xC)].IndexOf(lvl.GetObjectBankData(0xC)) + 1,
+                RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xD)].IndexOf(lvl.GetObjectBankData(0xD)) + 1,
+                RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0x9)].IndexOf(lvl.GetObjectBankData(0x9)) + 1,
+                lvl.EnableGlobalObjectBank, lvl.EnableLocalObjectBank);
         }
 
         public void ChangeLevelID(int levelIndex)

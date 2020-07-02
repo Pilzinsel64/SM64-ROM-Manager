@@ -307,7 +307,6 @@ namespace SM64_ROM_Manager
             Controller.StatusText = Form_Main_Resources.Status_StartingUp;
             Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
             LoadRecentROMs();
-            tabLevelManager.LoadObjectBankListBoxEntries();
             finishedLoading = true;
             Controller.StatusText = string.Empty;
             Controller.CheckCommandLineArgs();

@@ -222,6 +222,7 @@ namespace SM64_ROM_Manager
 
         private void Controller_RomLoaded()
         {
+            LoadObjectBankListBoxEntries();
             LoadLevelList();
         }
 
@@ -446,14 +447,16 @@ namespace SM64_ROM_Manager
 
         internal void LoadObjectBankListBoxEntries()
         {
-            Controller.LoadObjectBankData();
+            var data = Controller.GetObjectBankData();
+
             void load(ObjectBankSelectorBox sb, byte number)
             {
                 sb.ComboItems.Clear();
                 sb.ComboItems.Add(Form_Main_Resources.Text_Disabled);
-                foreach (var s in SM64Lib.General.ObjectBankData[Conversions.ToInteger(number)])
+
+                foreach (var s in data[Conversions.ToInteger(number)])
                 {
-                    var cb = new ComboItem()
+                    var cb = new ComboItem
                     {
                         Text = s.Name,
                         Tag = s
