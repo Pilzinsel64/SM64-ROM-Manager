@@ -337,7 +337,7 @@ namespace SM64_ROM_Manager.LevelEditor
             WindowState = Settings.AreaEditor.DefaultWindowMode;
 
             // Setup some Styles
-            if (!Settings.StyleManager.IsDarkTheme())
+            if (Settings.StyleManager.AlwaysKeepBlueColors && !Settings.StyleManager.IsDarkTheme())
             {
                 PanelEx1.Style.BackColor1.Color = Color.LightSteelBlue;
                 PanelEx1.Style.BackColor2.Color = Color.LightSteelBlue;
