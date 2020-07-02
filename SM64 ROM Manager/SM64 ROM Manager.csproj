@@ -878,6 +878,9 @@
     <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.de.resx">
       <DependentUpon>Form_AddNewLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.de.resx">
+      <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.resx">
       <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
     </EmbeddedResource>

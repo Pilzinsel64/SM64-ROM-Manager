@@ -14,6 +14,24 @@ namespace SM64_ROM_Manager
     public partial class ObjectBankDataEditor
     {
 
+        // E v e n t s
+
+        public event ChangedObjectBankDataCommandEventHandler ChangedObjectBankDataCommand;
+
+        public delegate void ChangedObjectBankDataCommandEventHandler(ObjectBankData obd);
+
+        public event RemovedObjectBankDataEventHandler RemovedObjectBankData;
+
+        public delegate void RemovedObjectBankDataEventHandler(ObjectBankData obd);
+
+        // C o n t s a n t s
+
+        private const string FILTER_JSON = "Object Bank Data Files (*.json)|*.json";
+
+        // A u t o m a t i c   P r o p e r t i e s
+
+        public ObjectBankDataListCollection ObdListCollection { get; private set; }
+
         // C o n s t r u c t o r
 
         public ObjectBankDataEditor(ObjectBankDataListCollection obdListCollection)
@@ -28,20 +46,6 @@ namespace SM64_ROM_Manager
             InitializeComponent();
             base.UpdateAmbientColors();
         }
-
-        // E v e n t s
-
-        public event ChangedObjectBankDataCommandEventHandler ChangedObjectBankDataCommand;
-
-        public delegate void ChangedObjectBankDataCommandEventHandler(ObjectBankData obd);
-
-        public event RemovedObjectBankDataEventHandler RemovedObjectBankData;
-
-        public delegate void RemovedObjectBankDataEventHandler(ObjectBankData obd);
-
-        // A u t o m a t i c   P r o p e r t i e s
-
-        public ObjectBankDataListCollection ObdListCollection { get; private set; }
 
         // F e a t u r e s
 
@@ -426,6 +430,26 @@ namespace SM64_ROM_Manager
         private void ButtonItem_AddObd_Click(object sender, EventArgs e)
         {
             AddObd(GetSelectedNode());
+        }
+
+        private void ButtonItem_Export_Click(object sender, EventArgs e)
+        {
+            var sfd_ExportObjectBankData = new SaveFileDialog
+            {
+                Filter = FILTER_JSON
+            };
+            if (sfd_ExportObjectBankData.ShowDialog(this) == DialogResult.OK)
+                ObdListCollection.Save(sfd_ExportObjectBankData.FileName);
+        }
+
+        private void ButtonItem_Import_Click(object sender, EventArgs e)
+        {
+            var ofd_ExportObjectBankData = new OpenFileDialog
+            {
+                Filter = FILTER_JSON
+            };
+            if (ofd_ExportObjectBankData.ShowDialog(this) == DialogResult.OK)
+                ObdListCollection.Load(ofd_ExportObjectBankData.FileName);
         }
     }
 }
