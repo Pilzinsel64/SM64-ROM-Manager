@@ -89,7 +89,7 @@ namespace SM64_ROM_Manager.Publics
             else
                 Settings.StyleManager.MetroColorParams = (MetroColorGeneratorParameters)setTheme;
 
-            StyleManager.Style = eStyle.Office2016;
+            StyleManager.Style = eStyle.Metro;
             StyleManager.MetroColorGeneratorParameters = (MetroColorGeneratorParameters)setTheme;
             foreach (Form frm in Application.OpenForms)
                 StyleManager.UpdateAmbientColors(frm);
