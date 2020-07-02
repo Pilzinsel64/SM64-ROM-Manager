@@ -117,10 +117,147 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ObdTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ObdTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Node1.Text" xml:space="preserve">
+    <value>Node1</value>
+  </data>
+  <data name="ObdTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>484, 661</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ObdTree.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ObdTree.Text" xml:space="preserve">
+    <value>AdvTree1</value>
+  </data>
+  <data name="&gt;&gt;ObdTree.Name" xml:space="preserve">
+    <value>ObdTree</value>
+  </data>
+  <data name="&gt;&gt;ObdTree.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ObdTree.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ObdTree.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ContextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="ButtonItem_AddObd.Text" xml:space="preserve">
+    <value>Add Object Bank Data</value>
+  </data>
   <data name="ButtonItem_RemoveObdList.Text" xml:space="preserve">
     <value>Remove</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ButtonItem_CM_ObdList.Text" xml:space="preserve">
+    <value>ObdList</value>
+  </data>
+  <data name="ButtonItem_RemoveObd.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonItem_CM_Obd.Text" xml:space="preserve">
+    <value>Obd</value>
+  </data>
+  <data name="ButtonItem_AddCmd.Text" xml:space="preserve">
+    <value>Add Command</value>
+  </data>
+  <data name="ButtonItem_CM_Cmds.Text" xml:space="preserve">
+    <value>Cmds</value>
+  </data>
+  <data name="ButtonItem_RemoveCmd.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonItem_CM_Cmd.Text" xml:space="preserve">
+    <value>Cmd</value>
+  </data>
+  <data name="ButtonItem_AddObj.Text" xml:space="preserve">
+    <value>Add Object Name</value>
+  </data>
+  <data name="ButtonItem_CM_Objs.Text" xml:space="preserve">
+    <value>Objs</value>
+  </data>
+  <data name="ButtonItem_RemoveObj.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonItem_CM_Obj.Text" xml:space="preserve">
+    <value>Obj</value>
+  </data>
+  <data name="ContextMenuBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 0</value>
+  </data>
+  <data name="ContextMenuBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="ContextMenuBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ContextMenuBar1.Text" xml:space="preserve">
+    <value>ContextMenuBar1</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuBar1.Name" xml:space="preserve">
+    <value>ContextMenuBar1</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuBar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ContextMenuBar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuBar1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonX1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 0</value>
+  </data>
+  <data name="buttonX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 23</value>
+  </data>
+  <data name="ButtonItem_Export.Text" xml:space="preserve">
+    <value>Export ...</value>
+  </data>
+  <data name="ButtonItem_Import.Text" xml:space="preserve">
+    <value>Import ...</value>
+  </data>
+  <data name="buttonX1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonX1.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.Name" xml:space="preserve">
+    <value>buttonX1</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonX1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>484, 661</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAgIAAAAEAIAAoCAEAJgAAAAAAAAABACAAz6kAAE4IAQAoAAAAgAAAAAABAAABACAAAAAAAAAA
@@ -1978,261 +2115,124 @@
         +QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;ContextMenuBar1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
-  <data name="ButtonItem_CM_Objs.Text" xml:space="preserve">
-    <value>Objs</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Object Bank Data Editor</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_Import.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveObj.Name" xml:space="preserve">
-    <value>ButtonItem_RemoveObj</value>
-  </data>
-  <data name="ContextMenuBar1.Text" xml:space="preserve">
-    <value>ContextMenuBar1</value>
-  </data>
-  <data name="&gt;&gt;buttonX1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_Cmds.Name" xml:space="preserve">
-    <value>ButtonItem_CM_Cmds</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_ObdList.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ObjectBankDataEditor</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveObj.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_Objs.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ContextMenuBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 25</value>
-  </data>
-  <data name="&gt;&gt;NodeConnector1.Type" xml:space="preserve">
-    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="buttonX1.Text" xml:space="preserve">
-    <value>Options</value>
-  </data>
-  <data name="ContextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_Obd.Name" xml:space="preserve">
-    <value>ButtonItem_CM_Obd</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ObdTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonX1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveObdList.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;buttonX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_Cmds.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ObdTree.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ButtonItem_CM_Obj.Text" xml:space="preserve">
-    <value>Obj</value>
-  </data>
-  <data name="Node1.Text" xml:space="preserve">
+  <data name="&gt;&gt;Node1.Name" xml:space="preserve">
     <value>Node1</value>
   </data>
   <data name="&gt;&gt;Node1.Type" xml:space="preserve">
     <value>DevComponents.AdvTree.Node, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_AddCmd.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;NodeConnector1.Name" xml:space="preserve">
+    <value>NodeConnector1</value>
   </data>
-  <data name="&gt;&gt;buttonX1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonX1.Name" xml:space="preserve">
-    <value>buttonX1</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_Cmd.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ButtonItem_Export.Text" xml:space="preserve">
-    <value>Export ...</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveObdList.Name" xml:space="preserve">
-    <value>ButtonItem_RemoveObdList</value>
-  </data>
-  <data name="ButtonItem_CM_ObdList.Text" xml:space="preserve">
-    <value>ObdList</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_AddObd.Name" xml:space="preserve">
-    <value>ButtonItem_AddObd</value>
-  </data>
-  <data name="ButtonItem_AddCmd.Text" xml:space="preserve">
-    <value>Add Command</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_AddCmd.Name" xml:space="preserve">
-    <value>ButtonItem_AddCmd</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_Import.Name" xml:space="preserve">
-    <value>ButtonItem_Import</value>
-  </data>
-  <data name="ObdTree.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ContextMenuBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 0</value>
-  </data>
-  <data name="buttonX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 0</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_Obj.Name" xml:space="preserve">
-    <value>ButtonItem_CM_Obj</value>
-  </data>
-  <data name="ButtonItem_RemoveObd.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_Obj.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ContextMenuBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="buttonX1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="ObdTree.Text" xml:space="preserve">
-    <value>AdvTree1</value>
-  </data>
-  <data name="ButtonItem_CM_Cmds.Text" xml:space="preserve">
-    <value>Cmds</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveCmd.Name" xml:space="preserve">
-    <value>ButtonItem_RemoveCmd</value>
-  </data>
-  <data name="ObdTree.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ButtonItem_RemoveCmd.Text" xml:space="preserve">
-    <value>Remove</value>
+  <data name="&gt;&gt;NodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ElementStyle1.Name" xml:space="preserve">
     <value>ElementStyle1</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_CM_Objs.Name" xml:space="preserve">
-    <value>ButtonItem_CM_Objs</value>
+  <data name="&gt;&gt;ElementStyle1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Node1.Name" xml:space="preserve">
-    <value>Node1</value>
+  <data name="&gt;&gt;ButtonItem_CM_ObdList.Name" xml:space="preserve">
+    <value>ButtonItem_CM_ObdList</value>
   </data>
-  <data name="ButtonItem_CM_Obd.Text" xml:space="preserve">
-    <value>Obd</value>
-  </data>
-  <data name="&gt;&gt;ContextMenuBar1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_AddObj.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonItem_CM_ObdList.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ContextMenuBar1.Name" xml:space="preserve">
-    <value>ContextMenuBar1</value>
+  <data name="&gt;&gt;ButtonItem_AddObd.Name" xml:space="preserve">
+    <value>ButtonItem_AddObd</value>
   </data>
-  <data name="buttonX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 23</value>
+  <data name="&gt;&gt;ButtonItem_AddObd.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ObdTree.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;ButtonItem_RemoveObdList.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveObdList</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_Export.Name" xml:space="preserve">
-    <value>ButtonItem_Export</value>
+  <data name="&gt;&gt;ButtonItem_RemoveObdList.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ObdTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 661</value>
+  <data name="&gt;&gt;ButtonItem_CM_Obd.Name" xml:space="preserve">
+    <value>ButtonItem_CM_Obd</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Obd.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_RemoveObd.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveObd</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_RemoveObd.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Cmds.Name" xml:space="preserve">
+    <value>ButtonItem_CM_Cmds</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Cmds.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_AddCmd.Name" xml:space="preserve">
+    <value>ButtonItem_AddCmd</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_AddCmd.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Cmd.Name" xml:space="preserve">
+    <value>ButtonItem_CM_Cmd</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Cmd.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_RemoveCmd.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveCmd</value>
   </data>
   <data name="&gt;&gt;ButtonItem_RemoveCmd.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Object Bank Data Editor</value>
+  <data name="&gt;&gt;ButtonItem_CM_Objs.Name" xml:space="preserve">
+    <value>ButtonItem_CM_Objs</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_AddObd.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonItem_CM_Objs.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_AddObj.Name" xml:space="preserve">
     <value>ButtonItem_AddObj</value>
   </data>
-  <data name="&gt;&gt;NodeConnector1.Name" xml:space="preserve">
-    <value>NodeConnector1</value>
-  </data>
-  <data name="ButtonItem_AddObd.Text" xml:space="preserve">
-    <value>Add Object Bank Data</value>
-  </data>
-  <data name="&gt;&gt;ObdTree.Name" xml:space="preserve">
-    <value>ObdTree</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_ObdList.Name" xml:space="preserve">
-    <value>ButtonItem_CM_ObdList</value>
-  </data>
-  <data name="&gt;&gt;ElementStyle1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CM_Obd.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonItem_AddObj.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonItem_RemoveObj.Text" xml:space="preserve">
-    <value>Remove</value>
+  <data name="&gt;&gt;ButtonItem_CM_Obj.Name" xml:space="preserve">
+    <value>ButtonItem_CM_Obj</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_CM_Cmd.Name" xml:space="preserve">
-    <value>ButtonItem_CM_Cmd</value>
+  <data name="&gt;&gt;ButtonItem_CM_Obj.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_RemoveObd.Name" xml:space="preserve">
-    <value>ButtonItem_RemoveObd</value>
+  <data name="&gt;&gt;ButtonItem_RemoveObj.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveObj</value>
   </data>
-  <data name="&gt;&gt;ContextMenuBar1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ContextMenuBar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ButtonItem_RemoveObj.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ObdTree.Type" xml:space="preserve">
-    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ButtonItem_Export.Name" xml:space="preserve">
+    <value>ButtonItem_Export</value>
   </data>
   <data name="&gt;&gt;ButtonItem_Export.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_RemoveObd.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonItem_Import.Name" xml:space="preserve">
+    <value>ButtonItem_Import</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Import.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonItem_Import.Text" xml:space="preserve">
-    <value>Import ...</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ObjectBankDataEditor</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>484, 661</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonItem_CM_Cmd.Text" xml:space="preserve">
-    <value>Cmd</value>
-  </data>
-  <data name="ButtonItem_AddObj.Text" xml:space="preserve">
-    <value>Add Object Name</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>
