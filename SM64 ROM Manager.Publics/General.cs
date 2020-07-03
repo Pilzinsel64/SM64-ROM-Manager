@@ -764,7 +764,7 @@ namespace SM64_ROM_Manager.Publics
             {
                 if (newID == null)
                 {
-                    byte areaID = Conversions.ToByte(i);
+                    byte areaID = (byte)i;
                     if (!lvl.Areas.Where(n => n.AreaID == areaID).Any())
                     {
                         if (areaID != 0) // Yes skip 0, because it might confuse the user if area ID is"...6...7...0...8...9..."
