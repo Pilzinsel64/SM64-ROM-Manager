@@ -1898,27 +1898,22 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void ButtonItem_AddArea_Click(object sender, EventArgs e)
         {
-            var ReamingIDs = new List<byte>(new byte[] { 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x0 });
-            foreach (LevelArea a in CLevel.Areas)
-                ReamingIDs.Remove(a.AreaID);
-            if (ReamingIDs.Count == 0)
-            {
-                // MessageBoxEx.Show("The maximum count of Areas per Level is 8.", "Maximum reached", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Publics.General.ShowToastnotification(Panel_GLControl, "The maximum amount of areas per level is 8.", eToastGlowColor.Red);
-                ButtonItem_AddArea.Enabled = false;
-                return;
-            }
+            var newID = Publics.General.GetNextAreaID(CLevel);
 
-            byte newAreaID = ReamingIDs[0];
-            var tArea = new RMLevelArea(newAreaID);
-            var res = PublicFunctions.GetModelViaModelConverter(false, false, inputsKey: General.GetKeyForConvertAreaModel(Rommgr.GameName, Conversions.ToShort(CLevel.LevelID), newAreaID));
-            if (res is object)
+            if (newID.isAnyFree)
             {
-                tArea.AreaModel = res?.mdl;
-                CLevel.Areas.Add(tArea);
-                AreaIdToLoad = tArea.AreaID;
-                LoadAreaIDs();
+                var tArea = new RMLevelArea((byte)newID.newID);
+                var res = PublicFunctions.GetModelViaModelConverter(false, false, inputsKey: General.GetKeyForConvertAreaModel(Rommgr.GameName, Conversions.ToShort(CLevel.LevelID), (byte)newID.newID));
+                if (res is object)
+                {
+                    tArea.AreaModel = res?.mdl;
+                    CLevel.Areas.Add(tArea);
+                    AreaIdToLoad = tArea.AreaID;
+                    LoadAreaIDs();
+                }
             }
+            else
+                MessageBoxEx.Show(Form_Main_Resources.MsgBox_MaxCountAreasReached, Form_Main_Resources.MsgBox_MaxCountAreasReached_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         internal void ButtonItem_RemoveArea_Click(object sender, EventArgs e)
