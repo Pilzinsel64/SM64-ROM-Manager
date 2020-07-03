@@ -227,7 +227,9 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.buttonX1, "buttonX1");
             this.buttonX1.AutoExpandOnClick = true;
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
             this.buttonX1.Name = "buttonX1";
+            this.buttonX1.ShowSubItems = false;
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ButtonItem_Export,
