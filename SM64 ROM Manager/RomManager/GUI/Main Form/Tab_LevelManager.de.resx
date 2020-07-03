@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonItem_ImportArea.Text" xml:space="preserve">
+    <value>Bereich importieren ...</value>
+  </data>
   <data name="Button_LM_AddArea.Text" xml:space="preserve">
     <value>Neu</value>
   </data>
-  <data name="GroupBox_LM_Areas.Text" xml:space="preserve">
-    <value>Bereiche</value>
-  </data>
-  <data name="ButtonItem_ImportArea.Text" xml:space="preserve">
-    <value>Bereich importieren ...</value>
+  <data name="buttonItem2.Text" xml:space="preserve">
+    <value>ID ändern</value>
   </data>
   <data name="Button_LM_RemoveArea.Text" xml:space="preserve">
     <value>Löschen</value>
@@ -135,14 +135,8 @@
   <data name="ButtonItem2_EditGeolayoutScript.Text" xml:space="preserve">
     <value>Geolayoutscript bearbeiten</value>
   </data>
-  <data name="ButtonX_LM_LevelsMore.Text" xml:space="preserve">
-    <value>Mehr ...</value>
-  </data>
-  <data name="Button_LM_AddNewLevel.Text" xml:space="preserve">
-    <value>Neu</value>
-  </data>
-  <data name="GroupPanel1.Text" xml:space="preserve">
-    <value>Level</value>
+  <data name="GroupBox_LM_Areas.Text" xml:space="preserve">
+    <value>Bereiche</value>
   </data>
   <data name="ButtonItem20.Text" xml:space="preserve">
     <value>Level-ID ändern</value>
@@ -159,38 +153,43 @@
   <data name="ButtonItem21.Text" xml:space="preserve">
     <value>ROM-Adresse kopieren</value>
   </data>
+  <data name="ButtonX_LM_LevelsMore.Text" xml:space="preserve">
+    <value>Mehr ...</value>
+  </data>
   <data name="ButtonItem26.Text" xml:space="preserve">
     <value>Level importieren ...</value>
   </data>
-  <data name="LabelX10.Text" xml:space="preserve">
-    <value>Texturanimationen:</value>
+  <data name="Button_LM_AddNewLevel.Text" xml:space="preserve">
+    <value>Neu</value>
   </data>
-  <data name="ButtonX_EditCollision.Text" xml:space="preserve">
-    <value>Kollision bearbeiten</value>
+  <data name="GroupPanel1.Text" xml:space="preserve">
+    <value>Level</value>
   </data>
-  <data name="ButtonX_EditFast3D.Text" xml:space="preserve">
-    <value>Fast3D bearbeiten</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="buttonX2.Text" xml:space="preserve">
-    <value>Kollisionsmodell exportieren</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="ButtonX_ImportCollision.Text" xml:space="preserve">
-    <value>Kollisionsmodell Importieren</value>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="buttonX1.Text" xml:space="preserve">
-    <value>Visuelles Modell exportieren</value>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
   </data>
-  <data name="ButtonX_ImportVisualMap.Text" xml:space="preserve">
-    <value>Visuelles Modell importieren</value>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="ButtonX_LM_ScrollTexEditor.Text" xml:space="preserve">
-    <value>Textureanimationseditor</value>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="Button_ImportModel.Text" xml:space="preserve">
-    <value>Modell importieren</value>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="TabItem5.Text" xml:space="preserve">
-    <value>Bereichsmodell</value>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
   </data>
   <data name="LabelX1.Text" xml:space="preserve">
     <value>Bereichshindergrund:</value>
@@ -226,6 +225,36 @@
   </data>
   <data name="TabItem4.Text" xml:space="preserve">
     <value>Bereichseinstellungen</value>
+  </data>
+  <data name="LabelX10.Text" xml:space="preserve">
+    <value>Texturanimationen:</value>
+  </data>
+  <data name="ButtonX_EditCollision.Text" xml:space="preserve">
+    <value>Kollision bearbeiten</value>
+  </data>
+  <data name="ButtonX_EditFast3D.Text" xml:space="preserve">
+    <value>Fast3D bearbeiten</value>
+  </data>
+  <data name="buttonX2.Text" xml:space="preserve">
+    <value>Kollisionsmodell exportieren</value>
+  </data>
+  <data name="ButtonX_ImportCollision.Text" xml:space="preserve">
+    <value>Kollisionsmodell Importieren</value>
+  </data>
+  <data name="buttonX1.Text" xml:space="preserve">
+    <value>Visuelles Modell exportieren</value>
+  </data>
+  <data name="ButtonX_ImportVisualMap.Text" xml:space="preserve">
+    <value>Visuelles Modell importieren</value>
+  </data>
+  <data name="ButtonX_LM_ScrollTexEditor.Text" xml:space="preserve">
+    <value>Textureanimationseditor</value>
+  </data>
+  <data name="Button_ImportModel.Text" xml:space="preserve">
+    <value>Modell importieren</value>
+  </data>
+  <data name="TabItem5.Text" xml:space="preserve">
+    <value>Bereichsmodell</value>
   </data>
   <data name="Button_LM_RemoveSpecial.Text" xml:space="preserve">
     <value>Löschen</value>
@@ -282,6 +311,15 @@
   <data name="LabelX12.Text" xml:space="preserve">
     <value>Original-Level:</value>
   </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Eigen</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>Kein</value>
+  </data>
   <data name="LabelX15.Text" xml:space="preserve">
     <value>Levelhindergrund:</value>
   </data>
@@ -308,15 +346,6 @@
   </data>
   <data name="TabItem1.Text" xml:space="preserve">
     <value>Leveleinstellungen</value>
-  </data>
-  <data name="ComboItem1.Text" xml:space="preserve">
-    <value>Original</value>
-  </data>
-  <data name="ComboItem2.Text" xml:space="preserve">
-    <value>Eigen</value>
-  </data>
-  <data name="ComboItem3.Text" xml:space="preserve">
-    <value>Kein</value>
   </data>
   <data name="ButtonX_ManageLocalObjects.Location" type="System.Drawing.Point, System.Drawing">
     <value>223, 28</value>

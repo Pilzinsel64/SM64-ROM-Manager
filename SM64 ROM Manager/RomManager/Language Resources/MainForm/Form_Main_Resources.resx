@@ -129,6 +129,12 @@
   <data name="MsgBox_BankSizeChangedSuccess_Title" xml:space="preserve">
     <value>Size changed</value>
   </data>
+  <data name="MsgBox_ChangeAreaID" xml:space="preserve">
+    <value>This area ID is already used in this level. Please use another one.</value>
+  </data>
+  <data name="MsgBox_ChangeAreaID_Title" xml:space="preserve">
+    <value>Change Area ID</value>
+  </data>
   <data name="MsgBox_ConvertToMidi_Failed" xml:space="preserve">
     <value>An error occurred while converting .m64 to .midi!</value>
   </data>

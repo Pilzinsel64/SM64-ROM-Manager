@@ -45,17 +45,10 @@ namespace SM64_ROM_Manager
 
         // E v e n t s
 
-        public event RomLoadingEventHandler RomLoading;
-        public delegate void RomLoadingEventHandler();
-
-        public event RomLoadedEventHandler RomLoaded;
-        public delegate void RomLoadedEventHandler();
-
-        public event RomMusicLoadedEventHandler RomMusicLoaded;
-        public delegate void RomMusicLoadedEventHandler();
-
-        public event RomLevelsLoadedEventHandler RomLevelsLoaded;
-        public delegate void RomLevelsLoadedEventHandler();
+        public event Action RomLoading;
+        public event Action RomLoaded;
+        public event Action RomMusicLoaded;
+        public event Action RomLevelsLoaded;
 
         public event StatusTextChangedEventHandler StatusTextChanged;
         public delegate void StatusTextChangedEventHandler(EventArguments.StatusTextChangedEventArgs e);
@@ -63,59 +56,26 @@ namespace SM64_ROM_Manager
         public event OtherStatusInfosChangedEventHandler OtherStatusInfosChanged;
         public delegate void OtherStatusInfosChangedEventHandler(EventArguments.OtherStatusInfosChangedEventArgs e);
 
-        public event RecentFilesChangedEventHandler RecentFilesChanged;
-        public delegate void RecentFilesChangedEventHandler();
-
-        public event RomFileRenamedEventHandler RomFileRenamed;
-        public delegate void RomFileRenamedEventHandler();
-
-        public event RomFileDeletedEventHandler RomFileDeleted;
-        public delegate void RomFileDeletedEventHandler();
-
-        public event RomFileChangedEventHandler RomFileChanged;
-        public delegate void RomFileChangedEventHandler();
+        public event Action RecentFilesChanged;
+        public event Action RomFileRenamed;
+        public event Action RomFileDeleted;
+        public event Action RomFileChanged;
 
         public event RomChangesAvailableEventHandler RomChangesAvailable;
         public delegate void RomChangesAvailableEventHandler(EventArguments.RomChangesAvaiableEventArgs e);
 
-        public event MusicSequenceRemovedEventHandler MusicSequenceRemoved;
-        public delegate void MusicSequenceRemovedEventHandler(EventArguments.MusicSequenceEventArgs e);
-
-        public event MusicSequenceAddedEventHandler MusicSequenceAdded;
-        public delegate void MusicSequenceAddedEventHandler(EventArguments.MusicSequenceEventArgs e);
-
-        public event MusicSequenceChangedEventHandler MusicSequenceChanged;
-        public delegate void MusicSequenceChangedEventHandler(EventArguments.MusicSequenceEventArgs e);
+        public event MusicSequenceEventHandler MusicSequenceRemoved;
+        public event MusicSequenceEventHandler MusicSequenceAdded;
+        public event MusicSequenceEventHandler MusicSequenceChanged;
+        public delegate void MusicSequenceEventHandler(EventArguments.MusicSequenceEventArgs e);
 
         public event RequestIsChangingTabEventHandler RequestIsChangingTab;
         public delegate void RequestIsChangingTabEventHandler(EventArguments.EnabledEventArgs e);
 
-        public event LevelSpecialItemAddedEventHandler LevelSpecialItemAdded;
-        public delegate void LevelSpecialItemAddedEventHandler(EventArguments.SpecialItemEventArgs e);
-
-        public event LevelSpecialItemRemovedEventHandler LevelSpecialItemRemoved;
-        public delegate void LevelSpecialItemRemovedEventHandler(EventArguments.SpecialItemEventArgs e);
-
-        public event LevelSpecialItemChangedEventHandler LevelSpecialItemChanged;
-        public delegate void LevelSpecialItemChangedEventHandler(EventArguments.SpecialItemEventArgs e);
-
-        public event LevelAddedEventHandler LevelAdded;
-        public delegate void LevelAddedEventHandler(EventArguments.LevelEventArgs e);
-
-        public event LevelRemovedEventHandler LevelRemoved;
-        public delegate void LevelRemovedEventHandler(EventArguments.LevelEventArgs e);
-
-        public event LevelAreaAddedEventHandler LevelAreaAdded;
-        public delegate void LevelAreaAddedEventHandler(EventArguments.LevelAreaEventArgs e);
-
-        public event LevelAreaRemovedEventHandler LevelAreaRemoved;
-        public delegate void LevelAreaRemovedEventHandler(EventArguments.LevelAreaEventArgs e);
-
-        public event LevelIDChangedEventHandler LevelIDChanged;
-        public delegate void LevelIDChangedEventHandler(EventArguments.LevelEventArgs e);
-
-        public event LevelCustomNameChangedEventHandler LevelCustomNameChanged;
-        public delegate void LevelCustomNameChangedEventHandler(EventArguments.LevelEventArgs e);
+        public event SpecialItemEventHandler LevelSpecialItemAdded;
+        public event SpecialItemEventHandler LevelSpecialItemRemoved;
+        public event SpecialItemEventHandler LevelSpecialItemChanged;
+        public delegate void SpecialItemEventHandler(EventArguments.SpecialItemEventArgs e);
 
         public event LevelBackgroundModeChangedEventHandler LevelBackgroundModeChanged;
         public delegate void LevelBackgroundModeChangedEventHandler(EventArguments.LevelBackgroundModeChangedEventArgs e);
@@ -126,23 +86,23 @@ namespace SM64_ROM_Manager
         public event LevelAreaBackgroundModeChangedEventHandler LevelAreaBackgroundModeChanged;
         public delegate void LevelAreaBackgroundModeChangedEventHandler(EventArguments.LevelAreaBackgroundModeChangedEventArgs e);
 
-        public event LevelCustomObjectsCountChangedEventHandler LevelCustomObjectsCountChanged;
-        public delegate void LevelCustomObjectsCountChangedEventHandler(EventArguments.LevelEventArgs e);
+        public event LevelEventHandler LevelAdded;
+        public event LevelEventHandler LevelRemoved;
+        public event LevelEventHandler LevelIDChanged;
+        public event LevelEventHandler LevelCustomNameChanged;
+        public event LevelEventHandler LevelCustomObjectsCountChanged;
+        public delegate void LevelEventHandler(EventArguments.LevelEventArgs e);
 
-        public event LevelAreaScrollingTextureCountChangedEventHandler LevelAreaScrollingTextureCountChanged;
-        public delegate void LevelAreaScrollingTextureCountChangedEventHandler(EventArguments.LevelAreaEventArgs e);
+        public event LevelAreaEventHandler LevelAreaAdded;
+        public event LevelAreaEventHandler LevelAreaRemoved;
+        public event LevelAreaEventHandler LevelAreaScrollingTextureCountChanged;
+        public event LevelAreaEventHandler LevelAreaIDChanged;
+        public delegate void LevelAreaEventHandler(EventArguments.LevelAreaEventArgs e);
 
-        public event ObjectBankDataChangedEventHandler ObjectBankDataChanged;
-        public delegate void ObjectBankDataChangedEventHandler();
-
-        public event ErrorBecauseNoRomLoadedEventHandler ErrorBecauseNoRomLoaded;
-        public delegate void ErrorBecauseNoRomLoadedEventHandler();
-
-        public event RomSavedEventHandler RomSaved;
-        public delegate void RomSavedEventHandler();
-
-        public event RomSavingEventHandler RomSaving;
-        public delegate void RomSavingEventHandler();
+        public event Action ObjectBankDataChanged;
+        public event Action ErrorBecauseNoRomLoaded;
+        public event Action RomSaved;
+        public event Action RomSaving;
 
         // C o n s t a n t s
 
@@ -1418,6 +1378,35 @@ namespace SM64_ROM_Manager
             {
                 MessageBoxEx.Show(SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_MaxCountAreasReached, SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_MaxCountAreasReached_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        public bool ChangeAreaID(int levelIndex, int areaIndex, byte newID)
+        {
+            var setted = false;
+            var lva = GetLevelAndArea(levelIndex, areaIndex);
+            var isUsed = false;
+            
+            foreach (var area in lva.level.Areas)
+            {
+                if (!isUsed && area.AreaID == newID)
+                    isUsed = true;
+            }
+
+            if (!isUsed)
+            {
+                if (lva.area is object)
+                    lva.area.AreaID = newID;
+
+                LevelAreaIDChanged?.Invoke(new EventArguments.LevelAreaEventArgs(levelIndex, areaIndex, newID));
+                setted = true;
+            }
+
+            return setted;
+        }
+
+        public byte GetLevelAreaID(int levelIndex, int areaIndex)
+        {
+            return GetLevelAndArea(levelIndex, areaIndex).area?.AreaID ?? default;
         }
 
         public byte GetLevelAreasCount(int levelIndex)
