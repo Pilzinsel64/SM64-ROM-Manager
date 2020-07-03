@@ -603,6 +603,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonX6.Image = ((System.Drawing.Image)(resources.GetObject("ButtonX6.Image")));
             resources.ApplyResources(this.ButtonX6, "ButtonX6");
             this.ButtonX6.Name = "ButtonX6";
+            this.ButtonX6.ShowSubItems = false;
             this.ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX6.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.labelItem5,
@@ -913,6 +914,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonX2.Image = ((System.Drawing.Image)(resources.GetObject("ButtonX2.Image")));
             resources.ApplyResources(this.ButtonX2, "ButtonX2");
             this.ButtonX2.Name = "ButtonX2";
+            this.ButtonX2.ShowSubItems = false;
             this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.labelItem4,
@@ -1024,7 +1026,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.DockSite9.Controls.Add(this.Bar_AreaViewer);
             resources.ApplyResources(this.DockSite9, "DockSite9");
             this.DockSite9.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.Bar_AreaViewer, 967, 685)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.Bar_AreaViewer, 967, 677)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
             this.DockSite9.Name = "DockSite9";
             this.DockSite9.TabStop = false;
             // 
@@ -1083,8 +1085,8 @@ namespace SM64_ROM_Manager.LevelEditor
             this.DockSite1.Controls.Add(this.Bar2);
             resources.ApplyResources(this.DockSite1, "DockSite1");
             this.DockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.Bar2, 271, 273))),
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.Bar1, 271, 544)))}, DevComponents.DotNetBar.eOrientation.Vertical);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.Bar2, 271, 270))),
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.Bar1, 271, 539)))}, DevComponents.DotNetBar.eOrientation.Vertical);
             this.DockSite1.Name = "DockSite1";
             this.DockSite1.TabStop = false;
             // 
