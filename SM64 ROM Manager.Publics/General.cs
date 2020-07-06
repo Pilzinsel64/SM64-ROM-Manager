@@ -756,22 +756,19 @@ namespace SM64_ROM_Manager.Publics
 
         public static (byte? newID, bool isAnyFree) GetNextAreaID(Level lvl)
         {
-            byte? newID = default;
+            byte? newID = null;
             bool isAnyFree = false;
 
             // Check for left area IDs
             for (int i = 0; i <= byte.MaxValue; i++)
             {
-                if (newID is null)
+                if (newID == null)
                 {
-                    byte areaID = Conversions.ToByte(i);
+                    byte areaID = (byte)i;
                     if (!lvl.Areas.Where(n => n.AreaID == areaID).Any())
                     {
-                        if (areaID != 0)
-                        {
+                        if (areaID != 0) // Yes skip 0, because it might confuse the user if area ID is"...6...7...0...8...9..."
                             newID = areaID;
-                        }
-
                         isAnyFree = true;
                     }
                 }

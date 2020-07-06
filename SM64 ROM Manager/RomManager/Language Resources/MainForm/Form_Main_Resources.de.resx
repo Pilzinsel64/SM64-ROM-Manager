@@ -129,6 +129,12 @@
   <data name="MsgBox_BankSizeChangedSuccess_Title" xml:space="preserve">
     <value>Größe geändert</value>
   </data>
+  <data name="MsgBox_ChangeAreaID" xml:space="preserve">
+    <value>Diese Bereichs-ID wird bereits in diesem Level verwendet. Bitte verwende eine andere ID.</value>
+  </data>
+  <data name="MsgBox_ChangeAreaID_Title" xml:space="preserve">
+    <value>Bereichs-ID ändern</value>
+  </data>
   <data name="MsgBox_ConvertToMidi_Failed" xml:space="preserve">
     <value>Ein Fehler ist während des Konvertierens von M64 zu MIDI aufgetreten.</value>
   </data>

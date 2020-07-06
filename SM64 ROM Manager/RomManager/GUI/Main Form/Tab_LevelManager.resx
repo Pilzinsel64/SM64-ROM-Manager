@@ -162,6 +162,9 @@
   <data name="Button_LM_AreaEditor.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 23</value>
   </data>
+  <data name="ButtonItem_ChangeAreaID.Text" xml:space="preserve">
+    <value>Change ID</value>
+  </data>
   <data name="Button_LM_RemoveArea.Text" xml:space="preserve">
     <value>Remove</value>
   </data>
@@ -2262,6 +2265,12 @@
     <value>ButtonItem_ImportArea</value>
   </data>
   <data name="&gt;&gt;ButtonItem_ImportArea.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ChangeAreaID.Name" xml:space="preserve">
+    <value>ButtonItem_ChangeAreaID</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ChangeAreaID.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Button_LM_RemoveArea.Name" xml:space="preserve">

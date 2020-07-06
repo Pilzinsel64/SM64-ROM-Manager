@@ -154,6 +154,7 @@
     <Compile Include="SM64Lib\Configuration\LevelAreaConfig.cs" />
     <Compile Include="SM64Lib\Configuration\LevelConfig.cs" />
     <Compile Include="SM64Lib\Configuration\MusicConfiguration.cs" />
+    <Compile Include="SM64Lib\Configuration\NPCConfig.cs" />
     <Compile Include="SM64Lib\Configuration\ObjectModelConfig.cs" />
     <Compile Include="SM64Lib\Configuration\RomConfig.cs" />
     <Compile Include="SM64Lib\Configuration\ScrollTexConfig.cs" />
@@ -354,8 +355,6 @@
       <Name>SM64Lib.TextValueConverter</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Behaviors\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

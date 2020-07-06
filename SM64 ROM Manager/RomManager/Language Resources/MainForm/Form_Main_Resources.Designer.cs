@@ -97,6 +97,24 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This area ID is already used in this level. Please use another one. ähnelt.
+        /// </summary>
+        public static string MsgBox_ChangeAreaID {
+            get {
+                return ResourceManager.GetString("MsgBox_ChangeAreaID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Change Area ID ähnelt.
+        /// </summary>
+        public static string MsgBox_ChangeAreaID_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_ChangeAreaID_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die An error occurred while converting .m64 to .midi! ähnelt.
         /// </summary>
         public static string MsgBox_ConvertToMidi_Failed {

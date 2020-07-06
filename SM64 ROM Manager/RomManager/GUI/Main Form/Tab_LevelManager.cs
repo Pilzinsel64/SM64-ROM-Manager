@@ -1180,5 +1180,17 @@ namespace SM64_ROM_Manager
             var index = Slider_AreaReverbLevel.Value;
             Slider_AreaReverbLevel.Text = $"{index}";
         }
+
+        private void ButtonItem_ChangeAreaID_Click(object sender, EventArgs e)
+        {
+            var input = new ValueInputDialog();
+            input.ValueTextBox.Text = TextValueConverter.TextFromValue(Controller.GetLevelAreaID(CurrentLevelIndex, CurrentAreaIndex));
+
+            if (input.ShowDialog() == DialogResult.OK)
+            {
+                if (!Controller.ChangeAreaID(CurrentLevelIndex, CurrentAreaIndex, (byte)TextValueConverter.ValueFromText(input.ValueTextBox.Text)))
+                    MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_ChangeAreaID, Form_Main_Resources.MsgBox_ChangeAreaID_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

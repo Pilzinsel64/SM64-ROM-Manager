@@ -43,6 +43,7 @@ namespace SM64_ROM_Manager
             this.Button_LM_AddArea = new DevComponents.DotNetBar.ButtonX();
             this.ButtonItem_ImportArea = new DevComponents.DotNetBar.ButtonItem();
             this.Button_LM_AreaEditor = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonItem_ChangeAreaID = new DevComponents.DotNetBar.ButtonItem();
             this.Button_LM_RemoveArea = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_EditAreaLevelScript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem2_EditGeolayoutScript = new DevComponents.DotNetBar.ButtonItem();
@@ -228,6 +229,7 @@ namespace SM64_ROM_Manager
             this.Button_LM_AreaEditor.Name = "Button_LM_AreaEditor";
             this.Button_LM_AreaEditor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_AreaEditor.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_ChangeAreaID,
             this.Button_LM_RemoveArea,
             this.ButtonItem_EditAreaLevelScript,
             this.ButtonItem2_EditGeolayoutScript});
@@ -236,8 +238,16 @@ namespace SM64_ROM_Manager
             this.Button_LM_AreaEditor.SymbolSize = 12F;
             this.Button_LM_AreaEditor.Click += new System.EventHandler(this.LM_OpenAreaEditor);
             // 
+            // ButtonItem_ChangeAreaID
+            // 
+            this.ButtonItem_ChangeAreaID.GlobalItem = false;
+            this.ButtonItem_ChangeAreaID.Name = "ButtonItem_ChangeAreaID";
+            resources.ApplyResources(this.ButtonItem_ChangeAreaID, "ButtonItem_ChangeAreaID");
+            this.ButtonItem_ChangeAreaID.Click += new System.EventHandler(this.ButtonItem_ChangeAreaID_Click);
+            // 
             // Button_LM_RemoveArea
             // 
+            this.Button_LM_RemoveArea.BeginGroup = true;
             this.Button_LM_RemoveArea.GlobalItem = false;
             this.Button_LM_RemoveArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
             this.Button_LM_RemoveArea.Name = "Button_LM_RemoveArea";
@@ -1760,5 +1770,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonX ButtonX_EditCollision;
         private DevComponents.DotNetBar.LabelX labelX14;
         private DevComponents.DotNetBar.Controls.Slider Slider_AreaReverbLevel;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_ChangeAreaID;
     }
 }

@@ -86,8 +86,6 @@ namespace SM64_ROM_Manager.Publics
 
             if (setTheme is null)
                 setTheme = Settings.StyleManager.MetroColorParams;
-            else
-                Settings.StyleManager.MetroColorParams = (MetroColorGeneratorParameters)setTheme;
 
             StyleManager.Style = eStyle.Metro;
             StyleManager.MetroColorGeneratorParameters = (MetroColorGeneratorParameters)setTheme;
