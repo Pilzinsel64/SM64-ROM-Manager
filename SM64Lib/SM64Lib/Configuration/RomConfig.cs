@@ -29,6 +29,7 @@ namespace SM64Lib.Configuration
 
         // Other
         public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
+        public NPCConfig NPCConfig { get; } = new NPCConfig();
 
         // F e a t u r e s
 

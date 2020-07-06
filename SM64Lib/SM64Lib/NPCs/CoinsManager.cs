@@ -17,6 +17,7 @@ namespace SM64Lib.NPCs
         public bool EnableNewRedCoinsCounter { get; set; } = false;
         public string NewRedCoinsCounterTextForCoins { get; set; } = "";
         public string NewRedCoinsCounterTextForCoin { get; set; } = "";
+        public bool Enabled3DCoins { get => RomManager.RomConfig.NPCConfig.Enabled3DCoins; }
 
         public CoinsManager(RomManager rommgr)
         {
