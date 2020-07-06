@@ -357,16 +357,6 @@
             Saves all the properties to ROM and updates checksum if requested.
             </summary>
         </member>
-        <member name="M:SM64Lib.NPCs.CoinsManager.ImportKazesCoins">
-            <summary>
-            Imports Kazes 3D Coins
-            </summary>
-        </member>
-        <member name="M:SM64Lib.NPCs.CoinsManager.Remove3DCoins">
-            <summary>
-            Remove 3D Coins [Experimental]
-            </summary>
-        </member>
         <member name="P:SM64Lib.RomManager.ProgramVersion">
             <summary>
             Gets or sets the lastly used program version for this ROM.

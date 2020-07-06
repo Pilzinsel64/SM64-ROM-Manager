@@ -78,23 +78,5 @@ namespace SM64_ROM_Manager.My.Resources {
                 return ResourceManager.GetString("MsgBox_Experimental3DCoinsRemove_Titel", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die 3D Coins has been patched successfully! ähnelt.
-        /// </summary>
-        internal static string Notify_3DCoinsPatchesSuccess {
-            get {
-                return ResourceManager.GetString("Notify_3DCoinsPatchesSuccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die 3D Coins has been removed successfully! ähnelt.
-        /// </summary>
-        internal static string Notify_3DCoinsRemovedSuccess {
-            get {
-                return ResourceManager.GetString("Notify_3DCoinsRemovedSuccess", resourceCulture);
-            }
-        }
     }
 }

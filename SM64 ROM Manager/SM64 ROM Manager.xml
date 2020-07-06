@@ -853,16 +853,6 @@
               Sucht eine lokalisierte Zeichenfolge, die Remove 3D Coins ähnelt.
             </summary>
         </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.LangResCoinsManager.Notify_3DCoinsPatchesSuccess">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die 3D Coins has been patched successfully! ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.LangResCoinsManager.Notify_3DCoinsRemovedSuccess">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die 3D Coins has been removed successfully! ähnelt.
-            </summary>
-        </member>
         <member name="T:SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes">
             <summary>
               Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.

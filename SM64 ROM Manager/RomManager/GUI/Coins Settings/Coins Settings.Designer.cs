@@ -29,7 +29,7 @@ namespace SM64_ROM_Manager
         }
 
         // Wird vom Windows Form-Designer benötigt.
-        private System.ComponentModel.IContainer components;
+        private System.ComponentModel.IContainer components = new System.ComponentModel.Container();
 
         // Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
         // Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
@@ -37,1002 +37,385 @@ namespace SM64_ROM_Manager
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CoinsSettings));
-            _Panel1 = new Panel();
-            _ButtonX_SaveSettings = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_SaveSettings.Click += new EventHandler(ButtonX1_Click);
-            _GroupBox4 = new GroupBox();
-            _ButtonX_Remove3DCoins = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_Remove3DCoins.Click += new EventHandler(ButtonX_Remove3DCoins_Click);
-            _ButtonX_ImportKaze3DCoins = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX_ImportKaze3DCoins.Click += new EventHandler(ButtonX_ImportKaze3DCoins_Click);
-            _GroupBox3 = new GroupBox();
-            _LabelX10 = new DevComponents.DotNetBar.LabelX();
-            _SwitchButton_EnableNewRedCoinsCounter = new DevComponents.DotNetBar.Controls.SwitchButton();
-            _LabelX6 = new DevComponents.DotNetBar.LabelX();
-            _TextBoxX_NewRedCoinsCounterTextForCoins = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _TextBoxX_NewRedCoinsCounterTextForCoin = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _LabelX5 = new DevComponents.DotNetBar.LabelX();
-            _LabelX1 = new DevComponents.DotNetBar.LabelX();
-            _GroupBox1 = new GroupBox();
-            _SwitchButton_CoinsRestoreHealth = new DevComponents.DotNetBar.Controls.SwitchButton();
-            _LabelX9 = new DevComponents.DotNetBar.LabelX();
-            _SwitchButton_ShowCoinsHudOnHubs = new DevComponents.DotNetBar.Controls.SwitchButton();
-            _LabelX8 = new DevComponents.DotNetBar.LabelX();
-            _SwitchButton_Enable100Coins = new DevComponents.DotNetBar.Controls.SwitchButton();
-            _LabelX7 = new DevComponents.DotNetBar.LabelX();
-            _LabelX2 = new DevComponents.DotNetBar.LabelX();
-            _IntegerInput_CoinsForRedCoinsStar = new DevComponents.Editors.IntegerInput();
-            _LabelX4 = new DevComponents.DotNetBar.LabelX();
-            _IntegerInput_CoinsForBowserRedCoinsStar = new DevComponents.Editors.IntegerInput();
-            _LabelX3 = new DevComponents.DotNetBar.LabelX();
-            _IntegerInput_CoinsFor100CoinsStar = new DevComponents.Editors.IntegerInput();
-            _Panel1.SuspendLayout();
-            _GroupBox4.SuspendLayout();
-            _GroupBox3.SuspendLayout();
-            _GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_CoinsForRedCoinsStar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_CoinsForBowserRedCoinsStar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_CoinsFor100CoinsStar).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_CoinsSettings));
+            this.Panel1 = new System.Windows.Forms.Panel();
+            this.ButtonX_SaveSettings = new DevComponents.DotNetBar.ButtonX();
+            this.GroupBox3 = new System.Windows.Forms.GroupBox();
+            this.LabelX10 = new DevComponents.DotNetBar.LabelX();
+            this.SwitchButton_EnableNewRedCoinsCounter = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.LabelX6 = new DevComponents.DotNetBar.LabelX();
+            this.TextBoxX_NewRedCoinsCounterTextForCoins = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TextBoxX_NewRedCoinsCounterTextForCoin = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.LabelX5 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX1 = new DevComponents.DotNetBar.LabelX();
+            this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.SwitchButton_CoinsRestoreHealth = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.LabelX9 = new DevComponents.DotNetBar.LabelX();
+            this.SwitchButton_ShowCoinsHudOnHubs = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.LabelX8 = new DevComponents.DotNetBar.LabelX();
+            this.SwitchButton_Enable100Coins = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.LabelX7 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX2 = new DevComponents.DotNetBar.LabelX();
+            this.IntegerInput_CoinsForRedCoinsStar = new DevComponents.Editors.IntegerInput();
+            this.LabelX4 = new DevComponents.DotNetBar.LabelX();
+            this.IntegerInput_CoinsForBowserRedCoinsStar = new DevComponents.Editors.IntegerInput();
+            this.LabelX3 = new DevComponents.DotNetBar.LabelX();
+            this.IntegerInput_CoinsFor100CoinsStar = new DevComponents.Editors.IntegerInput();
+            this.Panel1.SuspendLayout();
+            this.GroupBox3.SuspendLayout();
+            this.GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_CoinsForRedCoinsStar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_CoinsForBowserRedCoinsStar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_CoinsFor100CoinsStar)).BeginInit();
+            this.SuspendLayout();
             // 
             // Panel1
             // 
-            _Panel1.BackColor = Color.Transparent;
-            _Panel1.Controls.Add(_ButtonX_SaveSettings);
-            _Panel1.Controls.Add(_GroupBox4);
-            _Panel1.Controls.Add(_GroupBox3);
-            _Panel1.Controls.Add(_GroupBox1);
-            resources.ApplyResources(_Panel1, "Panel1");
-            _Panel1.Name = "Panel1";
+            this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.ButtonX_SaveSettings);
+            this.Panel1.Controls.Add(this.GroupBox3);
+            this.Panel1.Controls.Add(this.GroupBox1);
+            resources.ApplyResources(this.Panel1, "Panel1");
+            this.Panel1.Name = "Panel1";
             // 
             // ButtonX_SaveSettings
             // 
-            _ButtonX_SaveSettings.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_SaveSettings.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_SaveSettings.FocusCuesEnabled = false;
-            _ButtonX_SaveSettings.Image = My.Resources.MyIcons.icons8_save_16px;
-            resources.ApplyResources(_ButtonX_SaveSettings, "ButtonX_SaveSettings");
-            _ButtonX_SaveSettings.Name = "ButtonX_SaveSettings";
-            _ButtonX_SaveSettings.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // GroupBox4
-            // 
-            _GroupBox4.Controls.Add(_ButtonX_Remove3DCoins);
-            _GroupBox4.Controls.Add(_ButtonX_ImportKaze3DCoins);
-            resources.ApplyResources(_GroupBox4, "GroupBox4");
-            _GroupBox4.Name = "GroupBox4";
-            _GroupBox4.TabStop = false;
-            // 
-            // ButtonX_Remove3DCoins
-            // 
-            _ButtonX_Remove3DCoins.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_Remove3DCoins.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_Remove3DCoins.FocusCuesEnabled = false;
-            _ButtonX_Remove3DCoins.Image = My.Resources.MyIcons.icons8_delete_sign_16px;
-            resources.ApplyResources(_ButtonX_Remove3DCoins, "ButtonX_Remove3DCoins");
-            _ButtonX_Remove3DCoins.Name = "ButtonX_Remove3DCoins";
-            _ButtonX_Remove3DCoins.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // ButtonX_ImportKaze3DCoins
-            // 
-            _ButtonX_ImportKaze3DCoins.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX_ImportKaze3DCoins.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX_ImportKaze3DCoins.FocusCuesEnabled = false;
-            resources.ApplyResources(_ButtonX_ImportKaze3DCoins, "ButtonX_ImportKaze3DCoins");
-            _ButtonX_ImportKaze3DCoins.Name = "ButtonX_ImportKaze3DCoins";
-            _ButtonX_ImportKaze3DCoins.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_SaveSettings.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_SaveSettings.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_SaveSettings.FocusCuesEnabled = false;
+            this.ButtonX_SaveSettings.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_save_16px;
+            resources.ApplyResources(this.ButtonX_SaveSettings, "ButtonX_SaveSettings");
+            this.ButtonX_SaveSettings.Name = "ButtonX_SaveSettings";
+            this.ButtonX_SaveSettings.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_SaveSettings.Click += new System.EventHandler(this.ButtonX1_Click);
             // 
             // GroupBox3
             // 
-            _GroupBox3.Controls.Add(_LabelX10);
-            _GroupBox3.Controls.Add(_SwitchButton_EnableNewRedCoinsCounter);
-            _GroupBox3.Controls.Add(_LabelX6);
-            _GroupBox3.Controls.Add(_TextBoxX_NewRedCoinsCounterTextForCoins);
-            _GroupBox3.Controls.Add(_TextBoxX_NewRedCoinsCounterTextForCoin);
-            _GroupBox3.Controls.Add(_LabelX5);
-            _GroupBox3.Controls.Add(_LabelX1);
-            resources.ApplyResources(_GroupBox3, "GroupBox3");
-            _GroupBox3.Name = "GroupBox3";
-            _GroupBox3.TabStop = false;
+            this.GroupBox3.Controls.Add(this.LabelX10);
+            this.GroupBox3.Controls.Add(this.SwitchButton_EnableNewRedCoinsCounter);
+            this.GroupBox3.Controls.Add(this.LabelX6);
+            this.GroupBox3.Controls.Add(this.TextBoxX_NewRedCoinsCounterTextForCoins);
+            this.GroupBox3.Controls.Add(this.TextBoxX_NewRedCoinsCounterTextForCoin);
+            this.GroupBox3.Controls.Add(this.LabelX5);
+            this.GroupBox3.Controls.Add(this.LabelX1);
+            resources.ApplyResources(this.GroupBox3, "GroupBox3");
+            this.GroupBox3.Name = "GroupBox3";
+            this.GroupBox3.TabStop = false;
             // 
             // LabelX10
             // 
             // 
             // 
             // 
-            _LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX10, "LabelX10");
-            _LabelX10.Name = "LabelX10";
+            this.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX10, "LabelX10");
+            this.LabelX10.Name = "LabelX10";
             // 
             // SwitchButton_EnableNewRedCoinsCounter
             // 
             // 
             // 
             // 
-            _SwitchButton_EnableNewRedCoinsCounter.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _SwitchButton_EnableNewRedCoinsCounter.FocusCuesEnabled = false;
-            resources.ApplyResources(_SwitchButton_EnableNewRedCoinsCounter, "SwitchButton_EnableNewRedCoinsCounter");
-            _SwitchButton_EnableNewRedCoinsCounter.Name = "SwitchButton_EnableNewRedCoinsCounter";
-            _SwitchButton_EnableNewRedCoinsCounter.OffTextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(64)), Conversions.ToInteger(Conversions.ToByte(64)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _SwitchButton_EnableNewRedCoinsCounter.OnBackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(139)), Conversions.ToInteger(Conversions.ToByte(195)), Conversions.ToInteger(Conversions.ToByte(80)));
-            _SwitchButton_EnableNewRedCoinsCounter.OnTextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(21)), Conversions.ToInteger(Conversions.ToByte(66)), Conversions.ToInteger(Conversions.ToByte(139)));
-            _SwitchButton_EnableNewRedCoinsCounter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SwitchButton_EnableNewRedCoinsCounter.SwitchBackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(147)), Conversions.ToInteger(Conversions.ToByte(164)), Conversions.ToInteger(Conversions.ToByte(181)));
-            _SwitchButton_EnableNewRedCoinsCounter.SwitchBorderColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(69)), Conversions.ToInteger(Conversions.ToByte(85)), Conversions.ToInteger(Conversions.ToByte(107)));
-            _SwitchButton_EnableNewRedCoinsCounter.SwitchWidth = 15;
-            _SwitchButton_EnableNewRedCoinsCounter.Value = true;
-            _SwitchButton_EnableNewRedCoinsCounter.ValueObject = "Y";
+            this.SwitchButton_EnableNewRedCoinsCounter.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SwitchButton_EnableNewRedCoinsCounter.FocusCuesEnabled = false;
+            resources.ApplyResources(this.SwitchButton_EnableNewRedCoinsCounter, "SwitchButton_EnableNewRedCoinsCounter");
+            this.SwitchButton_EnableNewRedCoinsCounter.Name = "SwitchButton_EnableNewRedCoinsCounter";
+            this.SwitchButton_EnableNewRedCoinsCounter.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SwitchButton_EnableNewRedCoinsCounter.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.SwitchButton_EnableNewRedCoinsCounter.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.SwitchButton_EnableNewRedCoinsCounter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SwitchButton_EnableNewRedCoinsCounter.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.SwitchButton_EnableNewRedCoinsCounter.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.SwitchButton_EnableNewRedCoinsCounter.SwitchWidth = 15;
+            this.SwitchButton_EnableNewRedCoinsCounter.Value = true;
+            this.SwitchButton_EnableNewRedCoinsCounter.ValueObject = "Y";
             // 
             // LabelX6
             // 
             // 
             // 
             // 
-            _LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX6, "LabelX6");
-            _LabelX6.Name = "LabelX6";
-            _LabelX6.TextAlignment = StringAlignment.Center;
+            this.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX6, "LabelX6");
+            this.LabelX6.Name = "LabelX6";
+            this.LabelX6.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // TextBoxX_NewRedCoinsCounterTextForCoins
             // 
-            _TextBoxX_NewRedCoinsCounterTextForCoins.BackColor = Color.White;
+            this.TextBoxX_NewRedCoinsCounterTextForCoins.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX_NewRedCoinsCounterTextForCoins.Border.Class = "TextBoxBorder";
-            _TextBoxX_NewRedCoinsCounterTextForCoins.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX_NewRedCoinsCounterTextForCoins.DisabledBackColor = Color.White;
-            _TextBoxX_NewRedCoinsCounterTextForCoins.ForeColor = Color.Black;
-            resources.ApplyResources(_TextBoxX_NewRedCoinsCounterTextForCoins, "TextBoxX_NewRedCoinsCounterTextForCoins");
-            _TextBoxX_NewRedCoinsCounterTextForCoins.Name = "TextBoxX_NewRedCoinsCounterTextForCoins";
-            _TextBoxX_NewRedCoinsCounterTextForCoins.PreventEnterBeep = true;
+            this.TextBoxX_NewRedCoinsCounterTextForCoins.Border.Class = "TextBoxBorder";
+            this.TextBoxX_NewRedCoinsCounterTextForCoins.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX_NewRedCoinsCounterTextForCoins.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX_NewRedCoinsCounterTextForCoins.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.TextBoxX_NewRedCoinsCounterTextForCoins, "TextBoxX_NewRedCoinsCounterTextForCoins");
+            this.TextBoxX_NewRedCoinsCounterTextForCoins.Name = "TextBoxX_NewRedCoinsCounterTextForCoins";
+            this.TextBoxX_NewRedCoinsCounterTextForCoins.PreventEnterBeep = true;
             // 
             // TextBoxX_NewRedCoinsCounterTextForCoin
             // 
-            _TextBoxX_NewRedCoinsCounterTextForCoin.BackColor = Color.White;
+            this.TextBoxX_NewRedCoinsCounterTextForCoin.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            _TextBoxX_NewRedCoinsCounterTextForCoin.Border.Class = "TextBoxBorder";
-            _TextBoxX_NewRedCoinsCounterTextForCoin.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX_NewRedCoinsCounterTextForCoin.DisabledBackColor = Color.White;
-            _TextBoxX_NewRedCoinsCounterTextForCoin.ForeColor = Color.Black;
-            resources.ApplyResources(_TextBoxX_NewRedCoinsCounterTextForCoin, "TextBoxX_NewRedCoinsCounterTextForCoin");
-            _TextBoxX_NewRedCoinsCounterTextForCoin.Name = "TextBoxX_NewRedCoinsCounterTextForCoin";
-            _TextBoxX_NewRedCoinsCounterTextForCoin.PreventEnterBeep = true;
+            this.TextBoxX_NewRedCoinsCounterTextForCoin.Border.Class = "TextBoxBorder";
+            this.TextBoxX_NewRedCoinsCounterTextForCoin.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TextBoxX_NewRedCoinsCounterTextForCoin.DisabledBackColor = System.Drawing.Color.White;
+            this.TextBoxX_NewRedCoinsCounterTextForCoin.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.TextBoxX_NewRedCoinsCounterTextForCoin, "TextBoxX_NewRedCoinsCounterTextForCoin");
+            this.TextBoxX_NewRedCoinsCounterTextForCoin.Name = "TextBoxX_NewRedCoinsCounterTextForCoin";
+            this.TextBoxX_NewRedCoinsCounterTextForCoin.PreventEnterBeep = true;
             // 
             // LabelX5
             // 
             // 
             // 
             // 
-            _LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX5, "LabelX5");
-            _LabelX5.Name = "LabelX5";
+            this.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX5, "LabelX5");
+            this.LabelX5.Name = "LabelX5";
             // 
             // LabelX1
             // 
             // 
             // 
             // 
-            _LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX1, "LabelX1");
-            _LabelX1.Name = "LabelX1";
+            this.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX1, "LabelX1");
+            this.LabelX1.Name = "LabelX1";
             // 
             // GroupBox1
             // 
-            _GroupBox1.Controls.Add(_SwitchButton_CoinsRestoreHealth);
-            _GroupBox1.Controls.Add(_LabelX9);
-            _GroupBox1.Controls.Add(_SwitchButton_ShowCoinsHudOnHubs);
-            _GroupBox1.Controls.Add(_LabelX8);
-            _GroupBox1.Controls.Add(_SwitchButton_Enable100Coins);
-            _GroupBox1.Controls.Add(_LabelX7);
-            _GroupBox1.Controls.Add(_LabelX2);
-            _GroupBox1.Controls.Add(_IntegerInput_CoinsForRedCoinsStar);
-            _GroupBox1.Controls.Add(_LabelX4);
-            _GroupBox1.Controls.Add(_IntegerInput_CoinsForBowserRedCoinsStar);
-            _GroupBox1.Controls.Add(_LabelX3);
-            _GroupBox1.Controls.Add(_IntegerInput_CoinsFor100CoinsStar);
-            resources.ApplyResources(_GroupBox1, "GroupBox1");
-            _GroupBox1.Name = "GroupBox1";
-            _GroupBox1.TabStop = false;
+            this.GroupBox1.Controls.Add(this.SwitchButton_CoinsRestoreHealth);
+            this.GroupBox1.Controls.Add(this.LabelX9);
+            this.GroupBox1.Controls.Add(this.SwitchButton_ShowCoinsHudOnHubs);
+            this.GroupBox1.Controls.Add(this.LabelX8);
+            this.GroupBox1.Controls.Add(this.SwitchButton_Enable100Coins);
+            this.GroupBox1.Controls.Add(this.LabelX7);
+            this.GroupBox1.Controls.Add(this.LabelX2);
+            this.GroupBox1.Controls.Add(this.IntegerInput_CoinsForRedCoinsStar);
+            this.GroupBox1.Controls.Add(this.LabelX4);
+            this.GroupBox1.Controls.Add(this.IntegerInput_CoinsForBowserRedCoinsStar);
+            this.GroupBox1.Controls.Add(this.LabelX3);
+            this.GroupBox1.Controls.Add(this.IntegerInput_CoinsFor100CoinsStar);
+            resources.ApplyResources(this.GroupBox1, "GroupBox1");
+            this.GroupBox1.Name = "GroupBox1";
+            this.GroupBox1.TabStop = false;
             // 
             // SwitchButton_CoinsRestoreHealth
             // 
             // 
             // 
             // 
-            _SwitchButton_CoinsRestoreHealth.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _SwitchButton_CoinsRestoreHealth.FocusCuesEnabled = false;
-            resources.ApplyResources(_SwitchButton_CoinsRestoreHealth, "SwitchButton_CoinsRestoreHealth");
-            _SwitchButton_CoinsRestoreHealth.Name = "SwitchButton_CoinsRestoreHealth";
-            _SwitchButton_CoinsRestoreHealth.OffTextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(64)), Conversions.ToInteger(Conversions.ToByte(64)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _SwitchButton_CoinsRestoreHealth.OnBackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(139)), Conversions.ToInteger(Conversions.ToByte(195)), Conversions.ToInteger(Conversions.ToByte(80)));
-            _SwitchButton_CoinsRestoreHealth.OnTextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(21)), Conversions.ToInteger(Conversions.ToByte(66)), Conversions.ToInteger(Conversions.ToByte(139)));
-            _SwitchButton_CoinsRestoreHealth.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SwitchButton_CoinsRestoreHealth.SwitchBackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(147)), Conversions.ToInteger(Conversions.ToByte(164)), Conversions.ToInteger(Conversions.ToByte(181)));
-            _SwitchButton_CoinsRestoreHealth.SwitchBorderColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(69)), Conversions.ToInteger(Conversions.ToByte(85)), Conversions.ToInteger(Conversions.ToByte(107)));
-            _SwitchButton_CoinsRestoreHealth.SwitchWidth = 15;
-            _SwitchButton_CoinsRestoreHealth.Value = true;
-            _SwitchButton_CoinsRestoreHealth.ValueObject = "Y";
+            this.SwitchButton_CoinsRestoreHealth.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SwitchButton_CoinsRestoreHealth.FocusCuesEnabled = false;
+            resources.ApplyResources(this.SwitchButton_CoinsRestoreHealth, "SwitchButton_CoinsRestoreHealth");
+            this.SwitchButton_CoinsRestoreHealth.Name = "SwitchButton_CoinsRestoreHealth";
+            this.SwitchButton_CoinsRestoreHealth.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SwitchButton_CoinsRestoreHealth.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.SwitchButton_CoinsRestoreHealth.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.SwitchButton_CoinsRestoreHealth.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SwitchButton_CoinsRestoreHealth.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.SwitchButton_CoinsRestoreHealth.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.SwitchButton_CoinsRestoreHealth.SwitchWidth = 15;
+            this.SwitchButton_CoinsRestoreHealth.Value = true;
+            this.SwitchButton_CoinsRestoreHealth.ValueObject = "Y";
             // 
             // LabelX9
             // 
             // 
             // 
             // 
-            _LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX9, "LabelX9");
-            _LabelX9.Name = "LabelX9";
+            this.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX9, "LabelX9");
+            this.LabelX9.Name = "LabelX9";
             // 
             // SwitchButton_ShowCoinsHudOnHubs
             // 
             // 
             // 
             // 
-            _SwitchButton_ShowCoinsHudOnHubs.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _SwitchButton_ShowCoinsHudOnHubs.FocusCuesEnabled = false;
-            resources.ApplyResources(_SwitchButton_ShowCoinsHudOnHubs, "SwitchButton_ShowCoinsHudOnHubs");
-            _SwitchButton_ShowCoinsHudOnHubs.Name = "SwitchButton_ShowCoinsHudOnHubs";
-            _SwitchButton_ShowCoinsHudOnHubs.OffTextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(64)), Conversions.ToInteger(Conversions.ToByte(64)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _SwitchButton_ShowCoinsHudOnHubs.OnBackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(139)), Conversions.ToInteger(Conversions.ToByte(195)), Conversions.ToInteger(Conversions.ToByte(80)));
-            _SwitchButton_ShowCoinsHudOnHubs.OnTextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(21)), Conversions.ToInteger(Conversions.ToByte(66)), Conversions.ToInteger(Conversions.ToByte(139)));
-            _SwitchButton_ShowCoinsHudOnHubs.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SwitchButton_ShowCoinsHudOnHubs.SwitchBackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(147)), Conversions.ToInteger(Conversions.ToByte(164)), Conversions.ToInteger(Conversions.ToByte(181)));
-            _SwitchButton_ShowCoinsHudOnHubs.SwitchBorderColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(69)), Conversions.ToInteger(Conversions.ToByte(85)), Conversions.ToInteger(Conversions.ToByte(107)));
-            _SwitchButton_ShowCoinsHudOnHubs.SwitchWidth = 15;
-            _SwitchButton_ShowCoinsHudOnHubs.Value = true;
-            _SwitchButton_ShowCoinsHudOnHubs.ValueObject = "Y";
+            this.SwitchButton_ShowCoinsHudOnHubs.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SwitchButton_ShowCoinsHudOnHubs.FocusCuesEnabled = false;
+            resources.ApplyResources(this.SwitchButton_ShowCoinsHudOnHubs, "SwitchButton_ShowCoinsHudOnHubs");
+            this.SwitchButton_ShowCoinsHudOnHubs.Name = "SwitchButton_ShowCoinsHudOnHubs";
+            this.SwitchButton_ShowCoinsHudOnHubs.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SwitchButton_ShowCoinsHudOnHubs.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.SwitchButton_ShowCoinsHudOnHubs.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.SwitchButton_ShowCoinsHudOnHubs.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SwitchButton_ShowCoinsHudOnHubs.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.SwitchButton_ShowCoinsHudOnHubs.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.SwitchButton_ShowCoinsHudOnHubs.SwitchWidth = 15;
+            this.SwitchButton_ShowCoinsHudOnHubs.Value = true;
+            this.SwitchButton_ShowCoinsHudOnHubs.ValueObject = "Y";
             // 
             // LabelX8
             // 
             // 
             // 
             // 
-            _LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX8, "LabelX8");
-            _LabelX8.Name = "LabelX8";
+            this.LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX8, "LabelX8");
+            this.LabelX8.Name = "LabelX8";
             // 
             // SwitchButton_Enable100Coins
             // 
             // 
             // 
             // 
-            _SwitchButton_Enable100Coins.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _SwitchButton_Enable100Coins.FocusCuesEnabled = false;
-            resources.ApplyResources(_SwitchButton_Enable100Coins, "SwitchButton_Enable100Coins");
-            _SwitchButton_Enable100Coins.Name = "SwitchButton_Enable100Coins";
-            _SwitchButton_Enable100Coins.OffTextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(64)), Conversions.ToInteger(Conversions.ToByte(64)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _SwitchButton_Enable100Coins.OnBackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(139)), Conversions.ToInteger(Conversions.ToByte(195)), Conversions.ToInteger(Conversions.ToByte(80)));
-            _SwitchButton_Enable100Coins.OnTextColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(21)), Conversions.ToInteger(Conversions.ToByte(66)), Conversions.ToInteger(Conversions.ToByte(139)));
-            _SwitchButton_Enable100Coins.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _SwitchButton_Enable100Coins.SwitchBackColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(147)), Conversions.ToInteger(Conversions.ToByte(164)), Conversions.ToInteger(Conversions.ToByte(181)));
-            _SwitchButton_Enable100Coins.SwitchBorderColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(69)), Conversions.ToInteger(Conversions.ToByte(85)), Conversions.ToInteger(Conversions.ToByte(107)));
-            _SwitchButton_Enable100Coins.SwitchWidth = 15;
-            _SwitchButton_Enable100Coins.Value = true;
-            _SwitchButton_Enable100Coins.ValueObject = "Y";
+            this.SwitchButton_Enable100Coins.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SwitchButton_Enable100Coins.FocusCuesEnabled = false;
+            resources.ApplyResources(this.SwitchButton_Enable100Coins, "SwitchButton_Enable100Coins");
+            this.SwitchButton_Enable100Coins.Name = "SwitchButton_Enable100Coins";
+            this.SwitchButton_Enable100Coins.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SwitchButton_Enable100Coins.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.SwitchButton_Enable100Coins.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.SwitchButton_Enable100Coins.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SwitchButton_Enable100Coins.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.SwitchButton_Enable100Coins.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.SwitchButton_Enable100Coins.SwitchWidth = 15;
+            this.SwitchButton_Enable100Coins.Value = true;
+            this.SwitchButton_Enable100Coins.ValueObject = "Y";
             // 
             // LabelX7
             // 
             // 
             // 
             // 
-            _LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX7, "LabelX7");
-            _LabelX7.Name = "LabelX7";
+            this.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX7, "LabelX7");
+            this.LabelX7.Name = "LabelX7";
             // 
             // LabelX2
             // 
             // 
             // 
             // 
-            _LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX2, "LabelX2");
-            _LabelX2.Name = "LabelX2";
+            this.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX2, "LabelX2");
+            this.LabelX2.Name = "LabelX2";
             // 
             // IntegerInput_CoinsForRedCoinsStar
             // 
             // 
             // 
             // 
-            _IntegerInput_CoinsForRedCoinsStar.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput_CoinsForRedCoinsStar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput_CoinsForRedCoinsStar.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            resources.ApplyResources(_IntegerInput_CoinsForRedCoinsStar, "IntegerInput_CoinsForRedCoinsStar");
-            _IntegerInput_CoinsForRedCoinsStar.Name = "IntegerInput_CoinsForRedCoinsStar";
-            _IntegerInput_CoinsForRedCoinsStar.ShowUpDown = true;
+            this.IntegerInput_CoinsForRedCoinsStar.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput_CoinsForRedCoinsStar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput_CoinsForRedCoinsStar.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            resources.ApplyResources(this.IntegerInput_CoinsForRedCoinsStar, "IntegerInput_CoinsForRedCoinsStar");
+            this.IntegerInput_CoinsForRedCoinsStar.Name = "IntegerInput_CoinsForRedCoinsStar";
+            this.IntegerInput_CoinsForRedCoinsStar.ShowUpDown = true;
             // 
             // LabelX4
             // 
             // 
             // 
             // 
-            _LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX4, "LabelX4");
-            _LabelX4.Name = "LabelX4";
+            this.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX4, "LabelX4");
+            this.LabelX4.Name = "LabelX4";
             // 
             // IntegerInput_CoinsForBowserRedCoinsStar
             // 
             // 
             // 
             // 
-            _IntegerInput_CoinsForBowserRedCoinsStar.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput_CoinsForBowserRedCoinsStar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput_CoinsForBowserRedCoinsStar.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            resources.ApplyResources(_IntegerInput_CoinsForBowserRedCoinsStar, "IntegerInput_CoinsForBowserRedCoinsStar");
-            _IntegerInput_CoinsForBowserRedCoinsStar.Name = "IntegerInput_CoinsForBowserRedCoinsStar";
-            _IntegerInput_CoinsForBowserRedCoinsStar.ShowUpDown = true;
+            this.IntegerInput_CoinsForBowserRedCoinsStar.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput_CoinsForBowserRedCoinsStar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput_CoinsForBowserRedCoinsStar.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            resources.ApplyResources(this.IntegerInput_CoinsForBowserRedCoinsStar, "IntegerInput_CoinsForBowserRedCoinsStar");
+            this.IntegerInput_CoinsForBowserRedCoinsStar.Name = "IntegerInput_CoinsForBowserRedCoinsStar";
+            this.IntegerInput_CoinsForBowserRedCoinsStar.ShowUpDown = true;
             // 
             // LabelX3
             // 
             // 
             // 
             // 
-            _LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX3, "LabelX3");
-            _LabelX3.Name = "LabelX3";
+            this.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX3, "LabelX3");
+            this.LabelX3.Name = "LabelX3";
             // 
             // IntegerInput_CoinsFor100CoinsStar
             // 
             // 
             // 
             // 
-            _IntegerInput_CoinsFor100CoinsStar.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput_CoinsFor100CoinsStar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput_CoinsFor100CoinsStar.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            resources.ApplyResources(_IntegerInput_CoinsFor100CoinsStar, "IntegerInput_CoinsFor100CoinsStar");
-            _IntegerInput_CoinsFor100CoinsStar.Name = "IntegerInput_CoinsFor100CoinsStar";
-            _IntegerInput_CoinsFor100CoinsStar.ShowUpDown = true;
+            this.IntegerInput_CoinsFor100CoinsStar.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput_CoinsFor100CoinsStar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput_CoinsFor100CoinsStar.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            resources.ApplyResources(this.IntegerInput_CoinsFor100CoinsStar, "IntegerInput_CoinsFor100CoinsStar");
+            this.IntegerInput_CoinsFor100CoinsStar.Name = "IntegerInput_CoinsFor100CoinsStar";
+            this.IntegerInput_CoinsFor100CoinsStar.ShowUpDown = true;
             // 
             // Form_CoinsSettings
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(_Panel1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            Name = "Form_CoinsSettings";
-            TopLeftCornerSize = 0;
-            TopRightCornerSize = 0;
-            _Panel1.ResumeLayout(false);
-            _GroupBox4.ResumeLayout(false);
-            _GroupBox3.ResumeLayout(false);
-            _GroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_CoinsForRedCoinsStar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_CoinsForBowserRedCoinsStar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput_CoinsFor100CoinsStar).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Form_CoinsSettings";
+            this.TopLeftCornerSize = 0;
+            this.TopRightCornerSize = 0;
+            this.Panel1.ResumeLayout(false);
+            this.GroupBox3.ResumeLayout(false);
+            this.GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_CoinsForRedCoinsStar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_CoinsForBowserRedCoinsStar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_CoinsFor100CoinsStar)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
-        private Panel _Panel1;
+        private Panel Panel1;
 
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
+        private DevComponents.Editors.IntegerInput IntegerInput_CoinsFor100CoinsStar;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
+        private DevComponents.Editors.IntegerInput IntegerInput_CoinsForBowserRedCoinsStar;
 
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.Editors.IntegerInput IntegerInput_CoinsForRedCoinsStar;
 
-        private DevComponents.Editors.IntegerInput _IntegerInput_CoinsFor100CoinsStar;
+        private DevComponents.DotNetBar.LabelX LabelX3;
 
-        internal DevComponents.Editors.IntegerInput IntegerInput_CoinsFor100CoinsStar
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput_CoinsFor100CoinsStar;
-            }
+        private DevComponents.DotNetBar.LabelX LabelX4;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_IntegerInput_CoinsFor100CoinsStar != null)
-                {
-                }
+        private DevComponents.DotNetBar.LabelX LabelX2;
 
-                _IntegerInput_CoinsFor100CoinsStar = value;
-                if (_IntegerInput_CoinsFor100CoinsStar != null)
-                {
-                }
-            }
-        }
+        private GroupBox GroupBox1;
 
-        private DevComponents.Editors.IntegerInput _IntegerInput_CoinsForBowserRedCoinsStar;
+        private GroupBox GroupBox3;
 
-        internal DevComponents.Editors.IntegerInput IntegerInput_CoinsForBowserRedCoinsStar
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput_CoinsForBowserRedCoinsStar;
-            }
+        private DevComponents.DotNetBar.LabelX LabelX5;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_IntegerInput_CoinsForBowserRedCoinsStar != null)
-                {
-                }
+        private DevComponents.DotNetBar.LabelX LabelX1;
 
-                _IntegerInput_CoinsForBowserRedCoinsStar = value;
-                if (_IntegerInput_CoinsForBowserRedCoinsStar != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_NewRedCoinsCounterTextForCoins;
 
-        private DevComponents.Editors.IntegerInput _IntegerInput_CoinsForRedCoinsStar;
+        private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_NewRedCoinsCounterTextForCoin;
 
-        internal DevComponents.Editors.IntegerInput IntegerInput_CoinsForRedCoinsStar
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput_CoinsForRedCoinsStar;
-            }
+        private DevComponents.DotNetBar.LabelX LabelX6;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_IntegerInput_CoinsForRedCoinsStar != null)
-                {
-                }
+        private DevComponents.DotNetBar.LabelX LabelX7;
 
-                _IntegerInput_CoinsForRedCoinsStar = value;
-                if (_IntegerInput_CoinsForRedCoinsStar != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_Enable100Coins;
 
-        private DevComponents.DotNetBar.LabelX _LabelX3;
+        private DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_ShowCoinsHudOnHubs;
 
-        internal DevComponents.DotNetBar.LabelX LabelX3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX3;
-            }
+        private DevComponents.DotNetBar.LabelX LabelX8;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX3 != null)
-                {
-                }
+        private DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_CoinsRestoreHealth;
 
-                _LabelX3 = value;
-                if (_LabelX3 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.LabelX LabelX9;
 
-        private DevComponents.DotNetBar.LabelX _LabelX4;
+        private DevComponents.DotNetBar.LabelX LabelX10;
 
-        internal DevComponents.DotNetBar.LabelX LabelX4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX4;
-            }
+        private DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_EnableNewRedCoinsCounter;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX4 != null)
-                {
-                }
+        private DevComponents.DotNetBar.ButtonX ButtonX_SaveSettings;
 
-                _LabelX4 = value;
-                if (_LabelX4 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX2;
-
-        internal DevComponents.DotNetBar.LabelX LabelX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX2 != null)
-                {
-                }
-
-                _LabelX2 = value;
-                if (_LabelX2 != null)
-                {
-                }
-            }
-        }
-
-        private GroupBox _GroupBox1;
-
-        internal GroupBox GroupBox1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox1 != null)
-                {
-                }
-
-                _GroupBox1 = value;
-                if (_GroupBox1 != null)
-                {
-                }
-            }
-        }
-
-        private GroupBox _GroupBox3;
-
-        internal GroupBox GroupBox3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox3 != null)
-                {
-                }
-
-                _GroupBox3 = value;
-                if (_GroupBox3 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX5;
-
-        internal DevComponents.DotNetBar.LabelX LabelX5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX5 != null)
-                {
-                }
-
-                _LabelX5 = value;
-                if (_LabelX5 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX1;
-
-        internal DevComponents.DotNetBar.LabelX LabelX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX1 != null)
-                {
-                }
-
-                _LabelX1 = value;
-                if (_LabelX1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX_NewRedCoinsCounterTextForCoins;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_NewRedCoinsCounterTextForCoins
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX_NewRedCoinsCounterTextForCoins;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX_NewRedCoinsCounterTextForCoins != null)
-                {
-                }
-
-                _TextBoxX_NewRedCoinsCounterTextForCoins = value;
-                if (_TextBoxX_NewRedCoinsCounterTextForCoins != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX_NewRedCoinsCounterTextForCoin;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_NewRedCoinsCounterTextForCoin
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX_NewRedCoinsCounterTextForCoin;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX_NewRedCoinsCounterTextForCoin != null)
-                {
-                }
-
-                _TextBoxX_NewRedCoinsCounterTextForCoin = value;
-                if (_TextBoxX_NewRedCoinsCounterTextForCoin != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX6;
-
-        internal DevComponents.DotNetBar.LabelX LabelX6
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX6;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX6 != null)
-                {
-                }
-
-                _LabelX6 = value;
-                if (_LabelX6 != null)
-                {
-                }
-            }
-        }
-
-        private GroupBox _GroupBox4;
-
-        internal GroupBox GroupBox4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GroupBox4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GroupBox4 != null)
-                {
-                }
-
-                _GroupBox4 = value;
-                if (_GroupBox4 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_Remove3DCoins;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_Remove3DCoins
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_Remove3DCoins;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_Remove3DCoins != null)
-                {
-                    _ButtonX_Remove3DCoins.Click -= ButtonX_Remove3DCoins_Click;
-                }
-
-                _ButtonX_Remove3DCoins = value;
-                if (_ButtonX_Remove3DCoins != null)
-                {
-                    _ButtonX_Remove3DCoins.Click += ButtonX_Remove3DCoins_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_ImportKaze3DCoins;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_ImportKaze3DCoins
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_ImportKaze3DCoins;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_ImportKaze3DCoins != null)
-                {
-                    _ButtonX_ImportKaze3DCoins.Click -= ButtonX_ImportKaze3DCoins_Click;
-                }
-
-                _ButtonX_ImportKaze3DCoins = value;
-                if (_ButtonX_ImportKaze3DCoins != null)
-                {
-                    _ButtonX_ImportKaze3DCoins.Click += ButtonX_ImportKaze3DCoins_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX7;
-
-        internal DevComponents.DotNetBar.LabelX LabelX7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX7 != null)
-                {
-                }
-
-                _LabelX7 = value;
-                if (_LabelX7 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.SwitchButton _SwitchButton_Enable100Coins;
-
-        internal DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_Enable100Coins
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _SwitchButton_Enable100Coins;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_SwitchButton_Enable100Coins != null)
-                {
-                }
-
-                _SwitchButton_Enable100Coins = value;
-                if (_SwitchButton_Enable100Coins != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.SwitchButton _SwitchButton_ShowCoinsHudOnHubs;
-
-        internal DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_ShowCoinsHudOnHubs
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _SwitchButton_ShowCoinsHudOnHubs;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_SwitchButton_ShowCoinsHudOnHubs != null)
-                {
-                }
-
-                _SwitchButton_ShowCoinsHudOnHubs = value;
-                if (_SwitchButton_ShowCoinsHudOnHubs != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX8;
-
-        internal DevComponents.DotNetBar.LabelX LabelX8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX8 != null)
-                {
-                }
-
-                _LabelX8 = value;
-                if (_LabelX8 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.SwitchButton _SwitchButton_CoinsRestoreHealth;
-
-        internal DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_CoinsRestoreHealth
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _SwitchButton_CoinsRestoreHealth;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_SwitchButton_CoinsRestoreHealth != null)
-                {
-                }
-
-                _SwitchButton_CoinsRestoreHealth = value;
-                if (_SwitchButton_CoinsRestoreHealth != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX9;
-
-        internal DevComponents.DotNetBar.LabelX LabelX9
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX9;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX9 != null)
-                {
-                }
-
-                _LabelX9 = value;
-                if (_LabelX9 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX10;
-
-        internal DevComponents.DotNetBar.LabelX LabelX10
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX10;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX10 != null)
-                {
-                }
-
-                _LabelX10 = value;
-                if (_LabelX10 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.SwitchButton _SwitchButton_EnableNewRedCoinsCounter;
-
-        internal DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_EnableNewRedCoinsCounter
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _SwitchButton_EnableNewRedCoinsCounter;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_SwitchButton_EnableNewRedCoinsCounter != null)
-                {
-                }
-
-                _SwitchButton_EnableNewRedCoinsCounter = value;
-                if (_SwitchButton_EnableNewRedCoinsCounter != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX_SaveSettings;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX_SaveSettings
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX_SaveSettings;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX_SaveSettings != null)
-                {
-                    _ButtonX_SaveSettings.Click -= ButtonX1_Click;
-                }
-
-                _ButtonX_SaveSettings = value;
-                if (_ButtonX_SaveSettings != null)
-                {
-                    _ButtonX_SaveSettings.Click += ButtonX1_Click;
-                }
-            }
-        }
     }
 }

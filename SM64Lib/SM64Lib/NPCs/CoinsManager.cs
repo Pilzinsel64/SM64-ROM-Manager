@@ -2,6 +2,7 @@
 using global::System.IO;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib.Data;
+using System.Collections.Generic;
 
 namespace SM64Lib.NPCs
 {
@@ -17,7 +18,6 @@ namespace SM64Lib.NPCs
         public bool EnableNewRedCoinsCounter { get; set; } = false;
         public string NewRedCoinsCounterTextForCoins { get; set; } = "";
         public string NewRedCoinsCounterTextForCoin { get; set; } = "";
-        public bool Enabled3DCoins { get => RomManager.RomConfig.NPCConfig.Enabled3DCoins; }
 
         public CoinsManager(RomManager rommgr)
         {
@@ -184,26 +184,6 @@ namespace SM64Lib.NPCs
             {
                 General.PatchClass.UpdateChecksum(RomManager.RomFile);
             }
-        }
-
-        /// <summary>
-        /// Imports Kazes 3D Coins
-        /// </summary>
-        public void ImportKazesCoins()
-        {
-            string ppf = General.MyFilePaths["Apply 3D Coins.ppf"];
-            General.PatchClass.ApplyPPF(RomManager.RomFile, ppf);
-            General.PatchClass.UpdateChecksum(RomManager.RomFile);
-        }
-
-        /// <summary>
-        /// Remove 3D Coins [Experimental]
-        /// </summary>
-        public void Remove3DCoins()
-        {
-            string ppf = General.MyFilePaths["Remove 3D Coins.ppf"];
-            General.PatchClass.ApplyPPF(RomManager.RomFile, ppf);
-            General.PatchClass.UpdateChecksum(RomManager.RomFile);
         }
     }
 }
