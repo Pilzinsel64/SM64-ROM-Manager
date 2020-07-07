@@ -59,9 +59,6 @@
     <ApplicationIcon>1443729764_forest_mushroom.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonMark, Version=0.1.0.0, Culture=neutral, PublicKeyToken=001ef8810438905d, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonMark.NET.0.15.1\lib\net45\CommonMark.dll</HintPath>
-    </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
     </Reference>
@@ -82,6 +79,9 @@
     </Reference>
     <Reference Include="Discord.Net.WebSocket, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Discord.Net.WebSocket.2.2.0\lib\net461\Discord.Net.WebSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="Markdig, Version=0.20.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdig.0.20.0\lib\netstandard2.0\Markdig.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>

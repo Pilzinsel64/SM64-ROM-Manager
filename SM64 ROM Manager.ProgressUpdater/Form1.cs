@@ -105,6 +105,15 @@ namespace SM64_ROM_Manager.ProgressUpdater
             });
         }
 
+        private async void LoadUpcommingVersions()
+        {
+            var md = await wdmgr.GetUpcommingVersions();
+            foreach (var block in md)
+            {
+                
+            }
+        }
+
         private async void LoadUsedVersions()
         {
             Invoke(new Action(() => ComboBoxEx_Version.Items.Clear()));

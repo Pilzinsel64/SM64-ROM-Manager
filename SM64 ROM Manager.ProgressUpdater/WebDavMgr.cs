@@ -110,5 +110,14 @@ namespace SM64_ROM_Manager.ProgressUpdater
 
             return versions;
         }
+
+        public async Task<Markdig.Syntax.MarkdownDocument> GetUpcommingVersions()
+        {
+            var wc = new WebClient();
+            var res = await wc.DownloadStringTaskAsync(settings.UpcommingVersionsDownloadURL);
+            wc.Dispose();
+            var md = Markdig.Markdown.Parse(res);
+            return md;
+        }
     }
 }

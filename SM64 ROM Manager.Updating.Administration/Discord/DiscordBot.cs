@@ -204,39 +204,15 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
             // Add changelog
             if (addChangelog && !string.IsNullOrEmpty(package.Notes.Content) && package.Notes.ContentType != UpdateNotesContentType.HTML)
             {
-                var sr = new StringReader(package.Notes.Content);
-                var sw = new StringWriter();
-
-                while (sr.Peek() != -1)
-                {
-                    var line = await sr.ReadLineAsync();
-
-                    if (package.Notes.ContentType == UpdateNotesContentType.Markdown && line.Length > 0)
-                        ProcessMarkdownLine(ref line);
-
-                    await sw.WriteLineAsync(line);
-                }
-
-                var changelog = sw.ToString();
+                var changelog = Markdig.Markdown.ToPlainText(package.Notes.Content);
                 if (changelog.Length <= 2048)
                     embed.AddField("Changelog:", changelog);
-
-                sr.Close();
-                sw.Close();
             }
 
             // Author
             // ...
 
             return embed.Build();
-        }
-
-        private void ProcessMarkdownLine(ref string line)
-        {
-            line = line.TrimStart('#', ' ');
-            line = line.Replace("[ ] ", string.Empty);
-            line = line.Replace("[x] ", string.Empty);
-            line = line.Replace("[!", "[");
         }
     }
 }
