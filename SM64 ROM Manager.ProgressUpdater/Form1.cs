@@ -22,6 +22,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
         private Settings settings = new Settings();
         private WebDavMgr wdmgr = null;
         private DiscordMgr dmgr = null;
+        private string upcommingVersions = string.Empty;
 
         // C o n s t r u c t o r
 
@@ -77,6 +78,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
                 var obj = JObject.Parse(crypter.DecryptData(raw));
                 settings = obj.ToObject<Settings>();
                 LoadTextBoxes();
+                LoadUpcommingVersions();
                 LoadWebDavMgr();
                 LoadDiscordMgr();
             }
@@ -107,10 +109,12 @@ namespace SM64_ROM_Manager.ProgressUpdater
 
         private async void LoadUpcommingVersions()
         {
-            var md = await wdmgr.GetUpcommingVersions();
-            foreach (var block in md)
+            upcommingVersions = await wdmgr.GetUpcommingVersions();
+            var mdDoc = MarkdownHelper.GetDocument(upcommingVersions);
+
+            foreach (var block in mdDoc)
             {
-                
+                // ...
             }
         }
 
