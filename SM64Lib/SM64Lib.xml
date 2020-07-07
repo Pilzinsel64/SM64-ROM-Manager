@@ -262,6 +262,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.IsLegacy">
+            <summary>
+            Indicates if this patch use the old XML format.
+            </summary>
+        </member>
         <member name="P:SM64Lib.Patching.PatchProfile.EmbeddedFiles">
             <summary>
             Contains files embedded into this profile.
