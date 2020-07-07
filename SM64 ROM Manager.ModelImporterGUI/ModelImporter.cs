@@ -130,7 +130,8 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 { "profilepath", profile.FileName },
                 { "files", profile.EmbeddedFiles },
                 { "cancelEventArgs", cancelEventArgs },
-                { "rommgr", rommgr }
+                { "rommgr", rommgr },
+                { "owner", this }
             };
 
             if (maxLength > 0 && mdl.Length > maxLength)
@@ -149,7 +150,10 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 pm.Patch(preset.ScriptBefore, this, scriptparams, General.GetAdditionalReferencedAssemblied());
 
                 if (cancelEventArgs.Cancel)
+                {
+                    WriteOutput("Importing canceled by script!");
                     return;
+                }
             }
 
             int col = -1;
