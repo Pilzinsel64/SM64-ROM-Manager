@@ -2034,14 +2034,13 @@
         CoWiGwyG/w/OanoYx+RXmwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
   <data name="WarningBox_TweakUpdates.OptionsText" xml:space="preserve">
     <value>Aktuallisieren</value>
   </data>
   <data name="WarningBox_TweakUpdates.Text" xml:space="preserve">
     <value>&lt;b&gt;Aktuallisierungen verfügbar!&lt;/b&gt; Klicke &lt;i&gt;Aktuallisieren &lt;/i&gt; um die lokalen Tweaks auf den neusten Stand zu brigen.</value>
+  </data>
+  <data name="WarningBox_UpgradeLegacyTweaks.Text" xml:space="preserve">
+    <value>&lt;b&gt;Einige Tweaks nutzen ein altes Dateiformat.&lt;/b&gt; Klicke &lt;i&gt;Konvertieren&lt;/i&gt; um alte XML-Tweaks ins JSON-Fromat zu konvertieren für bessere Kompatibilität.</value>
   </data>
 </root>

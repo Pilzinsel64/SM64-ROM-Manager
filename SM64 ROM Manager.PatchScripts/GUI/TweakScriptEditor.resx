@@ -195,66 +195,6 @@
   <data name="&gt;&gt;CheckBoxX_TweakScript.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Name" xml:space="preserve">
-    <value>CheckBoxX_ArmipsScript</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_ArmipsScript.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.Name" xml:space="preserve">
-    <value>CheckBoxX_CSharpScript</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Name" xml:space="preserve">
-    <value>CheckBoxX_VBScript</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 213</value>
-  </data>
-  <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 23</value>
-  </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="CheckBoxX_ArmipsScript.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 0</value>
   </data>
@@ -326,6 +266,30 @@
   </data>
   <data name="&gt;&gt;CheckBoxX_VBScript.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 213</value>
+  </data>
+  <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 23</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -509,6 +473,9 @@
   </data>
   <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="LayoutControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
   </data>
   <data name="ListViewEx_EmbeddedFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -711,8 +678,32 @@
   <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
+  <data name="ButtonItem1.Text" xml:space="preserve">
+    <value>VB</value>
+  </data>
+  <data name="ButtonItem2.Text" xml:space="preserve">
+    <value>C#</value>
+  </data>
+  <data name="ButtonItem_NewTemplate.Text" xml:space="preserve">
+    <value>New Template</value>
+  </data>
+  <data name="ButtonItem_SaveToFile.Text" xml:space="preserve">
+    <value>Save to File ...</value>
+  </data>
+  <data name="ButtonItem_LoadFromFile.Text" xml:space="preserve">
+    <value>Load from File ...</value>
+  </data>
   <data name="ButtonItem5.Text" xml:space="preserve">
     <value>File</value>
+  </data>
+  <data name="ButtonItem3.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="ButtonItem_RunInTestMode.Text" xml:space="preserve">
+    <value>Test Mode (Run Temporary)</value>
+  </data>
+  <data name="ButtonItem_CheckForErrors.Text" xml:space="preserve">
+    <value>Check for Errors</value>
   </data>
   <data name="ButtonItem4.Text" xml:space="preserve">
     <value>Script</value>
@@ -743,30 +734,6 @@
   </data>
   <data name="&gt;&gt;Bar1.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="ButtonItem_NewTemplate.Text" xml:space="preserve">
-    <value>New Template</value>
-  </data>
-  <data name="ButtonItem1.Text" xml:space="preserve">
-    <value>VB</value>
-  </data>
-  <data name="ButtonItem2.Text" xml:space="preserve">
-    <value>C#</value>
-  </data>
-  <data name="ButtonItem_SaveToFile.Text" xml:space="preserve">
-    <value>Save to File ...</value>
-  </data>
-  <data name="ButtonItem_LoadFromFile.Text" xml:space="preserve">
-    <value>Load from File ...</value>
-  </data>
-  <data name="ButtonItem3.Text" xml:space="preserve">
-    <value>Run</value>
-  </data>
-  <data name="ButtonItem_RunInTestMode.Text" xml:space="preserve">
-    <value>Test Mode (Run Temporary)</value>
-  </data>
-  <data name="ButtonItem_CheckForErrors.Text" xml:space="preserve">
-    <value>Check for Errors</value>
   </data>
   <data name="contextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>

@@ -63,6 +63,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonX9 = new DevComponents.DotNetBar.ButtonX();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.WarningBox_TweakUpdates = new DevComponents.DotNetBar.Controls.WarningBox();
+            this.WarningBox_UpgradeLegacyTweaks = new DevComponents.DotNetBar.Controls.WarningBox();
             this.ButtonX7 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_AddNew = new DevComponents.DotNetBar.ButtonX();
             this.Panel1.SuspendLayout();
@@ -337,6 +338,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.Panel2.Controls.Add(this.ItemListBox1);
             this.Panel2.Controls.Add(this.WarningBox_TweakUpdates);
+            this.Panel2.Controls.Add(this.WarningBox_UpgradeLegacyTweaks);
             resources.ApplyResources(this.Panel2, "Panel2");
             this.Panel2.Name = "Panel2";
             // 
@@ -348,6 +350,15 @@ namespace SM64_ROM_Manager.PatchScripts
             this.WarningBox_TweakUpdates.ForeColor = System.Drawing.Color.Black;
             this.WarningBox_TweakUpdates.Name = "WarningBox_TweakUpdates";
             this.WarningBox_TweakUpdates.OptionsClick += new System.EventHandler(this.WarningBox_TweakUpdates_OptionsClick);
+            // 
+            // WarningBox_UpgradeLegacyTweaks
+            // 
+            this.WarningBox_UpgradeLegacyTweaks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(219)))), ((int)(((byte)(249)))));
+            this.WarningBox_UpgradeLegacyTweaks.CloseButtonVisible = false;
+            resources.ApplyResources(this.WarningBox_UpgradeLegacyTweaks, "WarningBox_UpgradeLegacyTweaks");
+            this.WarningBox_UpgradeLegacyTweaks.ForeColor = System.Drawing.Color.Black;
+            this.WarningBox_UpgradeLegacyTweaks.Name = "WarningBox_UpgradeLegacyTweaks";
+            this.WarningBox_UpgradeLegacyTweaks.OptionsClick += new System.EventHandler(this.WarningBox_UpgradeLegacyTweaks_OptionsClick);
             // 
             // ButtonX7
             // 
@@ -472,5 +483,6 @@ namespace SM64_ROM_Manager.PatchScripts
 
         private DevComponents.DotNetBar.Controls.WarningBox WarningBox_TweakUpdates;
         private DevComponents.DotNetBar.LabelX labelX_Version;
+        private DevComponents.DotNetBar.Controls.WarningBox WarningBox_UpgradeLegacyTweaks;
     }
 }

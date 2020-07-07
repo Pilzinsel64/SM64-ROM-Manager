@@ -260,13 +260,13 @@ namespace SM64_ROM_Manager.PatchScripts
             // 
             // LayoutControl1
             // 
+            resources.ApplyResources(this.LayoutControl1, "LayoutControl1");
             this.LayoutControl1.BackColor = System.Drawing.Color.Transparent;
             this.LayoutControl1.Controls.Add(this.TextBoxX_ScriptName);
             this.LayoutControl1.Controls.Add(this.TextBoxX_ScriptDescription);
             this.LayoutControl1.Controls.Add(this.Panel1);
             this.LayoutControl1.Controls.Add(this.Panel3);
             this.LayoutControl1.Controls.Add(this.panel5);
-            resources.ApplyResources(this.LayoutControl1, "LayoutControl1");
             this.LayoutControl1.Name = "LayoutControl1";
             // 
             // 
