@@ -129,7 +129,8 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 { "ConvertedModel", mdl },
                 { "profilepath", profile.FileName },
                 { "files", profile.EmbeddedFiles },
-                { "cancelEventArgs", cancelEventArgs }
+                { "cancelEventArgs", cancelEventArgs },
+                { "rommgr", rommgr }
             };
 
             if (maxLength > 0 && mdl.Length > maxLength)

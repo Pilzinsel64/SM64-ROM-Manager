@@ -1,6 +1,6 @@
 {
   "Name": "3D-Coins",
-  "Description": "Import a 3D-Coin Model and automaticly apply the codes.",
+  "Description": "Import a 3D-Coin Model and automaticly apply the codes.\r\nThis preset requie the 3D Coins tweak patched.",
   "Presets": [
     {
       "Name": "",
