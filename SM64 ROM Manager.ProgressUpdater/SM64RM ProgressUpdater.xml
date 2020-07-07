@@ -37,6 +37,23 @@
               Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
+        <member name="F:SM64_ROM_Manager.ProgressUpdater.PasteFromDocument.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.ProgressUpdater.PasteFromDocument.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.ProgressUpdater.PasteFromDocument.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="F:SM64_ROM_Manager.ProgressUpdater.WebDavSettingsDialog.components">
             <summary>
             Required designer variable.

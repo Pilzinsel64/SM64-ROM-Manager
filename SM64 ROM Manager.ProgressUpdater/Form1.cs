@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using global::DevComponents.DotNetBar;
 using global::Newtonsoft.Json.Linq;
 using global::WebDav;
+using System.Drawing;
 
 namespace SM64_ROM_Manager.ProgressUpdater
 {
@@ -78,7 +79,6 @@ namespace SM64_ROM_Manager.ProgressUpdater
                 var obj = JObject.Parse(crypter.DecryptData(raw));
                 settings = obj.ToObject<Settings>();
                 LoadTextBoxes();
-                LoadUpcommingVersions();
                 LoadWebDavMgr();
                 LoadDiscordMgr();
             }
@@ -107,23 +107,29 @@ namespace SM64_ROM_Manager.ProgressUpdater
             });
         }
 
-        private async void LoadUpcommingVersions()
-        {
-            upcommingVersions = await wdmgr.GetUpcommingVersions();
-            var mdDocs = MarkdownHelper.SplitToVersions(upcommingVersions);
-
-            foreach (var kvp in mdDocs)
-            {
-                // ...
-            }
-        }
-
         private async void LoadUsedVersions()
         {
             Invoke(new Action(() => ComboBoxEx_Version.Items.Clear()));
 
             foreach (var version in await wdmgr.GetUsedVersions())
                 Invoke(new Action(() => ComboBoxEx_Version.Items.Add(version)));
+        }
+
+        private void InvertImage()
+        {
+            Bitmap pic = new Bitmap(PictureBox1.Image);
+
+            for (int y = 0; y < pic.Height; y++)
+            {
+                for (int x = 0; x < pic.Width; x++)
+                {
+                    Color inv = pic.GetPixel(x, y);
+                    inv = Color.FromArgb(255, 255 - inv.R, 255 - inv.G, 255 - inv.B);
+                    pic.SetPixel(x, y, inv);
+                }
+            }
+
+            PictureBox1.Image = pic;
         }
 
         // G u i
@@ -188,6 +194,18 @@ namespace SM64_ROM_Manager.ProgressUpdater
             var frm = new WebDavSettingsDialog(settings);
             frm.ShowDialog();
             LoadWebDavMgr();
+        }
+
+        private void ButtonX_PasteDocument_Click(object sender, EventArgs e)
+        {
+            var frm = new PasteFromDocument(settings);
+            if (frm.ShowDialog(this) == DialogResult.OK)
+                PictureBox1.Image = frm.DocumentImage;
+        }
+
+        private void buttonX1_Click_1(object sender, EventArgs e)
+        {
+            InvertImage();
         }
     }
 }
