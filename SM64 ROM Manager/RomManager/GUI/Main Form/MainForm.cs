@@ -259,7 +259,7 @@ namespace SM64_ROM_Manager
         private void LoadRecentROMs()
         {
             tabGeneral.ItemPanel_RecentFiles.Items.Clear();
-            var di_Open = new ButtonItem() { Text = Form_Main_Resources.Button_OpenRom, Image = MyIcons.icons8_open_folder_16px, ButtonStyle = eButtonStyle.ImageAndText }; // , .SymbolSet = eSymbolSet.Material, .Symbol = "58055", .SymbolColor = Color.FromArgb(215, 172, 106), .SymbolSize = 12
+            var di_Open = new ButtonItem() { Text = Form_Main_Resources.Button_OpenRom, Image = MyIcons.icons8_open_folder_16px, ButtonStyle = eButtonStyle.ImageAndText };
             di_Open.Click += MenuItem_OpenROM_Click;
             tabGeneral.ItemPanel_RecentFiles.Items.Add(di_Open);
             int cindex = 1;

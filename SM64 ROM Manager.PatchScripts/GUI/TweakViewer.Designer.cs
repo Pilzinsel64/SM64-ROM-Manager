@@ -39,6 +39,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TweakViewer));
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.labelX_Version = new DevComponents.DotNetBar.LabelX();
             this.LabelX2 = new DevComponents.DotNetBar.LabelX();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.ButtonX8 = new DevComponents.DotNetBar.ButtonX();
@@ -64,7 +65,6 @@ namespace SM64_ROM_Manager.PatchScripts
             this.WarningBox_TweakUpdates = new DevComponents.DotNetBar.Controls.WarningBox();
             this.ButtonX7 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_AddNew = new DevComponents.DotNetBar.ButtonX();
-            this.labelX_Version = new DevComponents.DotNetBar.LabelX();
             this.Panel1.SuspendLayout();
             this.Panel3.SuspendLayout();
             this.TableLayoutPanel2.SuspendLayout();
@@ -86,6 +86,16 @@ namespace SM64_ROM_Manager.PatchScripts
             this.Panel1.Controls.Add(this.LabelX1);
             resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
+            // 
+            // labelX_Version
+            // 
+            this.labelX_Version.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX_Version.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX_Version, "labelX_Version");
+            this.labelX_Version.Name = "labelX_Version";
             // 
             // LabelX2
             // 
@@ -316,12 +326,10 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX9.FocusCuesEnabled = false;
+            this.ButtonX9.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
             resources.ApplyResources(this.ButtonX9, "ButtonX9");
             this.ButtonX9.Name = "ButtonX9";
             this.ButtonX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX9.Symbol = "57676";
-            this.ButtonX9.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX9.SymbolSize = 12F;
             this.ButtonX9.Click += new System.EventHandler(this.ButtonX9_Click);
             // 
             // Panel2
@@ -349,8 +357,6 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonX7.FocusCuesEnabled = false;
             this.ButtonX7.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_search_16px;
             this.ButtonX7.Name = "ButtonX7";
-            this.ButtonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX7.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
             this.ButtonX7.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonX7.SymbolSize = 12F;
             this.ButtonX7.Click += new System.EventHandler(this.ButtonX7_Click);
@@ -364,18 +370,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonX_AddNew.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_plus_math_16px;
             this.ButtonX_AddNew.Name = "ButtonX_AddNew";
             this.ButtonX_AddNew.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_AddNew.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonX_AddNew.Click += new System.EventHandler(this.ButtonX_AddNew_Click);
-            // 
-            // labelX_Version
-            // 
-            this.labelX_Version.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX_Version.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX_Version, "labelX_Version");
-            this.labelX_Version.Name = "labelX_Version";
             // 
             // TweakViewer
             // 
