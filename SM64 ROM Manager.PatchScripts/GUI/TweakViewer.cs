@@ -511,7 +511,7 @@ namespace SM64_ROM_Manager.PatchScripts
             }
         }
 
-        internal static void PatchScript(IWin32Window owner, PatchScript script, PatchProfile profile, SM64Lib.RomManager rommgr)
+        internal static void PatchScript(Control owner, PatchScript script, PatchProfile profile, SM64Lib.RomManager rommgr)
         {
             try
             {
@@ -530,7 +530,7 @@ namespace SM64_ROM_Manager.PatchScripts
                     },
                     General.GetAdditionalReferencedAssemblied());
                 TweakAfterApply?.Invoke();
-                MessageBoxEx.Show(owner, "Patched successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                General.ShowToastnotification(owner, "Patched successfully", eToastGlowColor.Green);
             }
             catch (Exception)
             {
