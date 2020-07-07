@@ -118,21 +118,21 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             var cancelEventArgs = new CancelEventArgs(false);
             var pm = new PatchingManager();
             var scriptparams = new Dictionary<string, object>() {
-                { "romfile", RomFile },
-                { "presetName", preset.Name },
-                { "presetDescription", preset.Description },
-                { "RomAddress", preset.RomAddress },
-                { "RamAddress", preset.RamAddress },
-                { "MaxLength", preset.MaxLength },
+                { "romfile",                RomFile },
+                { "presetName",             preset.Name },
+                { "presetDescription",      preset.Description },
+                { "RomAddress",             preset.RomAddress },
+                { "RamAddress",             preset.RamAddress },
+                { "MaxLength",              preset.MaxLength },
                 { "CollisionPointersArray", preset.CollisionPointers.ToArray() },
-                { "GeoPointersArray", preset.GeometryPointers.ToArray() },
-                { "ConvertedModelLength", mdl.Length },
-                { "ConvertedModel", mdl },
-                { "profilepath", profile.FileName },
-                { "files", profile.EmbeddedFiles },
-                { "cancelEventArgs", cancelEventArgs },
-                { "rommgr", rommgr },
-                { "owner", this }
+                { "GeoPointersArray",       preset.GeometryPointers.ToArray() },
+                { "ConvertedModelLength",   mdl.Length },
+                { "ConvertedModel",         mdl },
+                { "profilepath",            profile.FileName },
+                { "files",                  profile.EmbeddedFiles },
+                { "cancelEventArgs",        cancelEventArgs },
+                { "rommgr",                 rommgr },
+                { "owner",                  this }
             };
 
             if (maxLength > 0 && mdl.Length > maxLength)
