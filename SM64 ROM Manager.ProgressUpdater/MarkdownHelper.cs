@@ -28,5 +28,18 @@ namespace SM64_ROM_Manager.ProgressUpdater
             var img = TheArtOfDev.HtmlRenderer.WinForms.HtmlRender.RenderToImage(html, 500);
             return img;
         }
+
+        public static IReadOnlyDictionary<string, string> SplitToVersions(string md)
+        {
+            var versions = new Dictionary<string, string>();
+            var mdDoc = Markdown.Parse(md);
+
+            foreach (var block in mdDoc)
+            {
+
+            }
+
+            return versions;
+        }
     }
 }

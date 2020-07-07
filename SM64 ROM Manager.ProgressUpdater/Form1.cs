@@ -110,9 +110,9 @@ namespace SM64_ROM_Manager.ProgressUpdater
         private async void LoadUpcommingVersions()
         {
             upcommingVersions = await wdmgr.GetUpcommingVersions();
-            var mdDoc = MarkdownHelper.GetDocument(upcommingVersions);
+            var mdDocs = MarkdownHelper.SplitToVersions(upcommingVersions);
 
-            foreach (var block in mdDoc)
+            foreach (var kvp in mdDocs)
             {
                 // ...
             }
