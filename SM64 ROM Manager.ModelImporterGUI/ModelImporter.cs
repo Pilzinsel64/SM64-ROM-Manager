@@ -16,6 +16,7 @@ using global::SM64Lib.Model;
 using global::SM64Lib.TextValueConverter;
 using Z.Collections.Extensions;
 using SM64Lib.Patching;
+using System.ComponentModel;
 
 namespace SM64_ROM_Manager.ModelImporterGUI
 {
@@ -113,6 +114,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             int romAddr = preset.RomAddress; // ValueFromText(TextBoxX_RomAddr.Text)
             int bankAddr = preset.RamAddress; // ValueFromText(TextBoxX_BankAddr.Text)
             int maxLength = preset.MaxLength; // ValueFromText(TextBoxX_MaxLength.Text)
+            var cancelEventArgs = new CancelEventArgs(false);
             var pm = new PatchingManager();
             var scriptparams = new Dictionary<string, object>() {
                 { "romfile", RomFile },
@@ -126,8 +128,12 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 { "ConvertedModelLength", mdl.Length },
                 { "ConvertedModel", mdl },
                 { "profilepath", profile.FileName },
-                { "files", profile.EmbeddedFiles }
+                { "files", profile.EmbeddedFiles },
+                { "cancelEventArgs", cancelEventArgs }
             };
+
+            if (cancelEventArgs.Cancel)
+                return;
 
             if (maxLength > 0 && mdl.Length > maxLength)
             {
