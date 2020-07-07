@@ -132,9 +132,6 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 { "cancelEventArgs", cancelEventArgs }
             };
 
-            if (cancelEventArgs.Cancel)
-                return;
-
             if (maxLength > 0 && mdl.Length > maxLength)
             {
                 MessageBoxEx.Show("Model is bigger then the max allowed length!", "Model too big", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -149,6 +146,9 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 WriteOutput("Executing Script ...");
                 scriptparams.AddOrUpdate("script", preset.ScriptBefore);
                 pm.Patch(preset.ScriptBefore, this, scriptparams, General.GetAdditionalReferencedAssemblied());
+
+                if (cancelEventArgs.Cancel)
+                    return;
             }
 
             int col = -1;
