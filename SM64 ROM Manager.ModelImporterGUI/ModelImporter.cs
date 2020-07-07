@@ -67,6 +67,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
         public ModelImporter(SM64Lib.RomManager rommgr) : this()
         {
             this.rommgr = rommgr;
+            RomFile = rommgr?.RomFile;
         }
 
         private void ClearOutput()

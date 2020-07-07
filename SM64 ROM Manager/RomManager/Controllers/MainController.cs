@@ -114,7 +114,7 @@ namespace SM64_ROM_Manager
         private readonly SM64_ROM_Manager.MainForm mainForm;
         private readonly UpdateClient updateClient;
         private RomManager _RomManager;
-        private bool addedTweakViewerEvents = false;
+        private RomManager addedTweakViewerEvents = null;
         private TextManagerController tmc = null;
 
         private string _StatusText = string.Empty;
@@ -830,12 +830,12 @@ namespace SM64_ROM_Manager
 
         public void OpenTweakViewer()
         {
-            if (!addedTweakViewerEvents)
+            if (addedTweakViewerEvents != RomManager)
             {
                 TweakViewer.TweakBeforeApply += SM64_ROM_Manager.General.DisableRomWatcher;
                 TweakViewer.TweakAfterApply += SM64_ROM_Manager.General.EnableRomWatcher;
                 TweakViewer.TweakFailedApply += SM64_ROM_Manager.General.EnableRomWatcher;
-                addedTweakViewerEvents = true;
+                addedTweakViewerEvents = RomManager;
             }
 
             var tweaks = new TweakViewer(RomManager);
@@ -844,8 +844,7 @@ namespace SM64_ROM_Manager
 
         public void OpenModelImporter()
         {
-            var frm = new ModelImporterGUI.ModelImporter();
-            frm.RomFile = RomManager?.RomFile;
+            var frm = new ModelImporterGUI.ModelImporter(RomManager);
             frm.Show();
         }
 
