@@ -72,7 +72,7 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             string fullPath = string.Empty;
             string text = string.Empty;
-            var switchExpr = mi.MemberType;
+            var switchExpr = mi?.MemberType;
             switch (switchExpr)
             {
                 case MemberTypes.TypeInfo:
@@ -262,7 +262,7 @@ in {path}";
         {
             if (e.Node?.Tag is object)
             {
-                LabelX_MemberInfo.Text = GetMemberInfo((MemberInfo)e.Node.Tag);
+                LabelX_MemberInfo.Text = GetMemberInfo(e.Node.Tag as MemberInfo);
             }
             else
             {
