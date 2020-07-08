@@ -126,6 +126,8 @@ namespace SM64_ROM_Manager.PatchScripts
                 var mgr = new PatchingManager();
                 foreach (var patch in patches)
                     mgr.Save(patch, Path.GetDirectoryName(patch.FileName));
+                General.ShowToastnotification(this, "All tweaks converted successfully!", eToastGlowColor.Green);
+                CheckForLegacyTweaks();
             }
         }
 
