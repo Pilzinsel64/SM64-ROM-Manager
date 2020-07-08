@@ -143,7 +143,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
         {
             if (settings.DiscordUploadEnabled && !dmgr.IsReady)
             {
-                MessageBoxEx.Show("Discord ist noch nicht bereit!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ToastNotification.Show(this, "Discord ist noch nicht bereit!", eToastGlowColor.Orange, eToastPosition.BottomCenter);
             }
             else
             {
@@ -157,7 +157,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
                 }
                 else
                 {
-                    MessageBoxEx.Show(this, "Fehler beim Hochladen!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ToastNotification.Show(this, "Fehler beim Hochladen!", eToastGlowColor.Orange, eToastPosition.BottomCenter);
                 }
                 circularProgress1.Stop();
                 Enabled = true;
