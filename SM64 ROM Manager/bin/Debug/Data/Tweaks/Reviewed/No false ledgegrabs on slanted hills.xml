@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="No false ledgegrabs on slanted hills" description="" version="1.0.0.0">
-  <patch name="Apply" description="" type="0" references="">1A758:
-10 00 00 05</patch>
-  <patch name="Remove" description="" type="0" references="">1A758:
-45 00 00 05</patch>
-</m64tweak>

@@ -1,0 +1,21 @@
+{
+  "Name": "Extend RAM Initializer",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//DEFAULT VALUE: 807F\n\n101B92: [16, \"RAM Size (DEFAULT VALUE: 807F)\", hex]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Writes zeros to the RAM upon starting the game to clean up, not essential but recommended for extended RAM. (Default: 807F)",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

@@ -1,8 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Allows Mario to grab ceilings with more types of jumps, updated version by falcobuster</description><patch>
-268D4: 34 07 00 02
-26F1F: 03
-26E57: 03
-26D57: 03
-26974: 34 07 00 02
-2A63F: 03
-</patch></m64tweak>

@@ -1,0 +1,21 @@
+{
+  "Name": "Bacon's 256 x 256 Backgrounds",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "8A8E4: 24 0D 04 00\n8A948: 24 0D 04 00 24 0E 04 00\n8A9B4: 24 0E 04 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Backgrounds in SM64 are made up of 32 x 64 tiles, but they cut off a pixel so they are really 32 x 63 tiles. This tweak fixes that and makes the backgrounds seamless.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

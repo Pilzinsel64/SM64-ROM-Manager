@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Allows you to swim freely without having to worry about running out of air and dying.</description><patch>F180: 00 00 00 00
-F1B8: 00 00 00 00
-9E600: 10 00</patch></m64tweak>

@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Vertical Lock Cam" description="Locks the camera vertically whenever Mario jumps.&#xA;&#xD;&#xA;ASM Code created by Skelux." version="1.0.0.0">
-  <patch name="Apply Vertical Lock Cam" description="Locks the camera vertically whenever Mario jumps.&#xD;&#xA;ASM Code created by Skelux.&#xA;" type="0" references="">4ADA8: C4 20 C5 28 E5 E0 00 04</patch>
-  <patch name="Remove Vertical Lock Cam" description="Removes the Vertical Lock Cam." type="0" references="">4ADA8: 8F B9 00 20 E7 20 00 04</patch>
-</m64tweak>

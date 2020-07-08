@@ -1,0 +1,21 @@
+{
+  "Name": "Bullet Bill Speed",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//DEFAULT VALUE: 41F0\n\n6EA36: [16, \"Speed (DEFAULT: 41F0)\", hex]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modify how fast Bullet Bills travel (Default: 41F0)\n\nCredit goes to ArchangelGabriel for creating the gameshark code",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

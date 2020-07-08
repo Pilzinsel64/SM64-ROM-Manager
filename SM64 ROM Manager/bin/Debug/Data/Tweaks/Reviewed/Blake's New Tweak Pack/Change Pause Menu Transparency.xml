@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Change Pause Menu Transparency" description="Toggles how black the Pause Menu gets&#xD;&#xA;Created by Blakeoramo" version="1.0.0.0">
-  <patch name="New Script" description="" type="0" references="">9641B: [8, "Pause Menu Transparency", hex]</patch>
-</m64tweak>

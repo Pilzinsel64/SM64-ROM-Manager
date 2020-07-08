@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Restore Mario's Original Colors" description="Restores Mario's colors to their original state." version="1.0.0.0">
-  <patch name="" description="" type="0" references="">//Restores the original colors of Mario
-823B70: 00 00 7F 00 00 00 7F 00 00 00 FF 00 00 00 FF 00 28 28 28 00 00 00 00 00 7F 00 00 00 7F 00 00 00 FF 00 00 00 FF 00 00 00 28 28 28 00 00 00 00 00 7F 7F 7F 00 7F 7F 7F 00 FF FF FF 00 FF FF FF 00 28 28 28 00 00 00 00 00 39 0E 07 00 39 0E 07 00 72 1C 0E 00 72 1C 0E 00 28 28 28 00 00 00 00 00 7F 60 3C 00 7F 60 3C 00 FE C1 79 00 FE C1 79 00 28 28 28 00 00 00 00 00 39 03 00 00 39 03 00 00 73 06 00 00 73 06 00 00 28 28 28 00</patch>
-</m64tweak>

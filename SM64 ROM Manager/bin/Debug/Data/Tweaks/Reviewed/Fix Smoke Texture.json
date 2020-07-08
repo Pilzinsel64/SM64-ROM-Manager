@@ -1,0 +1,21 @@
+{
+  "Name": "Fix Smoke Texture",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "\n845BE9: 70\n845BF1: 70\n845C11: 70\n",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "The smoke texture, as seen when Mario gets set on fire, is incorrectly set to RGBA16 rather than IA16. This patch fixes that, restoring the texture's original look, including its multiple transparency levels. Tweak By someone2369",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

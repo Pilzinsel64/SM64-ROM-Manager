@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Make Bowser's Tail Ungrabbable" description="Credits to jesusyoshi" version="1.0.0.0">
-  <patch name="New Script" description="" type="0" references="">6EDB4: 00 00 00 00</patch>
-</m64tweak>

@@ -1,4 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Removes the limit for cannon rotations.
-
-NOTE: To revert / undo this tweak, simply change the first bytes to 14 20 and the second bytes to 10 20.</description><patch>1AEAC: 10 00
-1AECC: 10 00</patch></m64tweak>

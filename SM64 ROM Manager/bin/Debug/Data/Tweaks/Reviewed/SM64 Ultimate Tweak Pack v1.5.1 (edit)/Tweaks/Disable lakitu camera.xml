@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Disables switching to Lakitu camera but still have the camera icons.
-
-NOTE: To revert / undo this tweak, simply change the value from 10 to 17. </description><patch>41928: 10</patch></m64tweak>

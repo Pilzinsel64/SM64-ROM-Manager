@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Recover from Slide Kick with B Button" description="Tweak by jesusyoshi" version="1.0.0.0">
-  <patch name="Sex" description="" type="0" references="">23350: 31 f8 20 02</patch>
-</m64tweak>

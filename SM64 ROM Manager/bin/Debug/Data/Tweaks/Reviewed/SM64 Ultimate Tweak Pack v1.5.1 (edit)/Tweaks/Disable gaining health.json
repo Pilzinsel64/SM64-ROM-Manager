@@ -1,0 +1,21 @@
+{
+  "Name": "Disable gaining health",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//Disables health from recharging.\nF180: 00 00 00 00\nF1D8: 00 00 00 00\nF1AB: 00 00\n\n//Disables health from recharging in water.\nF1AC: 8F",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Disables gaining health from anything.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

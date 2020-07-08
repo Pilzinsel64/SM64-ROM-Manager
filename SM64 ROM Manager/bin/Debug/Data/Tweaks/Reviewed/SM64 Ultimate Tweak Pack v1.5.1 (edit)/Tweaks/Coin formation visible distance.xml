@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Coin formation visible distance" description="Modifies the distance from which coin formations are visible.&#xD;&#xA;Preset Distances:&#xD;&#xA;4000.0f (default) = 44FA 4503 4000&#xD;&#xA;8000.0f =  45FA 45FD 2000&#xD;&#xA;16000.0f = 467A 467B 9000" version="1.0.0.0">
-  <patch name="" description="" type="0" references="">66F56: 46 7A
-F2990: 46 7B
-F2992: 90 00</patch>
-</m64tweak> 

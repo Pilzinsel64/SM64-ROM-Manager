@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Enable/Disable 100-Coin Stars" description="Enable or Disable the 100-Coin-Star in all Levels." version="1.0.0.0">
-  <patch name="Disable completly" description="Disables the 100-Coin-Star in all Levels." type="0" references="">8B94: 10 20 00 0E
-8BC8: 00 00 00 00 00 00 00 00</patch>
-  <patch name="Enable only in main courses (Default)" description="Enables the 100-Coin-Star in all main courses (Default)." type="0" references="">8BC8: 0C 0A AD 56 24 04 00 06
-8B94: 10 20 00 0E</patch>
-  <patch name="Enable in all courses" description="Enables the 100-Coin-Star in all levels." type="0" references="">8BC8: 0C 0A AD 56 24 04 00 06
-8B94: 00 00 00 00</patch>
-</m64tweak>

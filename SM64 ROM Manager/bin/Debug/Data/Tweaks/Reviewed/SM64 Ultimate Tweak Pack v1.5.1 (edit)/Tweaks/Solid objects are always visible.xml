@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Objects with collision will be visible from any distance.</description><patch>1007F0: 00 00 00 00
-1008B8: 00 00 00 00
-1008D0: 00 00 00 00</patch></m64tweak>

@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Bacon's code to keep the camera angle the same while the game is paused.</description><patch>65A4: 00 00 00 00</patch></m64tweak>

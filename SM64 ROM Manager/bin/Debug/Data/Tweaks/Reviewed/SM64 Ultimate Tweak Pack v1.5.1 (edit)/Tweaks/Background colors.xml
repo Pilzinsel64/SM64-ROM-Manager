@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Background colors" description="Background colors are RGBA16 and is stored as 2 bytes (16 bits) &#xA;&#xD;&#xA;Save a 1 x 1 pixel that is the color you want of the background as a .tga and drag it into this program: http://www.mediafire.com/file/yxutn3gn8bl316p/tga2rgba16.exe&#xA;&#xA;&#xD;&#xA;&#xD;&#xA;Open the file you get from it up in a hex editor and you should get 2 bytes (16 bits). &#xA;&#xD;&#xA;These are in RGBA16 so all you have to do now is use the tweak and input them." version="1.0.0.0">
-  <patch name="Title screen background color" description="Modify the title screen background color (Default: 0001).&#xD;&#xA;&#xD;&#xA;NOTE: The original Super Mario 64 title screen seems to have some sort of black background in the model itself, so this will only take effect if you import a custom title screen." type="0" references="">26A192: [16, "Color (RGBA16, DEFAULT: 0001)", hex]</patch>
-  <patch name="Star select background color" description="Modify the star select background color (Default: FFFF)." type="0" references="">2A654A: [16, "Color (RGBA16, DEFAULT: FFFF)", hex]</patch>
-</m64tweak>

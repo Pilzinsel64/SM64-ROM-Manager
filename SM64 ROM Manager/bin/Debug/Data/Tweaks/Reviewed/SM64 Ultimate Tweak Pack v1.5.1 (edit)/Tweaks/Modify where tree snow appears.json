@@ -1,0 +1,21 @@
+{
+  "Name": "Modify where tree snow appears",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "6B9AB: [level, \"First level\"]\n6B99F: [level, \"Second level\"]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Changes which levels wherein trees will produce snow.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

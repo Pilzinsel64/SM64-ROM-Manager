@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Shell (!) boxes will respawn if they contain a surfable koopa shell. By aglab2</description><patch>
-7C93B: 05
-</patch></m64tweak>

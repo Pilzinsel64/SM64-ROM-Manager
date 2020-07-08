@@ -1,0 +1,21 @@
+{
+  "Name": "Change Start Lives",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "1001B: [8, \"Lives (DEFAULT: 04\", hex]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Set the lives that Mario has at the start.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

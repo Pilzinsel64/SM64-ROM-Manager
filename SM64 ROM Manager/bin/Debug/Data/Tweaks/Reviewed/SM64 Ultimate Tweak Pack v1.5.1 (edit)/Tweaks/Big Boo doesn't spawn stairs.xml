@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Removes the stairs which spawn after defeating Big Boo.</description><patch>7FDD4: 03 E0 00 08 00 00 00 00</patch></m64tweak>

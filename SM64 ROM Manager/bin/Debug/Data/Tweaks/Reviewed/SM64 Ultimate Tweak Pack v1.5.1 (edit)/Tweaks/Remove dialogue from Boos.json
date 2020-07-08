@@ -1,0 +1,21 @@
+{
+  "Name": "Remove dialogue from Boos",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "7f774: A7 20 00 74",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Removes the dialogue, but still spawns Big Boo.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

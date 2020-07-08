@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Fixes very silly code that sets the draw distance of an object to its collision distance if the collision distance is greater than 4000. It will now only set the draw distance to the collision distance if the collision distance is larger. Tweak by Falcobuster</description><patch>
-1007CC: C5 32 01 9C
-</patch></m64tweak>

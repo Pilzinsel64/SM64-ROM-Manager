@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Stars for Toads" description="Modify the number of stars required for each star-giving Toad to appear." version="1.0.0.0">
-  <patch name="Stars for 1st Toad" description="Modify the number of stars required for the first star-giving Toad to appear." type="0" references="">3199B: [8, "Stars required"]</patch>
-  <patch name="Stars for 2nd Toad" description="Modify the number of stars required for the second star-giving Toad to appear." type="0" references="">319CF: [8, "Stars required"]</patch>
-  <patch name="Stars for 3rd Toad" description="Modify the number of stars required for the third star-giving Toad to appear." type="0" references="">31A03: [8, "Stars required"]</patch>
-</m64tweak>

@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>When applying this tweak, Mario will run with his back straight instead of slanting forward (Similar to SM64's Beta)
-
-NOTE: To revert / undo this tweak, simply change the value from 00 to 08. Credit goes to Vertrex (and possibly Skelux) for documenting / providing this data</description><patch>0322B9: 00</patch></m64tweak>

@@ -1,0 +1,45 @@
+{
+  "Name": "Time for...",
+  "Scripts": [
+    {
+      "Name": "Time for Metal Cap",
+      "Script": "AC0A: [16, \"Frames (DEFAULT: 0258 / 20 seconds 30fps)\", hex]",
+      "Type": "TweakScript",
+      "Description": "Change the time Mario can keep the Metal Cap for.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Time for Slide Secret Star",
+      "Script": "B7A6: [16, \"Frames (DEFAULT: 0276 / 21 seconds 30fps)\", hex]",
+      "Type": "TweakScript",
+      "Description": "The time limit for Mario to get the star on The Princess's Secret Slide.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Time for Vanish Cap",
+      "Script": "ABF2: [16, \"Frames (DEFAULT: 0258 / 20 seconds 30fps)\", hex]",
+      "Type": "TweakScript",
+      "Description": "Change the time Mario can keep the Vanish Cap for.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Time for Wing Cap",
+      "Script": "AC22: [16, \"Frames (DEFAULT: 0708 / 60 seconds 30fps)\", hex]",
+      "Type": "TweakScript",
+      "Description": "Change the time Mario can keep the Wing Cap for.",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Time values are in frames. 30 frames is 001E, or 1 second in 30fps. 60 frames is 003C, or 1 second in 60fps. So multiply the amount of seconds you want by the framerate of the game (default is 30 unless you apply Kaze's 60fps). Then, add 0s to the beginning until you get a 2 byte value.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

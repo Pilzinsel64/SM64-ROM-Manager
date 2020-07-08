@@ -1,6 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Modify the pause screen to be widescreen friendly. Will also widen dialogue box backgrounds.
-
-Credit to Bacon.</description><patch>814D5E: FF EA
-814D6E: 00 92
-814D7E: 00 92
-814D8E: FF EA</patch></m64tweak>

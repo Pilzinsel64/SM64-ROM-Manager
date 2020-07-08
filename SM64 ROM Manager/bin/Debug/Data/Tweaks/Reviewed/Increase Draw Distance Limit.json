@@ -1,0 +1,21 @@
+{
+  "Name": "Increase Draw Distance Limit",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "36D2C: 95 E9 00 22",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Increases max draw distance by making the far value in the geo layout 0xA command an unsigned value. ",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

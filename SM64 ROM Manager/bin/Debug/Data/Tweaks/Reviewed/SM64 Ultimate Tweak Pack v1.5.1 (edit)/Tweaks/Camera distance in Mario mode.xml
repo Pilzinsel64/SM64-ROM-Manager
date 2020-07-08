@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Sets the zoom distance of the camera in Mario mode. (Default 350)</description><patch>3FD46: [half, "Distance"]</patch></m64tweak>

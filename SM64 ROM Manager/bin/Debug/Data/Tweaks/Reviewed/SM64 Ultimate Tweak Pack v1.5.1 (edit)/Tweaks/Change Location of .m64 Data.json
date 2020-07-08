@@ -1,0 +1,21 @@
+{
+  "Name": "Change Location of .m64 Data",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "D476A: [16, \"Part 1 (DEFAULT: 007B)\", hex]\nD4772: [16, \"Part 2 (DEFAULT: 0860)\", hex]\nD4786: [copy, D476A, D476C]\nD478A: [copy, D4772, D4774]\n\n//For XXXXXXXX, change the value to place you want the .m64 data to go\nXXXXXXXX: [copy, 7B0860, 7CC6C0]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Changes the .m64 data location.\nDefault Location: 007B0860\nLocation used by most SM64 Editor Versions: 03E00000\n\nCredit to Blake.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

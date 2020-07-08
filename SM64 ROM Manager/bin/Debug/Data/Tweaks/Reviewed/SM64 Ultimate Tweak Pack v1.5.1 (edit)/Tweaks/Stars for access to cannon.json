@@ -1,0 +1,21 @@
+{
+  "Name": "Stars for access to cannon",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "ABA13: [8, \"Stars required\"]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modify the number of stars required to access the cannon outside Peach's castle.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

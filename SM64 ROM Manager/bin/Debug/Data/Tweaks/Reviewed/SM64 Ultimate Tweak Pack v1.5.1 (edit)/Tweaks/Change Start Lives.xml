@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Set the lives that Mario has at the start.</description><patch>1001B: [8, "Lives (DEFAULT: 04", hex]</patch></m64tweak>

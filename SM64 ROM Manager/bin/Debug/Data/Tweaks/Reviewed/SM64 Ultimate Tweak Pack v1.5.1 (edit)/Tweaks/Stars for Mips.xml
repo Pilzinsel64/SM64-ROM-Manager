@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Stars for Mips" description="Modify the number of stars required for the first and second Mips rabbit to appear." version="1.0.0.0">
-  <patch name="Stars for 1st Mips" description="Modify the number of stars required for the first Mips rabbit to appear." type="0" references="">B34CB: [8, "Stars required"]</patch>
-  <patch name="Stars for 2nd Mips" description="Modify the number of stars required for the second Mips rabbit to appear." type="0" references="">B3523: [8, "Stars required"]</patch>
-</m64tweak>

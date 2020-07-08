@@ -1,0 +1,21 @@
+{
+  "Name": "Killer 1-UP Mushrooms",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "AECA0: A1 C0\nAECA2: 00 AE",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "A tweak for Yoshielectron's GS code.\n\nCredit to Blake.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

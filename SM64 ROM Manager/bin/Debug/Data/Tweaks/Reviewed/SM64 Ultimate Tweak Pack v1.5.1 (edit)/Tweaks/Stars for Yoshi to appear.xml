@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Modify the number of stars required for Yoshi to appear.</description><patch>B3EC7: [8, "Stars required"]</patch></m64tweak>

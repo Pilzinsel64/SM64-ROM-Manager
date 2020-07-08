@@ -1,0 +1,21 @@
+{
+  "Name": "Disable snow from trees",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "6B9A0: 00 00 00 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Trees in certain levels such as Cool Cool Mountain or Snow Man's land will create snow decals when climbed. This snow will be replaced with leaves.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

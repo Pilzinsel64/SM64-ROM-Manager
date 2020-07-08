@@ -1,0 +1,21 @@
+{
+  "Name": "Music for Koopa Shell",
+  "Scripts": [
+    {
+      "Name": "New Script",
+      "Script": "431F: [sequence, \"Sequence to play\"]\n432B: [sequence, \"Sequence to play\"]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Changes music that plays when interacting with a Koopa Shell\r\nCredits to jesusyoshi",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}
