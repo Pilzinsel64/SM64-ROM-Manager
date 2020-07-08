@@ -153,7 +153,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
                 {
                     if (dmgr is object && dmgr.IsReady)
                         await dmgr.SendMessage();
-                    ToastNotification.Show(this, "Erfolgreich hochgeladen!", null, -1, eToastGlowColor.Green, eToastPosition.BottomCenter);
+                    ToastNotification.Show(this, "Erfolgreich hochgeladen!", eToastGlowColor.Green, eToastPosition.BottomCenter);
                 }
                 else
                 {
