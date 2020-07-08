@@ -1,4 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Disables the lower poly version of Mario if the camera gets too far away from Mario.
-
-NOTE: To revert / undo this tweak, simply change the bytes from 2E 18 to 2D 7C. </description><patch>//Disable low poly Mario. (Mario is always high poly)
-12A7C6: 2E 18</patch></m64tweak>

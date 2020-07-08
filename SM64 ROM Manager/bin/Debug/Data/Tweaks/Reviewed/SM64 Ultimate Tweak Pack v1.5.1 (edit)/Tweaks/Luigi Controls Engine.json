@@ -1,0 +1,21 @@
+{
+  "Name": "Luigi Controls Engine",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//Slippery\n1F90A: 41 50\n2010E: 3F 30\n\n//Faster Swimming\n2CB9A: 3F 56\n2BD28: 10 00\n\n//Less air underwater or in gas\nF1AA: 00 02\n\n//Higher Jumping\n1199E: 40 50\nD8AE: 42 00\n\n//Trip if you jump while holding a small object\n2ADAC: 0C 09 A2 D9",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Changes Mario's physics to Luigi's as well as other modifications.\n\nCredits for original codes and documentation: Dudaw, James S. Kingdom, and Viper",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

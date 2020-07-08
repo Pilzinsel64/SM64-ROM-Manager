@@ -1,5 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Modify the height of Mario's long jump (Default: 41F0)
-
-Credit goes to Viper for creating the gameshark code</description><patch>//DEFAULT VALUE: 41F0
-
-D8AE: [16, "Height (DEFAULT: 41F0)", hex]</patch></m64tweak>

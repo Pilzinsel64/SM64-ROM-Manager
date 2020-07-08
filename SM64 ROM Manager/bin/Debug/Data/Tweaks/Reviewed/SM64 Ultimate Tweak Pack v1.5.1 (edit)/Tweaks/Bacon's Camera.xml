@@ -1,5 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>WARNING: Overwrites Remove Mario's Head Movement tweak.
-
-This tweak improves the camera. Combine with the Star Road Camera tweak for the best effect. Overwrites the unused Mario function so be warned other ASM codes may also write there. </description><patch>//WARNING: Overwrites Remove Mario's Head Movement tweak.
-
-861C0: 3C 08 80 29 34 09 3C D0 34 0A 3E 80 A5 09 93 FE A5 0A 94 1A 3C 0B 80 34 85 6B AF A0 31 6C 00 10 11 80 00 03 00 00 00 00 A5 00 93 FE A5 00 94 1A 03 E0 00 08 00 00 00 00</patch></m64tweak>

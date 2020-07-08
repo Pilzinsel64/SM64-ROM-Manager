@@ -1,0 +1,21 @@
+{
+  "Name": "Recover from Slide Kick with B Button",
+  "Scripts": [
+    {
+      "Name": "Sex",
+      "Script": "23350: 31 f8 20 02",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Tweak by jesusyoshi",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

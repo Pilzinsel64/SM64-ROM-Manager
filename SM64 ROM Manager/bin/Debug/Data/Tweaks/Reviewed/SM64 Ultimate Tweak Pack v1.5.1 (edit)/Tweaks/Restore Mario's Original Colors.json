@@ -1,0 +1,21 @@
+{
+  "Name": "Restore Mario's Original Colors",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//Restores the original colors of Mario\n823B70: 00 00 7F 00 00 00 7F 00 00 00 FF 00 00 00 FF 00 28 28 28 00 00 00 00 00 7F 00 00 00 7F 00 00 00 FF 00 00 00 FF 00 00 00 28 28 28 00 00 00 00 00 7F 7F 7F 00 7F 7F 7F 00 FF FF FF 00 FF FF FF 00 28 28 28 00 00 00 00 00 39 0E 07 00 39 0E 07 00 72 1C 0E 00 72 1C 0E 00 28 28 28 00 00 00 00 00 7F 60 3C 00 7F 60 3C 00 FE C1 79 00 FE C1 79 00 28 28 28 00 00 00 00 00 39 03 00 00 39 03 00 00 73 06 00 00 73 06 00 00 28 28 28 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Restores Mario's colors to their original state.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

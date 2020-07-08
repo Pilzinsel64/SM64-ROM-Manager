@@ -1,0 +1,21 @@
+{
+  "Name": "Stars for Wing Cap entrance",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "1E6D7: [8, \"Stars required\"]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modify the number of stars required for the Wing Cap level's entrance to activate.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

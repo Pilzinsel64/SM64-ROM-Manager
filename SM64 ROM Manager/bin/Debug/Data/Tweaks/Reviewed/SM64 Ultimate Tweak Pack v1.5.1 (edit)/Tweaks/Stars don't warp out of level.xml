@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Makes every star act like an 100 coin star or Bowser Course 8 red coin star. Collecting a star prompts you to save your game and doesn't warp you out of the level.</description><patch>8C50: 24 08 00 01</patch></m64tweak>

@@ -1,4 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Disable momentum when flying with the Wing Cap.
-Credit goes to supermariosan.
-
-NOTE: To revert / undo this tweak, simply change the bytes from 00 00 00 00 to E5 D0 00 54. </description><patch>261D4: 00 00 00 00</patch></m64tweak>

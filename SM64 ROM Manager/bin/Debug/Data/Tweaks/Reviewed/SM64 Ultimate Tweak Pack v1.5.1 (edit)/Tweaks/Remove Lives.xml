@@ -1,6 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>This tweak completely removes lives altogther.
-
-Credit to Kaze for making the original code.</description><patch>5B10: 24 08 00 01
-5B98: 24 0E 00 01
-98118: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-9813C: 3C 08 80 34</patch></m64tweak>

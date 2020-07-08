@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Remove Water Upwarp" description="Tweak by jesusyoshi" version="1.0.0.0">
-  <patch name="New Script" description="" type="0" references="">E4DC: 00 00 00 00</patch>
-</m64tweak>

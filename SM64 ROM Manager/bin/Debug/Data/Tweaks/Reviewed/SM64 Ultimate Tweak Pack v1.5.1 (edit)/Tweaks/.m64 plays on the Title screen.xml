@@ -1,4 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Allows you to play any .m64 on the Title screen.</description><patch>21FA40: 34 05 00 [sequence, "Sequence to play"]
-21FA44: 00 00 20 25
-21FA48: 0C 0C 81 51
-21FA4C: 00 00 30 25</patch></m64tweak>

@@ -1,5 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>The camera will start in zoomed-out view.</description><patch>42038:
-24 08 00 02
-00 00 00 00
-3C 01 80 34
-A4 28 C8 48</patch></m64tweak>

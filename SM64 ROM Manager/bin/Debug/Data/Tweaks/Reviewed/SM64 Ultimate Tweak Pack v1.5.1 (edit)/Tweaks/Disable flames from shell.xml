@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<!--Mario 64 Tweak File-->
-<m64tweak>
-<description>Removes the flame decals created while riding a Koopa Shell over lava.</description>
-<patch>785F8: 00 00 00 00</patch>
-</m64tweak>

@@ -1,0 +1,21 @@
+{
+  "Name": "Big Bob-omb health",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "622DB: [8, \"Health\"]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modify the health of Big Bob-omb.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

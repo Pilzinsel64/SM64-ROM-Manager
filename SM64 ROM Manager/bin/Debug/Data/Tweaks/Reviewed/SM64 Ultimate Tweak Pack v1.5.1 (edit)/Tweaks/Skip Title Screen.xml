@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Skip the first screen which displays the game title.</description><patch>269ECC: 34 04 00 00 01 10 00 14 00 26 9E A0 00 26 A3 A0 14 00 00 78</patch></m64tweak>

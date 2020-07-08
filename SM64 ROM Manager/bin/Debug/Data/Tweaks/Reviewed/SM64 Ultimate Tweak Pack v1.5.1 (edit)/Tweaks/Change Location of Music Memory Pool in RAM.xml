@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>If value is not 805C in your ROM, change it to that.
-
-Credit to Blake.</description><patch>D48B6: [16, "RAM Location (Default: 805C)", hex]</patch></m64tweak>

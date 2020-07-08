@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Start Cap levels without Cap" description="Start each of the Cap levels without their appropriate cap." version="1.0.0.0">
-  <patch name="Start Metal Cap level without Cap" description="Start the Metal Cap level off without the Metal Cap." type="0" references="">4A58: 00 00 00 00</patch>
-  <patch name="Start Vanish Cap level without Cap" description="Start the Vanish Cap level off without the Vanish Cap." type="0" references="">4A90: 00 00 00 00</patch>
-  <patch name="Start Wing Cap level without Cap" description="Start the Wing Cap level off without the Wing Cap." type="0" references="">4A74: 00 00 00 00</patch>
-</m64tweak>

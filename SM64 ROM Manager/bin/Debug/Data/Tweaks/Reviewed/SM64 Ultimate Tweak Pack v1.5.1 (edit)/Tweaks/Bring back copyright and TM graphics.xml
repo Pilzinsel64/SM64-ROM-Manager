@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Brings back the copyright and TM graphics for your custom title screen (WARNING: Does not work with Extended Bank 07)</description><patch>26A1EC: 80 16 F9 84</patch></m64tweak>

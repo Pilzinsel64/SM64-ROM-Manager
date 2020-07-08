@@ -1,4 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Disables the filtering on textures that gives them their blurry look, almost like SM64DS.
-Credit to Shygoo.
-
-NOTE: To revert / undo this tweak, simply change the bytes from 00 00 60 25 to 24 0C 20 00. </description><patch>2030: 00 00 60 25</patch></m64tweak>

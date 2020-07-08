@@ -1,5 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Modify the height of Mario's back flip (Default: 4278)
-
-Credit goes to Viper for creating the gameshark code</description><patch>//DEFAULT VALUE: 4278
-
-D662: [16, "Height (DEFAULT: 4278)", hex]</patch></m64tweak>

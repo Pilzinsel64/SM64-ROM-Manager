@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="RCVI Hack" description="The RCVI Hack reduces lags on emulators.&#xD;&#xA;But it also breaks console compatiblity. So be careful!" version="1.0.0.0">
-  <patch name="Enable RCVI Hack" description="Enables the RCVI Hack." type="0" references="">F00C2:
-08 34</patch>
-  <patch name="Revert RCVI Hack" description="Reverts the RCVI Hack." type="0" references="">F00C2:
-02 0D</patch>
-</m64tweak>

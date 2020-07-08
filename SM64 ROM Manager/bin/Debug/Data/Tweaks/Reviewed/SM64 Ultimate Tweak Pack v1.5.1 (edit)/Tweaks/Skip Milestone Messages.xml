@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Skip the Milestone messages displayed after collecting specific numbers of stars.</description><patch>123F8: 10 00</patch></m64tweak>

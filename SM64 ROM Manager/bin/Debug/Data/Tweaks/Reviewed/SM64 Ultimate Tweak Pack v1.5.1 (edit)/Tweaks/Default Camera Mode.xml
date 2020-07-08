@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Camera start mode" description="Choose to start the camera in Lakitu mode or Mario mode" version="1.0.0.0">
-  <patch name="Lakitu mode" description="The camera will start in Lakitu mode without needing to press the 'R' button." type="0" references="">422C3: 04
-42BC7: 04</patch>
-  <patch name="Mario mode" description="The camera will start in Mario mode without needing to press the 'R' button." type="0" references="">422C3: 05
-42BC7: 05</patch>
-</m64tweak>

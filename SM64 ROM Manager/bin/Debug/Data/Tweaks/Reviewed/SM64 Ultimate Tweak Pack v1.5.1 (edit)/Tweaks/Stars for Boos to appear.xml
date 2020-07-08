@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Stars for Boos to appear" description="Modify the number of stars required for boos to spawn." version="1.0.0.0">
-  <patch name="Stars for Boo Groups to appear" description="Modify the number of stars required for the Boo Groups in the Castle Courtyard to appear." type="0" references="">7E697: [8, "Stars required"]</patch>
-  <patch name="Stars for Boo with Cage to appear" description="Modify the number of stars required for the Boos with the Big Boo's Haunt entrance to appear." type="0" references="">8016F: [8, "Stars required"]</patch>
-  <patch name="Stars for Castle Boo to appear" description="Modify the number of stars required for the Boo inside the Castle to appear." type="0" references="">8045B: [8, "Stars required"]</patch>
-</m64tweak>

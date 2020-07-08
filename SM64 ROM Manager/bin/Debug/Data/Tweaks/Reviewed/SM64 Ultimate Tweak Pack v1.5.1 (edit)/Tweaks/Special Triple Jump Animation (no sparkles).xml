@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Special Triple Jump Animation (no sparkles)" description="Replaces the Triple Jump animation with the Special Triple Jump animation." version="1.0.0.0">
-  <patch name="Apply Special Triple Jump Animation" description="Replaces the Triple Jump animation with the Special Triple Jump animation." type="0" references="">4EC610: 00 05 26 74 00 00 01 8E</patch>
-  <patch name="Remove Special Triple Jump Animation" description="Removes the Special Triple Jump Animation (no sparkles)." type="0" references="">4EC610: 00 08 41 F8 00 00 0A B8</patch>
-</m64tweak>

@@ -1,5 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Modify how fast Bullet Bills travel (Default: 41F0)
-
-Credit goes to ArchangelGabriel for creating the gameshark code</description><patch>//DEFAULT VALUE: 41F0
-
-6EA36: [16, "Speed (DEFAULT: 41F0)", hex]</patch></m64tweak>

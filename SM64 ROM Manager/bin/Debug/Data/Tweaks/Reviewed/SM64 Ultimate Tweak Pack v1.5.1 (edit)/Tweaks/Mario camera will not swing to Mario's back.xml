@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>In Mario mode, the camera will not rotate to match the direction Mario is facing.</description><patch>3F330: 34 06 00 00</patch></m64tweak>

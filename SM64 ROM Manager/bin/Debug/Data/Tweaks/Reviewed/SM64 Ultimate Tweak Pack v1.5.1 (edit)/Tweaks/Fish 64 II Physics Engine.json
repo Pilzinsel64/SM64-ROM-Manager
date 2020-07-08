@@ -1,0 +1,21 @@
+{
+  "Name": "Fish 64 II Physics Engine",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//Slippery\n1F90A: 41 50\n2010E: 3F 30\n\n//Faster Swimming + Autoswim\n2CB9A: 3F 56\n2BD28: 00 00\n\n//Infinite Air\nF1AA: 00 00\n\n//Increase Framerate\n310C: 00 00\n\n//Play Fish 64 Bonus Level Theme at all times\n21CCDC: 0C 00 00 00 80 2F 07 F4",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modification of Luigi Controls Engine + Blake's codes.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

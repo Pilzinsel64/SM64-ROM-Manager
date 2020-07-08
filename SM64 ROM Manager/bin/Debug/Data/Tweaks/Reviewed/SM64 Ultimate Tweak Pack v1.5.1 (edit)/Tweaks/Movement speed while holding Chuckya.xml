@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Changes the max speed you can reach while holding a Chuckya.</description><patch>F1AE0: [half, "Speed"]</patch></m64tweak>

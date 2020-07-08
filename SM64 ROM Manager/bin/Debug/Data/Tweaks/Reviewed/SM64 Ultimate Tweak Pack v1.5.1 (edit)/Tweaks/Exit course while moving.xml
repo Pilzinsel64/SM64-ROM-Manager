@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Allows you to exit a level via the course pause menu while moving.</description><patch>97B74: 00 00 00 00</patch></m64tweak>

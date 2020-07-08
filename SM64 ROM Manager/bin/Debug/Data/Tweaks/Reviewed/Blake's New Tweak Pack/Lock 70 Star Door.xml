@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Lock 70 Star Door" description="Code by Scuttle.&#xD;&#xA;Converted to a tweak by Blake cus PixelSM64 has a tomato brain" version="1.0.0.0">
-  <patch name="New Script" description="" type="0" references="">9680: 10 00</patch>
-</m64tweak>

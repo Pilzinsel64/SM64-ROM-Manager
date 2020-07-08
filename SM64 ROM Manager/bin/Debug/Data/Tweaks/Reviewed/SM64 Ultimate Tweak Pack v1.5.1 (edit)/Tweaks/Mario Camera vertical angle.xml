@@ -1,2 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Sets the camera's vertical angle in Mario mode. (Default 2)</description><patch>3F888: 00 00 00 00
-3F892: [half, "Angle"]</patch></m64tweak>

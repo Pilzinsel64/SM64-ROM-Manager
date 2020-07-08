@@ -1,0 +1,21 @@
+{
+  "Name": "Skip Level Intros",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "// Skip Level Intros\n4B7C: 24 00\n4924: 10 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Skip the intros that happen when you go into a level for the first time.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

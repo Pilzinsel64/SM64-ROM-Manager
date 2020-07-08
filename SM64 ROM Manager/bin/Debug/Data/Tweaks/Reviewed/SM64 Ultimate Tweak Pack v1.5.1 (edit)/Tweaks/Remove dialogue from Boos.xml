@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Removes the dialogue, but still spawns Big Boo.</description><patch>7f774: A7 20 00 74</patch></m64tweak>

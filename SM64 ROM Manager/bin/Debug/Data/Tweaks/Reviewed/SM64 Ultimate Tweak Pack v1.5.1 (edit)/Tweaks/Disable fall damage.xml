@@ -1,4 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Disables the damage that Mario takes when he falls from a high height.</description><patch>25044: 10
-252F4: 10 00
-252F7: 18
-25368: 10</patch></m64tweak>

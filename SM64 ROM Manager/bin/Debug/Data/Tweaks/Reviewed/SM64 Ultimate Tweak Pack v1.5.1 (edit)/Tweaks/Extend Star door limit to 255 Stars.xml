@@ -1,2 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Extends the limit of stars you need for a Star door to 255 stars.</description><patch>943C: 91 D8
-9441: 00 00</patch></m64tweak>

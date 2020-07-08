@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Mario Never Sleeps" description="Self Explanitory. &#xD;&#xA;&#xD;&#xA;Created by Blakeoramo." version="1.0.0.0">
-  <patch name="New Script" description="" type="0" references="">1BF57: 00 14</patch>
-</m64tweak>

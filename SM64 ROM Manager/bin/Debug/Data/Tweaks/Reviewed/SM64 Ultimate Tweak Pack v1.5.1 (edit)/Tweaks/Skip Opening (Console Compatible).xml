@@ -1,7 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Skip events the Peach and Lakitu introduction scene. (Console Compatible? Not exactly sure what this does. - Tweak reviewer)
-
-Credit to Eddio0141.</description><patch>// Peach
-6BF0: 34 06 00 08
-
-// Lakitu
-6D90: 24 10 00 00</patch></m64tweak>

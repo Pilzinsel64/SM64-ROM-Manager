@@ -1,1 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Modify the number of lives Mario receives from a 1-up. (0 for no lives)</description><patch>AEC9F: [8, "Lives Given"]</patch></m64tweak>

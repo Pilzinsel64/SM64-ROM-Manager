@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<m64tweak name="Time for..." description="Time values are in frames. 30 frames is 001E, or 1 second in 30fps. 60 frames is 003C, or 1 second in 60fps. So multiply the amount of seconds you want by the framerate of the game (default is 30 unless you apply Kaze's 60fps). Then, add 0s to the beginning until you get a 2 byte value." version="1.0.0.0">
-  <patch name="Time for Metal Cap" description="Change the time Mario can keep the Metal Cap for." type="0" references="">AC0A: [16, "Frames (DEFAULT: 0258 / 20 seconds 30fps)", hex]</patch>
-  <patch name="Time for Slide Secret Star" description="The time limit for Mario to get the star on The Princess's Secret Slide." type="0" references="">B7A6: [16, "Frames (DEFAULT: 0276 / 21 seconds 30fps)", hex]</patch>
-  <patch name="Time for Vanish Cap" description="Change the time Mario can keep the Vanish Cap for." type="0" references="">ABF2: [16, "Frames (DEFAULT: 0258 / 20 seconds 30fps)", hex]</patch>
-  <patch name="Time for Wing Cap" description="Change the time Mario can keep the Wing Cap for." type="0" references="">AC22: [16, "Frames (DEFAULT: 0708 / 60 seconds 30fps)", hex]</patch>
-</m64tweak>

@@ -1,0 +1,21 @@
+{
+  "Name": "Camera distance in Mario mode",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "3FD46: [half, \"Distance\"]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Sets the zoom distance of the camera in Mario mode. (Default 350)",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

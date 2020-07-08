@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Disables the level demos on the Mario Screen.
-
-NOTE: To revert / undo this tweak, simply change the value from 00 to 07. </description><patch>579C23: 00</patch></m64tweak>

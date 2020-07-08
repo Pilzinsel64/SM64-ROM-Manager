@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Writes zeros to the RAM upon starting the game to clean up, not essential but recommended for extended RAM. (Default: 807F)</description><patch>//DEFAULT VALUE: 807F
-
-101B92: [16, "RAM Size (DEFAULT VALUE: 807F)", hex]</patch></m64tweak>

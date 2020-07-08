@@ -1,7 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Modify the force of Mario's gravity (Default: 4080, Moon gravity: 3FD5)
-
-It is unknown who created the original gameshark code. If you know, please tell Miles#5198
-For reference, the original gameshark code: 8125699E 3FD5</description><patch>//DEFAULT VALUE: 4080
-//MOON GRAVITY VALUE: 3FD5
-
-1199E: [16, "Gravity (DEFAULT: 4080)", hex]</patch></m64tweak>

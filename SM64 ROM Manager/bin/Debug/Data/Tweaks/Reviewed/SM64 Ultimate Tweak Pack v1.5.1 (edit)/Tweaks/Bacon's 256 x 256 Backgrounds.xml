@@ -1,3 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Backgrounds in SM64 are made up of 32 x 64 tiles, but they cut off a pixel so they are really 32 x 63 tiles. This tweak fixes that and makes the backgrounds seamless.</description><patch>8A8E4: 24 0D 04 00
-8A948: 24 0D 04 00 24 0E 04 00
-8A9B4: 24 0E 04 00</patch></m64tweak>

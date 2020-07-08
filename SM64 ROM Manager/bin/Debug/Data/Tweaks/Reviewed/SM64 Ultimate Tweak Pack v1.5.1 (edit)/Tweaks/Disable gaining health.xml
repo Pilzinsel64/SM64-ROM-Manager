@@ -1,7 +1,0 @@
-<?xml version="1.0"?><!--Mario 64 Tweak File--><m64tweak><description>Disables gaining health from anything.</description><patch>//Disables health from recharging.
-F180: 00 00 00 00
-F1D8: 00 00 00 00
-F1AB: 00 00
-
-//Disables health from recharging in water.
-F1AC: 8F</patch></m64tweak>

@@ -1,0 +1,21 @@
+{
+  "Name": "Disable endless stairs",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "53AC: 10 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Disables the endless stairs and allows you to get to Bowser 3 as soon as you open the 50 star door.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}
