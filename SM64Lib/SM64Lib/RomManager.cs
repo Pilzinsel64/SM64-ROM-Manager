@@ -52,6 +52,9 @@ namespace SM64Lib
         public event WritingNewProgramVersionEventHandler WritingNewProgramVersion;
         public delegate void WritingNewProgramVersionEventHandler(RomManager sender, RomVersionEventArgs e);
 
+        public event GetTextProfileInfoEventHandler GettingDefaultTextProfileInfo;
+        public delegate void GetTextProfileInfoEventHandler(RomManager rommgr, GetTextProfileInfoEventArgs e);
+
         // C o n s t a n t s
 
         public const string SUPER_MARIO_64_U_MD5HASH = "20b854b239203baf6c961b850a4a51a2";
@@ -73,7 +76,6 @@ namespace SM64Lib
         public LevelList Levels { get; private set; } = new LevelList();
         public string RomFile { get; set; } = string.Empty;
         public bool IsSM64EditorMode { get; private set; } = false;
-        public Text.Profiles.TextProfileInfo TextInfoProfile { get; set; }
         public MusicList MusicList { get; private set; } = new MusicList();
         public CustomModelBank GlobalModelBank { get; private set; } = new CustomModelBank();
         public BehaviorBank GlobalBehaviorBank { get; private set; } = null;
@@ -218,6 +220,33 @@ namespace SM64Lib
         }
 
         // R a i s e   E v e n t s
+
+        private Text.Profiles.TextProfileInfo GetDefaultTextProfileInfo()
+        {
+            var args = new GetTextProfileInfoEventArgs();
+            GettingDefaultTextProfileInfo?.Invoke(this, args);
+            return args.ProfileInfo;
+        }
+
+        public Text.Profiles.TextProfileInfo GetTextProfileInfo()
+        {
+            if (RomConfig.TextProfileInfo is object)
+                return RomConfig.TextProfileInfo;
+            else
+                return GetDefaultTextProfileInfo();
+        }
+
+        public void CreateNewTextProfileInfo()
+            => SetTextProfileInfo(GetTextProfileInfo().Clone());
+
+        public void ResetTextProfileInfo()
+            => SetTextProfileInfo(null);
+
+        public void SetTextProfileInfo(Text.Profiles.TextProfileInfo profile)
+        {
+            RomConfig.TextProfileInfo = profile;
+            ClearTextGroups();
+        }
 
         private bool RaiseBeforeRomSave()
         {
@@ -495,7 +524,7 @@ namespace SM64Lib
 
         private Text.Profiles.TextGroupInfo GetTextProfile(string name)
         {
-            return TextInfoProfile.GetGroup(name);
+            return GetTextProfileInfo().GetGroup(name);
         }
 
         /// <summary>
@@ -548,7 +577,7 @@ namespace SM64Lib
         /// <returns></returns>
         public Text.Profiles.TextGroupInfo[] GetTextGroupInfos()
         {
-            return TextInfoProfile.AllGroups.ToArray();
+            return GetTextProfileInfo().AllGroups.ToArray();
         }
 
         /// <summary>

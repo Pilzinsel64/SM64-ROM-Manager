@@ -643,11 +643,6 @@ namespace SM64_ROM_Manager
             Controller.ConvertM64ToMidi();
         }
 
-        private void ButtonItem19_Click(object sender, EventArgs e)
-        {
-            Controller.TextManagerController.OpenTextProfileEditor();
-        }
-
         private void ButtonItem18_Click(object sender, EventArgs e)
         {
             if (!Controller.HasRomManager)

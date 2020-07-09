@@ -7,6 +7,7 @@ using SM64Lib.Behaviors;
 using SM64Lib.Objects.ObjectBanks;
 using SM64Lib.ASM;
 using SM64Lib.Objects.ObjectBanks.Data;
+using System;
 
 namespace SM64Lib.Configuration
 {
@@ -26,7 +27,7 @@ namespace SM64Lib.Configuration
         public MusicConfiguration MusicConfig { get;  } = new MusicConfiguration();
 
         // Texts
-        public string SelectedTextProfileInfo { get; set; } = string.Empty;
+        public Text.Profiles.TextProfileInfo TextProfileInfo { get; set; } = null;
 
         // Other
         public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();

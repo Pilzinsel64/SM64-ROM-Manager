@@ -308,29 +308,6 @@ namespace SM64_ROM_Manager.My
             }
 
             [EditorBrowsable(EditorBrowsableState.Never)]
-            public TextProfilesManagerDialog m_TextProfilesManagerDialog;
-
-            public TextProfilesManagerDialog TextProfilesManagerDialog
-            {
-                [DebuggerHidden]
-                get
-                {
-                    m_TextProfilesManagerDialog = MyForms.Create__Instance__(m_TextProfilesManagerDialog);
-                    return m_TextProfilesManagerDialog;
-                }
-
-                [DebuggerHidden]
-                set
-                {
-                    if (value == m_TextProfilesManagerDialog)
-                        return;
-                    if (value is object)
-                        throw new ArgumentException("Property can only be set to Nothing");
-                    Dispose__Instance__(ref m_TextProfilesManagerDialog);
-                }
-            }
-
-            [EditorBrowsable(EditorBrowsableState.Never)]
             public ValueInputDialog m_ValueInputDialog;
 
             public ValueInputDialog ValueInputDialog

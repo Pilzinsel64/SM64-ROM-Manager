@@ -74,11 +74,11 @@ namespace SM64_ROM_Manager
         private bool forceUppercaseForActAndLevelNames = true;
         private bool autoDetectStartEndQuotationMarks = true;
         private List<RomManager> knownRomManagers = new List<RomManager>();
-        private bool needToSaveCurrentTextProfileInfo = false;
+        private TextProfileInfo myDefaultTextProfileInfo = null;
 
         // P r o p e r t i e s
 
-        public MyTextProfileInfoManager MyTextProfiles { get; private set; } = new MyTextProfileInfoManager();
+        //public MyTextProfileInfoManager MyTextProfiles { get; private set; } = new MyTextProfileInfoManager();
         public bool UseSettingsForOptions { get; set; } = true;
 
         public bool ForceUppercaseForActAndLevelNames
@@ -125,10 +125,7 @@ namespace SM64_ROM_Manager
                 RequestRomManager?.Invoke(e);
 
                 if (e.RomManager is object)
-                {
-                    SetCurrentTextProfileToRomManager(e.RomManager);
                     M64TextEncoding.AutoDetectStartEndQuotationMarks = AutoDetectStartEndQuotationMarks;
-                }
 
                 if (!knownRomManagers.Contains(e.RomManager))
                 {
@@ -142,22 +139,6 @@ namespace SM64_ROM_Manager
 
         private void RomManager_AfterRomSave(RomManager sender, EventArgs e)
         {
-            if (needToSaveCurrentTextProfileInfo)
-            {
-                MyTextProfiles.SaveTextProfile(GetCurrentTextProfile());
-            }
-        }
-
-        private string DialogNamesFilePath
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(dialogNamesFilePath))
-                {
-                    dialogNamesFilePath = Path.Combine(Publics.General.MyDataPath, @"Text Manager\dialogs.txt");
-                }
-                return dialogNamesFilePath;
-            }
         }
 
         public string StatusText
@@ -177,24 +158,30 @@ namespace SM64_ROM_Manager
 
         // G e n e r a l   F e a t u r e s
 
+        public void CreateNewTextProfileInfoIfUsingDefault()
+        {
+            if (UsingDefaultTextProfileInfo())
+            {
+                RomManager.CreateNewTextProfileInfo();
+                CurrentTextProfileInfoChanged?.Invoke();
+            }
+        }
+
+        public void ResetTextPRofileInfo()
+        {
+            RomManager.ResetTextProfileInfo();
+            CurrentTextProfileInfoChanged?.Invoke();
+        }
+
         public void OpenTextProfileEditor()
         {
             if (RomManager is null)
-            {
                 ErrorBecauseNoRomLoaded?.Invoke();
-            }
-            else
+            else if (!UsingDefaultTextProfileInfo())
             {
-                MyTextProfiles.LoadAllTextProfilesIfNotLoaded();
-                var curTextProfile = GetCurrentTextProfile();
-                var editor = new TextProfilesManagerDialog() { MyTextProfiles = MyTextProfiles };
+                CreateNewTextProfileInfoIfUsingDefault();
+                var editor = new TextProfileEditor { ProfileInfo = RomManager.GetTextProfileInfo() };
                 editor.ShowDialog();
-                if (RomManager is object)
-                {
-                    SetCurrentTextProfileName(curTextProfile.Name);
-                    RomManager.ClearTextGroups();
-                    SendRequestReloadTextManagerLists();
-                }
             }
         }
 
@@ -206,25 +193,18 @@ namespace SM64_ROM_Manager
         }
 
         public void SetOtherStatusInfos(string text, Color foreColor)
+            => SettingOtherStatusInfo?.Invoke(text, foreColor);
+
+        public void ExportTextProfile(string filePath)
+            => GetCurrentTextProfile().WriteToFile(filePath);
+
+        public void ImportTextProfile(string filePath)
         {
-            SettingOtherStatusInfo?.Invoke(text, foreColor);
+            RomManager.SetTextProfileInfo(TextProfileInfo.ReadFromFile(filePath));
+            CurrentTextProfileInfoChanged?.Invoke();
         }
 
         // T e x t   M a n a g e r   F e a t u r e s
-
-        public void SetCurrentTextProfileToRomManager()
-        {
-            SetCurrentTextProfileToRomManager(RomManager);
-        }
-
-        private void SetCurrentTextProfileToRomManager(RomManager rommgr)
-        {
-            var curInfo = GetCurrentTextProfile(rommgr);
-            if (curInfo != rommgr.TextInfoProfile)
-            {
-                rommgr.TextInfoProfile = curInfo;
-            }
-        }
 
         private TextProfileInfo GetCurrentTextProfile()
         {
@@ -233,13 +213,7 @@ namespace SM64_ROM_Manager
 
         private TextProfileInfo GetCurrentTextProfile(RomManager rommgr)
         {
-            var info = GetTextProfileInfoByName(rommgr.RomConfig.SelectedTextProfileInfo);
-            if (info is null)
-            {
-                info = MyTextProfiles.Manager.DefaultTextProfileInfo;
-            }
-
-            return info;
+            return rommgr.GetTextProfileInfo();
         }
 
         private TextGroup GetTextGroup(string name)
@@ -360,7 +334,7 @@ namespace SM64_ROM_Manager
 
         private void LoadAllTextGroups()
         {
-            foreach (var tgi in RomManager.TextInfoProfile.AllGroups)
+            foreach (var tgi in RomManager.GetTextProfileInfo().AllGroups)
                 RomManager.LoadTextGroup(tgi.Name);
         }
 
@@ -428,7 +402,6 @@ namespace SM64_ROM_Manager
                 {
                     info.ItemDescriptionsList[tableIndex] = description.Trim();
                     TextItemChanged?.Invoke(new TextItemEventArgs(tableName, tableIndex));
-                    needToSaveCurrentTextProfileInfo = true;
                 }
             }
         }
@@ -492,54 +465,16 @@ namespace SM64_ROM_Manager
             ManyTextItemsChanged?.Invoke();
         }
 
-        public IEnumerable<string> GetAllTextProfileNames()
+        public TextProfileInfo GetDefaultTextProfileInfo()
         {
-            return MyTextProfiles.Manager.GetTextProfiles().Select(n => n.Name);
-        }
-
-        public string GetCurrentTextProfileName()
-        {
-            return GetCurrentTextProfile()?.Name;
-        }
-
-        public void SetCurrentTextProfileName(string name)
-        {
-            var selProf = GetTextProfileInfoByName(name);
-            string newName;
-            if (selProf is null || selProf == MyTextProfiles.Manager.DefaultTextProfileInfo)
-            {
-                newName = string.Empty;
-            }
-            else
-            {
-                newName = selProf.Name;
-            }
-
-            if ((RomManager.RomConfig.SelectedTextProfileInfo ?? "") != (newName ?? ""))
-            {
-                RomManager.RomConfig.SelectedTextProfileInfo = newName;
-            }
-
-            CurrentTextProfileInfoChanged?.Invoke();
-        }
-
-        private TextProfileInfo GetTextProfileInfoByName(string name)
-        {
-            TextProfileInfo prof = null;
-            foreach (TextProfileInfo p in MyTextProfiles.Manager.GetTextProfiles())
-            {
-                if (prof is null && (p.Name ?? "") == (name ?? ""))
-                {
-                    prof = p;
-                }
-            }
-
-            return prof;
+            if (myDefaultTextProfileInfo == null)
+                myDefaultTextProfileInfo  = TextProfileInfo.ReadFromFile(Path.Combine(Publics.General.MyDataPath, @"Text Manager\Profiles.json"));
+            return myDefaultTextProfileInfo;
         }
 
         public bool UsingDefaultTextProfileInfo()
         {
-            return GetCurrentTextProfile() == MyTextProfiles.Manager.DefaultTextProfileInfo;
+            return RomManager.RomConfig.TextProfileInfo == null;
         }
 
         public async Task ExportTextTable(string destFilePath, string tableName)

@@ -160,6 +160,7 @@
     <Compile Include="SM64Lib\Configuration\ScrollTexConfig.cs" />
     <Compile Include="SM64Lib\Data\BinaryFile.cs" />
     <Compile Include="SM64Lib\Data\System\Bits.cs" />
+    <Compile Include="SM64Lib\EventArguments\GetTextProfileInfoEventArgs.cs" />
     <Compile Include="SM64Lib\Exceptions\InvalidMD5HashException.cs" />
     <Compile Include="SM64Lib\FilePathsConfiguration.cs" />
     <Compile Include="SM64Lib\General.cs" />
@@ -309,7 +310,6 @@
     <Compile Include="SM64Lib\Text\Profiles\TextTableSegmentedInfo.cs" />
     <Compile Include="SM64Lib\Text\TextArrayGroup.cs" />
     <Compile Include="SM64Lib\Text\TextArrayItem.cs" />
-    <Compile Include="SM64Lib\Text\TextProfileInfoManager.cs" />
     <Compile Include="SM64Lib\Text\TextTableDialogItem.cs" />
     <Compile Include="SM64Lib\Text\TextTableItem.cs" />
     <Compile Include="SM64Lib\Text\TextTableGroup.cs" />

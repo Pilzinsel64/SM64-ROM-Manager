@@ -148,6 +148,7 @@ namespace SM64_ROM_Manager
                     _RomManager.BeginLoadingMusic -= RomManager_BeginLoadingMusic;
                     _RomManager.AfterMusicLoaded -= RomManager_AfterMusicLoaded;
                     _RomManager.AfterRomLoaded -= RomManager_AfterRomLoaded;
+                    _RomManager.GettingDefaultTextProfileInfo -= _RomManager_GettingDefaultTextProfileInfo;
                 }
 
                 _RomManager = value;
@@ -161,6 +162,7 @@ namespace SM64_ROM_Manager
                     _RomManager.BeginLoadingMusic += RomManager_BeginLoadingMusic;
                     _RomManager.AfterMusicLoaded += RomManager_AfterMusicLoaded;
                     _RomManager.AfterRomLoaded += RomManager_AfterRomLoaded;
+                    _RomManager.GettingDefaultTextProfileInfo += _RomManager_GettingDefaultTextProfileInfo;
                 }
             }
         }
@@ -367,12 +369,16 @@ namespace SM64_ROM_Manager
             loadingROM = false;
         }
 
+        private void _RomManager_GettingDefaultTextProfileInfo(RomManager rommgr, GetTextProfileInfoEventArgs e)
+        {
+            e.ProfileInfo = tmc.GetDefaultTextProfileInfo();
+        }
+
         // P r i v a t e   F e a u t u r e s
 
         private void SetRomMgr(RomManager rommgr)
         {
             RomManager = rommgr;
-            rommgr.TextInfoProfile = TextManagerController.MyTextProfiles.Manager.DefaultTextProfileInfo;
         }
 
         private async Task<bool> CanAccessUpdateServer()
