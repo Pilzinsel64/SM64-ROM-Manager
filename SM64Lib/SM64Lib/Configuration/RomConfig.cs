@@ -33,6 +33,11 @@ namespace SM64Lib.Configuration
         public ObjectBankDataListCollection ObjectBankInfoData { get; } = new ObjectBankDataListCollection();
         public NPCConfig NPCConfig { get; } = new NPCConfig();
 
+        /// <summary>
+        /// Contains custom configuration that isn't used by SM64Lib. E.g. Extra Object Combos.
+        /// </summary>
+        public Dictionary<string, string> CustomConfigs { get; } = new Dictionary<string, string>();
+
         // F e a t u r e s
 
         public LevelConfig GetLevelConfig(ushort levelID)

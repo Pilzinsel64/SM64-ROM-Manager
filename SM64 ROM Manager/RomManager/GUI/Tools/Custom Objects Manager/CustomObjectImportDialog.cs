@@ -26,7 +26,7 @@ namespace SM64_ROM_Manager
 
         public CustomObjectImportDialog(RomManager romManager, Dictionary<string, CustomObjectImport> imports)
         {
-            General.LoadBehaviorInfosIfEmpty();
+            General.LoadBehaviorInfosIfEmpty(romManager);
             this.romManager = romManager;
             this.imports = imports;
             InitializeComponent();

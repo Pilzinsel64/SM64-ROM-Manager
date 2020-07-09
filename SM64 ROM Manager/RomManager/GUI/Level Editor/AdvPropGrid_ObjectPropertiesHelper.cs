@@ -10,12 +10,13 @@ using global::SM64_ROM_Manager.PropertyValueEditors;
 using global::SM64_ROM_Manager.SettingsManager;
 using global::SM64Lib.TextValueConverter;
 using System.Linq;
+using SM64Lib;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
     internal class AdvPropGrid_ObjectPropertiesHelper
     {
-        public AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid advPropGrid, ObjectComboList objComboList, BehaviorInfoList behaviors, string behaviorPropName, string bParamPropName)
+        public AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid advPropGrid, RomManager rommgr, ObjectComboList objComboList, BehaviorInfoList behaviors, string behaviorPropName, string bParamPropName)
         {
             CbEditorBParam1 = null;
             CbEditorBParam2 = null;
@@ -27,8 +28,8 @@ namespace SM64_ROM_Manager.LevelEditor
             myBehaviors = behaviors;
             this.behaviorPropName = behaviorPropName;
             this.bParamPropName = bParamPropName;
-            General.LoadBehaviorInfosIfEmpty();
-            General.LoadObjectCombosIfEmpty();
+            General.LoadBehaviorInfosIfEmpty(rommgr);
+            General.LoadObjectCombosIfEmpty(rommgr);
             LoadComboBoxObjComboEntries(objComboList);
             
             // Add B. Param Editors to Property Grid

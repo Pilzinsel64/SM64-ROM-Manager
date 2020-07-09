@@ -11,8 +11,13 @@ namespace SM64_ROM_Manager.LevelEditor
     {
         public void ReadFromFile(string fileName)
         {
+            ReadFromString(File.ReadAllText(fileName));
+        }
+
+        public void ReadFromString(string content)
+        {
             Clear();
-            var jarr = JArray.Parse(File.ReadAllText(fileName));
+            var jarr = JArray.Parse(content);
             if (jarr is object)
             {
                 foreach (JObject entry in jarr)
@@ -46,6 +51,11 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public void WriteToFile(string fileName)
         {
+            File.WriteAllText(fileName, WriteToString());
+        }
+
+        public string WriteToString()
+        {
             var jarr = new JArray();
             foreach (BehaviorInfo info in this)
             {
@@ -77,7 +87,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 jarr.Add(entry);
             }
 
-            File.WriteAllText(fileName, jarr.ToString());
+            return jarr.ToString();
         }
 
         public BehaviorInfo GetByBehaviorAddress(uint addr)
