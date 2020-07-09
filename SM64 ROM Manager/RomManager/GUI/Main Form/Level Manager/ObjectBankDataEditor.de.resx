@@ -138,9 +138,6 @@
   <data name="ButtonItem_RemoveObj.Text" xml:space="preserve">
     <value>Entfernen</value>
   </data>
-  <data name="buttonX1.Text" xml:space="preserve">
-    <value>Optionen</value>
-  </data>
   <data name="ButtonItem_Export.Text" xml:space="preserve">
     <value>Exportieren ...</value>
   </data>
