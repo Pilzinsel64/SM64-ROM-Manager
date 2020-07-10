@@ -366,6 +366,9 @@ namespace SM64_ROM_Manager.LevelEditor
                 PanelEx1.Style.BackColor1.Color = Color.LightSteelBlue;
                 PanelEx1.Style.BackColor2.Color = Color.LightSteelBlue;
             }
+            RibbonControl1.Size = new Size(
+                RibbonControl1.Size.Width,
+                StyleManager.Style == eStyle.Office2016 ? 155 : 150);
 
             // Set default movement mode
             EnableSlideMovementForObjects = Settings.AreaEditor.EnableSlideMovementByDefaultForObjects;

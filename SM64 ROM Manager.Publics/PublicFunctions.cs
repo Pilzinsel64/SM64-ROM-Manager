@@ -88,7 +88,7 @@ namespace SM64_ROM_Manager.Publics
                 setTheme = Settings.StyleManager.MetroColorParams;
             
             // Set style
-            if (Settings.StyleManager.IsWhiteTheme())
+            if (StyleManagerSettingsStruc.IsWhiteTheme(setTheme.Value))
                 StyleManager.Style = eStyle.Office2016;
             else
                 StyleManager.Style = eStyle.VisualStudio2012Light;
