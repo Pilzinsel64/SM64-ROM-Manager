@@ -88,8 +88,6 @@ namespace SM64Lib.Objects.ObjectBanks
 
         public void Import(CustomObjectImport import)
         {
-            //Dictionary<string, object> oldObjects = new Dictionary<string, object>();
-
             // Decompress import
             DecompressImport(import);
             
