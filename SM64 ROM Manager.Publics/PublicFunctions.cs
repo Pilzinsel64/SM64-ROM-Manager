@@ -86,11 +86,18 @@ namespace SM64_ROM_Manager.Publics
 
             if (setTheme is null)
                 setTheme = Settings.StyleManager.MetroColorParams;
-
-            StyleManager.Style = eStyle.Metro;
+            
+            // Set style
+            if (Settings.StyleManager.IsWhiteTheme())
+                StyleManager.Style = eStyle.Office2016;
+            else
+                StyleManager.Style = eStyle.VisualStudio2012Light;
+            
+            // Set metro color generator parameters
             StyleManager.MetroColorGeneratorParameters = (MetroColorGeneratorParameters)setTheme;
+
             foreach (Form frm in Application.OpenForms)
-                StyleManager.UpdateAmbientColors(frm);
+                frm.UpdateAmbientColors();
         }
 
         private static void RegKeyMonitor_WatchWindowsTheme_RegChanged()
