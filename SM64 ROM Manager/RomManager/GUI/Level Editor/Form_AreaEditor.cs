@@ -2588,45 +2588,6 @@ namespace SM64_ROM_Manager.LevelEditor
             byte found = 0;
             bool foundLevel = false;
 
-            // For Each obj As Managed3DObject In managedObjects
-            // If myWarpObjCombos.Where(Function(n) n.BehaviorID = obj.BehaviorID).Count > 0 _
-            // AndAlso obj.BParam2 = warp.DestWarpID Then
-            // found += 1
-            // End If
-            // If found = 0 Then
-            // Return WarpDestinationValidationResult.WarpSourceNotFound
-            // ElseIf found > 1 Then
-            // Return WarpDestinationValidationResult.WarpSourceUsedMultipleTimes
-            // Else
-            // foundLevel = True
-            // Exit For
-            // End If
-            // Next
-
-            // If found = 0 Then
-            // For Each level As Level In rommgr.Levels
-            // If Not foundLevel AndAlso level IsNot cLevel Then
-            // For Each area As LevelArea In level.Areas
-            // For Each obj As LevelscriptCommand In area.Objects
-            // Dim behavID As Integer = clNormal3DObject.GetSegBehaviorAddr(obj)
-            // If myWarpObjCombos.Where(Function(n) n.BehaviorID = behavID).Count > 0 _
-            // AndAlso clNormal3DObject.GetParams(obj).BParam2 = warp.DestWarpID Then
-            // found += 1
-            // End If
-            // Next
-            // If found = 0 Then
-            // Return WarpDestinationValidationResult.WarpSourceNotFound
-            // ElseIf found > 1 Then
-            // Return WarpDestinationValidationResult.WarpSourceUsedMultipleTimes
-            // Else
-            // foundLevel = True
-            // Exit For
-            // End If
-            // Next
-            // End If
-            // Next
-            // End If
-
             var lvl = Rommgr.Levels.FirstOrDefault(n => n.LevelID == (ushort)warp.DestLevelID);
             if (lvl is object)
             {
@@ -2635,29 +2596,25 @@ namespace SM64_ROM_Manager.LevelEditor
                     if (area.AreaID == warp.DestAreaID)
                     {
                         found = 0;
+
                         foreach (LevelscriptCommand cmd in area.Warps)
                         {
                             if (clWarp.GetWarpID(cmd) == warp.DestWarpID)
-                            {
                                 found += 1;
-                            }
                         }
 
                         if (found == 0)
-                        {
                             return WarpDestinationValidationResult.WarpDestNotFound;
-                        }
                         else if (found == 1)
                         {
                             found = 0;
+
                             if (lvl == CLevel)
                             {
                                 foreach (Managed3DObject obj in ManagedObjects)
                                 {
                                     if (myWarpObjCombos.Where(n => n.BehaviorAddress == obj.BehaviorID).Count() > 0 && obj.BParam2 == warp.DestWarpID)
-                                    {
                                         found += 1;
-                                    }
                                 }
                             }
                             else
@@ -2666,38 +2623,25 @@ namespace SM64_ROM_Manager.LevelEditor
                                 {
                                     int behavID = Conversions.ToInteger(clNormal3DObject.GetSegBehaviorAddr(obj));
                                     if (myWarpObjCombos.Where(n => n.BehaviorAddress == behavID).Count() > 0 && clNormal3DObject.GetParams(obj).BParam2 == warp.DestWarpID)
-                                    {
                                         found += 1;
-                                    }
                                 }
                             }
 
                             if (found == 0)
-                            {
                                 return WarpDestinationValidationResult.WarpDestNotUsed;
-                            }
                             else if (found == 1)
-                            {
                                 return WarpDestinationValidationResult.WarpFoundInCustomLevel;
-                            }
                             else
-                            {
                                 return WarpDestinationValidationResult.WarpDestUsedMultipleTimes;
-                            }
                         }
                         else
-                        {
                             return WarpDestinationValidationResult.DuplicatedWarpIDsAtDestination;
-                        }
                     }
                 }
-
                 return WarpDestinationValidationResult.AreaNotFound;
             }
             else
-            {
                 return WarpDestinationValidationResult.LevelNotFound;
-            }
         }
 
         internal Color GetColorOfWarpDestinationValidationResult(IManagedLevelscriptCommand warp)
@@ -2710,24 +2654,15 @@ namespace SM64_ROM_Manager.LevelEditor
                     case WarpDestinationValidationResult.DuplicatedWarpIDsAtDestination:
                     case WarpDestinationValidationResult.WarpDestUsedMultipleTimes:
                     case WarpDestinationValidationResult.WarpSourceUsedMultipleTimes:
-                        {
-                            return Color.FromArgb(-4754112);
-                        }
-
+                        return Color.FromArgb(-4754112); // Orange
                     case WarpDestinationValidationResult.WarpFoundInCustomLevel:
-                        {
-                            return Color.FromArgb(-9073592);
-                        }
-
+                        return Color.FromArgb(-9073592); // Green
                     case WarpDestinationValidationResult.AreaNotFound:
                     case WarpDestinationValidationResult.WarpDestNotFound:
                     case WarpDestinationValidationResult.WarpDestNotUsed:
-                        {
-                            return Color.FromArgb(-7324615);
-                        }
+                        return Color.FromArgb(-7324615); // Green
                 }
             }
-
             return default;
         }
 
