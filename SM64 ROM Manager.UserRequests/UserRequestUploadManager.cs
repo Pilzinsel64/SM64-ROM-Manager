@@ -20,7 +20,8 @@ namespace SM64_ROM_Manager.UserRequests
             return new WebDavClientParams()
             {
                 BaseAddress = new Uri(crypter.DecryptData(settings.Link)),
-                Credentials = new NetworkCredential(crypter.DecryptData(settings.Username), crypter.DecryptData(settings.Password))
+                Credentials = new NetworkCredential(crypter.DecryptData(settings.Username), crypter.DecryptData(settings.Password)),
+                UseProxy = false,
             };
         }
 

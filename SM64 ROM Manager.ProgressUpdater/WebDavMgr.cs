@@ -41,7 +41,8 @@ namespace SM64_ROM_Manager.ProgressUpdater
                     var clientparams = new WebDavClientParams()
                     {
                         BaseAddress = new Uri(settings.WebDavUri),
-                        Credentials = new NetworkCredential(settings.WebDavUsr.Trim(), settings.WebDavPwd)
+                        Credentials = new NetworkCredential(settings.WebDavUsr.Trim(), settings.WebDavPwd),
+                        UseProxy = false
                     };
                     
                     // Create client

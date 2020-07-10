@@ -30,7 +30,8 @@ namespace SM64_ROM_Manager.PatchScripts
                 var @params = new WebDavClientParams()
                 {
                     BaseAddress = new Uri(login.Link),
-                    Credentials = new NetworkCredential(login.Username, login.Password)
+                    Credentials = new NetworkCredential(login.Username, login.Password),
+                    UseProxy = false
                 };
                 dicClients.Add(t, new WebDavClient(@params));
             }

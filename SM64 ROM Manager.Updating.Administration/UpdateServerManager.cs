@@ -42,6 +42,7 @@ namespace SM64_ROM_Manager.Updating.Administration
                 {
                     BaseAddress = new Uri(config.ServerAdress),
                     Credentials = new NetworkCredential(config.Username, config.Password),
+                    UseProxy = false
                 };
 
                 // Create client
