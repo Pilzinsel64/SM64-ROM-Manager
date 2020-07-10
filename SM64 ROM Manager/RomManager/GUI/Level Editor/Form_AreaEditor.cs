@@ -342,6 +342,9 @@ namespace SM64_ROM_Manager.LevelEditor
                 PanelEx1.Style.BackColor1.Color = Color.LightSteelBlue;
                 PanelEx1.Style.BackColor2.Color = Color.LightSteelBlue;
             }
+            RibbonControl1.Size = new Size(
+                RibbonControl1.Size.Width,
+                StyleManager.Style == eStyle.Office2016 ? 155 : 150);
 
             // Add Groups to ListView Controls
             ListViewEx_Warps.Groups.AddRange(new[] { lvg_ConnectedWarps, lvg_WarpsForGame, lvg_PaintingWarps, lvg_InstantWarps });
