@@ -52,7 +52,7 @@ namespace SM64_ROM_Manager.SettingsManager
         {
             get
             {
-                return new MetroColorGeneratorParameters(ColorScheme.GetColor("c0c0c0"), ColorScheme.GetColor("662D62"), "Gray");
+                return new MetroColorGeneratorParameters(ColorScheme.GetColor("EFEFF2"), ColorScheme.GetColor("662D62"), "Gray");
             }
         }
 

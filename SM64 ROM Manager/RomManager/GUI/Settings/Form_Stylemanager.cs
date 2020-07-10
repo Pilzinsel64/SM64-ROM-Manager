@@ -73,11 +73,6 @@ namespace SM64_ROM_Manager
             Settings.StyleManager.MetroColorParams = newTheme;
             Settings.StyleManager.UseSystemTheme = CheckBoxX1.Checked;
             Publics.Publics.SetVisualTheme();
-            foreach (Form frm in Application.OpenForms)
-            {
-                frm.UpdateAmbientColors();
-                frm.Refresh();
-            }
         }
 
         private void CheckBoxX_KeepEditorControlBarBlue_CheckedChanged(object sender, EventArgs e)
