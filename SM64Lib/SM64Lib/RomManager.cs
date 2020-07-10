@@ -814,9 +814,15 @@ namespace SM64Lib
             rom.Close();
         }
 
-        public void LoadGlobalBehaviorBank()
+        public void LoadGlobalBehaviorBank(bool enableAndLoadIfDisabled = false)
         {
             GlobalBehaviorBank = new BehaviorBank(RomConfig.GlobalBehaviorBank);
+
+            if (!GlobalBehaviorBank.Config.Enabled && enableAndLoadIfDisabled)
+            {
+                RomConfig.GlobalBehaviorBank.Enable();
+                LoadGlobalBehaviorBank();
+            }
 
             if (GlobalBehaviorBank.Config.Enabled)
             {

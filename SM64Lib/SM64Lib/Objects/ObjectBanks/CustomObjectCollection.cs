@@ -95,41 +95,44 @@ namespace SM64Lib.Objects.ObjectBanks
             
             foreach (var cobj in import.Data.CustomObjects)
             {
-                // Add Custom Model
-                if (cobj.BehaviorProps.Behavior is object)
+                if (!import.IgnoreCustomObjects.Contains(cobj))
                 {
-                    if (cobj.BehaviorProps.Behavior.IsVanilla)
+                    // Add Custom Model
+                    if (cobj.BehaviorProps.Behavior is object)
                     {
-                        var behav = import.DestBehaviorBank.GetBehaviorByBankAddress(cobj.BehaviorProps.BehaviorAddress);
-                        cobj.BehaviorProps.Behavior = behav.Config;
-                    }
-                    else if (import.Data.Behaviors.ContainsKey(cobj.BehaviorProps.Behavior))
-                    {
-                        var behav = import.Data.Behaviors[cobj.BehaviorProps.Behavior];
-                        //var behavExist = import.DestBehaviorBank.GetBehaviorByID(cobj.BehaviorProps.Behavior.ID);
+                        if (cobj.BehaviorProps.Behavior.IsVanilla)
+                        {
+                            var behav = import.DestBehaviorBank.GetBehaviorByBankAddress(cobj.BehaviorProps.BehaviorAddress);
+                            cobj.BehaviorProps.Behavior = behav.Config;
+                        }
+                        else if (import.Data.Behaviors.ContainsKey(cobj.BehaviorProps.Behavior))
+                        {
+                            var behav = import.Data.Behaviors[cobj.BehaviorProps.Behavior];
+                            //var behavExist = import.DestBehaviorBank.GetBehaviorByID(cobj.BehaviorProps.Behavior.ID);
 
-                        //if (import.OverwriteExistingObjecs && behavExist is object)
-                        //    behav.CopyPropertiesTo(behavExist);
-                        //else
+                            //if (import.OverwriteExistingObjecs && behavExist is object)
+                            //    behav.CopyPropertiesTo(behavExist);
+                            //else
                             import.DestBehaviorBank.Behaviors.Add(behav);
 
-                        if (behav.Config.CustomAsmLinks.Any())
-                            import.DestCustomAsmBank.Areas.AddRangeIfNotContains(behav.Config.CustomAsmLinks.Select(n => n.CustomAsm).ToArray());
+                            if (behav.Config.CustomAsmLinks.Any())
+                                import.DestCustomAsmBank.Areas.AddRangeIfNotContains(behav.Config.CustomAsmLinks.Select(n => n.CustomAsm).ToArray());
 
-                        behav.ParseScript();
+                            behav.ParseScript();
+                        }
+                        cobj.BehaviorProps.BehaviorAddress = -1;
                     }
-                    cobj.BehaviorProps.BehaviorAddress = -1;
-                }
 
-                // Add Custom Behavior
-                if (cobj.ModelProps.Model is object && import.Data.CustomModels.ContainsKey(cobj.ModelProps.Model) && import.DestModelBanks.ContainsKey(cobj.ModelProps.Model))
-                {
-                    var destModelBank = import.DestModelBanks[cobj.ModelProps.Model];
-                    destModelBank.Models.Add(import.Data.CustomModels[cobj.ModelProps.Model]);
-                    destModelBank.NeedToSave = true;
+                    // Add Custom Behavior
+                    if (cobj.ModelProps.Model is object && import.Data.CustomModels.ContainsKey(cobj.ModelProps.Model) && import.DestModelBanks.ContainsKey(cobj.ModelProps.Model))
+                    {
+                        var destModelBank = import.DestModelBanks[cobj.ModelProps.Model];
+                        destModelBank.Models.Add(import.Data.CustomModels[cobj.ModelProps.Model]);
+                        destModelBank.NeedToSave = true;
 
-                    // Add Custom Object
-                    CustomObjects.Add(cobj);
+                        // Add Custom Object
+                        CustomObjects.Add(cobj);
+                    }
                 }
             }
         }

@@ -814,10 +814,7 @@ namespace SM64_ROM_Manager
         public void EnableGlobalBehaviorBank()
         {
             if (RomManager is object)
-            {
-                RomManager.RomConfig.GlobalBehaviorBank.Enable();
-                RomManager.LoadGlobalBehaviorBank();
-            }
+                RomManager.LoadGlobalBehaviorBank(true);
         }
 
         public bool HasRomLoaded()
