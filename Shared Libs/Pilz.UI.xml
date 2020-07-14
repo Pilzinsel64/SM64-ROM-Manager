@@ -1,0 +1,140 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Pilz.UI
+</name>
+</assembly>
+<members>
+<member name="T:Pilz.UI.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:Pilz.UI.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:Pilz.UI.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="T:Pilz.UI.DefaultDrawMethodes">
+ <summary>
+ Contains static methods that are used for the standart PaintingObject Types.
+ </summary>
+</member>
+<member name="P:Pilz.UI.PaintingObjectPaintEventArgs.PaintingObject">
+ <summary>
+ The Painting Object to draw.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.UI.PaintingObjectPaintEventArgs.Offset">
+ <summary>
+ The current offset of the page on the screen.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.UI.PaintingObjectPaintEventArgs.Graphics">
+ <summary>
+ The Grpahics from the parent PaintingControl.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.UI.PaintingObjectPaintEventArgs.Location">
+ <summary>
+ The position of the PaintingObject on Screen.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.UI.PaintingObjectPaintEventArgs.X">
+ <summary>
+ The X position of the PaintingObject on Screen.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.UI.PaintingObjectPaintEventArgs.Y">
+ <summary>
+ The Y position of the PaintingObject on Screen.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.UI.PaintingObjectPaintEventArgs.Rectangle">
+ <summary>
+ The rectangle of the PaintingObject on Screen.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.UI.PaintingObjectLayering.ObjectList">
+ <summary>
+ Get the current object list from the painting object.
+ </summary>
+ <returns>Returns the current object list from the painting object.</returns>
+</member>
+<member name="M:Pilz.UI.PaintingObjectLayering.#ctor(Pilz.UI.PaintingObject)">
+ <summary>
+ Create a new instance of object layer managing.
+ </summary>
+ <param name="obj"></param>
+</member>
+<member name="M:Pilz.UI.PaintingObjectLayering.MoveObject(System.Int32)">
+ <summary>
+ Moves the object by the given number of indicies.
+ </summary>
+ <param name="count">The number how many objects it should be moved.</param>
+</member>
+<member name="M:Pilz.UI.PaintingObjectLayering.MoveObjectTo(System.Int32)">
+ <summary>
+ Moves the object to the new index.
+ </summary>
+ <param name="newIndex"></param>
+</member>
+<member name="M:Pilz.UI.PaintingObjectLayering.BringToTop">
+ <summary>
+ Moves the object to the front.
+ </summary>
+</member>
+<member name="M:Pilz.UI.PaintingObjectLayering.SendToBack">
+ <summary>
+ Moves the object to the back.
+ </summary>
+</member>
+<member name="M:Pilz.UI.PaintingObjectLayering.OneToTop">
+ <summary>
+ Moves the object fordward by one 
+ </summary>
+</member>
+<member name="M:Pilz.UI.PaintingObjectLayering.OneToBack">
+ <summary>
+ Moves the object backward by one
+ </summary>
+</member>
+<member name="P:Pilz.UI.PaintingObjectListLayering.EnableConditions">
+ <summary>
+ Get the order function will checkout the conditions.
+ </summary>
+ <returns>Returns true, if conditions are aviable, otherwise false.</returns>
+</member>
+<member name="M:Pilz.UI.PaintingObjectListLayering.#ctor(Pilz.UI.PaintingObjectList)">
+ <summary>
+ Create a new instance of object list layer managing.
+ </summary>
+ <param name="list"></param>
+</member>
+<member name="M:Pilz.UI.PaintingObjectListLayering.OrderAll">
+ <summary>
+ Order all objects using the conditions. If no conditions are setted, this method will do nothing.
+ </summary>
+</member>
+<member name="M:Pilz.UI.PaintingControl.WndProc(System.Windows.Forms.Message@)">
+ <summary>
+ Sorg dafür, dass Events durch dieses Control durchdringen zum Parnet-Control.
+ </summary>
+ <param name="m"></param>
+</member>
+</members>
+</doc>

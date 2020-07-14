@@ -1,0 +1,206 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Pilz.Reflection.PluginSystem
+</name>
+</assembly>
+<members>
+<member name="T:Pilz.Reflection.PluginSystem.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.Attributes.PluginFunctionAttribute.#ctor(System.String,System.Object[])">
+ <summary/>
+ <param name="funcCode">The function code for this PluginFunction.</param>
+ <param name="params">The parameters for this PluginFunction.</param>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.Plugin.MainFunctions">
+ <summary>
+ A collection of Methods that contains PluginFunctions that will be called automatically when loading the Plugin, as long as the property AutoCallMainFunctions is set to True.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.Plugin.PluginFunctions">
+ <summary>
+ A collection of Methods with a FunctionCode (excluding all PluginFunctions from MainFunctions).
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.Plugin.Assembly">
+ <summary>
+ Gets the assembly that contains the PluginFunctions of this Plugin
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.Plugin.MainModule">
+ <summary>
+ Gets the main module that contains the PluginFunctions of this Plugin
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.Plugin.#ctor(System.String,System.Boolean,System.String)">
+ <summary>
+ Load a new Plugin and its PluginFunctions.
+ </summary>
+ <param name="filePath"></param>
+ <param name="autoCallMainFunction">If true, all MainMethods of a Plugin will be called as soon as a Plugin is loaded.</param>
+ <param name="entryTypeName">The name of the type where to search for Methods when loading a new Plugin.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.Plugin.GetFunctions(System.String[])">
+ <summary>
+ Get all PluginFunctions that have one of the given function codes.
+ </summary>
+ <param name="funcCodes"></param>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.Plugin.GetFunction(System.String[])">
+ <summary>
+ Get the first PluginFunction that have the one of the given function codes.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.PluginFunction.Method">
+ <summary>
+ Gets the method to invoke when invoking this PluginFunction.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.PluginFunction.Plugin">
+ <summary>
+ Gets the refered Plugin for this PluginFunction, if it has one.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.PluginFunction.Params">
+ <summary>
+ Gets the Parameters that was given by the attribute.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.PluginFunction.FunctionCode">
+ <summary>
+ Gets the function code for this PluginFunction.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginFunction.#ctor(System.Reflection.MethodInfo,Pilz.Reflection.PluginSystem.Plugin)">
+ <summary>
+ Creates a new instance of a PluginFunction.
+ </summary>
+ <param name="method">The Method to invoke when invoking this PluginFunction.</param>
+ <param name="plugin">The Plugin that is the Parent of this PluginFunction. This value can be NULL.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginFunction.#ctor(System.Reflection.MethodInfo,Pilz.Reflection.PluginSystem.Plugin,System.Object[],System.String)">
+ <summary>
+ Creates a new instance of a PluginFunction.
+ </summary>
+ <param name="method">The Method to invoke when invoking this PluginFunction..</param>
+ <param name="plugin">The Plugin that is the Parent of this PluginFunction. This value can be NULL.</param>
+ <param name="params">The Parameters that was given by the attribute.</param>
+ <param name="funcCode">The function code for this PluginFunction.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginFunction.Invoke">
+ <summary>
+ Invokes the Method of the PluginFunction.
+ </summary>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginFunction.Invoke(System.Object[])">
+ <summary>
+ Invokes the Method of the PluginFunction.
+ </summary>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginFunction.InvokeGet(System.Object[])">
+ <summary>
+ Invokes the Method of the PluginFunction and returns the return value.
+ </summary>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.PluginManager.EntryTypeName">
+ <summary>
+ The name of the type where to search for Methods when loading a new Plugin.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.PluginManager.AutoCallMainFunctions">
+ <summary>
+ If true, all MainMethods of a Plugin will be called as soon as a Plugin is loaded.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Reflection.PluginSystem.PluginManager.Plugins">
+ <summary>
+ A collection of all loaded Plugins.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginManager.LoadPlugins(System.String)">
+ <summary>
+ Loads Plugins that can be found at the given path and adds them to the Plugins-List.
+ </summary>
+ <param name="pluginPath">The path where to search for Plugins to load.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginManager.LoadPlugins(System.String,System.Boolean)">
+ <summary>
+ Loads Plugins that can be found at the given path and adds them to the Plugins-List.
+ </summary>
+ <param name="pluginPath">The path where to search for Plugins to load.</param>
+ <param name="addToList">If true, the Plugins will be added to Plugins-List after loading.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginManager.LoadPlugins(System.String,System.Boolean,System.Boolean,System.String)">
+ <summary>
+ Loads Plugins that can be found at the given path and adds them to the Plugins-List.
+ </summary>
+ <param name="pluginPath">The path where to search for Plugins to load.</param>
+ <param name="addToList">If true, the Plugins will be added to Plugins-List after loading.</param>
+ <param name="autoCallMainFunction">If true, all MainMethods of a Plugin will be called as soon as a Plugin is loaded.</param>
+ <param name="entryTypeName">The name of the type where to search for Methods when loading a new Plugin.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginManager.LoadPlugin(System.String,System.Boolean)">
+ <summary>
+ Loads a Plugin and adds it to the Plugins-List.
+ </summary>
+ <param name="filePath">The path to the plugin to load.</param>
+ <param name="addToList">If true, the Plugin will be added to Plugins-List after loading.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginManager.LoadPlugin(System.String,System.Boolean,System.Boolean,System.String)">
+ <summary>
+ Loads a Plugin and adds it to the Plugins-List.
+ </summary>
+ <param name="filePath">The path to the plugin to load.</param>
+ <param name="addToList">If true, the Plugin will be added to Plugins-List after loading.</param>
+ <param name="autoCallMainFunction">If true, all MainMethods of a Plugin will be called as soon as a Plugin is loaded.</param>
+ <param name="entryTypeName">The name of the type where to search for Methods when loading a new Plugin.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginManager.LoadPlugin(System.String)">
+ <summary>
+ Loads a Plugin and adds it to the Plugins-List.
+ </summary>
+ <param name="filePath">The path to the plugin to load.</param>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginManager.GetFunctions(System.String[])">
+ <summary>
+ Get all PluginFunctions that have one of the given function codes.
+ </summary>
+ <param name="funcCodes"></param>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Reflection.PluginSystem.PluginManager.GetFunction(System.String[])">
+ <summary>
+ Get the first PluginFunction that have the one of the given function codes.
+ </summary>
+ <returns></returns>
+</member>
+</members>
+</doc>

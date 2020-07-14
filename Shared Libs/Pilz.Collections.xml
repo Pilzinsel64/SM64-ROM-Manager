@@ -1,0 +1,584 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Pilz.Collections
+</name>
+</assembly>
+<members>
+<member name="T:Pilz.Collections.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:Pilz.Collections.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:Pilz.Collections.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="T:Pilz.Collections.SimpleHistory.ObjectValueType">
+ <summary>
+ Specify which member types you would include.
+ </summary>
+</member>
+<member name="T:Pilz.Collections.SimpleHistory.HistoryPoint">
+ <summary>
+ Represent some Object States and Actions.
+ </summary>
+</member>
+<member name="P:Pilz.Collections.SimpleHistory.HistoryPoint.Name">
+ <summary>
+ Represents the Name of this History Point
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Collections.SimpleHistory.HistoryPoint.Entries">
+ <summary>
+ A List of Object States and Actions.
+ </summary>
+ <returns></returns>
+</member>
+<member name="F:Pilz.Collections.SimpleHistory.HistoryPoint.Tag">
+ <summary>
+ Some data can be refered on this HistoryPoint. Don't know, in some situations this can be helpful.
+ </summary>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.MemberWhiteList)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="whiteList">Specify which members to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.MemberBlackList)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="blackList">Specify which members to exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="memberName">The member names to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],System.Boolean,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="isWhiteList">If true, the memberName-Array has member names that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="memberName">The member names to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,System.Boolean,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="isWhiteList">If true, the memberName-Array has member names that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],System.Reflection.BindingFlags,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <param name="memberName">The member names to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],System.Reflection.BindingFlags,System.Boolean,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <param name="isWhiteList">If true, the memberName-Array has member names that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,System.Reflection.BindingFlags,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <param name="memberName">The member names to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,System.Reflection.BindingFlags,System.Boolean,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <param name="isWhiteList">If true, the memberName-Array has member names that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.MemberWhiteList)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="whiteList">Specify which members to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.MemberBlackList)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="blackList">Specify which members to exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,System.Boolean,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="isWhiteList">If true, the memberName-Array has member names that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="memberName">The member names to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,System.Boolean,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="isWhiteList">If true, the memberName-Array has member names that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,System.Reflection.BindingFlags,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <param name="memberName">The member names to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,System.Reflection.BindingFlags,System.Boolean,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <param name="isWhiteList">If true, the memberName-Array has member names that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,System.Reflection.BindingFlags,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <param name="memberName">The member names to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,System.Reflection.BindingFlags,System.Boolean,System.String[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <param name="isWhiteList">If true, the memberName-Array has member names that should be included.</param>
+ <param name="memberName">The member names to include/exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,Pilz.Collections.SimpleHistory.MemberWhiteList)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="whiteList">Specify which members to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,Pilz.Collections.SimpleHistory.MemberBlackList)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="blackList">Specify which members to exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,Pilz.Collections.SimpleHistory.MemberWhiteList,System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="whiteList">Specify which members to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object,Pilz.Collections.SimpleHistory.ObjectValueType,Pilz.Collections.SimpleHistory.MemberBlackList,System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="obj">The object that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="blackList">Specify which members to exclude.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[])">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,Pilz.Collections.SimpleHistory.MemberWhiteList)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="whiteList">Specify which members to include.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,Pilz.Collections.SimpleHistory.MemberBlackList)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="blackList">Specify which members to exclude.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,Pilz.Collections.SimpleHistory.MemberWhiteList,System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="whiteList">Specify which members to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,Pilz.Collections.SimpleHistory.MemberBlackList,System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="blackList">Specify which members to exclude.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.FromObject(System.Object[],Pilz.Collections.SimpleHistory.ObjectValueType,System.Object,System.Reflection.BindingFlags)">
+ <summary>
+ Creates an History Point with Object States automaticly from input.
+ </summary>
+ <param name="objs">The objects that should be included.</param>
+ <param name="membersToStore">Specify what member types to include.</param>
+ <param name="whiteOrBlackList">Specify which members to include.</param>
+ <param name="flags">The Binding Flags that the members should have.</param>
+ <returns>A History Point with Object States.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.Concat(Pilz.Collections.SimpleHistory.HistoryPoint[])">
+ <summary>
+ Combines some History Points to one.
+ </summary>
+ <param name="hps">An array of History Points to combine.</param>
+ <returns>One History Point that contains all Data of inputted History Points.</returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryPoint.Concat(System.String,Pilz.Collections.SimpleHistory.HistoryPoint[])">
+ <summary>
+ Combines some History Points to one.
+ </summary>
+ <param name="hps">An array of History Points to combine.</param>
+ <returns>One History Point that contains all Data of inputted History Points.</returns>
+</member>
+<member name="T:Pilz.Collections.SimpleHistory.MemberWhiteList">
+ <summary>
+ List contianing member names to include.
+ </summary>
+</member>
+<member name="T:Pilz.Collections.SimpleHistory.MemberBlackList">
+ <summary>
+ List contianing member names to exclude
+ </summary>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.String,System.String)">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodNameUndo">The name of the methode to call on Undo.</param>
+ <param name="methodNameRedo">The name of the methode to call on Redo.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.String,System.String,System.Object[],System.Object[])">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodNameUndo">The name of the methode to call on Undo.</param>
+ <param name="methodNameRedo">The name of the methode to call on Redo.</param>
+ <param name="paramsUndo">The parameters for calling the methode on Undo.</param>
+ <param name="paramsRedo">The parameters for calling the methode on Redo.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.String,System.String,System.Object[],System.Object[],System.Reflection.BindingFlags,System.Reflection.BindingFlags)">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodNameUndo">The name of the methode to call on Undo.</param>
+ <param name="methodNameRedo">The name of the methode to call on Redo.</param>
+ <param name="paramsUndo">The parameters for calling the methode on Undo.</param>
+ <param name="paramsRedo">The parameters for calling the methode on Redo.</param>
+ <param name="methodFlagsUndo">The Binding Flags of Methode on Undo.</param>
+ <param name="methodFlagsRedo">The Binding Flags of Methode on Redo.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.String,System.String,System.Reflection.BindingFlags,System.Reflection.BindingFlags)">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodNameUndo">The name of the methode to call on Undo.</param>
+ <param name="methodNameRedo">The name of the methode to call on Redo.</param>
+ <param name="methodFlagsUndo">The Binding Flags of Methode on Undo.</param>
+ <param name="methodFlagsRedo">The Binding Flags of Methode on Redo.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.Reflection.MethodInfo,System.Reflection.MethodInfo)">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodUndo">The MethodInfo of the methode to call on Undo.</param>
+ <param name="methodRedo">The MethodInfo of the methode to call on Redo.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.Reflection.MethodInfo,System.Reflection.MethodInfo,System.Object[],System.Object[])">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodUndo">The MethodInfo of the methode to call on Undo.</param>
+ <param name="methodRedo">The MethodInfo of the methode to call on Redo.</param>
+ <param name="paramsUndo">The parameters for calling the methode on Undo.</param>
+ <param name="paramsRedo">The parameters for calling the methode on Redo.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.Delegate,System.Delegate)">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodUndo">The Delegate of the methode to call on Undo.</param>
+ <param name="methodRedo">The Delegate of the methode to call on Redo.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.Delegate,System.Delegate,System.Object[],System.Object[])">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodUndo">The Delegate of the methode to call on Undo.</param>
+ <param name="methodRedo">The Delegate of the methode to call on Redo.</param>
+ <param name="paramsUndo">The parameters for calling the methode on Undo.</param>
+ <param name="paramsRedo">The parameters for calling the methode on Redo.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectAction.#ctor(System.Object,System.Action,System.Action)">
+ <summary>
+ Creates a new Instance of Object Action.
+ </summary>
+ <param name="obj">The Objects that contains the methodes to call.</param>
+ <param name="methodUndo">The Action of the methode to call on Undo.</param>
+ <param name="methodRedo">The Action of the methode to call on Redo.</param>
+</member>
+<member name="P:Pilz.Collections.SimpleHistory.ObjectState.Object">
+ <summary>
+ The Object including the members to patch.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Collections.SimpleHistory.ObjectState.MemberName">
+ <summary>
+ The name of the Member to patch.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Collections.SimpleHistory.ObjectState.ValueToPatch">
+ <summary>
+ The Value that should be patched.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Collections.SimpleHistory.ObjectState.MemberType">
+ <summary>
+ The member types to include at searching for the member.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:Pilz.Collections.SimpleHistory.ObjectState.MemberFlags">
+ <summary>
+ The Binding Flags that are used at searching for the member.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectState.#ctor(System.Object,System.String,System.Object,Pilz.Collections.SimpleHistory.ObjectValueType)">
+ <summary>
+ Creates a new Instance of ObjectState from input.
+ </summary>
+ <param name="obj">The Object including the members to patch.</param>
+ <param name="valname">The name of the Member to patch.</param>
+ <param name="valToPatch">The member types to include at searching for the member.</param>
+ <param name="valtype">The Binding Flags that are used at searching for the member.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.ObjectState.#ctor">
+ <summary>
+ Creates a new Instance of ObjectState.
+ </summary>
+</member>
+<member name="P:Pilz.Collections.SimpleHistory.HistoryStack.ChangesCount">
+ <summary>
+ Gets the count of history points.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryStack.HasChanges">
+ <summary>
+ Checks if the History has past changes.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryStack.Undo">
+ <summary>
+ Patch Object States and call Undo Actions.
+ </summary>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryStack.Redo">
+ <summary>
+ Patch Object States and call Redo Actions.
+ </summary>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryStack.Clear">
+ <summary>
+ Clear the History.
+ </summary>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryStack.Store(Pilz.Collections.SimpleHistory.HistoryPoint,System.String)">
+ <summary>
+ Store a History Point.
+ </summary>
+ <param name="point">The History Point to add to the past changes.</param>
+ <param name="newName">The name to set for the History Point.</param>
+</member>
+<member name="M:Pilz.Collections.SimpleHistory.HistoryStack.Store(Pilz.Collections.SimpleHistory.HistoryPoint)">
+ <summary>
+ Store a History Point.
+ </summary>
+ <param name="point">The History Point to add to the past changes.</param>
+</member>
+</members>
+</doc>

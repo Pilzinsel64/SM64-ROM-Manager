@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pilz.Cryptography;
+using Pilz.Json.Converters;
 
 namespace SM64Lib.ASM
 {
     public class CustomAsmAreaConfig
     {
-        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<CustomAsmAreaConfig>))]
+        [JsonConverter(typeof(UniquiIDStringJsonConverter<CustomAsmAreaConfig>))]
         public UniquieID<CustomAsmAreaConfig> ID { get; set; } = new UniquieID<CustomAsmAreaConfig>();
         public string Name { get; set; }
         [JsonProperty]

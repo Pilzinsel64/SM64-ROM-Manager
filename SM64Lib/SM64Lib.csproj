@@ -68,6 +68,9 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Pilz.Cryptography">
+      <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="Pilz.IO">
       <HintPath>..\Shared Libs\Pilz.IO.dll</HintPath>
     </Reference>
@@ -178,7 +181,6 @@
     <Compile Include="SM64Lib\Json\ArrayReferencePreservngConverter.cs" />
     <Compile Include="SM64Lib\Json\ComplexDictionarJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\BaseCommandJsonConverter.cs" />
-    <Compile Include="SM64Lib\Json\UniquiIDStringJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\GeolayoutscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\BehaviorscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\Fast3DBufferJsonConverter.cs" />
@@ -319,7 +321,6 @@
     <Compile Include="SM64Lib\Trajectories\Trajectories.cs" />
     <Compile Include="SM64Lib\Trajectories\Trajectory.cs" />
     <Compile Include="SM64Lib\Trajectories\TrajectoryName.cs" />
-    <Compile Include="SM64Lib\UniquieID.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

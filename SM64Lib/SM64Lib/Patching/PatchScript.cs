@@ -5,6 +5,8 @@ using global::System.Collections.Specialized;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Pilz.IO;
+using Pilz.Cryptography;
+using Pilz.Json.Converters;
 
 namespace SM64Lib.Patching
 {
@@ -59,7 +61,7 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Defines an uniquie ID to identify this tweak (e.g. for undo patch).
         /// </summary>
-        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<PatchProfile>))]
+        [JsonConverter(typeof(UniquiIDStringJsonConverter<PatchProfile>))]
         public UniquieID<PatchProfile> ID { get; set; } = new UniquieID<PatchProfile>();
     }
 
@@ -97,7 +99,7 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Defines an uniquie ID to identify this script (e.g. for undo patch).
         /// </summary>
-        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<PatchScript>))]
+        [JsonConverter(typeof(UniquiIDStringJsonConverter<PatchScript>))]
         public UniquieID<PatchScript> ID { get; set; } = new UniquieID<PatchScript>();
     }
 
