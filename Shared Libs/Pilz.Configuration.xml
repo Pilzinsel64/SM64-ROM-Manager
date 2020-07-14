@@ -1,0 +1,152 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Pilz.Configuration
+</name>
+</assembly>
+<members>
+<member name="T:Pilz.Configuration.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:Pilz.Configuration.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:Pilz.Configuration.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.WriteToString(Pilz.Configuration.SimpleConfiguration)">
+ <summary>
+ Writes the given instance to a string and return it.
+ </summary>
+ <param name="instance">The configuration instance that should be serialized.</param>
+ <returns>The content of the configuration instance as string.</returns>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.WriteToStream(Pilz.Configuration.SimpleConfiguration,System.IO.Stream)">
+ <summary>
+ Write the given instance to a given stream.
+ </summary>
+ <param name="instance">The configuration instance that should be serialized.</param>
+ <param name="stream">The stream where the content should be written to.</param>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.WriteToFile(Pilz.Configuration.SimpleConfiguration,System.String)">
+ <summary>
+ Writes the given instance to the given filePath as text file.
+ </summary>
+ <param name="instance">The configuration instance that should be serialized.</param>
+ <param name="filePath">The file path where the content should be written to. The file will be created or overwritten.</param>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.ReadFromString``1(System.String)">
+ <summary>
+ Reads a configuratin from the given string and returns an instance of it.
+ </summary>
+ <typeparam name="T">The type of the configuration class to instance.</typeparam>
+ <param name="content">The content of the configuration as string.</param>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.ReadFromString(Pilz.Configuration.SimpleConfiguration,System.String)">
+ <summary>
+ Read a configuration from the given string and put them to the given instance.
+ </summary>
+ <param name="instance">The instance to populate with the configuration.</param>
+ <param name="content">The content of the configuration as string.</param>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.ReadFromStream``1(System.IO.Stream)">
+ <summary>
+ Reads a configuratin from the given string and returns an instance of it.
+ </summary>
+ <typeparam name="T">The type of the configuration class to instance.</typeparam>
+ <param name="stream">The stream with the content of the configuration.</param>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.ReadFromStream(Pilz.Configuration.SimpleConfiguration,System.IO.Stream)">
+ <summary>
+ Read a configuration from the given string and put them to the given instance.
+ </summary>
+ <param name="instance">The instance to populate with the configuration.</param>
+ <param name="stream">The stream with the content of the configuration.</param>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.ReadFromFile``1(System.String)">
+ <summary>
+ Reads a configuratin from the given string and returns an instance of it.
+ </summary>
+ <typeparam name="T">The type of the configuration class to instance.</typeparam>
+ <param name="filePath">The path to the file with the content of the configuration.</param>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Configuration.ConfigurationSerializer.ReadFromFile(Pilz.Configuration.SimpleConfiguration,System.String)">
+ <summary>
+ Read a configuration from the given string and put them to the given instance.
+ </summary>
+ <param name="instance">The instance to populate with the configuration.</param>
+ <param name="filePath">The path to the file with the content of the configuration.</param>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.WriteToString">
+ <summary>
+ Writes this instance to a string and return it.
+ </summary>
+ <returns>The content of the configuration instance as string.</returns>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.WriteToStream(System.IO.Stream)">
+ <summary>
+ Write this instance to a given stream.
+ </summary>
+ <param name="stream">The stream where the content should be written to.</param>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.WriteToFile(System.String)">
+ <summary>
+ Writes this instance to the given filePath as text file.
+ </summary>
+ <param name="filePath">The file path where the content should be written to. The file will be created or overwritten.</param>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.ReadFromString``1(System.String)">
+ <summary>
+ Reads a configuratin from the given string and returns an instance of it.
+ </summary>
+ <typeparam name="T">The type of the configuration class to instance.</typeparam>
+ <param name="content">The content of the configuration as string.</param>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.ReadFromString(System.String)">
+ <summary>
+ Read a configuration from the given string and put them to this instance.
+ </summary>
+ <param name="content">The content of the configuration as string.</param>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.ReadFromStream``1(System.IO.Stream)">
+ <summary>
+ Reads a configuratin from the given string and returns an instance of it.
+ </summary>
+ <typeparam name="T">The type of the configuration class to instance.</typeparam>
+ <param name="stream">The stream with the content of the configuration.</param>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.ReadFromStream(System.IO.Stream)">
+ <summary>
+ Read a configuration from the given string and put them to this instance.
+ </summary>
+ <param name="stream">The stream with the content of the configuration.</param>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.ReadFromFile``1(System.String)">
+ <summary>
+ Reads a configuratin from the given string and returns an instance of it.
+ </summary>
+ <typeparam name="T">The type of the configuration class to instance.</typeparam>
+ <param name="filePath">The path to the file with the content of the configuration.</param>
+ <returns></returns>
+</member>
+<member name="M:Pilz.Configuration.SimpleConfiguration.ReadFromFile(System.String)">
+ <summary>
+ Read a configuration from the given string and put them to this instance.
+ </summary>
+ <param name="filePath">The path to the file with the content of the configuration.</param>
+</member>
+</members>
+</doc>

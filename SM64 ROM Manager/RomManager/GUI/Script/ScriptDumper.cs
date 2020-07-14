@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using global::DevComponents.DotNetBar;
 using Microsoft.VisualBasic.CompilerServices;
-using global::PaintingControls;
+using Pilz.UI;
 using global::SM64Lib.Script;
 using SM64Lib.TextValueConverter;
 

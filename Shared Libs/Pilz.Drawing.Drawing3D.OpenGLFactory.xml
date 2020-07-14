@@ -1,0 +1,79 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Pilz.Drawing.Drawing3D.OpenGLFactory
+</name>
+</assembly>
+<members>
+<member name="T:Pilz.Drawing.Drawing3D.OpenGLFactory.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:Pilz.Drawing.Drawing3D.OpenGLFactory.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:Pilz.Drawing.Drawing3D.OpenGLFactory.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="M:Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN.Renderer.UpdateVertexData(Pilz.S3DFileParser.Mesh,Pilz.S3DFileParser.Vertex)">
+ <summary>
+ Updates the Data of a Vertex in the buffer.
+ </summary>
+ <param name="m">The Mesh where the Vertex is listed.</param>
+ <param name="v">The Vertex to update.</param>
+</member>
+<member name="M:Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN.Renderer.UpdateNormalData(Pilz.S3DFileParser.Mesh,Pilz.S3DFileParser.Normal)">
+ <summary>
+ Updates the Data of a Normal in the buffer.
+ </summary>
+ <param name="m">The Mesh where the Vertex is listed.</param>
+ <param name="n">The Normal to update.</param>
+</member>
+<member name="M:Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN.Renderer.UpdateVertexColorData(Pilz.S3DFileParser.Mesh,Pilz.S3DFileParser.VertexColor)">
+ <summary>
+ Updates the Data of a Vertex Color in the buffer.
+ </summary>
+ <param name="m">The Mesh where the Vertex is listed.</param>
+ <param name="vc">The Vertex Color to update.</param>
+</member>
+<member name="M:Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN.Renderer.UpdateUVData(Pilz.S3DFileParser.Mesh,Pilz.S3DFileParser.UV)">
+ <summary>
+ Updates the Data of a UV in the buffer.
+ </summary>
+ <param name="m">The Mesh where the Vertex is listed.</param>
+ <param name="uv">The UV to update.</param>
+</member>
+<member name="M:Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN.Renderer.UpdateFaceIndicies(Pilz.S3DFileParser.Mesh,Pilz.S3DFileParser.Face)">
+ <summary>
+ Updates the indicies of a face in the buffer.
+ </summary>
+ <param name="m">The Mesh where the Vertex is listed.</param>
+ <param name="f">The Face to update.</param>
+</member>
+<member name="M:Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN.Renderer.UpdateTexture(System.Drawing.Image,System.Drawing.Image)">
+ <summary>
+ Replace an Image with a new one.
+ </summary>
+ <param name="oldImage"></param>
+ <param name="newImage"></param>
+</member>
+<member name="M:Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN.Renderer.UpdateTexture(System.Drawing.Image)">
+ <summary>
+ Updates an Image.
+ </summary>
+ <param name="image"></param>
+</member>
+<member name="M:Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN.Renderer.RenderModel">
+ <summary>
+ Creates the Buffers and store the requied Data.
+ </summary>
+</member>
+</members>
+</doc>
