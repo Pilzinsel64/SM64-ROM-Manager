@@ -52,34 +52,6 @@ namespace SM64Lib
             }
         }
 
-        internal static string GenerateUniquieID<T>(string var = "")
-        {
-            var sn = TryGetSerialNumberOfFirstHardDrive();
-            var dateTime = DateTime.UtcNow.ToString("yyyyMMddHHmmssfffffff");
-            var type = typeof(T).ToString();
-            var together = sn + dateTime + type + var;
-
-            var md5 = MD5.Create();
-            var hash = BitConverter.ToString(md5.ComputeHash(Encoding.Default.GetBytes(together))).Replace("-", string.Empty);
-            md5.Dispose();
-
-            return hash;
-        }
-
-        private static string TryGetSerialNumberOfFirstHardDrive()
-        {
-            var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PhysicalMedia");
-            var sn = string.Empty;
-
-            foreach (ManagementObject wmi_HD in searcher.Get())
-            {
-                if (string.IsNullOrEmpty(sn) && wmi_HD["SerialNumber"] != null)
-                    sn = wmi_HD["SerialNumber"].ToString().Trim();
-            }
-
-            return sn;
-        }
-
         public static string ComputeMD5Hash(string filePath)
         {
             var md5 = MD5.Create();

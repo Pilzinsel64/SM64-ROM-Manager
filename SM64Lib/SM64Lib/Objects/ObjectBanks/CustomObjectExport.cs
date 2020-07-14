@@ -11,6 +11,8 @@ using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pilz.Cryptography;
+using Pilz.Json.Converters;
 
 namespace SM64Lib.Objects.ObjectBanks
 {

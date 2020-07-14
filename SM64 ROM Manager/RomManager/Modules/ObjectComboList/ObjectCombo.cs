@@ -1,4 +1,4 @@
-﻿
+﻿using Pilz.Cryptography;
 using Newtonsoft.Json;
 using SM64Lib;
 

@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Pilz.Cryptography;
+using Pilz.Json.Converters;
 
 namespace SM64Lib.Objects.ObjectBanks
 {
     public class CustomObject
     {
-        [JsonConverter(typeof(Json.UniquiIDStringJsonConverter<CustomObject>))]
+        [JsonConverter(typeof(UniquiIDStringJsonConverter<CustomObject>))]
         public UniquieID<CustomObject> ID { get; set; } = new UniquieID<CustomObject>();
         public string Name { get; set; }
         public string Description { get; set; }
