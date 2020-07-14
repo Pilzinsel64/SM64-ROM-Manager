@@ -1,4 +1,6 @@
 ﻿using Discord;
+using Discord.Net.Rest;
+using Discord.Net.WebSockets;
 using Discord.WebSocket;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,11 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
         {
             if (!string.IsNullOrEmpty(Config.DiscordBotToken))
             {
-                Client = new DiscordSocketClient();
+                var socketConfig = new DiscordSocketConfig();
+                socketConfig.RestClientProvider = DefaultRestClientProvider.Create(useProxy: true);
+                socketConfig.WebSocketProvider = DefaultWebSocketProvider.Create(System.Net.WebRequest.DefaultWebProxy);
+
+                Client = new DiscordSocketClient(socketConfig);
 
                 Client.Log += Client_Log;
                 Client.Ready += Client_Ready;
