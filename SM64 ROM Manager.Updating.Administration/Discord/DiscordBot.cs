@@ -178,7 +178,7 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
                 pingRole = null;
 
             string msg = GetPingMessage(pingRole); //await BuildUpdateMsg(versionName, version, changelog, guildID, channelID, appName, message, addChangelog, pingRole);
-            var embed = await BuildEmbed(package, appName, message, addChangelog);
+            var embed = BuildEmbed(package, appName, message, addChangelog);
             var channel = Client.GetGuild(guildID)?.GetTextChannel(channelID);
 
             if (string.IsNullOrEmpty(msg))
@@ -188,7 +188,7 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
                 await channel.SendMessageAsync(text:msg, embed:embed);
         }
 
-        private async Task<Embed> BuildEmbed(UpdatePackageInfo package, string appName, string message, bool addChangelog)
+        private Embed BuildEmbed(UpdatePackageInfo package, string appName, string message, bool addChangelog)
         {
             var embed = new EmbedBuilder();
 
