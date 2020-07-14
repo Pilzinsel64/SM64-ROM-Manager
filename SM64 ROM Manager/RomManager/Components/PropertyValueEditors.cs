@@ -48,6 +48,7 @@ namespace SM64_ROM_Manager.PropertyValueEditors
             editor.Items.AddRange((object[])Items);
             editor.DropDownWidth = DropDownWidth;
             editor.SelectedType = SelectedType;
+            editor.DisplayMember = "Text";
             return editor;
         }
 
