@@ -183,7 +183,7 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
 
             if (string.IsNullOrEmpty(msg))
                 msg = null;
-
+            
             if (channel != null)
                 await channel.SendMessageAsync(text:msg, embed:embed);
         }
@@ -210,13 +210,16 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
             // Add changelog
             if (addChangelog && !string.IsNullOrEmpty(package.Notes.Content) && package.Notes.ContentType != UpdateNotesContentType.HTML)
             {
-                var changelog = package.Notes.Content;
-
-                if (package.Notes.ContentType == UpdateNotesContentType.Markdown)
-                    changelog = Markdig.Markdown.ToPlainText(changelog);
-
-                if (changelog.Length <= 2048)
-                    embed.AddField("Changelog:", changelog);
+                switch (true)
+                {
+                    case object _ when package.Notes.ContentType == UpdateNotesContentType.PlainText && package.Notes.Content.Length <= 2048:
+                        embed.AddField("Changelog:", package.Notes.Content);
+                        break;
+                    case object _ when package.Notes.ContentType == UpdateNotesContentType.PlainText:
+                    case object _ when package.Notes.ContentType == UpdateNotesContentType.Markdown:
+                        embed.AddField("Changelog:", Markdig.Markdown.ToPlainText(package.Notes.Content));
+                        break;
+                }
             }
 
             // Author
