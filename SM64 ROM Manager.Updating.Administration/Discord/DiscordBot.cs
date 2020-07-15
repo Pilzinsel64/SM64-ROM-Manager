@@ -210,7 +210,11 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
             // Add changelog
             if (addChangelog && !string.IsNullOrEmpty(package.Notes.Content) && package.Notes.ContentType != UpdateNotesContentType.HTML)
             {
-                var changelog = Markdig.Markdown.ToPlainText(package.Notes.Content);
+                var changelog = package.Notes.Content;
+
+                if (package.Notes.ContentType == UpdateNotesContentType.Markdown)
+                    changelog = Markdig.Markdown.ToPlainText(changelog);
+
                 if (changelog.Length <= 2048)
                     embed.AddField("Changelog:", changelog);
             }
