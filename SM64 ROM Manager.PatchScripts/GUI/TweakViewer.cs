@@ -13,6 +13,7 @@ using global::SM64_ROM_Manager.Publics;
 using Microsoft.VisualBasic;
 using static Microsoft.VisualBasic.CompilerServices.LikeOperator;
 using SM64Lib.Patching;
+using DevComponents.DotNetBar.Controls;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -543,7 +544,53 @@ namespace SM64_ROM_Manager.PatchScripts
 
         private void ItemListBox1_ItemMouseClick(object sender, EventArgs e)
         {
-            Flyout1.Show(new Rectangle(new Point((int)(Cursor.Position.X - Flyout1.Content.Width / (double)2), Cursor.Position.Y), Size.Empty), DevComponents.DotNetBar.Controls.ePointerSide.Top, (int)(Flyout1.Content.Width / (double)2), ItemListBox1);
+            var contentSize = Flyout1.GetFlyoutFormSize();
+            var cursorPosition = Cursor.Position;
+            var pos = ePointerSide.Top;
+            var screen = Screen.FromPoint(cursorPosition);
+            var workingArea = screen.Bounds;
+            Rectangle rectContent = default;
+            var success = false;
+
+            bool checkIfInBounds(Rectangle rectangle)
+            {
+                if (rectangle.Bottom < workingArea.Bottom &&
+                    rectangle.Right < workingArea.Right &&
+                    rectangle.Top >= workingArea.Top &&
+                    rectangle.Left >= workingArea.Left)
+                    return true;
+                else
+                    return false;
+            }
+
+            foreach (var testpost in new[] { ePointerSide.Top, ePointerSide.Bottom })
+            {
+                if (!success)
+                {
+                    switch (testpost)
+                    {
+                        case ePointerSide.Top:
+                            rectContent = new Rectangle(new Point((int)(cursorPosition.X - contentSize.Width / 2.0), cursorPosition.Y), contentSize);
+                            break;
+                        case ePointerSide.Bottom:
+                            rectContent = new Rectangle(new Point((int)(cursorPosition.X - contentSize.Width / 2.0), cursorPosition.Y - contentSize.Height), contentSize);
+                            break;
+                    }
+
+                    if (checkIfInBounds(rectContent))
+                    {
+                        success = true;
+                        pos = testpost;
+                    }
+                }
+            }
+
+            if (success)
+            {
+                var rectShowBounds = new Rectangle(rectContent.Location, Size.Empty);
+                var pointerOffset = (int)(Flyout1.Content.Width / 2.0 - FlyoutForm.PointerSize.Width / 2.0);
+                Flyout1.Show(rectShowBounds, pos, pointerOffset, ItemListBox1);
+            }
         }
 
         private void ButtonX7_Click(object sender, EventArgs e)

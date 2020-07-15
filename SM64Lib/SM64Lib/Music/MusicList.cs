@@ -197,7 +197,43 @@ namespace SM64Lib.Music
             byte musicCount = s.ReadByte();
 
             // Set original Names
-            var tNames = new[] { "No Music", "High Score", "Title Screen", "Bob-Omb Battlefield", "Inside Castle", "Dire, Dire Docks", "Lethal Lava Land", "Bowser Battle", "Snow", "Slide", "Haunted House", "Piranha Plant Lullaby", "Hazy Maze Cave", "Star Select", "Wing Cap", "Metal Cap", "Bowser Message", "Bowser Course", "Star Catch", "Merry-Go-Round", "Start and End Race with Koopa the Quick", "Star Appears", "Boss Fight", "Take a Key", "Endless Stairs", "Final Boss", "Staff Credits", "Puzzle Solved", "Toad Message", "Peach Message", "Introduction Scene", "Last Star Fanfare", "Ending Scene", "File Select", "Lakitu Appears" };
+            var tNames = new[] {
+                "No Music",
+                "High Score",
+                "Title Screen",
+                "Bob-Omb Battlefield",
+                "Inside Castle",
+                "Dire, Dire Docks",
+                "Lethal Lava Land",
+                "Bowser Battle",
+                "Snow",
+                "Slide",
+                "Haunted House",
+                "Piranha Plant Lullaby",
+                "Hazy Maze Cave",
+                "Star Select",
+                "Wing Cap",
+                "Metal Cap",
+                "Bowser Message",
+                "Bowser Course",
+                "Star Catch",
+                "Merry-Go-Round",
+                "Start and End Race with Koopa the Quick",
+                "Star Appears",
+                "Boss Fight",
+                "Take a Key",
+                "Endless Stairs",
+                "Final Boss",
+                "Staff Credits",
+                "Puzzle Solved",
+                "Toad Message",
+                "Peach Message",
+                "Introduction Scene",
+                "Last Star Fanfare",
+                "Ending Scene",
+                "File Select",
+                "Lakitu Appears"
+            };
 
             // Read original sequences
             var tSequences = ReadSequences(s, 0x7B0860, musicCount, Array.Empty<InstrumentSetList>(), tNames);
