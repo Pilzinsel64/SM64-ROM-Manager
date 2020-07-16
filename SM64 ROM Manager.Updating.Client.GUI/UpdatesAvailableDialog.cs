@@ -29,10 +29,12 @@ namespace SM64_ROM_Manager.Updating.Client.GUI
             switch (updateNotes.ContentType)
             {
                 case UpdateNotesContentType.PlainText:
-                    updateNotesControl = new DevComponents.DotNetBar.Controls.RichTextBoxEx
+                    var newUpdateNotesControl = new DevComponents.DotNetBar.Controls.RichTextBoxEx
                     {
                         Text = updateNotes.Content
                     };
+                    newUpdateNotesControl.BackgroundStyle.Class = DevComponents.DotNetBar.Rendering.ElementStyleClassKeys.RichTextBoxBorderKey;
+                    updateNotesControl = newUpdateNotesControl;
                     break;
                 case UpdateNotesContentType.Markdown:
                     updateNotesControl = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel
