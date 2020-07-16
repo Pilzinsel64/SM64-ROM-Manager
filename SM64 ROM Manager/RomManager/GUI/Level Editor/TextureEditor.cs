@@ -31,13 +31,11 @@ namespace SM64_ROM_Manager.LevelEditor
             this.rommgr = rommgr;
             InitializeComponent();
             LoadCategories(categories);
-            base.UpdateAmbientColors();
+            UpdateAmbientColors();
 
             // Set dark background for light theme
             if (Settings.StyleManager.IsWhiteTheme())
-            {
-                base.BackColor = StyleManagerSettingsStruc.VisualThemeGray.CanvasColor;
-            }
+                BackColor = StyleManagerSettingsStruc.VisualThemeGray.CanvasColor;
         }
 
         private TextureBlock CurBlock

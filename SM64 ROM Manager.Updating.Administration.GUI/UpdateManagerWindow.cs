@@ -419,7 +419,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
                 await LoadPackageList();
         }
 
-        private async void ButtonItem_EditDescription_Click(object sender, EventArgs e)
+        private void ButtonItem_EditDescription_Click(object sender, EventArgs e)
         {
             var version = GetSelectedPackageVersion();
             var desc = manager.GetPackageDescription(version);
@@ -432,10 +432,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             };
 
             if (frm.ShowDialog() == DialogResult.OK)
-            {
                 manager.SetPackageDescription(version, frm.Titel, frm.Description, frm.DescriptionType);
-                await LoadPackageList();
-            }
         }
 
         private void ButtonItem_BotSettings_Click(object sender, EventArgs e)

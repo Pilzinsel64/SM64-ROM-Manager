@@ -12,6 +12,9 @@ namespace SM64_ROM_Manager.SettingsManager
         public MetroColorGeneratorParameters MetroColorParams { get; set; }
         [JsonProperty("UseWindows10Style")]
         public bool UseSystemTheme { get; set; }
+        [JsonIgnore]
+        public MetroColorGeneratorParameters ActiveMetroColorParams
+        { get => StyleManager.MetroColorGeneratorParameters; }
 
         public void ResetValues()
         {
@@ -22,12 +25,12 @@ namespace SM64_ROM_Manager.SettingsManager
 
         public bool IsDarkTheme()
         {
-            return IsDarkTheme(MetroColorParams);
+            return IsDarkTheme(ActiveMetroColorParams);
         }
 
         public bool IsWhiteTheme()
         {
-            return IsWhiteTheme(MetroColorParams);
+            return IsWhiteTheme(ActiveMetroColorParams);
         }
 
         public static bool IsDarkTheme(MetroColorGeneratorParameters theme)
