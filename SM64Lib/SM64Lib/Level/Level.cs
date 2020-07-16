@@ -9,6 +9,7 @@ using global::SM64Lib.Levels.Script.Commands;
 using global::SM64Lib.Objects.ObjectBanks.Data;
 using global::SM64Lib.SegmentedBanking;
 using SM64Lib.Objects.ModelBanks;
+using Newtonsoft.Json;
 
 namespace SM64Lib.Levels
 {
@@ -27,29 +28,28 @@ namespace SM64Lib.Levels
 
         internal LevelscriptCommand LastGobCmdSegLoad { get; set; } = null;
         internal LevelscriptCommand LastLobCmdSegLoad { get; set; } = null;
+        [JsonIgnore]
         internal Dictionary<byte, ObjectBankData> MyObjectBanks { get; private set; } = new Dictionary<byte, ObjectBankData>();
         public Levelscript Levelscript { get; set; } = new Levelscript();
         public List<LevelArea> Areas { get; private set; } = new List<LevelArea>();
-        public int DefaultTerrainType { get; set; } = 0;
         public ushort LevelID { get; set; } = 0;
-        public byte SegmentedID { get; set; } = 0x19;
         public LevelBG Background { get; private set; } = new LevelBG();
         public bool ActSelector { get; set; } = false;
         public bool HardcodedCameraSettings { get; set; } = false;
         public bool Closed { get; set; } = false;
         public int LastRomOffset { get; set; } = -1;
-        public MemoryStream LevelFast3DBuffer { get; set; } = null;
-        public bool SM64EditorMode { get; private set; } = false;
         public bool NeedToSaveLevelscript { get; set; } = false;
         public bool NeedToSaveBanks0E { get; set; } = false;
         public bool OneBank0xESystemEnabled { get; set; } = true;
         public bool EnableGlobalObjectBank { get; set; } = false;
         public bool EnableLocalObjectBank { get; set; } = false;
         public CustomModelBank LocalObjectBank { get; private set; } = new CustomModelBank();
+        [JsonIgnore]
         public RomManager RomManager { get; set; }
 
         // O t h e r   P r o p e r t i e s
 
+        [JsonIgnore]
         public IReadOnlyDictionary<byte, ObjectBankData> LoadedObjectBanks
         {
             get
@@ -58,6 +58,7 @@ namespace SM64Lib.Levels
             }
         }
 
+        [JsonIgnore]
         public SegmentedBank Bank0x19
         {
             get
@@ -71,6 +72,7 @@ namespace SM64Lib.Levels
             }
         }
 
+        [JsonIgnore]
         public int ObjectsCount
         {
             get
@@ -82,6 +84,7 @@ namespace SM64Lib.Levels
             }
         }
 
+        [JsonIgnore]
         public int WarpsCount
         {
             get
@@ -93,6 +96,7 @@ namespace SM64Lib.Levels
             }
         }      
 
+        [JsonIgnore]
         public long Length
         {
             get
@@ -119,6 +123,11 @@ namespace SM64Lib.Levels
         }
 
         // C o n s t r u c t o r s
+
+        [JsonConstructor]
+        protected Level(JsonConstructorAttribute attr)
+        {
+        }
 
         protected Level(ushort LevelID, int LevelIndex, RomManager rommgr) : this(rommgr)
         {

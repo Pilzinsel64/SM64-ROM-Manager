@@ -1,4 +1,6 @@
 ﻿
+using Newtonsoft.Json;
+
 namespace SM64Lib.Levels
 {
     public class RMLevelArea : LevelArea
@@ -22,6 +24,11 @@ namespace SM64Lib.Levels
         }
 
         public RMLevelArea() : base()
+        {
+        }
+
+        [JsonConstructor]
+        private RMLevelArea(JsonConstructorAttribute attr) : base(attr)
         {
         }
     }

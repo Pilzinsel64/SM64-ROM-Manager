@@ -5,6 +5,7 @@ using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
 using global::SM64Lib.Levels.ScrolTex;
 using global::SM64Lib.Model;
+using Newtonsoft.Json;
 
 namespace SM64Lib.Levels
 {
@@ -42,6 +43,7 @@ namespace SM64Lib.Levels
 
         // O t h e r   P r o p e r t i e s
 
+        [JsonIgnore]
         public int Fast3DBankRomStart
         {
             get
@@ -50,6 +52,7 @@ namespace SM64Lib.Levels
             }
         }
 
+        [JsonIgnore]
         public int Fast3DLength
         {
             get
@@ -58,6 +61,7 @@ namespace SM64Lib.Levels
             }
         }
 
+        [JsonIgnore]
         public bool IsCamera2D
         {
             get
@@ -66,6 +70,7 @@ namespace SM64Lib.Levels
             }
         }
 
+        [JsonIgnore]
         public int CollisionPointer
         {
             get
@@ -162,6 +167,11 @@ namespace SM64Lib.Levels
         protected LevelArea()
         {
             Geolayout = new Geolayout.Geolayout(SM64Lib.Geolayout.Geolayout.NewScriptCreationMode.Level);
+        }
+
+        [JsonConstructor]
+        protected LevelArea(JsonConstructorAttribute attr)
+        {
         }
     }
 }

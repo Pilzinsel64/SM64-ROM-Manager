@@ -1,4 +1,5 @@
 ﻿
+using Newtonsoft.Json;
 using SM64Lib.Configuration;
 
 namespace SM64Lib.Levels
@@ -21,6 +22,11 @@ namespace SM64Lib.Levels
         public RMLevel(LevelConfig config, RomManager rommgr) : base(rommgr)
         {
             Config = config;
+        }
+
+        [JsonConstructor]
+        private RMLevel(JsonConstructorAttribute attr) : base(attr)
+        {
         }
     }
 }
