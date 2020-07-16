@@ -8,6 +8,7 @@ namespace SM64Lib.Levels
     {
         public LevelConfig Config { get; }
 
+        [JsonIgnore]
         public string Name
         {
             get => Config.LevelName;
