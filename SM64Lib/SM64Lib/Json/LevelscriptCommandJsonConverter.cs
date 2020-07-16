@@ -15,7 +15,7 @@ namespace SM64Lib.Json
     {
         public override bool CanConvert(Type objectType)
         {
-            return typeof(LevelscriptCommandJsonConverter).IsAssignableFrom(objectType);
+            return typeof(LevelscriptCommand).IsAssignableFrom(objectType);
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
