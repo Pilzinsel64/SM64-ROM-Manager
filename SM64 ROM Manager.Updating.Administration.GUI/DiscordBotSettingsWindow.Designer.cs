@@ -35,7 +35,10 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.TextBoxX_BotToken = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.ButtonX_Cancel = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_Okay = new DevComponents.DotNetBar.ButtonX();
+            this.switchButton_UseProxy = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.layoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem6 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutSpacerItem2 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
             this.layoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
@@ -52,6 +55,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.layoutControl1.Controls.Add(this.TextBoxX_BotToken);
             this.layoutControl1.Controls.Add(this.ButtonX_Cancel);
             this.layoutControl1.Controls.Add(this.ButtonX_Okay);
+            this.layoutControl1.Controls.Add(this.switchButton_UseProxy);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.ForeColor = System.Drawing.Color.Black;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -61,6 +65,8 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             // 
             this.layoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] {
             this.layoutControlItem3,
+            this.layoutControlItem6,
+            this.layoutSpacerItem2,
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutSpacerItem1,
@@ -79,12 +85,12 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.TextBoxX_AppName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TextBoxX_AppName.DisabledBackColor = System.Drawing.Color.White;
             this.TextBoxX_AppName.ForeColor = System.Drawing.Color.Black;
-            this.TextBoxX_AppName.Location = new System.Drawing.Point(142, 32);
+            this.TextBoxX_AppName.Location = new System.Drawing.Point(142, 62);
             this.TextBoxX_AppName.Margin = new System.Windows.Forms.Padding(0);
             this.TextBoxX_AppName.Name = "TextBoxX_AppName";
             this.TextBoxX_AppName.PreventEnterBeep = true;
             this.TextBoxX_AppName.Size = new System.Drawing.Size(590, 20);
-            this.TextBoxX_AppName.TabIndex = 1;
+            this.TextBoxX_AppName.TabIndex = 3;
             this.TextBoxX_AppName.TextChanged += new System.EventHandler(this.TextBoxX_AppName_TextChanged);
             // 
             // TextBoxX_Msg
@@ -97,14 +103,14 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.TextBoxX_Msg.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TextBoxX_Msg.DisabledBackColor = System.Drawing.Color.White;
             this.TextBoxX_Msg.ForeColor = System.Drawing.Color.Black;
-            this.TextBoxX_Msg.Location = new System.Drawing.Point(142, 60);
+            this.TextBoxX_Msg.Location = new System.Drawing.Point(142, 90);
             this.TextBoxX_Msg.Margin = new System.Windows.Forms.Padding(0);
             this.TextBoxX_Msg.Multiline = true;
             this.TextBoxX_Msg.Name = "TextBoxX_Msg";
             this.TextBoxX_Msg.PreventEnterBeep = true;
             this.TextBoxX_Msg.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.TextBoxX_Msg.Size = new System.Drawing.Size(590, 376);
-            this.TextBoxX_Msg.TabIndex = 2;
+            this.TextBoxX_Msg.Size = new System.Drawing.Size(590, 346);
+            this.TextBoxX_Msg.TabIndex = 4;
             this.TextBoxX_Msg.TextChanged += new System.EventHandler(this.TextBoxX_Msg_TextChanged);
             // 
             // TextBoxX_BotToken
@@ -136,7 +142,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ButtonX_Cancel.Name = "ButtonX_Cancel";
             this.ButtonX_Cancel.Size = new System.Drawing.Size(75, 23);
             this.ButtonX_Cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_Cancel.TabIndex = 4;
+            this.ButtonX_Cancel.TabIndex = 6;
             this.ButtonX_Cancel.Text = "Abbrechen";
             // 
             // ButtonX_Okay
@@ -150,9 +156,24 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ButtonX_Okay.Name = "ButtonX_Okay";
             this.ButtonX_Okay.Size = new System.Drawing.Size(75, 23);
             this.ButtonX_Okay.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_Okay.TabIndex = 5;
+            this.ButtonX_Okay.TabIndex = 7;
             this.ButtonX_Okay.Text = "Okay";
             this.ButtonX_Okay.Click += new System.EventHandler(this.ButtonX_Okay_Click);
+            // 
+            // switchButton_UseProxy
+            // 
+            // 
+            // 
+            // 
+            this.switchButton_UseProxy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchButton_UseProxy.Location = new System.Drawing.Point(142, 32);
+            this.switchButton_UseProxy.Margin = new System.Windows.Forms.Padding(0);
+            this.switchButton_UseProxy.Name = "switchButton_UseProxy";
+            this.switchButton_UseProxy.OffText = "Nein";
+            this.switchButton_UseProxy.OnText = "Ja";
+            this.switchButton_UseProxy.Size = new System.Drawing.Size(104, 22);
+            this.switchButton_UseProxy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchButton_UseProxy.TabIndex = 1;
             // 
             // layoutControlItem3
             // 
@@ -163,6 +184,23 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.layoutControlItem3.Text = "Bot-Token:";
             this.layoutControlItem3.Width = 100;
             this.layoutControlItem3.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.switchButton_UseProxy;
+            this.layoutControlItem6.Height = 30;
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Text = "Proxy verwenden:";
+            this.layoutControlItem6.TextPadding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.layoutControlItem6.Width = 250;
+            // 
+            // layoutSpacerItem2
+            // 
+            this.layoutSpacerItem2.Height = 30;
+            this.layoutSpacerItem2.Name = "layoutSpacerItem2";
+            this.layoutSpacerItem2.Width = 99;
+            this.layoutSpacerItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // layoutControlItem1
             // 
@@ -238,5 +276,8 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         private DevComponents.DotNetBar.Layout.LayoutSpacerItem layoutSpacerItem1;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem4;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem5;
+        private DevComponents.DotNetBar.Controls.SwitchButton switchButton_UseProxy;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem6;
+        private DevComponents.DotNetBar.Layout.LayoutSpacerItem layoutSpacerItem2;
     }
 }

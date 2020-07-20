@@ -219,6 +219,12 @@
     <Compile Include="ToolSelectionWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ProxyConfigEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProxyConfigEditor.Designer.cs">
+      <DependentUpon>ProxyConfigEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateServerInfoEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     <EmbeddedResource Include="ToolSelectionWindow.resx">
       <DependentUpon>ToolSelectionWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProxyConfigEditor.resx">
+      <DependentUpon>ProxyConfigEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateServerInfoEditor.resx">
       <DependentUpon>UpdateServerInfoEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_software_installer.ico" />
+    <None Include="Resources\icons8_connected_no_data_32px.png" />
+    <None Include="Resources\icons8_firewall_32px.png" />
+    <None Include="Resources\icons8_firewall_480px.png" />
     <None Include="Resources\icons8_email_send_16px.png" />
     <None Include="Resources\icons8_checkmark_32px.png" />
     <None Include="Resources\icons8_discord_new_logo_32px.png" />

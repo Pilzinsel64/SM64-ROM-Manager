@@ -65,7 +65,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         {
             var oldProject = General.CurProject;
             General.CurProject = new UpdateProject();
-            if (My.MyProject.Forms.UpdateServerInfoEditor.ShowDialog() == DialogResult.OK)
+            if (My.MyProject.Forms.UpdateServerInfoEditor.ShowDialog(this) == DialogResult.OK)
             {
                 curProjectFilePath = filePath;
                 SaveProject(curProjectFilePath);
@@ -79,6 +79,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         {
             curProjectFilePath = filePath;
             General.CurProject = UpdateProject.Load(filePath);
+            General.SetProxyConfig();
             await LoadManager();
         }
 
@@ -202,7 +203,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
                 Build = inputVersion.Build
             };
 
-            if (frm.ShowDialog() == DialogResult.OK)
+            if (frm.ShowDialog(this) == DialogResult.OK)
                 return (new ApplicationVersion(frm.Version, frm.Build, frm.Channel), false);
             else
                 return (inputVersion, true);
@@ -275,7 +276,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             {
                 Filter = "Update Project Files (*.upa)|*.upa"
             };
-            if (sfd_updateadministration_upa.ShowDialog() == DialogResult.OK)
+            if (sfd_updateadministration_upa.ShowDialog(this) == DialogResult.OK)
             {
                 await CreateNewProject(sfd_updateadministration_upa.FileName);
             }
@@ -287,7 +288,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             {
                 Filter = "Update Project Files (*.upa)|*.upa"
             };
-            if (ofd_updateadministration_upa.ShowDialog() == DialogResult.OK)
+            if (ofd_updateadministration_upa.ShowDialog(this) == DialogResult.OK)
             {
                 await OpenProject(ofd_updateadministration_upa.FileName);
             }
@@ -300,7 +301,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
 
         private async void ButtonItem_ProjectOptions_Click(object sender, EventArgs e)
         {
-            My.MyProject.Forms.UpdateServerInfoEditor.ShowDialog();
+            My.MyProject.Forms.UpdateServerInfoEditor.ShowDialog(this);
             await LoadManager();
         }
 
@@ -315,7 +316,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             {
                 Filter = FILTER_UPDATEINFO_CONFIGURATION
             };
-            if (sfd_UpdateAdministration_UpdateConfiguration.ShowDialog() == DialogResult.OK)
+            if (sfd_UpdateAdministration_UpdateConfiguration.ShowDialog(this) == DialogResult.OK)
                 await manager.SaveInfoToFile(sfd_UpdateAdministration_UpdateConfiguration.FileName);
         }
 
@@ -328,7 +329,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         private async void ButtonItem_CreateAndUploadPackage_Click(object sender, EventArgs e)
         {
             var frm = new PackageCreationDialog(true);
-            if (frm.ShowDialog() == DialogResult.OK)
+            if (frm.ShowDialog(this) == DialogResult.OK)
             {
                 if (await UploadPackage(frm.TempPackageFilePath))
                     await LoadPackageList();
@@ -342,7 +343,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
                 Filter = FILTER_UPDATEPACKAGE
             };
 
-            if (ofd_UpdateAdministration_UpdatePackage.ShowDialog() == DialogResult.OK)
+            if (ofd_UpdateAdministration_UpdatePackage.ShowDialog(this) == DialogResult.OK)
             {
                 if(await UploadPackage(ofd_UpdateAdministration_UpdatePackage.FileName))
                     await LoadPackageList();
@@ -378,7 +379,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
                 var version = GetSelectedPackageVersion();
                 var pkg = manager.GetUpdatePackageInfo(version);
                 var frm = new DiscordPostDialog(discordBot, pkg);
-                frm.ShowDialog();
+                frm.ShowDialog(this);
             }
             else
                 MessageBoxEx.Show(this, "Offenbar ist ein Fehler ist aufgetreten beim Laden des Discord-Bots.", string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -431,18 +432,25 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
                 DescriptionType = desc.descriptionType
             };
 
-            if (frm.ShowDialog() == DialogResult.OK)
+            if (frm.ShowDialog(this) == DialogResult.OK)
                 manager.SetPackageDescription(version, frm.Titel, frm.Description, frm.DescriptionType);
         }
 
         private void ButtonItem_BotSettings_Click(object sender, EventArgs e)
         {
             var frm = new DiscordBotSettingsWindow(General.CurProject.DiscordBotConfig);
-            if (frm.ShowDialog() == DialogResult.OK)
+            if (frm.ShowDialog(this) == DialogResult.OK)
             {
                 if (discordBot is object)
                     LoadDiscordBot();
             }
+        }
+
+        private void ButtonItem_ProxyConfig_Click(object sender, EventArgs e)
+        {
+            var frm = new ProxyConfigEditor(General.CurProject.ProxyConfig);
+            if (frm.ShowDialog(this) == DialogResult.OK)
+                General.SetProxyConfig();
         }
     }
 }
