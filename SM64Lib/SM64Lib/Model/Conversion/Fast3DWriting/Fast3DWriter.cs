@@ -793,8 +793,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var uv = new TexCord()
                     {
-                        U = Conversions.ToSingle(SM64Lib.General.Round((double)(tuv.U * (float)32 * (float)32))),
-                        V = Conversions.ToSingle(SM64Lib.General.Round((double)-(tuv.V * (float)32 * (float)32)))
+                        U = (float)General.Round(tuv.U * 32F * 32F),
+                        V = (float)General.Round(-(tuv.V * 32F * 32F))
                     };
                     uvs.Add(uv);
                 }
@@ -881,8 +881,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     // Modify UV cordinates based on material.
                     void modifyUVCordinates(TexCord tnew, TexCord t)
                     {
-                        tnew.U = (float)(t.U * (mat.TexWidth / 32.0) - 16); // "-16" fixes the UVs offset
-                        tnew.V = (float)(t.V * (mat.TexHeight / 32.0) - 16); // "-16" fixes the UVs offset
+                        tnew.U = (float)(t.U * (mat.TexWidth / 32.0) /*- 16*/); // "-16" fixes the UVs offset
+                        tnew.V = (float)(t.V * (mat.TexHeight / 32.0) /*- 16*/); // "-16" fixes the UVs offset
                     };
                     modifyUVCordinates(tanew, ta);
                     modifyUVCordinates(tbnew, tb);
