@@ -199,7 +199,7 @@ namespace SM64Lib.Music
             // Set original Names
             var tNames = new[] {
                 "No Music",
-                "High Score",
+                "Star Catch",
                 "Title Screen",
                 "Bob-Omb Battlefield",
                 "Inside Castle",
@@ -216,7 +216,7 @@ namespace SM64Lib.Music
                 "Metal Cap",
                 "Bowser Message",
                 "Bowser Course",
-                "Star Catch",
+                "High Score",
                 "Merry-Go-Round",
                 "Start and End Race with Koopa the Quick",
                 "Star Appears",

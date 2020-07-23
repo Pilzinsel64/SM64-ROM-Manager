@@ -275,7 +275,7 @@ namespace SM64Lib.Patching
                                                             }
                                                             else
                                                             {
-                                                                string barr = "";
+                                                                string barr = string.Empty;
                                                                 switch (inputType)
                                                                 {
                                                                     case InputValueType.Byte:
@@ -287,7 +287,7 @@ namespace SM64Lib.Patching
                                                                         barr = Conversions.ToUShort(processingEventArgs.ReturnValue).ToString("X4");
                                                                         break;
                                                                     case InputValueType.Single:
-                                                                        barr = Conversions.ToSingle(processingEventArgs.ReturnValue).ToString("X4");
+                                                                        barr = Data.System.SwapInts.SwapSingle(Convert.ToSingle(processingEventArgs.ReturnValue)).ToString("X4");
                                                                         break;
                                                                     case InputValueType.UInt32:
                                                                         barr = Conversions.ToUInteger(processingEventArgs.ReturnValue).ToString("X8");
