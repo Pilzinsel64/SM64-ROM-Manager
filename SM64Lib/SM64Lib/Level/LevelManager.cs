@@ -81,7 +81,7 @@ namespace SM64Lib.Levels
                         var scrollTexAddrs = new List<int>(new[] { 0x400000, 0x401700 });
                         if (rommgr.RomConfig.ScrollTexConfig.UseCustomBehavior)
                             scrollTexAddrs.Add(rommgr.RomConfig.ScrollTexConfig.CustomBehaviorAddress);
-                        if (scrollTexAddrs.Contains(Conversions.ToInteger(clNormal3DObject.GetSegBehaviorAddr(c))))
+                        if (scrollTexAddrs.Contains((int)clNormal3DObject.GetSegBehaviorAddr(c)))
                             tArea.ScrollingTextures.Add(new ManagedScrollingTexture(c));
                         else
                             tArea.Objects.Add(c);
