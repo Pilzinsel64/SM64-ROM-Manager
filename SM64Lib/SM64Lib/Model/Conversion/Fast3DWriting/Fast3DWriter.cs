@@ -793,8 +793,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var uv = new TexCord()
                     {
-                        U = Conversions.ToSingle(SM64Lib.General.Round((double)(tuv.U * (float)32 * (float)32))),
-                        V = Conversions.ToSingle(SM64Lib.General.Round((double)-(tuv.V * (float)32 * (float)32)))
+                        U = (float)General.Round(tuv.U * 32F * 32F),
+                        V = (float)General.Round(-((tuv.V - 1) * 32F * 32F))
                     };
                     uvs.Add(uv);
                 }
