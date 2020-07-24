@@ -287,7 +287,7 @@ namespace SM64_ROM_Manager
             SM64Lib.Patching.PatchClass.StartingExternalTool += PatchClass_StartingExternalTool;
             SM64Lib.Patching.PatchClass.ExitingExternalTool += PatchClass_ExitingExternalTool;
 
-            var appVersion = new ApplicationVersion(new Version(Application.ProductVersion), Conversions.ToInteger(SM64_ROM_Manager.My.Resources.Resources.DevelopmentBuild), (Channels)Conversions.ToInteger(SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage));
+            var appVersion = new ApplicationVersion(new Version(Application.ProductVersion), Conversions.ToInteger(Resources.DevelopmentBuild), (Channels)Conversions.ToInteger(Resources.DevelopmentStage));
             updateClient = new UpdateClient(UPDATE_URL, appVersion, Settings.Network.MinimumUpdateChannel)
             {
                 ApplicationName = Application.ProductName,

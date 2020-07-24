@@ -768,9 +768,9 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var v = new Vertex()
                     {
-                        X = SM64Lib.General.KeepInInt16Range(SM64Lib.General.Round(vert.X * settings.Scale + settings.OffsetPosition.X)),
-                        Y = SM64Lib.General.KeepInInt16Range(SM64Lib.General.Round(vert.Y * settings.Scale + settings.OffsetPosition.Y)),
-                        Z = SM64Lib.General.KeepInInt16Range(SM64Lib.General.Round(vert.Z * settings.Scale + settings.OffsetPosition.Z))
+                        X = General.KeepInInt16Range(General.Round(vert.X * settings.Scale + settings.OffsetPosition.X)),
+                        Y = General.KeepInInt16Range(General.Round(vert.Y * settings.Scale + settings.OffsetPosition.Y)),
+                        Z = General.KeepInInt16Range(General.Round(vert.Z * settings.Scale + settings.OffsetPosition.Z))
                     };
                     verts.Add(v);
                 }
@@ -780,9 +780,9 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var n = new Normal()
                     {
-                        A = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(norm.X * (float)0x7F)))),
-                        B = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(norm.Y * (float)0x7F)))),
-                        C = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(norm.Z * (float)0x7F)))),
+                        A = Datatypecastes.LongToByte((long)General.Round(norm.X * 0x7F)),
+                        B = Datatypecastes.LongToByte((long)General.Round(norm.Y * 0x7F)),
+                        C = Datatypecastes.LongToByte((long)General.Round(norm.Z * 0x7F)),
                         D = 0xFF
                     };
                     norms.Add(n);
@@ -804,10 +804,10 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 {
                     var vc = new VertexColor()
                     {
-                        R = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(vertcol.R * (float)0xFF)))),
-                        G = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(vertcol.G * (float)0xFF)))),
-                        B = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(vertcol.B * (float)0xFF)))),
-                        A = SM64Lib.Datatypecastes.LongToByte(Conversions.ToLong(SM64Lib.General.Round((double)(vertcol.A * (float)0xFF))))
+                        R = Datatypecastes.LongToByte((long)General.Round(vertcol.R * 0xFF)),
+                        G = Datatypecastes.LongToByte((long)General.Round(vertcol.G * 0xFF)),
+                        B = Datatypecastes.LongToByte((long)General.Round(vertcol.B * 0xFF)),
+                        A = Datatypecastes.LongToByte((long)General.Round(vertcol.A * 0xFF))
                     };
                     vertexColors.Add(vc);
                 }
