@@ -30,5 +30,5 @@ using global::System.Runtime.InteropServices;
 // übernehmen, indem Sie "*" eingeben:
 // <Assembly: AssemblyVersion("1.0.*")> 
 
-[assembly: AssemblyVersion("1.9.15.0")]
+[assembly: AssemblyVersion("1.9.16.0")]
 
