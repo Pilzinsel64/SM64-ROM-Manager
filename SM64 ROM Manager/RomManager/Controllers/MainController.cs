@@ -1849,11 +1849,16 @@ namespace SM64_ROM_Manager
         public (int objBank0x0C, int objBank0x0D, int objBank0x0E, bool enableGlobalObjectBank, bool enableLocalObjectBank) GetLevelObjectBankDataSettings(int levelIndex)
         {
             var lvl = GetLevelAndArea(levelIndex).level;
-            return (
-                RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xC)].IndexOf(lvl.GetObjectBankData(0xC)) + 1,
-                RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xD)].IndexOf(lvl.GetObjectBankData(0xD)) + 1,
-                RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0x9)].IndexOf(lvl.GetObjectBankData(0x9)) + 1,
-                lvl.EnableGlobalObjectBank, lvl.EnableLocalObjectBank);
+            if (lvl is object)
+            {
+                return (
+                    RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xC)].IndexOf(lvl.GetObjectBankData(0xC)) + 1,
+                    RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0xD)].IndexOf(lvl.GetObjectBankData(0xD)) + 1,
+                    RomManager.RomConfig.ObjectBankInfoData[Conversions.ToByte(0x9)].IndexOf(lvl.GetObjectBankData(0x9)) + 1,
+                    lvl.EnableGlobalObjectBank, lvl.EnableLocalObjectBank);
+            }
+            else
+                return default;
         }
 
         public void ChangeLevelID(int levelIndex)
