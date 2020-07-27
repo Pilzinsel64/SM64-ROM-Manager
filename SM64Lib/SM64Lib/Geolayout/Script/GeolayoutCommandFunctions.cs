@@ -213,5 +213,41 @@ namespace SM64Lib.Geolayout.Script
                 return value;
             }
         }
+
+        public class cgObjectShadow
+        {
+            /*
+             16 00 00 [AA] 00 [BB] [CC CC]
+             A	Shadow type
+             B	Shadow solidity (00=invisible, FF=black)
+             C	Shadow scale
+             */
+
+            public static void GetShadow(GeolayoutCommand command, ObjectShadow shadow)
+            {
+                command.Position = 3;
+                shadow.Type = (ObjectShadowType)command.ReadByte();
+
+                command.Position = 5;
+                shadow.Solidity = command.ReadByte();
+
+                shadow.Scale = command.ReadInt16();
+
+                command.Position = 0;
+            }
+
+            public static void SetShadow(GeolayoutCommand command, ObjectShadow shadow)
+            {
+                command.Position = 3;
+                command.Write((byte)shadow.Type);
+
+                command.Position = 5;
+                command.Write(shadow.Solidity);
+
+                command.Write(shadow.Scale);
+
+                command.Position = 0;
+            }
+        }
     }
 }

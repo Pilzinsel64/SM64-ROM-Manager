@@ -25,6 +25,10 @@
             Contains custom configuration that isn't used by SM64Lib. E.g. Extra Object Combos.
             </summary>
         </member>
+        <member name="F:SM64Lib.Geolayout.ObjectShadowType.RectangleHardcodedOffset">
+            This defines an offset after which rectangular shadows with custom
+            widths and heights can be defined.
+        </member>
         <member name="M:SM64Lib.Levels.SM64EditorLevelManager.LoadLevel(SM64Lib.Levels.Level,SM64Lib.RomManager,System.UInt16,System.UInt32)">
             <summary>
             Loads a SM64 Editor Level from ROM.

@@ -20,6 +20,7 @@ namespace SM64Lib.Geolayout
         public List<Geopointer> Geopointers { get; set; } = new List<Geopointer>();
         public int NewGeoOffset { get; set; } = 0;
         public bool Closed { get; set; } = false;
+        public ObjectShadow ObjectShadow { get; set; } = new ObjectShadow();
 
         public int Length
         {
@@ -119,6 +120,7 @@ namespace SM64Lib.Geolayout
             GeopointerOffsets.Clear();
             Geolayoutscript = new Geolayoutscript();
             Geolayoutscript.Read(rommgr, segAddress);
+            ObjectShadow = new ObjectShadow();
 
             var ToRemove = new List<GeolayoutCommand>();
             int cIndex = 0;
@@ -140,17 +142,18 @@ namespace SM64Lib.Geolayout
                         switch (switchExpr1)
                         {
                             case 0x802761D0:
-                                {
-                                    EnvironmentEffect = (EnvironmentEffects)cgx18.GetParam1(ref c);
-                                    break;
-                                }
+                                EnvironmentEffect = (EnvironmentEffects)cgx18.GetParam1(ref c);
+                                break;
                         }
-
                         break;
                     case GeolayoutCommandTypes.LoadDisplaylist:
                         if (Geopointers.Count == 0)
                             IndexForGeopointers = cIndex;
                         Geopointers.Add(new Geopointer(cgLoadDisplayList.GetDrawingLayer(ref c), cgLoadDisplayList.GetSegGeopointer(ref c), curMdlScale, curMdlOffset));
+                        break;
+                    case GeolayoutCommandTypes.ObjectShadown:
+                        cgObjectShadow.GetShadow(c, ObjectShadow);
+                        ObjectShadow.Enabled = true;
                         break;
                 }
 
@@ -165,6 +168,7 @@ namespace SM64Lib.Geolayout
         {
             NewGeoOffset = StartOffset;
             var commandsToRemove = new List<GeolayoutCommand>();
+            GeolayoutCommand cmdObjectShadow = null;
             int tIndexForGeoPointer = IndexForGeopointers;
 
             // Einstellungen übernehmen
@@ -184,17 +188,19 @@ namespace SM64Lib.Geolayout
                         switch ((GeoAsmPointer)switchExpr1)
                         {
                             case GeoAsmPointer.EnvironmentEffect:
-                                {
-                                    cgx18.SetParam1(ref c, (ushort)EnvironmentEffect);
-                                    break;
-                                }
+                                cgx18.SetParam1(ref c, (ushort)EnvironmentEffect);
+                                break;
                         }
-
+                        break;
+                    case GeolayoutCommandTypes.ObjectShadown:
+                        if (ObjectShadow.Enabled)
+                            cmdObjectShadow = c;
+                        else
+                            commandsToRemove.Add(c);
                         break;
                 }
 
                 currentPosition += (int)c.Length;
-                // If Not IndexForGeopointersFound Then IndexForGeopointers += 1
             }
 
             // Insert Geopointers
@@ -205,6 +211,22 @@ namespace SM64Lib.Geolayout
                 cgLoadDisplayList.SetSegGeopointer(ref tcommand, g.SegPointer);
                 Geolayoutscript.Insert(tIndexForGeoPointer, tcommand);
                 tIndexForGeoPointer += 1;
+            }
+
+            // Remove all other commands to remove
+            foreach (var cmd in commandsToRemove)
+                Geolayoutscript.Remove(cmd);
+
+            // Add Object Shadow command
+            if (ObjectShadow.Enabled)
+            {
+                if (cmdObjectShadow == null)
+                {
+                    cmdObjectShadow = new GeolayoutCommand("16 00 00 00 00 00 00 00");
+                    var indexToInsert = Geolayoutscript.IndexOfFirst(GeolayoutCommandTypes.StartOfNode) + 1;
+                    Geolayoutscript.Insert(indexToInsert, cmdObjectShadow);
+                }
+                cgObjectShadow.SetShadow(cmdObjectShadow, ObjectShadow);
             }
 
             // Write Geolayout to ROM
