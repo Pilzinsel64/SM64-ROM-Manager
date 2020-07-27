@@ -20,6 +20,8 @@ namespace SM64_ROM_Manager
         public ObjectShadowEditor(ObjectShadow shadow)
         {
             ObjectShadow = shadow;
+
+            // Initialize GUI
             InitializeComponent();
             ComboBoxEx_Type.ValueMember = nameof(Tag);
 
