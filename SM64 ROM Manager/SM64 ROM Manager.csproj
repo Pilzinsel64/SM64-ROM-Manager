@@ -522,6 +522,12 @@
     <Compile Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.Designer.cs">
       <DependentUpon>CustomObjectsDatabaseViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="RomManager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.Designer.cs">
+      <DependentUpon>ObjectShadowEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsValueSelection.cs" />
     <Compile Include="RomManager\GUI\Tools\HUDOptions\HUDOptionsValueTypes.cs" />
     <Compile Include="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.Designer.cs">
@@ -960,6 +966,9 @@
     <EmbeddedResource Include="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.de.resx">
       <DependentUpon>CustomObjectsManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.resx">
+      <DependentUpon>ObjectShadowEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.de.resx">
       <DependentUpon>AddressListEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -1334,6 +1343,8 @@
     <None Include="Resources\icons8_database_16px.png" />
     <None Include="Resources\icons8_data_recovery_16px.png" />
     <None Include="Resources\icons8_delete_database_16px.png" />
+    <None Include="Resources\icons8_batman_16px.png" />
+    <None Include="Resources\icons8_makeup_16px.png" />
     <Content Include="RomManager\Others\RomMap.txt" />
   </ItemGroup>
   <ItemGroup>

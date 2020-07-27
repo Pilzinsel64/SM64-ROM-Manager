@@ -117,109 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonX_CreateNewObject.Text" xml:space="preserve">
-    <value>Neues Objekt erstellen</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TextBoxX_ModelID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 63</value>
-  </data>
-  <data name="TextBoxX_ModelID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 20</value>
-  </data>
-  <data name="ButtonX_ImportModel.Text" xml:space="preserve">
-    <value>Modell importieren</value>
-  </data>
-  <data name="TextBoxX_Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 35</value>
-  </data>
-  <data name="TextBoxX_Name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 20</value>
-  </data>
-  <data name="LabelX_CollisionPointerDestinationsCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>88, 92</value>
-  </data>
-  <data name="LabelX_CollisionPointerDestinationsCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 23</value>
-  </data>
-  <data name="ButtonX_EditCollisionPointerDestinations.Text" xml:space="preserve">
-    <value>Bearbeiten</value>
-  </data>
-  <data name="LayoutControlItem1.Text" xml:space="preserve">
-    <value>Modell-ID:</value>
-  </data>
-  <data name="LayoutControlItem5.Text" xml:space="preserve">
-    <value>Kollisionspointer&lt;br/&gt;Adressen:</value>
-  </data>
-  <data name="ButtonItem_ImportModell.Text" xml:space="preserve">
-    <value>Modell importieren</value>
-  </data>
-  <data name="ButtonItem_ImportVisualMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIdJREFUOE9j
-        gIFpVS7/ScFQbQgAEvx6rpUoPAQNeH6oBoVPkgF3d5b+n9PggSEO1YYA2Ay4vDH//8xaN7CN6HJQbQiA
-        rujc6qz/06tdwZrxYah2TANOLk//P40SA0D4yiagF2rI9AIMP9xT/n9+kzeGOFQbAuAyAIQpikZseBAb
-        QAqG6GJgAACA6j3K+XcGAAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="ButtonItem_ImportVisualMap.Text" xml:space="preserve">
-    <value>Visuelles Modell importieren</value>
-  </data>
-  <data name="ButtonItem_ImportCollision.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIdJREFUOE9j
-        gIFpVS7/ScFQbQgAEvx6rpUoPAQNeH6oBoVPkgF3d5b+n9PggSEO1YYA2Ay4vDH//8xaN7CN6HJQbQiA
-        rujc6qz/06tdwZrxYah2TANOLk//P40SA0D4yiagF2rI9AIMP9xT/n9+kzeGOFQbAuAyAIQpikZseBAb
-        QAqG6GJgAACA6j3K+XcGAAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="ButtonItem_ImportCollision.Text" xml:space="preserve">
-    <value>Kollisionsmodell importieren</value>
-  </data>
-  <data name="ButtonItem_RemoveCollision.Text" xml:space="preserve">
-    <value>Kollisionsmodell entfernen</value>
-  </data>
-  <data name="ButtonItem_ShowVisualMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQZJREFUOE9j
-        oBhUzj6xq2Ta0X8l0478Jw0f/QfUu4MByPl38Nm//4de/CcJg/SA9IIMwKqAGAzSSxsDDt66/3//lob/
-        exeGgPGBLY3/D9x+gKEOiwH//u8/vPT//mVx/3fs2/0/vn3v/7O3Xv3ftW8XWGz/4WVgNTgN2L932v8j
-        azL/f//y+n9s257/7lFF/z2iisEGff/yCiiXAVQzA7cBB/ZM+X9sQ/7/H1/f/o9t3fPfLbLgv3tkIdiw
-        H1/f/D+2Pv///j3TcBuA7IVtu7f+j2ndDcY7gGyivADDsEDcPc8PjEkIRNIw1Qz4d/A5GUkZqAekl6Fi
-        9vHdIJPIweDMRBlgYAAAbiXgqY3ukMsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="ButtonItem_ShowVisualMap.Text" xml:space="preserve">
-    <value>Visuelles Modell anzeigen</value>
-  </data>
-  <data name="ButtonItem_ShowCollision.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQZJREFUOE9j
-        oBhUzj6xq2Ta0X8l0478Jw0f/QfUu4MByPl38Nm//4de/CcJg/SA9IIMwKqAGAzSSxsDDt66/3//lob/
-        exeGgPGBLY3/D9x+gKEOiwH//u8/vPT//mVx/3fs2/0/vn3v/7O3Xv3ftW8XWGz/4WVgNTgN2L932v8j
-        azL/f//y+n9s257/7lFF/z2iisEGff/yCiiXAVQzA7cBB/ZM+X9sQ/7/H1/f/o9t3fPfLbLgv3tkIdiw
-        H1/f/D+2Pv///j3TcBuA7IVtu7f+j2ndDcY7gGyivADDsEDcPc8PjEkIRNIw1Qz4d/A5GUkZqAekl6Fi
-        9vHdIJPIweDMRBlgYAAAbiXgqY3ukMsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="ButtonItem_ShowCollision.Text" xml:space="preserve">
-    <value>Kollisionsmodell anzeigen</value>
-  </data>
-  <data name="ButtonItem_ObjectShadow.Text" xml:space="preserve">
-    <value>Objekt-Schatten</value>
-  </data>
-  <data name="ButtonItem_EditObjectShadow.Text" xml:space="preserve">
-    <value>Bearbeiten</value>
-  </data>
-  <data name="ButtonItem_RemoveObjectShadow.Text" xml:space="preserve">
-    <value>Entfernen</value>
-  </data>
-  <data name="ButtonItem_CopyCollisionPointer.Text" xml:space="preserve">
-    <value>Kollisionspointer kopieren</value>
-  </data>
-  <data name="ButtonItem_RemoveObject.Text" xml:space="preserve">
-    <value>Objekt entfernen</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAgIAAAAEAIAAoCAEAJgAAAAAAAAABACAAz6kAAE4IAQAoAAAAgAAAAAABAAABACAAAAAAAAAA
@@ -2076,8 +1974,5 @@
         MDEtMDU6MDDkOlH3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEyLTExLTIwVDA5OjAzOjUzLTA2OjAwpVUc
         +QAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Modell-Bank-Manager</value>
   </data>
 </root>

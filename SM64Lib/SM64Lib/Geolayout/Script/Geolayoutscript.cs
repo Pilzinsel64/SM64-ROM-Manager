@@ -92,7 +92,7 @@ namespace SM64Lib.Geolayout.Script
                     case GeolayoutCommandTypes.BranchAndStore:
                         lenth = 0x8;
                         break;
-                    case GeolayoutCommandTypes.x0A:
+                    case GeolayoutCommandTypes.CameraFrustrum:
                         {
                             var switchExpr = data.ReadByte();
                             switch (switchExpr)

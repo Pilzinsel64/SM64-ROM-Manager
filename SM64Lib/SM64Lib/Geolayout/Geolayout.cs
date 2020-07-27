@@ -174,6 +174,7 @@ namespace SM64Lib.Geolayout
             GeolayoutCommand cmdObjectShadow = null;
             GeolayoutCommand cmdDrawingDistance = null;
             int tIndexForGeoPointer = IndexForGeopointers;
+            var isForLevel = false;
 
             // Einstellungen übernehmen
             int currentPosition = 0;
@@ -208,6 +209,10 @@ namespace SM64Lib.Geolayout
                         else
                             cmdDrawingDistance = c;
                         break;
+                    case GeolayoutCommandTypes.CameraFrustrum:
+                    case GeolayoutCommandTypes.SetScreenRenderArea:
+                        isForLevel = true;
+                        break;
                 }
 
                 currentPosition += (int)c.Length;
@@ -230,21 +235,24 @@ namespace SM64Lib.Geolayout
                 cmd.Close();
             }
 
-            // Add Geolayout Start command
-            if (ObjectShadow.Enabled)
+            // Add Geolayout Start command for non-level geolayouts
+            if (!isForLevel)
             {
-                // Add Object Shadow
-                if (cmdObjectShadow == null)
+                if (ObjectShadow.Enabled)
                 {
-                    cmdObjectShadow = new GeolayoutCommand("16 00 00 00 00 00 00 00");
-                    Geolayoutscript.Insert(0, cmdObjectShadow);
+                    // Add Object Shadow
+                    if (cmdObjectShadow == null)
+                    {
+                        cmdObjectShadow = new GeolayoutCommand("16 00 00 00 00 00 00 00");
+                        Geolayoutscript.Insert(0, cmdObjectShadow);
+                    }
+                    cgObjectShadow.SetShadow(cmdObjectShadow, ObjectShadow);
                 }
-                cgObjectShadow.SetShadow(cmdObjectShadow, ObjectShadow);
-            }
-            else
-            {
-                if (cmdDrawingDistance == null)
-                    Geolayoutscript.Insert(0, new GeolayoutCommand("20 00 0F A0"));
+                else
+                {
+                    if (cmdDrawingDistance == null)
+                        Geolayoutscript.Insert(0, new GeolayoutCommand("20 00 0F A0"));
+                }
             }
 
             // Write Geolayout to ROM

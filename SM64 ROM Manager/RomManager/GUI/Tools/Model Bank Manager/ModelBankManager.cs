@@ -18,9 +18,6 @@ namespace SM64_ROM_Manager
 
         public ModelBankManager(RomManager rommgr, CustomModelBank objBank)
         {
-
-            // G U I
-
             this.Shown += CustomBankManager_Shown;
             InitializeComponent();
             base.UpdateAmbientColors();
@@ -258,6 +255,20 @@ namespace SM64_ROM_Manager
             LoadList();
         }
 
+        private void EditObjectShadow()
+        {
+            var editor = new ObjectShadowEditor(curObj.Geolayout.ObjectShadow);
+            if (editor.ShowDialog(this) == DialogResult.OK)
+                curObj.Geolayout.ObjectShadow.Enabled = true;
+        }
+
+        private void RemoveObjectShadow()
+        {
+            curObj.Geolayout.ObjectShadow.Enabled = false;
+        }
+
+        // G U I
+
         private void TextBoxX_ModelID_TextChanged(object sender, EventArgs e)
         {
             try
@@ -335,6 +346,21 @@ namespace SM64_ROM_Manager
         private void ButtonItem_CopyCollisionPointer_Click(object sender, EventArgs e)
         {
             CopyCollisionPointer(curObj);
+        }
+
+        private void ButtonItem_EditObjectShadow_Click(object sender, EventArgs e)
+        {
+            EditObjectShadow();
+        }
+
+        private void ButtonItem_RemoveObjectShadow_Click(object sender, EventArgs e)
+        {
+            RemoveObjectShadow();
+        }
+
+        private void CM_Object_PopupOpen(object sender, PopupOpenEventArgs e)
+        {
+            ButtonItem_RemoveObjectShadow.Enabled = curObj.Geolayout.ObjectShadow.Enabled;
         }
     }
 }

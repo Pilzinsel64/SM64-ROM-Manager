@@ -11,7 +11,7 @@ namespace SM64Lib.Geolayout.Script
         EndOfNode = 0x5,
         SetScreenRenderArea = 0x8,
         Scale1 = 0x9,
-        x0A = 0xA,
+        CameraFrustrum = 0xA,
         x0B = 0xB,
         x0C = 0xC,
         x0D = 0xD,

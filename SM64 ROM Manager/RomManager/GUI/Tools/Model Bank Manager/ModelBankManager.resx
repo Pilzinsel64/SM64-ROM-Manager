@@ -117,295 +117,116 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ItemListBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ItemListBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 122</value>
-  </data>
-  <data name="ItemListBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 321</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ItemListBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ItemListBox1.Text" xml:space="preserve">
-    <value>ItemListBox1</value>
-  </data>
-  <data name="&gt;&gt;ItemListBox1.Name" xml:space="preserve">
-    <value>ItemListBox1</value>
-  </data>
-  <data name="&gt;&gt;ItemListBox1.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Publics.Controls.ItemListBox, SM64 ROM Manager.Publics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ItemListBox1.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;ItemListBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ButtonX_CreateNewObject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="ButtonX_CreateNewObject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 419</value>
-  </data>
-  <data name="ButtonX_CreateNewObject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 23</value>
-  </data>
-  <data name="ButtonX_CreateNewObject.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ButtonX_CreateNewObject.Text" xml:space="preserve">
-    <value>Create new Object</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_CreateNewObject.Name" xml:space="preserve">
-    <value>ButtonX_CreateNewObject</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_CreateNewObject.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_CreateNewObject.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_CreateNewObject.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ButtonX_RemoveObject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="ButtonX_RemoveObject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 4</value>
-  </data>
-  <data name="ButtonX_RemoveObject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="ButtonX_RemoveObject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="ButtonX_RemoveObject.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveObject.Name" xml:space="preserve">
-    <value>ButtonX_RemoveObject</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveObject.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveObject.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveObject.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="TextBoxX_ModelID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 63</value>
-  </data>
-  <data name="TextBoxX_ModelID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="TextBoxX_ModelID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 20</value>
-  </data>
   <data name="TextBoxX_ModelID.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;TextBoxX_ModelID.Name" xml:space="preserve">
-    <value>TextBoxX_ModelID</value>
+  <data name="ButtonItem_EditObjectShadow.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportVisualMap.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxX_Name.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;TextBoxX_ModelID.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;TextBoxX_ModelID.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ModelID.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="ButtonX_ImportModel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="ButtonX_ImportModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="ButtonX_ImportModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="ButtonX_ImportModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 23</value>
-  </data>
-  <data name="ButtonX_ImportModel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ButtonX_ImportModel.Text" xml:space="preserve">
-    <value>Import Model</value>
+  <data name="&gt;&gt;ButtonItem_ImportCollision.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX_ImportModel.Name" xml:space="preserve">
     <value>ButtonX_ImportModel</value>
   </data>
-  <data name="&gt;&gt;ButtonX_ImportModel.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="ButtonItem_ShowVisualMap.Text" xml:space="preserve">
+    <value>Show Visual Map</value>
   </data>
-  <data name="&gt;&gt;ButtonX_ImportModel.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
+  <data name="&gt;&gt;ContextMenuBar1.Name" xml:space="preserve">
+    <value>ContextMenuBar1</value>
   </data>
-  <data name="&gt;&gt;ButtonX_ImportModel.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;ButtonItem_ImportModell.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;ButtonItem_RemoveCollision.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveCollision</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="TextBoxX_Name.Location" type="System.Drawing.Point, System.Drawing">
     <value>60, 35</value>
-  </data>
-  <data name="TextBoxX_Name.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="TextBoxX_Name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 20</value>
-  </data>
-  <data name="TextBoxX_Name.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_Name.Name" xml:space="preserve">
-    <value>TextBoxX_Name</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_Name.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_Name.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_Name.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="LabelX_CollisionPointerDestinationsCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 92</value>
-  </data>
-  <data name="LabelX_CollisionPointerDestinationsCount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="LabelX_CollisionPointerDestinationsCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 23</value>
-  </data>
-  <data name="LabelX_CollisionPointerDestinationsCount.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="LabelX_CollisionPointerDestinationsCount.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LabelX_CollisionPointerDestinationsCount.Name" xml:space="preserve">
-    <value>LabelX_CollisionPointerDestinationsCount</value>
-  </data>
-  <data name="&gt;&gt;LabelX_CollisionPointerDestinationsCount.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX_CollisionPointerDestinationsCount.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;LabelX_CollisionPointerDestinationsCount.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <data name="ButtonX_EditCollisionPointerDestinations.Location" type="System.Drawing.Point, System.Drawing">
     <value>145, 92</value>
   </data>
-  <data name="ButtonX_EditCollisionPointerDestinations.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="&gt;&gt;ButtonX_ImportModel.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="TextBoxX_ModelID.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="ButtonX_EditCollisionPointerDestinations.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 23</value>
+  <data name="&gt;&gt;ButtonItem_ObjectShadow.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonX_EditCollisionPointerDestinations.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;LayoutControlItem3.Name" xml:space="preserve">
+    <value>LayoutControlItem3</value>
   </data>
-  <data name="ButtonX_EditCollisionPointerDestinations.Text" xml:space="preserve">
-    <value>Edit</value>
+  <data name="&gt;&gt;ButtonItem_EditObjectShadow.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonX_EditCollisionPointerDestinations.Name" xml:space="preserve">
-    <value>ButtonX_EditCollisionPointerDestinations</value>
+  <data name="ButtonItem_RemoveObjectShadow.Text" xml:space="preserve">
+    <value>Remove</value>
   </data>
-  <data name="&gt;&gt;ButtonX_EditCollisionPointerDestinations.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="TextBoxX_Name.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;ButtonX_EditCollisionPointerDestinations.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
+  <data name="&gt;&gt;ButtonItem_EditObjectShadow.Name" xml:space="preserve">
+    <value>ButtonItem_EditObjectShadow</value>
   </data>
-  <data name="&gt;&gt;ButtonX_EditCollisionPointerDestinations.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="ButtonItem_RemoveCollision.Text" xml:space="preserve">
+    <value>Remove Collision</value>
   </data>
-  <data name="LayoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="&gt;&gt;LayoutControlItem2.Name" xml:space="preserve">
+    <value>LayoutControlItem2</value>
   </data>
-  <data name="LayoutControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;LayoutGroup_ModelInfo.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutGroup, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="LayoutControlItem2.Text" xml:space="preserve">
-    <value>Name:</value>
+  <data name="TextBoxX_Name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 20</value>
   </data>
-  <data name="LayoutControlItem1.Text" xml:space="preserve">
-    <value>Model-ID:</value>
+  <data name="&gt;&gt;ButtonItem_RemoveObject.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveObject</value>
   </data>
-  <data name="LayoutControlItem5.Text" xml:space="preserve">
-    <value>Collision Pointer&lt;br/&gt;ROM Destinations:</value>
+  <data name="&gt;&gt;LayoutControlItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="LayoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 122</value>
-  </data>
-  <data name="LayoutControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;LayoutControl1.Name" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;LayoutControl1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LayoutControl1.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LayoutControl1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 443</value>
-  </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ContextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="ButtonItem_ImportModell.Text" xml:space="preserve">
-    <value>Import Model</value>
-  </data>
-  <data name="ButtonItem_ImportVisualMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIdJREFUOE9j
-        gIFpVS7/ScFQbQgAEvx6rpUoPAQNeH6oBoVPkgF3d5b+n9PggSEO1YYA2Ay4vDH//8xaN7CN6HJQbQiA
-        rujc6qz/06tdwZrxYah2TANOLk//P40SA0D4yiagF2rI9AIMP9xT/n9+kzeGOFQbAuAyAIQpikZseBAb
-        QAqG6GJgAACA6j3K+XcGAAAAAABJRU5ErkJggg==
-</value>
+  <data name="&gt;&gt;ButtonItem_RemoveObjectShadow.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="ButtonItem_ImportVisualMap.Text" xml:space="preserve">
     <value>Import Visual Map</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlItem6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_ModelID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>60, 63</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuBar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ContextMenuBar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="LabelX_CollisionPointerDestinationsCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>100, 92</value>
   </data>
   <data name="ButtonItem_ImportCollision.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -415,79 +236,92 @@
         QAqG6GJgAACA6j3K+XcGAAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="ButtonItem_ImportCollision.Text" xml:space="preserve">
-    <value>Import Collision</value>
+  <data name="&gt;&gt;ButtonItem_CopyCollisionPointer.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonItem_RemoveCollision.Text" xml:space="preserve">
-    <value>Remove Collision</value>
+  <data name="ContextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
-  <data name="ButtonItem_ShowVisualMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQZJREFUOE9j
-        oBhUzj6xq2Ta0X8l0478Jw0f/QfUu4MByPl38Nm//4de/CcJg/SA9IIMwKqAGAzSSxsDDt66/3//lob/
-        exeGgPGBLY3/D9x+gKEOiwH//u8/vPT//mVx/3fs2/0/vn3v/7O3Xv3ftW8XWGz/4WVgNTgN2L932v8j
-        azL/f//y+n9s257/7lFF/z2iisEGff/yCiiXAVQzA7cBB/ZM+X9sQ/7/H1/f/o9t3fPfLbLgv3tkIdiw
-        H1/f/D+2Pv///j3TcBuA7IVtu7f+j2ndDcY7gGyivADDsEDcPc8PjEkIRNIw1Qz4d/A5GUkZqAekl6Fi
-        9vHdIJPIweDMRBlgYAAAbiXgqY3ukMsAAAAASUVORK5CYII=
-</value>
+  <data name="&gt;&gt;TextBoxX_ModelID.Name" xml:space="preserve">
+    <value>TextBoxX_ModelID</value>
   </data>
-  <data name="ButtonItem_ShowVisualMap.Text" xml:space="preserve">
-    <value>Show Visual Map</value>
+  <data name="&gt;&gt;CM_Object.Name" xml:space="preserve">
+    <value>CM_Object</value>
   </data>
-  <data name="ButtonItem_ShowCollision.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQZJREFUOE9j
-        oBhUzj6xq2Ta0X8l0478Jw0f/QfUu4MByPl38Nm//4de/CcJg/SA9IIMwKqAGAzSSxsDDt66/3//lob/
-        exeGgPGBLY3/D9x+gKEOiwH//u8/vPT//mVx/3fs2/0/vn3v/7O3Xv3ftW8XWGz/4WVgNTgN2L932v8j
-        azL/f//y+n9s257/7lFF/z2iisEGff/yCiiXAVQzA7cBB/ZM+X9sQ/7/H1/f/o9t3fPfLbLgv3tkIdiw
-        H1/f/D+2Pv///j3TcBuA7IVtu7f+j2ndDcY7gGyivADDsEDcPc8PjEkIRNIw1Qz4d/A5GUkZqAekl6Fi
-        9vHdIJPIweDMRBlgYAAAbiXgqY3ukMsAAAAASUVORK5CYII=
-</value>
+  <data name="&gt;&gt;LayoutGroup_CollisionPointerDestinations.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutGroup, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonItem_ShowCollision.Text" xml:space="preserve">
-    <value>Show Collision</value>
+  <data name="&gt;&gt;ButtonItem_ImportCollision.Name" xml:space="preserve">
+    <value>ButtonItem_ImportCollision</value>
   </data>
-  <data name="ButtonItem_CopyCollisionPointer.Text" xml:space="preserve">
-    <value>Copy Collision Pointer</value>
+  <data name="LayoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 122</value>
+  </data>
+  <data name="&gt;&gt;LabelX_CollisionPointerDestinationsCount.Name" xml:space="preserve">
+    <value>LabelX_CollisionPointerDestinationsCount</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveObject.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ShowCollision.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;LabelX_CollisionPointerDestinationsCount.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="ButtonItem_RemoveObject.Text" xml:space="preserve">
     <value>Remove Object</value>
   </data>
-  <data name="CM_Object.Text" xml:space="preserve">
-    <value>CM_Object</value>
+  <data name="LayoutControlItem1.Text" xml:space="preserve">
+    <value>Model-ID:</value>
   </data>
-  <data name="ContextMenuBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 351</value>
+  <data name="&gt;&gt;LayoutControl1.Parent" xml:space="preserve">
+    <value>Panel1</value>
   </data>
-  <data name="ContextMenuBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+  <data name="&gt;&gt;LayoutControlItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ContextMenuBar1.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="resource.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="ContextMenuBar1.Text" xml:space="preserve">
-    <value>ContextMenuBar1</value>
+  <data name="LayoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;ContextMenuBar1.Name" xml:space="preserve">
-    <value>ContextMenuBar1</value>
+  <data name="ButtonX_RemoveObject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 4</value>
   </data>
-  <data name="&gt;&gt;ContextMenuBar1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ContextMenuBar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="LabelX_CollisionPointerDestinationsCount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;ContextMenuBar1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="ButtonX_RemoveObject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 23</value>
   </data>
-  <data name="&gt;&gt;ContextMenuBar1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;ButtonItem_RemoveObjectShadow.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveObjectShadow</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="ButtonX_ImportModel.Text" xml:space="preserve">
+    <value>Import Model</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>231, 443</value>
+  <data name="&gt;&gt;TextBoxX_ModelID.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditCollisionPointerDestinations.Name" xml:space="preserve">
+    <value>ButtonX_EditCollisionPointerDestinations</value>
+  </data>
+  <data name="LayoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ButtonX_ImportModel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="ButtonItem_ShowCollision.Text" xml:space="preserve">
+    <value>Show Collision</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_CreateNewObject.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -584,118 +418,365 @@
         AAAAAAABAAAAAwAAAAcAAAAPAAAAPwAAAD8AAAD/
 </value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
+  <data name="&gt;&gt;ButtonX_ImportModel.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Model Bank Manager</value>
+  <data name="&gt;&gt;ButtonX_EditCollisionPointerDestinations.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
   </data>
-  <data name="&gt;&gt;LayoutControlItem3.Name" xml:space="preserve">
-    <value>LayoutControlItem3</value>
+  <data name="&gt;&gt;ContextMenuBar1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;LayoutControlItem3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="ButtonItem_CopyCollisionPointer.Text" xml:space="preserve">
+    <value>Copy Collision Pointer</value>
   </data>
-  <data name="&gt;&gt;LayoutControlItem4.Name" xml:space="preserve">
-    <value>LayoutControlItem4</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LayoutGroup_ModelInfo.Name" xml:space="preserve">
-    <value>LayoutGroup_ModelInfo</value>
-  </data>
-  <data name="&gt;&gt;LayoutGroup_ModelInfo.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutGroup, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem2.Name" xml:space="preserve">
-    <value>LayoutControlItem2</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem1.Name" xml:space="preserve">
-    <value>LayoutControlItem1</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LayoutGroup_CollisionPointerDestinations.Name" xml:space="preserve">
-    <value>LayoutGroup_CollisionPointerDestinations</value>
-  </data>
-  <data name="&gt;&gt;LayoutGroup_CollisionPointerDestinations.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutGroup, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem5.Name" xml:space="preserve">
-    <value>LayoutControlItem5</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem6.Name" xml:space="preserve">
-    <value>LayoutControlItem6</value>
-  </data>
-  <data name="&gt;&gt;LayoutControlItem6.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CM_Object.Name" xml:space="preserve">
-    <value>CM_Object</value>
+  <data name="ItemListBox1.Text" xml:space="preserve">
+    <value>ItemListBox1</value>
   </data>
   <data name="&gt;&gt;CM_Object.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ImportModell.Name" xml:space="preserve">
-    <value>ButtonItem_ImportModell</value>
+  <data name="TextBoxX_ModelID.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;ButtonItem_ImportModell.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ItemListBox1.Name" xml:space="preserve">
+    <value>ItemListBox1</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ImportVisualMap.Name" xml:space="preserve">
-    <value>ButtonItem_ImportVisualMap</value>
+  <data name="LabelX_CollisionPointerDestinationsCount.Text" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ImportVisualMap.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;LabelX_CollisionPointerDestinationsCount.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ImportCollision.Name" xml:space="preserve">
-    <value>ButtonItem_ImportCollision</value>
+  <data name="ButtonX_ImportModel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 23</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ImportCollision.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveCollision.Name" xml:space="preserve">
-    <value>ButtonItem_RemoveCollision</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveCollision.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ShowVisualMap.Name" xml:space="preserve">
-    <value>ButtonItem_ShowVisualMap</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ShowVisualMap.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ShowCollision.Name" xml:space="preserve">
-    <value>ButtonItem_ShowCollision</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ShowCollision.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CopyCollisionPointer.Name" xml:space="preserve">
-    <value>ButtonItem_CopyCollisionPointer</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CopyCollisionPointer.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveObject.Name" xml:space="preserve">
-    <value>ButtonItem_RemoveObject</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveObject.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="TextBoxX_Name.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ModelBankManager</value>
   </data>
+  <data name="&gt;&gt;ButtonItem_ImportModell.Name" xml:space="preserve">
+    <value>ButtonItem_ImportModell</value>
+  </data>
+  <data name="ButtonX_CreateNewObject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 23</value>
+  </data>
+  <data name="ItemListBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 321</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 443</value>
+  </data>
+  <data name="ButtonItem_ImportVisualMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIdJREFUOE9j
+        gIFpVS7/ScFQbQgAEvx6rpUoPAQNeH6oBoVPkgF3d5b+n9PggSEO1YYA2Ay4vDH//8xaN7CN6HJQbQiA
+        rujc6qz/06tdwZrxYah2TANOLk//P40SA0D4yiagF2rI9AIMP9xT/n9+kzeGOFQbAuAyAIQpikZseBAb
+        QAqG6GJgAACA6j3K+XcGAAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ButtonX_RemoveObject.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LabelX_CollisionPointerDestinationsCount.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;LayoutControl1.Name" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Name.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="ContextMenuBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>122, 351</value>
+  </data>
+  <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;LayoutGroup_ModelInfo.Name" xml:space="preserve">
+    <value>LayoutGroup_ModelInfo</value>
+  </data>
+  <data name="&gt;&gt;ItemListBox1.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditCollisionPointerDestinations.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonX_ImportModel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ItemListBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 122</value>
+  </data>
+  <data name="ContextMenuBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonX_EditCollisionPointerDestinations.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_ImportModel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_RemoveCollision.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonItem_ShowVisualMap.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQZJREFUOE9j
+        oBhUzj6xq2Ta0X8l0478Jw0f/QfUu4MByPl38Nm//4de/CcJg/SA9IIMwKqAGAzSSxsDDt66/3//lob/
+        exeGgPGBLY3/D9x+gKEOiwH//u8/vPT//mVx/3fs2/0/vn3v/7O3Xv3ftW8XWGz/4WVgNTgN2L932v8j
+        azL/f//y+n9s257/7lFF/z2iisEGff/yCiiXAVQzA7cBB/ZM+X9sQ/7/H1/f/o9t3fPfLbLgv3tkIdiw
+        H1/f/D+2Pv///j3TcBuA7IVtu7f+j2ndDcY7gGyivADDsEDcPc8PjEkIRNIw1Qz4d/A5GUkZqAekl6Fi
+        9vHdIJPIweDMRBlgYAAAbiXgqY3ukMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Model Bank Manager</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_CreateNewObject.Name" xml:space="preserve">
+    <value>ButtonX_CreateNewObject</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonItem_ImportModell.Text" xml:space="preserve">
+    <value>Import Model</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportVisualMap.Name" xml:space="preserve">
+    <value>ButtonItem_ImportVisualMap</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="CM_Object.Text" xml:space="preserve">
+    <value>CM_Object</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Name.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonX_EditCollisionPointerDestinations.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ButtonX_EditCollisionPointerDestinations.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ButtonX_CreateNewObject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="ButtonX_ImportModel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ItemListBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ItemListBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ButtonX_RemoveObject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonItem_ObjectShadow.Text" xml:space="preserve">
+    <value>Object Shadow</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveObject.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="ButtonX_EditCollisionPointerDestinations.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 23</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CopyCollisionPointer.Name" xml:space="preserve">
+    <value>ButtonItem_CopyCollisionPointer</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="resource.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ButtonX_CreateNewObject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 419</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlItem5.Name" xml:space="preserve">
+    <value>LayoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Name.Name" xml:space="preserve">
+    <value>TextBoxX_Name</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="LayoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_ModelID.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlItem2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ItemListBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;ButtonItem_ShowCollision.Name" xml:space="preserve">
+    <value>ButtonItem_ShowCollision</value>
+  </data>
+  <data name="ContextMenuBar1.Text" xml:space="preserve">
+    <value>ContextMenuBar1</value>
+  </data>
+  <data name="&gt;&gt;LayoutGroup_CollisionPointerDestinations.Name" xml:space="preserve">
+    <value>LayoutGroup_CollisionPointerDestinations</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_CreateNewObject.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_Name.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ButtonItem_RemoveObject.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_ImportModel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>231, 443</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ObjectShadow.Name" xml:space="preserve">
+    <value>ButtonItem_ObjectShadow</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonItem_ShowCollision.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQZJREFUOE9j
+        oBhUzj6xq2Ta0X8l0478Jw0f/QfUu4MByPl38Nm//4de/CcJg/SA9IIMwKqAGAzSSxsDDt66/3//lob/
+        exeGgPGBLY3/D9x+gKEOiwH//u8/vPT//mVx/3fs2/0/vn3v/7O3Xv3ftW8XWGz/4WVgNTgN2L932v8j
+        azL/f//y+n9s257/7lFF/z2iisEGff/yCiiXAVQzA7cBB/ZM+X9sQ/7/H1/f/o9t3fPfLbLgv3tkIdiw
+        H1/f/D+2Pv///j3TcBuA7IVtu7f+j2ndDcY7gGyivADDsEDcPc8PjEkIRNIw1Qz4d/A5GUkZqAekl6Fi
+        9vHdIJPIweDMRBlgYAAAbiXgqY3ukMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ShowVisualMap.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="LayoutControlItem5.Text" xml:space="preserve">
+    <value>Collision Pointer&lt;br/&gt;ROM Destinations:</value>
+  </data>
+  <data name="&gt;&gt;LayoutControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlItem1.Name" xml:space="preserve">
+    <value>LayoutControlItem1</value>
+  </data>
+  <data name="&gt;&gt;LabelX_CollisionPointerDestinationsCount.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonX_RemoveObject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="TextBoxX_ModelID.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveObject.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ContextMenuBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="&gt;&gt;LayoutControl1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ItemListBox1.Type" xml:space="preserve">
+    <value>SM64_ROM_Manager.Publics.Controls.ItemListBox, SM64 ROM Manager.Publics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveObject.Name" xml:space="preserve">
+    <value>ButtonX_RemoveObject</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlItem6.Name" xml:space="preserve">
+    <value>LayoutControlItem6</value>
+  </data>
+  <data name="TextBoxX_ModelID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 20</value>
+  </data>
+  <data name="TextBoxX_Name.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlItem4.Name" xml:space="preserve">
+    <value>LayoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;LayoutControlItem5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="ButtonItem_ImportCollision.Text" xml:space="preserve">
+    <value>Import Collision</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditCollisionPointerDestinations.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ButtonX_CreateNewObject.Text" xml:space="preserve">
+    <value>Create new Object</value>
+  </data>
+  <data name="LayoutControlItem2.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_CreateNewObject.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ShowVisualMap.Name" xml:space="preserve">
+    <value>ButtonItem_ShowVisualMap</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_Name.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="LabelX_CollisionPointerDestinationsCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 23</value>
+  </data>
+  <data name="ButtonX_CreateNewObject.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
