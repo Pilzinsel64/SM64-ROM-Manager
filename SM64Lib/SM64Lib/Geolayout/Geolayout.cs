@@ -155,6 +155,9 @@ namespace SM64Lib.Geolayout
                         cgObjectShadow.GetShadow(c, ObjectShadow);
                         ObjectShadow.Enabled = true;
                         break;
+                    case GeolayoutCommandTypes.DrawingDistance:
+                        ObjectShadow.Enabled = false;
+                        break;
                 }
 
                 cIndex += 1;
@@ -169,6 +172,7 @@ namespace SM64Lib.Geolayout
             NewGeoOffset = StartOffset;
             var commandsToRemove = new List<GeolayoutCommand>();
             GeolayoutCommand cmdObjectShadow = null;
+            GeolayoutCommand cmdDrawingDistance = null;
             int tIndexForGeoPointer = IndexForGeopointers;
 
             // Einstellungen übernehmen
@@ -198,6 +202,12 @@ namespace SM64Lib.Geolayout
                         else
                             commandsToRemove.Add(c);
                         break;
+                    case GeolayoutCommandTypes.DrawingDistance:
+                        if (ObjectShadow.Enabled)
+                            commandsToRemove.Add(c);
+                        else
+                            cmdDrawingDistance = c;
+                        break;
                 }
 
                 currentPosition += (int)c.Length;
@@ -215,18 +225,26 @@ namespace SM64Lib.Geolayout
 
             // Remove all other commands to remove
             foreach (var cmd in commandsToRemove)
+            {
                 Geolayoutscript.Remove(cmd);
+                cmd.Close();
+            }
 
-            // Add Object Shadow command
+            // Add Geolayout Start command
             if (ObjectShadow.Enabled)
             {
+                // Add Object Shadow
                 if (cmdObjectShadow == null)
                 {
                     cmdObjectShadow = new GeolayoutCommand("16 00 00 00 00 00 00 00");
-                    var indexToInsert = Geolayoutscript.IndexOfFirst(GeolayoutCommandTypes.StartOfNode) + 1;
-                    Geolayoutscript.Insert(indexToInsert, cmdObjectShadow);
+                    Geolayoutscript.Insert(0, cmdObjectShadow);
                 }
                 cgObjectShadow.SetShadow(cmdObjectShadow, ObjectShadow);
+            }
+            else
+            {
+                if (cmdDrawingDistance == null)
+                    Geolayoutscript.Insert(0, new GeolayoutCommand("20 00 0F A0"));
             }
 
             // Write Geolayout to ROM
