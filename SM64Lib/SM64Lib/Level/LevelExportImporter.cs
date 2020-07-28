@@ -24,6 +24,8 @@ namespace SM64Lib.Levels
                     }
                 }
             }
+            else
+                throw new NotSupportedException();
         }
 
         public static void ImportArea(LevelExport export, Level destLevel, KeyValuePair<LevelArea, byte>[] areaIDs)
@@ -41,6 +43,8 @@ namespace SM64Lib.Levels
                     }
                 }
             }
+            else
+                throw new NotSupportedException();
         }
 
         public static void ImportScript(LevelExport export, LevelArea destArea, LevelscriptCommand[] allowedCommands)
@@ -64,6 +68,8 @@ namespace SM64Lib.Levels
                     }
                 }
             }
+            else
+                throw new NotSupportedException();
         }
     }
 }
