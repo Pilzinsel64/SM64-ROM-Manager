@@ -194,7 +194,6 @@
     <Compile Include="SM64Lib\Level\LevelExportContentType.cs" />
     <Compile Include="SM64Lib\Level\LevelExportFileFormat.cs" />
     <Compile Include="SM64Lib\Level\LevelExportImporter.cs" />
-    <Compile Include="SM64Lib\Level\LevelExportImportParameters.cs" />
     <Compile Include="SM64Lib\Level\LevelList.cs" />
     <Compile Include="SM64Lib\Level\LevelSaveResult.cs" />
     <Compile Include="SM64Lib\Level\LevelType.cs" />
