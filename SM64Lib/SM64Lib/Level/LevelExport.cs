@@ -53,7 +53,7 @@ namespace SM64Lib.Levels
             fs.Close();
         }
 
-        public LevelExport ReadFromFile(string filePath)
+        public static LevelExport ReadFromFile(string filePath)
         {
             // Open streams
             var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
