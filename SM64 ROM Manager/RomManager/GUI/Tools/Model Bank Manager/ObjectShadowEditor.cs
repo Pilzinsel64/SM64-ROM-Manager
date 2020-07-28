@@ -24,16 +24,16 @@ namespace SM64_ROM_Manager
             // Initialize GUI
             InitializeComponent();
             ComboBoxEx_Type.ValueMember = nameof(Tag);
+            ComboBoxEx_Type.DisplayMember = nameof(KeyValuePair<string, ObjectShadowType>.Key);
+            ComboBoxEx_Type.ValueMember = nameof(KeyValuePair<string, ObjectShadowType>.Value);
 
             // Add values to combobox
-            ComboBoxEx_Type.Items.Add(new ComboItem { Text = nameof(ObjectShadowType.Circle_9Verts), Tag = ObjectShadowType.Circle_9Verts });
-            ComboBoxEx_Type.Items.Add(new ComboItem { Text = nameof(ObjectShadowType.Circle_4Verts), Tag = ObjectShadowType.Circle_4Verts });
-            ComboBoxEx_Type.Items.Add(new ComboItem { Text = nameof(ObjectShadowType.Circle_4Verts_Flat_Unused), Tag = ObjectShadowType.Circle_4Verts_Flat_Unused });
-            ComboBoxEx_Type.Items.Add(new ComboItem { Text = nameof(ObjectShadowType.SquarePermanent), Tag = ObjectShadowType.SquarePermanent });
-            ComboBoxEx_Type.Items.Add(new ComboItem { Text = nameof(ObjectShadowType.SquareScaleable), Tag = ObjectShadowType.SquareScaleable });
-            ComboBoxEx_Type.Items.Add(new ComboItem { Text = nameof(ObjectShadowType.SquareTooglable), Tag = ObjectShadowType.SquareTooglable });
-            ComboBoxEx_Type.Items.Add(new ComboItem { Text = nameof(ObjectShadowType.RectangleHardcodedOffset), Tag = ObjectShadowType.RectangleHardcodedOffset });
-            ComboBoxEx_Type.Items.Add(new ComboItem { Text = nameof(ObjectShadowType.CirclePlayer), Tag = ObjectShadowType.CirclePlayer });
+            BindingList<KeyValuePair<string, ObjectShadowType>> comboBoxEx_Type_Items = new BindingList<KeyValuePair<string, ObjectShadowType>>();
+            var objectShadowTypeNames = Enum.GetNames(typeof(ObjectShadowType));
+            var objectShadowTypeValues = (ObjectShadowType[])Enum.GetValues(typeof(ObjectShadowType));
+            for (int i = 0; i < objectShadowTypeNames.Length; i++)
+                comboBoxEx_Type_Items.Add(new KeyValuePair<string, ObjectShadowType>(objectShadowTypeNames[i], objectShadowTypeValues[i]));
+            ComboBoxEx_Type.DataSource = comboBoxEx_Type_Items;
         }
 
         private void LoadProps()

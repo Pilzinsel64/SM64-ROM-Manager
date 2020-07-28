@@ -33,14 +33,14 @@
             this.ComboBoxEx_Type = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.IntegerInput_Diameter = new DevComponents.Editors.IntegerInput();
             this.IntegerInput_Opacity = new DevComponents.Editors.IntegerInput();
+            this.ButtonX_Save = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_Cancel = new DevComponents.DotNetBar.ButtonX();
             this.layoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.ButtonX_Cancel = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX_Save = new DevComponents.DotNetBar.ButtonX();
+            this.layoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
             this.layoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem5 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
-            this.layoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_Diameter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_Opacity)).BeginInit();
@@ -77,7 +77,7 @@
             this.ComboBoxEx_Type.FormattingEnabled = true;
             this.ComboBoxEx_Type.ItemHeight = 14;
             this.ComboBoxEx_Type.Location = new System.Drawing.Point(60, 4);
-            this.ComboBoxEx_Type.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ComboBoxEx_Type.Margin = new System.Windows.Forms.Padding(0);
             this.ComboBoxEx_Type.Name = "ComboBoxEx_Type";
             this.ComboBoxEx_Type.Size = new System.Drawing.Size(196, 20);
             this.ComboBoxEx_Type.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -93,7 +93,7 @@
             this.IntegerInput_Diameter.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.IntegerInput_Diameter.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             this.IntegerInput_Diameter.Location = new System.Drawing.Point(60, 32);
-            this.IntegerInput_Diameter.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.IntegerInput_Diameter.Margin = new System.Windows.Forms.Padding(0);
             this.IntegerInput_Diameter.MaxValue = 65536;
             this.IntegerInput_Diameter.MinValue = 0;
             this.IntegerInput_Diameter.Name = "IntegerInput_Diameter";
@@ -111,13 +111,44 @@
             this.IntegerInput_Opacity.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.IntegerInput_Opacity.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left;
             this.IntegerInput_Opacity.Location = new System.Drawing.Point(60, 60);
-            this.IntegerInput_Opacity.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.IntegerInput_Opacity.Margin = new System.Windows.Forms.Padding(0);
             this.IntegerInput_Opacity.MaxValue = 255;
             this.IntegerInput_Opacity.MinValue = 0;
             this.IntegerInput_Opacity.Name = "IntegerInput_Opacity";
             this.IntegerInput_Opacity.ShowUpDown = true;
             this.IntegerInput_Opacity.Size = new System.Drawing.Size(196, 20);
             this.IntegerInput_Opacity.TabIndex = 2;
+            // 
+            // ButtonX_Save
+            // 
+            this.ButtonX_Save.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonX_Save.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_Save.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.ButtonX_Save.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_checkmark_16px_1;
+            this.ButtonX_Save.Location = new System.Drawing.Point(68, 88);
+            this.ButtonX_Save.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonX_Save.Name = "ButtonX_Save";
+            this.ButtonX_Save.Size = new System.Drawing.Size(90, 23);
+            this.ButtonX_Save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_Save.TabIndex = 4;
+            this.ButtonX_Save.Text = "Save";
+            this.ButtonX_Save.Click += new System.EventHandler(this.ButtonX_Save_Click);
+            // 
+            // ButtonX_Cancel
+            // 
+            this.ButtonX_Cancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonX_Cancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.ButtonX_Cancel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonX_Cancel.Location = new System.Drawing.Point(166, 88);
+            this.ButtonX_Cancel.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonX_Cancel.Name = "ButtonX_Cancel";
+            this.ButtonX_Cancel.Size = new System.Drawing.Size(90, 23);
+            this.ButtonX_Cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_Cancel.TabIndex = 5;
+            this.ButtonX_Cancel.Text = "Cancel";
             // 
             // layoutControlItem1
             // 
@@ -149,37 +180,12 @@
             this.layoutControlItem3.Width = 100;
             this.layoutControlItem3.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
-            // ButtonX_Cancel
+            // layoutSpacerItem1
             // 
-            this.ButtonX_Cancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonX_Cancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.ButtonX_Cancel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.ButtonX_Cancel.Location = new System.Drawing.Point(166, 88);
-            this.ButtonX_Cancel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.ButtonX_Cancel.Name = "ButtonX_Cancel";
-            this.ButtonX_Cancel.Size = new System.Drawing.Size(90, 23);
-            this.ButtonX_Cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_Cancel.TabIndex = 5;
-            this.ButtonX_Cancel.Text = "Cancel";
-            // 
-            // ButtonX_Save
-            // 
-            this.ButtonX_Save.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonX_Save.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_Save.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ButtonX_Save.Enabled = false;
-            this.ButtonX_Save.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_checkmark_16px_1;
-            this.ButtonX_Save.Location = new System.Drawing.Point(68, 88);
-            this.ButtonX_Save.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.ButtonX_Save.Name = "ButtonX_Save";
-            this.ButtonX_Save.Size = new System.Drawing.Size(90, 23);
-            this.ButtonX_Save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_Save.TabIndex = 4;
-            this.ButtonX_Save.Text = "Save";
-            this.ButtonX_Save.Click += new System.EventHandler(this.ButtonX_Save_Click);
+            this.layoutSpacerItem1.Height = 31;
+            this.layoutSpacerItem1.Name = "layoutSpacerItem1";
+            this.layoutSpacerItem1.Width = 99;
+            this.layoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // layoutControlItem4
             // 
@@ -196,13 +202,6 @@
             this.layoutControlItem5.MinSize = new System.Drawing.Size(32, 20);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Width = 98;
-            // 
-            // layoutSpacerItem1
-            // 
-            this.layoutSpacerItem1.Height = 31;
-            this.layoutSpacerItem1.Name = "layoutSpacerItem1";
-            this.layoutSpacerItem1.Width = 99;
-            this.layoutSpacerItem1.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
             // ObjectShadowEditor
             // 

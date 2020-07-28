@@ -241,7 +241,7 @@ namespace SM64Lib.Geolayout
                 if (ObjectShadow.Enabled)
                 {
                     // Add Object Shadow
-                    if (cmdObjectShadow == null)
+                    if (cmdObjectShadow is null)
                     {
                         cmdObjectShadow = new GeolayoutCommand("16 00 00 00 00 00 00 00");
                         Geolayoutscript.Insert(0, cmdObjectShadow);
