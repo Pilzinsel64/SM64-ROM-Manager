@@ -244,6 +244,9 @@ namespace SM64_ROM_Manager.Publics
 
             Settings.SettingsConfigFilePath = Path.Combine(MyDataPath, "Settings.json");
 
+            // Set scale per control
+            Dpi.RecordScalePerControl = true;
+
             // Set proxy settings
             SetDefaultProxyAuthentification();
 

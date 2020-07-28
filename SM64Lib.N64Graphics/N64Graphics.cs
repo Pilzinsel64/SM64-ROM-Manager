@@ -147,24 +147,9 @@ namespace SM64Lib.N64Graphics
         public static Color BPPColor(byte[] data, int pixOffset, int bit)
         {
             int i, a;
-            int val = (data[pixOffset] >> bit) & 0x1;
-            i = a = 0xFF * val;
+            int val = (data[pixOffset] >> (7 - bit)) & 0x1;
+            i = a = val == 0 ? 0x00 : 0xFF;
             return Color.FromArgb(a, i, i, i);
-        }
-
-        public static void ColorIA16(Color col, out byte intensity, out byte alpha)
-        {
-            int sum = col.R + col.G + col.B;
-            intensity = (byte)(sum / 3);
-            alpha = col.A;
-        }
-
-        public static void ColorIA8(Color col, out byte intensity, out byte alpha, out byte value)
-        {
-            int sum = col.R + col.G + col.B;
-            intensity = SCALE_8_4((byte)(sum / 3));
-            alpha = SCALE_8_4(col.A);
-            value = (byte)((intensity << 4) | alpha);
         }
 
         // return number of bytes needed to encode numPixels using codec
@@ -191,7 +176,6 @@ namespace SM64Lib.N64Graphics
         {
             switch (codec)
             {
-                default:
                 case N64Codec.RGBA16: return "rgba16";
                 case N64Codec.RGBA32: return "rgba32";
                 case N64Codec.IA16: return "ia16";
@@ -203,6 +187,7 @@ namespace SM64Lib.N64Graphics
                 case N64Codec.CI4: return "ci4";
                 case N64Codec.ONEBPP: return "1bpp";
             }
+            return "unk";
         }
 
         public static N64Codec StringCodec(string str)
@@ -263,23 +248,6 @@ namespace SM64Lib.N64Graphics
                     break;
             }
             return color;
-        }
-
-        public static void FromColor(Color color, out byte[] data, N64Codec codec)
-        {
-            switch (codec)
-            {
-                case N64Codec.RGBA16:
-                    data = new byte[2];
-                    ColorRGBA16(color, out data[0], out data[1]);
-                    break;
-                case N64Codec.RGBA32:
-                    data = new byte[] { color.R, color.G, color.B, color.A};
-                    break;
-                default:
-                    data = new byte[] { };
-                    break;
-            }
         }
 
         public static void RenderTexture(Graphics g, byte[] data, byte[] palette, int offset, int width, int height, int scale, N64Codec codec, N64IMode mode)
@@ -380,8 +348,8 @@ namespace SM64Lib.N64Graphics
                         {
                             Color col = bm.GetPixel(x, y);
                             int sum = col.R + col.G + col.B;
-                            byte intensity, alpha;
-                            ColorIA16(col, out intensity, out alpha);
+                            byte intensity = (byte)(sum / 3);
+                            byte alpha = col.A;
                             int idx = 2 * (y * bm.Width + x);
                             imageData[idx + 0] = intensity;
                             imageData[idx + 1] = alpha;
@@ -395,10 +363,10 @@ namespace SM64Lib.N64Graphics
                         {
                             Color col = bm.GetPixel(x, y);
                             int sum = col.R + col.G + col.B;
-                            byte intensity, alpha, value;
-                            ColorIA8(col, out intensity, out alpha, out value);
+                            byte intensity = SCALE_8_4((byte)(sum / 3));
+                            byte alpha = SCALE_8_4(col.A);
                             int idx = y * bm.Width + x;
-                            imageData[idx] = value;
+                            imageData[idx] = (byte)((intensity << 4) | alpha);
                         }
                     }
                     break;
