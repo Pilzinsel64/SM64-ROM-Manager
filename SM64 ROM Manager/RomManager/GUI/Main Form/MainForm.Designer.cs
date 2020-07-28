@@ -749,7 +749,7 @@ namespace SM64_ROM_Manager
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.RibbonControl1);
             this.Controls.Add(this.Bar1);
             this.Controls.Add(this.Panel1);
