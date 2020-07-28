@@ -386,6 +386,7 @@
     </Compile>
     <Compile Include="RomManager\Controllers\PluginInstaller.cs" />
     <Compile Include="RomManager\Controllers\TextManagerController.cs" />
+    <Compile Include="RomManager\EventArgs\FinishedActionEventArgs.cs" />
     <Compile Include="RomManager\EventArgs\LevelAreaEventArgs.cs" />
     <Compile Include="RomManager\EventArgs\LevelAreaBackgroundModeChangedEventArgs.cs" />
     <Compile Include="RomManager\EventArgs\LevelBackgroundImageChangedEventArgs.cs" />

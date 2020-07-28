@@ -38,6 +38,7 @@ using Z.Core.Extensions;
 using SM64_ROM_Manager.My.Resources;
 using System.Diagnostics;
 using SM64Lib.Objects.ObjectBanks.Data;
+using System.IO.Compression;
 
 namespace SM64_ROM_Manager
 {
@@ -104,6 +105,15 @@ namespace SM64_ROM_Manager
         public event Action ErrorBecauseNoRomLoaded;
         public event Action RomSaved;
         public event Action RomSaving;
+
+        public event Action ImportingLevel;
+        public event Action ImportingLevelArea;
+        public event Action ImportingLevelAreaScript;
+
+        public delegate void FinishedActionEventHAndler(EventArguments.FinishedActionEventArgs e);
+        public event FinishedActionEventHAndler ImportedLevel;
+        public event FinishedActionEventHAndler ImportedLevelArea;
+        public event FinishedActionEventHAndler ImportedLevelAreaScript;
 
         // C o n s t a n t s
 
@@ -2017,6 +2027,108 @@ namespace SM64_ROM_Manager
                 area.AreaModel.Fast3DBuffer.SetLength(arg.Length);
                 area.AreaModel.Fast3DBuffer.Write(arg, 0, arg.Length);
             }
+        }
+
+        public void ExportLevel(string filePath, bool compression, int levelIndex)
+        {
+            var lvl = GetLevelAndArea(levelIndex).level;
+            if (lvl is RMLevel)
+                SaveLevelExport(filePath, new LevelExport(lvl), compression);
+        }
+
+        public void ExportLevelArea(string filePath, bool compression, int levelIndex, int areaIndex)
+        {
+            var area = GetLevelAndArea(levelIndex, areaIndex).area;
+            if (area is RMLevelArea)
+                SaveLevelExport(filePath, new LevelExport(area), compression);
+        }
+
+        public void ExportLevelAreaObjects(string filePath, bool compression, int levelIndex, int areaIndex)
+        {
+            var area = GetLevelAndArea(levelIndex, areaIndex).area;
+            if (area is RMLevelArea)
+                SaveLevelExport(filePath, new LevelExport(area.Objects.ToArray(), LevelExportContentType.Objects), compression);
+        }
+
+        public void ExportLevelAreaWarps(string filePath, bool compression, int levelIndex, int areaIndex)
+        {
+            var area = GetLevelAndArea(levelIndex, areaIndex).area;
+            if (area is RMLevelArea)
+                SaveLevelExport(filePath, new LevelExport(area.Warps.ToArray(), LevelExportContentType.Warps), compression);
+        }
+
+        public void ImportLevel(string filePath)
+        {
+            var success = false;
+            var export = LoadLevelExport(filePath);
+
+            ImportingLevel?.Invoke();
+
+            try
+            {
+                LevelExportImporter.ImportLevel(export, RomManager, null);
+                success = true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            ImportedLevel(new EventArguments.FinishedActionEventArgs(success));
+        }
+
+        public void ImportLevelArea(string filePath, int levelIndex)
+        {
+            var success = false;
+            var lvl = GetLevelAndArea(levelIndex).level;
+
+            if (lvl is object)
+            {
+                var export = LoadLevelExport(filePath);
+                ImportingLevelArea?.Invoke();
+                try
+                {
+                    LevelExportImporter.ImportArea(export, lvl, null);
+                    success = true;
+                }
+                catch (NotSupportedException)
+                {
+                }
+            }
+
+            ImportedLevelArea(new EventArguments.FinishedActionEventArgs(success));
+        }
+
+        public void ImportLevelAreaScript(string filePath, int levelIndex, int areaIndex)
+        {
+            var success = false;
+            var area = GetLevelAndArea(levelIndex, areaIndex).area;
+
+            if (area is object)
+            {
+                var export = LoadLevelExport(filePath);
+                ImportingLevelAreaScript?.Invoke();
+                try
+                {
+                    LevelExportImporter.ImportScript(export, area, null);
+                    success = true;
+                }
+                catch (NotSupportedException)
+                {
+                }
+            }
+
+            ImportedLevelAreaScript(new EventArguments.FinishedActionEventArgs(success));
+        }
+
+        private LevelExport LoadLevelExport(string filePath)
+        {
+            return LevelExport.ReadFromFile(filePath);
+        }
+
+        private void SaveLevelExport(string filePath, LevelExport export, bool compression)
+        {
+            var compressionLevel = compression ? CompressionLevel.Optimal : CompressionLevel.NoCompression;
+            export.WriteToFile(filePath, compressionLevel);
         }
 
         // M u s i c   M a n a g e r
