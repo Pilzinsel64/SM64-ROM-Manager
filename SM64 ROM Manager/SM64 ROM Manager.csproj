@@ -206,6 +206,9 @@
     <Reference Include="DevComponents.DotNetBar.Design">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar.Keyboard">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
@@ -213,14 +216,32 @@
     <Reference Include="DevComponents.DotNetBar.Layout.Design, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Schedule.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation.Design">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.Instrumentation.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.SuperGrid.Design">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.SuperGrid.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.TreeGX.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="drsPwEnc">
@@ -409,6 +430,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RomManager\GUI\Level Editor\AdvPropGrid_ObjectPropertiesHelper.cs" />
+    <Compile Include="RomManager\GUI\Level Editor\DataEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RomManager\GUI\Level Editor\DataEditor.Designer.cs">
+      <DependentUpon>DataEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="RomManager\GUI\Level Editor\FormScriptDumps.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -860,6 +887,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Coins Settings\Coins Settings.resx">
       <DependentUpon>Coins Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Level Editor\DataEditor.resx">
+      <DependentUpon>DataEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Level Editor\FormScriptDumps.resx">
       <DependentUpon>FormScriptDumps.cs</DependentUpon>
