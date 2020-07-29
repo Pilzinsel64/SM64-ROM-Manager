@@ -32,11 +32,11 @@
             this.superGridControl1 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonItem_File = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.CheckBoxItem_Objects = new DevComponents.DotNetBar.CheckBoxItem();
             this.CheckBoxItem_Warps = new DevComponents.DotNetBar.CheckBoxItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,8 +55,8 @@
             // 
             // bar1
             // 
-            this.bar1.AccessibleDescription = "bar1 (bar1)";
-            this.bar1.AccessibleName = "bar1";
+            this.bar1.AccessibleDescription = "DotNetBar Bar (bar1)";
+            this.bar1.AccessibleName = "DotNetBar Bar";
             this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.bar1.AntiAlias = true;
             this.bar1.BarType = DevComponents.DotNetBar.eBarType.MenuBar;
@@ -84,6 +84,18 @@
             this.buttonItem3});
             this.buttonItem_File.Text = "File";
             // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "Import ...";
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.Text = "Export ...";
+            // 
             // buttonItem2
             // 
             this.buttonItem2.Name = "buttonItem2";
@@ -97,24 +109,14 @@
             this.CheckBoxItem_Objects.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.CheckBoxItem_Objects.Name = "CheckBoxItem_Objects";
             this.CheckBoxItem_Objects.Text = "Objects";
+            this.CheckBoxItem_Objects.Click += new System.EventHandler(this.CheckBoxItem_Objects_Click);
             // 
             // CheckBoxItem_Warps
             // 
             this.CheckBoxItem_Warps.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.CheckBoxItem_Warps.Name = "CheckBoxItem_Warps";
             this.CheckBoxItem_Warps.Text = "Warps";
-            // 
-            // buttonItem1
-            // 
-            this.buttonItem1.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "Import ...";
-            // 
-            // buttonItem3
-            // 
-            this.buttonItem3.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
-            this.buttonItem3.Name = "buttonItem3";
-            this.buttonItem3.Text = "Export ...";
+            this.CheckBoxItem_Warps.Click += new System.EventHandler(this.CheckBoxItem_Warps_Click);
             // 
             // DataEditor
             // 
