@@ -2935,7 +2935,7 @@
     "Name": "Sign On Wall",
     "Behavior": 318780196,
     "BP1 Name": "",
-    "BP2 Name": "",
+    "BP2 Name": "Message ID",
     "BP3 Name": "",
     "BP4 Name": ""
   },
