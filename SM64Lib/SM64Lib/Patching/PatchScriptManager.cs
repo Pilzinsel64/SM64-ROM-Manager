@@ -287,7 +287,7 @@ namespace SM64Lib.Patching
                                                                         barr = Conversions.ToUShort(processingEventArgs.ReturnValue).ToString("X4");
                                                                         break;
                                                                     case InputValueType.Single:
-                                                                        barr = Data.System.SwapInts.SwapHalf(Convert.ToSingle(processingEventArgs.ReturnValue)).ToString("X2");
+                                                                        barr = Data.System.SwapInts.SwapHalf(Convert.ToSingle(processingEventArgs.ReturnValue)).ToString("X4");
                                                                         break;
                                                                     case InputValueType.UInt32:
                                                                         barr = Conversions.ToUInteger(processingEventArgs.ReturnValue).ToString("X8");
