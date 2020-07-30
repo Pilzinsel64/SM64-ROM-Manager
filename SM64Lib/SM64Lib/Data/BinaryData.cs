@@ -149,9 +149,12 @@ namespace SM64Lib.Data
             Writer.Write(SwapInts.SwapUInt64(value));
         }
 
-        public void Write(float value)
+        public void Write(float value, bool isHalf = false)
         {
-            Writer.Write(SwapInts.SwapSingle(value));
+            if (isHalf)
+                Writer.Write(SwapInts.SwapHalf(value));
+            else
+                Writer.Write(SwapInts.SwapFloat32(value));
         }
 
         public void Write(string value)
@@ -211,7 +214,7 @@ namespace SM64Lib.Data
 
         public float ReadSingle()
         {
-            return SwapInts.SwapSingle(Reader.ReadSingle());
+            return SwapInts.SwapFloat32(Reader.ReadSingle());
         }
 
         public string ReadString()

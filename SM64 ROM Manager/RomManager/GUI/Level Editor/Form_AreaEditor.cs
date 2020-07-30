@@ -3234,36 +3234,37 @@ namespace SM64_ROM_Manager.LevelEditor
                     }
 
                     if (seg is null)
-                    {
                         seg = Rommgr.GetSegBank(bankID);
-                    }
 
-                    // Read texture data
-                    byte[] imgdata;
-                    bool isMIO0 = seg?.IsMIO0 == true;
-                    if (isMIO0)
+                    if (seg is object)
                     {
-                        seg.ReadDataIfNull(data.BaseStream);
-                        seg.Data.Position = seg.BankOffsetFromSegAddr(segAddr);
-                        var bindata = new BinaryStreamData(seg.Data);
-                        imgdata = bindata.Read(bytesCount);
+                        // Read texture data
+                        byte[] imgdata;
+                        bool isMIO0 = seg?.IsMIO0 == true;
+                        if (isMIO0)
+                        {
+                            seg.ReadDataIfNull(data.BaseStream);
+                            seg.Data.Position = seg.BankOffsetFromSegAddr(segAddr);
+                            var bindata = new BinaryStreamData(seg.Data);
+                            imgdata = bindata.Read(bytesCount);
+                        }
+                        else
+                        {
+                            data.Position = seg.SegToRomAddr(segAddr);
+                            imgdata = data.Read(bytesCount);
+                        }
+
+                        // Render Texture
+                        var g = Graphics.FromImage(bmp);
+                        N64Graphics.RenderTexture(g, imgdata, null, 0, bmp.Width, bmp.Height, 1, texFormat, N64IMode.AlphaCopyIntensity);
+
+                        // Set image
+                        m.Image = bmp;
+
+                        // Set Tag
+                        m.Tag = new SM64Lib.Model.Conversion.Fast3DParsing.TextureLoadedInfos(jt.Name, texFormat, segAddr, -1, seg.SegToRomAddr(segAddr), -1, bmp.Size, isMIO0);
+                        block.Textures.Add(m);
                     }
-                    else
-                    {
-                        data.Position = seg.SegToRomAddr(segAddr);
-                        imgdata = data.Read(bytesCount);
-                    }
-
-                    // Render Texture
-                    var g = Graphics.FromImage(bmp);
-                    N64Graphics.RenderTexture(g, imgdata, null, 0, bmp.Width, bmp.Height, 1, texFormat, N64IMode.AlphaCopyIntensity);
-
-                    // Set image
-                    m.Image = bmp;
-
-                    // Set Tag
-                    m.Tag = new SM64Lib.Model.Conversion.Fast3DParsing.TextureLoadedInfos(jt.Name, texFormat, segAddr, -1, seg.SegToRomAddr(segAddr), -1, bmp.Size, isMIO0);
-                    block.Textures.Add(m);
                 }
 
                 catOtherTextures.Blocks.Add(block);
