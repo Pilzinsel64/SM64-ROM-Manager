@@ -176,7 +176,7 @@ namespace SM64Lib.Model.Collision
                         var t = new Triangle();
                         t.CollisionType = cs.CollisionType;
                         t.ColParams[0] = cs.CollisionParam1;
-                        t.ColParams[0] = cs.CollisionParam2;
+                        t.ColParams[1] = cs.CollisionParam2;
                         for (int i = 0, loopTo = Math.Min(f.Points.Count - 1, 2); i <= loopTo; i++)
                         {
                             Vertex v;
