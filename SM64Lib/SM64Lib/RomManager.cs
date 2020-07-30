@@ -778,7 +778,7 @@ namespace SM64Lib
                 CreateNewGlobalModelBank();
             }
 
-            var seg = GlobalModelBank.WriteToSeg(0x7);
+            var seg = GlobalModelBank.WriteToSeg(0x7, RomConfig.CollisionBaseConfig);
             SetSegBank(seg);
             return seg;
         }
