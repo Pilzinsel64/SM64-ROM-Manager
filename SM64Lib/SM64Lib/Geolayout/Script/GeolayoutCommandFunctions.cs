@@ -249,5 +249,28 @@ namespace SM64Lib.Geolayout.Script
                 command.Position = 0;
             }
         }
+
+        public class cgCameraFrustrum
+        {
+            public static void GetCameraFrustrum(GeolayoutCommand command, CameraFrustrum frustrum)
+            {
+                command.Position = 4;
+
+                frustrum.CameraNear = command.ReadInt16();
+                frustrum.CameraFar = command.ReadInt16();
+
+                command.Position = 0;
+            }
+
+            public static void SetCameraFrustrum(GeolayoutCommand command, CameraFrustrum frustrum)
+            {
+                command.Position = 4;
+
+                command.Write(frustrum.CameraNear);
+                command.Write(frustrum.CameraFar);
+
+                command.Position = 0;
+            }
+        }
     }
 }

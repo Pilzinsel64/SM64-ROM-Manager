@@ -21,6 +21,7 @@ namespace SM64Lib.Geolayout
         public int NewGeoOffset { get; set; } = 0;
         public bool Closed { get; set; } = false;
         public ObjectShadow ObjectShadow { get; set; } = new ObjectShadow();
+        public CameraFrustrum CameraFrustrum { get; set; } = new CameraFrustrum();
 
         public int Length
         {
@@ -121,6 +122,7 @@ namespace SM64Lib.Geolayout
             Geolayoutscript = new Geolayoutscript();
             Geolayoutscript.Read(rommgr, segAddress);
             ObjectShadow = new ObjectShadow();
+            CameraFrustrum = new CameraFrustrum();
 
             var ToRemove = new List<GeolayoutCommand>();
             int cIndex = 0;
@@ -157,6 +159,9 @@ namespace SM64Lib.Geolayout
                         break;
                     case GeolayoutCommandTypes.DrawingDistance:
                         ObjectShadow.Enabled = false;
+                        break;
+                    case GeolayoutCommandTypes.CameraFrustrum:
+                        cgCameraFrustrum.GetCameraFrustrum(c, CameraFrustrum);
                         break;
                 }
 
@@ -210,6 +215,9 @@ namespace SM64Lib.Geolayout
                             cmdDrawingDistance = c;
                         break;
                     case GeolayoutCommandTypes.CameraFrustrum:
+                        cgCameraFrustrum.SetCameraFrustrum(c, CameraFrustrum);
+                        isForLevel = true;
+                        break;
                     case GeolayoutCommandTypes.SetScreenRenderArea:
                         isForLevel = true;
                         break;

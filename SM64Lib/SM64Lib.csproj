@@ -169,6 +169,7 @@
     <Compile Include="SM64Lib\General.cs" />
     <Compile Include="SM64Lib\Geolayout\BackgroundIDs.cs" />
     <Compile Include="SM64Lib\Geolayout\BackgroundPointers.cs" />
+    <Compile Include="SM64Lib\Geolayout\CameraFrustrum.cs" />
     <Compile Include="SM64Lib\Geolayout\CameraPresets.cs" />
     <Compile Include="SM64Lib\Geolayout\EnvironmentEffects.cs" />
     <Compile Include="SM64Lib\Geolayout\GeoAsmPointer.cs" />
