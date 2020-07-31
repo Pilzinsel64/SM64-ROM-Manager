@@ -21,6 +21,7 @@ namespace SM64_ROM_Manager.Plugins.RomConfigEditor
         {
             this.romManager = romManager;
             InitializeComponent();
+            UpdateAmbientColors();
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
@@ -64,10 +65,10 @@ namespace SM64_ROM_Manager.Plugins.RomConfigEditor
             {
                 var btn = new ButtonItem
                 {
-                    Text = type.ToString("X2"),
-                    Tag = type,
-                    AutoCheckOnClick = true
+                    Text = TextValueConverter.TextFromValue(type),
+                    Tag = type
                 };
+                btn.Click += (_, __) => itemPanel1.SelectedItem = btn;
                 itemPanel1.Items.Add(btn);
             }
             itemPanel1.ResumeLayout();

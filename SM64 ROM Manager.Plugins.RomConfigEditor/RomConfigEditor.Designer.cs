@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RomConfigEditor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.itemPanel1 = new DevComponents.DotNetBar.ItemPanel();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.itemPanel1 = new DevComponents.DotNetBar.ItemPanel();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             // 
             // groupPanel1
             // 
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel1.CanvasColor = System.Drawing.Color.Transparent;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.groupPanel1.Controls.Add(this.buttonX2);
             this.groupPanel1.Controls.Add(this.itemPanel1);
@@ -66,7 +66,6 @@
             // 
             this.groupPanel1.Style.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel1.Style.BackColor2 = System.Drawing.Color.Transparent;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
             this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel1.Style.BorderBottomWidth = 1;
             this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
@@ -92,8 +91,21 @@
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "Collision types with params";
             // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Location = new System.Drawing.Point(173, 2);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(60, 23);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 3;
+            this.buttonX2.Text = "Remove";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
+            // 
             // itemPanel1
             // 
+            this.itemPanel1.AutoScroll = true;
             // 
             // 
             // 
@@ -107,9 +119,22 @@
             this.itemPanel1.Name = "itemPanel1";
             this.itemPanel1.ReserveLeftSpace = false;
             this.itemPanel1.Size = new System.Drawing.Size(230, 143);
+            this.itemPanel1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.itemPanel1.TabIndex = 0;
             this.itemPanel1.Text = "itemPanel1";
             this.itemPanel1.SelectedIndexChanged += new System.EventHandler(this.itemPanel1_SelectedIndexChanged);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(116, 2);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(51, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 2;
+            this.buttonX1.Text = "Add";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // textBoxX1
             // 
@@ -125,30 +150,6 @@
             this.textBoxX1.TabIndex = 1;
             this.textBoxX1.WatermarkBehavior = DevComponents.DotNetBar.eWatermarkBehavior.HideNonEmpty;
             this.textBoxX1.WatermarkText = "Collision ID";
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(116, 2);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(51, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 2;
-            this.buttonX1.Text = "Add";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(173, 2);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(60, 23);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 3;
-            this.buttonX2.Text = "Remove";
-            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // RomConfigEditor
             // 
