@@ -311,6 +311,10 @@ namespace SM64_ROM_Manager
         private void Form_Main_Load(object sender, EventArgs e)
         {
             RefreshAppTitel();
+
+            // Proper fix for open window but not beeing in the taskbar
+            ShowInTaskbar = false;
+            ShowInTaskbar = true;
         }
 
         private void Form_Main_Shown(object sender, EventArgs e)

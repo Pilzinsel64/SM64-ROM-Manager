@@ -76,6 +76,7 @@ namespace SM64_ROM_Manager
             // 
             // 
             // 
+            this.ItemListBox1.AutoScroll = true;
             this.ItemListBox1.BackgroundStyle.Class = "ItemPanel";
             this.ItemListBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ItemListBox1.ContainerControlProcessDialogKey = true;

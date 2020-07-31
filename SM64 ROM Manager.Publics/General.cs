@@ -319,22 +319,22 @@ namespace SM64_ROM_Manager.Publics
 
         public static string GetExtensionFilter(File3DLoaderModule modul)
         {
-            string combiFormats = "";
-            string splittedFormats = "";
+            string combiFormats = string.Empty;
+            string splittedFormats = string.Empty;
+
             foreach (var kvp in modul.SupportedFormats)
             {
-                if (!string.IsNullOrEmpty(combiFormats))
+                if (modul.Name != "Assimp" || kvp.Key != "blend")
                 {
-                    combiFormats += ";";
-                }
+                    if (!string.IsNullOrEmpty(combiFormats))
+                        combiFormats += ";";
 
-                combiFormats += "*." + kvp.Key;
-                if (!string.IsNullOrEmpty(splittedFormats))
-                {
-                    splittedFormats += "|";
-                }
+                    combiFormats += "*." + kvp.Key;
+                    if (!string.IsNullOrEmpty(splittedFormats))
+                        splittedFormats += "|";
 
-                splittedFormats += $"{kvp.Value} (*.{kvp.Key})|*.{kvp.Key}";
+                    splittedFormats += $"{kvp.Value} (*.{kvp.Key})|*.{kvp.Key}";
+                }
             }
 
             return $"All supported files|{combiFormats}|{splittedFormats}";
