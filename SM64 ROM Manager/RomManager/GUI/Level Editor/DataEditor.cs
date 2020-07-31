@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,10 @@ namespace SM64_ROM_Manager.LevelEditor
             Objects,
             Warps
         }
+
+        // F i e l d s
+
+        private readonly ResourceManager resources = new ResourceManager(typeof(DataEditor));
 
         // C l a s s e s
 
@@ -87,7 +92,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
                 // Load translation from resources
                 if (config.IsResourceName)
-                    name = ;
+                    name = resources.GetString($"GridRow_{viewMode}_{config.Name}");
 
                 var column = new GridColumn(name)
                 {
