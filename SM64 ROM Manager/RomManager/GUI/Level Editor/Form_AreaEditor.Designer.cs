@@ -2701,7 +2701,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ItemContainer16.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
             this.ItemContainer16.Name = "ItemContainer16";
             this.ItemContainer16.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_ButtonItem_AddDeathFloor,
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds,
             this.ButtonItem4});
             // 
             // 
@@ -2714,19 +2714,19 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonItem_ButtonItem_AddDeathFloor
             // 
-            this.ButtonItem_ButtonItem_AddDeathFloor.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_ButtonItem_AddDeathFloor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
             this.ButtonItem_ButtonItem_AddDeathFloor.Name = "ButtonItem_ButtonItem_AddDeathFloor";
-            this.ButtonItem_ButtonItem_AddDeathFloor.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds});
-            this.ButtonItem_ButtonItem_AddDeathFloor.SubItemsExpandWidth = 14;
             resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloor, "ButtonItem_ButtonItem_AddDeathFloor");
             this.ButtonItem_ButtonItem_AddDeathFloor.Click += new System.EventHandler(this.ButtonItem8_Click);
             // 
             // ButtonItem_ButtonItem_AddDeathFloorWithExtBounds
             // 
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
             this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Name = "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds";
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.SubItemsExpandWidth = 14;
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_ButtonItem_AddDeathFloor});
             resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds, "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds");
             this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Click += new System.EventHandler(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds_Click);
             // 
