@@ -104,6 +104,7 @@ namespace SM64_ROM_Manager
             // Init Components
             InitializeComponent();
             TabControl1.Dock = DockStyle.Fill;
+            Text = "Something to fix window not showing in taskbar.";
 
             // Set instance on Tabs   
             tabGeneral.Controller = Controller;
