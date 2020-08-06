@@ -104,6 +104,7 @@ namespace SM64_ROM_Manager
             // Init Components
             InitializeComponent();
             TabControl1.Dock = DockStyle.Fill;
+            Text = "Something to fix window not showing in taskbar.";
 
             // Set instance on Tabs   
             tabGeneral.Controller = Controller;
@@ -311,10 +312,6 @@ namespace SM64_ROM_Manager
         private void Form_Main_Load(object sender, EventArgs e)
         {
             RefreshAppTitel();
-
-            // Proper fix for open window but not beeing in the taskbar
-            ShowInTaskbar = false;
-            ShowInTaskbar = true;
         }
 
         private void Form_Main_Shown(object sender, EventArgs e)
