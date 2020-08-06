@@ -166,23 +166,26 @@ namespace SM64_ROM_Manager
         public static void LoadBehaviorInfosIfEmpty(RomManager rommgr)
         {
             if (!hasLoadedBehaviorInfos || rommgr != romManagerUsedForCustomBehaviorInfos)
-                LoadBehaviorInfos(rommgr);
+                LoadBehaviorInfos(rommgr, true);
         }
 
-        public static void LoadBehaviorInfos(RomManager rommgr)
+        public static void LoadBehaviorInfos(RomManager rommgr, bool checkIfEmpty = false)
         {
             if (!hasLoadedBehaviorInfos)
             {
                 string p_Default = Path.Combine(Publics.General.MyDataPath, p_BehaviorInfos);
                 string p_Custom = Path.Combine(Publics.General.MyDataPath, p_BehaviorInfosCustom);
 
-                if (File.Exists(p_Default))
+                if ((!hasLoadedBehaviorInfos || !checkIfEmpty) && File.Exists(p_Default))
                     BehaviorInfos.ReadFromFile(p_Default);
 
-                if (rommgr is object && rommgr.RomConfig.CustomConfigs.ContainsKey(CustomConfig_Key_BehaviorInfo))
-                    BehaviorInfosCustom.ReadFromString(rommgr.RomConfig.CustomConfigs[CustomConfig_Key_BehaviorInfo]);
-                else if (File.Exists(p_Custom))
-                    BehaviorInfosCustom.ReadFromFile(p_Custom);
+                if (rommgr != romManagerUsedForCustomBehaviorInfos || !checkIfEmpty)
+                {
+                    if (rommgr is object && rommgr.RomConfig.CustomConfigs.ContainsKey(CustomConfig_Key_BehaviorInfo))
+                        BehaviorInfosCustom.ReadFromString(rommgr.RomConfig.CustomConfigs[CustomConfig_Key_BehaviorInfo]);
+                    else if (File.Exists(p_Custom))
+                        BehaviorInfosCustom.ReadFromFile(p_Custom);
+                }
 
                 hasLoadedBehaviorInfos = true;
             }
@@ -191,21 +194,24 @@ namespace SM64_ROM_Manager
         public static void LoadObjectCombosIfEmpty(RomManager rommgr)
         {
             if (!hasLoadedObjectCombos || rommgr != romManagerUsedForCustomObjectCombos)
-                LoadObjectCombos(rommgr);
+                LoadObjectCombos(rommgr, true);
         }
 
-        public static void LoadObjectCombos(RomManager rommgr)
+        public static void LoadObjectCombos(RomManager rommgr, bool checkIfEmpty = false)
         {
             string p_Default = Path.Combine(Publics.General.MyDataPath, p_ObjectCombos);
             string p_Custom = Path.Combine(Publics.General.MyDataPath, p_ObjectCombosCustom);
 
-            if (File.Exists(p_Default))
+            if ((!hasLoadedObjectCombos || !checkIfEmpty) && File.Exists(p_Default))
                 ObjectCombos.ReadFromFile(p_Default);
 
-            if (rommgr is object && rommgr.RomConfig.CustomConfigs.ContainsKey(CustomConfig_Key_ObjectCombosInfo))
-                ObjectCombosCustom.ReadFromString(rommgr.RomConfig.CustomConfigs[CustomConfig_Key_ObjectCombosInfo]);
-            else if (File.Exists(p_Custom))
-                ObjectCombosCustom.ReadFromFile(p_Custom);
+            if (rommgr != romManagerUsedForCustomObjectCombos || !checkIfEmpty)
+            {
+                if (rommgr is object && rommgr.RomConfig.CustomConfigs.ContainsKey(CustomConfig_Key_ObjectCombosInfo))
+                    ObjectCombosCustom.ReadFromString(rommgr.RomConfig.CustomConfigs[CustomConfig_Key_ObjectCombosInfo]);
+                else if (File.Exists(p_Custom))
+                    ObjectCombosCustom.ReadFromFile(p_Custom);
+            }
 
             hasLoadedObjectCombos = true;
         }
