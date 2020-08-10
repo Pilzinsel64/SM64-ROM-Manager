@@ -447,7 +447,7 @@ namespace SM64_ROM_Manager
 
         public async Task<bool> SearchForUpdates(bool searchHidden)
         {
-            if (UpdateCheckIsDue() && await CanAccessUpdateServer())
+            if (await CanAccessUpdateServer())
             {
                 var gui = new UpdateClientGUI(updateClient);
                 gui.UseHiddenSearch = searchHidden;
@@ -460,13 +460,13 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private bool UpdateCheckIsDue()
+        public bool UpdateCheckIsDue()
         {
-            var last = Settings.General.LastUpdateCheck;
+            var last = Settings.Network.LastUpdateCheck;
             var now = DateTime.Now;
             var allow = false;
 
-            if (last.Year != now.Year || last.Month != now.Month || last.Day != now.Day || last.Hour != now.Hour)
+            if (last.Year < now.Year || last.Month < now.Month || last.Day < now.Day || last.Hour < now.Hour)
                 allow = true;
 
             return allow;
