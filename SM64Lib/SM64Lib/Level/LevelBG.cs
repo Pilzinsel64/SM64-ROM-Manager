@@ -43,7 +43,7 @@ namespace SM64Lib.Levels
         {
             get
             {
-                return ImageData.Length;
+                return _ImageBytes?.Length ?? 0;
             }
         }
 

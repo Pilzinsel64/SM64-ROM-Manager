@@ -479,6 +479,18 @@ namespace SM64_ROM_Manager
             }
         }
 
+        public bool UpdateCheckIsDue()
+        {
+            var last = Settings.Network.LastUpdateCheck;
+            var now = DateTime.Now;
+            var allow = false;
+
+            if (last.Year < now.Year || last.Month < now.Month || last.Day < now.Day || last.Hour < now.Hour)
+                allow = true;
+
+            return allow;
+        }
+
         public void CheckCommandLineArgs()
         {
             string fileToOpen = null;
