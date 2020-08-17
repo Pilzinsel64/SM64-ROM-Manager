@@ -64,6 +64,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_RemoveCollision = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_ShowVisualMap = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_ShowCollision = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_EditGeolayout = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_CopyCollisionPointer = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_RemoveObject = new DevComponents.DotNetBar.ButtonItem();
             this.Panel1.SuspendLayout();
@@ -73,14 +74,13 @@ namespace SM64_ROM_Manager
             // 
             // ItemListBox1
             // 
+            resources.ApplyResources(this.ItemListBox1, "ItemListBox1");
             // 
             // 
             // 
-            this.ItemListBox1.AutoScroll = true;
             this.ItemListBox1.BackgroundStyle.Class = "ItemPanel";
             this.ItemListBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ItemListBox1.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.ItemListBox1, "ItemListBox1");
             this.ItemListBox1.DragDropSupport = true;
             this.ItemListBox1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
             this.ItemListBox1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
@@ -295,7 +295,7 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.ContextMenuBar1, "ContextMenuBar1");
             this.ContextMenuBar1.IsMaximized = false;
             this.ContextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.CM_Object))});
+            this.CM_Object});
             this.ContextMenuBar1.Name = "ContextMenuBar1";
             this.ContextMenuBar1.Stretch = true;
             this.ContextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -306,14 +306,15 @@ namespace SM64_ROM_Manager
             this.CM_Object.AutoExpandOnClick = true;
             this.CM_Object.Name = "CM_Object";
             this.CM_Object.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_ImportModell)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_ImportVisualMap)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_ImportCollision)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_RemoveCollision)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_ShowVisualMap)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_ShowCollision)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_CopyCollisionPointer)),
-            ((DevComponents.DotNetBar.BaseItem)(this.ButtonItem_RemoveObject))});
+            this.ButtonItem_ImportModell,
+            this.ButtonItem_ImportVisualMap,
+            this.ButtonItem_ImportCollision,
+            this.ButtonItem_RemoveCollision,
+            this.ButtonItem_ShowVisualMap,
+            this.ButtonItem_ShowCollision,
+            this.ButtonItem_EditGeolayout,
+            this.ButtonItem_CopyCollisionPointer,
+            this.ButtonItem_RemoveObject});
             resources.ApplyResources(this.CM_Object, "CM_Object");
             // 
             // ButtonItem_ImportModell
@@ -358,6 +359,14 @@ namespace SM64_ROM_Manager
             this.ButtonItem_ShowCollision.Name = "ButtonItem_ShowCollision";
             resources.ApplyResources(this.ButtonItem_ShowCollision, "ButtonItem_ShowCollision");
             this.ButtonItem_ShowCollision.Click += new System.EventHandler(this.ButtonItem_ShowCollision_Click);
+            // 
+            // ButtonItem_EditGeolayout
+            // 
+            this.ButtonItem_EditGeolayout.BeginGroup = true;
+            this.ButtonItem_EditGeolayout.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.ButtonItem_EditGeolayout.Name = "ButtonItem_EditGeolayout";
+            resources.ApplyResources(this.ButtonItem_EditGeolayout, "ButtonItem_EditGeolayout");
+            this.ButtonItem_EditGeolayout.Click += new System.EventHandler(this.ButtonItem_EditGeolayout_Click);
             // 
             // ButtonItem_CopyCollisionPointer
             // 
@@ -450,5 +459,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem5;
 
         private DevComponents.DotNetBar.Layout.LayoutControlItem LayoutControlItem6;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_EditGeolayout;
     }
 }
