@@ -86,7 +86,7 @@ namespace SM64Lib.Text.Exporters
                             var ri = iti + 2;
                             var c = ws.Cells[ri, 2];
 
-                            ti.Text = ((string)c.Value).Replace("\n", "\r\n");
+                            ti.Text = ((string)c.Value).Replace("\r\n", "\n").Replace("\n", "\r\n");
                         }
                     }
                 }
