@@ -37,20 +37,14 @@ namespace SM64_ROM_Manager
         {
             foreach (var kvp in imports)
             {
-                flowLayoutPanel1.Controls.Add(new LabelX
-                {
-                    Text = kvp.Key,
-                    Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top,
-                    Width = flowLayoutPanel1.Width - 6
-                });
-
                 foreach (var customObject in kvp.Value.Data.CustomObjects)
                 {
                     flowLayoutPanel1.Controls.Add(
                         new CustomObjectImportPropsEditor(customObject, kvp.Value, romManager)
                         {
                             BackColor = Color.Transparent,
-                            Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right
+                            Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right,
+                            Width = flowLayoutPanel1.Width - 24
                         });
                 }
             }
