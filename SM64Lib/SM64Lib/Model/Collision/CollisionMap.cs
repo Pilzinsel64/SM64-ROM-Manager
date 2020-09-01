@@ -9,6 +9,7 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::Pilz.S3DFileParser;
 using global::SM64Lib.Extensions;
 using global::SM64Lib.Data;
+using SM64Lib.Configuration;
 
 namespace SM64Lib.Model.Collision
 {
@@ -19,28 +20,26 @@ namespace SM64Lib.Model.Collision
         public ColMesh Mesh { get; set; } = new ColMesh();
         public List<BoxData> SpecialBoxes { get; set; } = new List<BoxData>();
 
-        private readonly byte[] ColtypesWithParams = new byte[] { 14, 44, 36, 37, 39, 45 };
-
-        public void FromRom(string FileName, int RomOffset)
+        public void FromRom(string FileName, int RomOffset, CollisionBasicConfig config)
         {
             var fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
-            FromStream(fs, RomOffset);
+            FromStream(fs, RomOffset, config);
             fs.Close();
         }
 
-        public Task FromRomAsync(string FileName, int RomOffset)
+        public Task FromRomAsync(string FileName, int RomOffset, CollisionBasicConfig config)
         {
-            var t = new Task(() => FromRom(FileName, RomOffset));
+            var t = new Task(() => FromRom(FileName, RomOffset, config));
             t.Start();
             return t;
         }
 
-        public void FromStream(Stream s, int RomOffset)
+        public void FromStream(Stream s, int RomOffset, CollisionBasicConfig config)
         {
-            FromBinaryData(new BinaryStreamData(s), RomOffset);
+            FromBinaryData(new BinaryStreamData(s), RomOffset, config);
         }
 
-        public void FromBinaryData(BinaryData s, int dataOffset)
+        public void FromBinaryData(BinaryData s, int dataOffset, CollisionBasicConfig config)
         {
             bool endlessOn = true;
             Mesh = new ColMesh();
@@ -79,7 +78,7 @@ namespace SM64Lib.Model.Collision
                                         var pol = new Triangle() { CollisionType = Conversions.ToByte(Coltype) };
                                         for (int iv = 0, loopTo2 = pol.Vertices.Count() - 1; iv <= loopTo2; iv++)
                                             pol.Vertices[iv] = Mesh.Vertices[s.ReadInt16()];
-                                        if (ColtypesWithParams.Contains(Conversions.ToByte(Coltype)))
+                                        if (config.CollisionTypesWithParams.Contains(Conversions.ToByte(Coltype)))
                                         {
                                             for (int ip = 0, loopTo3 = pol.ColParams.Count() - 1; ip <= loopTo3; ip++)
                                                 pol.ColParams[ip] = s.ReadByte();
@@ -118,9 +117,9 @@ namespace SM64Lib.Model.Collision
             _Length = (int)(s.Position - dataOffset);
         }
 
-        public Task FromStreamAsync(Stream s, int RomOffset)
+        public Task FromStreamAsync(Stream s, int RomOffset, CollisionBasicConfig config)
         {
-            var t = new Task(() => FromStream(s, RomOffset));
+            var t = new Task(() => FromStream(s, RomOffset, config));
             t.Start();
             return t;
         }
@@ -176,7 +175,7 @@ namespace SM64Lib.Model.Collision
                         var t = new Triangle();
                         t.CollisionType = cs.CollisionType;
                         t.ColParams[0] = cs.CollisionParam1;
-                        t.ColParams[0] = cs.CollisionParam2;
+                        t.ColParams[1] = cs.CollisionParam2;
                         for (int i = 0, loopTo = Math.Min(f.Points.Count - 1, 2); i <= loopTo; i++)
                         {
                             Vertex v;
@@ -211,12 +210,12 @@ namespace SM64Lib.Model.Collision
             return t;
         }
 
-        public void ToStream(Stream s, int RomOffset)
+        public void ToStream(Stream s, int RomOffset, CollisionBasicConfig config)
         {
-            ToBinaryData(new BinaryStreamData(s), RomOffset);
+            ToBinaryData(new BinaryStreamData(s), RomOffset, config);
         }
 
-        public void ToBinaryData(BinaryData data, int dataOffset)
+        public void ToBinaryData(BinaryData data, int dataOffset, CollisionBasicConfig config)
         {
             data.Position = dataOffset;
             foreach (ColMesh mesh in Mesh.SplitMesh())
@@ -254,7 +253,7 @@ namespace SM64Lib.Model.Collision
                         data.Write(Conversions.ToShort(tries.Length));
 
                         // Check if collisiontype has params
-                        bool hasParams = ColtypesWithParams.Contains(curType);
+                        bool hasParams = config.CollisionTypesWithParams.Contains(curType);
                         foreach (Triangle tri in tries)
                         {
                             // Write Vertex Indicies

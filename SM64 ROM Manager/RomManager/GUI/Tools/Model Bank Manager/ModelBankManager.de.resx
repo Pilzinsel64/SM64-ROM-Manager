@@ -205,6 +205,9 @@
   <data name="ButtonItem_ShowCollision.Text" xml:space="preserve">
     <value>Kollisionsmodell anzeigen</value>
   </data>
+  <data name="ButtonItem_EditGeolayout.Text" xml:space="preserve">
+    <value>Geolayout bearbeiten</value>
+  </data>
   <data name="ButtonItem_ObjectShadow.Text" xml:space="preserve">
     <value>Objekt-Schatten</value>
   </data>

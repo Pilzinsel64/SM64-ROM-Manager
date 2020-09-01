@@ -807,14 +807,14 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 case ItemsType.ObjCombos:
                     {
-                        General.LoadObjectCombos(rommgr);
+                        General.LoadObjectCombosIfEmpty(rommgr);
                         LoadNewItems();
                         break;
                     }
 
                 case ItemsType.Behavs:
                     {
-                        General.LoadBehaviorInfos(rommgr);
+                        General.LoadBehaviorInfosIfEmpty(rommgr);
                         LoadNewItems();
                         break;
                     }

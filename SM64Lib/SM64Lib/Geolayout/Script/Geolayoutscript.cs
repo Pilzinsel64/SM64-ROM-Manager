@@ -3,6 +3,7 @@ using global::System.IO;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib.Data;
+using SM64Lib.SegmentedBanking;
 
 namespace SM64Lib.Geolayout.Script
 {
@@ -21,17 +22,29 @@ namespace SM64Lib.Geolayout.Script
             return t;
         }
 
+        public void Read(byte[] data, byte bankID)
+        {
+            var ms = new MemoryStream(data);
+            var segBank = new SegmentedBank(bankID, ms);
+            Read(segBank, 0);
+        }
+
         public void Read(RomManager rommgr, int segAddress)
+        {
+            var segBank = rommgr.GetSegBank(Conversions.ToByte(segAddress >> 24));
+            segBank.ReadDataIfNull(rommgr.RomFile);
+            Read(segBank, segAddress & 0x00ffffff);
+        }
+
+        public void Read(SegmentedBank segBank, int offset)
         {
             Close();
             Clear();
             GeopointerOffsets.Clear();
-            var segBank = rommgr.GetSegBank(Conversions.ToByte(segAddress >> 24));
             if (segBank is null)
                 return;
-            segBank.ReadDataIfNull(rommgr.RomFile);
             var data = new BinaryStreamData(segBank.Data);
-            data.Position = segBank.BankOffsetFromSegAddr(segAddress);
+            data.Position = offset;
             var tb = new List<byte>();
             GeolayoutCommandTypes cb = default;
             int subNodeIndex = 0;

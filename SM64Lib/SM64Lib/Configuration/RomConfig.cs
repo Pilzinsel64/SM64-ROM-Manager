@@ -33,6 +33,7 @@ namespace SM64Lib.Configuration
         public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
         public ObjectBankDataListCollection ObjectBankInfoData { get; } = new ObjectBankDataListCollection();
         public NPCConfig NPCConfig { get; } = new NPCConfig();
+        public CollisionBasicConfig CollisionBaseConfig { get; } = new CollisionBasicConfig();
 
         /// <summary>
         /// Contains custom configuration that isn't used by SM64Lib. E.g. Extra Object Combos.

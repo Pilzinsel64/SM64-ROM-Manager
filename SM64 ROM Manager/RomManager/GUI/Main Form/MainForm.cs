@@ -104,6 +104,7 @@ namespace SM64_ROM_Manager
             // Init Components
             InitializeComponent();
             TabControl1.Dock = DockStyle.Fill;
+            Text = "Something to fix window not showing in taskbar.";
 
             // Set instance on Tabs   
             tabGeneral.Controller = Controller;
@@ -313,7 +314,7 @@ namespace SM64_ROM_Manager
             RefreshAppTitel();
         }
 
-        private void Form_Main_Shown(object sender, EventArgs e)
+        private async void Form_Main_Shown(object sender, EventArgs e)
         {
             Controller.StatusText = Form_Main_Resources.Status_StartingUp;
             Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
@@ -324,9 +325,11 @@ namespace SM64_ROM_Manager
             Controller.LoadPlugins();
             AddMyPluginCommands();
             Controller.CheckToOpenThankYouPage();
-            if (Settings.Network.AutoUpdates)
+            if (Settings.Network.AutoUpdates && Controller.UpdateCheckIsDue())
             {
-                Task t = Controller.SearchForUpdates(true);
+                var didUpdate = await Controller.SearchForUpdates(true);
+                if (didUpdate)
+                    Settings.Network.LastUpdateCheck = DateTime.Now;
             }
         }
 

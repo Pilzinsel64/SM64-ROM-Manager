@@ -17,6 +17,7 @@ using global::SM64Lib.TextValueConverter;
 using Z.Collections.Extensions;
 using SM64Lib.Patching;
 using System.ComponentModel;
+using SM64Lib.Configuration;
 
 namespace SM64_ROM_Manager.ModelImporterGUI
 {
@@ -168,7 +169,13 @@ namespace SM64_ROM_Manager.ModelImporterGUI
 
             // Write to stream
             WriteOutput("Writing Model ...");
-            sr = mdl.ToStream(fs, romAddr, romAddr - (bankAddr & 0xFFFFFF), (int)(bankAddr & 0xFF000000));
+            sr = mdl.ToStream(
+                fs,
+                romAddr,
+                romAddr - (bankAddr & 0xFFFFFF),
+                (int)(bankAddr & 0xFF000000),
+                rommgr?.RomConfig.CollisionBaseConfig ?? new CollisionBasicConfig());
+
             if (sr is object)
             {
                 geo = sr.GeoPointers.ToArray();

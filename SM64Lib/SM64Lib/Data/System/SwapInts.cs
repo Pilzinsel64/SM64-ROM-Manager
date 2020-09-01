@@ -46,11 +46,18 @@ namespace SM64Lib.Data.System
             return BitConverter.ToUInt64(bytes, 0);
         }
 
-        public static ushort SwapSingle(float value)
+        public static ushort SwapHalf(float value)
         {
-            var bytes = BitConverter.GetBytes(value);
-            //Array.Reverse(bytes);
+            byte[] bytes = BitConverter.GetBytes(value);
+            Array.Reverse(bytes);
             return BitConverter.ToUInt16(bytes, 0);
+        }
+
+        public static float SwapFloat32(float value)
+        {
+            byte[] bytes = BitConverter.GetBytes(value);
+            Array.Reverse(bytes);
+            return BitConverter.ToSingle(bytes, 0);
         }
     }
 }

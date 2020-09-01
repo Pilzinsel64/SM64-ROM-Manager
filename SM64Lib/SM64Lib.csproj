@@ -153,6 +153,7 @@
     <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandFactory.cs" />
     <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandFunctions.cs" />
     <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandTypes.cs" />
+    <Compile Include="SM64Lib\Configuration\CollisionBasicConfig.cs" />
     <Compile Include="SM64Lib\Configuration\CustomModelConfig.cs" />
     <Compile Include="SM64Lib\Configuration\LevelAreaConfig.cs" />
     <Compile Include="SM64Lib\Configuration\LevelConfig.cs" />

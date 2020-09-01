@@ -112,7 +112,21 @@ namespace SM64Lib.Geolayout
             }
         }
 
+        public void Read(byte[] data, byte bankID)
+        {
+            RenewGeolayout();
+            Geolayoutscript.Read(data, bankID);
+            ParseGeolayout();
+        }
+
         public void Read(RomManager rommgr, int segAddress)
+        {
+            RenewGeolayout();
+            Geolayoutscript.Read(rommgr, segAddress);
+            ParseGeolayout();
+        }
+
+        private void RenewGeolayout()
         {
             if (!Closed) Close();
             Closed = false;
@@ -120,10 +134,12 @@ namespace SM64Lib.Geolayout
             Geopointers.Clear();
             GeopointerOffsets.Clear();
             Geolayoutscript = new Geolayoutscript();
-            Geolayoutscript.Read(rommgr, segAddress);
             ObjectShadow = new ObjectShadow();
             CameraFrustrum = new CameraFrustrum();
+        }
 
+        public void ParseGeolayout()
+        {
             var ToRemove = new List<GeolayoutCommand>();
             int cIndex = 0;
             var curMdlScale = System.Numerics.Vector3.One;

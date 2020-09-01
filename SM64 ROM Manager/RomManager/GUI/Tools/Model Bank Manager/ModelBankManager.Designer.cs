@@ -67,6 +67,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_ObjectShadow = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_EditObjectShadow = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_RemoveObjectShadow = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_EditGeolayout = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_CopyCollisionPointer = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_RemoveObject = new DevComponents.DotNetBar.ButtonItem();
             this.Panel1.SuspendLayout();
@@ -338,6 +339,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_RemoveCollision,
             this.ButtonItem_ShowVisualMap,
             this.ButtonItem_ShowCollision,
+            this.ButtonItem_EditGeolayout,
             this.ButtonItem_ObjectShadow,
             this.ButtonItem_CopyCollisionPointer,
             this.ButtonItem_RemoveObject});
@@ -385,6 +387,14 @@ namespace SM64_ROM_Manager
             this.ButtonItem_ShowCollision.Image = ((System.Drawing.Image)(resources.GetObject("ButtonItem_ShowCollision.Image")));
             this.ButtonItem_ShowCollision.Name = "ButtonItem_ShowCollision";
             this.ButtonItem_ShowCollision.Click += new System.EventHandler(this.ButtonItem_ShowCollision_Click);
+            // 
+            // ButtonItem_EditGeolayout
+            // 
+            this.ButtonItem_EditGeolayout.BeginGroup = true;
+            this.ButtonItem_EditGeolayout.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.ButtonItem_EditGeolayout.Name = "ButtonItem_EditGeolayout";
+            resources.ApplyResources(this.ButtonItem_EditGeolayout, "ButtonItem_EditGeolayout");
+            this.ButtonItem_EditGeolayout.Click += new System.EventHandler(this.ButtonItem_EditGeolayout_Click);
             // 
             // ButtonItem_ObjectShadow
             // 
@@ -504,5 +514,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ObjectShadow;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_EditObjectShadow;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveObjectShadow;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_EditGeolayout;
     }
 }

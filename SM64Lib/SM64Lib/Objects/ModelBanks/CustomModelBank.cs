@@ -38,24 +38,24 @@ namespace SM64Lib.Objects.ModelBanks
             return General.HexRoundUp1(Models.Count * 8 + 4);
         }
 
-        public SegmentedBank WriteToSeg(byte bankID)
+        public SegmentedBank WriteToSeg(byte bankID, CollisionBasicConfig collisionConfig)
         {
             var segStream = new MemoryStream();
             var seg = new SegmentedBank(bankID, segStream);
-            int lastPos = WriteToSeg(seg, 0);
+            int lastPos = WriteToSeg(seg, 0, collisionConfig);
             seg.Length = lastPos;
             return seg;
         }
 
-        public int WriteToSeg(SegmentedBank seg, int offset)
+        public int WriteToSeg(SegmentedBank seg, int offset, CollisionBasicConfig collisionConfig)
         {
             var data = new BinaryStreamData(seg.Data);
-            int lastPos = WriteToSeg(data, offset, seg.BankID);
+            int lastPos = WriteToSeg(data, offset, seg.BankID, collisionConfig);
             CurSeg = seg;
             return lastPos;
         }
 
-        public int WriteToSeg(BinaryData data, int offset, byte bankID)
+        public int WriteToSeg(BinaryData data, int offset, byte bankID, CollisionBasicConfig collisionConfig)
         {
             uint lvlScriptLength;
             int bankAddr = Conversions.ToInteger(Conversions.ToUInteger(bankID) << 24);
@@ -77,7 +77,7 @@ namespace SM64Lib.Objects.ModelBanks
 
                 // Write Object Model
                 obj.ModelBankOffset = Conversions.ToInteger(data.Position - offset);
-                var sr = obj.Model.ToBinaryData(data, Conversions.ToInteger(data.Position), offset, bankAddr);
+                var sr = obj.Model.ToBinaryData(data, Conversions.ToInteger(data.Position), offset, bankAddr, collisionConfig);
                 data.RoundUpPosition();
 
                 // Write Model Offset & Length & Collision Offset
@@ -187,7 +187,7 @@ namespace SM64Lib.Objects.ModelBanks
 
                             // Load Model
                             obj.Model = new Model.ObjectModel();
-                            obj.Model.FromBinaryData(data, 0, seg.BankAddress, obj.ModelBankOffset, f3d_length, obj.Geolayout.Geopointers.ToArray(), colPointer);
+                            obj.Model.FromBinaryData(data, 0, seg.BankAddress, obj.ModelBankOffset, f3d_length, obj.Geolayout.Geopointers.ToArray(), colPointer, rommgr.RomConfig.CollisionBaseConfig);
 
                             // Add Object to list
                             Models.Add(obj);

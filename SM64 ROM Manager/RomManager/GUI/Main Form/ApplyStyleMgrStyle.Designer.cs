@@ -36,23 +36,24 @@ namespace SM64_ROM_Manager
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            _StyleManager1 = new DevComponents.DotNetBar.StyleManager(components);
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this._StyleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
+            this.SuspendLayout();
             // 
-            // StyleManager1
+            // _StyleManager1
             // 
-            _StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Metro;
-            _StyleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255)), Conversions.ToInteger(Conversions.ToByte(255))), Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(128)), Conversions.ToInteger(Conversions.ToByte(57)), Conversions.ToInteger(Conversions.ToByte(123))));
+            this._StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2016;
+            this._StyleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(115)))), ((int)(((byte)(199))))));
             // 
             // ApplyStyleMgrStyle
             // 
-            AutoScaleDimensions = new SizeF(6.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "ApplyStyleMgrStyle";
-            Text = "DummyStyle";
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "ApplyStyleMgrStyle";
+            this.Text = "DummyStyle";
+            this.ResumeLayout(false);
+
         }
 
         private DevComponents.DotNetBar.StyleManager _StyleManager1;
