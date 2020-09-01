@@ -1,9 +1,10 @@
 ﻿using System;
 using global::SM64Lib.Script;
+using Newtonsoft.Json;
 
 namespace SM64Lib.Levels.Script
 {
-    [Serializable]
+    [JsonConverter(typeof(Json.LevelscriptCommandJsonConverter))]
     public class LevelscriptCommand : BaseCommand<LevelscriptCommandTypes>
     {
         public LevelscriptCommand(byte[] bytes) : base(bytes)

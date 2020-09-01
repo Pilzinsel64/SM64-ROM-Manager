@@ -11,8 +11,9 @@ namespace SM64_ROM_Manager.Updating.Administration
 {
     public class UpdateProject
     {
-        public UpdateServerConfig UpdateServerConfig { get; set; } = new UpdateServerConfig();
-        public DiscordBotConfig DiscordBotConfig { get; set; } = new DiscordBotConfig();
+        public UpdateServerConfig UpdateServerConfig { get; } = new UpdateServerConfig();
+        public DiscordBotConfig DiscordBotConfig { get; } = new DiscordBotConfig();
+        public ProxyConfiguration ProxyConfig { get; } = new ProxyConfiguration();
         
         public static UpdateProject Load(string filePath)
         {

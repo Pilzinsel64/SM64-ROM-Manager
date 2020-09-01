@@ -57,20 +57,5 @@ namespace SM64_ROM_Manager
             ApplySettingsToCoinManager();
             coinMgr.SaveCoinSettings();
         }
-
-        private void ButtonX_ImportKaze3DCoins_Click(object sender, EventArgs e)
-        {
-            coinMgr.ImportKazesCoins();
-            Publics.General.ShowToastnotification(Panel1, LangResCoinsManager.Notify_3DCoinsPatchesSuccess, eToastGlowColor.Green);
-        }
-
-        private void ButtonX_Remove3DCoins_Click(object sender, EventArgs e)
-        {
-            if (MessageBoxEx.Show(LangResCoinsManager.MsgBox_Experimental3DCoinsRemove, LangResCoinsManager.MsgBox_Experimental3DCoinsRemove_Titel, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                coinMgr.Remove3DCoins();
-                Publics.General.ShowToastnotification(Panel1, LangResCoinsManager.Notify_3DCoinsRemovedSuccess, eToastGlowColor.Green);
-            }
-        }
     }
 }

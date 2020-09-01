@@ -14,6 +14,7 @@ using global::SM64Lib.Levels;
 using Image = System.Drawing.Image;
 using Bitmap = System.Drawing.Bitmap;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -134,33 +135,22 @@ namespace SM64_ROM_Manager.LevelEditor
         private System.Timers.Timer _RenderTimer;
         private System.Timers.Timer RenderTimer
         {
-            [MethodImpl(MethodImplOptions.Synchronized)]
             get
             {
                 return _RenderTimer;
             }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
             set
             {
                 if (_RenderTimer != null)
-                {
-
-                    /* TODO ERROR: Skipped IfDirectiveTrivia */
                     _RenderTimer.Elapsed -= CompositionTarget_Rendering;
-                }
-
                 _RenderTimer = value;
                 if (_RenderTimer != null)
-                {
                     _RenderTimer.Elapsed += CompositionTarget_Rendering;
-                }
             }
         }
         
         internal Matrix4 ProjMatrix = default;
-        internal bool Ortho = false;
-        internal float FOV = 1.048F;
+        internal float FOV { get; set; } = 1.048F;
         internal Matrix4 camMtx = Matrix4.Identity;
         internal Vector3 savedCamPos = new Vector3();
         internal bool isMouseDown = false;
@@ -267,7 +257,7 @@ namespace SM64_ROM_Manager.LevelEditor
             TargetControl.Controls.Add(GLControl1);
             GLControl1.CreateControl();
             GLControl1.Enabled = false;
-            UpdateProjMatrix();
+            UpdateProjMatrix(false);
             Camera.UpdateMatrix(ref camMtx);
         }
 
@@ -278,7 +268,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public void Update()
         {
-            GLControl1.Update();
+            GLControl1.Invalidate();
         }
 
         public void MakeCurrent()
@@ -286,13 +276,11 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControl1.MakeCurrent();
         }
 
-        public void ChangeViewMode(bool ortho)
+        public void ChangeViewMode()
         {
             if (GLControl1 is object)
             {
-                Ortho = ortho;
                 UpdateProjMatrix();
-                GLControl1?.Update();
             }
         }
 
@@ -406,19 +394,12 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControl1.Context.Update(GLControl1.WindowInfo);
             GL.Viewport(0, 0, GLControl1.Width, GLControl1.Height);
             UpdateProjMatrix();
-            GLControl1.Invalidate();
         }
 
-        public void UpdateProjMatrix()
+        public void UpdateProjMatrix(bool update = true)
         {
-            if (Ortho)
-            {
-                ProjMatrix = Matrix4.CreateOrthographic(GLControl1.Width * 4, GLControl1.Height * 4, 100.0F, 100000.0F);
-            }
-            else
-            {
-                ProjMatrix = Matrix4.CreatePerspectiveFieldOfView(FOV, (float)(GLControl1.Width / (double)GLControl1.Height), 100.0F, 100000.0F);
-            }
+            ProjMatrix = Matrix4.CreatePerspectiveFieldOfView(FOV, (float)(GLControl1.Width / (double)GLControl1.Height), 100.0F, 100000.0F);
+            if (update) Update();
         }
 
         private void glControl1_Wheel(object sender, MouseEventArgs e)
@@ -478,73 +459,54 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void CompositionTarget_Rendering(object sender, System.Timers.ElapsedEventArgs e)
         {
-            // If Not Main.isDeactivated Then
-            // GLControl1.Invalidate()
-            // End If
-            // Application.DoEvents()
+            Main.objectControlling.SlideMoveObjects();
+            Main.objectControlling.SlideRotateObjects();
             MoveCameraViaWASDQE();
         }
-        /* TODO ERROR: Skipped EndIfDirectiveTrivia */
-        private void MoveCameraViaWASDQE()
+
+        private bool MoveCameraViaWASDQE()
         {
             int moveSpeed = Convert.ToInt32(Math.Round((Main.IsShiftPressed ? 60 : 30) * Camera.CamSpeedMultiplier, 0));
             bool allowCamMove = !(isMouseDown && Main.IsShiftPressed);
+            bool movedCam = false;
+
             foreach (Keys k in Main.PressedKeys.ToArray())
             {
                 if (allowCamMove)
                 {
-                    // camera.resetMouseStuff()
-
                     switch (k)
                     {
                         case Keys.W:
-                            {
-                                // camera.Move(moveSpeed, moveSpeed, camMtx)
-                                Camera.UpdateCameraMatrixWithScrollWheel(moveSpeed, ref camMtx);
-                                savedCamPos = Camera.Position;
-                                break;
-                            }
-
+                            Camera.UpdateCameraMatrixWithScrollWheel(moveSpeed, ref camMtx);
+                            savedCamPos = Camera.Position;
+                            movedCam = true;
+                            break;
                         case Keys.S:
-                            {
-                                // camera.Move(-moveSpeed, -moveSpeed, camMtx)
-                                Camera.UpdateCameraMatrixWithScrollWheel(-moveSpeed, ref camMtx);
-                                savedCamPos = Camera.Position;
-                                break;
-                            }
-
+                            Camera.UpdateCameraMatrixWithScrollWheel(-moveSpeed, ref camMtx);
+                            savedCamPos = Camera.Position;
+                            movedCam = true;
+                            break;
                         case Keys.A:
-                            {
-                                // camera.Move(-moveSpeed, 0, camMtx)
-                                Camera.UpdateCameraOffsetDirectly(-moveSpeed, 0, ref camMtx);
-                                break;
-                            }
-
+                            Camera.UpdateCameraOffsetDirectly(-moveSpeed, 0, ref camMtx);
+                            movedCam = true;
+                            break;
                         case Keys.D:
-                            {
-                                // camera.Move(moveSpeed, 0, camMtx)
-                                Camera.UpdateCameraOffsetDirectly(moveSpeed, 0, ref camMtx);
-                                break;
-                            }
-
+                            Camera.UpdateCameraOffsetDirectly(moveSpeed, 0, ref camMtx);
+                            movedCam = true;
+                            break;
                         case Keys.E:
-                            {
-                                // camera.Move(0, -moveSpeed, camMtx)
-                                Camera.UpdateCameraOffsetDirectly(0, -moveSpeed, ref camMtx);
-                                break;
-                            }
-
+                            Camera.UpdateCameraOffsetDirectly(0, -moveSpeed, ref camMtx);
+                            movedCam = true;
+                            break;
                         case Keys.Q:
-                            {
-                                // camera.Move(0, moveSpeed, camMtx)
-                                Camera.UpdateCameraOffsetDirectly(0, moveSpeed, ref camMtx);
-                                break;
-                            }
+                            Camera.UpdateCameraOffsetDirectly(0, moveSpeed, ref camMtx);
+                            movedCam = true;
+                            break;
                     }
-
-                    // savedCamPos = camera.Position
                 }
             }
+
+            return movedCam;
         }
 
         public void SelectViaGLControl(int mx, int my)

@@ -19,7 +19,17 @@ namespace SM64_ROM_Manager
     public partial class Tab_TextManager
     {
 
+        // C o n s t a n t s
+
+        private const string FILTER_EXPORT_TABLES = "Text file (*.txt)|*.txt|Excel file (*.xlsx)|*.xlsx";
+        private const string FILTER_IMPORT_TABLES = "Excel file (*.xlsx)|*.xlsx";
+        private const string FILTER_TEXT_PROFILE = "JSON (*.json)|*.json";
+
         // F i e l d s
+
+        private bool TM_LoadingItem = false;
+        private int TM_BytesLeft = 0;
+        private bool loadingTextProfileList = false;
 
         private TextManagerController _TMController;
 
@@ -62,10 +72,6 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private bool TM_LoadingItem = false;
-        private int TM_BytesLeft = 0;
-        private bool loadingTextProfileList = false;
-
         // C o n s t r u c t o r
 
         public Tab_TextManager()
@@ -82,6 +88,8 @@ namespace SM64_ROM_Manager
                     Text = Form_Main_Resources.ResourceManager.GetString($"SoundEffect_{Enum.GetName(typeof(SM64Lib.Text.DialogSoundEffect), value)}")
                 });
         }
+
+        // E v e n t   H a n d l e r s
 
         private void Controller_RequestReloadTextManager()
         {
@@ -119,38 +127,15 @@ namespace SM64_ROM_Manager
 
         private void TMController_CurrentTextProfileInfoChanged()
         {
-            LoadTextProfileList();
-            LoadTabStripItems();
+            InitTextManager();
         }
 
-        // G u i
+        // F e a t u r e s
 
-        private void LoadTextProfileList()
+        private void InitTextManager()
         {
-            ComboItem itemToSelect = null;
-            string curProfile = TMController.GetCurrentTextProfileName();
-            loadingTextProfileList = true;
-            ComboBoxItem_CurProfile.Items.Clear();
-            foreach (string name in TMController.GetAllTextProfileNames())
-            {
-                var ci = new ComboItem()
-                {
-                    Text = name,
-                    Tag = name
-                };
-                ComboBoxItem_CurProfile.Items.Add(ci);
-                if ((curProfile ?? "") == (name ?? ""))
-                {
-                    itemToSelect = ci;
-                }
-            }
-
-            if (itemToSelect is object)
-            {
-                ComboBoxItem_CurProfile.SelectedItem = itemToSelect;
-            }
-
-            loadingTextProfileList = false;
+            LoadTabStripItems();
+            UpdateTextProfileMenu();
         }
 
         private void RemoveTextItem(int tableIndex)
@@ -211,10 +196,7 @@ namespace SM64_ROM_Manager
             var col2 = ListViewEx_TM_TableEntries.Columns[2];
 
             if (TabStrip_TextTable.Tabs.Count == 0) // First Init
-            {
-                LoadTextProfileList();
-                LoadTabStripItems();
-            }
+                InitTextManager();
 
             tableName = Conversions.ToString(TabStrip_TextTable.SelectedTab?.Tag);
             TMController.StatusText = Form_Main_Resources.Status_LoadingTexts;
@@ -415,7 +397,7 @@ namespace SM64_ROM_Manager
                 TextBoxX_TM_TextEditor.Text = itemInfo.text;
 
                 var isDescNull = itemInfo.dialogDescription == null;
-                TextBoxX_ItemDescription.ReadOnly = isDescNull && !TMController.UsingDefaultTextProfileInfo();
+                TextBoxX_ItemDescription.ReadOnly = isDescNull || TMController.UsingDefaultTextProfileInfo();
                 if (isDescNull)
                     TextBoxX_ItemDescription.Text = TMController.GetTextNameList(selectedIndicies.tableName).ElementAtOrDefault(selectedIndicies.tableIndex);
                 else
@@ -452,7 +434,7 @@ namespace SM64_ROM_Manager
         {
             var sfd_ExportTextTable = new SaveFileDialog
             {
-                Filter = "Text file (*.txt)|*.txt|Excel file (*.xlsx)|*.xlsx"
+                Filter = FILTER_EXPORT_TABLES
             };
 
             if (sfd_ExportTextTable.ShowDialog(this) == DialogResult.OK)
@@ -468,12 +450,23 @@ namespace SM64_ROM_Manager
         {
             var ofd_ExportTextTable = new OpenFileDialog
             {
-                Filter = "Excel file (*.xlsx)|*.xlsx"
+                Filter = FILTER_IMPORT_TABLES
             };
 
             if (ofd_ExportTextTable.ShowDialog(this) == DialogResult.OK)
                 await TMController.ImportTextTables(ofd_ExportTextTable.FileName);
         }
+
+        private void UpdateTextProfileMenu()
+        {
+            var isDefautl = TMController.UsingDefaultTextProfileInfo();
+            ButtonItem_CreateProfile.Enabled = isDefautl;
+            ButtonItem_ExportProfile.Enabled = !isDefautl;
+            ButtonItem_ResetProfile.Enabled = !isDefautl;
+            ButtonItem_ManageProfile.Enabled = !isDefautl;
+        }
+
+        // G u i
 
         private void TabStrip1_SelectedTabChanged(object sender, TabStripTabChangedEventArgs e)
         {
@@ -531,18 +524,6 @@ namespace SM64_ROM_Manager
             Line_TM_Warning2.Height = height;
         }
 
-        private void ComboBoxItem_CurProfile_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!loadingTextProfileList)
-            {
-                ComboItem ci = (ComboItem)ComboBoxItem_CurProfile.SelectedItem;
-                if (ci is object)
-                {
-                    TMController.SetCurrentTextProfileName(Conversions.ToString(ci.Tag));
-                }
-            }
-        }
-
         private void ButtonItem_ClearAllItems_Click(object sender, EventArgs e)
         {
             TMController.ClearTextItems(GetSelectedIndicies().tableName);
@@ -575,6 +556,42 @@ namespace SM64_ROM_Manager
         private void ButtonItem_ImportFrom_Click(object sender, EventArgs e)
         {
             ImportTextTables();
+        }
+
+        private void ButtonItem_ResetProfile_Click(object sender, EventArgs e)
+        {
+            TMController.ResetTextPRofileInfo();
+        }
+
+        private void ButtonItem_ManageProfile_Click(object sender, EventArgs e)
+        {
+            TMController.OpenTextProfileEditor();
+            InitTextManager();
+        }
+
+        private void ButtonItem_ExportProfile_Click(object sender, EventArgs e)
+        {
+            var sfd_ExportTextProfileInfo = new SaveFileDialog
+            {
+                Filter = FILTER_TEXT_PROFILE
+            };
+            if (sfd_ExportTextProfileInfo.ShowDialog(this) == DialogResult.OK)
+                TMController.ExportTextProfile(sfd_ExportTextProfileInfo.FileName);
+        }
+
+        private void ButtonItem_ImportProfile_Click(object sender, EventArgs e)
+        {
+            var ofd_ImportTextProfileInfo = new OpenFileDialog
+            {
+                Filter = FILTER_TEXT_PROFILE
+            };
+            if (ofd_ImportTextProfileInfo.ShowDialog(this) == DialogResult.OK)
+                TMController.ImportTextProfile(ofd_ImportTextProfileInfo.FileName);
+        }
+
+        private void ButtonItem_CreateProfile_Click(object sender, EventArgs e)
+        {
+            TMController.CreateNewTextProfileInfoIfUsingDefault();
         }
     }
 }

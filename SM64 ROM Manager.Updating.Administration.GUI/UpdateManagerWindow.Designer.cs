@@ -63,6 +63,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ButtonItem_ExportUpdateConfiguration = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar_Options = new DevComponents.DotNetBar.RibbonBar();
             this.ButtonItem_ProjectOptions = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ProxyConfig = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar_Project = new DevComponents.DotNetBar.RibbonBar();
             this.ButtonItem_NewProject = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_OpenProject = new DevComponents.DotNetBar.ButtonItem();
@@ -70,6 +71,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ribbonPanel_Package = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar_Discord = new DevComponents.DotNetBar.RibbonBar();
             this.ButtonItem_PostMsgInDiscord = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_BotSettings = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar_PackageManagement = new DevComponents.DotNetBar.RibbonBar();
             this.ButtonItem_ChangeVersion = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_EditDescription = new DevComponents.DotNetBar.ButtonItem();
@@ -80,7 +82,6 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonTabItem_Project = new DevComponents.DotNetBar.RibbonTabItem();
             this.RibbonTabItem_Packages = new DevComponents.DotNetBar.RibbonTabItem();
             this.StyleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.ButtonItem_BotSettings = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.SuperTabControl1)).BeginInit();
             this.SuperTabControl1.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
@@ -363,7 +364,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ribbonBar_Tools.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ButtonItem_OpenPackageCreationDialog});
             this.ribbonBar_Tools.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.ribbonBar_Tools.Location = new System.Drawing.Point(452, 0);
+            this.ribbonBar_Tools.Location = new System.Drawing.Point(505, 0);
             this.ribbonBar_Tools.Name = "ribbonBar_Tools";
             this.ribbonBar_Tools.Size = new System.Drawing.Size(90, 97);
             this.ribbonBar_Tools.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -406,7 +407,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ButtonItem_UploadUpdateConfiguration,
             this.ButtonItem_ExportUpdateConfiguration});
             this.ribbonBar_UpdateConfiguration.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.ribbonBar_UpdateConfiguration.Location = new System.Drawing.Point(289, 0);
+            this.ribbonBar_UpdateConfiguration.Location = new System.Drawing.Point(342, 0);
             this.ribbonBar_UpdateConfiguration.Name = "ribbonBar_UpdateConfiguration";
             this.ribbonBar_UpdateConfiguration.Size = new System.Drawing.Size(163, 97);
             this.ribbonBar_UpdateConfiguration.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -456,11 +457,12 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ribbonBar_Options.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar_Options.DragDropSupport = true;
             this.ribbonBar_Options.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_ProjectOptions});
+            this.ButtonItem_ProjectOptions,
+            this.ButtonItem_ProxyConfig});
             this.ribbonBar_Options.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.ribbonBar_Options.Location = new System.Drawing.Point(197, 0);
             this.ribbonBar_Options.Name = "ribbonBar_Options";
-            this.ribbonBar_Options.Size = new System.Drawing.Size(92, 97);
+            this.ribbonBar_Options.Size = new System.Drawing.Size(145, 97);
             this.ribbonBar_Options.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar_Options.TabIndex = 2;
             this.ribbonBar_Options.Text = "Optionen";
@@ -482,6 +484,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ButtonItem_ProjectOptions.SubItemsExpandWidth = 14;
             this.ButtonItem_ProjectOptions.Text = "Projektoptionen";
             this.ButtonItem_ProjectOptions.Click += new System.EventHandler(this.ButtonItem_ProjectOptions_Click);
+            // 
+            // ButtonItem_ProxyConfig
+            // 
+            this.ButtonItem_ProxyConfig.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_ProxyConfig.Image = global::SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_firewall_32px;
+            this.ButtonItem_ProxyConfig.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.ButtonItem_ProxyConfig.Name = "ButtonItem_ProxyConfig";
+            this.ButtonItem_ProxyConfig.SubItemsExpandWidth = 14;
+            this.ButtonItem_ProxyConfig.Text = "Proxy";
+            this.ButtonItem_ProxyConfig.Click += new System.EventHandler(this.ButtonItem_ProxyConfig_Click);
             // 
             // ribbonBar_Project
             // 
@@ -615,6 +627,16 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ButtonItem_PostMsgInDiscord.SubItemsExpandWidth = 14;
             this.ButtonItem_PostMsgInDiscord.Text = "Updatenachricht in Discord posten";
             this.ButtonItem_PostMsgInDiscord.Click += new System.EventHandler(this.ButtonItem_PostMsgInDiscord_Click);
+            // 
+            // ButtonItem_BotSettings
+            // 
+            this.ButtonItem_BotSettings.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_BotSettings.Image = global::SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_administrative_tools_32px;
+            this.ButtonItem_BotSettings.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.ButtonItem_BotSettings.Name = "ButtonItem_BotSettings";
+            this.ButtonItem_BotSettings.SubItemsExpandWidth = 14;
+            this.ButtonItem_BotSettings.Text = "Discord Bot-Einstellungen";
+            this.ButtonItem_BotSettings.Click += new System.EventHandler(this.ButtonItem_BotSettings_Click);
             // 
             // ribbonBar_PackageManagement
             // 
@@ -751,16 +773,6 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2016;
             this.StyleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(71)))), ((int)(((byte)(42))))));
             // 
-            // ButtonItem_BotSettings
-            // 
-            this.ButtonItem_BotSettings.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_BotSettings.Image = global::SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_administrative_tools_32px;
-            this.ButtonItem_BotSettings.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.ButtonItem_BotSettings.Name = "ButtonItem_BotSettings";
-            this.ButtonItem_BotSettings.SubItemsExpandWidth = 14;
-            this.ButtonItem_BotSettings.Text = "Discord Bot-Einstellungen";
-            this.ButtonItem_BotSettings.Click += new System.EventHandler(this.ButtonItem_BotSettings_Click);
-            // 
             // UpdateManagerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -884,5 +896,6 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         private DevComponents.DotNetBar.ButtonItem ButtonItem_EditDescription;
         private DevComponents.DotNetBar.Controls.CircularProgress circularProgress1;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_BotSettings;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_ProxyConfig;
     }
 }

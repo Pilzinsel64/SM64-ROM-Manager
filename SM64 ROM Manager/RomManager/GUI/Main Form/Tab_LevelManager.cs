@@ -65,6 +65,7 @@ namespace SM64_ROM_Manager
                     _Controller.LevelAreaRemoved -= Controller_LevelAreaRemoved;
                     _Controller.LevelAreaScrollingTextureCountChanged -= Controller_LevelAreaScrollingTextureCountChanged;
                     _Controller.ObjectBankDataChanged -= Controller_ObjectBankDataChanged;
+                    _Controller.LevelAreaIDChanged -= Controller_LevelAreaIDChanged;
                 }
 
                 _Controller = value;
@@ -88,7 +89,7 @@ namespace SM64_ROM_Manager
                     _Controller.LevelAreaAdded += Controller_LevelAreaAdded;
                     _Controller.LevelAreaRemoved += Controller_LevelAreaRemoved;
                     _Controller.LevelAreaScrollingTextureCountChanged += Controller_LevelAreaScrollingTextureCountChanged;
-                    _Controller.ObjectBankDataChanged += Controller_ObjectBankDataChanged;
+                    _Controller.LevelAreaIDChanged += Controller_LevelAreaIDChanged;
                 }
             }
         }
@@ -222,6 +223,7 @@ namespace SM64_ROM_Manager
 
         private void Controller_RomLoaded()
         {
+            LoadObjectBankListBoxEntries();
             LoadLevelList();
         }
 
@@ -320,6 +322,11 @@ namespace SM64_ROM_Manager
         private void Controller_ObjectBankDataChanged()
         {
             LoadObjectBankListBoxEntries();
+        }
+
+        private void Controller_LevelAreaIDChanged(LevelAreaEventArgs e)
+        {
+            UpdateLevelAreaButton(e.LevelIndex, e.AreaIndex, e.AreaID);
         }
 
         // C o n s t r u c t o r
@@ -446,14 +453,16 @@ namespace SM64_ROM_Manager
 
         internal void LoadObjectBankListBoxEntries()
         {
-            Controller.LoadObjectBankData();
+            var data = Controller.GetObjectBankData();
+
             void load(ObjectBankSelectorBox sb, byte number)
             {
                 sb.ComboItems.Clear();
                 sb.ComboItems.Add(Form_Main_Resources.Text_Disabled);
-                foreach (var s in SM64Lib.General.ObjectBankData[Conversions.ToInteger(number)])
+
+                foreach (var s in data[Conversions.ToInteger(number)])
                 {
-                    var cb = new ComboItem()
+                    var cb = new ComboItem
                     {
                         Text = s.Name,
                         Tag = s
@@ -524,7 +533,8 @@ namespace SM64_ROM_Manager
             var areaIDs = Controller.GetUsedLevelAreaIDs(Conversions.ToUShort(CurrentLevelIndex));
             foreach (byte areaID in areaIDs)
             {
-                var btn = new ButtonItem() { Text = Form_Main_Resources.Text_Area + " " + Conversions.ToString(areaID) };
+                var btn = new ButtonItem();
+                UpdateLevelAreaButton(btn, areaID);
 
                 // Add event to popup 'More'
                 btn.MouseUp += (sender, e) => { if (e.Button == MouseButtons.Right) Button_LM_AreaEditor.Popup(Cursor.Position); };
@@ -551,6 +561,21 @@ namespace SM64_ROM_Manager
             {
                 ListBoxAdv_LM_Areas.SelectedItem = null;
                 ListBoxAdv_LM_Areas.SelectedItem = null;
+            }
+        }
+
+        private void UpdateLevelAreaButton(ButtonItem btn, byte areaID)
+        {
+            btn.Text = Form_Main_Resources.Text_Area + " " + Conversions.ToString(areaID);
+        }
+
+        private void UpdateLevelAreaButton(int levelIndex, int areaIndex, byte newAreaID)
+        {
+            if (CurrentLevelIndex == levelIndex)
+            {
+                var btn = (ButtonItem)ListBoxAdv_LM_Areas.Items[areaIndex];
+                UpdateLevelAreaButton(btn, newAreaID);
+                ListBoxAdv_LM_Areas.Refresh();
             }
         }
 

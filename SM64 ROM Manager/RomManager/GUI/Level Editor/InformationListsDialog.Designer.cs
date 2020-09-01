@@ -79,14 +79,13 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             // ButtonX_CancelSearch
             // 
+            this.ButtonX_CancelSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             resources.ApplyResources(this.ButtonX_CancelSearch, "ButtonX_CancelSearch");
             this.ButtonX_CancelSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
             this.ButtonX_CancelSearch.FocusCuesEnabled = false;
+            this.ButtonX_CancelSearch.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
             this.ButtonX_CancelSearch.Name = "ButtonX_CancelSearch";
             this.ButtonX_CancelSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_CancelSearch.Symbol = "57676";
-            this.ButtonX_CancelSearch.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX_CancelSearch.SymbolSize = 12F;
             this.ButtonX_CancelSearch.Click += new System.EventHandler(this.ButtonX_CancelSearch_Click);
             // 
             // ItemList

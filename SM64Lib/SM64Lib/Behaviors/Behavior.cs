@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Z.Collections.Extensions;
+using static SM64Lib.Extensions.ObjectExtensions;
 
 namespace SM64Lib.Behaviors
 {
@@ -223,6 +224,19 @@ namespace SM64Lib.Behaviors
                 cmd = createCmd();
                 Script.Insert(1, cmd);
             }
+        }
+
+        public void CopyPropertiesTo(Behavior dest)
+        {
+            // Copy Script
+            TakeoverSettingsToScript();
+            dest.Script.Close();
+            dest.Script.AddRange(Script);
+            dest.ParseScript();
+
+            // Copy Configs
+            dest.Config.Name = Config.Name;
+            Config.ParamsInfo.CloneTo(dest.Config.ParamsInfo);
         }
 
     }

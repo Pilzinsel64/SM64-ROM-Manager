@@ -184,8 +184,6 @@ namespace SM64_ROM_Manager.Publics
         {
             var config = SM64Lib.FilePathsConfiguration.DefaultConfiguration;
             config.SetFilePath("rn64crc.exe", Path.Combine(MyDataPath, @"Tools\rn64crc.exe"));
-            config.SetFilePath("Apply 3D Coins.ppf", Path.Combine(MyDataPath, @"Patchs\3D-Coins\Apply 3D Coins.ppf"));
-            config.SetFilePath("Remove 3D Coins.ppf", Path.Combine(MyDataPath, @"Patchs\3D-Coins\Remove 3D Coins.ppf"));
             config.SetFilePath("ApplyPPF3.exe", Path.Combine(MyDataPath, @"Tools\ApplyPPF3.exe"));
             config.SetFilePath("Level Tabel.json", Path.Combine(MyDataPath, @"Other\Level Tabel.json"));
             config.SetFilePath("Update-Patches.json", Path.Combine(MyDataPath, @"Patchs\Update-Patches\Update-Patches.json"));

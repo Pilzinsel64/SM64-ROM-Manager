@@ -32,7 +32,7 @@ namespace SM64_ROM_Manager
         [DisplayName("Behavior")]
         [Description("Indicates the axis and behavior.")]
         [Category("Behavior")]
-        [DevComponents.DotNetBar.PropertyMultiChoiceEditor(new string[] { "X-Scrolling", "Y-Scrolling", "Z-Scrolling", "UV-Scrolling Back/Forth", "UV-Scrolling Left/Right" }, new object[] { ScrollBehavior.ScrollingX, ScrollBehavior.ScrollingY, ScrollBehavior.ScrollingZ, ScrollBehavior.ScrollUVBackAndForth, ScrollBehavior.ScrollUVLeftAndRight })] // <PropertyMultiChoiceEditor("X-Scrolling,Y-Scrolling,Z-Scrolling,Scroll UV Back and Forth,Scroll UV Left and Right", True)>
+        //[DevComponents.DotNetBar.PropertyMultiChoiceEditor(new string[] { "X-Scrolling", "Y-Scrolling", "Z-Scrolling", "UV-Scrolling Back/Forth", "UV-Scrolling Left/Right" }, new object[] { ScrollBehavior.ScrollingX, ScrollBehavior.ScrollingY, ScrollBehavior.ScrollingZ, ScrollBehavior.ScrollUVBackAndForth, ScrollBehavior.ScrollUVLeftAndRight })] // <PropertyMultiChoiceEditor("X-Scrolling,Y-Scrolling,Z-Scrolling,Scroll UV Back and Forth,Scroll UV Left and Right", True)>
         public ScrollBehavior Behavior
         {
             get
@@ -49,7 +49,7 @@ namespace SM64_ROM_Manager
         [DisplayName("Type")]
         [Description("Indicates the scroll type.")]
         [Category("Behavior")]
-        [DevComponents.DotNetBar.PropertyMultiChoiceEditor(new string[] { "Normal Scrolling", "Jumping Scroll", "Sine Wave" }, new object[] { ScrollType.NormalScrolling, ScrollType.JumpingScroll, ScrollType.SineWave })]
+        //[DevComponents.DotNetBar.PropertyMultiChoiceEditor(new string[] { "Normal Scrolling", "Jumping Scroll", "Sine Wave" }, new object[] { ScrollType.NormalScrolling, ScrollType.JumpingScroll, ScrollType.SineWave })]
         public ScrollType Type
         {
             get

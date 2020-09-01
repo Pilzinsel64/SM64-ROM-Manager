@@ -3,25 +3,24 @@ using global::System.IO;
 using Microsoft.VisualBasic.CompilerServices;
 using SM64Lib.Data.System;
 using global::SM64Lib.Model.Fast3D;
+using Newtonsoft.Json;
 
 namespace SM64Lib.Levels
 {
     public class LevelBG
     {
-
-        // F i e l d s
-
-        private byte[] _ImageBytes = null;
         private Bitmap _Image = null;
 
         // A u t o   P r o p e r t i e s
 
+        public byte[] ImageData { get; set; } = null;
         public bool Enabled { get; set; } = true;
         public bool IsCustom { get; set; } = false;
         public Geolayout.BackgroundIDs ID { get; set; } = Geolayout.BackgroundIDs.Ocean;
 
         // A u t o   P r o p e r t i e s
 
+        [JsonIgnore]
         public Bitmap Image
         {
             get
@@ -39,32 +38,21 @@ namespace SM64Lib.Levels
             }
         }
 
-        public byte[] ImageData
-        {
-            get
-            {
-                return _ImageBytes;
-            }
-
-            set
-            {
-                _ImageBytes = value;
-            }
-        }
-
+        [JsonIgnore]
         public int ImageLength
         {
             get
             {
-                return _ImageBytes?.Length ?? 0;
+                return ImageData?.Length ?? 0;
             }
         }
 
+        [JsonIgnore]
         public bool HasImage
         {
             get
             {
-                return _ImageBytes is object;
+                return ImageData is object;
             }
         }
 
@@ -91,18 +79,18 @@ namespace SM64Lib.Levels
         {
             // Write Image Data
             s.Position = offset;
-            if (_ImageBytes is object)
+            if (ImageData is object)
             {
-                s.Write(_ImageBytes, 0, _ImageBytes.Length);
+                s.Write(ImageData, 0, ImageData.Length);
             }
         }
 
         public void ReadImage(Stream s, int offset)
         {
             // Read Image Data
-            _ImageBytes = new byte[131072];
+            ImageData = new byte[131072];
             s.Position = offset;
-            s.Read(_ImageBytes, 0, _ImageBytes.Length);
+            s.Read(ImageData, 0, ImageData.Length);
             _Image = null;
         }
 
@@ -119,16 +107,16 @@ namespace SM64Lib.Levels
                 bmp = (Bitmap)TextureManager.ResizeImage(bmp, s, false);
             }
 
-            _ImageBytes = BackgroundImageConverter.GetBytes(bmp);
+            ImageData = BackgroundImageConverter.GetBytes(bmp);
             _Image = null;
         }
 
         public Image GetImage()
         {
-            if (_ImageBytes is object)
+            if (ImageData is object)
             {
                 var s = new Size(248, 248); // ((_ImageByts.Length - &H140) / 256 / 2 / 32) * 31)
-                var img = BackgroundImageConverter.GetImage(_ImageBytes, s);
+                var img = BackgroundImageConverter.GetImage(ImageData, s);
                 _Image = img;
                 return img;
             }

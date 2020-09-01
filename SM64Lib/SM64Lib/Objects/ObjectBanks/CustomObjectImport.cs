@@ -21,5 +21,7 @@ namespace SM64Lib.Objects.ObjectBanks
         public BehaviorBank DestBehaviorBank { get; set; } = null;
         [JsonIgnore]
         public List<CustomObject> IgnoreCustomObjects { get; } = new List<CustomObject>();
+        [JsonIgnore]
+        public bool OverwriteExistingObjecs { get; set; } = true;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using global::System.Collections.Specialized;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -48,6 +49,11 @@ namespace SM64Lib.Patching
         /// <returns></returns>
         [JsonIgnore]
         public string FileName { get; set; } = "";
+        /// <summary>
+        /// Indicates if this patch use the old XML format.
+        /// </summary>
+        [JsonIgnore]
+        public bool IsLegacy { get => Path.GetExtension(FileName).ToLower() == ".xml"; }
         /// <summary>
         /// Contains files embedded into this profile.
         /// </summary>

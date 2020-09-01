@@ -40,6 +40,13 @@
     "Version": "1.9.4.0",
     "DevelopmentStage": 0,
     "DevelopmentBuild": 1
+  },
+  "1.10.0.0 b2":
+  {
+    "Filename": "1.10.0.0 b2.ppf",
+    "Version": "1.10.0.0",
+    "DevelopmentStage": 2,
+    "DevelopmentBuild": 2
   }
 }
 

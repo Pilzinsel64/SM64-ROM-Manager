@@ -142,7 +142,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;ListViewEx1.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>4</value>
   </data>
   <data name="PictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -151,10 +151,10 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 264</value>
+    <value>469, 307</value>
   </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 212</value>
+    <value>262, 169</value>
   </data>
   <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -172,7 +172,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="Button_SaveColsettings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -199,7 +199,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;Button_SaveColsettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="ComboBox_ColType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -211,7 +211,7 @@
     <value>15</value>
   </data>
   <data name="ComboBox_ColType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 4</value>
+    <value>138, 1</value>
   </data>
   <data name="ComboBox_ColType.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 21</value>
@@ -226,16 +226,16 @@
     <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ComboBox_ColType.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;ComboBox_ColType.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>18</value>
   </data>
   <data name="LabelX_MaxPixels.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="LabelX_MaxPixels.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 32</value>
+    <value>0, 29</value>
   </data>
   <data name="LabelX_MaxPixels.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 23</value>
@@ -253,16 +253,16 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_MaxPixels.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX_MaxPixels.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="LabelX1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 90</value>
+    <value>0, 87</value>
   </data>
   <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 23</value>
@@ -280,16 +280,16 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>11</value>
   </data>
   <data name="CheckBoxX_EnableTextureAnimation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="CheckBoxX_EnableTextureAnimation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 61</value>
+    <value>0, 58</value>
   </data>
   <data name="CheckBoxX_EnableTextureAnimation.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 23</value>
@@ -307,16 +307,19 @@
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableTextureAnimation.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableTextureAnimation.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>8</value>
   </data>
   <data name="ComboBoxEx_SelectDisplaylist.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="ContextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="ButtonItem1.Text" xml:space="preserve">
+    <value>Edit custom displaylists</value>
   </data>
   <data name="ButtonItem_CM_SelDL.Text" xml:space="preserve">
     <value>CM_SelDL</value>
@@ -352,7 +355,7 @@
     <value>15</value>
   </data>
   <data name="ComboBoxEx_SelectDisplaylist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 91</value>
+    <value>138, 88</value>
   </data>
   <data name="ComboBoxEx_SelectDisplaylist.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 21</value>
@@ -367,7 +370,7 @@
     <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_SelectDisplaylist.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_SelectDisplaylist.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -376,10 +379,10 @@
     <value>Top, Right</value>
   </data>
   <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 90</value>
+    <value>0, 87</value>
   </data>
   <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 23</value>
+    <value>132, 23</value>
   </data>
   <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
@@ -394,16 +397,16 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>5</value>
   </data>
   <data name="CheckBoxX_EnableMirrorS.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="CheckBoxX_EnableMirrorS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>665, 119</value>
+    <value>196, 116</value>
   </data>
   <data name="CheckBoxX_EnableMirrorS.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
@@ -421,16 +424,16 @@
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableMirrorS.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableMirrorS.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>16</value>
   </data>
   <data name="CheckBoxX_EnableClampS.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="CheckBoxX_EnableClampS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>665, 148</value>
+    <value>196, 145</value>
   </data>
   <data name="CheckBoxX_EnableClampS.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
@@ -448,16 +451,16 @@
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableClampS.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableClampS.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>17</value>
   </data>
   <data name="CheckBoxX_EnableCrystalEffect.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="CheckBoxX_EnableCrystalEffect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 177</value>
+    <value>0, 174</value>
   </data>
   <data name="CheckBoxX_EnableCrystalEffect.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 23</value>
@@ -475,16 +478,16 @@
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableCrystalEffect.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableCrystalEffect.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>14</value>
   </data>
   <data name="LabelX3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="LabelX3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 206</value>
+    <value>0, 203</value>
   </data>
   <data name="LabelX3.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 23</value>
@@ -502,10 +505,10 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>9</value>
   </data>
   <data name="ComboBoxEx_RotateFlip.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -514,7 +517,7 @@
     <value>15</value>
   </data>
   <data name="ComboBoxEx_RotateFlip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 207</value>
+    <value>138, 204</value>
   </data>
   <data name="ComboBoxEx_RotateFlip.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 21</value>
@@ -529,16 +532,16 @@
     <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_RotateFlip.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_RotateFlip.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="CheckBoxX_EnableClampT.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="CheckBoxX_EnableClampT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>701, 148</value>
+    <value>231, 145</value>
   </data>
   <data name="CheckBoxX_EnableClampT.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
@@ -556,16 +559,16 @@
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableClampT.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableClampT.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="CheckBoxX_EnableMirrorT.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="CheckBoxX_EnableMirrorT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>701, 119</value>
+    <value>231, 116</value>
   </data>
   <data name="CheckBoxX_EnableMirrorT.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 23</value>
@@ -583,16 +586,16 @@
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableMirrorT.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_EnableMirrorT.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="LabelX4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="LabelX4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 119</value>
+    <value>0, 116</value>
   </data>
   <data name="LabelX4.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 23</value>
@@ -610,16 +613,16 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX4.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>1</value>
   </data>
   <data name="LabelX5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="LabelX5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 148</value>
+    <value>0, 145</value>
   </data>
   <data name="LabelX5.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 23</value>
@@ -637,16 +640,16 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX5.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX5.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>7</value>
   </data>
   <data name="LabelX6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="LabelX6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>626, 119</value>
+    <value>157, 116</value>
   </data>
   <data name="LabelX6.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 23</value>
@@ -664,16 +667,16 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX6.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>3</value>
   </data>
   <data name="LabelX7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="LabelX7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>626, 148</value>
+    <value>157, 145</value>
   </data>
   <data name="LabelX7.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 23</value>
@@ -691,43 +694,19 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX7.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX7.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>10</value>
   </data>
-  <data name="CheckBoxX_EnableTwoSidedFaces.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="CheckBoxX_EnableTwoSidedFaces.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 234</value>
-  </data>
-  <data name="CheckBoxX_EnableTwoSidedFaces.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 23</value>
-  </data>
-  <data name="CheckBoxX_EnableTwoSidedFaces.TabIndex" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
-  <data name="CheckBoxX_EnableTwoSidedFaces.Text" xml:space="preserve">
-    <value>Enable two-sided faces</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_EnableTwoSidedFaces.Name" xml:space="preserve">
-    <value>CheckBoxX_EnableTwoSidedFaces</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_EnableTwoSidedFaces.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_EnableTwoSidedFaces.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxX_EnableTwoSidedFaces.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="panel_MatOptions.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
   </data>
   <data name="LabelX_CollisionType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="LabelX_CollisionType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>469, 3</value>
+    <value>0, 0</value>
   </data>
   <data name="LabelX_CollisionType.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 23</value>
@@ -745,10 +724,88 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_CollisionType.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel_MatOptions</value>
   </data>
   <data name="&gt;&gt;LabelX_CollisionType.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>0</value>
+  </data>
+  <data name="CheckBoxX_EnableTwoSidedFaces.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="CheckBoxX_EnableTwoSidedFaces.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 231</value>
+  </data>
+  <data name="CheckBoxX_EnableTwoSidedFaces.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 23</value>
+  </data>
+  <data name="CheckBoxX_EnableTwoSidedFaces.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="CheckBoxX_EnableTwoSidedFaces.Text" xml:space="preserve">
+    <value>Enable two-sided faces</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_EnableTwoSidedFaces.Name" xml:space="preserve">
+    <value>CheckBoxX_EnableTwoSidedFaces</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_EnableTwoSidedFaces.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_EnableTwoSidedFaces.Parent" xml:space="preserve">
+    <value>panel_MatOptions</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_EnableTwoSidedFaces.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="panel_MatOptions.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="panel_MatOptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>470, 32</value>
+  </data>
+  <data name="panel_MatOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 269</value>
+  </data>
+  <data name="panel_MatOptions.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
+  <data name="&gt;&gt;panel_MatOptions.Name" xml:space="preserve">
+    <value>panel_MatOptions</value>
+  </data>
+  <data name="&gt;&gt;panel_MatOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel_MatOptions.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;panel_MatOptions.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxX_Include.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="checkBoxX_Include.Location" type="System.Drawing.Point, System.Drawing">
+    <value>469, 3</value>
+  </data>
+  <data name="checkBoxX_Include.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 23</value>
+  </data>
+  <data name="checkBoxX_Include.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="checkBoxX_Include.Text" xml:space="preserve">
+    <value>Include material and related faces</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_Include.Name" xml:space="preserve">
+    <value>checkBoxX_Include</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_Include.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_Include.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_Include.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -773,9 +830,6 @@
   </data>
   <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="ButtonItem1.Text" xml:space="preserve">
-    <value>Edit custom displaylists</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

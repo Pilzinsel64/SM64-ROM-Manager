@@ -4,6 +4,7 @@ using SM64Lib.Data.System;
 using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
 using SM64Lib.Configuration;
+using Newtonsoft.Json;
 
 namespace SM64Lib.Levels.ScrolTex
 {
@@ -15,6 +16,11 @@ namespace SM64Lib.Levels.ScrolTex
         /// </summary>
         /// <returns></returns>
         public LevelscriptCommand Command { get; private set; } = null;
+
+        [JsonConstructor]
+        private ManagedScrollingTexture(JsonConstructorAttribute attr)
+        {
+        }
 
         /// <summary>
         /// Creates a new managed scrolling texture instance with an new levelscript command.

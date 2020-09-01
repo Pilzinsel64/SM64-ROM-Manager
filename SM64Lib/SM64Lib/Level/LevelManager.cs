@@ -233,7 +233,7 @@ namespace SM64Lib.Levels
             // Lese Area-Modelle
             foreach (LevelArea a in lvl.Areas)
             {
-                a.AreaModel.FromStream(fs, Conversions.ToInteger(a.Bank0x0EOffset), 0xE000000, a.Fast3DBankRomStart, a.Fast3DLength, a.Geolayout.Geopointers.ToArray(), a.CollisionPointer);
+                a.AreaModel.FromStream(fs, Conversions.ToInteger(a.Bank0x0EOffset), 0xE000000, a.Fast3DBankRomStart, a.Fast3DLength, a.Geolayout.Geopointers.ToArray(), a.CollisionPointer, rommgr.RomConfig.CollisionBaseConfig);
             }
 
             // Lese alle Box-Daten
@@ -342,7 +342,7 @@ namespace SM64Lib.Levels
 
                 // Write Area Model
                 ObjectModel.SaveResult res;
-                res = a.AreaModel.ToBinaryData(output, (int)curOff, (int)curOff, 0xE000000);
+                res = a.AreaModel.ToBinaryData(output, (int)curOff, (int)curOff, 0xE000000, rommgr.RomConfig.CollisionBaseConfig);
 
                 // Calculate Model Offset & Update Scrolling Texture Vertex Pointers
                 newModelStart = a.AreaModel.Fast3DBuffer.Fast3DBankStart;
@@ -385,7 +385,7 @@ namespace SM64Lib.Levels
             if (writeLocalObjectBank)
             {
                 localObjectBankRomStart = curOff;
-                curOff += (uint)lvl.LocalObjectBank.WriteToSeg(output, (int)curOff, 0x9);
+                curOff += (uint)lvl.LocalObjectBank.WriteToSeg(output, (int)curOff, 0x9, rommgr.RomConfig.CollisionBaseConfig);
                 localObjectBankRomEnd = curOff;
                 ((RMLevel)lvl).Config.LocalObjectBank = lvl.LocalObjectBank.Config;
                 lvl.LocalObjectBank.WriteCollisionPointers(output);

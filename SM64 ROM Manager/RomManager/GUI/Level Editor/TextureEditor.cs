@@ -13,6 +13,7 @@ using global::SM64_ROM_Manager.Publics.My.Resources;
 using global::SM64_ROM_Manager.SettingsManager;
 using global::SM64Lib;
 using global::SM64Lib.Model.Conversion.Fast3DParsing;
+using SM64Lib.Data;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -397,7 +398,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // Convert Image to N64 Texture
             SM64Lib.N64Graphics.N64Graphics.Convert(ref texdata, ref palette, info.TextureFormat, img);
 
-            // Write Texture & Palete Data to ROM
+            // Write Texture & Palette Data to ROM
             var rom = rommgr.GetBinaryRom(FileAccess.ReadWrite);
             rom.Position = info.TextureRomAddress;
             rom.Write(texdata);
@@ -406,12 +407,32 @@ namespace SM64_ROM_Manager.LevelEditor
                 rom.Position = info.TexturePaletteRomAddress;
                 rom.Write(palette);
             }
-
             rom.Close();
+
+            // Write Texture & Palette Data to loaded Segmented Banks
+            foreach (var segBank in rommgr.GetAllSegBanks())
+            {
+                if (!segBank.IsMIO0 && segBank.Data is object)
+                {
+                    void writeDataToSeg(int addr, byte[] dataArr)
+                    {
+                        if (segBank.RomStart <= addr && segBank.RomEnd > addr)
+                        {
+                            using (var segData = new BinaryStreamData(segBank.Data))
+                            {
+                                segData.Position = segBank.BankOffsetFromRomAddr(addr);
+                                segData.Write(dataArr);
+                            }
+                        }
+                    }
+                    writeDataToSeg(info.TextureRomAddress, texdata);
+                    writeDataToSeg(info.TexturePaletteRomAddress, palette);
+                }
+            }
 
             // Set new Image to Material
             mat.Image = img;
-
+            
             // Set new Image to PictureBox
             var pb = SearchPictureBoxByMaterial(mat);
             if (pb is object)

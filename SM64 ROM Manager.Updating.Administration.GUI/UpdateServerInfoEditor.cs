@@ -26,6 +26,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             TextBoxX_PackageInfoFilename.Text = General.CurProject.UpdateServerConfig.UpdateInfoFilename;
             TextBoxX_Username.Text = General.CurProject.UpdateServerConfig.Username;
             TextBoxX_Password.Text = General.CurProject.UpdateServerConfig.Password;
+            switchButton_UseProxyForWebDAV.Value = General.CurProject.UpdateServerConfig.UseProxyForWebDAV;
         }
 
         private void ButtonX_OK_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             General.CurProject.UpdateServerConfig.UpdateInfoFilename = TextBoxX_PackageInfoFilename.Text.Trim();
             General.CurProject.UpdateServerConfig.Username = TextBoxX_Username.Text.Trim();
             General.CurProject.UpdateServerConfig.Password = TextBoxX_Password.Text;
+            General.CurProject.UpdateServerConfig.UseProxyForWebDAV = switchButton_UseProxyForWebDAV.Value;
         }
     }
 }

@@ -10,6 +10,7 @@ using global::DevComponents.DotNetBar;
 using Microsoft.VisualBasic.CompilerServices;
 using SM64Lib.TextValueConverter;
 using Z.Core.Extensions;
+using SM64Lib;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -21,6 +22,7 @@ namespace SM64_ROM_Manager.LevelEditor
         private bool finishedLoading = false;
         private readonly List<BaseItem> objComboListItems = new List<BaseItem>();
         private readonly List<BaseItem> behavListItems = new List<BaseItem>();
+        private readonly RomManager rommgr;
 
         // E N U M S
 
@@ -39,19 +41,20 @@ namespace SM64_ROM_Manager.LevelEditor
 
         // C O N S T R U C T O R S
 
-        public InformationListDialog(EditModes editMode) : this(editMode, null, null)
+        public InformationListDialog(EditModes editMode, RomManager rommgr) : this(editMode, rommgr, null, null)
         {
         }
 
-        public InformationListDialog(EditModes editMode, ObjectComboList avaiableCombos, BehaviorInfoList avaiableBehaviors)
+        public InformationListDialog(EditModes editMode, RomManager rommgr, ObjectComboList avaiableCombos, BehaviorInfoList avaiableBehaviors)
         {
+            this.rommgr = rommgr;
             this.avaiableCombos = avaiableCombos;
             this.avaiableBehaviors = avaiableBehaviors;
             InitializeComponent();
             SetUpPropertyGrid();
             this.editMode = editMode;
-            General.LoadObjectCombosIfEmpty();
-            General.LoadBehaviorInfosIfEmpty();
+            General.LoadObjectCombosIfEmpty(rommgr);
+            General.LoadBehaviorInfosIfEmpty(rommgr);
             SetUI();
             TextBoxX_Search.Select();
             base.UpdateAmbientColors();
@@ -793,8 +796,8 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void ButtonItem_SaveAll_Click(object sender, EventArgs e)
         {
-            General.SaveObjectCombos();
-            General.SaveBehaviorInfos();
+            General.SaveObjectCombos(rommgr);
+            General.SaveBehaviorInfos(rommgr);
         }
 
         private void ButtonItem_ReloadList_Click(object sender, EventArgs e)
@@ -804,14 +807,14 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 case ItemsType.ObjCombos:
                     {
-                        General.LoadObjectCombos();
+                        General.LoadObjectCombosIfEmpty(rommgr);
                         LoadNewItems();
                         break;
                     }
 
                 case ItemsType.Behavs:
                     {
-                        General.LoadBehaviorInfos();
+                        General.LoadBehaviorInfosIfEmpty(rommgr);
                         LoadNewItems();
                         break;
                     }

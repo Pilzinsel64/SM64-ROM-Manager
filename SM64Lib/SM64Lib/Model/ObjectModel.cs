@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib.Data;
 using global::SM64Lib.Geolayout;
+using SM64Lib.Configuration;
 
 namespace SM64Lib.Model
 {
@@ -13,21 +14,21 @@ namespace SM64Lib.Model
         public Collision.CollisionMap Collision { get; set; } = null;
         public Fast3D.Fast3DBuffer Fast3DBuffer { get; set; } = null;
 
-        public void FromROM(string Romfile, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1)
+        public void FromROM(string Romfile, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1, CollisionBasicConfig collisionConfig = null)
         {
             var fs = new FileStream(Romfile, FileMode.Open, FileAccess.Read);
-            FromStream(fs, BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer, Collisionpointer);
+            FromStream(fs, BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer, Collisionpointer, collisionConfig);
             fs.Close();
         }
 
-        public void FromBinaryData(BinaryData data, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1)
+        public void FromBinaryData(BinaryData data, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1, CollisionBasicConfig collisionConfig = null)
         {
             // Load Collision
             if (Collisionpointer > -1)
             {
                 Collision = new Collision.CollisionMap();
                 int cRomStart = Collisionpointer - BankRamStart + BankRomStart;
-                Collision.FromBinaryData(data, cRomStart);
+                Collision.FromBinaryData(data, cRomStart, collisionConfig);
             }
             else
             {
@@ -41,9 +42,9 @@ namespace SM64Lib.Model
             Fast3DBuffer.FromBinaryData(data, BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer);
         }
 
-        public void FromStream(Stream s, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1)
+        public void FromStream(Stream s, int BankRomStart, int BankRamStart, int Fast3DStart, int Fast3DLength, Geopointer[] DisplayListpointer, int Collisionpointer = -1, CollisionBasicConfig collisionConfig = null)
         {
-            FromBinaryData(new BinaryStreamData(s), BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer, Collisionpointer);
+            FromBinaryData(new BinaryStreamData(s), BankRomStart, BankRamStart, Fast3DStart, Fast3DLength, DisplayListpointer, Collisionpointer, collisionConfig);
         }
 
         public void FromModel(ObjectInputSettings ObjSettings, Pilz.S3DFileParser.Object3D vmap, Pilz.S3DFileParser.Object3D colmap, Fast3D.TextureFormatSettings texFormatSettings, Collision.CollisionSettings colSettings = null)
@@ -66,20 +67,20 @@ namespace SM64Lib.Model
             return t;
         }
 
-        public SaveResult ToRom(string Romfile, int RomPos, int BankRomStart, int BankRamStart)
+        public SaveResult ToRom(string Romfile, int RomPos, int BankRomStart, int BankRamStart, CollisionBasicConfig collisionConfig)
         {
             var fs = new FileStream(Romfile, FileMode.Open, FileAccess.ReadWrite);
-            var treturn = ToStream(fs, RomPos, BankRomStart, BankRamStart);
+            var treturn = ToStream(fs, RomPos, BankRomStart, BankRamStart, collisionConfig);
             fs.Close();
             return treturn;
         }
 
-        public SaveResult ToStream(Stream s, int RomPos, int BankRomStart, int BankRamStart)
+        public SaveResult ToStream(Stream s, int RomPos, int BankRomStart, int BankRamStart, CollisionBasicConfig collisionConfig)
         {
-            return ToBinaryData(new BinaryStreamData(s), RomPos, BankRomStart, BankRamStart);
+            return ToBinaryData(new BinaryStreamData(s), RomPos, BankRomStart, BankRamStart, collisionConfig);
         }
 
-        public SaveResult ToBinaryData(BinaryData data, int dataPos, int BankRomStart, int BankRamStart)
+        public SaveResult ToBinaryData(BinaryData data, int dataPos, int BankRomStart, int BankRamStart, CollisionBasicConfig collisionConfig)
         {
             var tresult = new SaveResult();
             data.Position = dataPos;
@@ -101,7 +102,7 @@ namespace SM64Lib.Model
             {
                 int colStart = (int)General.HexRoundUp1(data.Position);
                 tresult.CollisionPointer = colStart - BankRomStart + BankRamStart;
-                Collision.ToBinaryData(data, colStart);
+                Collision.ToBinaryData(data, colStart, collisionConfig);
                 Collision.Length = data.Position - colStart;
                 tresult.Length += Collision.Length;
             }

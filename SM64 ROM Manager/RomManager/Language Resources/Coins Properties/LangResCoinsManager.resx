@@ -123,10 +123,4 @@
   <data name="MsgBox_Experimental3DCoinsRemove_Titel" xml:space="preserve">
     <value>Remove 3D Coins</value>
   </data>
-  <data name="Notify_3DCoinsPatchesSuccess" xml:space="preserve">
-    <value>3D Coins has been patched successfully!</value>
-  </data>
-  <data name="Notify_3DCoinsRemovedSuccess" xml:space="preserve">
-    <value>3D Coins has been removed successfully!</value>
-  </data>
 </root>

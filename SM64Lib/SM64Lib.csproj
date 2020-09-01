@@ -153,6 +153,7 @@
     <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandFactory.cs" />
     <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandFunctions.cs" />
     <Compile Include="SM64Lib\Behaviors\Script\BehaviorscriptCommandTypes.cs" />
+    <Compile Include="SM64Lib\Configuration\CollisionBasicConfig.cs" />
     <Compile Include="SM64Lib\Configuration\CustomModelConfig.cs" />
     <Compile Include="SM64Lib\Configuration\LevelAreaConfig.cs" />
     <Compile Include="SM64Lib\Configuration\LevelConfig.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="SM64Lib\Configuration\ScrollTexConfig.cs" />
     <Compile Include="SM64Lib\Data\BinaryFile.cs" />
     <Compile Include="SM64Lib\Data\System\Bits.cs" />
+    <Compile Include="SM64Lib\EventArguments\GetTextProfileInfoEventArgs.cs" />
     <Compile Include="SM64Lib\Exceptions\InvalidMD5HashException.cs" />
     <Compile Include="SM64Lib\FilePathsConfiguration.cs" />
     <Compile Include="SM64Lib\General.cs" />
@@ -180,6 +182,7 @@
     <Compile Include="SM64Lib\Json\ArrayReferencePreservngConverter.cs" />
     <Compile Include="SM64Lib\Json\ComplexDictionarJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\BaseCommandJsonConverter.cs" />
+    <Compile Include="SM64Lib\Json\LevelscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\GeolayoutscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\BehaviorscriptCommandJsonConverter.cs" />
     <Compile Include="SM64Lib\Json\Fast3DBufferJsonConverter.cs" />
@@ -226,6 +229,7 @@
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectImport.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectExport.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectModelProps.cs" />
+    <Compile Include="SM64Lib\Objects\ObjectBanks\CustomObjectReferences.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataCommand.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataList.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataListCollection.cs" />
@@ -310,7 +314,6 @@
     <Compile Include="SM64Lib\Text\Profiles\TextTableSegmentedInfo.cs" />
     <Compile Include="SM64Lib\Text\TextArrayGroup.cs" />
     <Compile Include="SM64Lib\Text\TextArrayItem.cs" />
-    <Compile Include="SM64Lib\Text\TextProfileInfoManager.cs" />
     <Compile Include="SM64Lib\Text\TextTableDialogItem.cs" />
     <Compile Include="SM64Lib\Text\TextTableItem.cs" />
     <Compile Include="SM64Lib\Text\TextTableGroup.cs" />

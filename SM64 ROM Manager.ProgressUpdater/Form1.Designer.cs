@@ -43,13 +43,15 @@ namespace SM64_ROM_Manager.ProgressUpdater
             this.ButtonX_PasteClipboard = new DevComponents.DotNetBar.ButtonX();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.ComboBoxEx_Version = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.ButtonX_SetupWebDav = new DevComponents.DotNetBar.ButtonX();
             this.circularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
             this.ButtonX_DiscordSetup = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_Upload = new DevComponents.DotNetBar.ButtonX();
             this.LabelX6 = new DevComponents.DotNetBar.LabelX();
             this.StyleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.ComboBoxEx_Version = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.ButtonX_PasteDocument = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.Panel2.SuspendLayout();
@@ -58,6 +60,8 @@ namespace SM64_ROM_Manager.ProgressUpdater
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.buttonX1);
+            this.Panel1.Controls.Add(this.ButtonX_PasteDocument);
             this.Panel1.Controls.Add(this.ButtonX_PasteClipboard);
             this.Panel1.Controls.Add(this.PictureBox1);
             this.Panel1.Controls.Add(this.Panel2);
@@ -103,6 +107,23 @@ namespace SM64_ROM_Manager.ProgressUpdater
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(200, 508);
             this.Panel2.TabIndex = 1;
+            // 
+            // ComboBoxEx_Version
+            // 
+            this.ComboBoxEx_Version.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ComboBoxEx_Version.DisplayMember = "Text";
+            this.ComboBoxEx_Version.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxEx_Version.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxEx_Version.FormattingEnabled = true;
+            this.ComboBoxEx_Version.ItemHeight = 14;
+            this.ComboBoxEx_Version.Location = new System.Drawing.Point(4, 91);
+            this.ComboBoxEx_Version.Name = "ComboBoxEx_Version";
+            this.ComboBoxEx_Version.Size = new System.Drawing.Size(193, 20);
+            this.ComboBoxEx_Version.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBoxEx_Version.TabIndex = 15;
+            this.ComboBoxEx_Version.WatermarkText = "e.g. 1.2.0.0";
+            this.ComboBoxEx_Version.TextChanged += new System.EventHandler(this.TextBoxX_Version_TextChanged);
             // 
             // ButtonX_SetupWebDav
             // 
@@ -182,22 +203,31 @@ namespace SM64_ROM_Manager.ProgressUpdater
             this.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2016;
             this.StyleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))), System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(57)))), ((int)(((byte)(123))))));
             // 
-            // ComboBoxEx_Version
+            // ButtonX_PasteDocument
             // 
-            this.ComboBoxEx_Version.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ComboBoxEx_Version.DisplayMember = "Text";
-            this.ComboBoxEx_Version.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ComboBoxEx_Version.ForeColor = System.Drawing.Color.Black;
-            this.ComboBoxEx_Version.FormattingEnabled = true;
-            this.ComboBoxEx_Version.ItemHeight = 14;
-            this.ComboBoxEx_Version.Location = new System.Drawing.Point(4, 91);
-            this.ComboBoxEx_Version.Name = "ComboBoxEx_Version";
-            this.ComboBoxEx_Version.Size = new System.Drawing.Size(193, 20);
-            this.ComboBoxEx_Version.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBoxEx_Version.TabIndex = 15;
-            this.ComboBoxEx_Version.WatermarkText = "e.g. 1.2.0.0";
-            this.ComboBoxEx_Version.TextChanged += new System.EventHandler(this.TextBoxX_Version_TextChanged);
+            this.ButtonX_PasteDocument.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_PasteDocument.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonX_PasteDocument.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_PasteDocument.Location = new System.Drawing.Point(427, 3);
+            this.ButtonX_PasteDocument.Name = "ButtonX_PasteDocument";
+            this.ButtonX_PasteDocument.Size = new System.Drawing.Size(129, 23);
+            this.ButtonX_PasteDocument.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_PasteDocument.TabIndex = 0;
+            this.ButtonX_PasteDocument.Text = "Paste from Document";
+            this.ButtonX_PasteDocument.Click += new System.EventHandler(this.ButtonX_PasteDocument_Click);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(562, 32);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(129, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 1;
+            this.buttonX1.Text = "Invert Image";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click_1);
             // 
             // Form1
             // 
@@ -206,6 +236,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(694, 508);
             this.Controls.Add(this.Panel1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -251,5 +282,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
         private DevComponents.DotNetBar.Controls.CircularProgress circularProgress1;
         private DevComponents.DotNetBar.ButtonX ButtonX_SetupWebDav;
         private DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx_Version;
+        private DevComponents.DotNetBar.ButtonX ButtonX_PasteDocument;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }

@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 using SM64Lib.Behaviors;
 using SM64Lib.Objects.ObjectBanks;
 using SM64Lib.ASM;
+using SM64Lib.Objects.ObjectBanks.Data;
+using System;
 
 namespace SM64Lib.Configuration
 {
@@ -25,11 +27,18 @@ namespace SM64Lib.Configuration
         public MusicConfiguration MusicConfig { get;  } = new MusicConfiguration();
 
         // Texts
-        public string SelectedTextProfileInfo { get; set; } = string.Empty;
+        public Text.Profiles.TextProfileInfo TextProfileInfo { get; set; } = null;
 
         // Other
         public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
+        public ObjectBankDataListCollection ObjectBankInfoData { get; } = new ObjectBankDataListCollection();
         public NPCConfig NPCConfig { get; } = new NPCConfig();
+        public CollisionBasicConfig CollisionBaseConfig { get; } = new CollisionBasicConfig();
+
+        /// <summary>
+        /// Contains custom configuration that isn't used by SM64Lib. E.g. Extra Object Combos.
+        /// </summary>
+        public Dictionary<string, string> CustomConfigs { get; } = new Dictionary<string, string>();
 
         // F e a t u r e s
 

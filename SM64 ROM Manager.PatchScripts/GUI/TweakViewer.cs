@@ -106,6 +106,32 @@ namespace SM64_ROM_Manager.PatchScripts
             return success;
         }
 
+        private IEnumerable<PatchProfile> GetAllLegacyTweaks()
+        {
+            return myPatchs.Where(n => n.IsLegacy);
+        }
+
+        private void CheckForLegacyTweaks()
+        {
+            var hasLegacyTweaks = GetAllLegacyTweaks().Any();
+
+            if (hasLegacyTweaks)
+                WarningBox_UpgradeLegacyTweaks.Visible = true;
+        }
+
+        private void ConvertLegacyTweaks()
+        {
+            var patches = GetAllLegacyTweaks();
+            if (patches.Any())
+            {
+                var mgr = new PatchingManager();
+                foreach (var patch in patches)
+                    mgr.Save(patch, Path.GetDirectoryName(patch.FileName));
+                General.ShowToastnotification(this, "All tweaks converted successfully!", eToastGlowColor.Green);
+                CheckForLegacyTweaks();
+            }
+        }
+
         private void LoadTweaks()
         {
             CircularProgress1.Start();
@@ -122,7 +148,7 @@ namespace SM64_ROM_Manager.PatchScripts
                 if (p.MinVersion <= appVersion && (p.MaxVersion == nullVersion || p.MaxVersion >= appVersion))
                     myPatchs.Add(p);
             }
-
+            
             myPatchs = myPatchs.OrderBy(n => n.Name).ToList();
             LoadTweakList();
             CircularProgress1.Stop();
@@ -224,6 +250,9 @@ namespace SM64_ROM_Manager.PatchScripts
             {
                 var profmgr = new PatchingManager();
                 profmgr.Save(patch, Path.Combine(General.MyDataPath, "Tweaks"));
+
+                // Check for legacy tweaks for the case this tweak was the last legacy one.
+                CheckForLegacyTweaks();
             }
         }
 
@@ -348,6 +377,9 @@ namespace SM64_ROM_Manager.PatchScripts
 
             // Load tweaks
             LoadTweaks();
+
+            // Check for legacy tweaks
+            CheckForLegacyTweaks();
         }
 
         private void ItemListBox1_SelectedItemChanged()
@@ -482,7 +514,7 @@ namespace SM64_ROM_Manager.PatchScripts
             }
         }
 
-        internal static void PatchScript(IWin32Window owner, PatchScript script, PatchProfile profile, SM64Lib.RomManager rommgr)
+        internal static void PatchScript(Control owner, PatchScript script, PatchProfile profile, SM64Lib.RomManager rommgr)
         {
             try
             {
@@ -501,7 +533,7 @@ namespace SM64_ROM_Manager.PatchScripts
                     },
                     General.GetAdditionalReferencedAssemblied());
                 TweakAfterApply?.Invoke();
-                MessageBoxEx.Show(owner, "Patched successfully.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                General.ShowToastnotification(owner, "Patched successfully", eToastGlowColor.Green);
             }
             catch (Exception)
             {
@@ -615,5 +647,10 @@ namespace SM64_ROM_Manager.PatchScripts
         }
 
         private void ItemListBox1_SelectedItemChanged(object sender, EventArgs e) => ItemListBox1_SelectedItemChanged();
+
+        private void WarningBox_UpgradeLegacyTweaks_OptionsClick(object sender, EventArgs e)
+        {
+            ConvertLegacyTweaks();
+        }
     }
 }

@@ -53,7 +53,7 @@ namespace SM64_ROM_Manager
             }
 
             // Load behavior infos
-            General.LoadBehaviorInfosIfEmpty();
+            General.LoadBehaviorInfosIfEmpty(rommgr);
 
             // Components
             InitializeComponent();

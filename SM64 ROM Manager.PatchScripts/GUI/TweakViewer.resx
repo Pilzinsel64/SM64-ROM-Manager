@@ -706,10 +706,10 @@
     <value>Fill</value>
   </data>
   <data name="ItemListBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 33</value>
+    <value>0, 66</value>
   </data>
   <data name="ItemListBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>482, 535</value>
+    <value>482, 502</value>
   </data>
   <data name="ItemListBox1.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -733,7 +733,7 @@
     <value>Top</value>
   </data>
   <data name="WarningBox_TweakUpdates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>0, 33</value>
   </data>
   <data name="WarningBox_TweakUpdates.OptionsText" xml:space="preserve">
     <value>Update</value>
@@ -761,6 +761,39 @@
   </data>
   <data name="&gt;&gt;WarningBox_TweakUpdates.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="WarningBox_UpgradeLegacyTweaks.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="WarningBox_UpgradeLegacyTweaks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="WarningBox_UpgradeLegacyTweaks.OptionsText" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="WarningBox_UpgradeLegacyTweaks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 33</value>
+  </data>
+  <data name="WarningBox_UpgradeLegacyTweaks.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="WarningBox_UpgradeLegacyTweaks.Text" xml:space="preserve">
+    <value>&lt;b&gt;Some Tweaks use an old file format.&lt;/b&gt; Click &lt;i&gt;Convert&lt;/i&gt; to convert old XML tweaks to JSON fromat for better compatibility.</value>
+  </data>
+  <data name="WarningBox_UpgradeLegacyTweaks.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;WarningBox_UpgradeLegacyTweaks.Name" xml:space="preserve">
+    <value>WarningBox_UpgradeLegacyTweaks</value>
+  </data>
+  <data name="&gt;&gt;WarningBox_UpgradeLegacyTweaks.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.WarningBox, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;WarningBox_UpgradeLegacyTweaks.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;WarningBox_UpgradeLegacyTweaks.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 41</value>

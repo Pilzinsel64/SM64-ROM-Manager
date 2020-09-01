@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ButtonX_SaveSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 363</value>
+    <value>91, 309</value>
   </data>
   <data name="ButtonX_SaveSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 23</value>
@@ -135,7 +135,7 @@
     <value>ButtonX_SaveSettings</value>
   </data>
   <data name="&gt;&gt;ButtonX_SaveSettings.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonX_SaveSettings.Parent" xml:space="preserve">
     <value>Panel1</value>
@@ -143,83 +143,23 @@
   <data name="&gt;&gt;ButtonX_SaveSettings.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ButtonX_Remove3DCoins.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 19</value>
-  </data>
-  <data name="ButtonX_Remove3DCoins.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 23</value>
-  </data>
-  <data name="ButtonX_Remove3DCoins.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="ButtonX_Remove3DCoins.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_Remove3DCoins.Name" xml:space="preserve">
-    <value>ButtonX_Remove3DCoins</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_Remove3DCoins.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_Remove3DCoins.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_Remove3DCoins.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ButtonX_ImportKaze3DCoins.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="LabelX10.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
   </data>
-  <data name="ButtonX_ImportKaze3DCoins.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 23</value>
+  <data name="LabelX10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 23</value>
   </data>
-  <data name="ButtonX_ImportKaze3DCoins.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+  <data name="LabelX10.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
-  <data name="ButtonX_ImportKaze3DCoins.Text" xml:space="preserve">
-    <value>Import Kaze's Coins</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_ImportKaze3DCoins.Name" xml:space="preserve">
-    <value>ButtonX_ImportKaze3DCoins</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_ImportKaze3DCoins.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_ImportKaze3DCoins.Parent" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_ImportKaze3DCoins.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GroupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 309</value>
-  </data>
-  <data name="GroupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 48</value>
-  </data>
-  <data name="GroupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="GroupBox4.Text" xml:space="preserve">
-    <value>3D Coins</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Name" xml:space="preserve">
-    <value>GroupBox4</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;GroupBox4.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="LabelX10.Text" xml:space="preserve">
+    <value>Enable:</value>
   </data>
   <data name="&gt;&gt;LabelX10.Name" xml:space="preserve">
     <value>LabelX10</value>
   </data>
   <data name="&gt;&gt;LabelX10.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX10.Parent" xml:space="preserve">
     <value>GroupBox3</value>
@@ -227,11 +167,26 @@
   <data name="&gt;&gt;LabelX10.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="SwitchButton_EnableNewRedCoinsCounter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 20</value>
+  </data>
+  <data name="SwitchButton_EnableNewRedCoinsCounter.OffText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SwitchButton_EnableNewRedCoinsCounter.OnText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SwitchButton_EnableNewRedCoinsCounter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="SwitchButton_EnableNewRedCoinsCounter.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
   <data name="&gt;&gt;SwitchButton_EnableNewRedCoinsCounter.Name" xml:space="preserve">
     <value>SwitchButton_EnableNewRedCoinsCounter</value>
   </data>
   <data name="&gt;&gt;SwitchButton_EnableNewRedCoinsCounter.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_EnableNewRedCoinsCounter.Parent" xml:space="preserve">
     <value>GroupBox3</value>
@@ -239,11 +194,23 @@
   <data name="&gt;&gt;SwitchButton_EnableNewRedCoinsCounter.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="LabelX6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 49</value>
+  </data>
+  <data name="LabelX6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 49</value>
+  </data>
+  <data name="LabelX6.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LabelX6.Text" xml:space="preserve">
+    <value>%d = Counter</value>
+  </data>
   <data name="&gt;&gt;LabelX6.Name" xml:space="preserve">
     <value>LabelX6</value>
   </data>
   <data name="&gt;&gt;LabelX6.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX6.Parent" xml:space="preserve">
     <value>GroupBox3</value>
@@ -251,11 +218,23 @@
   <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="TextBoxX_NewRedCoinsCounterTextForCoins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 78</value>
+  </data>
+  <data name="TextBoxX_NewRedCoinsCounterTextForCoins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBoxX_NewRedCoinsCounterTextForCoins.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="TextBoxX_NewRedCoinsCounterTextForCoins.Text" xml:space="preserve">
+    <value>%d RED COINS</value>
+  </data>
   <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoins.Name" xml:space="preserve">
     <value>TextBoxX_NewRedCoinsCounterTextForCoins</value>
   </data>
   <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoins.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoins.Parent" xml:space="preserve">
     <value>GroupBox3</value>
@@ -263,11 +242,23 @@
   <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoins.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="TextBoxX_NewRedCoinsCounterTextForCoin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 49</value>
+  </data>
+  <data name="TextBoxX_NewRedCoinsCounterTextForCoin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="TextBoxX_NewRedCoinsCounterTextForCoin.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="TextBoxX_NewRedCoinsCounterTextForCoin.Text" xml:space="preserve">
+    <value>%d RED COIN</value>
+  </data>
   <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoin.Name" xml:space="preserve">
     <value>TextBoxX_NewRedCoinsCounterTextForCoin</value>
   </data>
   <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoin.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoin.Parent" xml:space="preserve">
     <value>GroupBox3</value>
@@ -275,11 +266,23 @@
   <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoin.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="LabelX5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 77</value>
+  </data>
+  <data name="LabelX5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 23</value>
+  </data>
+  <data name="LabelX5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LabelX5.Text" xml:space="preserve">
+    <value>Coins:</value>
+  </data>
   <data name="&gt;&gt;LabelX5.Name" xml:space="preserve">
     <value>LabelX5</value>
   </data>
   <data name="&gt;&gt;LabelX5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX5.Parent" xml:space="preserve">
     <value>GroupBox3</value>
@@ -287,11 +290,23 @@
   <data name="&gt;&gt;LabelX5.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 48</value>
+  </data>
+  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 23</value>
+  </data>
+  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelX1.Text" xml:space="preserve">
+    <value>Coin:</value>
+  </data>
   <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
     <value>LabelX1</value>
   </data>
   <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
     <value>GroupBox3</value>
@@ -321,13 +336,28 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;GroupBox3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
+  </data>
+  <data name="SwitchButton_CoinsRestoreHealth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 165</value>
+  </data>
+  <data name="SwitchButton_CoinsRestoreHealth.OffText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SwitchButton_CoinsRestoreHealth.OnText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SwitchButton_CoinsRestoreHealth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="SwitchButton_CoinsRestoreHealth.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
   <data name="&gt;&gt;SwitchButton_CoinsRestoreHealth.Name" xml:space="preserve">
     <value>SwitchButton_CoinsRestoreHealth</value>
   </data>
   <data name="&gt;&gt;SwitchButton_CoinsRestoreHealth.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_CoinsRestoreHealth.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -335,11 +365,23 @@
   <data name="&gt;&gt;SwitchButton_CoinsRestoreHealth.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="LabelX9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 164</value>
+  </data>
+  <data name="LabelX9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 23</value>
+  </data>
+  <data name="LabelX9.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="LabelX9.Text" xml:space="preserve">
+    <value>Coins restore your health:</value>
+  </data>
   <data name="&gt;&gt;LabelX9.Name" xml:space="preserve">
     <value>LabelX9</value>
   </data>
   <data name="&gt;&gt;LabelX9.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX9.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -347,11 +389,26 @@
   <data name="&gt;&gt;LabelX9.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="SwitchButton_ShowCoinsHudOnHubs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 136</value>
+  </data>
+  <data name="SwitchButton_ShowCoinsHudOnHubs.OffText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SwitchButton_ShowCoinsHudOnHubs.OnText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SwitchButton_ShowCoinsHudOnHubs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="SwitchButton_ShowCoinsHudOnHubs.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
   <data name="&gt;&gt;SwitchButton_ShowCoinsHudOnHubs.Name" xml:space="preserve">
     <value>SwitchButton_ShowCoinsHudOnHubs</value>
   </data>
   <data name="&gt;&gt;SwitchButton_ShowCoinsHudOnHubs.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_ShowCoinsHudOnHubs.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -359,11 +416,23 @@
   <data name="&gt;&gt;SwitchButton_ShowCoinsHudOnHubs.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="LabelX8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 135</value>
+  </data>
+  <data name="LabelX8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 23</value>
+  </data>
+  <data name="LabelX8.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="LabelX8.Text" xml:space="preserve">
+    <value>Show Coins HUD on Hubs:</value>
+  </data>
   <data name="&gt;&gt;LabelX8.Name" xml:space="preserve">
     <value>LabelX8</value>
   </data>
   <data name="&gt;&gt;LabelX8.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX8.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -371,11 +440,26 @@
   <data name="&gt;&gt;LabelX8.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="SwitchButton_Enable100Coins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 107</value>
+  </data>
+  <data name="SwitchButton_Enable100Coins.OffText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SwitchButton_Enable100Coins.OnText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SwitchButton_Enable100Coins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="SwitchButton_Enable100Coins.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
   <data name="&gt;&gt;SwitchButton_Enable100Coins.Name" xml:space="preserve">
     <value>SwitchButton_Enable100Coins</value>
   </data>
   <data name="&gt;&gt;SwitchButton_Enable100Coins.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SwitchButton_Enable100Coins.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -383,11 +467,23 @@
   <data name="&gt;&gt;SwitchButton_Enable100Coins.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="LabelX7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 106</value>
+  </data>
+  <data name="LabelX7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 23</value>
+  </data>
+  <data name="LabelX7.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="LabelX7.Text" xml:space="preserve">
+    <value>Enable 100 Coins Star:</value>
+  </data>
   <data name="&gt;&gt;LabelX7.Name" xml:space="preserve">
     <value>LabelX7</value>
   </data>
   <data name="&gt;&gt;LabelX7.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX7.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -395,11 +491,23 @@
   <data name="&gt;&gt;LabelX7.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 23</value>
+  </data>
+  <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="LabelX2.Text" xml:space="preserve">
+    <value>Coins for normal Red Coins Stars:</value>
+  </data>
   <data name="&gt;&gt;LabelX2.Name" xml:space="preserve">
     <value>LabelX2</value>
   </data>
   <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -407,11 +515,20 @@
   <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="IntegerInput_CoinsForRedCoinsStar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 20</value>
+  </data>
+  <data name="IntegerInput_CoinsForRedCoinsStar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="IntegerInput_CoinsForRedCoinsStar.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <data name="&gt;&gt;IntegerInput_CoinsForRedCoinsStar.Name" xml:space="preserve">
     <value>IntegerInput_CoinsForRedCoinsStar</value>
   </data>
   <data name="&gt;&gt;IntegerInput_CoinsForRedCoinsStar.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;IntegerInput_CoinsForRedCoinsStar.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -419,11 +536,23 @@
   <data name="&gt;&gt;IntegerInput_CoinsForRedCoinsStar.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="LabelX4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 48</value>
+  </data>
+  <data name="LabelX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 23</value>
+  </data>
+  <data name="LabelX4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="LabelX4.Text" xml:space="preserve">
+    <value>Coins for Bowser Red Coins Stars:</value>
+  </data>
   <data name="&gt;&gt;LabelX4.Name" xml:space="preserve">
     <value>LabelX4</value>
   </data>
   <data name="&gt;&gt;LabelX4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -431,11 +560,20 @@
   <data name="&gt;&gt;LabelX4.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="IntegerInput_CoinsForBowserRedCoinsStar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 49</value>
+  </data>
+  <data name="IntegerInput_CoinsForBowserRedCoinsStar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="IntegerInput_CoinsForBowserRedCoinsStar.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
   <data name="&gt;&gt;IntegerInput_CoinsForBowserRedCoinsStar.Name" xml:space="preserve">
     <value>IntegerInput_CoinsForBowserRedCoinsStar</value>
   </data>
   <data name="&gt;&gt;IntegerInput_CoinsForBowserRedCoinsStar.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;IntegerInput_CoinsForBowserRedCoinsStar.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -443,11 +581,23 @@
   <data name="&gt;&gt;IntegerInput_CoinsForBowserRedCoinsStar.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="LabelX3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 77</value>
+  </data>
+  <data name="LabelX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 23</value>
+  </data>
+  <data name="LabelX3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LabelX3.Text" xml:space="preserve">
+    <value>Coins for 100 Coins Star:</value>
+  </data>
   <data name="&gt;&gt;LabelX3.Name" xml:space="preserve">
     <value>LabelX3</value>
   </data>
   <data name="&gt;&gt;LabelX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -455,11 +605,20 @@
   <data name="&gt;&gt;LabelX3.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="IntegerInput_CoinsFor100CoinsStar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 78</value>
+  </data>
+  <data name="IntegerInput_CoinsFor100CoinsStar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="IntegerInput_CoinsFor100CoinsStar.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
   <data name="&gt;&gt;IntegerInput_CoinsFor100CoinsStar.Name" xml:space="preserve">
     <value>IntegerInput_CoinsFor100CoinsStar</value>
   </data>
   <data name="&gt;&gt;IntegerInput_CoinsFor100CoinsStar.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;IntegerInput_CoinsFor100CoinsStar.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -489,7 +648,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -499,7 +658,7 @@
     <value>0, 0</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 392</value>
+    <value>321, 339</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -516,465 +675,6 @@
   <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="LabelX10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="LabelX10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 23</value>
-  </data>
-  <data name="LabelX10.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="LabelX10.Text" xml:space="preserve">
-    <value>Enable:</value>
-  </data>
-  <data name="&gt;&gt;LabelX10.Name" xml:space="preserve">
-    <value>LabelX10</value>
-  </data>
-  <data name="&gt;&gt;LabelX10.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX10.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;LabelX10.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="SwitchButton_EnableNewRedCoinsCounter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 20</value>
-  </data>
-  <data name="SwitchButton_EnableNewRedCoinsCounter.OffText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SwitchButton_EnableNewRedCoinsCounter.OnText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SwitchButton_EnableNewRedCoinsCounter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="SwitchButton_EnableNewRedCoinsCounter.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_EnableNewRedCoinsCounter.Name" xml:space="preserve">
-    <value>SwitchButton_EnableNewRedCoinsCounter</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_EnableNewRedCoinsCounter.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_EnableNewRedCoinsCounter.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_EnableNewRedCoinsCounter.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="LabelX6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 49</value>
-  </data>
-  <data name="LabelX6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 49</value>
-  </data>
-  <data name="LabelX6.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="LabelX6.Text" xml:space="preserve">
-    <value>%d = Counter</value>
-  </data>
-  <data name="&gt;&gt;LabelX6.Name" xml:space="preserve">
-    <value>LabelX6</value>
-  </data>
-  <data name="&gt;&gt;LabelX6.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX6.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TextBoxX_NewRedCoinsCounterTextForCoins.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 78</value>
-  </data>
-  <data name="TextBoxX_NewRedCoinsCounterTextForCoins.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="TextBoxX_NewRedCoinsCounterTextForCoins.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="TextBoxX_NewRedCoinsCounterTextForCoins.Text" xml:space="preserve">
-    <value>%d RED COINS</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoins.Name" xml:space="preserve">
-    <value>TextBoxX_NewRedCoinsCounterTextForCoins</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoins.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoins.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoins.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="TextBoxX_NewRedCoinsCounterTextForCoin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 49</value>
-  </data>
-  <data name="TextBoxX_NewRedCoinsCounterTextForCoin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="TextBoxX_NewRedCoinsCounterTextForCoin.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="TextBoxX_NewRedCoinsCounterTextForCoin.Text" xml:space="preserve">
-    <value>%d RED COIN</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoin.Name" xml:space="preserve">
-    <value>TextBoxX_NewRedCoinsCounterTextForCoin</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoin.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoin.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_NewRedCoinsCounterTextForCoin.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="LabelX5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 77</value>
-  </data>
-  <data name="LabelX5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 23</value>
-  </data>
-  <data name="LabelX5.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="LabelX5.Text" xml:space="preserve">
-    <value>Coins:</value>
-  </data>
-  <data name="&gt;&gt;LabelX5.Name" xml:space="preserve">
-    <value>LabelX5</value>
-  </data>
-  <data name="&gt;&gt;LabelX5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX5.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;LabelX5.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 48</value>
-  </data>
-  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 23</value>
-  </data>
-  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="LabelX1.Text" xml:space="preserve">
-    <value>Coin:</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
-    <value>LabelX1</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
-    <value>GroupBox3</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="SwitchButton_CoinsRestoreHealth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 165</value>
-  </data>
-  <data name="SwitchButton_CoinsRestoreHealth.OffText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SwitchButton_CoinsRestoreHealth.OnText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SwitchButton_CoinsRestoreHealth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="SwitchButton_CoinsRestoreHealth.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_CoinsRestoreHealth.Name" xml:space="preserve">
-    <value>SwitchButton_CoinsRestoreHealth</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_CoinsRestoreHealth.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_CoinsRestoreHealth.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_CoinsRestoreHealth.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LabelX9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 164</value>
-  </data>
-  <data name="LabelX9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 23</value>
-  </data>
-  <data name="LabelX9.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="LabelX9.Text" xml:space="preserve">
-    <value>Coins restore your health:</value>
-  </data>
-  <data name="&gt;&gt;LabelX9.Name" xml:space="preserve">
-    <value>LabelX9</value>
-  </data>
-  <data name="&gt;&gt;LabelX9.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX9.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LabelX9.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="SwitchButton_ShowCoinsHudOnHubs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 136</value>
-  </data>
-  <data name="SwitchButton_ShowCoinsHudOnHubs.OffText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SwitchButton_ShowCoinsHudOnHubs.OnText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SwitchButton_ShowCoinsHudOnHubs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="SwitchButton_ShowCoinsHudOnHubs.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_ShowCoinsHudOnHubs.Name" xml:space="preserve">
-    <value>SwitchButton_ShowCoinsHudOnHubs</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_ShowCoinsHudOnHubs.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_ShowCoinsHudOnHubs.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_ShowCoinsHudOnHubs.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="LabelX8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 135</value>
-  </data>
-  <data name="LabelX8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 23</value>
-  </data>
-  <data name="LabelX8.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="LabelX8.Text" xml:space="preserve">
-    <value>Show Coins HUD on Hubs:</value>
-  </data>
-  <data name="&gt;&gt;LabelX8.Name" xml:space="preserve">
-    <value>LabelX8</value>
-  </data>
-  <data name="&gt;&gt;LabelX8.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX8.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LabelX8.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="SwitchButton_Enable100Coins.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 107</value>
-  </data>
-  <data name="SwitchButton_Enable100Coins.OffText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SwitchButton_Enable100Coins.OnText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SwitchButton_Enable100Coins.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="SwitchButton_Enable100Coins.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_Enable100Coins.Name" xml:space="preserve">
-    <value>SwitchButton_Enable100Coins</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_Enable100Coins.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_Enable100Coins.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;SwitchButton_Enable100Coins.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="LabelX7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 106</value>
-  </data>
-  <data name="LabelX7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 23</value>
-  </data>
-  <data name="LabelX7.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="LabelX7.Text" xml:space="preserve">
-    <value>Enable 100 Coins Star:</value>
-  </data>
-  <data name="&gt;&gt;LabelX7.Name" xml:space="preserve">
-    <value>LabelX7</value>
-  </data>
-  <data name="&gt;&gt;LabelX7.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX7.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LabelX7.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 23</value>
-  </data>
-  <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="LabelX2.Text" xml:space="preserve">
-    <value>Coins for normal Red Coins Stars:</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Name" xml:space="preserve">
-    <value>LabelX2</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="IntegerInput_CoinsForRedCoinsStar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 20</value>
-  </data>
-  <data name="IntegerInput_CoinsForRedCoinsStar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="IntegerInput_CoinsForRedCoinsStar.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsForRedCoinsStar.Name" xml:space="preserve">
-    <value>IntegerInput_CoinsForRedCoinsStar</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsForRedCoinsStar.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsForRedCoinsStar.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsForRedCoinsStar.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="LabelX4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 48</value>
-  </data>
-  <data name="LabelX4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 23</value>
-  </data>
-  <data name="LabelX4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="LabelX4.Text" xml:space="preserve">
-    <value>Coins for Bowser Red Coins Stars:</value>
-  </data>
-  <data name="&gt;&gt;LabelX4.Name" xml:space="preserve">
-    <value>LabelX4</value>
-  </data>
-  <data name="&gt;&gt;LabelX4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LabelX4.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="IntegerInput_CoinsForBowserRedCoinsStar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 49</value>
-  </data>
-  <data name="IntegerInput_CoinsForBowserRedCoinsStar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="IntegerInput_CoinsForBowserRedCoinsStar.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsForBowserRedCoinsStar.Name" xml:space="preserve">
-    <value>IntegerInput_CoinsForBowserRedCoinsStar</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsForBowserRedCoinsStar.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsForBowserRedCoinsStar.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsForBowserRedCoinsStar.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="LabelX3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 77</value>
-  </data>
-  <data name="LabelX3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 23</value>
-  </data>
-  <data name="LabelX3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="LabelX3.Text" xml:space="preserve">
-    <value>Coins for 100 Coins Star:</value>
-  </data>
-  <data name="&gt;&gt;LabelX3.Name" xml:space="preserve">
-    <value>LabelX3</value>
-  </data>
-  <data name="&gt;&gt;LabelX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LabelX3.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="IntegerInput_CoinsFor100CoinsStar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 78</value>
-  </data>
-  <data name="IntegerInput_CoinsFor100CoinsStar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="IntegerInput_CoinsFor100CoinsStar.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsFor100CoinsStar.Name" xml:space="preserve">
-    <value>IntegerInput_CoinsFor100CoinsStar</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsFor100CoinsStar.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsFor100CoinsStar.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_CoinsFor100CoinsStar.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -982,7 +682,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>321, 392</value>
+    <value>321, 339</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1089,6 +789,6 @@
     <value>Form_CoinsSettings</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -8,6 +8,8 @@ using global::SM64Lib;
 using SM64Lib.TextValueConverter;
 using Z.Collections.Extensions;
 using SM64Lib.Objects.ModelBanks;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace SM64_ROM_Manager
 {
@@ -253,6 +255,21 @@ namespace SM64_ROM_Manager
             Clipboard.SetText(TextValueConverter.TextFromValue(customObj.CollisionPointer));
         }
 
+        private void EditGeolayout(CustomModel customObj)
+        {
+            // Get Data
+            var ms = new MemoryStream();
+            customObj.Geolayout.Write(ms, 0);
+            var data = ms.ToArray();
+            ms.Close();
+
+            // Edit Data
+            General.OpenHexEditor(ref data);
+
+            // Parse New Data
+            customObj.Geolayout.Read(data, 0x7);
+        }
+
         private void CustomBankManager_Shown(object sender, EventArgs e)
         {
             LoadList();
@@ -335,6 +352,11 @@ namespace SM64_ROM_Manager
         private void ButtonItem_CopyCollisionPointer_Click(object sender, EventArgs e)
         {
             CopyCollisionPointer(curObj);
+        }
+
+        private void ButtonItem_EditGeolayout_Click(object sender, EventArgs e)
+        {
+            EditGeolayout(curObj);
         }
     }
 }

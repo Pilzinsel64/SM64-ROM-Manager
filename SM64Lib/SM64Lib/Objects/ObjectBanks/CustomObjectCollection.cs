@@ -88,6 +88,7 @@ namespace SM64Lib.Objects.ObjectBanks
 
         public void Import(CustomObjectImport import)
         {
+            // Decompress import
             DecompressImport(import);
             
             foreach (var cobj in import.Data.CustomObjects)
@@ -106,8 +107,10 @@ namespace SM64Lib.Objects.ObjectBanks
                         {
                             var behav = import.Data.Behaviors[cobj.BehaviorProps.Behavior];
                             import.DestBehaviorBank.Behaviors.Add(behav);
+
                             if (behav.Config.CustomAsmLinks.Any())
                                 import.DestCustomAsmBank.Areas.AddRangeIfNotContains(behav.Config.CustomAsmLinks.Select(n => n.CustomAsm).ToArray());
+
                             behav.ParseScript();
                         }
                         cobj.BehaviorProps.BehaviorAddress = -1;

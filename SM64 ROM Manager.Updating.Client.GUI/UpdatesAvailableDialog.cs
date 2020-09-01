@@ -39,7 +39,7 @@ namespace SM64_ROM_Manager.Updating.Client.GUI
                 case UpdateNotesContentType.Markdown:
                     updateNotesControl = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel
                     {
-                        Text = CommonMark.CommonMarkConverter.Convert(updateNotes.Content)
+                        Text = Markdig.Markdown.ToHtml(updateNotes.Content)
                     };
                     break;
                 case UpdateNotesContentType.HTML:

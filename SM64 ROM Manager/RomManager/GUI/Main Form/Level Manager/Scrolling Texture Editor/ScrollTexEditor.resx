@@ -117,7 +117,216 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SplitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SplitContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ColumnHeader_Number.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ColumnHeader_Number.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="columnHeader_MaterialName.Text" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="columnHeader_MaterialName.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="ColumnHeader_Behavior.Text" xml:space="preserve">
+    <value>Behavior</value>
+  </data>
+  <data name="ColumnHeader_Behavior.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="ColumnHeader_Type.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="ColumnHeader_Type.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="ColumnHeader_Duration.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="ColumnHeader_Speed.Text" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="ColumnHeader_VertexPointer.Text" xml:space="preserve">
+    <value>Vertex Pointer</value>
+  </data>
+  <data name="ColumnHeader_VertexPointer.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="ColumnHeader_Vertices.Text" xml:space="preserve">
+    <value>Vertices</value>
+  </data>
+  <data name="ColumnHeader_Vertices.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="ListViewEx_LM_ScrollTexList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ListViewEx_LM_ScrollTexList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="ListViewEx_LM_ScrollTexList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>583, 609</value>
+  </data>
+  <data name="ListViewEx_LM_ScrollTexList.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ListViewEx_LM_ScrollTexList.Name" xml:space="preserve">
+    <value>ListViewEx_LM_ScrollTexList</value>
+  </data>
+  <data name="&gt;&gt;ListViewEx_LM_ScrollTexList.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ListViewEx_LM_ScrollTexList.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;ListViewEx_LM_ScrollTexList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="bar1.AccessibleDescription" xml:space="preserve">
+    <value>bar1 (bar1)</value>
+  </data>
+  <data name="bar1.AccessibleName" xml:space="preserve">
+    <value>bar1</value>
+  </data>
+  <data name="bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="bar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="ButtonItem_AddNew.Text" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="ButtonItem_Remove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="labelItem1.Text" xml:space="preserve">
+    <value>View mode:</value>
+  </data>
+  <data name="CheckBoxItem_ViewMode_Simplified.Text" xml:space="preserve">
+    <value>Simplified</value>
+  </data>
+  <data name="CheckBoxItem_ViewMode_Expert.Text" xml:space="preserve">
+    <value>Expert</value>
+  </data>
+  <data name="buttonItem_Options.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="bar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="bar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>583, 24</value>
+  </data>
+  <data name="bar1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="bar1.Text" xml:space="preserve">
+    <value>bar1</value>
+  </data>
+  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
+    <value>bar1</value>
+  </data>
+  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bar1.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;bar1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel1.Name" xml:space="preserve">
+    <value>SplitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>SplitContainer1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AdvPropertyGrid1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="AdvPropertyGrid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="AdvPropertyGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 633</value>
+  </data>
+  <data name="AdvPropertyGrid1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="AdvPropertyGrid1.Text" xml:space="preserve">
+    <value>AdvPropertyGrid1</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Name" xml:space="preserve">
+    <value>AdvPropertyGrid1</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.AdvPropertyGrid, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.Parent" xml:space="preserve">
+    <value>SplitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;AdvPropertyGrid1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel2.Name" xml:space="preserve">
+    <value>SplitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>SplitContainer1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SplitContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>902, 633</value>
+  </data>
+  <data name="SplitContainer1.SplitterDistance" type="System.Int32, mscorlib">
+    <value>583</value>
+  </data>
+  <data name="SplitContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Name" xml:space="preserve">
+    <value>SplitContainer1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>902, 633</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAgIAAAAEAIAAoCAEAJgAAAAAAAAABACAAz6kAAE4IAQAoAAAAgAAAAAABAAABACAAAAAAAAAA
@@ -1974,5 +2183,101 @@
         MDEtMDU6MDDkOlH3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEyLTExLTIwVDA5OjAzOjUzLTA2OjAwpVUc
         +QAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Texture Animation Editor</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Number.Name" xml:space="preserve">
+    <value>ColumnHeader_Number</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Number.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_MaterialName.Name" xml:space="preserve">
+    <value>columnHeader_MaterialName</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_MaterialName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Behavior.Name" xml:space="preserve">
+    <value>ColumnHeader_Behavior</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Behavior.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Type.Name" xml:space="preserve">
+    <value>ColumnHeader_Type</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Type.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Duration.Name" xml:space="preserve">
+    <value>ColumnHeader_Duration</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Duration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Speed.Name" xml:space="preserve">
+    <value>ColumnHeader_Speed</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Speed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_VertexPointer.Name" xml:space="preserve">
+    <value>ColumnHeader_VertexPointer</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_VertexPointer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Vertices.Name" xml:space="preserve">
+    <value>ColumnHeader_Vertices</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader_Vertices.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_AddNew.Name" xml:space="preserve">
+    <value>ButtonItem_AddNew</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_AddNew.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Remove.Name" xml:space="preserve">
+    <value>ButtonItem_Remove</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_Remove.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonItem_Options.Name" xml:space="preserve">
+    <value>buttonItem_Options</value>
+  </data>
+  <data name="&gt;&gt;buttonItem_Options.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelItem1.Name" xml:space="preserve">
+    <value>labelItem1</value>
+  </data>
+  <data name="&gt;&gt;labelItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxItem_ViewMode_Simplified.Name" xml:space="preserve">
+    <value>CheckBoxItem_ViewMode_Simplified</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxItem_ViewMode_Simplified.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.CheckBoxItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxItem_ViewMode_Expert.Name" xml:space="preserve">
+    <value>CheckBoxItem_ViewMode_Expert</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxItem_ViewMode_Expert.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.CheckBoxItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ScrollTexEditor</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

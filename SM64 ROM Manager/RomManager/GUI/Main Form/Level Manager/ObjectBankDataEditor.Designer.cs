@@ -37,647 +37,271 @@ namespace SM64_ROM_Manager
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectBankDataEditor));
-            _ObdTree = new DevComponents.AdvTree.AdvTree();
-            _ObdTree.BeforeCellEdit += new DevComponents.AdvTree.CellEditEventHandler(ObdTree_BeforeCellEdit);
-            _ObdTree.AfterCellEdit += new DevComponents.AdvTree.CellEditEventHandler(ObdTree_AfterCellEdit);
-            _Node1 = new DevComponents.AdvTree.Node();
-            _NodeConnector1 = new DevComponents.AdvTree.NodeConnector();
-            _ElementStyle1 = new DevComponents.DotNetBar.ElementStyle();
-            _ContextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
-            _ButtonItem_CM_ObdList = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_RemoveObdList = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_RemoveObdList.Click += new EventHandler(ButtonItem_RemoveObdList_Click);
-            _ButtonItem_CM_Obd = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_RemoveObd = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_RemoveObd.Click += new EventHandler(ButtonItem_RemoveObd_Click);
-            _ButtonItem_CM_Cmds = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_CM_Cmd = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_RemoveCmd = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_RemoveCmd.Click += new EventHandler(ButtonItem_RemoveCmd_Click);
-            _ButtonItem_CM_Objs = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_CM_Obj = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_RemoveObj = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_RemoveObj.Click += new EventHandler(ButtonItem_RemoveObj_Click);
-            _ButtonItem_AddObj = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_AddObj.Click += new EventHandler(ButtonItem_AddObj_Click);
-            _ButtonItem_AddCmd = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_AddCmd.Click += new EventHandler(ButtonItem_AddCmd_Click);
-            _ButtonItem_AddObd = new DevComponents.DotNetBar.ButtonItem();
-            _ButtonItem_AddObd.Click += new EventHandler(ButtonItem_AddObd_Click);
-            ((System.ComponentModel.ISupportInitialize)_ObdTree).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_ContextMenuBar1).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectBankDataEditor));
+            this.ObdTree = new DevComponents.AdvTree.AdvTree();
+            this.Node1 = new DevComponents.AdvTree.Node();
+            this.NodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.ElementStyle1 = new DevComponents.DotNetBar.ElementStyle();
+            this.ContextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
+            this.ButtonItem_CM_ObdList = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AddObd = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_RemoveObdList = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CM_Obd = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_RemoveObd = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CM_Cmds = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AddCmd = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CM_Cmd = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_RemoveCmd = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CM_Objs = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AddObj = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CM_Obj = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_RemoveObj = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonItem_Export = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_Import = new DevComponents.DotNetBar.ButtonItem();
+            ((System.ComponentModel.ISupportInitialize)(this.ObdTree)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).BeginInit();
+            this.SuspendLayout();
             // 
             // ObdTree
             // 
-            _ObdTree.AccessibleRole = AccessibleRole.Outline;
-            _ObdTree.BackColor = SystemColors.Window;
+            resources.ApplyResources(this.ObdTree, "ObdTree");
+            this.ObdTree.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.ObdTree.BackColor = System.Drawing.SystemColors.Window;
             // 
             // 
             // 
-            _ObdTree.BackgroundStyle.Class = "TreeBorderKey";
-            _ObdTree.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _ObdTree.CellEdit = true;
-            _ObdTree.Dock = DockStyle.Fill;
-            _ObdTree.DragDropEnabled = false;
-            _ObdTree.DragDropNodeCopyEnabled = false;
-            _ObdTree.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            _ObdTree.Location = new Point(0, 0);
-            _ObdTree.Name = "ObdTree";
-            _ObdTree.Nodes.AddRange(new DevComponents.AdvTree.Node[] { _Node1 });
-            _ObdTree.NodesConnector = _NodeConnector1;
-            _ObdTree.NodeStyle = _ElementStyle1;
-            _ObdTree.PathSeparator = ";";
-            _ObdTree.Size = new Size(484, 661);
-            _ObdTree.Styles.Add(_ElementStyle1);
-            _ObdTree.TabIndex = 0;
-            _ObdTree.Text = "AdvTree1";
-            _ObdTree.TileSize = new Size(200, 30);
+            this.ObdTree.BackgroundStyle.Class = "TreeBorderKey";
+            this.ObdTree.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ObdTree.CellEdit = true;
+            this.ObdTree.DragDropEnabled = false;
+            this.ObdTree.DragDropNodeCopyEnabled = false;
+            this.ObdTree.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.ObdTree.Name = "ObdTree";
+            this.ObdTree.Nodes.AddRange(new DevComponents.AdvTree.Node[] {
+            this.Node1});
+            this.ObdTree.NodesConnector = this.NodeConnector1;
+            this.ObdTree.NodeStyle = this.ElementStyle1;
+            this.ObdTree.PathSeparator = ";";
+            this.ObdTree.Styles.Add(this.ElementStyle1);
+            this.ObdTree.TileSize = new System.Drawing.Size(200, 30);
+            this.ObdTree.BeforeCellEdit += new DevComponents.AdvTree.CellEditEventHandler(this.ObdTree_BeforeCellEdit);
+            this.ObdTree.AfterCellEdit += new DevComponents.AdvTree.CellEditEventHandler(this.ObdTree_AfterCellEdit);
             // 
             // Node1
             // 
-            _Node1.Expanded = true;
-            _Node1.Name = "Node1";
-            _Node1.Text = "Node1";
+            this.Node1.Expanded = true;
+            this.Node1.Name = "Node1";
+            resources.ApplyResources(this.Node1, "Node1");
             // 
             // NodeConnector1
             // 
-            _NodeConnector1.LineColor = SystemColors.ControlText;
+            this.NodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
             // 
             // ElementStyle1
             // 
-            _ElementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _ElementStyle1.Name = "ElementStyle1";
-            _ElementStyle1.TextColor = SystemColors.ControlText;
+            this.ElementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ElementStyle1.Name = "ElementStyle1";
+            this.ElementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // ContextMenuBar1
             // 
-            _ContextMenuBar1.AntiAlias = true;
-            _ContextMenuBar1.Font = new Font("Segoe UI", 9.0F);
-            _ContextMenuBar1.IsMaximized = false;
-            _ContextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem_CM_ObdList, _ButtonItem_CM_Obd, _ButtonItem_CM_Cmds, _ButtonItem_CM_Cmd, _ButtonItem_CM_Objs, _ButtonItem_CM_Obj });
-            _ContextMenuBar1.Location = new Point(140, 0);
-            _ContextMenuBar1.Name = "ContextMenuBar1";
-            _ContextMenuBar1.Size = new Size(341, 25);
-            _ContextMenuBar1.Stretch = true;
-            _ContextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ContextMenuBar1.TabIndex = 1;
-            _ContextMenuBar1.TabStop = false;
-            _ContextMenuBar1.Text = "ContextMenuBar1";
+            resources.ApplyResources(this.ContextMenuBar1, "ContextMenuBar1");
+            this.ContextMenuBar1.AntiAlias = true;
+            this.ContextMenuBar1.IsMaximized = false;
+            this.ContextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_CM_ObdList,
+            this.ButtonItem_CM_Obd,
+            this.ButtonItem_CM_Cmds,
+            this.ButtonItem_CM_Cmd,
+            this.ButtonItem_CM_Objs,
+            this.ButtonItem_CM_Obj});
+            this.ContextMenuBar1.Name = "ContextMenuBar1";
+            this.ContextMenuBar1.Stretch = true;
+            this.ContextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ContextMenuBar1.TabStop = false;
             // 
             // ButtonItem_CM_ObdList
             // 
-            _ButtonItem_CM_ObdList.AutoExpandOnClick = true;
-            _ButtonItem_CM_ObdList.Name = "ButtonItem_CM_ObdList";
-            _ButtonItem_CM_ObdList.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem_AddObd, _ButtonItem_RemoveObdList });
-            _ButtonItem_CM_ObdList.Text = "ObdList";
-            // 
-            // ButtonItem_RemoveObdList
-            // 
-            _ButtonItem_RemoveObdList.BeginGroup = true;
-            _ButtonItem_RemoveObdList.Image = My.Resources.MyIcons.icons8_delete_sign_16px;
-            _ButtonItem_RemoveObdList.Name = "ButtonItem_RemoveObdList";
-            _ButtonItem_RemoveObdList.Text = "Remove";
-            // 
-            // ButtonItem_CM_Obd
-            // 
-            _ButtonItem_CM_Obd.AutoExpandOnClick = true;
-            _ButtonItem_CM_Obd.Name = "ButtonItem_CM_Obd";
-            _ButtonItem_CM_Obd.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem_RemoveObd });
-            _ButtonItem_CM_Obd.Text = "Obd";
-            // 
-            // ButtonItem_RemoveObd
-            // 
-            _ButtonItem_RemoveObd.BeginGroup = true;
-            _ButtonItem_RemoveObd.Image = My.Resources.MyIcons.icons8_delete_sign_16px;
-            _ButtonItem_RemoveObd.Name = "ButtonItem_RemoveObd";
-            _ButtonItem_RemoveObd.Text = "Remove";
-            // 
-            // ButtonItem_CM_Cmds
-            // 
-            _ButtonItem_CM_Cmds.AutoExpandOnClick = true;
-            _ButtonItem_CM_Cmds.Name = "ButtonItem_CM_Cmds";
-            _ButtonItem_CM_Cmds.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem_AddCmd });
-            _ButtonItem_CM_Cmds.Text = "Cmds";
-            // 
-            // ButtonItem_CM_Cmd
-            // 
-            _ButtonItem_CM_Cmd.AutoExpandOnClick = true;
-            _ButtonItem_CM_Cmd.Name = "ButtonItem_CM_Cmd";
-            _ButtonItem_CM_Cmd.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem_RemoveCmd });
-            _ButtonItem_CM_Cmd.Text = "Cmd";
-            // 
-            // ButtonItem_RemoveCmd
-            // 
-            _ButtonItem_RemoveCmd.Image = My.Resources.MyIcons.icons8_delete_sign_16px;
-            _ButtonItem_RemoveCmd.Name = "ButtonItem_RemoveCmd";
-            _ButtonItem_RemoveCmd.Text = "Remove";
-            // 
-            // ButtonItem_CM_Objs
-            // 
-            _ButtonItem_CM_Objs.AutoExpandOnClick = true;
-            _ButtonItem_CM_Objs.Name = "ButtonItem_CM_Objs";
-            _ButtonItem_CM_Objs.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem_AddObj });
-            _ButtonItem_CM_Objs.Text = "Objs";
-            // 
-            // ButtonItem_CM_Obj
-            // 
-            _ButtonItem_CM_Obj.AutoExpandOnClick = true;
-            _ButtonItem_CM_Obj.Name = "ButtonItem_CM_Obj";
-            _ButtonItem_CM_Obj.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] { _ButtonItem_RemoveObj });
-            _ButtonItem_CM_Obj.Text = "Obj";
-            // 
-            // ButtonItem_RemoveObj
-            // 
-            _ButtonItem_RemoveObj.Image = My.Resources.MyIcons.icons8_delete_sign_16px;
-            _ButtonItem_RemoveObj.Name = "ButtonItem_RemoveObj";
-            _ButtonItem_RemoveObj.Text = "Remove";
-            // 
-            // ButtonItem_AddObj
-            // 
-            _ButtonItem_AddObj.Image = My.Resources.MyIcons.icons8_plus_math_16px;
-            _ButtonItem_AddObj.Name = "ButtonItem_AddObj";
-            _ButtonItem_AddObj.Text = "Add Object Name";
-            // 
-            // ButtonItem_AddCmd
-            // 
-            _ButtonItem_AddCmd.Image = My.Resources.MyIcons.icons8_plus_math_16px;
-            _ButtonItem_AddCmd.Name = "ButtonItem_AddCmd";
-            _ButtonItem_AddCmd.Text = "Add Command";
+            resources.ApplyResources(this.ButtonItem_CM_ObdList, "ButtonItem_CM_ObdList");
+            this.ButtonItem_CM_ObdList.AutoExpandOnClick = true;
+            this.ButtonItem_CM_ObdList.Name = "ButtonItem_CM_ObdList";
+            this.ButtonItem_CM_ObdList.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_AddObd,
+            this.ButtonItem_RemoveObdList});
             // 
             // ButtonItem_AddObd
             // 
-            _ButtonItem_AddObd.Image = My.Resources.MyIcons.icons8_plus_math_16px;
-            _ButtonItem_AddObd.Name = "ButtonItem_AddObd";
-            _ButtonItem_AddObd.Text = "Add Object Bank Data";
+            resources.ApplyResources(this.ButtonItem_AddObd, "ButtonItem_AddObd");
+            this.ButtonItem_AddObd.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_AddObd.Name = "ButtonItem_AddObd";
+            this.ButtonItem_AddObd.Click += new System.EventHandler(this.ButtonItem_AddObd_Click);
+            // 
+            // ButtonItem_RemoveObdList
+            // 
+            resources.ApplyResources(this.ButtonItem_RemoveObdList, "ButtonItem_RemoveObdList");
+            this.ButtonItem_RemoveObdList.BeginGroup = true;
+            this.ButtonItem_RemoveObdList.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonItem_RemoveObdList.Name = "ButtonItem_RemoveObdList";
+            this.ButtonItem_RemoveObdList.Click += new System.EventHandler(this.ButtonItem_RemoveObdList_Click);
+            // 
+            // ButtonItem_CM_Obd
+            // 
+            resources.ApplyResources(this.ButtonItem_CM_Obd, "ButtonItem_CM_Obd");
+            this.ButtonItem_CM_Obd.AutoExpandOnClick = true;
+            this.ButtonItem_CM_Obd.Name = "ButtonItem_CM_Obd";
+            this.ButtonItem_CM_Obd.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_RemoveObd});
+            // 
+            // ButtonItem_RemoveObd
+            // 
+            resources.ApplyResources(this.ButtonItem_RemoveObd, "ButtonItem_RemoveObd");
+            this.ButtonItem_RemoveObd.BeginGroup = true;
+            this.ButtonItem_RemoveObd.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonItem_RemoveObd.Name = "ButtonItem_RemoveObd";
+            this.ButtonItem_RemoveObd.Click += new System.EventHandler(this.ButtonItem_RemoveObd_Click);
+            // 
+            // ButtonItem_CM_Cmds
+            // 
+            resources.ApplyResources(this.ButtonItem_CM_Cmds, "ButtonItem_CM_Cmds");
+            this.ButtonItem_CM_Cmds.AutoExpandOnClick = true;
+            this.ButtonItem_CM_Cmds.Name = "ButtonItem_CM_Cmds";
+            this.ButtonItem_CM_Cmds.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_AddCmd});
+            // 
+            // ButtonItem_AddCmd
+            // 
+            resources.ApplyResources(this.ButtonItem_AddCmd, "ButtonItem_AddCmd");
+            this.ButtonItem_AddCmd.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_AddCmd.Name = "ButtonItem_AddCmd";
+            this.ButtonItem_AddCmd.Click += new System.EventHandler(this.ButtonItem_AddCmd_Click);
+            // 
+            // ButtonItem_CM_Cmd
+            // 
+            resources.ApplyResources(this.ButtonItem_CM_Cmd, "ButtonItem_CM_Cmd");
+            this.ButtonItem_CM_Cmd.AutoExpandOnClick = true;
+            this.ButtonItem_CM_Cmd.Name = "ButtonItem_CM_Cmd";
+            this.ButtonItem_CM_Cmd.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_RemoveCmd});
+            // 
+            // ButtonItem_RemoveCmd
+            // 
+            resources.ApplyResources(this.ButtonItem_RemoveCmd, "ButtonItem_RemoveCmd");
+            this.ButtonItem_RemoveCmd.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonItem_RemoveCmd.Name = "ButtonItem_RemoveCmd";
+            this.ButtonItem_RemoveCmd.Click += new System.EventHandler(this.ButtonItem_RemoveCmd_Click);
+            // 
+            // ButtonItem_CM_Objs
+            // 
+            resources.ApplyResources(this.ButtonItem_CM_Objs, "ButtonItem_CM_Objs");
+            this.ButtonItem_CM_Objs.AutoExpandOnClick = true;
+            this.ButtonItem_CM_Objs.Name = "ButtonItem_CM_Objs";
+            this.ButtonItem_CM_Objs.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_AddObj});
+            // 
+            // ButtonItem_AddObj
+            // 
+            resources.ApplyResources(this.ButtonItem_AddObj, "ButtonItem_AddObj");
+            this.ButtonItem_AddObj.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_AddObj.Name = "ButtonItem_AddObj";
+            this.ButtonItem_AddObj.Click += new System.EventHandler(this.ButtonItem_AddObj_Click);
+            // 
+            // ButtonItem_CM_Obj
+            // 
+            resources.ApplyResources(this.ButtonItem_CM_Obj, "ButtonItem_CM_Obj");
+            this.ButtonItem_CM_Obj.AutoExpandOnClick = true;
+            this.ButtonItem_CM_Obj.Name = "ButtonItem_CM_Obj";
+            this.ButtonItem_CM_Obj.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_RemoveObj});
+            // 
+            // ButtonItem_RemoveObj
+            // 
+            resources.ApplyResources(this.ButtonItem_RemoveObj, "ButtonItem_RemoveObj");
+            this.ButtonItem_RemoveObj.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonItem_RemoveObj.Name = "ButtonItem_RemoveObj";
+            this.ButtonItem_RemoveObj.Click += new System.EventHandler(this.ButtonItem_RemoveObj_Click);
+            // 
+            // buttonX1
+            // 
+            resources.ApplyResources(this.buttonX1, "buttonX1");
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.AutoExpandOnClick = true;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.ShowSubItems = false;
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_Export,
+            this.ButtonItem_Import});
+            // 
+            // ButtonItem_Export
+            // 
+            resources.ApplyResources(this.ButtonItem_Export, "ButtonItem_Export");
+            this.ButtonItem_Export.GlobalItem = false;
+            this.ButtonItem_Export.Name = "ButtonItem_Export";
+            this.ButtonItem_Export.Click += new System.EventHandler(this.ButtonItem_Export_Click);
+            // 
+            // ButtonItem_Import
+            // 
+            resources.ApplyResources(this.ButtonItem_Import, "ButtonItem_Import");
+            this.ButtonItem_Import.GlobalItem = false;
+            this.ButtonItem_Import.Name = "ButtonItem_Import";
+            this.ButtonItem_Import.Click += new System.EventHandler(this.ButtonItem_Import_Click);
             // 
             // ObjectBankDataEditor
             // 
-            AutoScaleDimensions = new SizeF(6.0F, 13.0F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 661);
-            Controls.Add(_ContextMenuBar1);
-            Controls.Add(_ObdTree);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "ObjectBankDataEditor";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Object Bank Data Editor";
-            TopLeftCornerSize = 0;
-            TopRightCornerSize = 0;
-            ((System.ComponentModel.ISupportInitialize)_ObdTree).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_ContextMenuBar1).EndInit();
-            ResumeLayout(false);
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonX1);
+            this.Controls.Add(this.ContextMenuBar1);
+            this.Controls.Add(this.ObdTree);
+            this.Name = "ObjectBankDataEditor";
+            this.TopLeftCornerSize = 0;
+            this.TopRightCornerSize = 0;
+            ((System.ComponentModel.ISupportInitialize)(this.ObdTree)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
-        private DevComponents.AdvTree.AdvTree _ObdTree;
-
-        internal DevComponents.AdvTree.AdvTree ObdTree
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ObdTree;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ObdTree != null)
-                {
-                    _ObdTree.BeforeCellEdit -= ObdTree_BeforeCellEdit;
-                    _ObdTree.AfterCellEdit -= ObdTree_AfterCellEdit;
-                }
-
-                _ObdTree = value;
-                if (_ObdTree != null)
-                {
-                    _ObdTree.BeforeCellEdit += ObdTree_BeforeCellEdit;
-                    _ObdTree.AfterCellEdit += ObdTree_AfterCellEdit;
-                }
-            }
-        }
-
-        private DevComponents.AdvTree.Node _Node1;
-
-        internal DevComponents.AdvTree.Node Node1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Node1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Node1 != null)
-                {
-                }
-
-                _Node1 = value;
-                if (_Node1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.AdvTree.NodeConnector _NodeConnector1;
-
-        internal DevComponents.AdvTree.NodeConnector NodeConnector1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _NodeConnector1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_NodeConnector1 != null)
-                {
-                }
-
-                _NodeConnector1 = value;
-                if (_NodeConnector1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ElementStyle _ElementStyle1;
-
-        internal DevComponents.DotNetBar.ElementStyle ElementStyle1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ElementStyle1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ElementStyle1 != null)
-                {
-                }
-
-                _ElementStyle1 = value;
-                if (_ElementStyle1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ContextMenuBar _ContextMenuBar1;
-
-        internal DevComponents.DotNetBar.ContextMenuBar ContextMenuBar1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ContextMenuBar1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ContextMenuBar1 != null)
-                {
-                }
-
-                _ContextMenuBar1 = value;
-                if (_ContextMenuBar1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_CM_Cmd;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Cmd
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_CM_Cmd;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_CM_Cmd != null)
-                {
-                }
-
-                _ButtonItem_CM_Cmd = value;
-                if (_ButtonItem_CM_Cmd != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_CM_Cmds;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Cmds
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_CM_Cmds;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_CM_Cmds != null)
-                {
-                }
-
-                _ButtonItem_CM_Cmds = value;
-                if (_ButtonItem_CM_Cmds != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_CM_Objs;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Objs
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_CM_Objs;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_CM_Objs != null)
-                {
-                }
-
-                _ButtonItem_CM_Objs = value;
-                if (_ButtonItem_CM_Objs != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_CM_Obj;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Obj
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_CM_Obj;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_CM_Obj != null)
-                {
-                }
-
-                _ButtonItem_CM_Obj = value;
-                if (_ButtonItem_CM_Obj != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_CM_Obd;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Obd
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_CM_Obd;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_CM_Obd != null)
-                {
-                }
-
-                _ButtonItem_CM_Obd = value;
-                if (_ButtonItem_CM_Obd != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_CM_ObdList;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_CM_ObdList
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_CM_ObdList;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_CM_ObdList != null)
-                {
-                }
-
-                _ButtonItem_CM_ObdList = value;
-                if (_ButtonItem_CM_ObdList != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_RemoveObj;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveObj
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_RemoveObj;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_RemoveObj != null)
-                {
-                    _ButtonItem_RemoveObj.Click -= ButtonItem_RemoveObj_Click;
-                }
-
-                _ButtonItem_RemoveObj = value;
-                if (_ButtonItem_RemoveObj != null)
-                {
-                    _ButtonItem_RemoveObj.Click += ButtonItem_RemoveObj_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_RemoveCmd;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveCmd
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_RemoveCmd;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_RemoveCmd != null)
-                {
-                    _ButtonItem_RemoveCmd.Click -= ButtonItem_RemoveCmd_Click;
-                }
-
-                _ButtonItem_RemoveCmd = value;
-                if (_ButtonItem_RemoveCmd != null)
-                {
-                    _ButtonItem_RemoveCmd.Click += ButtonItem_RemoveCmd_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_RemoveObd;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveObd
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_RemoveObd;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_RemoveObd != null)
-                {
-                    _ButtonItem_RemoveObd.Click -= ButtonItem_RemoveObd_Click;
-                }
-
-                _ButtonItem_RemoveObd = value;
-                if (_ButtonItem_RemoveObd != null)
-                {
-                    _ButtonItem_RemoveObd.Click += ButtonItem_RemoveObd_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_RemoveObdList;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveObdList
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_RemoveObdList;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_RemoveObdList != null)
-                {
-                    _ButtonItem_RemoveObdList.Click -= ButtonItem_RemoveObdList_Click;
-                }
-
-                _ButtonItem_RemoveObdList = value;
-                if (_ButtonItem_RemoveObdList != null)
-                {
-                    _ButtonItem_RemoveObdList.Click += ButtonItem_RemoveObdList_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_AddObj;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_AddObj
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_AddObj;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_AddObj != null)
-                {
-                    _ButtonItem_AddObj.Click -= ButtonItem_AddObj_Click;
-                }
-
-                _ButtonItem_AddObj = value;
-                if (_ButtonItem_AddObj != null)
-                {
-                    _ButtonItem_AddObj.Click += ButtonItem_AddObj_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_AddCmd;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_AddCmd
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_AddCmd;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_AddCmd != null)
-                {
-                    _ButtonItem_AddCmd.Click -= ButtonItem_AddCmd_Click;
-                }
-
-                _ButtonItem_AddCmd = value;
-                if (_ButtonItem_AddCmd != null)
-                {
-                    _ButtonItem_AddCmd.Click += ButtonItem_AddCmd_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonItem _ButtonItem_AddObd;
-
-        internal DevComponents.DotNetBar.ButtonItem ButtonItem_AddObd
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonItem_AddObd;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonItem_AddObd != null)
-                {
-                    _ButtonItem_AddObd.Click -= ButtonItem_AddObd_Click;
-                }
-
-                _ButtonItem_AddObd = value;
-                if (_ButtonItem_AddObd != null)
-                {
-                    _ButtonItem_AddObd.Click += ButtonItem_AddObd_Click;
-                }
-            }
-        }
+        private DevComponents.AdvTree.AdvTree ObdTree;
+
+        private DevComponents.AdvTree.Node Node1;
+
+        private DevComponents.AdvTree.NodeConnector NodeConnector1;
+
+        private DevComponents.DotNetBar.ElementStyle ElementStyle1;
+
+        private DevComponents.DotNetBar.ContextMenuBar ContextMenuBar1;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Cmd;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Cmds;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Objs;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Obj;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Obd;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_ObdList;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveObj;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveCmd;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveObd;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveObdList;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_AddObj;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_AddCmd;
+
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_AddObd;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_Export;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_Import;
     }
 }

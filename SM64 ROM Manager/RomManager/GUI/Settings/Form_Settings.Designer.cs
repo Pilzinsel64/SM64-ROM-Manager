@@ -48,6 +48,10 @@ namespace SM64_ROM_Manager
             this.ComboBox_AreaEditor_DefaultCameraMode = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.LabelX6 = new DevComponents.DotNetBar.LabelX();
             this.TabControl2 = new DevComponents.DotNetBar.TabControl();
+            this.TabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+            this.comboBoxEx_DefaultObjMoveMode = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX19 = new DevComponents.DotNetBar.LabelX();
+            this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.comboBoxEx_RecalcChecksumBehavior = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem15 = new DevComponents.Editors.ComboItem();
@@ -80,8 +84,6 @@ namespace SM64_ROM_Manager
             this.LabelX15 = new DevComponents.DotNetBar.LabelX();
             this.SwitchButton_TMForceUppercase = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.TabItem7 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel7 = new DevComponents.DotNetBar.TabControlPanel();
             this.TextBoxX_ProxyPwd = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.TextBoxX_ProxyUsr = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -120,11 +122,13 @@ namespace SM64_ROM_Manager
             this.TabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
             this.PictureBox_Warning = new System.Windows.Forms.PictureBox();
+            this.comboItem18 = new DevComponents.Editors.ComboItem();
+            this.comboItem19 = new DevComponents.Editors.ComboItem();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl2)).BeginInit();
             this.TabControl2.SuspendLayout();
+            this.TabControlPanel2.SuspendLayout();
             this.TabControlPanel1.SuspendLayout();
             this.TabControlPanel6.SuspendLayout();
-            this.TabControlPanel2.SuspendLayout();
             this.TabControlPanel7.SuspendLayout();
             this.TabControlPanel5.SuspendLayout();
             this.TabControlPanel4.SuspendLayout();
@@ -241,8 +245,8 @@ namespace SM64_ROM_Manager
             this.TabControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TabControl2.CanReorderTabs = false;
             this.TabControl2.Controls.Add(this.TabControlPanel1);
-            this.TabControl2.Controls.Add(this.TabControlPanel6);
             this.TabControl2.Controls.Add(this.TabControlPanel2);
+            this.TabControl2.Controls.Add(this.TabControlPanel6);
             this.TabControl2.Controls.Add(this.TabControlPanel7);
             this.TabControl2.Controls.Add(this.TabControlPanel5);
             this.TabControl2.Controls.Add(this.TabControlPanel4);
@@ -263,6 +267,56 @@ namespace SM64_ROM_Manager
             this.TabControl2.Tabs.Add(this.TabItem4);
             this.TabControl2.Tabs.Add(this.TabItem5);
             this.TabControl2.Tabs.Add(this.TabItem6);
+            // 
+            // TabControlPanel2
+            // 
+            this.TabControlPanel2.Controls.Add(this.comboBoxEx_DefaultObjMoveMode);
+            this.TabControlPanel2.Controls.Add(this.labelX19);
+            this.TabControlPanel2.Controls.Add(this.LabelX6);
+            this.TabControlPanel2.Controls.Add(this.ComboBox_AreaEditor_DefaultCameraMode);
+            this.TabControlPanel2.Controls.Add(this.ComboBox_AreaEditor_DefaultWindowMode);
+            this.TabControlPanel2.Controls.Add(this.LabelX7);
+            this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel2, "TabControlPanel2");
+            this.TabControlPanel2.Name = "TabControlPanel2";
+            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel2.Style.GradientAngle = 90;
+            this.TabControlPanel2.TabItem = this.TabItem2;
+            // 
+            // comboBoxEx_DefaultObjMoveMode
+            // 
+            resources.ApplyResources(this.comboBoxEx_DefaultObjMoveMode, "comboBoxEx_DefaultObjMoveMode");
+            this.comboBoxEx_DefaultObjMoveMode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx_DefaultObjMoveMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEx_DefaultObjMoveMode.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxEx_DefaultObjMoveMode.FormattingEnabled = true;
+            this.comboBoxEx_DefaultObjMoveMode.Items.AddRange(new object[] {
+            this.comboItem18,
+            this.comboItem19});
+            this.comboBoxEx_DefaultObjMoveMode.Name = "comboBoxEx_DefaultObjMoveMode";
+            this.comboBoxEx_DefaultObjMoveMode.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // labelX19
+            // 
+            this.labelX19.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX19, "labelX19");
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            // 
+            // TabItem2
+            // 
+            this.TabItem2.AttachedControl = this.TabControlPanel2;
+            this.TabItem2.Name = "TabItem2";
+            resources.ApplyResources(this.TabItem2, "TabItem2");
             // 
             // TabControlPanel1
             // 
@@ -564,30 +618,6 @@ namespace SM64_ROM_Manager
             this.TabItem7.AttachedControl = this.TabControlPanel6;
             this.TabItem7.Name = "TabItem7";
             resources.ApplyResources(this.TabItem7, "TabItem7");
-            // 
-            // TabControlPanel2
-            // 
-            this.TabControlPanel2.Controls.Add(this.LabelX6);
-            this.TabControlPanel2.Controls.Add(this.ComboBox_AreaEditor_DefaultCameraMode);
-            this.TabControlPanel2.Controls.Add(this.ComboBox_AreaEditor_DefaultWindowMode);
-            this.TabControlPanel2.Controls.Add(this.LabelX7);
-            this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel2, "TabControlPanel2");
-            this.TabControlPanel2.Name = "TabControlPanel2";
-            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel2.Style.GradientAngle = 90;
-            this.TabControlPanel2.TabItem = this.TabItem2;
-            // 
-            // TabItem2
-            // 
-            this.TabItem2.AttachedControl = this.TabControlPanel2;
-            this.TabItem2.Name = "TabItem2";
-            resources.ApplyResources(this.TabItem2, "TabItem2");
             // 
             // TabControlPanel7
             // 
@@ -1000,6 +1030,14 @@ namespace SM64_ROM_Manager
             this.PictureBox_Warning.Name = "PictureBox_Warning";
             this.PictureBox_Warning.TabStop = false;
             // 
+            // comboItem18
+            // 
+            resources.ApplyResources(this.comboItem18, "comboItem18");
+            // 
+            // comboItem19
+            // 
+            resources.ApplyResources(this.comboItem19, "comboItem19");
+            // 
             // Form_Settings
             // 
             resources.ApplyResources(this, "$this");
@@ -1014,9 +1052,9 @@ namespace SM64_ROM_Manager
             this.TopRightCornerSize = 0;
             ((System.ComponentModel.ISupportInitialize)(this.TabControl2)).EndInit();
             this.TabControl2.ResumeLayout(false);
+            this.TabControlPanel2.ResumeLayout(false);
             this.TabControlPanel1.ResumeLayout(false);
             this.TabControlPanel6.ResumeLayout(false);
-            this.TabControlPanel2.ResumeLayout(false);
             this.TabControlPanel7.ResumeLayout(false);
             this.TabControlPanel5.ResumeLayout(false);
             this.TabControlPanel4.ResumeLayout(false);
@@ -1183,5 +1221,9 @@ namespace SM64_ROM_Manager
         private DevComponents.Editors.ComboItem comboItem15;
         private DevComponents.Editors.ComboItem comboItem16;
         private DevComponents.Editors.ComboItem comboItem17;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx_DefaultObjMoveMode;
+        private DevComponents.DotNetBar.LabelX labelX19;
+        private DevComponents.Editors.ComboItem comboItem18;
+        private DevComponents.Editors.ComboItem comboItem19;
     }
 }

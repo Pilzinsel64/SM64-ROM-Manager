@@ -337,6 +337,8 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         private List<VertexColor> vertexColors = new List<VertexColor>();
         private List<TexCord> uvs = new List<TexCord>();
         private List<Material> materials = new List<Material>();
+        private List<Pilz.S3DFileParser.Material> ignoreFacesWithMaterial = new List<Pilz.S3DFileParser.Material>();
+        private Dictionary<Pilz.S3DFileParser.Material, Material> materialBindings = new Dictionary<Pilz.S3DFileParser.Material, Material>();
         private List<VertexGroupList> vertexGroups = new List<VertexGroupList>();
         private List<FinalVertexData> finalVertData = new List<FinalVertexData>();
         private List<TextureEntry> textureBank = new List<TextureEntry>();
@@ -608,6 +610,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
         private void MergeDuplicatedTextures()
         {
             var matsToRemove = new List<Material>();
+
             foreach (Material mat in materials)
             {
                 if (!matsToRemove.Contains(mat))
@@ -616,13 +619,21 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                     {
                         if (!matsToRemove.Contains(dup))
                         {
+                            // Remove material
                             matsToRemove.Add(dup);
+
+                            // Update material references for vertex group
                             foreach (VertexGroupList mp in vertexGroups)
                             {
                                 if (mp.Material == dup)
-                                {
                                     mp.Material = mat;
-                                }
+                            }
+
+                            // Update material references for material bindings
+                            foreach (var kvp in materialBindings)
+                            {
+                                if (kvp.Value == dup)
+                                    materialBindings[kvp.Key] = mat;
                             }
                         }
                     }
@@ -632,10 +643,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             foreach (Material mat in matsToRemove)
             {
                 if (mat.HasTexture && textureBank.Contains(mat.Texture))
-                {
                     textureBank.Remove(mat.Texture);
-                }
-
                 materials.Remove(mat);
             }
         }
@@ -816,127 +824,118 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                 object curTexture = null;
                 foreach (var face in mesh.Faces) // .OrderBy(Function(n) n.Texture)
                 {
-                    if (curTexture is null || !curTexture.Equals(face.Material))
+                    if (!ignoreFacesWithMaterial.Contains(face.Material))
                     {
-                        curTexture = face.Material;
-                        string curMatName = obj.Materials.FirstOrDefault(n => n.Value.Equals(face.Material)).Key;
-                        var curMat = materials.FirstOrDefault(n => n.Name.Equals(curMatName));
-                        var mp = new VertexGroupList()
+                        if (curTexture is null || !curTexture.Equals(face.Material))
                         {
-                            Position = currentFace,
-                            Material = curMat
-                        };
-                        currentMaterial = curMat;
-                        mp.Length = 0;
-                        vertexGroups.Add(mp);
-                    }
-
-                    Material mat = null;
-                    int indexOfMat = 0;
-                    while (mat is null && obj.Materials.Count > indexOfMat)
-                    {
-                        if (obj.Materials.ElementAt(indexOfMat).Value.Equals(face.Material) && materials[indexOfMat] is object)
-                        {
-                            mat = materials[indexOfMat];
-                        }
-                        else
-                        {
-                            indexOfMat += 1;
-                        }
-                    }
-
-                    Vertex va = null;
-                    TexCord ta = null;
-                    var tanew = new TexCord();
-                    Normal na = null;
-                    VertexColor vca = null;
-                    Vertex vb = null;
-                    TexCord tb = null;
-                    var tbnew = new TexCord();
-                    Normal nb = null;
-                    VertexColor vcb = null;
-                    Vertex vc = null;
-                    TexCord tc = null;
-                    var tcnew = new TexCord();
-                    Normal nc = null;
-                    VertexColor vcc = null;
-                    void getVals(Pilz.S3DFileParser.Point point, ref Vertex vert, ref TexCord t, ref Normal normal, ref VertexColor vertcol)
-                    {
-                        if (point.Vertex is object)
-                            vert = verts[curIndexStart + mesh.Vertices.IndexOf(point.Vertex)];
-                        if (point.UV is object)
-                            t = uvs[curIndexStart + mesh.UVs.IndexOf(point.UV)];
-                        if (point.Normal is object)
-                            normal = norms[curIndexStart + mesh.Normals.IndexOf(point.Normal)];
-                        if (point.VertexColor is object)
-                            vertcol = vertexColors[curIndexStart + mesh.VertexColors.IndexOf(point.VertexColor)];
-                    };
-                    getVals(face.Points[0], ref va, ref ta, ref na, ref vca);
-                    getVals(face.Points[1], ref vb, ref tb, ref nb, ref vcb);
-                    getVals(face.Points[2], ref vc, ref tc, ref nc, ref vcc);
-                    var fa = new FinalVertexData();
-                    var fb = new FinalVertexData();
-                    var fc = new FinalVertexData();
-
-                    // Modify UV cordinates based on material.
-                    void modifyUVCordinates(TexCord tnew, TexCord t)
-                    {
-                        tnew.U = (float)(t.U * (mat.TexWidth / 32.0) - 16); // "-16" fixes the UVs offset
-                        tnew.V = (float)(t.V * (mat.TexHeight / 32.0) - 16); // "-16" fixes the UVs offset
-                    };
-                    modifyUVCordinates(tanew, ta);
-                    modifyUVCordinates(tbnew, tb);
-                    modifyUVCordinates(tcnew, tc);
-
-                    // Fix UVs to reduce number of (large) faces with broken textures
-                    FixUVs(tanew, tbnew, tcnew, Conversions.ToInteger(mat.TexWidth), Conversions.ToInteger(mat.TexHeight));
-
-                    // Vertex Structure: xxxxyyyyzzzz0000uuuuvvvvrrggbbaa
-                    void buildVertexStructure(FinalVertexData final, Vertex vert, VertexColor vertcol, TexCord tnew, Normal normal)
-                    {
-                        final.Data[0] = Conversions.ToByte(vert.X >> 8 & 0xFF);
-                        final.Data[1] = Conversions.ToByte(vert.X & 0xFF);
-                        final.Data[2] = Conversions.ToByte(vert.Y >> 8 & 0xFF);
-                        final.Data[3] = Conversions.ToByte(vert.Y & 0xFF);
-                        final.Data[4] = Conversions.ToByte(vert.Z >> 8 & 0xFF);
-                        final.Data[5] = Conversions.ToByte(vert.Z & 0xFF);
-                        final.Data[6] = 0;
-                        final.Data[7] = 0;
-                        int uInt, vInt;
-                        uInt = Conversions.ToInteger(Math.Round(tnew.U));
-                        vInt = Conversions.ToInteger(Math.Round(tnew.V));
-                        final.Data[8] = Conversions.ToByte(uInt >> 8 & 0xFF);
-                        final.Data[9] = Conversions.ToByte(uInt & 0xFF);
-                        final.Data[10] = Conversions.ToByte(vInt >> 8 & 0xFF);
-                        final.Data[11] = Conversions.ToByte(vInt & 0xFF);
-                        if (vertcol is object && !mat.EnableCrystalEffect)
-                        {
-                            final.Data[12] = vertcol.R;
-                            final.Data[13] = vertcol.G;
-                            final.Data[14] = vertcol.B;
-                            final.Data[15] = vertcol.A;
-                            final.EnableVertexColor = true;
-                            // FIXME: Add warning if Type is not TextureSolid
-                            if (final.EnableVertexTransparent)
+                            curTexture = face.Material;
+                            string curMatName = obj.Materials.FirstOrDefault(n => n.Value.Equals(face.Material)).Key;
+                            var curMat = materials.FirstOrDefault(n => n.Name.Equals(curMatName));
+                            var mp = new VertexGroupList()
                             {
-                                mat.Type = MaterialType.TextureTransparent;
-                                mat.HasTransparency = mat.HasTransparency || final.EnableVertexTransparent;
-                            }
+                                Position = currentFace,
+                                Material = curMat
+                            };
+                            currentMaterial = curMat;
+                            mp.Length = 0;
+                            vertexGroups.Add(mp);
                         }
-                        else
+
+                        materialBindings.TryGetValue(face.Material, out Material mat);
+
+                        Vertex va = null;
+                        TexCord ta = null;
+                        var tanew = new TexCord();
+                        Normal na = null;
+                        VertexColor vca = null;
+                        Vertex vb = null;
+                        TexCord tb = null;
+                        var tbnew = new TexCord();
+                        Normal nb = null;
+                        VertexColor vcb = null;
+                        Vertex vc = null;
+                        TexCord tc = null;
+                        var tcnew = new TexCord();
+                        Normal nc = null;
+                        VertexColor vcc = null;
+                        void getVals(Pilz.S3DFileParser.Point point, ref Vertex vert, ref TexCord t, ref Normal normal, ref VertexColor vertcol)
                         {
-                            final.Data[12] = normal.A;
-                            final.Data[13] = normal.B;
-                            final.Data[14] = normal.C;
-                            final.Data[15] = normal.D;
-                            final.EnableVertexColor = false;
-                        }
-                    };
-                    buildVertexStructure(fa, va, vca, tanew, na);
-                    buildVertexStructure(fb, vb, vcb, tbnew, nb);
-                    buildVertexStructure(fc, vc, vcc, tcnew, nc);
-                    finalVertData.AddRange(new[] { fa, fb, fc });
-                    currentFace += 1;
+                            if (point.Vertex is object)
+                                vert = verts[curIndexStart + mesh.Vertices.IndexOf(point.Vertex)];
+                            if (point.UV is object)
+                                t = uvs[curIndexStart + mesh.UVs.IndexOf(point.UV)];
+                            if (point.Normal is object)
+                                normal = norms[curIndexStart + mesh.Normals.IndexOf(point.Normal)];
+                            if (point.VertexColor is object)
+                                vertcol = vertexColors[curIndexStart + mesh.VertexColors.IndexOf(point.VertexColor)];
+                        };
+                        getVals(face.Points[0], ref va, ref ta, ref na, ref vca);
+                        getVals(face.Points[1], ref vb, ref tb, ref nb, ref vcb);
+                        getVals(face.Points[2], ref vc, ref tc, ref nc, ref vcc);
+                        var fa = new FinalVertexData();
+                        var fb = new FinalVertexData();
+                        var fc = new FinalVertexData();
+
+                        // Modify UV cordinates based on material.
+                        void modifyUVCordinates(TexCord tnew, TexCord t)
+                        {
+                            tnew.U = (float)(t.U * (mat.TexWidth / 32.0) - 16); // "-16" fixes the UVs offset
+                            tnew.V = (float)(t.V * (mat.TexHeight / 32.0) - 16); // "-16" fixes the UVs offset
+                        };
+                        modifyUVCordinates(tanew, ta);
+                        modifyUVCordinates(tbnew, tb);
+                        modifyUVCordinates(tcnew, tc);
+
+                        // Fix UVs to reduce number of (large) faces with broken textures
+                        FixUVs(tanew, tbnew, tcnew, Conversions.ToInteger(mat.TexWidth), Conversions.ToInteger(mat.TexHeight));
+
+                        // Vertex Structure: xxxxyyyyzzzz0000uuuuvvvvrrggbbaa
+                        void buildVertexStructure(FinalVertexData final, Vertex vert, VertexColor vertcol, TexCord tnew, Normal normal)
+                        {
+                            final.Data[0] = Conversions.ToByte(vert.X >> 8 & 0xFF);
+                            final.Data[1] = Conversions.ToByte(vert.X & 0xFF);
+                            final.Data[2] = Conversions.ToByte(vert.Y >> 8 & 0xFF);
+                            final.Data[3] = Conversions.ToByte(vert.Y & 0xFF);
+                            final.Data[4] = Conversions.ToByte(vert.Z >> 8 & 0xFF);
+                            final.Data[5] = Conversions.ToByte(vert.Z & 0xFF);
+                            final.Data[6] = 0;
+                            final.Data[7] = 0;
+                            int uInt, vInt;
+                            uInt = Conversions.ToInteger(Math.Round(tnew.U));
+                            vInt = Conversions.ToInteger(Math.Round(tnew.V));
+                            final.Data[8] = Conversions.ToByte(uInt >> 8 & 0xFF);
+                            final.Data[9] = Conversions.ToByte(uInt & 0xFF);
+                            final.Data[10] = Conversions.ToByte(vInt >> 8 & 0xFF);
+                            final.Data[11] = Conversions.ToByte(vInt & 0xFF);
+                            if (vertcol is object && !mat.EnableCrystalEffect)
+                            {
+                                final.Data[12] = vertcol.R;
+                                final.Data[13] = vertcol.G;
+                                final.Data[14] = vertcol.B;
+                                final.Data[15] = vertcol.A;
+                                final.EnableVertexColor = true;
+                                // FIXME: Add warning if Type is not TextureSolid
+                                if (final.EnableVertexTransparent)
+                                {
+                                    mat.Type = MaterialType.TextureTransparent;
+                                    mat.HasTransparency = mat.HasTransparency || final.EnableVertexTransparent;
+                                }
+                            }
+                            else
+                            {
+                                final.Data[12] = normal.A;
+                                final.Data[13] = normal.B;
+                                final.Data[14] = normal.C;
+                                final.Data[15] = normal.D;
+                                final.EnableVertexColor = false;
+                            }
+                        };
+                        buildVertexStructure(fa, va, vca, tanew, na);
+                        buildVertexStructure(fb, vb, vcb, tbnew, nb);
+                        buildVertexStructure(fc, vc, vcc, tcnew, nc);
+                        finalVertData.AddRange(new[] { fa, fb, fc });
+                        currentFace += 1;
+                    }
                 }
             }
         }
@@ -947,7 +946,9 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
 
             // Start converting each image
             foreach (var kvp in obj.Materials)
+            {
                 ProcessObject3DMaterial(obj, kvp, texFormatSettings);
+            }
         }
 
         private void ProcessObject3DMaterial(Pilz.S3DFileParser.Object3D obj, KeyValuePair<string, Pilz.S3DFileParser.Material> kvp, Model.Fast3D.TextureFormatSettings texFormatSettings)
@@ -955,88 +956,94 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             int size = 0;
             var curEntry = texFormatSettings.GetEntry(kvp.Key);
 
-            // Create new Material
-            var m = new Material()
+            if (curEntry.Include)
             {
-                Type = MaterialType.ColorSolid,
-                Color = 0,
-                HasTexture = false,
-                HasTextureAlpha = false,
-                HasTransparency = false,
-                Name = kvp.Key,
-                Collision = 0,
-                Opacity = 0xFF,
-                OpacityOrg = 0xFF,
-                EnableGeoMode = false,
-                EnableTextureColor = false,
-                EnableAlphaMask = false,
-                CameFromBMP = false,
-                EnableScrolling = curEntry.IsScrollingTexture,
-                DisplaylistSelection = curEntry.DisplaylistSelection,
-                EnableMirrorS = curEntry.EnableMirrorS,
-                EnableMirrorT = curEntry.EnableMirrorT,
-                EnableClampS = curEntry.EnableClampS,
-                EnableClampT = curEntry.EnableClampT,
-                EnableCrystalEffect = curEntry.EnableCrystalEffect,
-                FaceCullingMode = curEntry.FaceCullingMode
-            };
-
-            // Set default size
-            size = 0x10;
-
-            // Check some things
-            CheckGeoModeInfo(m);
-            CheckColorTexInfo(m);
-
-            // Add material
-            materials.Add(m);
-
-            // Process Material Color
-            if (!m.EnableTextureColor)
-            {
-                uint r = kvp.Value.Color.Value.R;
-                uint g = kvp.Value.Color.Value.G;
-                uint b = kvp.Value.Color.Value.B;
-                uint a = kvp.Value.Color.Value.A;
-                m.Color = r << 24 | g << 16 | b << 8 | a;
-                if (a == (long)0xFF)
+                // Create new Material
+                var m = new Material()
                 {
-                    m.Type = MaterialType.ColorSolid;
-                }
-                else
+                    Type = MaterialType.ColorSolid,
+                    Color = 0,
+                    HasTexture = false,
+                    HasTextureAlpha = false,
+                    HasTransparency = false,
+                    Name = kvp.Key,
+                    Collision = 0,
+                    Opacity = 0xFF,
+                    OpacityOrg = 0xFF,
+                    EnableGeoMode = false,
+                    EnableTextureColor = false,
+                    EnableAlphaMask = false,
+                    CameFromBMP = false,
+                    EnableScrolling = curEntry.IsScrollingTexture,
+                    DisplaylistSelection = curEntry.DisplaylistSelection,
+                    EnableMirrorS = curEntry.EnableMirrorS,
+                    EnableMirrorT = curEntry.EnableMirrorT,
+                    EnableClampS = curEntry.EnableClampS,
+                    EnableClampT = curEntry.EnableClampT,
+                    EnableCrystalEffect = curEntry.EnableCrystalEffect,
+                    FaceCullingMode = curEntry.FaceCullingMode
+                };
+
+                // Set default size
+                size = 0x10;
+
+                // Check some things
+                CheckGeoModeInfo(m);
+                CheckColorTexInfo(m);
+
+                // Add material
+                materials.Add(m);
+                materialBindings.Add(kvp.Value, m);
+
+                // Process Material Color
+                if (!m.EnableTextureColor)
                 {
-                    m.Type = MaterialType.ColorTransparent;
+                    uint r = kvp.Value.Color.Value.R;
+                    uint g = kvp.Value.Color.Value.G;
+                    uint b = kvp.Value.Color.Value.B;
+                    uint a = kvp.Value.Color.Value.A;
+                    m.Color = r << 24 | g << 16 | b << 8 | a;
+                    if (a == (long)0xFF)
+                    {
+                        m.Type = MaterialType.ColorSolid;
+                    }
+                    else
+                    {
+                        m.Type = MaterialType.ColorTransparent;
+                    }
+                }
+
+                // Check Texture Type
+                if (texFormatSettings is object)
+                {
+                    m.TexType = N64Graphics.N64Graphics.StringCodec(texFormatSettings.GetEntry(kvp.Key).TextureFormat);
+                }
+
+                // Process Material Image
+                if (kvp.Value.Image is object)
+                {
+                    ProcessImage(obj, kvp.Value.Image, m);
+                    size = m.Texture.Data.Length;
+                }
+
+                // Process Material Color Alpha
+                if (kvp.Value.Opacity is object)
+                {
+                    float tempopacity = (float)kvp.Value.Opacity;
+                    m.Opacity = Conversions.ToByte(Conversions.ToLong(tempopacity * 0xFF) & 0xFF);
+                    m.OpacityOrg = m.Opacity;
+                    processMaterialColorAlpha(tempopacity, m);
+                }
+
+                // Set offset and size
+                m.Size = Conversions.ToUInteger(size);
+                if (m.Texture?.Palette is object)
+                {
+                    m.PaletteSize = Conversions.ToUInteger(m.Texture.Palette.Length);
                 }
             }
-
-            // Check Texture Type
-            if (texFormatSettings is object)
-            {
-                m.TexType = N64Graphics.N64Graphics.StringCodec(texFormatSettings.GetEntry(kvp.Key).TextureFormat);
-            }
-
-            // Process Material Image
-            if (kvp.Value.Image is object)
-            {
-                ProcessImage(obj, kvp.Value.Image, m);
-                size = m.Texture.Data.Length;
-            }
-
-            // Process Material Color Alpha
-            if (kvp.Value.Opacity is object)
-            {
-                float tempopacity = (float)kvp.Value.Opacity;
-                m.Opacity = Conversions.ToByte(Conversions.ToLong(tempopacity * 0xFF) & 0xFF);
-                m.OpacityOrg = m.Opacity;
-                processMaterialColorAlpha(tempopacity, m);
-            }
-
-            // Set offset and size
-            m.Size = Conversions.ToUInteger(size);
-            if (m.Texture?.Palette is object)
-            {
-                m.PaletteSize = Conversions.ToUInteger(m.Texture.Palette.Length);
-            }
+            else
+                ignoreFacesWithMaterial.Add(kvp.Value);
         }
 
         private void FixUVs(TexCord uv1, TexCord uv2, TexCord uv3, int matWidth, int matHeight)

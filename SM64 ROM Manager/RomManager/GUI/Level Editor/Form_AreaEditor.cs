@@ -200,6 +200,30 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
+        internal bool EnableSlideMovementForObjects
+        {
+            get => checkBoxItem_MvObjSlide.Checked;
+            set
+            {
+                if (value != EnableSlideMovementForObjects)
+                    checkBoxItem_MvObjSlide.Checked = true;
+                else
+                    checkBoxItem_MvObjPrecise.Checked = true;
+            }
+        }
+
+        internal bool EnableSlideMovementForCamera
+        {
+            get => checkBoxItem_MvCamSlide.Checked;
+            set
+            {
+                if (value != EnableSlideMovementForCamera)
+                    checkBoxItem_MvCamSlide.Checked = true;
+                else
+                    checkBoxItem_MvCamPrecise.Checked = true;
+            }
+        }
+
         public bool DrawObjectModels
         {
             get
@@ -346,6 +370,9 @@ namespace SM64_ROM_Manager.LevelEditor
                 RibbonControl1.Size.Width,
                 StyleManager.Style == eStyle.Office2016 ? 155 : 150);
 
+            // Set default movement mode
+            EnableSlideMovementForObjects = Settings.AreaEditor.EnableSlideMovementByDefaultForObjects;
+
             // Add Groups to ListView Controls
             ListViewEx_Warps.Groups.AddRange(new[] { lvg_ConnectedWarps, lvg_WarpsForGame, lvg_PaintingWarps, lvg_InstantWarps });
             // ListViewEx_Objects.Groups.AddRange({lvg_Objects, lvg_MacroObjects})
@@ -355,7 +382,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
             // Init Object Properties Helper
             PropertyTree = AdvPropertyGrid1.PropertyTree;
-            bpMgr = new AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid1, MyObjectCombos, MyBehaviorInfos, nameof(Managed3DObject.BehaviorID), "BParam");
+            bpMgr = new AdvPropGrid_ObjectPropertiesHelper(AdvPropertyGrid1, rommgr, MyObjectCombos, MyBehaviorInfos, nameof(Managed3DObject.BehaviorID), "BParam");
 
             // Get the PropertyTree of AdvPropertyGrid1
             PropertyTree = AdvPropertyGrid1.PropertyTree;
@@ -385,8 +412,8 @@ namespace SM64_ROM_Manager.LevelEditor
         internal async void Form_AreaEditor_Shown(object sender, EventArgs e)
         {
             ogl.GLControl.Enabled = true;
-            General.LoadBehaviorInfosIfEmpty();
-            General.LoadObjectCombosIfEmpty();
+            General.LoadBehaviorInfosIfEmpty(Rommgr);
+            General.LoadObjectCombosIfEmpty(Rommgr);
             await LoadObjectModels();
             LoadOtherObjectCombos();
             LoadOtherBehaviorInfos();
@@ -2121,19 +2148,15 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             var obj = SelectedObject;
             bool exists = false;
+
             foreach (ObjectCombo objCombo in General.ObjectCombos.Concat(General.ObjectCombosCustom))
             {
                 if (obj.ModelID == objCombo.ModelID && obj.BehaviorID == objCombo.BehaviorAddress)
-                {
                     exists = true;
-                }
             }
 
             if (exists)
-            {
-                // MessageBoxEx.Show("There already exists at least one object combo with the same Model ID and the same Behavior Address.", "Duplicate Object Combos", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Publics.General.ShowToastnotification(Panel_GLControl, "An object combo with the same Model ID and Behavior Address already exists!", eToastGlowColor.Green, 12000);
-            }
             else
             {
                 var dialog = new StringInputDialog();
@@ -2145,14 +2168,12 @@ namespace SM64_ROM_Manager.LevelEditor
                     combo.ModelID = obj.ModelID;
                     combo.Name = dialog.Value.Trim();
                     General.ObjectCombosCustom.Add(combo);
-                    General.SaveObjectCombos();
-                    // MessageBoxEx.Show("Object Combo has been added successfully.<br/>The Object Combo will appear in the object combo list after you re-opend the Level Editor.", "Object Combo added successfully", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    General.SaveObjectCombos(Rommgr);
                     Publics.General.ShowToastnotification(Panel_GLControl, "Object Combo has been added successfully.<br/>The Object Combo will appear in the Object Combo list after you re-open the Level Editor.", eToastGlowColor.Green, 12000);
                 }
             }
         }
 
-        /* TODO ERROR: Skipped RegionDirectiveTrivia */
         internal void Slider_ObjMoveSpeed_ValueChanged(object sender, EventArgs e)
         {
             Slider_ObjMoveSpeed.Text = $"Object Move Speed: {Slider_ObjMoveSpeed.Value}%";
@@ -2349,7 +2370,7 @@ namespace SM64_ROM_Manager.LevelEditor
             var objs = SelectedObjects;
             if (objs.Any())
             {
-                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableObjComboTab, MyObjectCombos, null);
+                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableObjComboTab, Rommgr, MyObjectCombos, null);
                 dialog.SelectedObjectCombo = MyObjectCombos.GetObjectComboOfObject(objs.First());
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
@@ -2371,7 +2392,7 @@ namespace SM64_ROM_Manager.LevelEditor
             var objs = SelectedObjects;
             if (objs.Any())
             {
-                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableBehavTab, null, MyBehaviorInfos);
+                var dialog = new InformationListDialog(InformationListDialog.EditModes.EnableBehavTab, Rommgr, null, MyBehaviorInfos);
                 dialog.SelectedBehavior = MyBehaviorInfos.GetByBehaviorAddress(objs.First().BehaviorID);
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
@@ -2400,7 +2421,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void RibbonBar27_DialogLauncherMouseDown(object sender, MouseEventArgs e)
         {
-            var dialog = new InformationListDialog(InformationListDialog.EditModes.Editable | InformationListDialog.EditModes.EnableBehavTab | InformationListDialog.EditModes.EnableObjComboTab);
+            var dialog = new InformationListDialog(InformationListDialog.EditModes.Editable | InformationListDialog.EditModes.EnableBehavTab | InformationListDialog.EditModes.EnableObjComboTab, Rommgr);
             dialog.ShowDialog();
 
             // Reload Lists ...
@@ -3317,6 +3338,14 @@ namespace SM64_ROM_Manager.LevelEditor
                 frm.AddObjectDisplaylistScripts(kvp.Key, kvp.Value);
 
             frm.Show();
+        }
+
+        private void SliderItem_FOV_ValueChanged(object sender, EventArgs e)
+        {
+            var value = sliderItem_FOV.Value;
+            ogl.FOV = value * ((float)Math.PI / 180.0f);
+            ogl.ChangeViewMode();
+            sliderItem_FOV.Text = "FOV: " + value;
         }
     }
 }

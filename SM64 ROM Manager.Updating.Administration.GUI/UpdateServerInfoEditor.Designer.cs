@@ -37,11 +37,14 @@
             this.TextBoxX_Password = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.ButtonX_OK = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_Cancel = new DevComponents.DotNetBar.ButtonX();
+            this.switchButton_UseProxyForWebDAV = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.layoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem5 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem8 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutSpacerItem2 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
             this.layoutSpacerItem1 = new DevComponents.DotNetBar.Layout.LayoutSpacerItem();
             this.layoutControlItem7 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem6 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
@@ -75,6 +78,7 @@
             this.layoutControl1.Controls.Add(this.TextBoxX_Password);
             this.layoutControl1.Controls.Add(this.ButtonX_OK);
             this.layoutControl1.Controls.Add(this.ButtonX_Cancel);
+            this.layoutControl1.Controls.Add(this.switchButton_UseProxyForWebDAV);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.ForeColor = System.Drawing.Color.Black;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -88,10 +92,12 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
+            this.layoutControlItem8,
+            this.layoutSpacerItem2,
             this.layoutSpacerItem1,
             this.layoutControlItem7,
             this.layoutControlItem6});
-            this.layoutControl1.Size = new System.Drawing.Size(499, 171);
+            this.layoutControl1.Size = new System.Drawing.Size(499, 201);
             this.layoutControl1.TabIndex = 1;
             // 
             // TextBoxX_PublicBaseURL
@@ -169,12 +175,12 @@
             this.ButtonX_OK.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_OK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.ButtonX_OK.Image = global::SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_checkmark_16px;
-            this.ButtonX_OK.Location = new System.Drawing.Point(403, 144);
+            this.ButtonX_OK.Location = new System.Drawing.Point(403, 174);
             this.ButtonX_OK.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonX_OK.Name = "ButtonX_OK";
             this.ButtonX_OK.Size = new System.Drawing.Size(92, 23);
             this.ButtonX_OK.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_OK.TabIndex = 7;
+            this.ButtonX_OK.TabIndex = 9;
             this.ButtonX_OK.Text = "Speichern";
             this.ButtonX_OK.Click += new System.EventHandler(this.ButtonX_OK_Click);
             // 
@@ -184,13 +190,28 @@
             this.ButtonX_Cancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonX_Cancel.Image = global::SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_delete_sign_16px;
-            this.ButtonX_Cancel.Location = new System.Drawing.Point(303, 144);
+            this.ButtonX_Cancel.Location = new System.Drawing.Point(303, 174);
             this.ButtonX_Cancel.Margin = new System.Windows.Forms.Padding(0);
             this.ButtonX_Cancel.Name = "ButtonX_Cancel";
             this.ButtonX_Cancel.Size = new System.Drawing.Size(92, 23);
             this.ButtonX_Cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_Cancel.TabIndex = 6;
+            this.ButtonX_Cancel.TabIndex = 8;
             this.ButtonX_Cancel.Text = "Abbrechen";
+            // 
+            // switchButton_UseProxyForWebDAV
+            // 
+            // 
+            // 
+            // 
+            this.switchButton_UseProxyForWebDAV.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchButton_UseProxyForWebDAV.Location = new System.Drawing.Point(167, 144);
+            this.switchButton_UseProxyForWebDAV.Margin = new System.Windows.Forms.Padding(0);
+            this.switchButton_UseProxyForWebDAV.Name = "switchButton_UseProxyForWebDAV";
+            this.switchButton_UseProxyForWebDAV.OffText = "Nein";
+            this.switchButton_UseProxyForWebDAV.OnText = "Ja";
+            this.switchButton_UseProxyForWebDAV.Size = new System.Drawing.Size(79, 22);
+            this.switchButton_UseProxyForWebDAV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchButton_UseProxyForWebDAV.TabIndex = 5;
             // 
             // layoutControlItem1
             // 
@@ -242,6 +263,23 @@
             this.layoutControlItem5.Width = 100;
             this.layoutControlItem5.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
             // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.switchButton_UseProxyForWebDAV;
+            this.layoutControlItem8.Height = 30;
+            this.layoutControlItem8.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Text = "Benutze Proxy für WebDAV:";
+            this.layoutControlItem8.TextPadding = new System.Windows.Forms.Padding(0, 4, 0, 0);
+            this.layoutControlItem8.Width = 250;
+            // 
+            // layoutSpacerItem2
+            // 
+            this.layoutSpacerItem2.Height = 30;
+            this.layoutSpacerItem2.Name = "layoutSpacerItem2";
+            this.layoutSpacerItem2.Width = 99;
+            this.layoutSpacerItem2.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
             // layoutSpacerItem1
             // 
             this.layoutSpacerItem1.Height = 31;
@@ -271,7 +309,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.ButtonX_Cancel;
-            this.ClientSize = new System.Drawing.Size(499, 171);
+            this.ClientSize = new System.Drawing.Size(499, 201);
             this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -303,5 +341,8 @@
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem6;
         private DevComponents.DotNetBar.ButtonX ButtonX_Cancel;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem7;
+        private DevComponents.DotNetBar.Controls.SwitchButton switchButton_UseProxyForWebDAV;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem8;
+        private DevComponents.DotNetBar.Layout.LayoutSpacerItem layoutSpacerItem2;
     }
 }

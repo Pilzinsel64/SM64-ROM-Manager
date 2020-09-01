@@ -9,6 +9,7 @@ using global::SM64Lib.Geolayout.Script;
 using global::SM64Lib.Geolayout.Script.Commands;
 using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Levels.Script.Commands;
+using SM64Lib.Configuration;
 
 namespace SM64Lib.Levels
 {
@@ -241,9 +242,9 @@ namespace SM64Lib.Levels
                 a.Bank0x0EOffset = Conversions.ToUInteger(curMdlStartOffset);
                 rommgr.SetSegBank(0xE, Conversions.ToInteger(a.Bank0x0EOffset), newEndOffset, a.AreaID);
                 a.AreaModel.Collision = new Model.Collision.CollisionMap();
-                a.AreaModel.Collision.FromStream(fs, modelBank.SegToRomAddr(a.CollisionPointer));
+                a.AreaModel.Collision.FromStream(fs, modelBank.SegToRomAddr(a.CollisionPointer), new CollisionBasicConfig());
                 a.AreaModel.Fast3DBuffer = new Model.Fast3D.Fast3DBuffer();
-                a.AreaModel.FromStream(fs, modelBank.RomStart, 0xE000000, curMdlStartOffset, newEndOffset - curMdlStartOffset, a.Geolayout.Geopointers.ToArray(), a.CollisionPointer);
+                a.AreaModel.FromStream(fs, modelBank.RomStart, 0xE000000, curMdlStartOffset, newEndOffset - curMdlStartOffset, a.Geolayout.Geopointers.ToArray(), a.CollisionPointer, rommgr.RomConfig.CollisionBaseConfig);
                 a.AreaModel.Collision.SpecialBoxes.Clear();
                 curMdlStartOffset = newEndOffset;
             }

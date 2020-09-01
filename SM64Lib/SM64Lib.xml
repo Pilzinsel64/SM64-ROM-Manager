@@ -20,6 +20,11 @@
               Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
+        <member name="P:SM64Lib.Configuration.RomConfig.CustomConfigs">
+            <summary>
+            Contains custom configuration that isn't used by SM64Lib. E.g. Extra Object Combos.
+            </summary>
+        </member>
         <member name="M:SM64Lib.Levels.SM64EditorLevelManager.LoadLevel(SM64Lib.Levels.Level,SM64Lib.RomManager,System.UInt16,System.UInt32)">
             <summary>
             Loads a SM64 Editor Level from ROM.
@@ -262,6 +267,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.IsLegacy">
+            <summary>
+            Indicates if this patch use the old XML format.
+            </summary>
+        </member>
         <member name="P:SM64Lib.Patching.PatchProfile.EmbeddedFiles">
             <summary>
             Contains files embedded into this profile.
@@ -355,16 +365,6 @@
         <member name="M:SM64Lib.NPCs.CoinsManager.SaveCoinSettings(System.Boolean)">
             <summary>
             Saves all the properties to ROM and updates checksum if requested.
-            </summary>
-        </member>
-        <member name="M:SM64Lib.NPCs.CoinsManager.ImportKazesCoins">
-            <summary>
-            Imports Kazes 3D Coins
-            </summary>
-        </member>
-        <member name="M:SM64Lib.NPCs.CoinsManager.Remove3DCoins">
-            <summary>
-            Remove 3D Coins [Experimental]
             </summary>
         </member>
         <member name="P:SM64Lib.RomManager.ProgramVersion">

@@ -8,10 +8,16 @@ namespace SM64_ROM_Manager.LevelEditor
     {
         public static ObjectCombo UnknownCombo { get; private set; } = new ObjectCombo() { Name = "Unknown Combo" };
 
+
         public void ReadFromFile(string fileName)
         {
+            ReadFromString(File.ReadAllText(fileName));
+        }
+
+        public void ReadFromString(string content)
+        {
             Clear();
-            var jobj = JObject.Parse(File.ReadAllText(fileName));
+            var jobj = JObject.Parse(content);
 
             if (jobj?["ObjectCombos"] != null)
             {
@@ -34,9 +40,15 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public void WriteToFile(string fileName)
         {
+            File.WriteAllText(fileName, WriteToString());
+        }
+
+        public string WriteToString()
+        {
             var jobj = new JObject();
             var jarr = new JArray();
             jobj.Add("ObjectCombos", jarr);
+
             foreach (ObjectCombo cb in this)
             {
                 var entry = new JObject();
@@ -71,7 +83,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 jarr.Add(entry);
             }
 
-            File.WriteAllText(fileName, jobj.ToString());
+            return jobj.ToString();
         }
 
         public ObjectCombo GetObjectComboOfObject(Managed3DObject obj)

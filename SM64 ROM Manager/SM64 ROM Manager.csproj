@@ -299,7 +299,7 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Collections.Immutable.1.7.1\lib\net461\System.Collections.Immutable.dll</HintPath>
+      <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Design" />
@@ -317,7 +317,7 @@
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Reflection.Metadata.1.8.1\lib\net461\System.Reflection.Metadata.dll</HintPath>
+      <HintPath>..\packages\System.Reflection.Metadata.1.8.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
@@ -449,18 +449,11 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="RomManager\GUI\Main Form\Text Manager\MinimalAdvPropertyGridManager.cs" />
-    <Compile Include="RomManager\GUI\Main Form\Text Manager\MyTextProfileInfoManager.cs" />
     <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfileEditorExtensions.cs" />
     <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.Designer.cs">
       <DependentUpon>TextProfileEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.Designer.cs">
-      <DependentUpon>TextProfilesManagerDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.cs">
@@ -682,12 +675,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LangResCoinsManager.resx</DependentUpon>
     </Compile>
-    <Compile Include="RomManager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.de.Designer.cs">
+    <Compile Include="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.Designer.cs">
       <DependentUpon>CustomObjectsManagerLangRes.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="RomManager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.Designer.cs">
+    <Compile Include="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomObjectsManagerLangRes.resx</DependentUpon>
@@ -880,23 +873,23 @@
     <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.de.resx">
       <DependentUpon>Form_AddNewLevel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.de.resx">
+      <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.resx">
       <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.resx">
       <DependentUpon>ObjectBankSelectorBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.de.resx">
+      <DependentUpon>ScrollTexEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Main Form\MainForm.de.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.resx">
       <DependentUpon>TextProfileEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.de.resx">
-      <DependentUpon>TextProfilesManagerDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\GUI\Main Form\Text Manager\TextProfilesManagerDialog.resx">
-      <DependentUpon>TextProfilesManagerDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.de.resx">
       <DependentUpon>BehaviorBankManager.cs</DependentUpon>
@@ -1099,12 +1092,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LangResCoinsManager.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.de.resx">
+    <EmbeddedResource Include="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="RomManager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.resx">
+    <EmbeddedResource Include="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
@@ -1332,6 +1325,15 @@
     <None Include="Resources\icons8_code.ico" />
     <None Include="Resources\icons8_code_16px.png" />
     <None Include="Resources\icons8_thick_arrow_pointing_down_16px.png" />
+    <None Include="Resources\icons8_database_administrator_16px.png" />
+    <None Include="Resources\icons8_maintenance_16px.png" />
+    <None Include="Resources\icons8_restart_16px.png" />
+    <None Include="Resources\icons8_database_export_16px.png" />
+    <None Include="Resources\icons8_database_restore_16px.png" />
+    <None Include="Resources\icons8_data_backup_16px.png" />
+    <None Include="Resources\icons8_database_16px.png" />
+    <None Include="Resources\icons8_data_recovery_16px.png" />
+    <None Include="Resources\icons8_delete_database_16px.png" />
     <Content Include="RomManager\Others\RomMap.txt" />
   </ItemGroup>
   <ItemGroup>

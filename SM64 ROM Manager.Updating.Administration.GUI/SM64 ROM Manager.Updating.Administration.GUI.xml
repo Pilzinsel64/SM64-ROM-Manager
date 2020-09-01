@@ -89,6 +89,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_connected_no_data_32px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_delete_sign_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -130,6 +135,11 @@
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_export_32px_3">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources.icons8_firewall_32px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
@@ -273,6 +283,23 @@
         <member name="P:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.UpdatingAdministrationLangRes.MsgBox_PkgExportSuccess_Titel">
             <summary>
             Sucht eine lokalisierte Zeichenfolge, die Paket exportiert ähnelt.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.Updating.Administration.GUI.ProxyConfigEditor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.Updating.Administration.GUI.ProxyConfigEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.Updating.Administration.GUI.ProxyConfigEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
             </summary>
         </member>
         <member name="F:SM64_ROM_Manager.Updating.Administration.GUI.UpdateServerInfoEditor.components">

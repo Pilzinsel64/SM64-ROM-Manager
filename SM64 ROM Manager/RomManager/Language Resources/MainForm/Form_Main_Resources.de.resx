@@ -147,6 +147,12 @@
   <data name="MsgBox_ConvertToMidi_Succes_Titel" xml:space="preserve">
     <value>M64 zu MIDI erfolgreich</value>
   </data>
+  <data name="MsgBox_EnableGlobalBehaviorBank" xml:space="preserve">
+    <value>Die Globale Verhaltens-Bank ist aktuell deaktiviert. Möchtest Du sie aktivieren?&lt;br/&gt;&lt;br/&gt;Hinweis:&lt;br/&gt;- Wenn Du sie aktivierst, werden alle existierenden Verhalten werden in eine neue Segmented-Bank kopiert, welche die originale ersetzt.&lt;br/&gt;- Alle existierenden Verhalten werden beim Speichern der ROM nicht neu geordnet.</value>
+  </data>
+  <data name="MsgBox_EnableGlobalBehaviorBank_Title" xml:space="preserve">
+    <value>Globale Objekt-Bank aktivieren</value>
+  </data>
   <data name="MsgBox_ErrorSavingSequence" xml:space="preserve">
     <value>Während des Speicherns der Sequenzen ist ein Fehler aufgetreten.</value>
   </data>
@@ -216,6 +222,12 @@
   </data>
   <data name="MsgBox_RomRemoved_Titel" xml:space="preserve">
     <value>ROM wurde gelöscht</value>
+  </data>
+  <data name="MsgBox_RomUsedInNewerVersion" xml:space="preserve">
+    <value>Diese ROM wurde in einer neueren Version verwendet. Wenn Du die ROM in einer älteren (dieser) Version speicherst, können möglicher Weise Daten verloren oder gar kaputt gehen.</value>
+  </data>
+  <data name="MsgBox_RomUsedInNewerVersion_Title" xml:space="preserve">
+    <value>Neuere Version erkannt</value>
   </data>
   <data name="MsgBox_TextsOverLimit" xml:space="preserve">
     <value>Deine Texte brauchen zu viel Platz! Bitte reduziere die Anzahl von Zeichen bzw. verkürze deine Texte, bevor du speicherst.</value>

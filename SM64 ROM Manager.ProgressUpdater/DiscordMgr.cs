@@ -37,8 +37,12 @@ namespace SM64_ROM_Manager.ProgressUpdater
         {
             if (settings.DiscordUploadEnabled && !string.IsNullOrEmpty(settings.DiscordBotToken))
             {
-                Client = new DiscordSocketClient();
+                var socketConfig = new DiscordSocketConfig();
+                socketConfig.RestClientProvider = Discord.Net.Rest.DefaultRestClientProvider.Create(useProxy: true);
+                socketConfig.WebSocketProvider = Discord.Net.WebSockets.DefaultWebSocketProvider.Create(System.Net.WebRequest.DefaultWebProxy);
 
+                Client = new DiscordSocketClient(socketConfig);
+                
                 Client.Log += Client_Log;
                 Client.Ready += Client_Ready;
                 Client.Disconnected += Client_Disconnected;

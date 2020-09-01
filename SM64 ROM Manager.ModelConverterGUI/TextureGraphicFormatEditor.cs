@@ -19,6 +19,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
     public partial class TextureGraphicFormatEditor
     {
 
+        private LabelX labelX_TexSize;
         private Object3D obj3d = null;
         private bool loadingtexItemSettings = false;
         private bool hasInit = false;
@@ -45,12 +46,12 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             base.Shown += Form_Shown;
             SuspendLayout();
             InitializeComponent();
-            StyleManager.UpdateAmbientColors(this);
             obj3d = obj;
             AcceptButton = Button_SaveColsettings;
             LoadDisplayListTypes();
             LoadN64TextureFormatTypes();
             LoadRotateFlip();
+            AddPicBoxLabel();
             base.UpdateAmbientColors();
             hasInit = true;
             ResumeLayout();
@@ -59,6 +60,17 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private void Form_Shown(object sender, EventArgs e)
         {
             LoadTexturesFromModel();
+        }
+
+        private void AddPicBoxLabel()
+        {
+            labelX_TexSize = new LabelX
+            {
+                TextAlignment = StringAlignment.Center,
+                Dock = DockStyle.Bottom,
+                Height = 23
+            };
+            PictureBox1.Controls.Add(labelX_TexSize);
         }
 
         private void LoadDisplayListTypes()
@@ -177,8 +189,12 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 var curItem = ListViewEx1.SelectedItems[0];
                 string matName = ((KeyValuePair<string, Material>)curItem.Tag).Key;
                 var curEntry = TextureFormatSettings.GetEntry(matName);
+
                 bool found = false;
                 loadingtexItemSettings = true;
+
+                checkBoxX_Include.Checked = curEntry.Include;
+
                 foreach (ComboItem item in ComboBox_ColType.Items)
                 {
                     if ((string)item.Tag == curEntry.TextureFormat)
@@ -202,10 +218,12 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                     }
 
                     PictureBox1.Image = realImg;
+                    labelX_TexSize.Text = $"{realImg.Width} x {realImg.Height}";
                 }
                 else
                 {
                     PictureBox1.Image = null;
+                    labelX_TexSize.Text = string.Empty;
                     LabelX1.Text = string.Empty;
                 }
 
@@ -296,30 +314,35 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                     KeyValuePair<string, Material> mat = (KeyValuePair<string, Material>)item.Tag;
                     var curEntry = TextureFormatSettings.GetEntry(mat.Key);
 
-                    curEntry.IsScrollingTexture = CheckBoxX_EnableTextureAnimation.Checked;
-                    curEntry.TextureFormat = id;
-                    curEntry.EnableMirrorS = CheckBoxX_EnableMirrorS.Checked;
-                    curEntry.EnableMirrorT = CheckBoxX_EnableMirrorT.Checked;
-                    curEntry.EnableClampS = CheckBoxX_EnableClampS.Checked;
-                    curEntry.EnableClampT = CheckBoxX_EnableClampT.Checked;
-                    curEntry.EnableCrystalEffect = CheckBoxX_EnableCrystalEffect.Checked;
-                    curEntry.RotateFlip = (RotateFlipType)((ComboItem)ComboBoxEx_RotateFlip.SelectedItem).Tag;
-                    curEntry.FaceCullingMode = CheckBoxX_EnableTwoSidedFaces.Checked ? FaceCullingMode.NoCulling : FaceCullingMode.Back;
+                    curEntry.Include = checkBoxX_Include.Checked;
 
-                    var selDL = ((ComboItem)ComboBoxEx_SelectDisplaylist.SelectedItem).Tag;
-                    if (selDL is DefaultGeolayers)
+                    if (curEntry.Include)
                     {
-                        curEntry.DisplaylistSelection.SelectionMode = DisplaylistSelectionMode.Default;
-                        curEntry.DisplaylistSelection.DefaultGeolayer = (DefaultGeolayers)selDL;
-                    }
-                    else if (selDL is int)
-                    {
-                        curEntry.DisplaylistSelection.SelectionMode = DisplaylistSelectionMode.Custom;
-                        curEntry.DisplaylistSelection.CustomDisplaylistID = Conversions.ToInteger(selDL);
-                    }
-                    else
-                    {
-                        curEntry.DisplaylistSelection.SelectionMode = DisplaylistSelectionMode.Automatic;
+                        curEntry.IsScrollingTexture = CheckBoxX_EnableTextureAnimation.Checked;
+                        curEntry.TextureFormat = id;
+                        curEntry.EnableMirrorS = CheckBoxX_EnableMirrorS.Checked;
+                        curEntry.EnableMirrorT = CheckBoxX_EnableMirrorT.Checked;
+                        curEntry.EnableClampS = CheckBoxX_EnableClampS.Checked;
+                        curEntry.EnableClampT = CheckBoxX_EnableClampT.Checked;
+                        curEntry.EnableCrystalEffect = CheckBoxX_EnableCrystalEffect.Checked;
+                        curEntry.RotateFlip = (RotateFlipType)((ComboItem)ComboBoxEx_RotateFlip.SelectedItem).Tag;
+                        curEntry.FaceCullingMode = CheckBoxX_EnableTwoSidedFaces.Checked ? FaceCullingMode.NoCulling : FaceCullingMode.Back;
+
+                        var selDL = ((ComboItem)ComboBoxEx_SelectDisplaylist.SelectedItem).Tag;
+                        if (selDL is DefaultGeolayers)
+                        {
+                            curEntry.DisplaylistSelection.SelectionMode = DisplaylistSelectionMode.Default;
+                            curEntry.DisplaylistSelection.DefaultGeolayer = (DefaultGeolayers)selDL;
+                        }
+                        else if (selDL is int)
+                        {
+                            curEntry.DisplaylistSelection.SelectionMode = DisplaylistSelectionMode.Custom;
+                            curEntry.DisplaylistSelection.CustomDisplaylistID = Conversions.ToInteger(selDL);
+                        }
+                        else
+                        {
+                            curEntry.DisplaylistSelection.SelectionMode = DisplaylistSelectionMode.Automatic;
+                        }
                     }
                 }
             }
@@ -341,6 +364,12 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             frm.ShowDialog();
             LoadDisplayListTypes();
             LoadTextureProps();
+        }
+
+        private void CheckBoxX_IncludeMat_CheckedChanged(object sender, EventArgs e)
+        {
+            panel_MatOptions.Enabled = checkBoxX_Include.Checked;
+            ControlsOccusUpdateTextureListItemSettings(sender, e);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using drsPwEnc;
 using Newtonsoft.Json;
+using Pilz.Cryptography;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,28 +11,25 @@ namespace SM64_ROM_Manager.Updating.Administration
 {
     public class UpdateServerConfig
     {
+        public bool UseProxyForWebDAV { get; set; } = false;
         public string ServerAdress { get; set; }
         public string PublicPackageBaseURL { get; set; }
         public string UpdateInfoFilename { get; set; }
         public string Username { get; set; }
 
         [JsonProperty("Password")]
-        private string password;
-
-        [JsonIgnore]
-        public string Password
+        private string PasswordOld
         {
-            get
-            {
-                if (string.IsNullOrEmpty(password))
-                    return string.Empty;
-                else
-                    return new drsPwEnc.drsPwEnc().DecryptData(password);
-            }
             set
             {
-                password = new drsPwEnc.drsPwEnc().EncryptData(value);
+                if (string.IsNullOrEmpty(value))
+                    Password = string.Empty;
+                else
+                    Password = new drsPwEnc.drsPwEnc().DecryptData(value);
             }
         }
+
+        [JsonProperty("Password2")]
+        public SecureString Password { get; set; }
     }
 }

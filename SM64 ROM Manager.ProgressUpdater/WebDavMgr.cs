@@ -111,5 +111,13 @@ namespace SM64_ROM_Manager.ProgressUpdater
 
             return versions;
         }
+
+        public async Task<string> GetUpcommingVersions()
+        {
+            var wc = new WebClient();
+            var res = await wc.DownloadStringTaskAsync(settings.UpcommingVersionsDownloadURL);
+            wc.Dispose();
+            return res;
+        }
     }
 }

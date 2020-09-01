@@ -13,7 +13,7 @@ namespace SM64Lib.Json
     {
         public override bool CanConvert(Type objectType)
         {
-            return typeof(BehaviorscriptCommandJsonConverter).IsAssignableFrom(objectType);
+            return typeof(BehaviorscriptCommand).IsAssignableFrom(objectType);
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)

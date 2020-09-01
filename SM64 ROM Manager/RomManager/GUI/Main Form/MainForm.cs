@@ -140,6 +140,9 @@ namespace SM64_ROM_Manager
             ButtonItem_LaunchROM.Enabled = true;
             RefreshAppTitel();
             TabControl_Main_SelectedIndexChanged(TabControl1, null);
+
+            if (Controller.IsRomVersionCompatible())
+                MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_RomUsedInNewerVersion, Form_Main_Resources.MsgBox_RomUsedInNewerVersion_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void Controller_RecentFilesChanged()
@@ -258,7 +261,7 @@ namespace SM64_ROM_Manager
         private void LoadRecentROMs()
         {
             tabGeneral.ItemPanel_RecentFiles.Items.Clear();
-            var di_Open = new ButtonItem() { Text = Form_Main_Resources.Button_OpenRom, Image = MyIcons.icons8_open_folder_16px, ButtonStyle = eButtonStyle.ImageAndText }; // , .SymbolSet = eSymbolSet.Material, .Symbol = "58055", .SymbolColor = Color.FromArgb(215, 172, 106), .SymbolSize = 12
+            var di_Open = new ButtonItem() { Text = Form_Main_Resources.Button_OpenRom, Image = MyIcons.icons8_open_folder_16px, ButtonStyle = eButtonStyle.ImageAndText };
             di_Open.Click += MenuItem_OpenROM_Click;
             tabGeneral.ItemPanel_RecentFiles.Items.Add(di_Open);
             int cindex = 1;
@@ -316,7 +319,6 @@ namespace SM64_ROM_Manager
             Controller.StatusText = Form_Main_Resources.Status_StartingUp;
             Panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
             LoadRecentROMs();
-            tabLevelManager.LoadObjectBankListBoxEntries();
             finishedLoading = true;
             Controller.StatusText = string.Empty;
             Controller.CheckCommandLineArgs();
@@ -653,11 +655,6 @@ namespace SM64_ROM_Manager
         private void ButtonItem_M64ToMidiConverter_Click(object sender, EventArgs e)
         {
             Controller.ConvertM64ToMidi();
-        }
-
-        private void ButtonItem19_Click(object sender, EventArgs e)
-        {
-            Controller.TextManagerController.OpenTextProfileEditor();
         }
 
         private void ButtonItem18_Click(object sender, EventArgs e)

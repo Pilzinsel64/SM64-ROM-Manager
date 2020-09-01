@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using global::DevComponents.DotNetBar;
 using global::Newtonsoft.Json.Linq;
 using global::WebDav;
+using System.Drawing;
 
 namespace SM64_ROM_Manager.ProgressUpdater
 {
@@ -22,6 +23,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
         private Settings settings = new Settings();
         private WebDavMgr wdmgr = null;
         private DiscordMgr dmgr = null;
+        private string upcommingVersions = string.Empty;
 
         // C o n s t r u c t o r
 
@@ -113,6 +115,23 @@ namespace SM64_ROM_Manager.ProgressUpdater
                 Invoke(new Action(() => ComboBoxEx_Version.Items.Add(version)));
         }
 
+        private void InvertImage()
+        {
+            Bitmap pic = new Bitmap(PictureBox1.Image);
+
+            for (int y = 0; y < pic.Height; y++)
+            {
+                for (int x = 0; x < pic.Width; x++)
+                {
+                    Color inv = pic.GetPixel(x, y);
+                    inv = Color.FromArgb(255, 255 - inv.R, 255 - inv.G, 255 - inv.B);
+                    pic.SetPixel(x, y, inv);
+                }
+            }
+
+            PictureBox1.Image = pic;
+        }
+
         // G u i
 
         private void ButtonX1_Click(object sender, EventArgs e)
@@ -124,7 +143,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
         {
             if (settings.DiscordUploadEnabled && !dmgr.IsReady)
             {
-                MessageBoxEx.Show("Discord ist noch nicht bereit!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ToastNotification.Show(this, "Discord ist noch nicht bereit!", eToastGlowColor.Orange, eToastPosition.BottomCenter);
             }
             else
             {
@@ -134,11 +153,11 @@ namespace SM64_ROM_Manager.ProgressUpdater
                 {
                     if (dmgr is object && dmgr.IsReady)
                         await dmgr.SendMessage();
-                    MessageBoxEx.Show(this, "Erfolgreich hochgeladen!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ToastNotification.Show(this, "Erfolgreich hochgeladen!", eToastGlowColor.Green, eToastPosition.BottomCenter);
                 }
                 else
                 {
-                    MessageBoxEx.Show(this, "Fehler beim Hochladen!", "Hochladen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ToastNotification.Show(this, "Fehler beim Hochladen!", eToastGlowColor.Orange, eToastPosition.BottomCenter);
                 }
                 circularProgress1.Stop();
                 Enabled = true;
@@ -175,6 +194,18 @@ namespace SM64_ROM_Manager.ProgressUpdater
             var frm = new WebDavSettingsDialog(settings);
             frm.ShowDialog();
             LoadWebDavMgr();
+        }
+
+        private void ButtonX_PasteDocument_Click(object sender, EventArgs e)
+        {
+            var frm = new PasteFromDocument(settings);
+            if (frm.ShowDialog(this) == DialogResult.OK)
+                PictureBox1.Image = frm.DocumentImage;
+        }
+
+        private void buttonX1_Click_1(object sender, EventArgs e)
+        {
+            InvertImage();
         }
     }
 }

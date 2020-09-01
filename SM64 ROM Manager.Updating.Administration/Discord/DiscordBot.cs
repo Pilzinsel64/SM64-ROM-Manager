@@ -1,4 +1,6 @@
 ﻿using Discord;
+using Discord.Net.Rest;
+using Discord.Net.WebSockets;
 using Discord.WebSocket;
 using System;
 using System.Collections.Generic;
@@ -34,7 +36,11 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
         {
             if (!string.IsNullOrEmpty(Config.DiscordBotToken))
             {
-                Client = new DiscordSocketClient();
+                var socketConfig = new DiscordSocketConfig();
+                socketConfig.RestClientProvider = DefaultRestClientProvider.Create(useProxy: true);
+                socketConfig.WebSocketProvider = DefaultWebSocketProvider.Create(System.Net.WebRequest.DefaultWebProxy);
+
+                Client = new DiscordSocketClient(socketConfig);
 
                 Client.Log += Client_Log;
                 Client.Ready += Client_Ready;
@@ -172,17 +178,17 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
                 pingRole = null;
 
             string msg = GetPingMessage(pingRole); //await BuildUpdateMsg(versionName, version, changelog, guildID, channelID, appName, message, addChangelog, pingRole);
-            var embed = await BuildEmbed(package, appName, message, addChangelog);
+            var embed = BuildEmbed(package, appName, message, addChangelog);
             var channel = Client.GetGuild(guildID)?.GetTextChannel(channelID);
 
             if (string.IsNullOrEmpty(msg))
                 msg = null;
-
+            
             if (channel != null)
                 await channel.SendMessageAsync(text:msg, embed:embed);
         }
 
-        private async Task<Embed> BuildEmbed(UpdatePackageInfo package, string appName, string message, bool addChangelog)
+        private Embed BuildEmbed(UpdatePackageInfo package, string appName, string message, bool addChangelog)
         {
             var embed = new EmbedBuilder();
 
@@ -204,39 +210,22 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
             // Add changelog
             if (addChangelog && !string.IsNullOrEmpty(package.Notes.Content) && package.Notes.ContentType != UpdateNotesContentType.HTML)
             {
-                var sr = new StringReader(package.Notes.Content);
-                var sw = new StringWriter();
-
-                while (sr.Peek() != -1)
+                switch (true)
                 {
-                    var line = await sr.ReadLineAsync();
-
-                    if (package.Notes.ContentType == UpdateNotesContentType.Markdown && line.Length > 0)
-                        ProcessMarkdownLine(ref line);
-
-                    await sw.WriteLineAsync(line);
+                    case object _ when package.Notes.ContentType == UpdateNotesContentType.PlainText && package.Notes.Content.Length <= 2048:
+                        embed.AddField("Changelog:", package.Notes.Content);
+                        break;
+                    case object _ when package.Notes.ContentType == UpdateNotesContentType.PlainText:
+                    case object _ when package.Notes.ContentType == UpdateNotesContentType.Markdown:
+                        embed.AddField("Changelog:", Markdig.Markdown.ToPlainText(package.Notes.Content));
+                        break;
                 }
-
-                var changelog = sw.ToString();
-                if (changelog.Length <= 2048)
-                    embed.AddField("Changelog:", changelog);
-
-                sr.Close();
-                sw.Close();
             }
 
             // Author
             // ...
 
             return embed.Build();
-        }
-
-        private void ProcessMarkdownLine(ref string line)
-        {
-            line = line.TrimStart('#', ' ');
-            line = line.Replace("[ ] ", string.Empty);
-            line = line.Replace("[x] ", string.Empty);
-            line = line.Replace("[!", "[");
         }
     }
 }

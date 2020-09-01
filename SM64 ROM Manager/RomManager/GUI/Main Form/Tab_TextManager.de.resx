@@ -236,9 +236,6 @@
   <data name="TextBoxX_TM_TextEditor.WatermarkText" xml:space="preserve">
     <value>Leer! Schreibe einen Text ...</value>
   </data>
-  <data name="ButtonItem_CurProfile.Text" xml:space="preserve">
-    <value>Profil</value>
-  </data>
   <data name="ButtonItem_AddTextItem.Text" xml:space="preserve">
     <value>Neues Item</value>
   </data>
@@ -256,6 +253,24 @@
   </data>
   <data name="ButtonItem_ImportFrom.Text" xml:space="preserve">
     <value>Importieren ...</value>
+  </data>
+  <data name="ButtonItem_CreateProfile.Text" xml:space="preserve">
+    <value>Eigenes Profil erstellen</value>
+  </data>
+  <data name="ButtonItem_ResetProfile.Text" xml:space="preserve">
+    <value>Auf Standart zurücksetzen</value>
+  </data>
+  <data name="ButtonItem_ManageProfile.Text" xml:space="preserve">
+    <value>Verwalten</value>
+  </data>
+  <data name="ButtonItem_ExportProfile.Text" xml:space="preserve">
+    <value>Exportieren</value>
+  </data>
+  <data name="ButtonItem_ImportProfile.Text" xml:space="preserve">
+    <value>Importieren</value>
+  </data>
+  <data name="ButtonItem_TextProfile.Text" xml:space="preserve">
+    <value>Text-Profil</value>
   </data>
   <data name="ButtonItem_AddButtons.Text" xml:space="preserve">
     <value>Knöpfe</value>

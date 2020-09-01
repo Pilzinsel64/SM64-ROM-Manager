@@ -139,7 +139,7 @@
     <value>tabGeneral</value>
   </data>
   <data name="&gt;&gt;tabGeneral.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Tab_General, SM64 ROM Manager, Version=1.9.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>SM64_ROM_Manager.Tab_General, SM64 ROM Manager, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabGeneral.Parent" xml:space="preserve">
     <value>TabControlPanel1</value>
@@ -193,7 +193,7 @@
     <value>tabMusicManager</value>
   </data>
   <data name="&gt;&gt;tabMusicManager.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Tab_MusicManager, SM64 ROM Manager, Version=1.9.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>SM64_ROM_Manager.Tab_MusicManager, SM64 ROM Manager, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabMusicManager.Parent" xml:space="preserve">
     <value>TabControlPanel4</value>
@@ -247,7 +247,7 @@
     <value>tabTextManager</value>
   </data>
   <data name="&gt;&gt;tabTextManager.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Tab_TextManager, SM64 ROM Manager, Version=1.9.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>SM64_ROM_Manager.Tab_TextManager, SM64 ROM Manager, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabTextManager.Parent" xml:space="preserve">
     <value>TabControlPanel3</value>
@@ -301,7 +301,7 @@
     <value>tabLevelManager</value>
   </data>
   <data name="&gt;&gt;tabLevelManager.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Tab_LevelManager, SM64 ROM Manager, Version=1.9.6.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>SM64_ROM_Manager.Tab_LevelManager, SM64 ROM Manager, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabLevelManager.Parent" xml:space="preserve">
     <value>TabControlPanel2</value>
@@ -2639,9 +2639,6 @@
   <data name="ButtonItem5.Text" xml:space="preserve">
     <value>Style Manager</value>
   </data>
-  <data name="ButtonItem19.Text" xml:space="preserve">
-    <value>Manage Text Profile</value>
-  </data>
   <data name="ButtonItem4.Text" xml:space="preserve">
     <value>Manage Object Bank Data</value>
   </data>
@@ -4944,12 +4941,6 @@
     <value>ButtonItem5</value>
   </data>
   <data name="&gt;&gt;ButtonItem5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem19.Name" xml:space="preserve">
-    <value>ButtonItem19</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem19.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem4.Name" xml:space="preserve">

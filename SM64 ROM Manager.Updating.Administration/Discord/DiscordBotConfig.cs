@@ -12,5 +12,6 @@ namespace SM64_ROM_Manager.Updating.Administration.Discord
         public string DefaultUpdateMessage { get; set; } = string.Empty;
         public string DefaultAppName { get; set; } = string.Empty;
         public string UpdateNotificationRoll { get; set; } = string.Empty;
+        public bool UseProxy { get; set; } = true;
     }
 }

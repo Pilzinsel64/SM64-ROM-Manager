@@ -16,6 +16,8 @@ using global::SM64Lib.Model;
 using global::SM64Lib.TextValueConverter;
 using Z.Collections.Extensions;
 using SM64Lib.Patching;
+using System.ComponentModel;
+using SM64Lib.Configuration;
 
 namespace SM64_ROM_Manager.ModelImporterGUI
 {
@@ -66,6 +68,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
         public ModelImporter(SM64Lib.RomManager rommgr) : this()
         {
             this.rommgr = rommgr;
+            RomFile = rommgr?.RomFile;
         }
 
         private void ClearOutput()
@@ -113,20 +116,24 @@ namespace SM64_ROM_Manager.ModelImporterGUI
             int romAddr = preset.RomAddress; // ValueFromText(TextBoxX_RomAddr.Text)
             int bankAddr = preset.RamAddress; // ValueFromText(TextBoxX_BankAddr.Text)
             int maxLength = preset.MaxLength; // ValueFromText(TextBoxX_MaxLength.Text)
+            var cancelEventArgs = new CancelEventArgs(false);
             var pm = new PatchingManager();
             var scriptparams = new Dictionary<string, object>() {
-                { "romfile", RomFile },
-                { "presetName", preset.Name },
-                { "presetDescription", preset.Description },
-                { "RomAddress", preset.RomAddress },
-                { "RamAddress", preset.RamAddress },
-                { "MaxLength", preset.MaxLength },
+                { "romfile",                RomFile },
+                { "presetName",             preset.Name },
+                { "presetDescription",      preset.Description },
+                { "RomAddress",             preset.RomAddress },
+                { "RamAddress",             preset.RamAddress },
+                { "MaxLength",              preset.MaxLength },
                 { "CollisionPointersArray", preset.CollisionPointers.ToArray() },
-                { "GeoPointersArray", preset.GeometryPointers.ToArray() },
-                { "ConvertedModelLength", mdl.Length },
-                { "ConvertedModel", mdl },
-                { "profilepath", profile.FileName },
-                { "files", profile.EmbeddedFiles }
+                { "GeoPointersArray",       preset.GeometryPointers.ToArray() },
+                { "ConvertedModelLength",   mdl.Length },
+                { "ConvertedModel",         mdl },
+                { "profilepath",            profile.FileName },
+                { "files",                  profile.EmbeddedFiles },
+                { "cancelEventArgs",        cancelEventArgs },
+                { "rommgr",                 rommgr },
+                { "owner",                  this }
             };
 
             if (maxLength > 0 && mdl.Length > maxLength)
@@ -143,6 +150,12 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 WriteOutput("Executing Script ...");
                 scriptparams.AddOrUpdate("script", preset.ScriptBefore);
                 pm.Patch(preset.ScriptBefore, this, scriptparams, General.GetAdditionalReferencedAssemblied());
+
+                if (cancelEventArgs.Cancel)
+                {
+                    WriteOutput("Importing canceled by script!");
+                    return;
+                }
             }
 
             int col = -1;
@@ -156,7 +169,13 @@ namespace SM64_ROM_Manager.ModelImporterGUI
 
             // Write to stream
             WriteOutput("Writing Model ...");
-            sr = mdl.ToStream(fs, romAddr, romAddr - (bankAddr & 0xFFFFFF), (int)(bankAddr & 0xFF000000));
+            sr = mdl.ToStream(
+                fs,
+                romAddr,
+                romAddr - (bankAddr & 0xFFFFFF),
+                (int)(bankAddr & 0xFF000000),
+                rommgr?.RomConfig.CollisionBaseConfig ?? new CollisionBasicConfig());
+
             if (sr is object)
             {
                 geo = sr.GeoPointers.ToArray();

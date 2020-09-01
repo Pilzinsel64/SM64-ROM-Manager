@@ -27,7 +27,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         }
 
         // Required by the Windows Form Designer
-        private System.ComponentModel.IContainer components;
+        private System.ComponentModel.IContainer components = new System.ComponentModel.Container();
 
         // NOTE: The following procedure is required by the Windows Form Designer
         // It can be modified using the Windows Form Designer.  
@@ -35,7 +35,6 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextureGraphicFormatEditor));
             this.ListViewEx1 = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,13 +57,16 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             this.LabelX6 = new DevComponents.DotNetBar.LabelX();
             this.LabelX7 = new DevComponents.DotNetBar.LabelX();
             this.Panel1 = new System.Windows.Forms.Panel();
-            this.CheckBoxX_EnableTwoSidedFaces = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.panel_MatOptions = new System.Windows.Forms.Panel();
             this.LabelX_CollisionType = new DevComponents.DotNetBar.LabelX();
+            this.CheckBoxX_EnableTwoSidedFaces = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX_Include = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.ContextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
             this.ButtonItem_CM_SelDL = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem1 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.Panel1.SuspendLayout();
+            this.panel_MatOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -292,30 +294,47 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.Panel1.Controls.Add(this.CheckBoxX_EnableClampT);
-            this.Panel1.Controls.Add(this.CheckBoxX_EnableMirrorT);
-            this.Panel1.Controls.Add(this.ComboBoxEx_RotateFlip);
+            this.Panel1.Controls.Add(this.panel_MatOptions);
+            this.Panel1.Controls.Add(this.checkBoxX_Include);
             this.Panel1.Controls.Add(this.Button_SaveColsettings);
-            this.Panel1.Controls.Add(this.LabelX3);
             this.Panel1.Controls.Add(this.PictureBox1);
-            this.Panel1.Controls.Add(this.CheckBoxX_EnableTwoSidedFaces);
-            this.Panel1.Controls.Add(this.CheckBoxX_EnableCrystalEffect);
-            this.Panel1.Controls.Add(this.LabelX_CollisionType);
-            this.Panel1.Controls.Add(this.CheckBoxX_EnableClampS);
-            this.Panel1.Controls.Add(this.ComboBox_ColType);
-            this.Panel1.Controls.Add(this.CheckBoxX_EnableMirrorS);
-            this.Panel1.Controls.Add(this.LabelX_MaxPixels);
-            this.Panel1.Controls.Add(this.ComboBoxEx_SelectDisplaylist);
-            this.Panel1.Controls.Add(this.LabelX1);
-            this.Panel1.Controls.Add(this.LabelX7);
-            this.Panel1.Controls.Add(this.CheckBoxX_EnableTextureAnimation);
-            this.Panel1.Controls.Add(this.LabelX5);
-            this.Panel1.Controls.Add(this.LabelX2);
-            this.Panel1.Controls.Add(this.LabelX6);
-            this.Panel1.Controls.Add(this.LabelX4);
             this.Panel1.Controls.Add(this.ListViewEx1);
             resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
+            // 
+            // panel_MatOptions
+            // 
+            resources.ApplyResources(this.panel_MatOptions, "panel_MatOptions");
+            this.panel_MatOptions.Controls.Add(this.LabelX_CollisionType);
+            this.panel_MatOptions.Controls.Add(this.LabelX4);
+            this.panel_MatOptions.Controls.Add(this.CheckBoxX_EnableClampT);
+            this.panel_MatOptions.Controls.Add(this.LabelX6);
+            this.panel_MatOptions.Controls.Add(this.CheckBoxX_EnableMirrorT);
+            this.panel_MatOptions.Controls.Add(this.LabelX2);
+            this.panel_MatOptions.Controls.Add(this.ComboBoxEx_RotateFlip);
+            this.panel_MatOptions.Controls.Add(this.LabelX5);
+            this.panel_MatOptions.Controls.Add(this.CheckBoxX_EnableTextureAnimation);
+            this.panel_MatOptions.Controls.Add(this.LabelX3);
+            this.panel_MatOptions.Controls.Add(this.LabelX7);
+            this.panel_MatOptions.Controls.Add(this.LabelX1);
+            this.panel_MatOptions.Controls.Add(this.CheckBoxX_EnableTwoSidedFaces);
+            this.panel_MatOptions.Controls.Add(this.ComboBoxEx_SelectDisplaylist);
+            this.panel_MatOptions.Controls.Add(this.CheckBoxX_EnableCrystalEffect);
+            this.panel_MatOptions.Controls.Add(this.LabelX_MaxPixels);
+            this.panel_MatOptions.Controls.Add(this.CheckBoxX_EnableMirrorS);
+            this.panel_MatOptions.Controls.Add(this.CheckBoxX_EnableClampS);
+            this.panel_MatOptions.Controls.Add(this.ComboBox_ColType);
+            this.panel_MatOptions.Name = "panel_MatOptions";
+            // 
+            // LabelX_CollisionType
+            // 
+            resources.ApplyResources(this.LabelX_CollisionType, "LabelX_CollisionType");
+            // 
+            // 
+            // 
+            this.LabelX_CollisionType.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX_CollisionType.Name = "LabelX_CollisionType";
+            this.LabelX_CollisionType.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             // 
             // CheckBoxX_EnableTwoSidedFaces
             // 
@@ -329,15 +348,17 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             this.CheckBoxX_EnableTwoSidedFaces.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CheckBoxX_EnableTwoSidedFaces.CheckedChanged += new System.EventHandler(this.ControlsOccusUpdateTextureListItemSettings);
             // 
-            // LabelX_CollisionType
+            // checkBoxX_Include
             // 
-            resources.ApplyResources(this.LabelX_CollisionType, "LabelX_CollisionType");
+            resources.ApplyResources(this.checkBoxX_Include, "checkBoxX_Include");
             // 
             // 
             // 
-            this.LabelX_CollisionType.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX_CollisionType.Name = "LabelX_CollisionType";
-            this.LabelX_CollisionType.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
+            this.checkBoxX_Include.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_Include.FocusCuesEnabled = false;
+            this.checkBoxX_Include.Name = "checkBoxX_Include";
+            this.checkBoxX_Include.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_Include.CheckedChanged += new System.EventHandler(this.CheckBoxX_IncludeMat_CheckedChanged);
             // 
             // ContextMenuBar1
             // 
@@ -379,6 +400,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             this.TopRightCornerSize = 0;
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.Panel1.ResumeLayout(false);
+            this.panel_MatOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).EndInit();
             this.ResumeLayout(false);
 
@@ -458,5 +480,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private DevComponents.DotNetBar.ButtonItem ButtonItem1;
         private DevComponents.DotNetBar.LabelX LabelX_CollisionType;
         private DevComponents.DotNetBar.Controls.CheckBoxX CheckBoxX_EnableTwoSidedFaces;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_Include;
+        private System.Windows.Forms.Panel panel_MatOptions;
     }
 }

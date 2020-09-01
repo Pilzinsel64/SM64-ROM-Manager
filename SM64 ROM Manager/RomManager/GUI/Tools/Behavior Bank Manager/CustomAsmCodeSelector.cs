@@ -25,7 +25,7 @@ namespace SM64_ROM_Manager
 
         public CustomAsmCodeSelector(RomManager romManager)
         {
-            General.LoadBehaviorInfosIfEmpty();
+            General.LoadBehaviorInfosIfEmpty(romManager);
             this.romManager = romManager;
             InitializeComponent();
             UpdateAmbientColors();

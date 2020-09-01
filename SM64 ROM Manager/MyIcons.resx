@@ -343,4 +343,31 @@
   <data name="icons8_repeat_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8_repeat_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_database_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_database_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_database_administrator_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_database_administrator_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_database_export_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_database_export_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_database_restore_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_database_restore_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_data_backup_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_data_backup_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_maintenance_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_maintenance_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_restart_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_restart_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_data_recovery_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_data_recovery_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_delete_database_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_delete_database_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

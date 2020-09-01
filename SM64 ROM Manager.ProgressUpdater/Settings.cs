@@ -20,5 +20,6 @@ namespace SM64_ROM_Manager.ProgressUpdater
         public ulong DiscordChannelID { get; set; } = default;
         public string DiscordMsgBaseURL { get; set; } = string.Empty;
         public string DiscordMsgParamCounter { get; set; } = string.Empty;
+        public string UpcommingVersionsDownloadURL { get; set; } = string.Empty;
     }
 }

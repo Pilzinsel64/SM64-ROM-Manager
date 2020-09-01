@@ -24,6 +24,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             TextBoxX_BotToken.Text = config.DiscordBotToken;
             TextBoxX_AppName.Text = config.DefaultAppName;
             TextBoxX_Msg.Text = config.DefaultUpdateMessage;
+            switchButton_UseProxy.Value = config.UseProxy;
         }
 
         private void TextBoxX_Msg_TextChanged(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             config.DefaultUpdateMessage = TextBoxX_Msg.Text.Trim();
             config.DefaultAppName = TextBoxX_AppName.Text.Trim();
             config.DiscordBotToken = TextBoxX_BotToken.Text.Trim();
+            config.UseProxy = switchButton_UseProxy.Value;
         }
     }
 }

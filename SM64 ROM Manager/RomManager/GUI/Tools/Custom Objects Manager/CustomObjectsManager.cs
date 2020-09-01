@@ -20,6 +20,7 @@ using Microsoft.WindowsAPICodePack.Dialogs.Controls;
 using SM64_ROM_Manager.PatchScripts;
 using Pilz.IO;
 using SM64Lib.Patching;
+using SM64_ROM_Manager.My.Resources;
 using static SM64_ROM_Manager.My.Resources.CustomObjectsManagerLangRes;
 
 namespace SM64_ROM_Manager
@@ -304,7 +305,7 @@ namespace SM64_ROM_Manager
 
                 if (!rommgr.GlobalBehaviorBank.Config.Enabled)
                 {
-                    if (MessageBoxEx.Show(this, MsgBox_ObjectsNeedGlobalBehavBank, MsgBox_ObjectsNeedGlobalBehavBank_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBoxEx.Show(this, MsgBox_ObjectsNeedGlobalBehavBank, MsgBox_ObjectsNeedGlobalBehavBank_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                         rommgr.LoadGlobalBehaviorBank(true);
                     else
                         enableImport = false;
@@ -364,7 +365,7 @@ namespace SM64_ROM_Manager
         {
             var obj = new CustomObject
             {
-                Name = "New Object"
+                Name = CustomObjectsManagerLangRes.NewObjectTitel
             };
             obj.ID.Generate();
             customObjectCollection.CustomObjects.Add(obj);
@@ -396,15 +397,48 @@ namespace SM64_ROM_Manager
         private void ButtonItem_DeleteObject_Click(object sender, EventArgs e)
         {
             var customObject = this.customObject;
-            var n = FindNode(customObject);
+            var refs = CustomObjectReferences.Find(new[] { customObject }, rommgr);
+            var needReloadList = refs.ReferenceObjects.Count > 1;
+            var allowRemove = true;
+            var allowRemoveReferences = false;
 
-            if (n is object)
-                n.Remove();
+            if (refs.HasReferences)
+            {
+                var response = MessageBoxEx.Show(this, CustomObjectsManagerLangRes.MsgBox_RemoveReferences, CustomObjectsManagerLangRes.MsgBox_Remove_Titel, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                switch (response)
+                {
+                    case DialogResult.Cancel:
+                        allowRemove = false;
+                        break;
+                    case DialogResult.Yes:
+                        allowRemoveReferences = true;
+                        break;
+                }
+            }
 
-            customObjectCollection.CustomObjects.RemoveIfContains(customObject);
+            if (allowRemove)
+            {
+                if (!needReloadList)
+                {
+                    var n = FindNode(customObject);
+                    if (n is object)
+                        n.Remove();
+                }
 
-            customObject = null;
-            LoadObjectProps();
+                customObjectCollection.CustomObjects.RemoveIfContains(customObject);
+
+                if (refs.HasReferences && allowRemoveReferences)
+                    refs.DeleteReferences(rommgr);
+
+                customObject = null;
+                LoadObjectProps();
+
+                if (refs.HasReferences && allowRemoveReferences)
+                    LoadObjects();
+
+                if (needReloadList)
+                    LoadObjects();
+            }
         }
 
         private void ButtonItem_ExportToFile_Click(object sender, EventArgs e)
@@ -412,13 +446,13 @@ namespace SM64_ROM_Manager
             var isMultiselect = IsMultiselect();
             CommonFileDialog sfd_SM64RM_ExportCustomObjectToFile;
             var tbxName = new CommonFileDialogTextBox("rmobj.name", customObject.Name);
-            var btnAddScript = new CommonFileDialogButton("rmobj.script", "Setup Script") { IsProminent = true };
+            var btnAddScript = new CommonFileDialogButton("rmobj.script", CustomObjectsManagerLangRes.Button_SetupScript) { IsProminent = true };
 
             btnAddScript.Click += BtnAddScript_Click;
             export_EmbeddedFiles = new EmbeddedFilesContainer();
             export_Script = new PatchScript();
 
-            if (isMultiselect && MessageBoxEx.Show(this, "You are going to export multiple custom objects. Do you want to save all objects to one single file (Yes) or do you want to save every single object to one file (No)?", "Export Custom Objects", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (isMultiselect && MessageBoxEx.Show(this, CustomObjectsManagerLangRes.MsgBox_ExportSingleFiles, CustomObjectsManagerLangRes.MsgBox_Export_Titel, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 sfd_SM64RM_ExportCustomObjectToFile = new CommonOpenFileDialog() { IsFolderPicker = true };
             else
             {
