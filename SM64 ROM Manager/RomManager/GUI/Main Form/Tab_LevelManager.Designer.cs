@@ -61,6 +61,8 @@ namespace SM64_ROM_Manager
             this.ListBoxAdv_LM_Levels = new SM64_ROM_Manager.Publics.Controls.ItemListBox();
             this.TabControl_LM_Area = new DevComponents.DotNetBar.TabControl();
             this.TabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
+            this.RangeSlider_CameraFrustrum = new DevComponents.DotNetBar.Controls.RangeSlider();
+            this.labelX17 = new DevComponents.DotNetBar.LabelX();
             this.Slider_AreaReverbLevel = new DevComponents.DotNetBar.Controls.Slider();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
             this.LabelX9 = new DevComponents.DotNetBar.LabelX();
@@ -142,8 +144,6 @@ namespace SM64_ROM_Manager
             this.SwitchButton_UseGlobalObjectBank = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.TableLayoutPanel_ObjectBankSelectorBoxes = new System.Windows.Forms.TableLayoutPanel();
             this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.labelX17 = new DevComponents.DotNetBar.LabelX();
-            this.RangeSlider_CameraFrustrum = new DevComponents.DotNetBar.Controls.RangeSlider();
             this.GroupBox_LM_Areas.SuspendLayout();
             this.GroupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Area)).BeginInit();
@@ -507,6 +507,34 @@ namespace SM64_ROM_Manager
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel4.Style.GradientAngle = 90;
             this.TabControlPanel4.TabItem = this.TabItem4;
+            // 
+            // RangeSlider_CameraFrustrum
+            // 
+            this.RangeSlider_CameraFrustrum.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.RangeSlider_CameraFrustrum.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.RangeSlider_CameraFrustrum.FocusCuesEnabled = false;
+            resources.ApplyResources(this.RangeSlider_CameraFrustrum, "RangeSlider_CameraFrustrum");
+            this.RangeSlider_CameraFrustrum.Maximum = 32767;
+            this.RangeSlider_CameraFrustrum.Name = "RangeSlider_CameraFrustrum";
+            this.RangeSlider_CameraFrustrum.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.RangeSlider_CameraFrustrum.TicksPosition = DevComponents.DotNetBar.eTicksPosition.TopAndBottom;
+            this.RangeSlider_CameraFrustrum.TicksVisible = false;
+            this.RangeSlider_CameraFrustrum.Value = new DevComponents.DotNetBar.RangeValue(100, 30000);
+            this.RangeSlider_CameraFrustrum.ValueChanged += new System.EventHandler(this.RangeSlider_CameraFrustrum_ValueChanged);
+            // 
+            // labelX17
+            // 
+            this.labelX17.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX17, "labelX17");
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // Slider_AreaReverbLevel
             // 
@@ -1465,33 +1493,6 @@ namespace SM64_ROM_Manager
             this.TabItem2.AttachedControl = this.TabControlPanel2;
             this.TabItem2.Name = "TabItem2";
             resources.ApplyResources(this.TabItem2, "TabItem2");
-            // 
-            // labelX17
-            // 
-            this.labelX17.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX17, "labelX17");
-            this.labelX17.Name = "labelX17";
-            this.labelX17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // RangeSlider_CameraFrustrum
-            // 
-            this.RangeSlider_CameraFrustrum.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.RangeSlider_CameraFrustrum.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RangeSlider_CameraFrustrum.FocusCuesEnabled = false;
-            resources.ApplyResources(this.RangeSlider_CameraFrustrum, "RangeSlider_CameraFrustrum");
-            this.RangeSlider_CameraFrustrum.Maximum = 32767;
-            this.RangeSlider_CameraFrustrum.Name = "RangeSlider_CameraFrustrum";
-            this.RangeSlider_CameraFrustrum.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.RangeSlider_CameraFrustrum.TicksPosition = DevComponents.DotNetBar.eTicksPosition.TopAndBottom;
-            this.RangeSlider_CameraFrustrum.TicksVisible = false;
-            this.RangeSlider_CameraFrustrum.Value = new DevComponents.DotNetBar.RangeValue(100, 30000);
             // 
             // Tab_LevelManager
             // 
