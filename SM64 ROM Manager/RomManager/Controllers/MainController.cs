@@ -1762,6 +1762,25 @@ namespace SM64_ROM_Manager
             return lvl.level?.Bank0x19 is object;
         }        
 
+        public void ExportLevel(int levelIndex, string filePath, CompressionLevel compressionLevel)
+        {
+            var lvl = GetLevelAndArea(levelIndex).level;
+            if (lvl is object)
+                ExportLevel(new LevelExport(lvl), filePath, compressionLevel);
+        }
+
+        public void ExportLevelArea(int levelIndex, int areaIndex, string filePath, CompressionLevel compressionLevel)
+        {
+            var area = GetLevelAndArea(levelIndex, areaIndex).area;
+            if (area is object)
+                ExportLevel(new LevelExport(area), filePath, compressionLevel);
+        }
+
+        private void ExportLevel(LevelExport export, string filePath, CompressionLevel compressionLevel)
+        {
+            export.WriteToFile(filePath, compressionLevel);
+        }
+
         public async Task ExportLevelVisualMap(int levelIndex, int areaIndex)
         {
             var lvl = GetLevelAndArea(levelIndex, areaIndex);
