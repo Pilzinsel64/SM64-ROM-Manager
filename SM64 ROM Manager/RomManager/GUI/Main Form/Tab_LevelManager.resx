@@ -132,9 +132,6 @@
   <data name="Button_LM_AddArea.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 23</value>
   </data>
-  <data name="ButtonItem_ImportArea.Text" xml:space="preserve">
-    <value>Import Area</value>
-  </data>
   <data name="Button_LM_AddArea.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
@@ -161,18 +158,6 @@
   </data>
   <data name="Button_LM_AreaEditor.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 23</value>
-  </data>
-  <data name="ButtonItem_ChangeAreaID.Text" xml:space="preserve">
-    <value>Change ID</value>
-  </data>
-  <data name="Button_LM_RemoveArea.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="ButtonItem_EditAreaLevelScript.Text" xml:space="preserve">
-    <value>Edit Level Script</value>
-  </data>
-  <data name="ButtonItem2_EditGeolayoutScript.Text" xml:space="preserve">
-    <value>Edit Geo Layout Script</value>
   </data>
   <data name="Button_LM_AreaEditor.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -243,6 +228,21 @@
   <data name="&gt;&gt;GroupBox_LM_Areas.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ButtonItem_ImportArea.Text" xml:space="preserve">
+    <value>Import Area</value>
+  </data>
+  <data name="ButtonItem_ChangeAreaID.Text" xml:space="preserve">
+    <value>Change ID</value>
+  </data>
+  <data name="Button_LM_RemoveArea.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonItem_EditAreaLevelScript.Text" xml:space="preserve">
+    <value>Edit Level Script</value>
+  </data>
+  <data name="ButtonItem2_EditGeolayoutScript.Text" xml:space="preserve">
+    <value>Edit Geo Layout Script</value>
+  </data>
   <data name="ButtonX_LM_LevelsMore.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -251,24 +251,6 @@
   </data>
   <data name="ButtonX_LM_LevelsMore.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 23</value>
-  </data>
-  <data name="ButtonItem20.Text" xml:space="preserve">
-    <value>Change Level ID</value>
-  </data>
-  <data name="ButtonItem1.Text" xml:space="preserve">
-    <value>Change Level Name</value>
-  </data>
-  <data name="ButtonItem24.Text" xml:space="preserve">
-    <value>Change Size of Bank 0x19</value>
-  </data>
-  <data name="ButtonItem19.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="ButtonItem21.Text" xml:space="preserve">
-    <value>Copy ROM Address</value>
-  </data>
-  <data name="ButtonItem15.Text" xml:space="preserve">
-    <value>Edit Level Script</value>
   </data>
   <data name="ButtonX_LM_LevelsMore.TabIndex" type="System.Int32, mscorlib">
     <value>91</value>
@@ -293,9 +275,6 @@
   </data>
   <data name="Button_LM_AddNewLevel.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 23</value>
-  </data>
-  <data name="ButtonItem26.Text" xml:space="preserve">
-    <value>Import Level ...</value>
   </data>
   <data name="Button_LM_AddNewLevel.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -369,8 +348,80 @@
   <data name="&gt;&gt;GroupPanel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="ButtonItem20.Text" xml:space="preserve">
+    <value>Change Level ID</value>
+  </data>
+  <data name="ButtonItem1.Text" xml:space="preserve">
+    <value>Change Level Name</value>
+  </data>
+  <data name="ButtonItem24.Text" xml:space="preserve">
+    <value>Change Size of Bank 0x19</value>
+  </data>
+  <data name="ButtonItem19.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonItem21.Text" xml:space="preserve">
+    <value>Copy ROM Address</value>
+  </data>
+  <data name="ButtonItem15.Text" xml:space="preserve">
+    <value>Edit Level Script</value>
+  </data>
+  <data name="ButtonItem26.Text" xml:space="preserve">
+    <value>Import Level ...</value>
+  </data>
   <data name="TabControl_LM_Area.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="TabControlPanel4.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RangeSlider_CameraFrustrum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 185</value>
+  </data>
+  <data name="RangeSlider_CameraFrustrum.RangeTooltipFormat" xml:space="preserve">
+    <value>Min: {0} - Max: {1}</value>
+  </data>
+  <data name="RangeSlider_CameraFrustrum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 24</value>
+  </data>
+  <data name="RangeSlider_CameraFrustrum.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="&gt;&gt;RangeSlider_CameraFrustrum.Name" xml:space="preserve">
+    <value>RangeSlider_CameraFrustrum</value>
+  </data>
+  <data name="&gt;&gt;RangeSlider_CameraFrustrum.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.RangeSlider, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RangeSlider_CameraFrustrum.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;RangeSlider_CameraFrustrum.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelX17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 187</value>
+  </data>
+  <data name="labelX17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 20</value>
+  </data>
+  <data name="labelX17.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="labelX17.Text" xml:space="preserve">
+    <value>Camera frustrum:</value>
+  </data>
+  <data name="&gt;&gt;labelX17.Name" xml:space="preserve">
+    <value>labelX17</value>
+  </data>
+  <data name="&gt;&gt;labelX17.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX17.Parent" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;labelX17.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="Slider_AreaReverbLevel.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 160</value>
@@ -391,7 +442,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;Slider_AreaReverbLevel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="labelX14.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 161</value>
@@ -415,7 +466,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;labelX14.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="LabelX9.Location" type="System.Drawing.Point, System.Drawing">
     <value>219, 135</value>
@@ -442,7 +493,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;LabelX9.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="ComboBoxEx_LM_AreaBG.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
@@ -472,7 +523,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_LM_AreaBG.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="TextBoxX_LM_ShowMsgID.Location" type="System.Drawing.Point, System.Drawing">
     <value>273, 135</value>
@@ -496,7 +547,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;TextBoxX_LM_ShowMsgID.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 108</value>
@@ -520,7 +571,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="SwitchButton_LM_ShowMsgEnabled.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 135</value>
@@ -547,7 +598,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;SwitchButton_LM_ShowMsgEnabled.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 135</value>
@@ -571,7 +622,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="CheckBoxX_LM_Enable2DCamera.Location" type="System.Drawing.Point, System.Drawing">
     <value>420, 56</value>
@@ -604,7 +655,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_LM_Enable2DCamera.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="LabelX6.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 4</value>
@@ -628,7 +679,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="ComboBox_LM_Music.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -664,7 +715,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;ComboBox_LM_Music.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="LabelX7.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 30</value>
@@ -688,7 +739,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;LabelX7.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="ComboBox_LM_TerrainTyp.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -736,7 +787,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;ComboBox_LM_TerrainTyp.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="LabelX8.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 56</value>
@@ -760,7 +811,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;LabelX8.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="ComboBox_LM_EnvironmentEffects.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -808,7 +859,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;ComboBox_LM_EnvironmentEffects.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="LabelX11.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 82</value>
@@ -832,7 +883,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;LabelX11.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="ComboBox_LM_CameraPreset.IntegralHeight" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -907,7 +958,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;ComboBox_LM_CameraPreset.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="ColorPickerButton_LM_BackgroundColor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -935,7 +986,7 @@
     <value>TabControlPanel4</value>
   </data>
   <data name="&gt;&gt;ColorPickerButton_LM_BackgroundColor.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="TabControlPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1550,6 +1601,57 @@
   <data name="TabControl_LM_Level.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="&gt;&gt;TabControlPanel1.Name" xml:space="preserve">
+    <value>TabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel1.Parent" xml:space="preserve">
+    <value>TabControl_LM_Level</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel2.Name" xml:space="preserve">
+    <value>TabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel2.Parent" xml:space="preserve">
+    <value>TabControl_LM_Level</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TabControl_LM_Level.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TabControl_LM_Level.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 3</value>
+  </data>
+  <data name="TabControl_LM_Level.Size" type="System.Drawing.Size, System.Drawing">
+    <value>502, 300</value>
+  </data>
+  <data name="TabControl_LM_Level.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="TabControl_LM_Level.Text" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Name" xml:space="preserve">
+    <value>TabControl_LM_Level</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="LabelX_TargetLevel.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 4</value>
   </data>
@@ -1627,15 +1729,6 @@
   </data>
   <data name="ComboBoxEx_LM_BGMode.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="ComboItem1.Text" xml:space="preserve">
-    <value>Original Image</value>
-  </data>
-  <data name="ComboItem2.Text" xml:space="preserve">
-    <value>Custom Image</value>
-  </data>
-  <data name="ComboItem3.Text" xml:space="preserve">
-    <value>No Image</value>
   </data>
   <data name="ComboBoxEx_LM_BGMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 108</value>
@@ -2033,6 +2126,15 @@
   <data name="&gt;&gt;TabControlPanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>Original Image</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Custom Image</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>No Image</value>
+  </data>
   <data name="ButtonX_ManageLocalObjects.Location" type="System.Drawing.Point, System.Drawing">
     <value>219, 28</value>
   </data>
@@ -2224,33 +2326,6 @@
   </data>
   <data name="&gt;&gt;TabControlPanel2.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="TabControl_LM_Level.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TabControl_LM_Level.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 3</value>
-  </data>
-  <data name="TabControl_LM_Level.Size" type="System.Drawing.Size, System.Drawing">
-    <value>502, 300</value>
-  </data>
-  <data name="TabControl_LM_Level.TabIndex" type="System.Int32, mscorlib">
-    <value>93</value>
-  </data>
-  <data name="TabControl_LM_Level.Text" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TabControl_LM_Level.Name" xml:space="preserve">
-    <value>TabControl_LM_Level</value>
-  </data>
-  <data name="&gt;&gt;TabControl_LM_Level.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabControl_LM_Level.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

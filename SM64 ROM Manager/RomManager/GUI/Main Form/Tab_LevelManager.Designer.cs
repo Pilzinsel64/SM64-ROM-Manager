@@ -142,6 +142,8 @@ namespace SM64_ROM_Manager
             this.SwitchButton_UseGlobalObjectBank = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.TableLayoutPanel_ObjectBankSelectorBoxes = new System.Windows.Forms.TableLayoutPanel();
             this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.labelX17 = new DevComponents.DotNetBar.LabelX();
+            this.RangeSlider_CameraFrustrum = new DevComponents.DotNetBar.Controls.RangeSlider();
             this.GroupBox_LM_Areas.SuspendLayout();
             this.GroupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Area)).BeginInit();
@@ -474,6 +476,9 @@ namespace SM64_ROM_Manager
             // 
             // TabControlPanel4
             // 
+            resources.ApplyResources(this.TabControlPanel4, "TabControlPanel4");
+            this.TabControlPanel4.Controls.Add(this.RangeSlider_CameraFrustrum);
+            this.TabControlPanel4.Controls.Add(this.labelX17);
             this.TabControlPanel4.Controls.Add(this.Slider_AreaReverbLevel);
             this.TabControlPanel4.Controls.Add(this.labelX14);
             this.TabControlPanel4.Controls.Add(this.LabelX9);
@@ -493,7 +498,6 @@ namespace SM64_ROM_Manager
             this.TabControlPanel4.Controls.Add(this.ComboBox_LM_CameraPreset);
             this.TabControlPanel4.Controls.Add(this.ColorPickerButton_LM_BackgroundColor);
             this.TabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel4, "TabControlPanel4");
             this.TabControlPanel4.Name = "TabControlPanel4";
             this.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
@@ -1462,6 +1466,33 @@ namespace SM64_ROM_Manager
             this.TabItem2.Name = "TabItem2";
             resources.ApplyResources(this.TabItem2, "TabItem2");
             // 
+            // labelX17
+            // 
+            this.labelX17.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX17, "labelX17");
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // RangeSlider_CameraFrustrum
+            // 
+            this.RangeSlider_CameraFrustrum.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.RangeSlider_CameraFrustrum.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.RangeSlider_CameraFrustrum.FocusCuesEnabled = false;
+            resources.ApplyResources(this.RangeSlider_CameraFrustrum, "RangeSlider_CameraFrustrum");
+            this.RangeSlider_CameraFrustrum.Maximum = 32767;
+            this.RangeSlider_CameraFrustrum.Name = "RangeSlider_CameraFrustrum";
+            this.RangeSlider_CameraFrustrum.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.RangeSlider_CameraFrustrum.TicksPosition = DevComponents.DotNetBar.eTicksPosition.TopAndBottom;
+            this.RangeSlider_CameraFrustrum.TicksVisible = false;
+            this.RangeSlider_CameraFrustrum.Value = new DevComponents.DotNetBar.RangeValue(100, 30000);
+            // 
             // Tab_LevelManager
             // 
             resources.ApplyResources(this, "$this");
@@ -1771,5 +1802,7 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelX labelX14;
         private DevComponents.DotNetBar.Controls.Slider Slider_AreaReverbLevel;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ChangeAreaID;
+        private DevComponents.DotNetBar.Controls.RangeSlider RangeSlider_CameraFrustrum;
+        private DevComponents.DotNetBar.LabelX labelX17;
     }
 }
