@@ -134,6 +134,7 @@
   </data>
   <data name="ItemListBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TextBoxX_ModelID.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -360,6 +361,7 @@
   </data>
   <data name="ContextMenuBar1.Text" xml:space="preserve">
     <value>ContextMenuBar1</value>
+    </data>
   <data name="&gt;&gt;ButtonX_CreateNewObject.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
@@ -798,8 +800,9 @@
   <data name="ButtonX_CreateNewObject.Text" xml:space="preserve">
     <value>Create new Object</value>
   </data>
-  <data name="LayoutControlItem2.Text" xml:space="preserve">
+    <data name="LayoutControlItem2.Text" xml:space="preserve">
     <value>Name:</value>
+    </data>
   <data name="&gt;&gt;ButtonItem_EditGeolayout.Name" xml:space="preserve">
     <value>ButtonItem_EditGeolayout</value>
   </data>

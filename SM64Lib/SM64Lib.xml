@@ -25,6 +25,16 @@
             Contains custom configuration that isn't used by SM64Lib. E.g. Extra Object Combos.
             </summary>
         </member>
+        <member name="P:SM64Lib.Geolayout.CameraFrustrum.CameraFar">
+            <summary>
+            This is essentially render distance of geometry.
+            </summary>
+        </member>
+        <member name="P:SM64Lib.Geolayout.CameraFrustrum.CameraNear">
+            <summary>
+            Defines how close to the camera geometry will render.
+            </summary>
+        </member>
         <member name="F:SM64Lib.Geolayout.ObjectShadowType.RectangleHardcodedOffset">
             This defines an offset after which rectangular shadows with custom
             widths and heights can be defined.
