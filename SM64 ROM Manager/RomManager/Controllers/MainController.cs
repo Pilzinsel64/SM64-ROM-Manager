@@ -39,6 +39,7 @@ using SM64_ROM_Manager.My.Resources;
 using System.Diagnostics;
 using SM64Lib.Objects.ObjectBanks.Data;
 using System.IO.Compression;
+using SM64_ROM_Manager.Publics;
 
 namespace SM64_ROM_Manager
 {
@@ -1070,7 +1071,8 @@ namespace SM64_ROM_Manager
         {
             if (online)
             {
-
+                var frm = new WebViewer(new Uri(onlineUrl));
+                frm.Show();
             }
             else
             {

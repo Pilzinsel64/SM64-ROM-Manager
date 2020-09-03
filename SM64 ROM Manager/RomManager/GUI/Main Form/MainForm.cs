@@ -681,17 +681,17 @@ namespace SM64_ROM_Manager
 
         private void ButtonItem_BugReport_Click(object sender, EventArgs e)
         {
-            Controller.OpenBugReportDialog();
+            Controller.OpenBugReportDialog(false);
         }
 
         private void ButtonItem_FeatureRequest_Click(object sender, EventArgs e)
         {
-            Controller.OpenFeatureRequestDialog();
+            Controller.OpenFeatureRequestDialog(false);
         }
 
         private void ButtonItem21_Click(object sender, EventArgs e)
         {
-            Controller.OpenTranslationSubmition();
+            Controller.OpenTranslationSubmition(false);
         }
 
         private void ButtonItem_Supporter_Click(object sender, EventArgs e)
