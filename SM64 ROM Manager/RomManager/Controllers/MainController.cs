@@ -2019,6 +2019,30 @@ namespace SM64_ROM_Manager
             }
         }
 
+        public void ImportLevelExport(string filePath)
+        {
+            var export = LevelExport.ReadFromFile(filePath);
+            ImportLevelExport(export);
+        }
+
+        private void ImportLevelExport(LevelExport export)
+        {
+
+            switch (export.ContentType)
+            {
+                case LevelExportContentType.Level:
+                    //LevelExportImporter.ImportLevel(export, RomManager);
+                    break;
+                case LevelExportContentType.Area:
+                    //LevelExportImporter.ImportArea(export);
+                    break;
+                case LevelExportContentType.Objects:
+                case LevelExportContentType.Warps:
+                    //LevelExportImporter.ImportScript(export);
+                    break;
+            }
+        }
+
         public void SetLevelBank0x19Length(int levelIndex)
         {
             var lvl = GetLevelAndArea(levelIndex).level;
