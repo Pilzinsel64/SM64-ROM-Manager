@@ -1051,22 +1051,32 @@ namespace SM64_ROM_Manager
             }
         }
 
-        public void OpenFeatureRequestDialog()
+        public void OpenFeatureRequestDialog(bool online)
         {
-            var frm = new UserRequestDialog(UserRequestLayout.LoadFrom(Path.Combine(Publics.General.MyUserRequestsPath, "FeatureRequest.json")));
-            frm.Show();
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "FeatureRequest.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS");
         }
 
-        public void OpenBugReportDialog()
+        public void OpenBugReportDialog(bool online)
         {
-            var frm = new UserRequestDialog(UserRequestLayout.LoadFrom(Path.Combine(Publics.General.MyUserRequestsPath, "BugReport.json")));
-            frm.Show();
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "BugReport.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH");
         }
 
-        public void OpenTranslationSubmition()
+        public void OpenTranslationSubmition(bool online)
         {
-            var frm = new UserRequestDialog(UserRequestLayout.LoadFrom(Path.Combine(Publics.General.MyUserRequestsPath, "SubmitTranslation.json")));
-            frm.Show();
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "SubmitTranslation.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma");
+        }
+
+        private void OpenUserRequestDialog(bool online, string requestFilePath, string onlineUrl)
+        {
+            if (online)
+            {
+
+            }
+            else
+            {
+                var frm = new UserRequestDialog(UserRequestLayout.LoadFrom(requestFilePath));
+                frm.Show();
+            }
         }
 
         public void OpenThankYouPage()
