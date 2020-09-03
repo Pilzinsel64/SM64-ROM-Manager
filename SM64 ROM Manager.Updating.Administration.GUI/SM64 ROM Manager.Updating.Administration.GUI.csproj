@@ -78,8 +78,8 @@
     <Reference Include="drsPwEnc">
       <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
     </Reference>
-    <Reference Include="Markdig, Version=0.20.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Markdig.0.20.0\lib\netstandard2.0\Markdig.dll</HintPath>
+    <Reference Include="Markdig, Version=0.21.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdig.0.21.1\lib\net452\Markdig.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
