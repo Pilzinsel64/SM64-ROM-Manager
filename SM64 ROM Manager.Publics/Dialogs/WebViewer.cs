@@ -16,11 +16,26 @@ namespace SM64_ROM_Manager.Publics
 {
     public partial class WebViewer : OfficeForm
     {
+        private Microsoft.Toolkit.Forms.UI.Controls.WebViewCompatible webViewCompatible1;
+        private Uri navigateTo;
+
         public WebViewer(Uri uri)
         {
+            navigateTo = uri;
+
             InitializeComponent();
             UpdateAmbientColors();
-            webViewCompatible1.Navigate(uri);
+
+            webViewCompatible1 = new Microsoft.Toolkit.Forms.UI.Controls.WebViewCompatible();
+            webViewCompatible1.Dock = System.Windows.Forms.DockStyle.Fill;
+            webViewCompatible1.Location = new System.Drawing.Point(0, 0);
+            webViewCompatible1.Name = "webViewCompatible1";
+            webViewCompatible1.Size = new System.Drawing.Size(784, 611);
+            webViewCompatible1.TabIndex = 0;
+            webViewCompatible1.Text = "webViewCompatible1";
+            webViewCompatible1.ContentLoading += new System.EventHandler<Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT.WebViewControlContentLoadingEventArgs>(this.webViewCompatible1_ContentLoading);
+            webViewCompatible1.NavigationCompleted += new System.EventHandler<Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT.WebViewControlNavigationCompletedEventArgs>(this.webViewCompatible1_NavigationCompleted);
+
         }
 
         private string GetDocumentTitel()
@@ -49,6 +64,16 @@ namespace SM64_ROM_Manager.Publics
         }
 
         private void webViewCompatible1_ContentLoading(object sender, Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT.WebViewControlContentLoadingEventArgs e)
+        {
+        }
+
+        private void WebViewer_Shown(object sender, EventArgs e)
+        {
+            Controls.Add(webViewCompatible1);
+            webViewCompatible1.Navigate(navigateTo);
+        }
+
+        private void WebViewer_Load(object sender, EventArgs e)
         {
         }
     }
