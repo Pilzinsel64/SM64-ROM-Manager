@@ -4,6 +4,23 @@
         <name>SM64 ROM Manager.Publics</name>
     </assembly>
     <members>
+        <member name="F:SM64_ROM_Manager.Publics.WebViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.Publics.WebViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.Publics.WebViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
         <member name="T:SM64_ROM_Manager.Publics.My.Resources.FileDialogFilters">
             <summary>
             Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.

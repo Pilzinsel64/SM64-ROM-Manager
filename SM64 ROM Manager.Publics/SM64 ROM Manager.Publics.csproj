@@ -131,6 +131,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\WebViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\WebViewer.Designer.cs">
+      <DependentUpon>WebViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="InputDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\StringInputDialog.resx">
       <DependentUpon>StringInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\WebViewer.resx">
+      <DependentUpon>WebViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FileDialogFilters.resx">
       <CustomToolNamespace>SM64_ROM_Manager.Publics.My.Resources</CustomToolNamespace>
