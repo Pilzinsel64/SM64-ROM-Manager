@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77FAB892-05F2-072E-3F2C-A2DE35961DF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SM64_ROM_Manager.PatchScripts</RootNamespace>
+    <AssemblyName>SM64 ROM Manager.PatchScripts</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.PatchScripts.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.PatchScripts.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\RelMono\</OutputPath>
+    <DocumentationFile>SM64 ROM Manager.PatchScripts.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DefineConstants>TRACE;RelMono</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="DevComponents.DotNetBar.Design, Version=14.0.0.3, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.1.0.35, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Layout.Design">
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="drsPwEnc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox, Version=2.16.24.0, Culture=neutral, PublicKeyToken=fb8aa12b994ef61b, processorArchitecture=MSIL">
+      <HintPath>..\packages\FCTB.2.16.24\lib\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.Cryptography">
+      <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.IO">
+      <HintPath>..\Shared Libs\Pilz.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.Simple3DFileParser">
+      <HintPath>..\Shared Libs\Pilz.Simple3DFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WebDav.Client, Version=2.7.0.0, Culture=neutral, PublicKeyToken=daed9acc7deb9472, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebDav.Client.2.7.0\lib\net45\WebDav.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Z.ExtensionMethods.WithNamespace, Version=2.1.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.ExtensionMethods.WithNamespace.2.1.1\lib\net45\Z.ExtensionMethods.WithNamespace.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="SM64Lib.General" />
+    <Import Include="SM64Lib.TextValueConverter" />
+    <Import Include="SM64Lib.TextValueConverter.TextValueConverter" />
+    <Import Include="SM64Lib.Trajectorys" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\TweakDatabaseUploadInfo.cs" />
+    <Compile Include="Classes\TweakDatabaseUploadState.cs" />
+    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
+    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
+    <Compile Include="Classes\SerializedAssemblyLoader.cs" />
+    <Compile Include="Classes\SerializedAssemblyMember.cs" />
+    <Compile Include="Classes\SerializedAssemblyMemberParam.cs" />
+    <Compile Include="Classes\SerializedAssemblyMemberType.cs" />
+    <Compile Include="Classes\TweakDatabaseCategories.cs" />
+    <Compile Include="Classes\TweakDatabaseLoginPreferences.cs" />
+    <Compile Include="Classes\TweakDatabaseLoginTypes.cs" />
+    <Compile Include="Classes\TweakDatabaseManager.cs" />
+    <Compile Include="Classes\TweakDatabasePreferences.cs" />
+    <Compile Include="Classes\TweakDatabaseSyncAction.cs" />
+    <Compile Include="Classes\TweakDatabaseSyncFile.cs" />
+    <Compile Include="GUI\ObjectCatalog.Designer.cs">
+      <DependentUpon>ObjectCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ObjectCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ReflectionSymbols.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReflectionSymbols.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="My Project\Application.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="GUI\TweakProfileEditor.Designer.cs">
+      <DependentUpon>TweakProfileEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TweakProfileEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TweakScriptEditor.Designer.cs">
+      <DependentUpon>TweakScriptEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TweakScriptEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TweakViewer.Designer.cs">
+      <DependentUpon>TweakViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TweakViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyIcons.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\ObjectCatalog.resx">
+      <DependentUpon>ObjectCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReflectionSymbols.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.PatchScripts.My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReflectionSymbols.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TweakScriptEditor.de.resx">
+      <DependentUpon>TweakScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TweakViewer.de.resx">
+      <DependentUpon>TweakViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SM64_ROM_Manager.PatchScripts.My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TweakProfileEditor.resx">
+      <DependentUpon>TweakProfileEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TweakScriptEditor.resx">
+      <DependentUpon>TweakScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TweakViewer.resx">
+      <DependentUpon>TweakViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>SM64_ROM_Manager.PatchScripts.My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Class.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delegate.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Event.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Field.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interface.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Methode.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Module.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Namespace.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Structure.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enum.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checkmark_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_sign_16px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj">
+      <Project>{e23753fa-c065-0a5f-304e-b35c0255724c}</Project>
+      <Name>SM64 ROM Manager.Publics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj">
+      <Project>{e11312a8-5e8d-073f-0086-11d677519581}</Project>
+      <Name>SM64Lib.TextValueConverter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj">
+      <Project>{e29a037e-451d-05d8-12d2-fc9f72bd60ac}</Project>
+      <Name>SM64Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_plus_math_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_plus_math_32px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_downloading_updates_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_triggering_16px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
