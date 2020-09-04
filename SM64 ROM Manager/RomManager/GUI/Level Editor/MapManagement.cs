@@ -9,7 +9,7 @@ using global::DevComponents.Editors;
 using Microsoft.VisualBasic.CompilerServices;
 using global::Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN;
 using global::Pilz.S3DFileParser;
-using global::SimpleHistory;
+using Pilz.Collections.SimpleHistory;
 using global::SM64_ROM_Manager.ModelConverterGUI;
 using global::SM64_ROM_Manager.SettingsManager;
 using global::SM64Lib.Levels;
