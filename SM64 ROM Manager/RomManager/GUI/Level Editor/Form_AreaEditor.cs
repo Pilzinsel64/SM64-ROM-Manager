@@ -21,7 +21,7 @@ using global::OpenTK.Graphics.OpenGL;
 using global::Pilz.Drawing.Drawing3D.OpenGLFactory.CameraN;
 using global::Pilz.Drawing.Drawing3D.OpenGLFactory.RenderingN;
 using global::Pilz.S3DFileParser;
-using global::SimpleHistory;
+using global::Pilz.Collections.SimpleHistory;
 using global::SM64_ROM_Manager.ModelConverterGUI;
 using global::SM64_ROM_Manager.My.Resources;
 using global::SM64_ROM_Manager.PropertyValueEditors;
