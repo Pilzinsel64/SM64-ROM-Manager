@@ -48,11 +48,9 @@ namespace SM64_ROM_Manager
             this.ComboBox_AreaEditor_DefaultCameraMode = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.LabelX6 = new DevComponents.DotNetBar.LabelX();
             this.TabControl2 = new DevComponents.DotNetBar.TabControl();
-            this.TabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.comboBoxEx_DefaultObjMoveMode = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX19 = new DevComponents.DotNetBar.LabelX();
-            this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.labelX20 = new DevComponents.DotNetBar.LabelX();
+            this.switchButton_UseInternalBrowser = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.comboBoxEx_RecalcChecksumBehavior = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem15 = new DevComponents.Editors.ComboItem();
             this.comboItem16 = new DevComponents.Editors.ComboItem();
@@ -78,12 +76,6 @@ namespace SM64_ROM_Manager
             this.ComboItem3 = new DevComponents.Editors.ComboItem();
             this.LabelX10 = new DevComponents.DotNetBar.LabelX();
             this.TabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
-            this.labelX17 = new DevComponents.DotNetBar.LabelX();
-            this.SwitchButton_AutoDetectStartEndQuotationMarks = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.LabelX15 = new DevComponents.DotNetBar.LabelX();
-            this.SwitchButton_TMForceUppercase = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.TabItem7 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel7 = new DevComponents.DotNetBar.TabControlPanel();
             this.TextBoxX_ProxyPwd = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.TextBoxX_ProxyUsr = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -94,6 +86,18 @@ namespace SM64_ROM_Manager
             this.ComboItem13 = new DevComponents.Editors.ComboItem();
             this.ComboItem14 = new DevComponents.Editors.ComboItem();
             this.TabItem8 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.TabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+            this.comboBoxEx_DefaultObjMoveMode = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem18 = new DevComponents.Editors.ComboItem();
+            this.comboItem19 = new DevComponents.Editors.ComboItem();
+            this.labelX19 = new DevComponents.DotNetBar.LabelX();
+            this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.TabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
+            this.labelX17 = new DevComponents.DotNetBar.LabelX();
+            this.SwitchButton_AutoDetectStartEndQuotationMarks = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.LabelX15 = new DevComponents.DotNetBar.LabelX();
+            this.SwitchButton_TMForceUppercase = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.TabItem7 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
             this.ButtonX6 = new DevComponents.DotNetBar.ButtonX();
             this.LabelX14 = new DevComponents.DotNetBar.LabelX();
@@ -122,14 +126,12 @@ namespace SM64_ROM_Manager
             this.TabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
             this.PictureBox_Warning = new System.Windows.Forms.PictureBox();
-            this.comboItem18 = new DevComponents.Editors.ComboItem();
-            this.comboItem19 = new DevComponents.Editors.ComboItem();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl2)).BeginInit();
             this.TabControl2.SuspendLayout();
-            this.TabControlPanel2.SuspendLayout();
             this.TabControlPanel1.SuspendLayout();
-            this.TabControlPanel6.SuspendLayout();
             this.TabControlPanel7.SuspendLayout();
+            this.TabControlPanel2.SuspendLayout();
+            this.TabControlPanel6.SuspendLayout();
             this.TabControlPanel5.SuspendLayout();
             this.TabControlPanel4.SuspendLayout();
             this.TabControlPanel_LoaderModules.SuspendLayout();
@@ -245,9 +247,9 @@ namespace SM64_ROM_Manager
             this.TabControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TabControl2.CanReorderTabs = false;
             this.TabControl2.Controls.Add(this.TabControlPanel1);
+            this.TabControl2.Controls.Add(this.TabControlPanel7);
             this.TabControl2.Controls.Add(this.TabControlPanel2);
             this.TabControl2.Controls.Add(this.TabControlPanel6);
-            this.TabControl2.Controls.Add(this.TabControlPanel7);
             this.TabControl2.Controls.Add(this.TabControlPanel5);
             this.TabControl2.Controls.Add(this.TabControlPanel4);
             this.TabControl2.Controls.Add(this.TabControlPanel_LoaderModules);
@@ -268,58 +270,10 @@ namespace SM64_ROM_Manager
             this.TabControl2.Tabs.Add(this.TabItem5);
             this.TabControl2.Tabs.Add(this.TabItem6);
             // 
-            // TabControlPanel2
-            // 
-            this.TabControlPanel2.Controls.Add(this.comboBoxEx_DefaultObjMoveMode);
-            this.TabControlPanel2.Controls.Add(this.labelX19);
-            this.TabControlPanel2.Controls.Add(this.LabelX6);
-            this.TabControlPanel2.Controls.Add(this.ComboBox_AreaEditor_DefaultCameraMode);
-            this.TabControlPanel2.Controls.Add(this.ComboBox_AreaEditor_DefaultWindowMode);
-            this.TabControlPanel2.Controls.Add(this.LabelX7);
-            this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel2, "TabControlPanel2");
-            this.TabControlPanel2.Name = "TabControlPanel2";
-            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel2.Style.GradientAngle = 90;
-            this.TabControlPanel2.TabItem = this.TabItem2;
-            // 
-            // comboBoxEx_DefaultObjMoveMode
-            // 
-            resources.ApplyResources(this.comboBoxEx_DefaultObjMoveMode, "comboBoxEx_DefaultObjMoveMode");
-            this.comboBoxEx_DefaultObjMoveMode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx_DefaultObjMoveMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxEx_DefaultObjMoveMode.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxEx_DefaultObjMoveMode.FormattingEnabled = true;
-            this.comboBoxEx_DefaultObjMoveMode.Items.AddRange(new object[] {
-            this.comboItem18,
-            this.comboItem19});
-            this.comboBoxEx_DefaultObjMoveMode.Name = "comboBoxEx_DefaultObjMoveMode";
-            this.comboBoxEx_DefaultObjMoveMode.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // labelX19
-            // 
-            this.labelX19.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX19, "labelX19");
-            this.labelX19.Name = "labelX19";
-            this.labelX19.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
-            // 
-            // TabItem2
-            // 
-            this.TabItem2.AttachedControl = this.TabControlPanel2;
-            this.TabItem2.Name = "TabItem2";
-            resources.ApplyResources(this.TabItem2, "TabItem2");
-            // 
             // TabControlPanel1
             // 
+            this.TabControlPanel1.Controls.Add(this.labelX20);
+            this.TabControlPanel1.Controls.Add(this.switchButton_UseInternalBrowser);
             this.TabControlPanel1.Controls.Add(this.comboBoxEx_RecalcChecksumBehavior);
             this.TabControlPanel1.Controls.Add(this.labelX18);
             this.TabControlPanel1.Controls.Add(this.ComboBoxEx_NotifyOnRomChanges);
@@ -344,6 +298,35 @@ namespace SM64_ROM_Manager
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel1.Style.GradientAngle = 90;
             this.TabControlPanel1.TabItem = this.TabItem1;
+            // 
+            // labelX20
+            // 
+            this.labelX20.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX20, "labelX20");
+            this.labelX20.Name = "labelX20";
+            this.labelX20.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            // 
+            // switchButton_UseInternalBrowser
+            // 
+            resources.ApplyResources(this.switchButton_UseInternalBrowser, "switchButton_UseInternalBrowser");
+            // 
+            // 
+            // 
+            this.switchButton_UseInternalBrowser.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchButton_UseInternalBrowser.Name = "switchButton_UseInternalBrowser";
+            this.switchButton_UseInternalBrowser.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.switchButton_UseInternalBrowser.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.switchButton_UseInternalBrowser.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.switchButton_UseInternalBrowser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchButton_UseInternalBrowser.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.switchButton_UseInternalBrowser.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.switchButton_UseInternalBrowser.SwitchWidth = 15;
+            this.switchButton_UseInternalBrowser.Value = true;
+            this.switchButton_UseInternalBrowser.ValueObject = "Y";
             // 
             // comboBoxEx_RecalcChecksumBehavior
             // 
@@ -537,88 +520,6 @@ namespace SM64_ROM_Manager
             this.TabItem1.Name = "TabItem1";
             resources.ApplyResources(this.TabItem1, "TabItem1");
             // 
-            // TabControlPanel6
-            // 
-            this.TabControlPanel6.Controls.Add(this.labelX17);
-            this.TabControlPanel6.Controls.Add(this.SwitchButton_AutoDetectStartEndQuotationMarks);
-            this.TabControlPanel6.Controls.Add(this.LabelX15);
-            this.TabControlPanel6.Controls.Add(this.SwitchButton_TMForceUppercase);
-            this.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
-            this.TabControlPanel6.Name = "TabControlPanel6";
-            this.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel6.Style.GradientAngle = 90;
-            this.TabControlPanel6.TabItem = this.TabItem7;
-            // 
-            // labelX17
-            // 
-            this.labelX17.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX17, "labelX17");
-            this.labelX17.Name = "labelX17";
-            this.labelX17.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
-            // 
-            // SwitchButton_AutoDetectStartEndQuotationMarks
-            // 
-            resources.ApplyResources(this.SwitchButton_AutoDetectStartEndQuotationMarks, "SwitchButton_AutoDetectStartEndQuotationMarks");
-            // 
-            // 
-            // 
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.Name = "SwitchButton_AutoDetectStartEndQuotationMarks";
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.SwitchWidth = 15;
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.Value = true;
-            this.SwitchButton_AutoDetectStartEndQuotationMarks.ValueObject = "Y";
-            // 
-            // LabelX15
-            // 
-            this.LabelX15.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.LabelX15, "LabelX15");
-            this.LabelX15.Name = "LabelX15";
-            this.LabelX15.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
-            // 
-            // SwitchButton_TMForceUppercase
-            // 
-            resources.ApplyResources(this.SwitchButton_TMForceUppercase, "SwitchButton_TMForceUppercase");
-            // 
-            // 
-            // 
-            this.SwitchButton_TMForceUppercase.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SwitchButton_TMForceUppercase.Name = "SwitchButton_TMForceUppercase";
-            this.SwitchButton_TMForceUppercase.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SwitchButton_TMForceUppercase.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_TMForceUppercase.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_TMForceUppercase.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SwitchButton_TMForceUppercase.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
-            this.SwitchButton_TMForceUppercase.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
-            this.SwitchButton_TMForceUppercase.SwitchWidth = 15;
-            this.SwitchButton_TMForceUppercase.Value = true;
-            this.SwitchButton_TMForceUppercase.ValueObject = "Y";
-            // 
-            // TabItem7
-            // 
-            this.TabItem7.AttachedControl = this.TabControlPanel6;
-            this.TabItem7.Name = "TabItem7";
-            resources.ApplyResources(this.TabItem7, "TabItem7");
-            // 
             // TabControlPanel7
             // 
             this.TabControlPanel7.Controls.Add(this.TextBoxX_ProxyPwd);
@@ -719,6 +620,146 @@ namespace SM64_ROM_Manager
             this.TabItem8.AttachedControl = this.TabControlPanel7;
             this.TabItem8.Name = "TabItem8";
             resources.ApplyResources(this.TabItem8, "TabItem8");
+            // 
+            // TabControlPanel2
+            // 
+            this.TabControlPanel2.Controls.Add(this.comboBoxEx_DefaultObjMoveMode);
+            this.TabControlPanel2.Controls.Add(this.labelX19);
+            this.TabControlPanel2.Controls.Add(this.LabelX6);
+            this.TabControlPanel2.Controls.Add(this.ComboBox_AreaEditor_DefaultCameraMode);
+            this.TabControlPanel2.Controls.Add(this.ComboBox_AreaEditor_DefaultWindowMode);
+            this.TabControlPanel2.Controls.Add(this.LabelX7);
+            this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel2, "TabControlPanel2");
+            this.TabControlPanel2.Name = "TabControlPanel2";
+            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel2.Style.GradientAngle = 90;
+            this.TabControlPanel2.TabItem = this.TabItem2;
+            // 
+            // comboBoxEx_DefaultObjMoveMode
+            // 
+            resources.ApplyResources(this.comboBoxEx_DefaultObjMoveMode, "comboBoxEx_DefaultObjMoveMode");
+            this.comboBoxEx_DefaultObjMoveMode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx_DefaultObjMoveMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEx_DefaultObjMoveMode.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxEx_DefaultObjMoveMode.FormattingEnabled = true;
+            this.comboBoxEx_DefaultObjMoveMode.Items.AddRange(new object[] {
+            this.comboItem18,
+            this.comboItem19});
+            this.comboBoxEx_DefaultObjMoveMode.Name = "comboBoxEx_DefaultObjMoveMode";
+            this.comboBoxEx_DefaultObjMoveMode.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // comboItem18
+            // 
+            resources.ApplyResources(this.comboItem18, "comboItem18");
+            // 
+            // comboItem19
+            // 
+            resources.ApplyResources(this.comboItem19, "comboItem19");
+            // 
+            // labelX19
+            // 
+            this.labelX19.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX19, "labelX19");
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            // 
+            // TabItem2
+            // 
+            this.TabItem2.AttachedControl = this.TabControlPanel2;
+            this.TabItem2.Name = "TabItem2";
+            resources.ApplyResources(this.TabItem2, "TabItem2");
+            // 
+            // TabControlPanel6
+            // 
+            this.TabControlPanel6.Controls.Add(this.labelX17);
+            this.TabControlPanel6.Controls.Add(this.SwitchButton_AutoDetectStartEndQuotationMarks);
+            this.TabControlPanel6.Controls.Add(this.LabelX15);
+            this.TabControlPanel6.Controls.Add(this.SwitchButton_TMForceUppercase);
+            this.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
+            this.TabControlPanel6.Name = "TabControlPanel6";
+            this.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel6.Style.GradientAngle = 90;
+            this.TabControlPanel6.TabItem = this.TabItem7;
+            // 
+            // labelX17
+            // 
+            this.labelX17.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX17, "labelX17");
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            // 
+            // SwitchButton_AutoDetectStartEndQuotationMarks
+            // 
+            resources.ApplyResources(this.SwitchButton_AutoDetectStartEndQuotationMarks, "SwitchButton_AutoDetectStartEndQuotationMarks");
+            // 
+            // 
+            // 
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.Name = "SwitchButton_AutoDetectStartEndQuotationMarks";
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.SwitchWidth = 15;
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.Value = true;
+            this.SwitchButton_AutoDetectStartEndQuotationMarks.ValueObject = "Y";
+            // 
+            // LabelX15
+            // 
+            this.LabelX15.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX15, "LabelX15");
+            this.LabelX15.Name = "LabelX15";
+            this.LabelX15.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            // 
+            // SwitchButton_TMForceUppercase
+            // 
+            resources.ApplyResources(this.SwitchButton_TMForceUppercase, "SwitchButton_TMForceUppercase");
+            // 
+            // 
+            // 
+            this.SwitchButton_TMForceUppercase.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SwitchButton_TMForceUppercase.Name = "SwitchButton_TMForceUppercase";
+            this.SwitchButton_TMForceUppercase.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.SwitchButton_TMForceUppercase.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.SwitchButton_TMForceUppercase.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.SwitchButton_TMForceUppercase.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SwitchButton_TMForceUppercase.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.SwitchButton_TMForceUppercase.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.SwitchButton_TMForceUppercase.SwitchWidth = 15;
+            this.SwitchButton_TMForceUppercase.Value = true;
+            this.SwitchButton_TMForceUppercase.ValueObject = "Y";
+            // 
+            // TabItem7
+            // 
+            this.TabItem7.AttachedControl = this.TabControlPanel6;
+            this.TabItem7.Name = "TabItem7";
+            resources.ApplyResources(this.TabItem7, "TabItem7");
             // 
             // TabControlPanel5
             // 
@@ -1030,14 +1071,6 @@ namespace SM64_ROM_Manager
             this.PictureBox_Warning.Name = "PictureBox_Warning";
             this.PictureBox_Warning.TabStop = false;
             // 
-            // comboItem18
-            // 
-            resources.ApplyResources(this.comboItem18, "comboItem18");
-            // 
-            // comboItem19
-            // 
-            resources.ApplyResources(this.comboItem19, "comboItem19");
-            // 
             // Form_Settings
             // 
             resources.ApplyResources(this, "$this");
@@ -1052,10 +1085,10 @@ namespace SM64_ROM_Manager
             this.TopRightCornerSize = 0;
             ((System.ComponentModel.ISupportInitialize)(this.TabControl2)).EndInit();
             this.TabControl2.ResumeLayout(false);
-            this.TabControlPanel2.ResumeLayout(false);
             this.TabControlPanel1.ResumeLayout(false);
-            this.TabControlPanel6.ResumeLayout(false);
             this.TabControlPanel7.ResumeLayout(false);
+            this.TabControlPanel2.ResumeLayout(false);
+            this.TabControlPanel6.ResumeLayout(false);
             this.TabControlPanel5.ResumeLayout(false);
             this.TabControlPanel4.ResumeLayout(false);
             this.TabControlPanel_LoaderModules.ResumeLayout(false);
@@ -1225,5 +1258,7 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelX labelX19;
         private DevComponents.Editors.ComboItem comboItem18;
         private DevComponents.Editors.ComboItem comboItem19;
+        private DevComponents.DotNetBar.LabelX labelX20;
+        private DevComponents.DotNetBar.Controls.SwitchButton switchButton_UseInternalBrowser;
     }
 }

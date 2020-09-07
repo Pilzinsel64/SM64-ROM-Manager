@@ -1070,10 +1070,7 @@ namespace SM64_ROM_Manager
         private void OpenUserRequestDialog(bool online, string requestFilePath, string onlineUrl)
         {
             if (online)
-            {
-                var frm = new WebViewer(new Uri(onlineUrl));
-                frm.Show();
-            }
+                Publics.Publics.OpenBrowser(new Uri(onlineUrl), true, new Size(800, 700));
             else
             {
                 var frm = new UserRequestDialog(UserRequestLayout.LoadFrom(requestFilePath));
@@ -1084,7 +1081,7 @@ namespace SM64_ROM_Manager
         public void OpenThankYouPage()
         {
             const string webAddress = "https://pilzinsel64.com/thank-you/";
-            Process.Start(webAddress);
+            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
         }
 
         private void RomWatcher_Changed(object sender, FileSystemEventArgs e)

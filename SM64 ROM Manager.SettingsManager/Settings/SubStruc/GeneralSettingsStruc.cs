@@ -14,6 +14,7 @@ namespace SM64_ROM_Manager.SettingsManager
         public NotificationMode RomChangedNotification { get; set; }
         public Version LastThankYouPageSeen { get; set; }
         public RecalcChecksumBehavior RecalcChecksumBehavior { get; set; }
+        public bool UseInternalBrowser { get; set; }
 
         public void ResetValues()
         {
@@ -28,6 +29,7 @@ namespace SM64_ROM_Manager.SettingsManager
             RomChangedNotification = NotificationMode.Popup;
             LastThankYouPageSeen = null;
             RecalcChecksumBehavior = RecalcChecksumBehavior.Always;
+            UseInternalBrowser = true;
         }
     }
 }

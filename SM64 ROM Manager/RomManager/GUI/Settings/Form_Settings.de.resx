@@ -144,6 +144,15 @@
   <data name="LabelX6.Text" xml:space="preserve">
     <value>Standart Kameramodus:</value>
   </data>
+  <data name="labelX20.Text" xml:space="preserve">
+    <value>Internen Browser verwenden:</value>
+  </data>
+  <data name="switchButton_UseInternalBrowser.OffText" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="switchButton_UseInternalBrowser.OnText" xml:space="preserve">
+    <value>Ja</value>
+  </data>
   <data name="labelX18.Text" xml:space="preserve">
     <value>Prüfsumme neuberechnen beim Speichern der ROM:</value>
   </data>
@@ -183,6 +192,21 @@
   <data name="ComboItem3.Text" xml:space="preserve">
     <value>Nein</value>
   </data>
+  <data name="TextBoxX_ProxyPwd.WatermarkText" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="TextBoxX_ProxyUsr.WatermarkText" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="LabelX16.Text" xml:space="preserve">
+    <value>Proxy-Anmeldedaten:</value>
+  </data>
+  <data name="TabItem8.Text" xml:space="preserve">
+    <value>Netzwerk</value>
+  </data>
+  <data name="TabItem2.Text" xml:space="preserve">
+    <value>Bereichseditor</value>
+  </data>
   <data name="labelX17.Text" xml:space="preserve">
     <value>Automatisch Start-/Endhochkomma identifizieren:</value>
   </data>
@@ -203,21 +227,6 @@
   </data>
   <data name="TabItem7.Text" xml:space="preserve">
     <value>Text-Manager</value>
-  </data>
-  <data name="TabItem2.Text" xml:space="preserve">
-    <value>Bereichseditor</value>
-  </data>
-  <data name="TextBoxX_ProxyPwd.WatermarkText" xml:space="preserve">
-    <value>Passwort</value>
-  </data>
-  <data name="TextBoxX_ProxyUsr.WatermarkText" xml:space="preserve">
-    <value>Benutzername</value>
-  </data>
-  <data name="LabelX16.Text" xml:space="preserve">
-    <value>Proxy-Anmeldedaten:</value>
-  </data>
-  <data name="TabItem8.Text" xml:space="preserve">
-    <value>Netzwerk</value>
   </data>
   <data name="LabelX9.Text" xml:space="preserve">
     <value>Spiel-Starten Parameter:</value>
