@@ -157,7 +157,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;ComboBox_DefaultValueType.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="LabelX3.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 4</value>
@@ -181,7 +181,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;LabelX3.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="SwitchButton_SearchUpdates.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -351,6 +351,60 @@
   <data name="&gt;&gt;LabelX6.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="labelX21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 200</value>
+  </data>
+  <data name="labelX21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 22</value>
+  </data>
+  <data name="labelX21.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="labelX21.Text" xml:space="preserve">
+    <value>Open Thank You page after updates:</value>
+  </data>
+  <data name="&gt;&gt;labelX21.Name" xml:space="preserve">
+    <value>labelX21</value>
+  </data>
+  <data name="&gt;&gt;labelX21.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX21.Parent" xml:space="preserve">
+    <value>TabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;labelX21.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="switchButton_ThankYouPageAfterUpdates.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="switchButton_ThankYouPageAfterUpdates.Location" type="System.Drawing.Point, System.Drawing">
+    <value>537, 200</value>
+  </data>
+  <data name="switchButton_ThankYouPageAfterUpdates.OffText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="switchButton_ThankYouPageAfterUpdates.OnText" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="switchButton_ThankYouPageAfterUpdates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="switchButton_ThankYouPageAfterUpdates.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;switchButton_ThankYouPageAfterUpdates.Name" xml:space="preserve">
+    <value>switchButton_ThankYouPageAfterUpdates</value>
+  </data>
+  <data name="&gt;&gt;switchButton_ThankYouPageAfterUpdates.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;switchButton_ThankYouPageAfterUpdates.Parent" xml:space="preserve">
+    <value>TabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;switchButton_ThankYouPageAfterUpdates.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="labelX20.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 172</value>
   </data>
@@ -373,7 +427,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;labelX20.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="switchButton_UseInternalBrowser.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -403,22 +457,13 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;switchButton_UseInternalBrowser.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="comboBoxEx_RecalcChecksumBehavior.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="comboBoxEx_RecalcChecksumBehavior.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="comboItem15.Text" xml:space="preserve">
-    <value>Never</value>
-  </data>
-  <data name="comboItem16.Text" xml:space="preserve">
-    <value>Always</value>
-  </data>
-  <data name="comboItem17.Text" xml:space="preserve">
-    <value>If nedded (Auto)</value>
   </data>
   <data name="comboBoxEx_RecalcChecksumBehavior.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 145</value>
@@ -439,7 +484,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;comboBoxEx_RecalcChecksumBehavior.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="labelX18.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 144</value>
@@ -463,22 +508,13 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;labelX18.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="ComboBoxEx_NotifyOnRomChanges.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="ComboBoxEx_NotifyOnRomChanges.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="ComboItem4.Text" xml:space="preserve">
-    <value>Off</value>
-  </data>
-  <data name="ComboItem5.Text" xml:space="preserve">
-    <value>Infobox</value>
-  </data>
-  <data name="ComboItem11.Text" xml:space="preserve">
-    <value>Popup</value>
   </data>
   <data name="ComboBoxEx_NotifyOnRomChanges.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 117</value>
@@ -499,16 +535,13 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_NotifyOnRomChanges.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="ComboBoxEx_Language.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="ComboBoxEx_Language.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="ComboItem_AutoLang.Text" xml:space="preserve">
-    <value>Auto</value>
   </data>
   <data name="ComboBoxEx_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 89</value>
@@ -529,7 +562,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_Language.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="LabelX12.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 116</value>
@@ -553,7 +586,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;LabelX12.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="LabelX11.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 88</value>
@@ -577,22 +610,13 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;LabelX11.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="ComboBoxEx_AutoScaleMode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="ComboBoxEx_AutoScaleMode.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="ComboItem6.Text" xml:space="preserve">
-    <value>None</value>
-  </data>
-  <data name="ComboItem9.Text" xml:space="preserve">
-    <value>Dpi</value>
-  </data>
-  <data name="ComboItem10.Text" xml:space="preserve">
-    <value>Font</value>
   </data>
   <data name="ComboBoxEx_AutoScaleMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 61</value>
@@ -613,7 +637,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx_AutoScaleMode.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="LabelX5.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 60</value>
@@ -637,7 +661,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;LabelX5.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="ButtonX4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -664,22 +688,13 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;ButtonX4.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="ComboBoxEx1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="ComboBoxEx1.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="ComboItem1.Text" xml:space="preserve">
-    <value>None (Ask)</value>
-  </data>
-  <data name="ComboItem2.Text" xml:space="preserve">
-    <value>Yes</value>
-  </data>
-  <data name="ComboItem3.Text" xml:space="preserve">
-    <value>No</value>
   </data>
   <data name="ComboBoxEx1.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 33</value>
@@ -700,7 +715,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;ComboBoxEx1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="LabelX10.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 32</value>
@@ -724,7 +739,7 @@
     <value>TabControlPanel1</value>
   </data>
   <data name="&gt;&gt;LabelX10.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="TabControlPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -864,15 +879,6 @@
   <data name="ComboBoxEx_UpdateLevel.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="ComboItem12.Text" xml:space="preserve">
-    <value>Stable</value>
-  </data>
-  <data name="ComboItem13.Text" xml:space="preserve">
-    <value>Beta</value>
-  </data>
-  <data name="ComboItem14.Text" xml:space="preserve">
-    <value>Alpha</value>
-  </data>
   <data name="ComboBoxEx_UpdateLevel.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 34</value>
   </data>
@@ -929,12 +935,6 @@
   </data>
   <data name="comboBoxEx_DefaultObjMoveMode.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="comboItem18.Text" xml:space="preserve">
-    <value>Precise</value>
-  </data>
-  <data name="comboItem19.Text" xml:space="preserve">
-    <value>Slide</value>
   </data>
   <data name="comboBoxEx_DefaultObjMoveMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>507, 60</value>
@@ -1419,12 +1419,6 @@
   <data name="ComboBoxEx_HexEditorMode.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="ComboItem7.Text" xml:space="preserve">
-    <value>Built-in</value>
-  </data>
-  <data name="ComboItem8.Text" xml:space="preserve">
-    <value>Custom</value>
-  </data>
   <data name="ComboBoxEx_HexEditorMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>499, 59</value>
   </data>
@@ -1709,6 +1703,66 @@
   </data>
   <data name="&gt;&gt;TabControl2.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="comboItem15.Text" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="comboItem16.Text" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="comboItem17.Text" xml:space="preserve">
+    <value>If nedded (Auto)</value>
+  </data>
+  <data name="ComboItem4.Text" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="ComboItem5.Text" xml:space="preserve">
+    <value>Infobox</value>
+  </data>
+  <data name="ComboItem11.Text" xml:space="preserve">
+    <value>Popup</value>
+  </data>
+  <data name="ComboItem_AutoLang.Text" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="ComboItem6.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ComboItem9.Text" xml:space="preserve">
+    <value>Dpi</value>
+  </data>
+  <data name="ComboItem10.Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>None (Ask)</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ComboItem12.Text" xml:space="preserve">
+    <value>Stable</value>
+  </data>
+  <data name="ComboItem13.Text" xml:space="preserve">
+    <value>Beta</value>
+  </data>
+  <data name="ComboItem14.Text" xml:space="preserve">
+    <value>Alpha</value>
+  </data>
+  <data name="comboItem18.Text" xml:space="preserve">
+    <value>Precise</value>
+  </data>
+  <data name="comboItem19.Text" xml:space="preserve">
+    <value>Slide</value>
+  </data>
+  <data name="ComboItem7.Text" xml:space="preserve">
+    <value>Built-in</value>
+  </data>
+  <data name="ComboItem8.Text" xml:space="preserve">
+    <value>Custom</value>
   </data>
   <metadata name="SuperTooltip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

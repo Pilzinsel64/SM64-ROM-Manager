@@ -1140,7 +1140,7 @@ namespace SM64_ROM_Manager
             var myVersion = new Version(Application.ProductVersion);
             if (Settings.General.LastThankYouPageSeen is null || Settings.General.LastThankYouPageSeen < myVersion)
             {
-                if (!Debugger.IsAttached)
+                if (!Debugger.IsAttached && Settings.General.OpenThankYouFormAfterUpdates)
                     OpenThankYouPage();
                 Settings.General.LastThankYouPageSeen = myVersion;
             }

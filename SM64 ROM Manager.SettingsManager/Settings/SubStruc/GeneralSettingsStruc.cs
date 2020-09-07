@@ -15,6 +15,7 @@ namespace SM64_ROM_Manager.SettingsManager
         public Version LastThankYouPageSeen { get; set; }
         public RecalcChecksumBehavior RecalcChecksumBehavior { get; set; }
         public bool UseInternalBrowser { get; set; }
+        public bool OpenThankYouFormAfterUpdates { get; set; }
 
         public void ResetValues()
         {
@@ -30,6 +31,7 @@ namespace SM64_ROM_Manager.SettingsManager
             LastThankYouPageSeen = null;
             RecalcChecksumBehavior = RecalcChecksumBehavior.Always;
             UseInternalBrowser = true;
+            OpenThankYouFormAfterUpdates = true;
         }
     }
 }

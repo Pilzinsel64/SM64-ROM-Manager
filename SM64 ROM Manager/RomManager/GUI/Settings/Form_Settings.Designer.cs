@@ -49,6 +49,8 @@ namespace SM64_ROM_Manager
             this.LabelX6 = new DevComponents.DotNetBar.LabelX();
             this.TabControl2 = new DevComponents.DotNetBar.TabControl();
             this.TabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.labelX21 = new DevComponents.DotNetBar.LabelX();
+            this.switchButton_ThankYouPageAfterUpdates = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.labelX20 = new DevComponents.DotNetBar.LabelX();
             this.switchButton_UseInternalBrowser = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.comboBoxEx_RecalcChecksumBehavior = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -272,6 +274,8 @@ namespace SM64_ROM_Manager
             // 
             // TabControlPanel1
             // 
+            this.TabControlPanel1.Controls.Add(this.labelX21);
+            this.TabControlPanel1.Controls.Add(this.switchButton_ThankYouPageAfterUpdates);
             this.TabControlPanel1.Controls.Add(this.labelX20);
             this.TabControlPanel1.Controls.Add(this.switchButton_UseInternalBrowser);
             this.TabControlPanel1.Controls.Add(this.comboBoxEx_RecalcChecksumBehavior);
@@ -298,6 +302,35 @@ namespace SM64_ROM_Manager
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel1.Style.GradientAngle = 90;
             this.TabControlPanel1.TabItem = this.TabItem1;
+            // 
+            // labelX21
+            // 
+            this.labelX21.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX21, "labelX21");
+            this.labelX21.Name = "labelX21";
+            this.labelX21.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            // 
+            // switchButton_ThankYouPageAfterUpdates
+            // 
+            resources.ApplyResources(this.switchButton_ThankYouPageAfterUpdates, "switchButton_ThankYouPageAfterUpdates");
+            // 
+            // 
+            // 
+            this.switchButton_ThankYouPageAfterUpdates.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchButton_ThankYouPageAfterUpdates.Name = "switchButton_ThankYouPageAfterUpdates";
+            this.switchButton_ThankYouPageAfterUpdates.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.switchButton_ThankYouPageAfterUpdates.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.switchButton_ThankYouPageAfterUpdates.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.switchButton_ThankYouPageAfterUpdates.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchButton_ThankYouPageAfterUpdates.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.switchButton_ThankYouPageAfterUpdates.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.switchButton_ThankYouPageAfterUpdates.SwitchWidth = 15;
+            this.switchButton_ThankYouPageAfterUpdates.Value = true;
+            this.switchButton_ThankYouPageAfterUpdates.ValueObject = "Y";
             // 
             // labelX20
             // 
@@ -1260,5 +1293,7 @@ namespace SM64_ROM_Manager
         private DevComponents.Editors.ComboItem comboItem19;
         private DevComponents.DotNetBar.LabelX labelX20;
         private DevComponents.DotNetBar.Controls.SwitchButton switchButton_UseInternalBrowser;
+        private DevComponents.DotNetBar.LabelX labelX21;
+        private DevComponents.DotNetBar.Controls.SwitchButton switchButton_ThankYouPageAfterUpdates;
     }
 }

@@ -144,6 +144,15 @@
   <data name="LabelX6.Text" xml:space="preserve">
     <value>Standart Kameramodus:</value>
   </data>
+  <data name="labelX21.Text" xml:space="preserve">
+    <value>Öffne Dankes-Seite nach Aktuallisierungen:</value>
+  </data>
+  <data name="switchButton1.OffText" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="switchButton1.OnText" xml:space="preserve">
+    <value>Ja</value>
+  </data>
   <data name="labelX20.Text" xml:space="preserve">
     <value>Internen Browser verwenden:</value>
   </data>
