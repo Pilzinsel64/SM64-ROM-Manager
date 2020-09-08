@@ -20,13 +20,7 @@ namespace System.Windows.Forms
 
         public static void UpdateAmbientColors(this Control c)
         {
-            if (!ambientColorControlTypesBlackList.Contains(c.GetType()))
-            {
-                StyleManager.UpdateAmbientColors(c);
-            }
-
-            foreach (Control cc in c.Controls)
-                cc.UpdateAmbientColors();
+            StyleManager.UpdateAmbientColors(c);
         }
     }
 }
