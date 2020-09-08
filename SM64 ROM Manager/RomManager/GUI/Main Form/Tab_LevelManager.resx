@@ -133,7 +133,7 @@
     <value>92, 23</value>
   </data>
   <data name="ButtonItem_ImportArea.Text" xml:space="preserve">
-    <value>Import Area</value>
+    <value>Import Area ...</value>
   </data>
   <data name="Button_LM_AddArea.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -173,6 +173,9 @@
   </data>
   <data name="ButtonItem2_EditGeolayoutScript.Text" xml:space="preserve">
     <value>Edit Geo Layout Script</value>
+  </data>
+  <data name="ButtonItem_ExportArea.Text" xml:space="preserve">
+    <value>Export area ...</value>
   </data>
   <data name="Button_LM_AreaEditor.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -269,6 +272,9 @@
   </data>
   <data name="ButtonItem15.Text" xml:space="preserve">
     <value>Edit Level Script</value>
+  </data>
+  <data name="ButtonItem_ExportLevel.Text" xml:space="preserve">
+    <value>Export level ...</value>
   </data>
   <data name="ButtonX_LM_LevelsMore.TabIndex" type="System.Int32, mscorlib">
     <value>91</value>
@@ -2342,6 +2348,12 @@
   <data name="&gt;&gt;ButtonItem2_EditGeolayoutScript.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;ButtonItem_ExportArea.Name" xml:space="preserve">
+    <value>ButtonItem_ExportArea</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportArea.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;ButtonItem20.Name" xml:space="preserve">
     <value>ButtonItem20</value>
   </data>
@@ -2376,6 +2388,12 @@
     <value>ButtonItem15</value>
   </data>
   <data name="&gt;&gt;ButtonItem15.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportLevel.Name" xml:space="preserve">
+    <value>ButtonItem_ExportLevel</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportLevel.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem26.Name" xml:space="preserve">

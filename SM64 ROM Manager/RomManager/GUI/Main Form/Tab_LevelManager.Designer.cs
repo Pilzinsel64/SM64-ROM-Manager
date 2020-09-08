@@ -47,6 +47,7 @@ namespace SM64_ROM_Manager
             this.Button_LM_RemoveArea = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_EditAreaLevelScript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem2_EditGeolayoutScript = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ExportArea = new DevComponents.DotNetBar.ButtonItem();
             this.ListBoxAdv_LM_Areas = new SM64_ROM_Manager.Publics.Controls.ItemListBox();
             this.GroupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.ButtonX_LM_LevelsMore = new DevComponents.DotNetBar.ButtonX();
@@ -56,6 +57,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem19 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem21 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem15 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ExportLevel = new DevComponents.DotNetBar.ButtonItem();
             this.Button_LM_AddNewLevel = new DevComponents.DotNetBar.ButtonX();
             this.ButtonItem26 = new DevComponents.DotNetBar.ButtonItem();
             this.ListBoxAdv_LM_Levels = new SM64_ROM_Manager.Publics.Controls.ItemListBox();
@@ -217,6 +219,7 @@ namespace SM64_ROM_Manager
             // ButtonItem_ImportArea
             // 
             this.ButtonItem_ImportArea.GlobalItem = false;
+            this.ButtonItem_ImportArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
             this.ButtonItem_ImportArea.Name = "ButtonItem_ImportArea";
             resources.ApplyResources(this.ButtonItem_ImportArea, "ButtonItem_ImportArea");
             this.ButtonItem_ImportArea.Click += new System.EventHandler(this.ButtonItem_ImportArea_Click);
@@ -234,7 +237,8 @@ namespace SM64_ROM_Manager
             this.ButtonItem_ChangeAreaID,
             this.Button_LM_RemoveArea,
             this.ButtonItem_EditAreaLevelScript,
-            this.ButtonItem2_EditGeolayoutScript});
+            this.ButtonItem2_EditGeolayoutScript,
+            this.ButtonItem_ExportArea});
             this.Button_LM_AreaEditor.SymbolColor = System.Drawing.Color.Goldenrod;
             this.Button_LM_AreaEditor.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_AreaEditor.SymbolSize = 12F;
@@ -281,6 +285,15 @@ namespace SM64_ROM_Manager
             this.ButtonItem2_EditGeolayoutScript.SymbolSize = 12F;
             resources.ApplyResources(this.ButtonItem2_EditGeolayoutScript, "ButtonItem2_EditGeolayoutScript");
             this.ButtonItem2_EditGeolayoutScript.Click += new System.EventHandler(this.ButtonItem2_EditGeolayoutScript_Click);
+            // 
+            // ButtonItem_ExportArea
+            // 
+            this.ButtonItem_ExportArea.BeginGroup = true;
+            this.ButtonItem_ExportArea.GlobalItem = false;
+            this.ButtonItem_ExportArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
+            this.ButtonItem_ExportArea.Name = "ButtonItem_ExportArea";
+            resources.ApplyResources(this.ButtonItem_ExportArea, "ButtonItem_ExportArea");
+            this.ButtonItem_ExportArea.Click += new System.EventHandler(this.ButtonItem_ExportArea_Click);
             // 
             // ListBoxAdv_LM_Areas
             // 
@@ -353,7 +366,8 @@ namespace SM64_ROM_Manager
             this.ButtonItem24,
             this.ButtonItem19,
             this.ButtonItem21,
-            this.ButtonItem15});
+            this.ButtonItem15,
+            this.ButtonItem_ExportLevel});
             this.ButtonX_LM_LevelsMore.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ButtonX_LM_LevelsMore.SymbolSize = 12F;
             this.ButtonX_LM_LevelsMore.PopupOpen += new System.EventHandler(this.ButtonX_LM_LevelsMore_PopupOpen);
@@ -413,6 +427,14 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.ButtonItem15, "ButtonItem15");
             this.ButtonItem15.Click += new System.EventHandler(this.ButtonItem15_Click);
             // 
+            // ButtonItem_ExportLevel
+            // 
+            this.ButtonItem_ExportLevel.BeginGroup = true;
+            this.ButtonItem_ExportLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
+            this.ButtonItem_ExportLevel.Name = "ButtonItem_ExportLevel";
+            resources.ApplyResources(this.ButtonItem_ExportLevel, "ButtonItem_ExportLevel");
+            this.ButtonItem_ExportLevel.Click += new System.EventHandler(this.ButtonItem_ExportLevel_Click);
+            // 
             // Button_LM_AddNewLevel
             // 
             this.Button_LM_AddNewLevel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -432,6 +454,7 @@ namespace SM64_ROM_Manager
             // ButtonItem26
             // 
             this.ButtonItem26.GlobalItem = false;
+            this.ButtonItem26.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
             this.ButtonItem26.Name = "ButtonItem26";
             resources.ApplyResources(this.ButtonItem26, "ButtonItem26");
             this.ButtonItem26.Click += new System.EventHandler(this.ButtonItem26_Click);
@@ -1805,5 +1828,7 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ChangeAreaID;
         private DevComponents.DotNetBar.Controls.RangeSlider RangeSlider_CameraFrustrum;
         private DevComponents.DotNetBar.LabelX labelX17;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportArea;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportLevel;
     }
 }

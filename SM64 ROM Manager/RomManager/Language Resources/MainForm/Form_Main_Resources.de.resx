@@ -123,6 +123,24 @@
   <data name="Exception_RomWasUsedBySM64E" xml:space="preserve">
     <value>Diese ROM wurde vom SM64 Editor genutzt und ist nicht mit diesem Programm kompatibel.</value>
   </data>
+  <data name="FileDialog_ExportLevelOrArea_CbCompression_DisableCompression" xml:space="preserve">
+    <value>Schnell (keine Kompression)</value>
+  </data>
+  <data name="FileDialog_ExportLevelOrArea_CbCompression_EnableCompression" xml:space="preserve">
+    <value>Kleine Dateigröße (empfohlen)</value>
+  </data>
+  <data name="FileDialog_ExportLevelOrArea_CbMode_FullArea" xml:space="preserve">
+    <value>Kompletter Bereich</value>
+  </data>
+  <data name="FileDialog_ExportLevelOrArea_CbMode_FullLevel" xml:space="preserve">
+    <value>Komplettes Level</value>
+  </data>
+  <data name="FileDialog_ExportLevelOrArea_CbMode_Objects" xml:space="preserve">
+    <value>Alle Objekte</value>
+  </data>
+  <data name="FileDialog_ExportLevelOrArea_CbMode_Warps" xml:space="preserve">
+    <value>Alle Warps</value>
+  </data>
   <data name="MsgBox_BankSizeChangedSuccess" xml:space="preserve">
     <value>Die Größe der Bank 0x19 wurde erforlgriech geändert.</value>
   </data>

@@ -117,14 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonItem_ImportArea.Text" xml:space="preserve">
-    <value>Bereich importieren ...</value>
-  </data>
   <data name="Button_LM_AddArea.Text" xml:space="preserve">
     <value>Neu</value>
   </data>
-  <data name="buttonItem2.Text" xml:space="preserve">
-    <value>ID ändern</value>
+  <data name="GroupBox_LM_Areas.Text" xml:space="preserve">
+    <value>Bereiche</value>
+  </data>
+  <data name="ButtonItem_ImportArea.Text" xml:space="preserve">
+    <value>Bereich importieren ...</value>
+  </data>
+  <data name="ButtonItem_ChangeAreaID.Text" xml:space="preserve">
+    <value>Bereichs-ID ändern</value>
   </data>
   <data name="Button_LM_RemoveArea.Text" xml:space="preserve">
     <value>Löschen</value>
@@ -135,8 +138,40 @@
   <data name="ButtonItem2_EditGeolayoutScript.Text" xml:space="preserve">
     <value>Geolayoutscript bearbeiten</value>
   </data>
-  <data name="GroupBox_LM_Areas.Text" xml:space="preserve">
-    <value>Bereiche</value>
+  <data name="ButtonItem_ExportArea.Text" xml:space="preserve">
+    <value>Bereich exportiern ...</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonItem2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIhJREFUOE9j
+        gIGSaUf+k4Kh2hAAJHjoxX+i8MAbMHPPA/IN2HTjK5iGakMAYg0Ia9z1f9m5t+Qb4Fe19X9g7XYgvSUC
+        qhUC0A0AKSSA//lWbSmHaqeBAbgwSHNIw87/fhVbPaBaIYBYA6La9v5fc/njAEYjCFOUkEAYpBaqDQGo
+        YgApGKKLgQEA6P+LaeZXp4MAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="buttonItem2.Text" xml:space="preserve">
+    <value>Objekte exportieren ...</value>
+  </data>
+  <data name="buttonItem3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAIhJREFUOE9j
+        gIGSaUf+k4Kh2hAAJHjoxX+i8MAbMHPPA/IN2HTjK5iGakMAYg0Ia9z1f9m5t+Qb4Fe19X9g7XYgvSUC
+        qhUC0A0AKSSA//lWbSmHaqeBAbgwSHNIw87/fhVbPaBaIYBYA6La9v5fc/njAEYjCFOUkEAYpBaqDQGo
+        YgApGKKLgQEA6P+LaeZXp4MAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="buttonItem3.Text" xml:space="preserve">
+    <value>Warps exportieren ...</value>
+  </data>
+  <data name="ButtonX_LM_LevelsMore.Text" xml:space="preserve">
+    <value>Mehr ...</value>
+  </data>
+  <data name="Button_LM_AddNewLevel.Text" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="GroupPanel1.Text" xml:space="preserve">
+    <value>Level</value>
   </data>
   <data name="ButtonItem20.Text" xml:space="preserve">
     <value>Level-ID ändern</value>
@@ -153,43 +188,14 @@
   <data name="ButtonItem21.Text" xml:space="preserve">
     <value>ROM-Adresse kopieren</value>
   </data>
-  <data name="ButtonX_LM_LevelsMore.Text" xml:space="preserve">
-    <value>Mehr ...</value>
+  <data name="ButtonItem15.Text" xml:space="preserve">
+    <value>Levelscript bearbeiten</value>
+  </data>
+  <data name="ButtonItem_ExportLevel.Text" xml:space="preserve">
+    <value>Level exportieren ...</value>
   </data>
   <data name="ButtonItem26.Text" xml:space="preserve">
     <value>Level importieren ...</value>
-  </data>
-  <data name="Button_LM_AddNewLevel.Text" xml:space="preserve">
-    <value>Neu</value>
-  </data>
-  <data name="GroupPanel1.Text" xml:space="preserve">
-    <value>Level</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
   </data>
   <data name="LabelX1.Text" xml:space="preserve">
     <value>Bereichshindergrund:</value>
@@ -215,7 +221,6 @@
   <data name="LabelX11.Text" xml:space="preserve">
     <value>Musik-ID:</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ColorPickerButton_LM_BackgroundColor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
@@ -311,15 +316,6 @@
   <data name="LabelX12.Text" xml:space="preserve">
     <value>Original-Level:</value>
   </data>
-  <data name="ComboItem1.Text" xml:space="preserve">
-    <value>Original</value>
-  </data>
-  <data name="ComboItem2.Text" xml:space="preserve">
-    <value>Eigen</value>
-  </data>
-  <data name="ComboItem3.Text" xml:space="preserve">
-    <value>Kein</value>
-  </data>
   <data name="LabelX15.Text" xml:space="preserve">
     <value>Levelhindergrund:</value>
   </data>
@@ -346,6 +342,15 @@
   </data>
   <data name="TabItem1.Text" xml:space="preserve">
     <value>Leveleinstellungen</value>
+  </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Eigen</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>Kein</value>
   </data>
   <data name="ButtonX_ManageLocalObjects.Location" type="System.Drawing.Point, System.Drawing">
     <value>223, 28</value>

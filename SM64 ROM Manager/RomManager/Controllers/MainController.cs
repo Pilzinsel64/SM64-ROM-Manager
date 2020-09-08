@@ -1771,25 +1771,6 @@ namespace SM64_ROM_Manager
             return lvl.level?.Bank0x19 is object;
         }        
 
-        public void ExportLevel(int levelIndex, string filePath, CompressionLevel compressionLevel)
-        {
-            var lvl = GetLevelAndArea(levelIndex).level;
-            if (lvl is object)
-                ExportLevel(new LevelExport(lvl), filePath, compressionLevel);
-        }
-
-        public void ExportLevelArea(int levelIndex, int areaIndex, string filePath, CompressionLevel compressionLevel)
-        {
-            var area = GetLevelAndArea(levelIndex, areaIndex).area;
-            if (area is object)
-                ExportLevel(new LevelExport(area), filePath, compressionLevel);
-        }
-
-        private void ExportLevel(LevelExport export, string filePath, CompressionLevel compressionLevel)
-        {
-            export.WriteToFile(filePath, compressionLevel);
-        }
-
         public async Task ExportLevelVisualMap(int levelIndex, int areaIndex)
         {
             var lvl = GetLevelAndArea(levelIndex, areaIndex);
@@ -1966,15 +1947,23 @@ namespace SM64_ROM_Manager
             this.ImportLevelAreaPrivate(lvl);
         }
 
-        private void ImportLevelAreaPrivate(Level destLevel = null)
+        private void ImportLevelAreaPrivate(Level destLevel = null, LevelArea destArea = null)
         {
             bool addAreasOnly = destLevel is object;
             var addedFuncs = new List<PluginFunction>();
             var allFuncs = Publics.General.PluginManager.GetFunctions("levelmanager.importlevels.getilevelmanager");
             var cofd = new CommonOpenFileDialog();
-            cofd.Filters.Add(new CommonFileDialogFilter("SM64 ROMs (*.z64)", "*.z64"));
+            cofd.Filters.Add(new CommonFileDialogFilter("SM64 ROMs, Level Exports", "*.z64;*.lvle"));
             var cb = new CommonFileDialogComboBox();
-            cb.Items.Add(new CommonFileDialogComboBoxItem("SM64 RM/Editor"));
+
+            // Add core funcs
+            cb.Items.Add(new CommonFileDialogComboBoxItem("SM64 RM/Editor (*.z64)"));
+            cb.Items.Add(new CommonFileDialogComboBoxItem("Level Export (*.lvle)"));
+
+            // Remember core funcs
+            var countOfCoreFuncs = cb.Items.Count;
+
+            // Add plugin funcs
             foreach (PluginFunction pf in allFuncs)
             {
                 if (pf.Params.Count() >= 1 && pf.Params[0] is string)
@@ -1986,43 +1975,67 @@ namespace SM64_ROM_Manager
 
             cofd.Controls.Add(cb);
             cb.SelectedIndex = 0;
+
             if (cofd.ShowDialog() == CommonFileDialogResult.Ok)
             {
                 ILevelManager lvlmgr = null;
+                var useLevelExportImporter = false;
+
                 var switchExpr = cb.SelectedIndex;
                 switch (switchExpr)
                 {
                     case 0:
-                        {
-                            lvlmgr = new LevelManager();
-                            break;
-                        }
-
+                        lvlmgr = new LevelManager();
+                        break;
+                    case 1:
+                        useLevelExportImporter = true;
+                        break;
                     default:
-                        {
-                            lvlmgr = (ILevelManager)addedFuncs[cb.SelectedIndex - 1].InvokeGet();
-                            break;
-                        }
+                        lvlmgr = (ILevelManager)addedFuncs[cb.SelectedIndex - countOfCoreFuncs].InvokeGet();
+                        break;
                 }
 
-                var frm = new SM64_ROM_Manager.ImportLevelDialog(RomManager, destLevel, cofd.FileName, lvlmgr);
-                if (frm.ShowDialog() == DialogResult.OK)
+                // Load levels via level manager
+                if (lvlmgr != null)
                 {
-                    if (!addAreasOnly)
+                    var frm = new SM64_ROM_Manager.ImportLevelDialog(RomManager, destLevel, cofd.FileName, lvlmgr);
+                    if (frm.ShowDialog() == DialogResult.OK)
                     {
-                        destLevel = frm.LevelCopy;
-                    }
+                        if (!addAreasOnly)
+                            destLevel = frm.LevelCopy;
 
-                    SetLevelscriptNeedToSave(destLevel);
-                    SetLevelBank0x0ENeedToSave(destLevel);
-                    if (addAreasOnly)
-                    {
-                        foreach (LevelArea area in frm.AreasCopy)
-                            LevelAreaAdded?.Invoke(new SM64_ROM_Manager.EventArguments.LevelAreaEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.Areas.IndexOf(area), area.AreaID));
+                        SetLevelscriptNeedToSave(destLevel);
+                        SetLevelBank0x0ENeedToSave(destLevel);
+
+                        if (addAreasOnly)
+                        {
+                            foreach (LevelArea area in frm.AreasCopy)
+                                LevelAreaAdded?.Invoke(new SM64_ROM_Manager.EventArguments.LevelAreaEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.Areas.IndexOf(area), area.AreaID));
+                        }
+                        else
+                            LevelAdded?.Invoke(new SM64_ROM_Manager.EventArguments.LevelEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.LevelID));
                     }
+                }
+                // Load levels from file and import via LevelExportImporter
+                else if (useLevelExportImporter)
+                {
+                    // Load from file
+                    var levelExport = LevelExport.ReadFromFile(cofd.FileName);
+                    
+                    // Import Levelscript
+                    if (destArea is object)
+                    {
+                        //LevelExportImporter.ImportScript(levelExport);
+                    }
+                    // Import Areas
+                    else if (destLevel is object)
+                    {
+                        //LevelExportImporter.ImportArea(levelExport);
+                    }
+                    // Import Levels
                     else
                     {
-                        LevelAdded?.Invoke(new SM64_ROM_Manager.EventArguments.LevelEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.LevelID));
+                        //LevelExportImporter.ImportLevel(levelExport, RomManager);
                     }
                 }
             }
@@ -2200,6 +2213,46 @@ namespace SM64_ROM_Manager
         {
             var compressionLevel = compression ? CompressionLevel.Optimal : CompressionLevel.NoCompression;
             export.WriteToFile(filePath, compressionLevel);
+        }
+
+        public (string filePath, bool compression, int mode) OpenExportLevelFileDialog(bool levelOnly)
+        {
+            string filePath = string.Empty;
+            bool compression = true;
+            int mode = 0;
+
+            var ofd = new CommonOpenFileDialog();
+            ofd.Filters.Add(new CommonFileDialogFilter("Level Export", "*.lvle"));
+
+            // Add mode ComboBox
+            var cbMode = new CommonFileDialogComboBox();
+            if (levelOnly)
+                cbMode.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_FullLevel));
+            else
+            {
+                cbMode.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_FullArea));
+                cbMode.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_Objects));
+                cbMode.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_Warps));
+            }
+            ofd.Controls.Add(cbMode);
+            cbMode.SelectedIndex = 0;
+
+            // Add compression ComboBox
+            var cbCompression = new CommonFileDialogComboBox();
+            cbCompression.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbCompression_EnableCompression));
+            cbCompression.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbCompression_DisableCompression));
+            ofd.Controls.Add(cbCompression);
+            cbCompression.SelectedIndex = 0;
+
+            // Open dialog
+            if (ofd.ShowDialog(mainForm.Handle) == CommonFileDialogResult.Ok)
+            {
+                filePath = ofd.FileName;
+                mode = cbMode.SelectedIndex + 1;
+                compression = cbCompression.SelectedIndex == 0;
+            }
+
+            return (filePath, compression, mode);
         }
 
         // M u s i c   M a n a g e r

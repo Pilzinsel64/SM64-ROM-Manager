@@ -1223,5 +1223,36 @@ namespace SM64_ROM_Manager
         {
             SaveAreaSettings();
         }
+
+        private void ButtonItem_ExportArea_Click(object sender, EventArgs e)
+        {
+            ExportLevelOrArea(false);
+        }
+
+        private void ButtonItem_ExportLevel_Click(object sender, EventArgs e)
+        {
+            ExportLevelOrArea(true);
+        }
+
+        private void ExportLevelOrArea(bool levelOnly)
+        {
+            var res = Controller.OpenExportLevelFileDialog(levelOnly);
+
+            switch (res.mode)
+            {
+                case 1: // Export full level
+                    Controller.ExportLevel(res.filePath, res.compression, CurrentLevelIndex);
+                    break;
+                case 2: // Export full area
+                    Controller.ExportLevelArea(res.filePath, res.compression, CurrentLevelIndex, CurrentAreaIndex);
+                    break;
+                case 3: // Export objects
+                    Controller.ExportLevelAreaObjects(res.filePath, res.compression, CurrentLevelIndex, CurrentAreaIndex);
+                    break;
+                case 4: // Export warps
+                    Controller.ExportLevelAreaWarps(res.filePath, res.compression, CurrentLevelIndex, CurrentAreaIndex);
+                    break;
+            }
+        }
     }
 }
