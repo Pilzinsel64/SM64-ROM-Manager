@@ -990,6 +990,36 @@
               Sucht eine lokalisierte Zeichenfolge, die This ROM was modified by SM64 Editor and isn&apos;t compatible with SM64 ROM Manager. ähnelt.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbCompression_DisableCompression">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Fast (no compression) ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbCompression_EnableCompression">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Low file size (recommended) ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_FullArea">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Full Area ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_FullLevel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Full Level ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_Objects">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die All Objects ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_Warps">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die All Warps ähnelt.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_BankSizeChangedSuccess">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die Successfully changed the size of bank 0x19. ähnelt.

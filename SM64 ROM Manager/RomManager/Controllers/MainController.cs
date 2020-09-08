@@ -2221,8 +2221,8 @@ namespace SM64_ROM_Manager
             bool compression = true;
             int mode = 0;
 
-            var ofd = new CommonOpenFileDialog();
-            ofd.Filters.Add(new CommonFileDialogFilter("Level Export", "*.lvle"));
+            var sfd = new CommonSaveFileDialog();
+            sfd.Filters.Add(new CommonFileDialogFilter("Level Export", "*.lvle"));
 
             // Add mode ComboBox
             var cbMode = new CommonFileDialogComboBox();
@@ -2234,20 +2234,20 @@ namespace SM64_ROM_Manager
                 cbMode.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_Objects));
                 cbMode.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_Warps));
             }
-            ofd.Controls.Add(cbMode);
+            sfd.Controls.Add(cbMode);
             cbMode.SelectedIndex = 0;
 
             // Add compression ComboBox
             var cbCompression = new CommonFileDialogComboBox();
             cbCompression.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbCompression_EnableCompression));
             cbCompression.Items.Add(new CommonFileDialogComboBoxItem(Form_Main_Resources.FileDialog_ExportLevelOrArea_CbCompression_DisableCompression));
-            ofd.Controls.Add(cbCompression);
+            sfd.Controls.Add(cbCompression);
             cbCompression.SelectedIndex = 0;
 
             // Open dialog
-            if (ofd.ShowDialog(mainForm.Handle) == CommonFileDialogResult.Ok)
+            if (sfd.ShowDialog(mainForm.Handle) == CommonFileDialogResult.Ok)
             {
-                filePath = ofd.FileName;
+                filePath = sfd.FileName;
                 mode = cbMode.SelectedIndex + 1;
                 compression = cbCompression.SelectedIndex == 0;
             }
