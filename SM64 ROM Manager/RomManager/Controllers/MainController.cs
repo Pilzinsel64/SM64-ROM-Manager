@@ -40,6 +40,7 @@ using System.Diagnostics;
 using SM64Lib.Objects.ObjectBanks.Data;
 using System.IO.Compression;
 using SM64_ROM_Manager.Publics;
+using SM64Lib.Levels.Script;
 
 namespace SM64_ROM_Manager
 {
@@ -2025,7 +2026,7 @@ namespace SM64_ROM_Manager
                     // Import Levelscript
                     if (destArea is object)
                     {
-                        //LevelExportImporter.ImportScript(levelExport);
+                        LevelExportImporter.ImportScript(levelExport, destArea, (LevelscriptCommand[])levelExport.Content);
                     }
                     // Import Areas
                     else if (destLevel is object)
