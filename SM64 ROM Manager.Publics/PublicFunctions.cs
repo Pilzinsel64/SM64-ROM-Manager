@@ -13,6 +13,8 @@ using global::Pilz.Reflection.PluginSystem;
 using global::Pilz.S3DFileParser;
 using global::RegistryUtils;
 using global::SM64_ROM_Manager.SettingsManager;
+using System.Drawing;
+using System.Diagnostics;
 
 namespace SM64_ROM_Manager.Publics
 {
@@ -249,6 +251,24 @@ namespace SM64_ROM_Manager.Publics
 
             foreach (string f in toRemove)
                 collection.Remove(f);
+        }
+
+        public static void OpenBrowser(Uri uri, bool maximized = false, Size? windowSize = null)
+        {
+            if (Settings.General.UseInternalBrowser)
+            {
+                var frm = new WebViewer(uri);
+
+                if (maximized)
+                    frm.WindowState = FormWindowState.Maximized;
+
+                if (windowSize != null)
+                    frm.ClientSize = (Size)windowSize;
+
+                frm.Show();
+            }
+            else
+                Process.Start(uri.AbsoluteUri);
         }
     }
 }

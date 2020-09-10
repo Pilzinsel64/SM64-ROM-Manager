@@ -79,6 +79,60 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Fast (no compression) ähnelt.
+        /// </summary>
+        public static string FileDialog_ExportLevelOrArea_CbCompression_DisableCompression {
+            get {
+                return ResourceManager.GetString("FileDialog_ExportLevelOrArea_CbCompression_DisableCompression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Low file size (recommended) ähnelt.
+        /// </summary>
+        public static string FileDialog_ExportLevelOrArea_CbCompression_EnableCompression {
+            get {
+                return ResourceManager.GetString("FileDialog_ExportLevelOrArea_CbCompression_EnableCompression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Full Area ähnelt.
+        /// </summary>
+        public static string FileDialog_ExportLevelOrArea_CbMode_FullArea {
+            get {
+                return ResourceManager.GetString("FileDialog_ExportLevelOrArea_CbMode_FullArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Full Level ähnelt.
+        /// </summary>
+        public static string FileDialog_ExportLevelOrArea_CbMode_FullLevel {
+            get {
+                return ResourceManager.GetString("FileDialog_ExportLevelOrArea_CbMode_FullLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die All Objects ähnelt.
+        /// </summary>
+        public static string FileDialog_ExportLevelOrArea_CbMode_Objects {
+            get {
+                return ResourceManager.GetString("FileDialog_ExportLevelOrArea_CbMode_Objects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die All Warps ähnelt.
+        /// </summary>
+        public static string FileDialog_ExportLevelOrArea_CbMode_Warps {
+            get {
+                return ResourceManager.GetString("FileDialog_ExportLevelOrArea_CbMode_Warps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Successfully changed the size of bank 0x19. ähnelt.
         /// </summary>
         public static string MsgBox_BankSizeChangedSuccess {

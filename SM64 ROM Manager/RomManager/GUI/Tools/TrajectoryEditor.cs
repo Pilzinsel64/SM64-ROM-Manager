@@ -303,8 +303,11 @@ namespace SM64_ROM_Manager
                         if (curLine is object)
                         {
                             var parts = curLine.Split(",");
-                            var v = new Vector3(Convert.ToSingle(parts[0].Trim()), Convert.ToSingle(parts[1].Trim()), Convert.ToSingle(parts[2].Trim()));
-                            SelectedTrajectory.Points.Add(v);
+                            if (parts.Length >= 3)
+                            {
+                                var v = new Vector3(Convert.ToSingle(parts[0].Trim()), Convert.ToSingle(parts[1].Trim()), Convert.ToSingle(parts[2].Trim()));
+                                SelectedTrajectory.Points.Add(v);
+                            }
                         }
                     }
 
