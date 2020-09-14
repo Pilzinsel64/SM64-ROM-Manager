@@ -12,17 +12,6 @@ namespace SM64_ROM_Manager
 {
     public partial class ImportLevelDialog
     {
-        public ImportLevelDialog(RomManager rommgr, Level destLevel, string romPath, ILevelManager lvlmgr)
-        {
-            this.Shown += ImportLevelDialog_Shown;
-            InitializeComponent();
-            base.UpdateAmbientColors();
-            this.rommgr = rommgr;
-            this.destLevel = destLevel;
-            addAreasOnly = destLevel is object;
-            openrompath = romPath;
-            this.lvlmgr = lvlmgr;
-        }
 
         private RomManager rommgr;
         private RomManager openrom = null;
@@ -30,9 +19,80 @@ namespace SM64_ROM_Manager
         private Level destLevel = null;
         private string openrompath;
         private ILevelManager lvlmgr;
+        /// <summary>
+        /// Possible modes:
+        /// 0 = Import from ROM
+        /// 1 = Import from level export
+        /// </summary>
+        private int importMode;
 
         public Level LevelCopy { get; private set; } = null;
         public LevelArea[] AreasCopy { get; private set; } = null;
+
+        /// <summary>
+        /// Imports a level/area from a ROM file interactively.
+        /// </summary>
+        /// <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+        /// <param name="destLevel">The destinated level where the areas should be added. Leave NULL if you want to import whole levels only.</param>
+        /// <param name="romPath">The path to the ROM file to import from.</param>
+        /// <param name="lvlmgr">A level manager to use for loading the levels from ROM.</param>
+        public ImportLevelDialog(RomManager rommgr, Level destLevel, string romPath, ILevelManager lvlmgr) : this(rommgr, destLevel, romPath, 0)
+        {
+            this.lvlmgr = lvlmgr;
+        }
+
+        /// <summary>
+        /// Imports a level/Area from a level export file interactively.
+        /// </summary>
+        /// <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+        /// <param name="destLevel">The destinated level where the areas should be added.</param>
+        /// <param name="exportPath">The path to the level export file to import from.</param>
+        public ImportLevelDialog(RomManager rommgr, Level destLevel, string exportPath) : this(rommgr, destLevel, exportPath, 1)
+        {
+        }
+
+        /// <summary>
+        /// Imports a level/Area from a level export file interactively.
+        /// </summary>
+        /// <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+        /// <param name="exportPath">The path to the level export file to import from.</param>
+        public ImportLevelDialog(RomManager rommgr, string exportPath) : this(rommgr, null, exportPath, 1)
+        {
+        }
+
+        private ImportLevelDialog(RomManager rommgr, Level destLevel, string filePath, int mode)
+        {
+            this.Shown += ImportLevelDialog_Shown;
+            InitializeComponent();
+            base.UpdateAmbientColors();
+
+            this.rommgr = rommgr;
+            this.destLevel = destLevel;
+            addAreasOnly = destLevel is object;
+
+            openrompath = filePath;
+            importMode = mode;
+        }
+
+        public async Task<bool> LoadList()
+        {
+            bool res;
+
+            switch (importMode)
+            {
+                case 0:
+                    res = await LoadROM();
+                    break;
+                case 1:
+                    res = await LoadLevelExport();
+                    break;
+                default:
+                    res = false;
+                    break;
+            }
+
+            return res;
+        }
 
         public async Task<bool> LoadROM()
         {
@@ -46,7 +106,7 @@ namespace SM64_ROM_Manager
                 await Task.Run(() => mgr.LoadLevels());
                 CircularProgress1.Stop();
                 Enabled = true;
-                LoadLevels();
+                LoadLevelsFromROM();
                 return true;
             }
             else
@@ -56,21 +116,13 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private void LoadLevels()
+        private void LoadLevelsFromROM()
         {
             ItemListBox_Levels.Items.Clear();
             if (openrom is object)
             {
                 foreach (Level lvl in openrom.Levels)
-                {
-                    var lid = rommgr.LevelInfoData.GetByLevelID(lvl.LevelID);
-                    var btn = new ButtonItem()
-                    {
-                        Text = (lid.Type == LevelInfoDataTabelList.LevelTypes.Level ? Conversions.ToByte(lid.Number).ToString("00") + " - " : "") + lid.Name,
-                        Tag = lvl
-                    };
-                    ItemListBox_Levels.Items.Add(btn);
-                }
+                    AddLevelItemToList(lvl);
             }
 
             if (ItemListBox_Levels.Items.Count > 0)
@@ -81,20 +133,74 @@ namespace SM64_ROM_Manager
             ItemListBox_Levels.Refresh();
         }
 
-        private Level GetSelectedLevel()
+        private async Task<bool> LoadLevelExport()
+        {
+            LevelExport export = null;
+
+            await Task.Run(() =>
+            {
+                export = LevelExport.ReadFromFile(openrompath);
+            });
+
+            var isValid = export?.Content is object && (export.ContentType == LevelExportContentType.Level || (export.ContentType == LevelExportContentType.Area && addAreasOnly));
+
+            if (isValid)
+                LoadLevelsFromLevelExport(export);
+
+            return isValid;
+        }
+
+        private void LoadLevelsFromLevelExport(LevelExport levelExport)
+        {
+            ItemListBox_Levels.Items.Clear();
+
+            if (levelExport.ContentType == LevelExportContentType.Level)
+            {
+                var levels = levelExport.Content as Level[] ?? new Level[] { };
+                foreach (Level lvl in levels)
+                    AddLevelItemToList(lvl);
+            }
+            else if (levelExport.ContentType == LevelExportContentType.Area)
+            {
+                var btn = new ButtonItem()
+                {
+                    Text = "Undefined Level",
+                    Tag = levelExport.Content
+                };
+                ItemListBox_Levels.Items.Add(btn);
+            }
+
+            if (ItemListBox_Levels.Items.Count > 0)
+                ItemListBox_Levels.SelectedIndex = 0;
+
+            ItemListBox_Levels.Refresh();
+        }
+
+        private void AddLevelItemToList(Level lvl)
+        {
+            var lid = rommgr.LevelInfoData.GetByLevelID(lvl.LevelID);
+            var btn = new ButtonItem()
+            {
+                Text = (lid.Type == LevelInfoDataTabelList.LevelTypes.Level ? Conversions.ToByte(lid.Number).ToString("00") + " - " : "") + lid.Name,
+                Tag = lvl
+            };
+            ItemListBox_Levels.Items.Add(btn);
+        }
+
+        private object GetSelectedLevel()
         {
             ButtonItem selItem = (ButtonItem)ItemListBox_Levels.SelectedItem;
-            Level lvl = (Level)selItem?.Tag;
+            var lvl = selItem?.Tag;
             return lvl;
         }
 
         private void ButtonX_Import_Click(object sender, EventArgs e)
         {
-            var lvl = GetSelectedLevel();
-            LevelInfoDataTabelList.Level levelinfo;
-            if (lvl is object)
+            var content = GetSelectedLevel();
+            if (content is object)
             {
                 Level newLvl;
+
                 void copySM64EArea(LevelArea a, LevelArea newArea)
                 {
                     newArea.Background.Type = a.Background.Type;
@@ -106,6 +212,7 @@ namespace SM64_ROM_Manager
                     newArea.WarpsForGame.AddRange(a.WarpsForGame.ToArray());
                     newArea.AreaModel = a.AreaModel;
                 };
+
                 if (addAreasOnly)
                 {
                     var areasToAsdd = new List<LevelArea>();
@@ -120,9 +227,7 @@ namespace SM64_ROM_Manager
                     foreach (CheckBoxItem item in ItemPanel_Areas.Items)
                     {
                         if (item.Tag is LevelArea && item.Checked)
-                        {
                             areasToCopy.Add((LevelArea)item.Tag);
-                        }
                     }
 
                     if (availableAreaIDs.Count >= areasToCopy.Count)
@@ -131,16 +236,14 @@ namespace SM64_ROM_Manager
                         foreach (LevelArea fearea in areasToCopy)
                         {
                             LevelArea area = fearea;
-                            if (openrom.IsSM64EditorMode)
+                            if (openrom is object && openrom.IsSM64EditorMode)
                             {
                                 var newArea = new SM64ELevelArea(availableAreaIDs.Pop());
                                 copySM64EArea(area, newArea);
                                 area = newArea;
                             }
                             else
-                            {
                                 area.AreaID = availableAreaIDs.Pop();
-                            }
 
                             areasToAsdd.Add(area);
                         }
@@ -153,26 +256,24 @@ namespace SM64_ROM_Manager
                         DialogResult = DialogResult.OK;
                     }
                     else if (!areasToCopy.Any())
-                    {
                         MessageBoxEx.Show("You haven't selected any area to copy.", "No area selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                     else
-                    {
                         MessageBoxEx.Show("You have to many areas selected. The destination level hasn't enough free area slots.", "To many areas", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
                 }
-                else
+                else if (content is Level)
                 {
+                    var lvl = (Level)content;
+                    LevelInfoDataTabelList.Level levelinfo;
+
                     var selector = new LevelSelectorDialog(rommgr);
                     if (selector.ShowDialog() == DialogResult.OK)
                     {
                         levelinfo = selector.SelectedLevel;
-                        var switchExpr = openrom.IsSM64EditorMode;
-                        switch (switchExpr)
+
+                        switch (openrom is object && openrom.IsSM64EditorMode)
                         {
                             case true:
                                 {
-
                                     // Create mew Level
                                     newLvl = new RMLevel(levelinfo.ID, levelinfo.Index, rommgr);
 
@@ -193,19 +294,13 @@ namespace SM64_ROM_Manager
                                     newLvl.ActSelector = lvl.ActSelector;
                                     break;
                                 }
-
                             case false:
-                                {
-                                    newLvl = lvl;
-                                    newLvl.LevelID = levelinfo.ID;
-                                    break;
-                                }
-
+                                newLvl = lvl;
+                                newLvl.LevelID = levelinfo.ID;
+                                break;
                             default:
-                                {
-                                    newLvl = null;
-                                    break;
-                                }
+                                newLvl = null;
+                                break;
                         }
 
                         if (newLvl is object)
@@ -218,9 +313,7 @@ namespace SM64_ROM_Manager
                             DialogResult = DialogResult.OK;
                         }
                         else
-                        {
                             MessageBoxEx.Show("The level can't be added.", "Add Level", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
                     }
                 }
             }
@@ -234,12 +327,19 @@ namespace SM64_ROM_Manager
         private void ItemListBox_Levels_SelectedIndexChanged(object sender, EventArgs e)
         {
             bool enableListBox = false;
-            var lvl = GetSelectedLevel();
+            var content = GetSelectedLevel();
             ItemPanel_Areas.SuspendLayout();
             ItemPanel_Areas.Items.Clear();
-            if (lvl is object)
+
+            if (content is object)
             {
-                foreach (LevelArea area in lvl.Areas)
+                var areas = new List<LevelArea>();
+                if (content is Level)
+                    areas.AddRange(((Level)content).Areas);
+                else if (content is LevelArea[])
+                    areas.AddRange((LevelArea[])content);
+
+                foreach (LevelArea area in areas)
                 {
                     var item = new CheckBoxItem()
                     {
@@ -251,9 +351,7 @@ namespace SM64_ROM_Manager
                 }
 
                 if (addAreasOnly)
-                {
                     enableListBox = true;
-                }
             }
 
             ItemPanel_Areas.ResumeLayout(false);
@@ -263,7 +361,7 @@ namespace SM64_ROM_Manager
 
         private async void ImportLevelDialog_Shown(object sender, EventArgs e)
         {
-            if (!await LoadROM())
+            if (!await LoadList())
             {
                 DialogResult = DialogResult.Abort;
             }
