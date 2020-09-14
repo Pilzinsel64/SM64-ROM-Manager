@@ -1176,16 +1176,17 @@ namespace SM64_ROM_Manager
             if (levelIndex >= 0 && areaIndex >= 0)
             {
                 var curLvl = RomManager.Levels[levelIndex];
-                LevelEditor.Form_AreaEditor openAreaEditor = (LevelEditor.Form_AreaEditor)GetAreaEditor(curLvl);
-                if (openAreaEditor is null)
+                if (curLvl.Areas.Any())
                 {
-                    var curArea = curLvl.Areas.ElementAtOrDefault(areaIndex);
-                    var frm = new LevelEditor.Form_AreaEditor(RomManager, curLvl, Conversions.ToByte(curLvl.LevelID), curArea == null ? default : curArea.AreaID);
-                    frm.Show();
-                }
-                else
-                {
-                    openAreaEditor.BringToFront();
+                    LevelEditor.Form_AreaEditor openAreaEditor = (LevelEditor.Form_AreaEditor)GetAreaEditor(curLvl);
+                    if (openAreaEditor is null)
+                    {
+                        var curArea = curLvl.Areas.ElementAtOrDefault(areaIndex);
+                        var frm = new LevelEditor.Form_AreaEditor(RomManager, curLvl, Conversions.ToByte(curLvl.LevelID), curArea == null ? default : curArea.AreaID);
+                        frm.Show();
+                    }
+                    else
+                        openAreaEditor.BringToFront();
                 }
             }
         }
