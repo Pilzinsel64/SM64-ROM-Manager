@@ -360,7 +360,7 @@ namespace SM64_ROM_Manager.LevelEditor
             GL.LoadMatrix(ref ProjMatrix);
             GL.MatrixMode(MatrixMode.Modelview);
             GL.LoadMatrix(ref camMtx);
-            DrawAllObjects(DrawBoundingBox: false);
+            DrawAllObjects(drawBoundingBox: false, drawArrow: false);
             if (Maps.rndrVisualMap is object)
             {
                 Maps.rndrVisualMap?.DrawModel(RenderMode.Fill);
@@ -548,7 +548,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        internal void DrawAllObjects(bool drawPicking = false, bool DrawBoundingBox = true)
+        internal void DrawAllObjects(bool drawPicking = false, bool drawBoundingBox = true, bool drawArrow = true)
         {
             int index = 0;
 
@@ -560,7 +560,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
                 if (Main.DrawObjectModels && Main.ObjectModels.ContainsKey(n.ModelID))
                     objModel = Main.ObjectModels[n.ModelID];
-                else if (Main.DrawDirectionArrow)
+                else if (Main.DrawDirectionArrow && drawArrow)
                     otherMdls.Add(Main.ObjectModels[0]);
 
                 if (objModel is object && !objModel.HasRendered)
@@ -577,7 +577,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 else
                     col = default;
 
-                n.Draw(FaceDrawMode, objModel, otherMdls, col, drawPicking, DrawBoundingBox);
+                n.Draw(FaceDrawMode, objModel, otherMdls, col, drawPicking, drawBoundingBox);
                 index += 1;
             }
         }
