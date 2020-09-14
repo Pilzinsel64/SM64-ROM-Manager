@@ -378,54 +378,6 @@
   <data name="&gt;&gt;TabStrip_TextTable.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ColumnHeader1.Text" xml:space="preserve">
-    <value>#</value>
-  </data>
-  <data name="ColumnHeader1.Width" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="ColumnHeader13.Text" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="ColumnHeader13.Width" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <data name="ColumnHeader14.Text" xml:space="preserve">
-    <value>Message/Text</value>
-  </data>
-  <data name="ColumnHeader14.Width" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <data name="ListViewEx_TM_TableEntries.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ListViewEx_TM_TableEntries.LabelWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ListViewEx_TM_TableEntries.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 50</value>
-  </data>
-  <data name="ListViewEx_TM_TableEntries.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 3, 3</value>
-  </data>
-  <data name="ListViewEx_TM_TableEntries.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 490</value>
-  </data>
-  <data name="ListViewEx_TM_TableEntries.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_TM_TableEntries.Name" xml:space="preserve">
-    <value>ListViewEx_TM_TableEntries</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_TM_TableEntries.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_TM_TableEntries.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_TM_TableEntries.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="Line_TM_Green.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Right</value>
   </data>
@@ -552,36 +504,6 @@
   <data name="ButtonItem_RemoveTextItem.Text" xml:space="preserve">
     <value>Remove Item</value>
   </data>
-  <data name="ButtonItem_ClearAllItems.Text" xml:space="preserve">
-    <value>Clear all items</value>
-  </data>
-  <data name="ButtonItem_ExportCurTable.Text" xml:space="preserve">
-    <value>Export current table ...</value>
-  </data>
-  <data name="ButtonItem_ExportAllTables.Text" xml:space="preserve">
-    <value>Export all tables ...</value>
-  </data>
-  <data name="ButtonItem_ImportFrom.Text" xml:space="preserve">
-    <value>Import table(s) ...</value>
-  </data>
-  <data name="ButtonItem_CreateProfile.Text" xml:space="preserve">
-    <value>Create custom Profile</value>
-  </data>
-  <data name="ButtonItem_ResetProfile.Text" xml:space="preserve">
-    <value>Reset to Default</value>
-  </data>
-  <data name="ButtonItem_ManageProfile.Text" xml:space="preserve">
-    <value>Manage</value>
-  </data>
-  <data name="ButtonItem_ExportProfile.Text" xml:space="preserve">
-    <value>Export</value>
-  </data>
-  <data name="ButtonItem_ImportProfile.Text" xml:space="preserve">
-    <value>Import</value>
-  </data>
-  <data name="ButtonItem_TextProfile.Text" xml:space="preserve">
-    <value>Text Profile</value>
-  </data>
   <data name="Bar_AddRemoveItems.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -602,6 +524,36 @@
   </data>
   <data name="&gt;&gt;Bar_AddRemoveItems.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="ButtonItem_ClearAllItems.Text" xml:space="preserve">
+    <value>Clear all items</value>
+  </data>
+  <data name="ButtonItem_ExportCurTable.Text" xml:space="preserve">
+    <value>Export current table ...</value>
+  </data>
+  <data name="ButtonItem_ExportAllTables.Text" xml:space="preserve">
+    <value>Export all tables ...</value>
+  </data>
+  <data name="ButtonItem_ImportFrom.Text" xml:space="preserve">
+    <value>Import table(s) ...</value>
+  </data>
+  <data name="ButtonItem_TextProfile.Text" xml:space="preserve">
+    <value>Text Profile</value>
+  </data>
+  <data name="ButtonItem_CreateProfile.Text" xml:space="preserve">
+    <value>Create custom Profile</value>
+  </data>
+  <data name="ButtonItem_ResetProfile.Text" xml:space="preserve">
+    <value>Reset to Default</value>
+  </data>
+  <data name="ButtonItem_ManageProfile.Text" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="ButtonItem_ExportProfile.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ButtonItem_ImportProfile.Text" xml:space="preserve">
+    <value>Import</value>
   </data>
   <data name="Bar_TextOptions.AccessibleDescription" xml:space="preserve">
     <value>Bar1 (Bar_TextOptions)</value>
@@ -816,6 +768,51 @@
   <data name="Panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <metadata name="columnHeader_Number.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="columnHeader_Number.Text" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <metadata name="columnHeader_Description.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 17</value>
+  </metadata>
+  <data name="columnHeader_Description.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <metadata name="columnHeader_Message.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>293, 17</value>
+  </metadata>
+  <data name="columnHeader_Message.Text" xml:space="preserve">
+    <value>Message/Text</value>
+  </data>
+  <data name="advTree_TextEntries.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="advTree_TextEntries.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 50</value>
+  </data>
+  <data name="advTree_TextEntries.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 490</value>
+  </data>
+  <data name="advTree_TextEntries.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="advTree_TextEntries.Text" xml:space="preserve">
+    <value>advTree1</value>
+  </data>
+  <data name="&gt;&gt;advTree_TextEntries.Name" xml:space="preserve">
+    <value>advTree_TextEntries</value>
+  </data>
+  <data name="&gt;&gt;advTree_TextEntries.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;advTree_TextEntries.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;advTree_TextEntries.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -876,23 +873,83 @@
   <data name="&gt;&gt;ComboItem7.Type" xml:space="preserve">
     <value>DevComponents.Editors.ComboItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ColumnHeader1.Name" xml:space="preserve">
-    <value>ColumnHeader1</value>
+  <data name="&gt;&gt;ButtonItem_AddTextItem.Name" xml:space="preserve">
+    <value>ButtonItem_AddTextItem</value>
   </data>
-  <data name="&gt;&gt;ColumnHeader1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ButtonItem_AddTextItem.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ColumnHeader13.Name" xml:space="preserve">
-    <value>ColumnHeader13</value>
+  <data name="&gt;&gt;ButtonItem_RemoveTextItem.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveTextItem</value>
   </data>
-  <data name="&gt;&gt;ColumnHeader13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ButtonItem_RemoveTextItem.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ColumnHeader14.Name" xml:space="preserve">
-    <value>ColumnHeader14</value>
+  <data name="&gt;&gt;buttonItem21.Name" xml:space="preserve">
+    <value>buttonItem21</value>
   </data>
-  <data name="&gt;&gt;ColumnHeader14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;buttonItem21.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ClearAllItems.Name" xml:space="preserve">
+    <value>ButtonItem_ClearAllItems</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ClearAllItems.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportCurTable.Name" xml:space="preserve">
+    <value>ButtonItem_ExportCurTable</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportCurTable.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportAllTables.Name" xml:space="preserve">
+    <value>ButtonItem_ExportAllTables</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportAllTables.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportFrom.Name" xml:space="preserve">
+    <value>ButtonItem_ImportFrom</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportFrom.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_TextProfile.Name" xml:space="preserve">
+    <value>ButtonItem_TextProfile</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_TextProfile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CreateProfile.Name" xml:space="preserve">
+    <value>ButtonItem_CreateProfile</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CreateProfile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ResetProfile.Name" xml:space="preserve">
+    <value>ButtonItem_ResetProfile</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ResetProfile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ManageProfile.Name" xml:space="preserve">
+    <value>ButtonItem_ManageProfile</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ManageProfile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportProfile.Name" xml:space="preserve">
+    <value>ButtonItem_ExportProfile</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ExportProfile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportProfile.Name" xml:space="preserve">
+    <value>ButtonItem_ImportProfile</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_ImportProfile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_AddButtons.Name" xml:space="preserve">
     <value>ButtonItem_AddButtons</value>
@@ -1020,83 +1077,35 @@
   <data name="&gt;&gt;ButtonItem20.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_AddTextItem.Name" xml:space="preserve">
-    <value>ButtonItem_AddTextItem</value>
+  <data name="&gt;&gt;columnHeader_Number.Name" xml:space="preserve">
+    <value>columnHeader_Number</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_AddTextItem.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;columnHeader_Number.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_RemoveTextItem.Name" xml:space="preserve">
-    <value>ButtonItem_RemoveTextItem</value>
+  <data name="&gt;&gt;columnHeader_Description.Name" xml:space="preserve">
+    <value>columnHeader_Description</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_RemoveTextItem.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;columnHeader_Description.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;buttonItem21.Name" xml:space="preserve">
-    <value>buttonItem21</value>
+  <data name="&gt;&gt;columnHeader_Message.Name" xml:space="preserve">
+    <value>columnHeader_Message</value>
   </data>
-  <data name="&gt;&gt;buttonItem21.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;columnHeader_Message.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ClearAllItems.Name" xml:space="preserve">
-    <value>ButtonItem_ClearAllItems</value>
+  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
+    <value>nodeConnector1</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ClearAllItems.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ExportCurTable.Name" xml:space="preserve">
-    <value>ButtonItem_ExportCurTable</value>
+  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
+    <value>elementStyle1</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_ExportCurTable.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ExportAllTables.Name" xml:space="preserve">
-    <value>ButtonItem_ExportAllTables</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ExportAllTables.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ImportFrom.Name" xml:space="preserve">
-    <value>ButtonItem_ImportFrom</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ImportFrom.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_TextProfile.Name" xml:space="preserve">
-    <value>ButtonItem_TextProfile</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_TextProfile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CreateProfile.Name" xml:space="preserve">
-    <value>ButtonItem_CreateProfile</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_CreateProfile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ResetProfile.Name" xml:space="preserve">
-    <value>ButtonItem_ResetProfile</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ResetProfile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ManageProfile.Name" xml:space="preserve">
-    <value>ButtonItem_ManageProfile</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ManageProfile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ExportProfile.Name" xml:space="preserve">
-    <value>ButtonItem_ExportProfile</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ExportProfile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ImportProfile.Name" xml:space="preserve">
-    <value>ButtonItem_ImportProfile</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_ImportProfile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Tab_TextManager</value>

@@ -13,6 +13,7 @@ using SM64Lib.TextValueConverter;
 using Z.Core.Extensions;
 using SM64Lib.Text;
 using System.IO;
+using DevComponents.AdvTree;
 
 namespace SM64_ROM_Manager
 {
@@ -98,7 +99,7 @@ namespace SM64_ROM_Manager
 
         private void Controller_TextItemChanged(TextItemEventArgs e)
         {
-            UpdateListViewItem(e.ItemIndex);
+            UpdateNode(e.ItemIndex);
             ShowCurTableBytes();
         }
 
@@ -122,7 +123,7 @@ namespace SM64_ROM_Manager
 
         private void Controller_TextItemRemoved(TextItemEventArgs e)
         {
-            RemoveTextItem(e.ItemIndex);
+            RemoveTextNode(e.ItemIndex);
         }
 
         private void TMController_CurrentTextProfileInfoChanged()
@@ -138,9 +139,9 @@ namespace SM64_ROM_Manager
             UpdateTextProfileMenu();
         }
 
-        private void RemoveTextItem(int tableIndex)
+        private void RemoveTextNode(int tableIndex)
         {
-            ListViewEx_TM_TableEntries.Items.RemoveAt(tableIndex);
+            advTree_TextEntries.Nodes.RemoveAt(tableIndex);
         }
 
         private void LoadTabStripItems()
@@ -192,8 +193,8 @@ namespace SM64_ROM_Manager
             string tableName;
 
             var nameList = Array.Empty<string>();
-            var col1 = ListViewEx_TM_TableEntries.Columns[1];
-            var col2 = ListViewEx_TM_TableEntries.Columns[2];
+            var col1 = advTree_TextEntries.Columns[1];
+            var col2 = advTree_TextEntries.Columns[2];
 
             if (TabStrip_TextTable.Tabs.Count == 0) // First Init
                 InitTextManager();
@@ -203,8 +204,8 @@ namespace SM64_ROM_Manager
             TMController.LoadTextGroup(tableName);
             TMController.StatusText = Form_Main_Resources.Status_CreatingTextList;
 
-            ListViewEx_TM_TableEntries.SuspendLayout();
-            ListViewEx_TM_TableEntries.Items.Clear();
+            advTree_TextEntries.SuspendLayout();
+            advTree_TextEntries.Nodes.Clear();
 
             string infos = TMController.GetTextGroupInfos(tableName).name;
             nameList = TMController.GetTextNameList(tableName);
@@ -214,26 +215,24 @@ namespace SM64_ROM_Manager
 
             if (nameList.Any())
             {
-                if (col1.Tag is object)
+                if (!col1.Visible)
                 {
-                    col2.Width -= (int)col1.Tag;
-                    col1.Width = Conversions.ToInteger(col1.Tag);
-                    col1.Tag = null;
+                    col2.Width.Absolute -= col1.Width.Absolute;
+                    col1.Visible = true;
                 }
             }
-            else if (col1.Width > 0)
+            else if (col1.Visible)
             {
-                col1.Tag = col1.Width;
-                col1.Width = 0;
-                col2.Width += (int)col1.Tag;
+                col1.Visible = false;
+                col2.Width.Absolute += col1.Width.Absolute;
             }
 
-            ListViewEx_TM_TableEntries.ResumeLayout();
-            if (ListViewEx_TM_TableEntries.Items.Count > 0)
+            advTree_TextEntries.ResumeLayout();
+            if (advTree_TextEntries.Nodes.Count > 0)
             {
-                var item = ListViewEx_TM_TableEntries.Items[0];
-                item.Selected = true;
-                item.EnsureVisible();
+                var node = advTree_TextEntries.Nodes[0];
+                advTree_TextEntries.SelectedNode = node;
+                node.EnsureVisible();
             }
 
             TMController.StatusText = Form_Main_Resources.Status_CalculatingTextSpace;
@@ -248,19 +247,21 @@ namespace SM64_ROM_Manager
             if (nameList.Count() > tableIndex)
                 nameEntry = nameList[tableIndex];
 
-            var newItem = new ListViewItem(new string[] { tableIndex.ToString(), string.Empty, string.Empty });
-            UpdateListViewItem(newItem, nameEntry, itemInfos.text, false);
-            ListViewEx_TM_TableEntries.Items.Add(newItem);
+            var newItem = new Node(tableIndex.ToString());
+            newItem.Cells.Add(new Cell());
+            newItem.Cells.Add(new Cell());
+            UpdateNode(newItem, nameEntry, itemInfos.text, false);
+            advTree_TextEntries.Nodes.Add(newItem);
         }
 
-        private void UpdateListViewItem(int index, bool refresh = true)
+        private void UpdateNode(int index, bool refresh = true)
         {
-            var lvi = ListViewEx_TM_TableEntries.Items[index];
+            var node = advTree_TextEntries.Nodes[index];
             var infos = TMController.GetTextItemInfos(GetSelectedIndicies().tableName, index);
-            UpdateListViewItem(lvi, infos.dialogDescription, infos.text, refresh);
+            UpdateNode(node, infos.dialogDescription, infos.text, refresh);
         }
 
-        private void UpdateListViewItem(ListViewItem lvi, string dialogDescription, string itemText, bool refresh = true)
+        private void UpdateNode(Node node, string dialogDescription, string itemText, bool refresh = true)
         {
             if (string.IsNullOrEmpty(itemText))
                 itemText = "-";
@@ -270,18 +271,18 @@ namespace SM64_ROM_Manager
                 itemText = sr.ReadLine();
                 sr.Dispose();
             }
-            lvi.SubItems[2].Text = itemText;
+            node.Cells[2].Text = itemText;
             if (dialogDescription is string)
-                lvi.SubItems[1].Text = dialogDescription;
+                node.Cells[1].Text = dialogDescription;
             if (refresh)
-                ListViewEx_TM_TableEntries.Refresh();
+                advTree_TextEntries.Refresh();
         }
 
         private void UpdateAllListViewItems()
         {
-            for (int i = 0, loopTo = ListViewEx_TM_TableEntries.Items.Count - 1; i <= loopTo; i++)
-                UpdateListViewItem(i, false);
-            ListViewEx_TM_TableEntries.Refresh();
+            for (int i = 0, loopTo = advTree_TextEntries.Nodes.Count; i < loopTo; i++)
+                UpdateNode(i, false);
+            advTree_TextEntries.Refresh();
         }
 
         public void SetGuiForTextTable()
@@ -310,12 +311,7 @@ namespace SM64_ROM_Manager
         private (string tableName, int tableIndex) GetSelectedIndicies()
         {
             string tableName = Conversions.ToString(TabStrip_TextTable.SelectedTab?.Tag);
-            int tableIndex = 0;
-            if (ListViewEx_TM_TableEntries.SelectedIndices.Count > 0)
-            {
-                tableIndex = ListViewEx_TM_TableEntries.SelectedIndices[0];
-            }
-
+            int tableIndex = advTree_TextEntries.SelectedIndex;
             return (tableName, tableIndex);
         }
 
@@ -381,7 +377,7 @@ namespace SM64_ROM_Manager
 
         private bool IsAnyTextItemSelected()
         {
-            return ListViewEx_TM_TableEntries.SelectedIndices.Count > 0;
+            return advTree_TextEntries.SelectedNode is object;
         }
 
         private void ShowTextItemData()
@@ -488,12 +484,10 @@ namespace SM64_ROM_Manager
             SaveItemText();
         }
 
-        private void ListViewEx1_SelectedIndexChanged(object sender, EventArgs e)
+        private void AdvTree1_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
         {
             if (IsAnyTextItemSelected())
-            {
                 ShowTextItemData();
-            }
         }
 
         private void ButtonItem_AddTextItem_Click(object sender, EventArgs e)

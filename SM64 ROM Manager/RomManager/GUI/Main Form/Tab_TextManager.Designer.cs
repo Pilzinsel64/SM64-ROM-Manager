@@ -53,15 +53,24 @@ namespace SM64_ROM_Manager
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.LabelX18 = new DevComponents.DotNetBar.LabelX();
             this.TabStrip_TextTable = new DevComponents.DotNetBar.TabStrip();
-            this.ListViewEx_TM_TableEntries = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Line_TM_Green = new DevComponents.DotNetBar.Controls.Line();
             this.Line_TM_Warning1 = new DevComponents.DotNetBar.Controls.Line();
             this.Line_TM_Warning2 = new DevComponents.DotNetBar.Controls.Line();
             this.TextBoxX_TM_TextEditor = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.Bar_AddRemoveItems = new DevComponents.DotNetBar.Bar();
+            this.ButtonItem_AddTextItem = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_RemoveTextItem = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem21 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ClearAllItems = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ExportCurTable = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ExportAllTables = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ImportFrom = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_TextProfile = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CreateProfile = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ResetProfile = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ManageProfile = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ExportProfile = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ImportProfile = new DevComponents.DotNetBar.ButtonItem();
             this.Bar_TextOptions = new DevComponents.DotNetBar.Bar();
             this.ButtonItem_AddButtons = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem4 = new DevComponents.DotNetBar.ButtonItem();
@@ -87,25 +96,19 @@ namespace SM64_ROM_Manager
             this.Panel1 = new System.Windows.Forms.Panel();
             this.TextBoxX_ItemDescription = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.Panel3 = new System.Windows.Forms.Panel();
-            this.ButtonItem_AddTextItem = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_RemoveTextItem = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem21 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ClearAllItems = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ExportCurTable = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ExportAllTables = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ImportFrom = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_TextProfile = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_CreateProfile = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ResetProfile = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ManageProfile = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ExportProfile = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_ImportProfile = new DevComponents.DotNetBar.ButtonItem();
+            this.advTree_TextEntries = new DevComponents.AdvTree.AdvTree();
+            this.columnHeader_Number = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_Description = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_Message = new DevComponents.AdvTree.ColumnHeader();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.GroupPanel_TM_DialogProps.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_TM_DialogSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bar_AddRemoveItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bar_TextOptions)).BeginInit();
             this.Panel1.SuspendLayout();
             this.Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_TextEntries)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupPanel_TM_DialogProps
@@ -280,42 +283,6 @@ namespace SM64_ROM_Manager
             this.TabStrip_TextTable.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Top;
             this.TabStrip_TextTable.SelectedTabChanged += new DevComponents.DotNetBar.TabStrip.SelectedTabChangedEventHandler(this.TabStrip1_SelectedTabChanged);
             // 
-            // ListViewEx_TM_TableEntries
-            // 
-            this.ListViewEx_TM_TableEntries.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx_TM_TableEntries.Border.Class = "ListViewBorder";
-            this.ListViewEx_TM_TableEntries.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_TM_TableEntries.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader1,
-            this.ColumnHeader13,
-            this.ColumnHeader14});
-            this.ListViewEx_TM_TableEntries.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.ListViewEx_TM_TableEntries, "ListViewEx_TM_TableEntries");
-            this.ListViewEx_TM_TableEntries.FocusCuesEnabled = false;
-            this.ListViewEx_TM_TableEntries.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_TM_TableEntries.FullRowSelect = true;
-            this.ListViewEx_TM_TableEntries.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx_TM_TableEntries.HideSelection = false;
-            this.ListViewEx_TM_TableEntries.Name = "ListViewEx_TM_TableEntries";
-            this.ListViewEx_TM_TableEntries.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_TM_TableEntries.View = System.Windows.Forms.View.Details;
-            this.ListViewEx_TM_TableEntries.SelectedIndexChanged += new System.EventHandler(this.ListViewEx1_SelectedIndexChanged);
-            // 
-            // ColumnHeader1
-            // 
-            resources.ApplyResources(this.ColumnHeader1, "ColumnHeader1");
-            // 
-            // ColumnHeader13
-            // 
-            resources.ApplyResources(this.ColumnHeader13, "ColumnHeader13");
-            // 
-            // ColumnHeader14
-            // 
-            resources.ApplyResources(this.ColumnHeader14, "ColumnHeader14");
-            // 
             // Line_TM_Green
             // 
             resources.ApplyResources(this.Line_TM_Green, "Line_TM_Green");
@@ -378,6 +345,116 @@ namespace SM64_ROM_Manager
             this.Bar_AddRemoveItems.Stretch = true;
             this.Bar_AddRemoveItems.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.Bar_AddRemoveItems.TabStop = false;
+            // 
+            // ButtonItem_AddTextItem
+            // 
+            this.ButtonItem_AddTextItem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_AddTextItem.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_AddTextItem.Name = "ButtonItem_AddTextItem";
+            resources.ApplyResources(this.ButtonItem_AddTextItem, "ButtonItem_AddTextItem");
+            this.ButtonItem_AddTextItem.Click += new System.EventHandler(this.ButtonItem_AddTextItem_Click);
+            // 
+            // ButtonItem_RemoveTextItem
+            // 
+            this.ButtonItem_RemoveTextItem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_RemoveTextItem.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonItem_RemoveTextItem.Name = "ButtonItem_RemoveTextItem";
+            resources.ApplyResources(this.ButtonItem_RemoveTextItem, "ButtonItem_RemoveTextItem");
+            this.ButtonItem_RemoveTextItem.Click += new System.EventHandler(this.ButtonItem_RemoveTextItem_Click);
+            // 
+            // buttonItem21
+            // 
+            this.buttonItem21.AutoExpandOnClick = true;
+            this.buttonItem21.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
+            this.buttonItem21.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
+            this.buttonItem21.Name = "buttonItem21";
+            this.buttonItem21.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_ClearAllItems,
+            this.ButtonItem_ExportCurTable,
+            this.ButtonItem_ExportAllTables,
+            this.ButtonItem_ImportFrom,
+            this.ButtonItem_TextProfile});
+            // 
+            // ButtonItem_ClearAllItems
+            // 
+            this.ButtonItem_ClearAllItems.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_ClearAllItems.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_refresh_16px;
+            this.ButtonItem_ClearAllItems.Name = "ButtonItem_ClearAllItems";
+            resources.ApplyResources(this.ButtonItem_ClearAllItems, "ButtonItem_ClearAllItems");
+            this.ButtonItem_ClearAllItems.Click += new System.EventHandler(this.ButtonItem_ClearAllItems_Click);
+            // 
+            // ButtonItem_ExportCurTable
+            // 
+            this.ButtonItem_ExportCurTable.BeginGroup = true;
+            this.ButtonItem_ExportCurTable.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
+            this.ButtonItem_ExportCurTable.Name = "ButtonItem_ExportCurTable";
+            resources.ApplyResources(this.ButtonItem_ExportCurTable, "ButtonItem_ExportCurTable");
+            this.ButtonItem_ExportCurTable.Click += new System.EventHandler(this.ButtonItem_ExportCurTable_Click);
+            // 
+            // ButtonItem_ExportAllTables
+            // 
+            this.ButtonItem_ExportAllTables.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
+            this.ButtonItem_ExportAllTables.Name = "ButtonItem_ExportAllTables";
+            resources.ApplyResources(this.ButtonItem_ExportAllTables, "ButtonItem_ExportAllTables");
+            this.ButtonItem_ExportAllTables.Click += new System.EventHandler(this.ButtonItem_ExportAllTables_Click);
+            // 
+            // ButtonItem_ImportFrom
+            // 
+            this.ButtonItem_ImportFrom.BeginGroup = true;
+            this.ButtonItem_ImportFrom.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
+            this.ButtonItem_ImportFrom.Name = "ButtonItem_ImportFrom";
+            resources.ApplyResources(this.ButtonItem_ImportFrom, "ButtonItem_ImportFrom");
+            this.ButtonItem_ImportFrom.Click += new System.EventHandler(this.ButtonItem_ImportFrom_Click);
+            // 
+            // ButtonItem_TextProfile
+            // 
+            this.ButtonItem_TextProfile.BeginGroup = true;
+            this.ButtonItem_TextProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_database_16px;
+            this.ButtonItem_TextProfile.Name = "ButtonItem_TextProfile";
+            this.ButtonItem_TextProfile.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_CreateProfile,
+            this.ButtonItem_ResetProfile,
+            this.ButtonItem_ManageProfile,
+            this.ButtonItem_ExportProfile,
+            this.ButtonItem_ImportProfile});
+            resources.ApplyResources(this.ButtonItem_TextProfile, "ButtonItem_TextProfile");
+            // 
+            // ButtonItem_CreateProfile
+            // 
+            this.ButtonItem_CreateProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_data_recovery_16px;
+            this.ButtonItem_CreateProfile.Name = "ButtonItem_CreateProfile";
+            resources.ApplyResources(this.ButtonItem_CreateProfile, "ButtonItem_CreateProfile");
+            this.ButtonItem_CreateProfile.Click += new System.EventHandler(this.ButtonItem_CreateProfile_Click);
+            // 
+            // ButtonItem_ResetProfile
+            // 
+            this.ButtonItem_ResetProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_data_backup_16px;
+            this.ButtonItem_ResetProfile.Name = "ButtonItem_ResetProfile";
+            resources.ApplyResources(this.ButtonItem_ResetProfile, "ButtonItem_ResetProfile");
+            this.ButtonItem_ResetProfile.Click += new System.EventHandler(this.ButtonItem_ResetProfile_Click);
+            // 
+            // ButtonItem_ManageProfile
+            // 
+            this.ButtonItem_ManageProfile.BeginGroup = true;
+            this.ButtonItem_ManageProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_database_administrator_16px;
+            this.ButtonItem_ManageProfile.Name = "ButtonItem_ManageProfile";
+            resources.ApplyResources(this.ButtonItem_ManageProfile, "ButtonItem_ManageProfile");
+            this.ButtonItem_ManageProfile.Click += new System.EventHandler(this.ButtonItem_ManageProfile_Click);
+            // 
+            // ButtonItem_ExportProfile
+            // 
+            this.ButtonItem_ExportProfile.BeginGroup = true;
+            this.ButtonItem_ExportProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_database_export_16px;
+            this.ButtonItem_ExportProfile.Name = "ButtonItem_ExportProfile";
+            resources.ApplyResources(this.ButtonItem_ExportProfile, "ButtonItem_ExportProfile");
+            this.ButtonItem_ExportProfile.Click += new System.EventHandler(this.ButtonItem_ExportProfile_Click);
+            // 
+            // ButtonItem_ImportProfile
+            // 
+            this.ButtonItem_ImportProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_database_restore_16px;
+            this.ButtonItem_ImportProfile.Name = "ButtonItem_ImportProfile";
+            resources.ApplyResources(this.ButtonItem_ImportProfile, "ButtonItem_ImportProfile");
+            this.ButtonItem_ImportProfile.Click += new System.EventHandler(this.ButtonItem_ImportProfile_Click);
             // 
             // Bar_TextOptions
             // 
@@ -571,120 +648,60 @@ namespace SM64_ROM_Manager
             // 
             resources.ApplyResources(this.Panel3, "Panel3");
             this.Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.Panel3.Controls.Add(this.ListViewEx_TM_TableEntries);
+            this.Panel3.Controls.Add(this.advTree_TextEntries);
             this.Panel3.Controls.Add(this.TabStrip_TextTable);
             this.Panel3.Controls.Add(this.Bar_AddRemoveItems);
             this.Panel3.Name = "Panel3";
             // 
-            // ButtonItem_AddTextItem
+            // advTree_TextEntries
             // 
-            this.ButtonItem_AddTextItem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_AddTextItem.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem_AddTextItem.Name = "ButtonItem_AddTextItem";
-            resources.ApplyResources(this.ButtonItem_AddTextItem, "ButtonItem_AddTextItem");
-            this.ButtonItem_AddTextItem.Click += new System.EventHandler(this.ButtonItem_AddTextItem_Click);
+            this.advTree_TextEntries.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTree_TextEntries.BackColor = System.Drawing.SystemColors.Window;
             // 
-            // ButtonItem_RemoveTextItem
             // 
-            this.ButtonItem_RemoveTextItem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_RemoveTextItem.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.ButtonItem_RemoveTextItem.Name = "ButtonItem_RemoveTextItem";
-            resources.ApplyResources(this.ButtonItem_RemoveTextItem, "ButtonItem_RemoveTextItem");
-            this.ButtonItem_RemoveTextItem.Click += new System.EventHandler(this.ButtonItem_RemoveTextItem_Click);
             // 
-            // buttonItem21
+            this.advTree_TextEntries.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree_TextEntries.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree_TextEntries.Columns.Add(this.columnHeader_Number);
+            this.advTree_TextEntries.Columns.Add(this.columnHeader_Description);
+            this.advTree_TextEntries.Columns.Add(this.columnHeader_Message);
+            resources.ApplyResources(this.advTree_TextEntries, "advTree_TextEntries");
+            this.advTree_TextEntries.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_TextEntries.Name = "advTree_TextEntries";
+            this.advTree_TextEntries.NodesConnector = this.nodeConnector1;
+            this.advTree_TextEntries.NodeStyle = this.elementStyle1;
+            this.advTree_TextEntries.PathSeparator = ";";
+            this.advTree_TextEntries.SelectionBoxStyle = DevComponents.AdvTree.eSelectionStyle.FullRowSelect;
+            this.advTree_TextEntries.Styles.Add(this.elementStyle1);
+            this.advTree_TextEntries.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree1_AfterNodeSelect);
             // 
-            this.buttonItem21.AutoExpandOnClick = true;
-            this.buttonItem21.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
-            this.buttonItem21.ItemAlignment = DevComponents.DotNetBar.eItemAlignment.Far;
-            this.buttonItem21.Name = "buttonItem21";
-            this.buttonItem21.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_ClearAllItems,
-            this.ButtonItem_ExportCurTable,
-            this.ButtonItem_ExportAllTables,
-            this.ButtonItem_ImportFrom,
-            this.ButtonItem_TextProfile});
+            // columnHeader_Number
             // 
-            // ButtonItem_ClearAllItems
+            this.columnHeader_Number.Name = "columnHeader_Number";
+            resources.ApplyResources(this.columnHeader_Number, "columnHeader_Number");
+            this.columnHeader_Number.Width.Absolute = 50;
             // 
-            this.ButtonItem_ClearAllItems.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_ClearAllItems.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_refresh_16px;
-            this.ButtonItem_ClearAllItems.Name = "ButtonItem_ClearAllItems";
-            resources.ApplyResources(this.ButtonItem_ClearAllItems, "ButtonItem_ClearAllItems");
-            this.ButtonItem_ClearAllItems.Click += new System.EventHandler(this.ButtonItem_ClearAllItems_Click);
+            // columnHeader_Description
             // 
-            // ButtonItem_ExportCurTable
+            this.columnHeader_Description.Name = "columnHeader_Description";
+            resources.ApplyResources(this.columnHeader_Description, "columnHeader_Description");
+            this.columnHeader_Description.Width.Absolute = 150;
             // 
-            this.ButtonItem_ExportCurTable.BeginGroup = true;
-            this.ButtonItem_ExportCurTable.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
-            this.ButtonItem_ExportCurTable.Name = "ButtonItem_ExportCurTable";
-            resources.ApplyResources(this.ButtonItem_ExportCurTable, "ButtonItem_ExportCurTable");
-            this.ButtonItem_ExportCurTable.Click += new System.EventHandler(this.ButtonItem_ExportCurTable_Click);
+            // columnHeader_Message
             // 
-            // ButtonItem_ExportAllTables
+            this.columnHeader_Message.Name = "columnHeader_Message";
+            resources.ApplyResources(this.columnHeader_Message, "columnHeader_Message");
+            this.columnHeader_Message.Width.Absolute = 180;
             // 
-            this.ButtonItem_ExportAllTables.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
-            this.ButtonItem_ExportAllTables.Name = "ButtonItem_ExportAllTables";
-            resources.ApplyResources(this.ButtonItem_ExportAllTables, "ButtonItem_ExportAllTables");
-            this.ButtonItem_ExportAllTables.Click += new System.EventHandler(this.ButtonItem_ExportAllTables_Click);
+            // nodeConnector1
             // 
-            // ButtonItem_ImportFrom
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
             // 
-            this.ButtonItem_ImportFrom.BeginGroup = true;
-            this.ButtonItem_ImportFrom.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
-            this.ButtonItem_ImportFrom.Name = "ButtonItem_ImportFrom";
-            resources.ApplyResources(this.ButtonItem_ImportFrom, "ButtonItem_ImportFrom");
-            this.ButtonItem_ImportFrom.Click += new System.EventHandler(this.ButtonItem_ImportFrom_Click);
+            // elementStyle1
             // 
-            // ButtonItem_TextProfile
-            // 
-            this.ButtonItem_TextProfile.BeginGroup = true;
-            this.ButtonItem_TextProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_database_16px;
-            this.ButtonItem_TextProfile.Name = "ButtonItem_TextProfile";
-            this.ButtonItem_TextProfile.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_CreateProfile,
-            this.ButtonItem_ResetProfile,
-            this.ButtonItem_ManageProfile,
-            this.ButtonItem_ExportProfile,
-            this.ButtonItem_ImportProfile});
-            resources.ApplyResources(this.ButtonItem_TextProfile, "ButtonItem_TextProfile");
-            // 
-            // ButtonItem_CreateProfile
-            // 
-            this.ButtonItem_CreateProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_data_recovery_16px;
-            this.ButtonItem_CreateProfile.Name = "ButtonItem_CreateProfile";
-            resources.ApplyResources(this.ButtonItem_CreateProfile, "ButtonItem_CreateProfile");
-            this.ButtonItem_CreateProfile.Click += new System.EventHandler(this.ButtonItem_CreateProfile_Click);
-            // 
-            // ButtonItem_ResetProfile
-            // 
-            this.ButtonItem_ResetProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_data_backup_16px;
-            this.ButtonItem_ResetProfile.Name = "ButtonItem_ResetProfile";
-            resources.ApplyResources(this.ButtonItem_ResetProfile, "ButtonItem_ResetProfile");
-            this.ButtonItem_ResetProfile.Click += new System.EventHandler(this.ButtonItem_ResetProfile_Click);
-            // 
-            // ButtonItem_ManageProfile
-            // 
-            this.ButtonItem_ManageProfile.BeginGroup = true;
-            this.ButtonItem_ManageProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_database_administrator_16px;
-            this.ButtonItem_ManageProfile.Name = "ButtonItem_ManageProfile";
-            resources.ApplyResources(this.ButtonItem_ManageProfile, "ButtonItem_ManageProfile");
-            this.ButtonItem_ManageProfile.Click += new System.EventHandler(this.ButtonItem_ManageProfile_Click);
-            // 
-            // ButtonItem_ExportProfile
-            // 
-            this.ButtonItem_ExportProfile.BeginGroup = true;
-            this.ButtonItem_ExportProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_database_export_16px;
-            this.ButtonItem_ExportProfile.Name = "ButtonItem_ExportProfile";
-            resources.ApplyResources(this.ButtonItem_ExportProfile, "ButtonItem_ExportProfile");
-            this.ButtonItem_ExportProfile.Click += new System.EventHandler(this.ButtonItem_ExportProfile_Click);
-            // 
-            // ButtonItem_ImportProfile
-            // 
-            this.ButtonItem_ImportProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_database_restore_16px;
-            this.ButtonItem_ImportProfile.Name = "ButtonItem_ImportProfile";
-            resources.ApplyResources(this.ButtonItem_ImportProfile, "ButtonItem_ImportProfile");
-            this.ButtonItem_ImportProfile.Click += new System.EventHandler(this.ButtonItem_ImportProfile_Click);
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // Tab_TextManager
             // 
@@ -699,6 +716,7 @@ namespace SM64_ROM_Manager
             ((System.ComponentModel.ISupportInitialize)(this.Bar_TextOptions)).EndInit();
             this.Panel1.ResumeLayout(false);
             this.Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_TextEntries)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -728,14 +746,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelX LabelX18;
 
         private DevComponents.DotNetBar.TabStrip TabStrip_TextTable;
-
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_TM_TableEntries;
-
-        private ColumnHeader ColumnHeader1;
-
-        private ColumnHeader ColumnHeader13;
-
-        private ColumnHeader ColumnHeader14;
 
         internal DevComponents.DotNetBar.Controls.Line Line_TM_Green;
 
@@ -810,5 +820,11 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ImportProfile;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportProfile;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_CreateProfile;
+        private DevComponents.AdvTree.AdvTree advTree_TextEntries;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Number;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Description;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Message;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
     }
 }

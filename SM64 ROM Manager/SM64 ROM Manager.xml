@@ -1848,6 +1848,37 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="F:SM64_ROM_Manager.ImportLevelDialog.importMode">
+            <summary>
+            Possible modes:
+            0 = Import from ROM
+            1 = Import from level export
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,SM64Lib.Levels.Level,System.String,SM64Lib.Levels.ILevelManager)">
+            <summary>
+            Imports a level/area from a ROM file interactively.
+            </summary>
+            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+            <param name="destLevel">The destinated level where the areas should be added. Leave NULL if you want to import whole levels only.</param>
+            <param name="romPath">The path to the ROM file to import from.</param>
+            <param name="lvlmgr">A level manager to use for loading the levels from ROM.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,SM64Lib.Levels.Level,System.String)">
+            <summary>
+            Imports a level/Area from a level export file interactively.
+            </summary>
+            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+            <param name="destLevel">The destinated level where the areas should be added.</param>
+            <param name="exportPath">The path to the level export file to import from.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,System.String)">
+            <summary>
+            Imports a level/Area from a level export file interactively.
+            </summary>
+            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+            <param name="exportPath">The path to the level export file to import from.</param>
+        </member>
         <member name="F:SM64_ROM_Manager.CustomObjectsManager.components">
             <summary>
             Required designer variable.
