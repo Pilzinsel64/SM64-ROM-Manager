@@ -193,6 +193,7 @@ namespace SM64_ROM_Manager.Publics
             config.SetFilePath("sm64extend.exe", Path.Combine(MyDataPath, @"Tools\sm64extend.exe"));
             config.SetFilePath("Original Level Pointers.bin", Path.Combine(MyDataPath, @"Other\Original Level Pointers.bin"));
             config.SetFilePath("armips.exe", Path.Combine(MyToolsPath, @"armips.exe"));
+            config.SetFilePath("Flips.exe", Path.Combine(MyToolsPath, @"Flips.exe"));
         }
 
 #if RelMono
