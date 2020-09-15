@@ -85,5 +85,10 @@ namespace SM64_ROM_Manager
             if (files.Any())
                 fastColoredTextBox_Code.Text = File.ReadAllText(files[0]);
         }
+
+        private void TextBoxX_Hex_TextChanged(object sender, EventArgs e)
+        {
+            ButtonX_CopyHex.Enabled = !string.IsNullOrEmpty(textBoxX_Hex.Text);
+        }
     }
 }
