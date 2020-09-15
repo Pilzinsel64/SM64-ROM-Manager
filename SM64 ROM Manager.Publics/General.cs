@@ -21,6 +21,7 @@ using global::SM64_ROM_Manager.SettingsManager;
 using global::SM64Lib.Levels;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
+using Pilz.Runtime;
 
 namespace SM64_ROM_Manager.Publics
 {
@@ -196,7 +197,6 @@ namespace SM64_ROM_Manager.Publics
             config.SetFilePath("Flips.exe", Path.Combine(MyToolsPath, @"Flips.exe"));
         }
 
-#if RelMono
         private static void SetServerCertificateValidationCallback()
         {
             ServicePointManager.ServerCertificateValidationCallback = MyRemoteCertificateValidationCallback;
@@ -223,7 +223,6 @@ namespace SM64_ROM_Manager.Publics
             }
             return isOk;
         }
-#endif        
 
         public static void SetDefaultProxyAuthentification()
         {
@@ -239,9 +238,8 @@ namespace SM64_ROM_Manager.Publics
 
         public static void DoDefaultInitsAfterApplicationStartup()
         {
-#if RelMono
-            SetServerCertificateValidationCallback();
-#endif
+            if (RuntimeInformationsEx.OSPlattform != OSType.Windows)
+                SetServerCertificateValidationCallback();
 
             Settings.SettingsConfigFilePath = Path.Combine(MyDataPath, "Settings.json");
 

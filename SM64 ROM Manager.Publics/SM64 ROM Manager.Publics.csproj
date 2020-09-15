@@ -74,6 +74,9 @@
     <Reference Include="drsPwEnc">
       <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
     </Reference>
+    <Reference Include="Pilz">
+      <HintPath>..\Shared Libs\Pilz.dll</HintPath>
+    </Reference>
     <Reference Include="Pilz.Configuration">
       <HintPath>..\Shared Libs\Pilz.Configuration.dll</HintPath>
     </Reference>
