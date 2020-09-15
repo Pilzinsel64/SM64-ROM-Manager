@@ -13,6 +13,8 @@ using global::Pilz.Reflection.PluginSystem;
 using global::Pilz.S3DFileParser;
 using global::RegistryUtils;
 using global::SM64_ROM_Manager.SettingsManager;
+using SM64Lib;
+using System.IO;
 
 namespace SM64_ROM_Manager.Publics
 {
@@ -249,6 +251,15 @@ namespace SM64_ROM_Manager.Publics
 
             foreach (string f in toRemove)
                 collection.Remove(f);
+        }
+
+        public static void LoadLegacyObjectBankData(RomManager romManager)
+        {
+            if (!romManager.RomConfig.ObjectBankInfoData.Any())
+            {
+                var p = Path.Combine(General.MyDataPath, @"Other\Object Bank Data.json");
+                romManager?.RomConfig.ObjectBankInfoData.Load(p);
+            }
         }
     }
 }
