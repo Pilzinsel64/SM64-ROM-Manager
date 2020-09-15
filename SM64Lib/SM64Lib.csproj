@@ -227,6 +227,8 @@
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataList.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankDataListCollection.cs" />
     <Compile Include="SM64Lib\Objects\ObjectBanks\Data\ObjectBankData.cs" />
+    <Compile Include="SM64Lib\Patching\Flips.cs" />
+    <Compile Include="SM64Lib\Patching\FlipsPatchType.cs" />
     <Compile Include="SM64Lib\Patching\InputValueType.cs" />
     <Compile Include="SM64Lib\Patching\PatchScript.cs" />
     <Compile Include="SM64Lib\Patching\PatchScriptManager.cs" />
