@@ -238,7 +238,7 @@ namespace SM64_ROM_Manager.Publics
 
         public static void DoDefaultInitsAfterApplicationStartup()
         {
-            if (RuntimeInformationsEx.OSPlattform != OSType.Windows)
+            if (RuntimeInformationsEx.OSType != OSType.Windows)
                 SetServerCertificateValidationCallback();
 
             Settings.SettingsConfigFilePath = Path.Combine(MyDataPath, "Settings.json");
