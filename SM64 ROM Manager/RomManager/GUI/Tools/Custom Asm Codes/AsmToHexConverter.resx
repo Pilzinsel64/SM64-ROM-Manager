@@ -222,6 +222,12 @@
   <data name="&gt;&gt;ButtonX_Convert.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="ButtonX_CopyHex.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="ButtonX_CopyHex.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="ButtonX_CopyHex.Location" type="System.Drawing.Point, System.Drawing">
     <value>361, 3</value>
   </data>

@@ -1196,16 +1196,17 @@ namespace SM64_ROM_Manager
             if (levelIndex >= 0 && areaIndex >= 0)
             {
                 var curLvl = RomManager.Levels[levelIndex];
-                LevelEditor.Form_AreaEditor openAreaEditor = (LevelEditor.Form_AreaEditor)GetAreaEditor(curLvl);
-                if (openAreaEditor is null)
+                if (curLvl.Areas.Any())
                 {
-                    var curArea = curLvl.Areas.ElementAtOrDefault(areaIndex);
-                    var frm = new LevelEditor.Form_AreaEditor(RomManager, curLvl, Conversions.ToByte(curLvl.LevelID), curArea == null ? default : curArea.AreaID);
-                    frm.Show();
-                }
-                else
-                {
-                    openAreaEditor.BringToFront();
+                    LevelEditor.Form_AreaEditor openAreaEditor = (LevelEditor.Form_AreaEditor)GetAreaEditor(curLvl);
+                    if (openAreaEditor is null)
+                    {
+                        var curArea = curLvl.Areas.ElementAtOrDefault(areaIndex);
+                        var frm = new LevelEditor.Form_AreaEditor(RomManager, curLvl, Conversions.ToByte(curLvl.LevelID), curArea == null ? default : curArea.AreaID);
+                        frm.Show();
+                    }
+                    else
+                        openAreaEditor.BringToFront();
                 }
             }
         }
@@ -1339,16 +1340,9 @@ namespace SM64_ROM_Manager
             return (sb.Type, sb.WaterType, sb.X1, sb.Z1, sb.X2, sb.Z2, sb.Y, sb.Scale, sb.Alpha, sb.InvisibleWater);
         }
 
-        private void LoadLegacyObjectBankData()
-        {
-            var p = Path.Combine(Publics.General.MyDataPath, @"Other\Object Bank Data.json");
-            if (!RomManager.RomConfig.ObjectBankInfoData.Any())
-                RomManager?.RomConfig.ObjectBankInfoData.Load(p);
-        }
-
         public ObjectBankDataListCollection GetObjectBankData()
         {
-            LoadLegacyObjectBankData();
+            Publics.Publics.LoadLegacyObjectBankData(RomManager);
             return RomManager?.RomConfig.ObjectBankInfoData;
         }
 

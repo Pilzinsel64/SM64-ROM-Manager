@@ -97,6 +97,7 @@ namespace SM64_ROM_Manager
         public async Task<bool> LoadROM()
         {
             var mgr = new RomManager(openrompath, lvlmgr);
+            Publics.Publics.LoadLegacyObjectBankData(mgr);
             if (mgr.CheckROM())
             {
                 openrom = mgr;

@@ -15,6 +15,8 @@ using global::RegistryUtils;
 using global::SM64_ROM_Manager.SettingsManager;
 using System.Drawing;
 using System.Diagnostics;
+using SM64Lib;
+using System.IO;
 
 namespace SM64_ROM_Manager.Publics
 {
@@ -269,6 +271,15 @@ namespace SM64_ROM_Manager.Publics
             }
             else
                 Process.Start(uri.AbsoluteUri);
+        }
+
+        public static void LoadLegacyObjectBankData(RomManager romManager)
+        {
+            if (!romManager.RomConfig.ObjectBankInfoData.Any())
+            {
+                var p = Path.Combine(General.MyDataPath, @"Other\Object Bank Data.json");
+                romManager?.RomConfig.ObjectBankInfoData.Load(p);
+            }
         }
     }
 }

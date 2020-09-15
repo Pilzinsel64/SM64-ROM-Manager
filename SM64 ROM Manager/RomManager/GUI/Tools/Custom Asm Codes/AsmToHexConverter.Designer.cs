@@ -101,9 +101,9 @@
             // ButtonX_CopyHex
             // 
             this.ButtonX_CopyHex.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX_CopyHex, "ButtonX_CopyHex");
             this.ButtonX_CopyHex.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_CopyHex.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_copy_16px;
-            resources.ApplyResources(this.ButtonX_CopyHex, "ButtonX_CopyHex");
             this.ButtonX_CopyHex.Name = "ButtonX_CopyHex";
             this.ButtonX_CopyHex.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_CopyHex.Click += new System.EventHandler(this.ButtonX_CopyHex_Click);
@@ -122,6 +122,7 @@
             this.textBoxX_Hex.Name = "textBoxX_Hex";
             this.textBoxX_Hex.PreventEnterBeep = true;
             this.textBoxX_Hex.ReadOnly = true;
+            this.textBoxX_Hex.TextChanged += new System.EventHandler(this.TextBoxX_Hex_TextChanged);
             // 
             // AsmToHexConverter
             // 

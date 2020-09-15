@@ -405,13 +405,19 @@ namespace SM64_ROM_Manager
 
                     int vIndex = Array.IndexOf(Enum.GetValues(typeof(SM64Lib.Text.DialogVerticalPosition)), itemInfo.verticalPosition);
                     if (vIndex >= 0)
+                    {
+                        ComboBoxEx_TM_DialogPosX.SelectedIndex = -1;
                         ComboBoxEx_TM_DialogPosX.SelectedIndex = vIndex;
+                    }
                     else
                         ComboBoxEx_TM_DialogPosX.Text = TextValueConverter.TextFromValue((long)itemInfo.verticalPosition);
 
                     int hIndex = Array.IndexOf(Enum.GetValues(typeof(SM64Lib.Text.DialogHorizontalPosition)), itemInfo.horizontalPosition);
                     if (hIndex >= 0)
+                    {
+                        ComboBoxEx_TM_DialogPosY.SelectedIndex = -1;
                         ComboBoxEx_TM_DialogPosY.SelectedIndex = hIndex;
+                    }
                     else
                         ComboBoxEx_TM_DialogPosY.Text = TextValueConverter.TextFromValue((long)itemInfo.horizontalPosition);
 
