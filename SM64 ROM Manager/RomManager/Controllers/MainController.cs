@@ -1948,12 +1948,12 @@ namespace SM64_ROM_Manager
             var addedFuncs = new List<PluginFunction>();
             var allFuncs = Publics.General.PluginManager.GetFunctions("levelmanager.importlevels.getilevelmanager");
             var cofd = new CommonOpenFileDialog();
-            cofd.Filters.Add(new CommonFileDialogFilter("SM64 ROMs, Level Exports", "*.z64;*.lvle"));
+            cofd.Filters.Add(new CommonFileDialogFilter("SM64 ROMs, Level Exports", "*.z64;*.lvl64"));
             var cb = new CommonFileDialogComboBox();
 
             // Add core funcs
             cb.Items.Add(new CommonFileDialogComboBoxItem("SM64 RM/Editor (*.z64)"));
-            cb.Items.Add(new CommonFileDialogComboBoxItem("Level Export (*.lvle)"));
+            cb.Items.Add(new CommonFileDialogComboBoxItem("Level Export (*.lvl64)"));
 
             // Remember core funcs
             var countOfCoreFuncs = cb.Items.Count;
@@ -2216,8 +2216,11 @@ namespace SM64_ROM_Manager
             bool compression = true;
             int mode = 0;
 
-            var sfd = new CommonSaveFileDialog();
-            sfd.Filters.Add(new CommonFileDialogFilter("Level Export", "*.lvle"));
+            var sfd = new CommonSaveFileDialog()
+            {
+                DefaultExtension = ".lvl64"
+            };
+            sfd.Filters.Add(new CommonFileDialogFilter("Level Export", "*.lvl64"));
 
             // Add mode ComboBox
             var cbMode = new CommonFileDialogComboBox();
