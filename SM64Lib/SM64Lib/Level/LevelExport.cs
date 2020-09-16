@@ -21,7 +21,7 @@ namespace SM64Lib.Levels
 
         // C o n s t r u c t o r s
 
-        private LevelExport(object content, LevelExportContentType type)
+        private LevelExport(object content, LevelExportContentType type) : this()
         {
             Content = content;
             ContentType = type;
@@ -32,6 +32,9 @@ namespace SM64Lib.Levels
         public LevelExport(LevelArea area) : this(new[] { area }) { }
         public LevelExport(LevelArea[] areas) : this(areas, LevelExportContentType.Area) { }
         public LevelExport(LevelscriptCommand[] cmds, LevelExportContentType contentType) : this((object)cmds, contentType) { }
+
+        [JsonConstructor]
+        private LevelExport() { }
 
         // F e a t u r e s
 
