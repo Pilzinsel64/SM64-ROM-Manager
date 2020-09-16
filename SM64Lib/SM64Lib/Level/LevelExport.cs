@@ -27,11 +27,11 @@ namespace SM64Lib.Levels
             ContentType = type;
         }
 
-        public LevelExport(Level level) : this(new [] { level }) { }
-        public LevelExport(Level[] levels) : this(levels, LevelExportContentType.Level) { }
-        public LevelExport(LevelArea area) : this(new[] { area }) { }
-        public LevelExport(LevelArea[] areas) : this(areas, LevelExportContentType.Area) { }
-        public LevelExport(LevelscriptCommand[] cmds, LevelExportContentType contentType) : this((object)cmds, contentType) { }
+        public LevelExport(Level level) : this(new  List<Level> { level }) { }
+        public LevelExport(List<Level> levels) : this(levels, LevelExportContentType.Level) { }
+        public LevelExport(LevelArea area) : this(new List<LevelArea> { area }) { }
+        public LevelExport(List<LevelArea> areas) : this(areas, LevelExportContentType.Area) { }
+        public LevelExport(List<LevelscriptCommand> cmds, LevelExportContentType contentType) : this((object)cmds, contentType) { }
 
         [JsonConstructor]
         private LevelExport() { }
@@ -44,7 +44,7 @@ namespace SM64Lib.Levels
 
             // Open streams
             var fs = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite);
-            var output = new DeflateStream(fs, compressionLevel);
+            var output = new DeflateStream(fs, compressionLevel, true);
             var sw = new StreamWriter(output);
 
             // Create serializer
@@ -52,7 +52,9 @@ namespace SM64Lib.Levels
 
             // Serialize
             serializer.Serialize(sw, this);
-            
+
+            sw.Flush();
+            output.Close();
             fs.Close();
         }
 
