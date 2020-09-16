@@ -1990,73 +1990,39 @@ namespace SM64_ROM_Manager
                         break;
                 }
 
+                ImportLevelDialog frm = null;
+                LevelExport levelExport = null;
+                bool isLevelExportScript = false;
+
                 // Load levels via level manager
                 if (lvlmgr != null)
-                {
-                    var frm = new SM64_ROM_Manager.ImportLevelDialog(RomManager, destLevel, cofd.FileName, lvlmgr);
-                    if (frm.ShowDialog() == DialogResult.OK)
-                    {
-                        if (!addAreasOnly)
-                            destLevel = frm.LevelCopy;
-
-                        SetLevelscriptNeedToSave(destLevel);
-                        SetLevelBank0x0ENeedToSave(destLevel);
-
-                        if (addAreasOnly)
-                        {
-                            foreach (LevelArea area in frm.AreasCopy)
-                                LevelAreaAdded?.Invoke(new SM64_ROM_Manager.EventArguments.LevelAreaEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.Areas.IndexOf(area), area.AreaID));
-                        }
-                        else
-                            LevelAdded?.Invoke(new SM64_ROM_Manager.EventArguments.LevelEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.LevelID));
-                    }
-                }
+                    frm = new ImportLevelDialog(RomManager, destLevel, cofd.FileName, lvlmgr);
                 // Load levels from file and import via LevelExportImporter
                 else if (useLevelExportImporter)
                 {
-                    // Load from file
-                    var levelExport = LevelExport.ReadFromFile(cofd.FileName);
-                    
-                    // Import Levelscript
-                    if (destArea is object)
-                    {
-                        LevelExportImporter.ImportScript(levelExport, destArea, (LevelscriptCommand[])levelExport.Content);
-                    }
-                    // Import Areas
-                    else if (destLevel is object)
-                    {
-                        //LevelExportImporter.ImportArea(levelExport);
-                    }
-                    // Import Levels
-                    else
-                    {
-                        //LevelExportImporter.ImportLevel(levelExport, RomManager);
-                    }
+                    levelExport = LevelExport.ReadFromFile(cofd.FileName);
+                    isLevelExportScript = levelExport.ContentType == LevelExportContentType.Objects || levelExport.ContentType == LevelExportContentType.Warps;
+
+                    if (!isLevelExportScript)
+                        frm = new ImportLevelDialog(RomManager, destLevel, cofd.FileName);
                 }
-            }
-        }
 
-        public void ImportLevelExport(string filePath)
-        {
-            var export = LevelExport.ReadFromFile(filePath);
-            ImportLevelExport(export);
-        }
+                if (frm is object && frm.ShowDialog(mainForm) == DialogResult.OK)
+                {
+                    if (!addAreasOnly)
+                        destLevel = frm.LevelCopy;
 
-        private void ImportLevelExport(LevelExport export)
-        {
+                    SetLevelscriptNeedToSave(destLevel);
+                    SetLevelBank0x0ENeedToSave(destLevel);
 
-            switch (export.ContentType)
-            {
-                case LevelExportContentType.Level:
-                    //LevelExportImporter.ImportLevel(export, RomManager);
-                    break;
-                case LevelExportContentType.Area:
-                    //LevelExportImporter.ImportArea(export);
-                    break;
-                case LevelExportContentType.Objects:
-                case LevelExportContentType.Warps:
-                    //LevelExportImporter.ImportScript(export);
-                    break;
+                    if (addAreasOnly)
+                        foreach (LevelArea area in frm.AreasCopy)
+                            LevelAreaAdded?.Invoke(new EventArguments.LevelAreaEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.Areas.IndexOf(area), area.AreaID));
+                    else
+                        LevelAdded?.Invoke(new EventArguments.LevelEventArgs(RomManager.Levels.IndexOf(destLevel), destLevel.LevelID));
+                }
+                else if (levelExport is object && destArea is object && isLevelExportScript)
+                    LevelExportImporter.ImportScript(levelExport, destArea, (LevelscriptCommand[])levelExport.Content);
             }
         }
 
@@ -2126,14 +2092,14 @@ namespace SM64_ROM_Manager
         {
             var area = GetLevelAndArea(levelIndex, areaIndex).area;
             if (area is RMLevelArea)
-                SaveLevelExport(filePath, new LevelExport(area.Objects.ToArray(), LevelExportContentType.Objects), compression);
+                SaveLevelExport(filePath, new LevelExport(area.Objects.ToList(), LevelExportContentType.Objects), compression);
         }
 
         public void ExportLevelAreaWarps(string filePath, bool compression, int levelIndex, int areaIndex)
         {
             var area = GetLevelAndArea(levelIndex, areaIndex).area;
             if (area is RMLevelArea)
-                SaveLevelExport(filePath, new LevelExport(area.Warps.ToArray(), LevelExportContentType.Warps), compression);
+                SaveLevelExport(filePath, new LevelExport(area.Warps.ToList(), LevelExportContentType.Warps), compression);
         }
 
         public void ImportLevel(string filePath)
