@@ -157,7 +157,7 @@ namespace SM64_ROM_Manager
 
             if (levelExport.ContentType == LevelExportContentType.Level)
             {
-                var levels = levelExport.Content as Level[] ?? new Level[] { };
+                var levels = levelExport.Content as List<Level> ?? new List<Level> { };
                 foreach (Level lvl in levels)
                     AddLevelItemToList(lvl);
             }
@@ -298,6 +298,10 @@ namespace SM64_ROM_Manager
                             case false:
                                 newLvl = lvl;
                                 newLvl.LevelID = levelinfo.ID;
+
+                                if (newLvl.RomManager == null)
+                                    newLvl.RomManager = rommgr;
+
                                 break;
                             default:
                                 newLvl = null;
@@ -337,8 +341,8 @@ namespace SM64_ROM_Manager
                 var areas = new List<LevelArea>();
                 if (content is Level)
                     areas.AddRange(((Level)content).Areas);
-                else if (content is LevelArea[])
-                    areas.AddRange((LevelArea[])content);
+                else if (content is List<LevelArea>)
+                    areas.AddRange((List<LevelArea>)content);
 
                 foreach (LevelArea area in areas)
                 {

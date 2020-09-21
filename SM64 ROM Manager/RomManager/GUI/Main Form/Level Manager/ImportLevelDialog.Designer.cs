@@ -147,6 +147,7 @@ namespace SM64_ROM_Manager
             // 
             // 
             _CircularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            _CircularProgress1.FocusCuesEnabled = false;
             _CircularProgress1.Location = new Point(94, 76);
             _CircularProgress1.Name = "CircularProgress1";
             _CircularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot;
