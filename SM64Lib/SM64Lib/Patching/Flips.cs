@@ -16,6 +16,9 @@ namespace SM64Lib.Patching
             get => FlipsFilePath ?? General.MyFilePaths["Flips.exe"];
         }
 
+        public static bool Enabled
+        { get => !string.IsNullOrEmpty(FlipsFilePath); }
+
         public Flips()
         {
         }

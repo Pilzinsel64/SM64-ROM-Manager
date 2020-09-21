@@ -133,27 +133,32 @@ namespace SM64Lib.Patching
             return script;
         }
 
-        public void Patch(PatchScript script, IWin32Window owner, IReadOnlyDictionary<string, object> @params, string[] additionalAssemblyReferences)
+        public PatchScriptResult Patch(PatchScript script, IWin32Window owner, IReadOnlyDictionary<string, object> @params, string[] additionalAssemblyReferences, bool createUndoPatch = false)
         {
-            Patch(script, null, owner, @params, additionalAssemblyReferences);
+            return Patch(script, null, owner, @params, additionalAssemblyReferences, false);
         }
 
-        public void Patch(PatchScript script, RomManager rommgr, IWin32Window owner, IReadOnlyDictionary<string, object> @params, string[] additionalAssemblyReferences)
+        public PatchScriptResult Patch(PatchScript script, RomManager rommgr, IWin32Window owner, IReadOnlyDictionary<string, object> @params, string[] additionalAssemblyReferences, bool createUndoPatch = false)
         {
             if (script is null)
-            {
                 throw new ArgumentNullException(nameof(script));
-            }
 
             object oromfile = "";
             if (@params is null || !@params.TryGetValue("romfile", out oromfile))
-            {
                 oromfile = rommgr.RomFile;
-            }
-            string romfile = (string)oromfile;
 
-            var switchExpr = script.Type;
-            switch (switchExpr)
+            string romfile = (string)oromfile;
+            string romfileBackup = null;
+            var result = new PatchScriptResult();
+            createUndoPatch &= script.AllowRevert && Flips.Enabled;
+
+            if (createUndoPatch)
+            {
+                romfileBackup = Path.GetTempFileName();
+                File.Copy(romfile, romfileBackup, true);
+            }
+
+            switch (script.Type)
             {
                 case ScriptType.TweakScript:
                     {
@@ -350,7 +355,20 @@ namespace SM64Lib.Patching
                     }
             }
 
+            if (createUndoPatch)
+            {
+                var flips = new Flips();
+                var ipsFile = Path.GetTempFileName();
+                if (flips.CreatePatch(romfileBackup, romfile, ipsFile, FlipsPatchType.IPS))
+                    result.UndoPatch = File.ReadAllBytes(ipsFile);
+                if (File.Exists(ipsFile))
+                    File.Delete(ipsFile);
+                File.Delete(romfileBackup);
+            }
+
             General.PatchClass.UpdateChecksum(romfile);
+
+            return result;
         }
 
         public CompilerResults CompileScript(PatchScript script, string[] additionalAssemblyReferences)

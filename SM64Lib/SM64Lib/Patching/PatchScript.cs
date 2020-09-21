@@ -101,6 +101,10 @@ namespace SM64Lib.Patching
         /// </summary>
         [JsonConverter(typeof(UniquiIDStringJsonConverter<PatchScript>))]
         public UniquieID<PatchScript> ID { get; set; } = new UniquieID<PatchScript>();
+        /// <summary>
+        /// Defines if undo is allowed for this script.
+        /// </summary>
+        public bool AllowRevert { get; set; } = false;
     }
 
     /// <summary>

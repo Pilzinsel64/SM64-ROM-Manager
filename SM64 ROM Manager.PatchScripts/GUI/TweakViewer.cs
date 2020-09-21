@@ -514,13 +514,23 @@ namespace SM64_ROM_Manager.PatchScripts
             }
         }
 
+        private static bool IsBackupEnabled(Control owner, PatchScript script, PatchProfile profile)
+        {
+            var res = false;
+
+            if (script.AllowRevert && MessageBoxEx.Show(owner, "This tweak has the ability to create a patch to revert this script after it has patched. Do you want to create such an undo patch?", "Create undo patch?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                res = true;
+
+            return res;
+        }
+
         internal static void PatchScript(Control owner, PatchScript script, PatchProfile profile, SM64Lib.RomManager rommgr)
         {
             try
             {
                 TweakBeforeApply?.Invoke();
                 var mgr = new PatchingManager();
-                mgr.Patch(
+                var result = mgr.Patch(
                     script,
                     rommgr,
                     owner,
@@ -531,7 +541,8 @@ namespace SM64_ROM_Manager.PatchScripts
                         { "files", profile.EmbeddedFiles },
                         { "owner", owner }
                     },
-                    General.GetAdditionalReferencedAssemblied());
+                    General.GetAdditionalReferencedAssemblied(),
+                    IsBackupEnabled(owner, script, profile));
                 TweakAfterApply?.Invoke();
                 General.ShowToastnotification(owner, "Patched successfully", eToastGlowColor.Green);
             }
