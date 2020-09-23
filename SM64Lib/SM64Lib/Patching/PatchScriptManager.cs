@@ -150,7 +150,8 @@ namespace SM64Lib.Patching
             string romfile = (string)oromfile;
             string romfileBackup = null;
             var result = new PatchScriptResult();
-            createUndoPatch &= script.AllowRevert && Flips.Enabled;
+            var flips = new Flips();
+            createUndoPatch &= script.AllowRevert && flips.Enabled;
 
             if (createUndoPatch)
             {
@@ -357,9 +358,8 @@ namespace SM64Lib.Patching
 
             if (createUndoPatch)
             {
-                var flips = new Flips();
                 var ipsFile = Path.GetTempFileName();
-                if (flips.CreatePatch(romfileBackup, romfile, ipsFile, FlipsPatchType.IPS))
+                if (flips.CreatePatch(romfileBackup, romfile, ipsFile, FlipsPatchType.BPS))
                     rommgr?.RomConfig.PatchingConfig.TweakBackups.AddFile(GetUndoPatchFileNameOfScript(script), ipsFile);
                 if (File.Exists(ipsFile))
                     File.Delete(ipsFile);

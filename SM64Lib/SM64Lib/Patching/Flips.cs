@@ -11,12 +11,12 @@ namespace SM64Lib.Patching
     {
         private readonly string flipsFilePath = null;
 
-        public static string FlipsFilePath
+        public string FlipsFilePath
         {
-            get => FlipsFilePath ?? General.MyFilePaths["Flips.exe"];
+            get => flipsFilePath ?? General.MyFilePaths["Flips.exe"];
         }
 
-        public static bool Enabled
+        public bool Enabled
         { get => !string.IsNullOrEmpty(FlipsFilePath); }
 
         public Flips()
@@ -35,7 +35,7 @@ namespace SM64Lib.Patching
 
         public bool ApplyPatch(string romPath, string patchPath)
         {
-            return ExecuteFlips($"--apply \"{patchPath}\" \"{romPath}\"");
+            return ExecuteFlips($"--apply --ignore-checksum \"{patchPath}\" \"{romPath}\"");
         }
 
         public static string GetExtension(FlipsPatchType patchType)
@@ -78,7 +78,7 @@ namespace SM64Lib.Patching
             return ext;
         }
 
-        private static bool ExecuteFlips(string arguments)
+        private bool ExecuteFlips(string arguments)
         {
             // Create process
             var proc = new Process();
