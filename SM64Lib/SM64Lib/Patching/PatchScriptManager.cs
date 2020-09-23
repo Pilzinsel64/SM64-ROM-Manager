@@ -25,6 +25,7 @@ namespace SM64Lib.Patching
 
         public void Save(PatchProfile patch, string dir)
         {
+            // Check for old file extension and change it
             if (string.IsNullOrEmpty(patch.FileName))
             {
                 patch.FileName = Path.Combine(dir, patch.Name + ".json");
@@ -36,6 +37,14 @@ namespace SM64Lib.Patching
                 patch.FileName = newFileName;
             }
 
+            // Generate profile ID if null
+            patch.ID.GenerateIfNull();
+
+            // Generate script IDs if null
+            foreach (var script in patch.Scripts)
+                script.ID.GenerateIfNull();
+
+            // Write file
             File.WriteAllText(patch.FileName, JObject.FromObject(patch).ToString());
         }
 
