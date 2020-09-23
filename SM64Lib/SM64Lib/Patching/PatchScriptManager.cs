@@ -151,7 +151,7 @@ namespace SM64Lib.Patching
             string romfileBackup = null;
             var result = new PatchScriptResult();
             var flips = new Flips();
-            createUndoPatch &= script.AllowRevert && flips.Enabled;
+            createUndoPatch &= script.AllowRevert && script.ID.HasID && flips.Enabled;
 
             if (createUndoPatch)
             {
