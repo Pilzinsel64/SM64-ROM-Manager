@@ -117,85 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TextBoxX_ScriptDescription.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TextBoxX_ScriptDescription.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptDescription.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ScriptName.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_ReferenceName.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
   <data name="TextBoxX_ReferenceName.WatermarkText" xml:space="preserve">
     <value>Bspw. System.Windows.Forms.dll</value>
   </data>
+  <data name="CheckBoxX_AllowRevert.Text" xml:space="preserve">
+    <value>Rückgängig erlauben</value>
+  </data>
   <data name="LayoutControlItem2.Text" xml:space="preserve">
     <value>Beschreibung:</value>
+  </data>
+  <data name="layoutControlItem6.Text" xml:space="preserve">
+    <value>Optionen:</value>
   </data>
   <data name="LayoutControlItem4.Text" xml:space="preserve">
     <value>Optionale Verweise:</value>
@@ -203,11 +135,14 @@
   <data name="layoutControlItem5.Text" xml:space="preserve">
     <value>Eingebettete Dateien:</value>
   </data>
-  <data name="resource.Text" xml:space="preserve">
-    <value />
+  <data name="ButtonItem5.Text" xml:space="preserve">
+    <value>Datei</value>
   </data>
-  <data name="resource.Tooltip" xml:space="preserve">
-    <value />
+  <data name="ButtonItem4.Text" xml:space="preserve">
+    <value>Skript</value>
+  </data>
+  <data name="ButtonItem_ShowObjectCatalog.Text" xml:space="preserve">
+    <value>Objekt-Katalog</value>
   </data>
   <data name="ButtonItem_NewTemplate.Text" xml:space="preserve">
     <value>Neue Vorlage</value>
@@ -218,9 +153,6 @@
   <data name="ButtonItem_LoadFromFile.Text" xml:space="preserve">
     <value>Laden von ...</value>
   </data>
-  <data name="ButtonItem5.Text" xml:space="preserve">
-    <value>Datei</value>
-  </data>
   <data name="ButtonItem3.Text" xml:space="preserve">
     <value>Ausführen</value>
   </data>
@@ -229,12 +161,6 @@
   </data>
   <data name="ButtonItem_CheckForErrors.Text" xml:space="preserve">
     <value>Auf Fehler überprüfen</value>
-  </data>
-  <data name="ButtonItem4.Text" xml:space="preserve">
-    <value>Skript</value>
-  </data>
-  <data name="ButtonItem_ShowObjectCatalog.Text" xml:space="preserve">
-    <value>Objekt-Katalog</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

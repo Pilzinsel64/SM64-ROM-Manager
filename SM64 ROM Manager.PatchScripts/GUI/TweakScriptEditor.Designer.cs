@@ -57,9 +57,12 @@ namespace SM64_ROM_Manager.PatchScripts
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonX_AddEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_RemoveEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.CheckBoxX_AllowRevert = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.LayoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.LayoutControlItem2 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.LayoutControlItem3 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem6 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.LayoutControlItem4 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.layoutControlItem5 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.Panel4 = new System.Windows.Forms.Panel();
@@ -82,6 +85,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.LayoutControl1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
@@ -267,6 +271,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.LayoutControl1.Controls.Add(this.Panel1);
             this.LayoutControl1.Controls.Add(this.Panel3);
             this.LayoutControl1.Controls.Add(this.panel5);
+            this.LayoutControl1.Controls.Add(this.panel6);
             this.LayoutControl1.Name = "LayoutControl1";
             // 
             // 
@@ -275,6 +280,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.LayoutControlItem1,
             this.LayoutControlItem2,
             this.LayoutControlItem3,
+            this.layoutControlItem6,
             this.LayoutControlItem4,
             this.layoutControlItem5});
             // 
@@ -331,6 +337,24 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonX_RemoveEmbeddedFile.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonX_RemoveEmbeddedFile.Click += new System.EventHandler(this.ButtonX_RemoveEmbeddedFile_Click);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.CheckBoxX_AllowRevert);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // CheckBoxX_AllowRevert
+            // 
+            // 
+            // 
+            // 
+            this.CheckBoxX_AllowRevert.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.CheckBoxX_AllowRevert, "CheckBoxX_AllowRevert");
+            this.CheckBoxX_AllowRevert.Name = "CheckBoxX_AllowRevert";
+            this.CheckBoxX_AllowRevert.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CheckBoxX_AllowRevert.CheckedChanged += new System.EventHandler(this.CheckBoxX_AllowRevert_CheckedChanged);
+            // 
             // LayoutControlItem1
             // 
             this.LayoutControlItem1.Control = this.TextBoxX_ScriptName;
@@ -364,6 +388,16 @@ namespace SM64_ROM_Manager.PatchScripts
             this.LayoutControlItem3.TextPosition = DevComponents.DotNetBar.Layout.eLayoutPosition.Top;
             this.LayoutControlItem3.Width = 100;
             this.LayoutControlItem3.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.panel6;
+            this.layoutControlItem6.Height = 48;
+            this.layoutControlItem6.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            resources.ApplyResources(this.layoutControlItem6, "layoutControlItem6");
+            this.layoutControlItem6.TextPosition = DevComponents.DotNetBar.Layout.eLayoutPosition.Top;
+            this.layoutControlItem6.Width = 379;
             // 
             // LayoutControlItem4
             // 
@@ -524,6 +558,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
@@ -601,5 +636,8 @@ namespace SM64_ROM_Manager.PatchScripts
         private DevComponents.DotNetBar.ButtonX ButtonX_AddEmbeddedFile;
         private DevComponents.DotNetBar.ButtonX ButtonX_RemoveEmbeddedFile;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem5;
+        private Panel panel6;
+        private DevComponents.DotNetBar.Controls.CheckBoxX CheckBoxX_AllowRevert;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem6;
     }
 }

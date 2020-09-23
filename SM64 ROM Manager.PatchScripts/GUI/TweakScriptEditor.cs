@@ -206,6 +206,8 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             TextBoxX_ScriptName.Text = tempScript.Name;
             TextBoxX_ScriptDescription.Text = tempScript.Description;
+            CheckBoxX_AllowRevert.Checked = tempScript.AllowRevert;
+
             var switchExpr = tempScript.Type;
             switch (switchExpr)
             {
@@ -605,6 +607,11 @@ End Module
         private void ButtonX_RemoveEmbeddedFile_Click(object sender, EventArgs e)
         {
             RemoveEmbeddedFile(GetSelectedEmbeddedFile());
+        }
+
+        private void CheckBoxX_AllowRevert_CheckedChanged(object sender, EventArgs e)
+        {
+            tempScript.AllowRevert = CheckBoxX_AllowRevert.Checked;
         }
     }
 }
