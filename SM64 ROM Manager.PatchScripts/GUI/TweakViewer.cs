@@ -243,7 +243,7 @@ namespace SM64_ROM_Manager.PatchScripts
         private void LoadScript(PatchScript script)
         {
             SuperTooltip1.SetSuperTooltip(new ComboItem(), new SuperTooltipInfo(script.Name, string.Empty, script.Description, null, null, eTooltipColor.Default, false, false, default));
-            ButtonX_UndoScript.Visible = script.AllowRevert;
+            ButtonX_UndoScript.Visible = true; // script.AllowRevert;
             ButtonX_UndoScript.Enabled = PatchingManager.HasUndoPatch(script, rommgr);
         }
 
