@@ -145,6 +145,7 @@
     <Compile Include="SM64Lib\Configuration\MusicConfiguration.cs" />
     <Compile Include="SM64Lib\Configuration\NPCConfig.cs" />
     <Compile Include="SM64Lib\Configuration\ObjectModelConfig.cs" />
+    <Compile Include="SM64Lib\Configuration\PatchingConfig.cs" />
     <Compile Include="SM64Lib\Configuration\RomConfig.cs" />
     <Compile Include="SM64Lib\Configuration\ScrollTexConfig.cs" />
     <Compile Include="SM64Lib\Data\BinaryFile.cs" />

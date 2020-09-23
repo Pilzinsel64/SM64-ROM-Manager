@@ -29,6 +29,9 @@ namespace SM64Lib.Configuration
         // Texts
         public Text.Profiles.TextProfileInfo TextProfileInfo { get; set; } = null;
 
+        // Patching
+        public PatchingConfig PatchingConfig { get; set; } = new PatchingConfig();
+
         // Other
         public ScrollTexConfig ScrollTexConfig { get; set; } = new ScrollTexConfig();
         public ObjectBankDataListCollection ObjectBankInfoData { get; } = new ObjectBankDataListCollection();
