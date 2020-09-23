@@ -41,18 +41,10 @@ namespace SM64_ROM_Manager.PatchScripts
             this.Panel1 = new System.Windows.Forms.Panel();
             this.labelX_Version = new DevComponents.DotNetBar.LabelX();
             this.LabelX2 = new DevComponents.DotNetBar.LabelX();
-            this.Panel3 = new System.Windows.Forms.Panel();
-            this.ButtonX8 = new DevComponents.DotNetBar.ButtonX();
             this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.ButtonX5 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
             this.LabelX_Description = new DevComponents.DotNetBar.LabelX();
             this.LabelX_PatchName = new DevComponents.DotNetBar.LabelX();
             this.TableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX6 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX4 = new DevComponents.DotNetBar.ButtonX();
             this.ComboBoxEx_Scripts = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.LabelX1 = new DevComponents.DotNetBar.LabelX();
             this.Flyout1 = new DevComponents.DotNetBar.Controls.Flyout(this.components);
@@ -60,25 +52,34 @@ namespace SM64_ROM_Manager.PatchScripts
             this.SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
             this.TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.CircularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
-            this.ButtonX9 = new DevComponents.DotNetBar.ButtonX();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.WarningBox_TweakUpdates = new DevComponents.DotNetBar.Controls.WarningBox();
             this.WarningBox_UpgradeLegacyTweaks = new DevComponents.DotNetBar.Controls.WarningBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.ButtonX8 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_UndoScript = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX5 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX6 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX9 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX7 = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_AddNew = new DevComponents.DotNetBar.ButtonX();
             this.Panel1.SuspendLayout();
-            this.Panel3.SuspendLayout();
             this.TableLayoutPanel2.SuspendLayout();
             this.TableLayoutPanel1.SuspendLayout();
             this.Panel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.tableLayoutPanel3);
             this.Panel1.Controls.Add(this.labelX_Version);
             this.Panel1.Controls.Add(this.LabelX2);
-            this.Panel1.Controls.Add(this.Panel3);
             this.Panel1.Controls.Add(this.TableLayoutPanel2);
             this.Panel1.Controls.Add(this.LabelX_Description);
             this.Panel1.Controls.Add(this.LabelX_PatchName);
@@ -108,25 +109,6 @@ namespace SM64_ROM_Manager.PatchScripts
             resources.ApplyResources(this.LabelX2, "LabelX2");
             this.LabelX2.Name = "LabelX2";
             // 
-            // Panel3
-            // 
-            resources.ApplyResources(this.Panel3, "Panel3");
-            this.Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.Panel3.Controls.Add(this.ButtonX8);
-            this.Panel3.Name = "Panel3";
-            // 
-            // ButtonX8
-            // 
-            this.ButtonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX8.FocusCuesEnabled = false;
-            this.ButtonX8.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_triggering_16px;
-            resources.ApplyResources(this.ButtonX8, "ButtonX8");
-            this.ButtonX8.Name = "ButtonX8";
-            this.ButtonX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX8.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX8.Click += new System.EventHandler(this.ButtonX8_Click);
-            // 
             // TableLayoutPanel2
             // 
             resources.ApplyResources(this.TableLayoutPanel2, "TableLayoutPanel2");
@@ -135,42 +117,6 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TableLayoutPanel2.Controls.Add(this.ButtonX3, 2, 0);
             this.TableLayoutPanel2.Controls.Add(this.ButtonX2, 0, 0);
             this.TableLayoutPanel2.Name = "TableLayoutPanel2";
-            // 
-            // ButtonX5
-            // 
-            this.ButtonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX5.FocusCuesEnabled = false;
-            this.ButtonX5.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
-            resources.ApplyResources(this.ButtonX5, "ButtonX5");
-            this.ButtonX5.Name = "ButtonX5";
-            this.ButtonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX5.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX5.Click += new System.EventHandler(this.ButtonX5_Click);
-            // 
-            // ButtonX3
-            // 
-            this.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX3.FocusCuesEnabled = false;
-            this.ButtonX3.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_cancel_16px;
-            resources.ApplyResources(this.ButtonX3, "ButtonX3");
-            this.ButtonX3.Name = "ButtonX3";
-            this.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX3.Click += new System.EventHandler(this.ButtonX3_Click);
-            // 
-            // ButtonX2
-            // 
-            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            resources.ApplyResources(this.ButtonX2, "ButtonX2");
-            this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX2.FocusCuesEnabled = false;
-            this.ButtonX2.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_edit_16px;
-            this.ButtonX2.Name = "ButtonX2";
-            this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX2.Click += new System.EventHandler(this.ButtonX2_Click);
             // 
             // LabelX_Description
             // 
@@ -203,42 +149,6 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TableLayoutPanel1.Controls.Add(this.ButtonX6, 1, 0);
             this.TableLayoutPanel1.Controls.Add(this.ButtonX4, 2, 0);
             this.TableLayoutPanel1.Name = "TableLayoutPanel1";
-            // 
-            // ButtonX1
-            // 
-            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX1.FocusCuesEnabled = false;
-            this.ButtonX1.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_plus_math_16px;
-            resources.ApplyResources(this.ButtonX1, "ButtonX1");
-            this.ButtonX1.Name = "ButtonX1";
-            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX1.Click += new System.EventHandler(this.ButtonX1_Click);
-            // 
-            // ButtonX6
-            // 
-            this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            resources.ApplyResources(this.ButtonX6, "ButtonX6");
-            this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX6.FocusCuesEnabled = false;
-            this.ButtonX6.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_edit_16px;
-            this.ButtonX6.Name = "ButtonX6";
-            this.ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX6.Click += new System.EventHandler(this.ButtonX6_Click);
-            // 
-            // ButtonX4
-            // 
-            this.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            resources.ApplyResources(this.ButtonX4, "ButtonX4");
-            this.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX4.FocusCuesEnabled = false;
-            this.ButtonX4.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
-            this.ButtonX4.Name = "ButtonX4";
-            this.ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX4.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonX4.Click += new System.EventHandler(this.ButtonX4_Click);
             // 
             // ComboBoxEx_Scripts
             // 
@@ -322,17 +232,6 @@ namespace SM64_ROM_Manager.PatchScripts
             this.CircularProgress1.SetVisibleStateOnStop = true;
             this.CircularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
             // 
-            // ButtonX9
-            // 
-            this.ButtonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
-            this.ButtonX9.FocusCuesEnabled = false;
-            this.ButtonX9.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
-            resources.ApplyResources(this.ButtonX9, "ButtonX9");
-            this.ButtonX9.Name = "ButtonX9";
-            this.ButtonX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX9.Click += new System.EventHandler(this.ButtonX9_Click);
-            // 
             // Panel2
             // 
             this.Panel2.BackColor = System.Drawing.Color.Transparent;
@@ -359,6 +258,121 @@ namespace SM64_ROM_Manager.PatchScripts
             this.WarningBox_UpgradeLegacyTweaks.ForeColor = System.Drawing.Color.Black;
             this.WarningBox_UpgradeLegacyTweaks.Name = "WarningBox_UpgradeLegacyTweaks";
             this.WarningBox_UpgradeLegacyTweaks.OptionsClick += new System.EventHandler(this.WarningBox_UpgradeLegacyTweaks_OptionsClick);
+            // 
+            // tableLayoutPanel3
+            // 
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel3.Controls.Add(this.ButtonX8, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.ButtonX_UndoScript, 0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            // 
+            // ButtonX8
+            // 
+            this.ButtonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX8.FocusCuesEnabled = false;
+            this.ButtonX8.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_triggering_16px;
+            resources.ApplyResources(this.ButtonX8, "ButtonX8");
+            this.ButtonX8.Name = "ButtonX8";
+            this.ButtonX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX8.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX8.Click += new System.EventHandler(this.ButtonX8_Click);
+            // 
+            // ButtonX_UndoScript
+            // 
+            this.ButtonX_UndoScript.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_UndoScript.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            resources.ApplyResources(this.ButtonX_UndoScript, "ButtonX_UndoScript");
+            this.ButtonX_UndoScript.FocusCuesEnabled = false;
+            this.ButtonX_UndoScript.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_undo_16px;
+            this.ButtonX_UndoScript.Name = "ButtonX_UndoScript";
+            this.ButtonX_UndoScript.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_UndoScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX_UndoScript.Click += new System.EventHandler(this.ButtonX_UndoScript_Click);
+            // 
+            // ButtonX5
+            // 
+            this.ButtonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX5.FocusCuesEnabled = false;
+            this.ButtonX5.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
+            resources.ApplyResources(this.ButtonX5, "ButtonX5");
+            this.ButtonX5.Name = "ButtonX5";
+            this.ButtonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX5.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX5.Click += new System.EventHandler(this.ButtonX5_Click);
+            // 
+            // ButtonX3
+            // 
+            this.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX3.FocusCuesEnabled = false;
+            this.ButtonX3.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_cancel_16px;
+            resources.ApplyResources(this.ButtonX3, "ButtonX3");
+            this.ButtonX3.Name = "ButtonX3";
+            this.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX3.Click += new System.EventHandler(this.ButtonX3_Click);
+            // 
+            // ButtonX2
+            // 
+            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX2, "ButtonX2");
+            this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX2.FocusCuesEnabled = false;
+            this.ButtonX2.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_edit_16px;
+            this.ButtonX2.Name = "ButtonX2";
+            this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX2.Click += new System.EventHandler(this.ButtonX2_Click);
+            // 
+            // ButtonX1
+            // 
+            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX1.FocusCuesEnabled = false;
+            this.ButtonX1.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_plus_math_16px;
+            resources.ApplyResources(this.ButtonX1, "ButtonX1");
+            this.ButtonX1.Name = "ButtonX1";
+            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX1.Click += new System.EventHandler(this.ButtonX1_Click);
+            // 
+            // ButtonX6
+            // 
+            this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX6, "ButtonX6");
+            this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX6.FocusCuesEnabled = false;
+            this.ButtonX6.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_edit_16px;
+            this.ButtonX6.Name = "ButtonX6";
+            this.ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX6.Click += new System.EventHandler(this.ButtonX6_Click);
+            // 
+            // ButtonX4
+            // 
+            this.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX4, "ButtonX4");
+            this.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX4.FocusCuesEnabled = false;
+            this.ButtonX4.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
+            this.ButtonX4.Name = "ButtonX4";
+            this.ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX4.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX4.Click += new System.EventHandler(this.ButtonX4_Click);
+            // 
+            // ButtonX9
+            // 
+            this.ButtonX9.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX9.ColorTable = DevComponents.DotNetBar.eButtonColor.Orange;
+            this.ButtonX9.FocusCuesEnabled = false;
+            this.ButtonX9.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
+            resources.ApplyResources(this.ButtonX9, "ButtonX9");
+            this.ButtonX9.Name = "ButtonX9";
+            this.ButtonX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX9.Click += new System.EventHandler(this.ButtonX9_Click);
             // 
             // ButtonX7
             // 
@@ -399,10 +413,10 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TopRightCornerSize = 0;
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
-            this.Panel3.ResumeLayout(false);
             this.TableLayoutPanel2.ResumeLayout(false);
             this.TableLayoutPanel1.ResumeLayout(false);
             this.Panel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -461,8 +475,6 @@ namespace SM64_ROM_Manager.PatchScripts
         private DevComponents.DotNetBar.ButtonX ButtonX2;
 
 
-        private Panel Panel3;
-
 
         private DevComponents.DotNetBar.LabelX LabelX2;
 
@@ -484,5 +496,7 @@ namespace SM64_ROM_Manager.PatchScripts
         private DevComponents.DotNetBar.Controls.WarningBox WarningBox_TweakUpdates;
         private DevComponents.DotNetBar.LabelX labelX_Version;
         private DevComponents.DotNetBar.Controls.WarningBox WarningBox_UpgradeLegacyTweaks;
+        private TableLayoutPanel tableLayoutPanel3;
+        private DevComponents.DotNetBar.ButtonX ButtonX_UndoScript;
     }
 }

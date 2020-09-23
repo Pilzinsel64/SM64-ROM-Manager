@@ -663,5 +663,10 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             ConvertLegacyTweaks();
         }
+
+        private void ButtonX_UndoScript_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
