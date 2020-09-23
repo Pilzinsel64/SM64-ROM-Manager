@@ -531,13 +531,13 @@ $@".Open ""{filePath}"", 0
             return $"patch-undo.{script.ID}";
         }
 
-        public bool HasUndoPatch(PatchScript script, RomManager rommgr)
+        public static bool HasUndoPatch(PatchScript script, RomManager rommgr)
         {
             var fileName = GetUndoPatchFileNameOfScript(script);
             return rommgr.RomConfig.PatchingConfig.TweakBackups.HasFile(fileName);
         }
 
-        public void ApplyUndoPatch(PatchScript script, RomManager rommgr, bool removeFileAfterPatching = true)
+        public static void ApplyUndoPatch(PatchScript script, RomManager rommgr, bool removeFileAfterPatching = true)
         {
             var fileName = GetUndoPatchFileNameOfScript(script);
             var filePath = rommgr.RomConfig.PatchingConfig.TweakBackups.GetLocalFilePath(fileName);
@@ -549,6 +549,8 @@ $@".Open ""{filePath}"", 0
                 rommgr.RomConfig.PatchingConfig.TweakBackups.RemoveFile(fileName);
 
             File.Delete(filePath);
+
+            General.PatchClass.UpdateChecksum(rommgr.RomFile);
         }
     }
 }
