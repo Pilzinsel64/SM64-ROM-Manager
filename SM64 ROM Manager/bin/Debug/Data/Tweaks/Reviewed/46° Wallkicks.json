@@ -3,10 +3,11 @@
   "Scripts": [
     {
       "Name": "Apply 46° Wallkick functionality",
-      "Script": ".org 0x11488\r\nslti at, t7, $a100\r\n\r\n.org 0x11494\r\nslti at, t7, $5701\r\n",
+      "Script": ".org 0x11488\r\nslti at, t7, 0xa100\r\n\r\n.org 0x11494\r\nslti at, t7, 0x5701\r\n",
       "Type": "Armips",
       "Description": "",
-      "References": []
+      "References": [],
+      "AllowRevert": true
     }
   ],
   "Version": "1.0.0.0",
