@@ -359,7 +359,7 @@ namespace SM64Lib.Patching
             if (createUndoPatch)
             {
                 var ipsFile = Path.GetTempFileName();
-                if (flips.CreatePatch(romfileBackup, romfile, ipsFile, FlipsPatchType.BPS))
+                if (flips.CreatePatch(romfile, romfileBackup, ipsFile, FlipsPatchType.BPS))
                     rommgr?.RomConfig.PatchingConfig.TweakBackups.AddFile(GetUndoPatchFileNameOfScript(script), ipsFile);
                 if (File.Exists(ipsFile))
                     File.Delete(ipsFile);

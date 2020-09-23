@@ -35,7 +35,7 @@ namespace SM64Lib.Patching
 
         public bool ApplyPatch(string romPath, string patchPath)
         {
-            return ExecuteFlips($"--apply --ignore-checksum \"{patchPath}\" \"{romPath}\"");
+            return ExecuteFlips($"--apply --ignore-checksum \"{patchPath}\" \"{romPath}\" \"{romPath}\"");
         }
 
         public static string GetExtension(FlipsPatchType patchType)
