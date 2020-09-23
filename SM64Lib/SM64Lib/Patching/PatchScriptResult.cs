@@ -8,6 +8,5 @@ namespace SM64Lib.Patching
 {
     public class PatchScriptResult
     {
-        public byte[] UndoPatch { get; internal set; } = null;
     }
 }

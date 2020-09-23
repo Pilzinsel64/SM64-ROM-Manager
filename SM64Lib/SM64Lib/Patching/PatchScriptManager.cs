@@ -360,7 +360,7 @@ namespace SM64Lib.Patching
                 var flips = new Flips();
                 var ipsFile = Path.GetTempFileName();
                 if (flips.CreatePatch(romfileBackup, romfile, ipsFile, FlipsPatchType.IPS))
-                    result.UndoPatch = File.ReadAllBytes(ipsFile);
+                    rommgr?.RomConfig.PatchingConfig.TweakBackups.AddFile(GetUndoPatchFileNameOfScript(script), ipsFile);
                 if (File.Exists(ipsFile))
                     File.Delete(ipsFile);
                 File.Delete(romfileBackup);
@@ -524,6 +524,31 @@ $@".Open ""{filePath}"", 0
             var bytes = File.ReadAllBytes(tmpBinFile);
             File.Delete(tmpBinFile);
             return bytes;
+        }
+
+        public static string GetUndoPatchFileNameOfScript(PatchScript script)
+        {
+            return $"patch-undo.{script.ID}";
+        }
+
+        public bool HasUndoPatch(PatchScript script, RomManager rommgr)
+        {
+            var fileName = GetUndoPatchFileNameOfScript(script);
+            return rommgr.RomConfig.PatchingConfig.TweakBackups.HasFile(fileName);
+        }
+
+        public void ApplyUndoPatch(PatchScript script, RomManager rommgr, bool removeFileAfterPatching = true)
+        {
+            var fileName = GetUndoPatchFileNameOfScript(script);
+            var filePath = rommgr.RomConfig.PatchingConfig.TweakBackups.GetLocalFilePath(fileName);
+
+            var flips = new Flips();
+            flips.ApplyPatch(rommgr.RomFile, filePath);
+
+            if (removeFileAfterPatching)
+                rommgr.RomConfig.PatchingConfig.TweakBackups.RemoveFile(fileName);
+
+            File.Delete(filePath);
         }
     }
 }

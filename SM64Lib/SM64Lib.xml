@@ -336,6 +336,11 @@
             Defines an uniquie ID to identify this script (e.g. for undo patch).
             </summary>
         </member>
+        <member name="P:SM64Lib.Patching.PatchScript.AllowRevert">
+            <summary>
+            Defines if undo is allowed for this script.
+            </summary>
+        </member>
         <member name="T:SM64Lib.Patching.ScriptType">
             <summary>
             Defines the script type, so the behavior on write it.
