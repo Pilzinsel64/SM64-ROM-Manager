@@ -1,0 +1,21 @@
+{
+  "Name": "Fix Mario Disappearing Related Softlocks",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "\nFD84: 95 61 00 02\nFD90: 34 21 00 01\nFD98: A5 61 00 02\n",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "If Mario dies by being squished or by getting eaten, he will not despawn. Useful if you want a death warp in the same level as a thwomp or whomp. Default Bowser's Blueprints tweak by Falcobuster.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}
