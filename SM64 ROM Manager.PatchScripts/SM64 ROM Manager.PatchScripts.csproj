@@ -120,6 +120,11 @@
   <ItemGroup>
     <Compile Include="Classes\TweakDatabaseUploadInfo.cs" />
     <Compile Include="Classes\TweakDatabaseUploadState.cs" />
+    <Compile Include="LangRes\TweaksGUILangRes.de.Designer.cs">
+      <DependentUpon>TweaksGUILangRes.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
     <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
@@ -183,6 +188,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyIcons.resx</DependentUpon>
     </Compile>
+    <Compile Include="LangRes\TweaksGUILangRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TweaksGUILangRes.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GUI\ObjectCatalog.resx">
@@ -198,6 +208,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TweakViewer.de.resx">
       <DependentUpon>TweakViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LangRes\TweaksGUILangRes.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TweaksGUILangRes.de.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -217,6 +231,10 @@
     <EmbeddedResource Include="MyIcons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MyIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LangRes\TweaksGUILangRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TweaksGUILangRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

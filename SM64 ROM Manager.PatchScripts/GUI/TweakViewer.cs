@@ -14,6 +14,7 @@ using Microsoft.VisualBasic;
 using static Microsoft.VisualBasic.CompilerServices.LikeOperator;
 using SM64Lib.Patching;
 using DevComponents.DotNetBar.Controls;
+using SM64_ROM_Manager.PatchScripts.LangRes;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -241,7 +242,9 @@ namespace SM64_ROM_Manager.PatchScripts
 
         private void LoadScript(PatchScript script)
         {
-            SuperTooltip1.SetSuperTooltip(new ComboItem(), new SuperTooltipInfo(script.Name, "", script.Description, null, null, eTooltipColor.Default, false, false, default));
+            SuperTooltip1.SetSuperTooltip(new ComboItem(), new SuperTooltipInfo(script.Name, string.Empty, script.Description, null, null, eTooltipColor.Default, false, false, default));
+            ButtonX_UndoScript.Visible = script.AllowRevert;
+            ButtonX_UndoScript.Enabled = PatchingManager.HasUndoPatch(script, rommgr);
         }
 
         private void SaveSinglePatch(PatchProfile patch)
@@ -367,6 +370,16 @@ namespace SM64_ROM_Manager.PatchScripts
                     ItemListBox1.SelectedItem.Text = patch.Name;
                     ItemListBox1.Refresh();
                 }
+            }
+        }
+
+        private static void ApplyUndoPatch(PatchScript script, SM64Lib.RomManager rommgr)
+        {
+            if (script is object)
+            {
+                TweakBeforeApply?.Invoke();
+                PatchingManager.ApplyUndoPatch(script, rommgr);
+                TweakAfterApply.Invoke();
             }
         }
 
@@ -526,6 +539,10 @@ namespace SM64_ROM_Manager.PatchScripts
 
         internal static void PatchScript(Control owner, PatchScript script, PatchProfile profile, SM64Lib.RomManager rommgr)
         {
+            if (PatchingManager.HasUndoPatch(script, rommgr) &&
+                MessageBoxEx.Show(owner, TweaksGUILangRes.MsgBox_RevertScriptBeforePatching, TweaksGUILangRes.MsgBox_RevertScript_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                ApplyUndoPatch(script, rommgr);
+
             try
             {
                 TweakBeforeApply?.Invoke();
@@ -666,7 +683,8 @@ namespace SM64_ROM_Manager.PatchScripts
 
         private void ButtonX_UndoScript_Click(object sender, EventArgs e)
         {
-
+            if (MessageBoxEx.Show(this, TweaksGUILangRes.MsgBox_RevertScript, TweaksGUILangRes.MsgBox_RevertScript_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                ApplyUndoPatch(GetSelectedScript(), rommgr);
         }
     }
 }
