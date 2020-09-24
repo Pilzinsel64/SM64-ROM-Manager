@@ -37,9 +37,9 @@
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Threading.Tasks" Version="4.*" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
-    <PackageReference Include="System.Net.Http" Version="4.*" />
+    <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -233,7 +233,7 @@
     <None Include="Resources\icons8_folder_16px.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="EPPlus" Version="5.3.1" />
+    <PackageReference Include="EPPlus" Version="5.3.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="OpenTK" Version="3.2.0" />
     <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
