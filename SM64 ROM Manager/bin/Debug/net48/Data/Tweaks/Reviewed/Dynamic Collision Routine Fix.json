@@ -1,0 +1,21 @@
+{
+  "Name": "Dynamic Collision Routine Fix",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "FE43B: 32\nFE4B7: 3C\nFE4D7: 03\nFE4FC: 10 00 00 03 8F A2 00 04 10 00 00 01 00 00 00 00 03 E0 00 08\nFF3B7: 3C\nFF3EB: 3C\nFF42F: 3C\nFF447: 3C\nFFAF7: 3C\n100656: 00 30\n100713: D2",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Kaze's default asm file messes stuff up so here's a fix babe",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

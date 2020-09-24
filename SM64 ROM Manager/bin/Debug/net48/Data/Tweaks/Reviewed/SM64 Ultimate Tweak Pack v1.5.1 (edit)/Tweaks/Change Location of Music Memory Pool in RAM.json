@@ -1,0 +1,21 @@
+{
+  "Name": "Change Location of Music Memory Pool in RAM",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "D48B6: [16, \"RAM Location (Default: 805C)\", hex]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "If value is not 805C in your ROM, change it to that.\n\nCredit to Blake.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

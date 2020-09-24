@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>N64Graphics</AssemblyTitle>
     <Company>Pilzinsel64</Company>
     <Product>N64Graphics</Product>

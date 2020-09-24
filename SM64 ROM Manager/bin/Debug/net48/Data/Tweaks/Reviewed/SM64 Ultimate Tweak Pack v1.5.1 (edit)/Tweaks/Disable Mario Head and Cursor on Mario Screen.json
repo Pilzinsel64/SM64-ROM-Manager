@@ -1,0 +1,21 @@
+{
+  "Name": "Disable Mario Head and Cursor on Mario Screen",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//Disable Hand\n31518: 00 00 00 00\n\n//Disable Head Model\n31524: 00 00 00 00\n31560: 00 00 10 25",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Disables the Giant Mario Head and Hand in screen which displays the Giant Mario Head and the title in the background. (Updated version provided by Felegg)",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

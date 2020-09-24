@@ -1,0 +1,21 @@
+{
+  "Name": "Skip Mario Screen (Console Compatible)",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "// Second Screen\n269F18: 01 10 00 14 00 26 9E A0 00 26 A3 A0 14 00 02 0C\n\n// Game Over\n269FA4: 01 10 00 14 00 26 9E A0 00 26 A3 A0 14 00 02 0C",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "2.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Skip the screen which displays Mario's face and the title in the background. Also applies to the screen displayed after losing all lives. (New Console friendly version from aglab2)",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "Change Location of ADSR Data",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "D47A2: [16, \"Part 1 (DEFAULT: 0058)\", hex]\nD47AA: [16, \"Part 2 (DEFAULT: B720)\", hex]\nD4806: [copy, D47A2, D47A4]\nD480E: [copy, D47AA, D47AC]\nD4822: [copy, D47A2, D47A4]\nD4826: [copy, D47AA, D47AC]\n\n//For XXXXXXXX, change the value to place you want the ADSR data to go\nXXXXXXXX: [copy, 57B720, 593560]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Changes the ADSR location.\nDEFAULT represents the address in ASM and therefore keeps the \"negative rule\" in mind\nReal Default Location: 0057B720\n\nCredit to Blake.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

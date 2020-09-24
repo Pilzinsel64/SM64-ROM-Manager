@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>SM64_ROM_Manager.UserRequests</RootNamespace>
     <MyType>Windows</MyType>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
     <AssemblyTitle>SM64 ROM Manager.UserRequests</AssemblyTitle>

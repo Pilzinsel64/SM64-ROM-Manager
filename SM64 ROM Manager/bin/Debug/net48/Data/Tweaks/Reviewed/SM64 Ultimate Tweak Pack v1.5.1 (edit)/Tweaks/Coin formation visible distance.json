@@ -1,0 +1,21 @@
+{
+  "Name": "Coin formation visible distance",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "66F56: 46 7A\nF2990: 46 7B\nF2992: 90 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modifies the distance from which coin formations are visible.\r\nPreset Distances:\r\n4000.0f (default) = 44FA 4503 4000\r\n8000.0f =  45FA 45FD 2000\r\n16000.0f = 467A 467B 9000",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

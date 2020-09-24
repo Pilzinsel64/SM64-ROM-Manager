@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>SM64_ROM_Manager.Plugins.RomConfigEditor</RootNamespace>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>SM64 ROM Manager.Plugins.RomConfigEditor</AssemblyTitle>
     <Product>SM64 ROM Manager.Plugins.RomConfigEditor</Product>
     <Copyright>Copyright ©  2020</Copyright>

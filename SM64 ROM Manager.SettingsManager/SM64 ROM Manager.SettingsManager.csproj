@@ -3,7 +3,7 @@
     <RootNamespace>SM64_ROM_Manager.SettingsManager</RootNamespace>
     <AssemblyName>SM64 ROM Manager.Settings</AssemblyName>
     <MyType>Windows</MyType>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
     <AssemblyTitle>SettingsManager</AssemblyTitle>

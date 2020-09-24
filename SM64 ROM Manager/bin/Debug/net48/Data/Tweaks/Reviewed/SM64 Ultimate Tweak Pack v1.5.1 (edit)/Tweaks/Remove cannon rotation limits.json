@@ -1,0 +1,21 @@
+{
+  "Name": "Remove cannon rotation limits",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "1AEAC: 10 00\n1AECC: 10 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Removes the limit for cannon rotations.\n\nNOTE: To revert / undo this tweak, simply change the first bytes to 14 20 and the second bytes to 10 20.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

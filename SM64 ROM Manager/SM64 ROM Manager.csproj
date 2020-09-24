@@ -32,7 +32,7 @@
     <StartupObject>SM64_ROM_Manager.My.MyApplication</StartupObject>
     <RootNamespace>SM64_ROM_Manager</RootNamespace>
     <MyType>WindowsForms</MyType>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
   </PropertyGroup>

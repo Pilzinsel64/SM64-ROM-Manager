@@ -1,0 +1,29 @@
+{
+  "Name": "Background colors",
+  "Scripts": [
+    {
+      "Name": "Title screen background color",
+      "Script": "26A192: [16, \"Color (RGBA16, DEFAULT: 0001)\", hex]",
+      "Type": "TweakScript",
+      "Description": "Modify the title screen background color (Default: 0001).\r\n\r\nNOTE: The original Super Mario 64 title screen seems to have some sort of black background in the model itself, so this will only take effect if you import a custom title screen.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Star select background color",
+      "Script": "2A654A: [16, \"Color (RGBA16, DEFAULT: FFFF)\", hex]",
+      "Type": "TweakScript",
+      "Description": "Modify the star select background color (Default: FFFF).",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Background colors are RGBA16 and is stored as 2 bytes (16 bits) \n\r\nSave a 1 x 1 pixel that is the color you want of the background as a .tga and drag it into this program: http://www.mediafire.com/file/yxutn3gn8bl316p/tga2rgba16.exe\n\n\r\n\r\nOpen the file you get from it up in a hex editor and you should get 2 bytes (16 bits). \n\r\nThese are in RGBA16 so all you have to do now is use the tweak and input them.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

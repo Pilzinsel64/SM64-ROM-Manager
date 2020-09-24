@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>LIBMIO0</AssemblyTitle>
     <Product>Quad64</Product>
     <Copyright>Copyright © David 2018</Copyright>

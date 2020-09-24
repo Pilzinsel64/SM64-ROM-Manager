@@ -1,0 +1,21 @@
+{
+  "Name": "Extend Star door limit to 255 Stars",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "943C: 91 D8\n9441: 00 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Extends the limit of stars you need for a Star door to 255 stars.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

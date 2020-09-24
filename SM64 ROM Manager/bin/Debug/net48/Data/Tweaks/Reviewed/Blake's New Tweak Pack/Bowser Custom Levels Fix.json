@@ -1,0 +1,21 @@
+{
+  "Name": "Bowser Custom Levels Fix",
+  "Scripts": [
+    {
+      "Name": "New Script",
+      "Script": "21DA38: 0C 80 29 38 C8",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "WARNING: Replaces Waterfall Playsound Object\r\nUse this tweak to prevent Bowser from being static in non-Bowser courses\r\nSimply place the waterfall sounds object anywhere in the level, and you're\r\ngood to go!\r\nCreated by Blakeoramo",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

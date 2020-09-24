@@ -5,7 +5,7 @@
     <RootNamespace>SM64_ROM_Manager.ProgressUpdater</RootNamespace>
     <AssemblyName>SM64RM ProgressUpdater</AssemblyName>
     <MyType>WindowsForms</MyType>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>

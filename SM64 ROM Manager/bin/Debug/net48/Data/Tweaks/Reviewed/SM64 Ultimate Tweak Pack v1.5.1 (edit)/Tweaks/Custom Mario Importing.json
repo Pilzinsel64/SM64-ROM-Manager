@@ -1,0 +1,45 @@
+{
+  "Name": "Custom Mario Importing",
+  "Scripts": [
+    {
+      "Name": "1. Remove low poly Mario from ROM",
+      "Script": "8381A8: [fill, 01, 83C9]",
+      "Type": "TweakScript",
+      "Description": "Fills the low poly Mario space (8381A8 - 840570) with 01s.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "2. Replace low poly Mario with invisible model",
+      "Script": "12A7C6: 2E 18\n\n8381A8: E7 00 00 00 00 00 00 00 B8 00 00 00 00 00 00 00\n\n8381B8: [fill, 01, 83B8]",
+      "Type": "TweakScript",
+      "Description": "Disables low poly Mario.\n\n\r\nReplaces low poly Mario with an invisible model \r\n(empty Fast3D display list) that is only 16 bytes.\n\n\r\n\r\nRAM segment address for invisible model: 04014638",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "3. Make Metal, Vanish, and Wingcap Mario use same model as normal Mario",
+      "Script": "12A6AA: 05 3C\n12A6B2: 05 3C\n12A6BA: 05 3C",
+      "Type": "TweakScript",
+      "Description": "Makes Metal Mario, Vanish Mario, and Wingcap Mario use the same model as normal Mario.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "4. Make all Mario model invisible not removing models from ROM",
+      "Script": "127CC0: 04 01 46 38\n127CC8: 04 01 46 38\n127CD0: 04 01 46 38\n127CD8: 04 01 46 38\n127CE0: 04 01 46 38\n127CE8: 04 01 46 38\n127CF0: 04 01 46 38\n127CF8: 04 01 46 38\n127E00: 04 01 46 38\n127E14: 04 01 46 38\n127E20: 04 01 46 38\n127E2C: 04 01 46 38\n127E38: 04 01 46 38\n127E78: 04 01 46 38\n127E98: 04 01 46 38\n127F04: 04 01 46 38\n127F30: 04 01 46 38\n127F6C: 04 01 46 38\n127F7C: 04 01 46 38\n127FB0: 04 01 46 38\n127FC0: 04 01 46 38\n127FFC: 04 01 46 38\n12800C: 04 01 46 38\n12801C: 04 01 46 38\n128044: 04 01 46 38\n128054: 04 01 46 38\n128084: 04 01 46 38\n127D10: 04 01 46 38\n127D18: 04 01 46 38\n127D20: 04 01 46 38\n127D28: 04 01 46 38\n127D30: 04 01 46 38\n127D38: 04 01 46 38\n127D40: 04 01 46 38\n127D48: 04 01 46 38\n127D80: 04 01 46 38\n127DB8: 04 01 46 38\n127EB8: 04 01 46 38\n127EC4: 04 01 46 38\n127ED0: 04 01 46 38\n127EDC: 04 01 46 38",
+      "Type": "TweakScript",
+      "Description": "Run the \"2. Replace low poly Mario with invisible model\" tweak first before this or it won't work.\r\n\n\nFor now it only replaces the normal Mario model and Wingcap Mario model.",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Apply the tweaks in order and have a blank slate for importing a custom mario model.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

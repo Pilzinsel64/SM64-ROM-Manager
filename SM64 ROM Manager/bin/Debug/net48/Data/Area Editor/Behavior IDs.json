@@ -1,0 +1,4944 @@
+[
+  {
+    "Name": "Sliding star door",
+    "Behavior": 318767104,
+    "BP1 Name": "Star Requirement",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Mr. I (grouped object)",
+    "Behavior": 318767188,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Eye Ball"
+      },
+      {
+        "Value": "1",
+        "Name": "Giant Eye Ball (BBH)"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Mr. I pupil",
+    "Behavior": 318767244,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Mr. I particle",
+    "Behavior": 318767276,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Piranha Plant particle",
+    "Behavior": 318767352,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Giant Pole (Whomp's Fortress)",
+    "Behavior": 318767384,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pole (scalable by parameter 2)",
+    "Behavior": 318767428,
+    "BP1 Name": "",
+    "BP2 Name": "Height (value * 10)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Disable if behavior 0x13000194 is pounded",
+    "Behavior": 318767476,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Explode when pounded, disable behavior 0x13000174",
+    "Behavior": 318767508,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cap Switch (grouped object)",
+    "Behavior": 318767564,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Wing Cap (Red)"
+      },
+      {
+        "Value": "1",
+        "Name": "Metal Cap (Green)"
+      },
+      {
+        "Value": "2",
+        "Name": "Vanish Cap (Blue)"
+      },
+      {
+        "Value": "3",
+        "Name": "Yellow (Not normally used)"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "King Bob-omb",
+    "Behavior": 318767604,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Anchor Mario (King Bob-omb)",
+    "Behavior": 318767700,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bubble (Mario)",
+    "Behavior": 318767800,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Small water wave (Mario)",
+    "Behavior": 318767928,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bubbles spawn (Mario)",
+    "Behavior": 318768024,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water particles",
+    "Behavior": 318768128,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water waves",
+    "Behavior": 318768168,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snow particle",
+    "Behavior": 318768196,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snow particle",
+    "Behavior": 318768236,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Fish group (in Aquarium)",
+    "Behavior": 318768276,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Open cannon (grouped object)",
+    "Behavior": 318768296,
+    "BP1 Name": "",
+    "BP2 Name": "Cannon Yaw",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cannon barrel",
+    "Behavior": 318768356,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cannon base",
+    "Behavior": 318768384,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Chuckya",
+    "Behavior": 318768424,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Anchor Mario (Chuckya)",
+    "Behavior": 318768516,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating platform (param1 = speed, param2 = collision",
+    "Behavior": 318768564,
+    "BP1 Name": "Speed",
+    "BP2 Name": "Collision",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "WF 1"
+      },
+      {
+        "Value": "1",
+        "Name": "WDW 1"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Solid object (Whomp's Fortress tower)",
+    "Behavior": 318768600,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Solid object (Bullet Bill cannon collision)",
+    "Behavior": 318768640,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Breakable Wall Corner (plays \"correct solution\" track",
+    "Behavior": 318768676,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Breakable Wall Corner",
+    "Behavior": 318768696,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wall corner in Whomp's Fortress",
+    "Behavior": 318768708,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Kickable Giant Wooden Board",
+    "Behavior": 318768748,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Explodes when punched (Whomp's Fortress tower door)",
+    "Behavior": 318768804,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating counter-clockwise (bridge in Whomp's Fortress)",
+    "Behavior": 318768856,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating counter-clockwise (bridge in Whomp's Fortress)",
+    "Behavior": 318768864,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Koopa Shell",
+    "Behavior": 318768904,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tall Tall Slide Exit Podium",
+    "Behavior": 318768928,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Fading)",
+    "Behavior": 318768988,
+    "BP1 Name": "Warp Radius (value * 10)",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp Hole",
+    "Behavior": 318769024,
+    "BP1 Name": "Warp Radius (value * 10)",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp Pipe",
+    "Behavior": 318769056,
+    "BP1 Name": "Warp Radius (value * 10)",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puffs spawn (from ground-pound, clamshells etc.)",
+    "Behavior": 318769116,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Spawned star (no coordinates)",
+    "Behavior": 318769144,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sparkles (from stars, etc.)",
+    "Behavior": 318769172,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Blue coin from Mr.I",
+    "Behavior": 318769200,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coin inside of Boo",
+    "Behavior": 318769288,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coin Formation",
+    "Behavior": 318769388,
+    "BP1 Name": "",
+    "BP2 Name": "Content",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Five coins horizontal"
+      },
+      {
+        "Value": "2",
+        "Name": "Coin ring horzontal"
+      },
+      {
+        "Value": "4",
+        "Name": "Coin arrow"
+      },
+      {
+        "Value": "16",
+        "Name": "Five coins horizontal flying"
+      },
+      {
+        "Value": "17",
+        "Name": "Five coins vertical"
+      },
+      {
+        "Value": "18",
+        "Name": "Coin ring horizontal flying"
+      },
+      {
+        "Value": "19",
+        "Name": "Coin ring vertical"
+      }
+    ],
+    "BP3 Name": "Collected Coin Bits",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coin (type 1)",
+    "Behavior": 318769420,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coin (type 2)",
+    "Behavior": 318769436,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coin (type 3)",
+    "Behavior": 318769440,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Three coins spawn",
+    "Behavior": 318769508,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Peach (awakening)",
+    "Behavior": 318769532,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Ten coins spawn",
+    "Behavior": 318769540,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "One coin spawn",
+    "Behavior": 318769572,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sparkles (from all types of coins)",
+    "Behavior": 318769632,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sparkles (from golden coins)",
+    "Behavior": 318769684,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tiny star particle (when Mario bumps a wall)",
+    "Behavior": 318769716,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tiny star particle spawn (when Mario bumps a wall)",
+    "Behavior": 318769748,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tiny star particle (from ground pound)",
+    "Behavior": 318769784,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tiny star particle spawn (from ground pound)",
+    "Behavior": 318769816,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tiny triangle (punching something)",
+    "Behavior": 318769852,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tiny triangle spawn (punching something)",
+    "Behavior": 318769880,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Door (warping)",
+    "Behavior": 318769916,
+    "BP1 Name": "Key Requirement",
+    "BP1 Entries": [
+      {
+        "Value": "0",
+        "Name": "None"
+      },
+      {
+        "Value": "1",
+        "Name": "Bowser 2 Key"
+      },
+      {
+        "Value": "2",
+        "Name": "Bowser 1 Key"
+      }
+    ],
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Door",
+    "Behavior": 318769932,
+    "BP1 Name": "Star Requirement",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Grindel",
+    "Behavior": 318770008,
+    "BP1 Name": "",
+    "BP2 Name": "Rise Frames (value + 40)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Thwomp 2",
+    "Behavior": 318770060,
+    "BP1 Name": "",
+    "BP2 Name": "Rise Frames (value + 40)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Thwomp",
+    "Behavior": 318770120,
+    "BP1 Name": "",
+    "BP2 Name": "Rise Frames (value + 40)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Used by all tumbling bridge platforms",
+    "Behavior": 318770180,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tumbling platform group (Whomp's Fortress)",
+    "Behavior": 318770216,
+    "BP1 Name": "",
+    "BP2 Name": "Collision",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "WF 1"
+      },
+      {
+        "Value": "1",
+        "Name": "BBH 1"
+      },
+      {
+        "Value": "2",
+        "Name": "LLL 1"
+      },
+      {
+        "Value": "3",
+        "Name": "BitFS 1"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tumbling platform group (Big Boo's Haunt)",
+    "Behavior": 318770244,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tumbling platform",
+    "Behavior": 318770276,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (static)",
+    "Behavior": 318770308,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Another elevator (re-check)",
+    "Behavior": 318770376,
+    "BP1 Name": "",
+    "BP2 Name": "???",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Elevator platform in RR",
+    "Behavior": 318770428,
+    "BP1 Name": "",
+    "BP2 Name": "Track ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Elevator platform in HMC",
+    "Behavior": 318770480,
+    "BP1 Name": "",
+    "BP2 Name": "Track ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puff ??",
+    "Behavior": 318770540,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Spawn behavior 0x13000D6C",
+    "Behavior": 318770584,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Particles (stars, triangles, dirt, etc.)",
+    "Behavior": 318770612,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Animated water mist (Castle Grounds waterfall)",
+    "Behavior": 318770648,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318770684,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puffs (from ground pound)",
+    "Behavior": 318770724,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sand (from ground)",
+    "Behavior": 318770748,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snow (from ground)",
+    "Behavior": 318770776,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wind (from collision mapped areas)",
+    "Behavior": 318770800,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Toad at end",
+    "Behavior": 318770824,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Peach at end",
+    "Behavior": 318770860,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318770896,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Ukiki the monkey",
+    "Behavior": 318770952,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Cage Opener"
+      },
+      {
+        "Value": "1",
+        "Name": "Hat Thief"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Little Cage",
+    "Behavior": 318771016,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sinking Platforms (Bowser's Fire Sea)",
+    "Behavior": 318771100,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sinking Cage Platform (Bowser's Fire Sea)",
+    "Behavior": 318771144,
+    "BP1 Name": "",
+    "BP2 Name": "Speed",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Slow"
+      },
+      {
+        "Value": "1",
+        "Name": "Fast"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moving pole (Dire, Dire Docks)",
+    "Behavior": 318771200,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tilting Inverted Pyramid",
+    "Behavior": 318771248,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Squishable Platform",
+    "Behavior": 318771300,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318771352,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame moving back and forth (unused)",
+    "Behavior": 318771384,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating platform with fire (Rainbow Ride)",
+    "Behavior": 318771416,
+    "BP1 Name": "",
+    "BP2 Name": "Flame Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Rotating Platform With Flame Thrower"
+      },
+      {
+        "Value": "1",
+        "Name": "Rotating Platform With Blue Flame Thrower (Used In The Game)"
+      },
+      {
+        "Value": "2",
+        "Name": "Rotating Plaform With Small Flame Thrower"
+      },
+      {
+        "Value": "3",
+        "Name": "Rotating Platform With Flame Thrower (BBH)"
+      },
+      {
+        "Value": "4",
+        "Name": "Rotating Platform With Flame Thrower (Shoots Upward)"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame Thrower",
+    "Behavior": 318771464,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Flame Thrower"
+      },
+      {
+        "Value": "1",
+        "Name": "Blue Flame Thrower"
+      },
+      {
+        "Value": "2",
+        "Name": "Small Flame Thrower"
+      },
+      {
+        "Value": "3",
+        "Name": "Flame Thrower (BBH)"
+      },
+      {
+        "Value": "4",
+        "Name": "Flame Thrower (Shoots Upward)"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (from flame thrower)",
+    "Behavior": 318771492,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (jumping fireball)",
+    "Behavior": 318771560,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (from jumping fireballs)",
+    "Behavior": 318771588,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser shock wave",
+    "Behavior": 318771664,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (from Mario)",
+    "Behavior": 318771692,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Black smoke (from Mario)",
+    "Behavior": 318771732,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Black smoke (from Bowser flames)",
+    "Behavior": 318771796,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Black smoke (moving upward)",
+    "Behavior": 318771836,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coins",
+    "Behavior": 318771864,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Spindrift",
+    "Behavior": 318771892,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tower Platform Group (also disables collision type 0x65 camera settings)",
+    "Behavior": 318771956,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Whomp's Fortress sliding platforms",
+    "Behavior": 318771992,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Whomp's Fortress elevator platform",
+    "Behavior": 318772032,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Whomp's Fortress solid platform",
+    "Behavior": 318772072,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318772112,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snow from tree",
+    "Behavior": 318772136,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Leaves from tree",
+    "Behavior": 318772164,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Another tilting platform",
+    "Behavior": 318772188,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moving Pyramid Platform",
+    "Behavior": 318772232,
+    "BP1 Name": "",
+    "BP2 Name": "Start Direction",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "0"
+      },
+      {
+        "Value": "1",
+        "Name": "90"
+      },
+      {
+        "Value": "2",
+        "Name": "180"
+      },
+      {
+        "Value": "3",
+        "Name": "270"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bubble from Piranha Plant",
+    "Behavior": 318772268,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bubbles (after waking Piranha Plant)",
+    "Behavior": 318772296,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Purple switch (Bowser staircase)",
+    "Behavior": 318772328,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Purple switch (grills)",
+    "Behavior": 318772344,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Grills"
+      },
+      {
+        "Value": "1",
+        "Name": "Bowser Staircase"
+      },
+      {
+        "Value": "2",
+        "Name": "Hidden Objects"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Purple switch",
+    "Behavior": 318772356,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Grills"
+      },
+      {
+        "Value": "1",
+        "Name": "Bowser Staircase"
+      },
+      {
+        "Value": "2",
+        "Name": "Hidden Objects"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Floor Switch (hidden objects)",
+    "Behavior": 318772396,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Hidden object (param2 = object#)",
+    "Behavior": 318772412,
+    "BP1 Name": "",
+    "BP2 Name": "Object",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Breakable cork box"
+      },
+      {
+        "Value": "1",
+        "Name": "WDW Platform"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Breakable Box (Big)",
+    "Behavior": 318772448,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Breakable Box Without Coins "
+      },
+      {
+        "Value": "1",
+        "Name": "Breakable Box With Three Coins "
+      },
+      {
+        "Value": "2",
+        "Name": "Breakable Box With Five Coins "
+      },
+      {
+        "Value": "3",
+        "Name": "Large Breakable Box "
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pushable Metal Box",
+    "Behavior": 318772504,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Heave-Ho",
+    "Behavior": 318772552,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown, GFX 78/64?",
+    "Behavior": 318772644,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cabin Door?",
+    "Behavior": 318772672,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Explodes when pounded (unused ice square in Snowman's Land)",
+    "Behavior": 318772708,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Beta trampoline",
+    "Behavior": 318772744,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Beta trampoline child animation",
+    "Behavior": 318772788,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Jumping Box",
+    "Behavior": 318772816,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cage (inside of Boo)",
+    "Behavior": 318772860,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318772908,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Igloo Thing",
+    "Behavior": 318772920,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Key from Bowser",
+    "Behavior": 318772964,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Giant Star from Bowser",
+    "Behavior": 318773012,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Beta Boo key (inside of Boo)",
+    "Behavior": 318773060,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Beta Boo key (outside of Boo)",
+    "Behavior": 318773112,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bullet Bill generator",
+    "Behavior": 318773148,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puff / smoke type",
+    "Behavior": 318773236,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser tail anchor",
+    "Behavior": 318773288,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser",
+    "Behavior": 318773328,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser body anchor",
+    "Behavior": 318773452,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser flame spawn",
+    "Behavior": 318773508,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser Battle 2 platform",
+    "Behavior": 318773536,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser Platform Part (falls when Bowser jumps)",
+    "Behavior": 318773592,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Blue flame (from Bowser)",
+    "Behavior": 318773636,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (floating and landing)",
+    "Behavior": 318773704,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Blue flames group (x3)",
+    "Behavior": 318773772,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (bouncing) unused?",
+    "Behavior": 318773808,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (moving forward growing)",
+    "Behavior": 318773876,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (from Bowser)",
+    "Behavior": 318773924,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (large and burning out)",
+    "Behavior": 318773992,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Blue fish",
+    "Behavior": 318774060,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Fish groups in castle tanks",
+    "Behavior": 318774100,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Checkerboard elevators group",
+    "Behavior": 318774128,
+    "BP1 Name": "Size",
+    "BP1 Entries": [
+      {
+        "Value": "0",
+        "Name": "Small"
+      },
+      {
+        "Value": "1",
+        "Name": "Large"
+      }
+    ],
+    "BP2 Name": "Elevator Height (value * 10)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating checkered platform (unused?)",
+    "Behavior": 318774152,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser key (going into hole and turning) 1",
+    "Behavior": 318774196,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser key (going into hole and turning) 2",
+    "Behavior": 318774228,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Invisible object underneath castle bridge ??",
+    "Behavior": 318774260,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water Level Pillar",
+    "Behavior": 318774276,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Dire, Dire Docks warp",
+    "Behavior": 318774324,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moat grills (disable if water is drained)",
+    "Behavior": 318774360,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Clock Big Arm",
+    "Behavior": 318774396,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Clock Small Arm",
+    "Behavior": 318774412,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sparkle (from golden coin)",
+    "Behavior": 318774420,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Ukiki the monkey 2",
+    "Behavior": 318774448,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Cage Opener"
+      },
+      {
+        "Value": "1",
+        "Name": "Hat Thief"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318774540,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Y-rotation (LLL hexagonal platform)",
+    "Behavior": 318774548,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sinking Lava Rock Block",
+    "Behavior": 318774592,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318774640,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moving platform (LLL mesh rafts)",
+    "Behavior": 318774648,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Type 0"
+      },
+      {
+        "Value": "1",
+        "Name": "Type 1"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snow Ball",
+    "Behavior": 318774692,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating Hexa Block With Fire Bars",
+    "Behavior": 318774696,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "4 Flames"
+      },
+      {
+        "Value": "1",
+        "Name": "3 Flames"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (on rotating hexagon in LLL)",
+    "Behavior": 318774732,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Piece of wood (LLL)",
+    "Behavior": 318774788,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Floating wood bridge (LLL)",
+    "Behavior": 318774832,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flames (from volcano)",
+    "Behavior": 318774860,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating platform (stops and produces fire if stepped on) (LLL)",
+    "Behavior": 318774892,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Slow and minimal tilting movement (LLL)",
+    "Behavior": 318774932,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Slow and minimal up-down movement (LLL)",
+    "Behavior": 318774980,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tilts if Mario is stepping on it (LLL)",
+    "Behavior": 318775032,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Koopa shell",
+    "Behavior": 318775100,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (Koopa shell in lava)",
+    "Behavior": 318775144,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tox Box",
+    "Behavior": 318775184,
+    "BP1 Name": "",
+    "BP2 Name": "Path",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Path 1"
+      },
+      {
+        "Value": "1",
+        "Name": "Path 2"
+      },
+      {
+        "Value": "2",
+        "Name": "Path 3"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Piranha Plant",
+    "Behavior": 318775228,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Solid object (LLL hexagonal mesh)",
+    "Behavior": 318775320,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser puzzle piece",
+    "Behavior": 318775352,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bowser Puzzle (Only in Lethal Lava Land)",
+    "Behavior": 318775400,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Penguin mother",
+    "Behavior": 318775432,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "Penguin Pair ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318775512,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Penguin baby",
+    "Behavior": 318775528,
+    "BP1 Name": "",
+    "BP2 Name": "Penguin Pair ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Group of 20 fish",
+    "Behavior": 318775612,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Group of 5 fish",
+    "Behavior": 318775628,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Group of fish",
+    "Behavior": 318775644,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "20 Fish"
+      },
+      {
+        "Value": "1",
+        "Name": "5 Fish"
+      },
+      {
+        "Value": "2",
+        "Name": "20 Cyan Fish"
+      },
+      {
+        "Value": "3",
+        "Name": "5 Cyan Fish"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Fish",
+    "Behavior": 318775672,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moves down when stepped on, and then back to initial position (WDW \"express elevators\")",
+    "Behavior": 318775700,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Solid object (WDW express elevator platform)",
+    "Behavior": 318775744,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Chirp Chirp (In Water Levels only)",
+    "Behavior": 318775780,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Group of fish",
+    "Behavior": 318775796,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cheep-cheep",
+    "Behavior": 318775820,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "[!] Box",
+    "Behavior": 318775888,
+    "BP1 Name": "",
+    "BP2 Name": "Content",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Wing Cap"
+      },
+      {
+        "Value": "1",
+        "Name": "Metal Cap"
+      },
+      {
+        "Value": "2",
+        "Name": "Vanish Cap"
+      },
+      {
+        "Value": "3",
+        "Name": "Koopa Shell"
+      },
+      {
+        "Value": "4",
+        "Name": "One Coin"
+      },
+      {
+        "Value": "5",
+        "Name": "Three Coins"
+      },
+      {
+        "Value": "6",
+        "Name": "Ten Coins"
+      },
+      {
+        "Value": "7",
+        "Name": "1-Up Mushroom"
+      },
+      {
+        "Value": "8",
+        "Name": "Star 0"
+      },
+      {
+        "Value": "9",
+        "Name": "1-Up (Running away)"
+      },
+      {
+        "Value": "10",
+        "Name": "Star 1"
+      },
+      {
+        "Value": "11",
+        "Name": "Star 2"
+      },
+      {
+        "Value": "12",
+        "Name": "Star 3"
+      },
+      {
+        "Value": "13",
+        "Name": "Star 4"
+      },
+      {
+        "Value": "14",
+        "Name": "Star 5"
+      },
+      {
+        "Value": "15",
+        "Name": "Empty"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating exclamation mark",
+    "Behavior": 318775932,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Called by some spawned objects",
+    "Behavior": 318775964,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Solid object (JRB rocks)",
+    "Behavior": 318775992,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Disable if first star is complete (Bowser Sub Door)",
+    "Behavior": 318776024,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Disable if first star is complete (Bowser Sub)",
+    "Behavior": 318776072,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sushi the shark",
+    "Behavior": 318776120,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sushi the shark collision child",
+    "Behavior": 318776200,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sliding box (Jolly Roger Bay)",
+    "Behavior": 318776228,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Ship Half",
+    "Behavior": 318776272,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "In Sunken Ship 3?",
+    "Behavior": 318776300,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sunken Ship",
+    "Behavior": 318776348,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318776380,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sunken Ship Half",
+    "Behavior": 318776396,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "In Sunken Ship?",
+    "Behavior": 318776428,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "In Sunken Ship 2?",
+    "Behavior": 318776448,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp to inside of sunken ship",
+    "Behavior": 318776460,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puff generator",
+    "Behavior": 318776492,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puff (from Mario)",
+    "Behavior": 318776540,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puff from Mario 2",
+    "Behavior": 318776576,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puff / smoke type",
+    "Behavior": 318776616,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Purple switch (for hidden boxes)",
+    "Behavior": 318776664,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Blue Coins Switch",
+    "Behavior": 318776680,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coin (Blue)",
+    "Behavior": 318776712,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cage door (BOB & HMC)",
+    "Behavior": 318776768,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Openable Grills",
+    "Behavior": 318776800,
+    "BP1 Name": "",
+    "BP2 Name": "Collision",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "BoB 1"
+      },
+      {
+        "Value": "1",
+        "Name": "HMC 1"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Crystal Tap (modifies water level in WDW)",
+    "Behavior": 318776824,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Initialize behavior 0x130025F8",
+    "Behavior": 318776864,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sand particle from Tweester",
+    "Behavior": 318776884,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tweester",
+    "Behavior": 318776912,
+    "BP1 Name": "",
+    "BP2 Name": "Activation Distance (value * 100)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Spawn ghosts (spawn Big Boo when all are destroyed)",
+    "Behavior": 318776964,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Animated texture ??",
+    "Behavior": 318776988,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Boo in Castle",
+    "Behavior": 318777044,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Boo Buddy With Cage",
+    "Behavior": 318777104,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big Boo (balcony)",
+    "Behavior": 318777192,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big Boo (merry-go-round)",
+    "Behavior": 318777212,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big Boo (ghost hunt)",
+    "Behavior": 318777232,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Boo Buddy group (x3)",
+    "Behavior": 318777296,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Boo Buddy",
+    "Behavior": 318777316,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Boo Buddy (ghost hunt)",
+    "Behavior": 318777348,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Hidden Staircase Step",
+    "Behavior": 318777452,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318777496,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tilts on z-axis when stepped on (Haunted House floor platforms)",
+    "Behavior": 318777548,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bookshelf",
+    "Behavior": 318777596,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Mesh Elevator",
+    "Behavior": 318777644,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Merry-Go-Round",
+    "Behavior": 318777704,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Plays music track when touched (used along with penguin shortcut)",
+    "Behavior": 318777752,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Inside Cannon",
+    "Behavior": 318777776,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Static checkered platform (unused?)",
+    "Behavior": 318777828,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Billboarded object ??",
+    "Behavior": 318777872,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star ??",
+    "Behavior": 318777888,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318777912,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Static object",
+    "Behavior": 318777928,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Castle Floor Trap",
+    "Behavior": 318777948,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Floor trap in castle",
+    "Behavior": 318777980,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tree",
+    "Behavior": 318778020,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sparkles (power-ups)",
+    "Behavior": 318778064,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sparkles (power-ups)",
+    "Behavior": 318778096,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sparkles (from special triple jump)",
+    "Behavior": 318778120,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Scuttlebug",
+    "Behavior": 318778204,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Scuttlebug spawn",
+    "Behavior": 318778272,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Whomp King",
+    "Behavior": 318778296,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Small Whomp",
+    "Behavior": 318778316,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water splash",
+    "Behavior": 318778388,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water drops",
+    "Behavior": 318778468,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White wave on water surface",
+    "Behavior": 318778492,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318778544,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Waves on surface",
+    "Behavior": 318778592,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White wave on water surface 2",
+    "Behavior": 318778664,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Waves generator",
+    "Behavior": 318778704,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wave on surface (shrinking)",
+    "Behavior": 318778748,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wave type",
+    "Behavior": 318778800,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wave trail on surface",
+    "Behavior": 318778816,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318778832,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tiny white particles from wind generators",
+    "Behavior": 318778884,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wind particle (blows Mario away)",
+    "Behavior": 318778912,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wind Blowing",
+    "Behavior": 318778940,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Penguin Crossing Bridge",
+    "Behavior": 318778968,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Yellow Ball (Pole in WF)",
+    "Behavior": 318779048,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Mario",
+    "Behavior": 318779072,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Toad",
+    "Behavior": 318779128,
+    "BP1 Name": "Message ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star (held up when opening a sealed door)",
+    "Behavior": 318779200,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp 12128",
+    "Behavior": 318779232,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Mario Start 2)",
+    "Behavior": 318779236,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp 12136",
+    "Behavior": 318779240,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Mario Start 3)",
+    "Behavior": 318779244,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Level Exit Recovering Life)",
+    "Behavior": 318779248,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Mario Start 1)",
+    "Behavior": 318779252,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Mario Start 5)",
+    "Behavior": 318779256,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp Painting Exit (Success)",
+    "Behavior": 318779260,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp Painting Exit (Failure)",
+    "Behavior": 318779264,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp 12164",
+    "Behavior": 318779268,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Level Exit Ceiling)",
+    "Behavior": 318779272,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Level Exit)",
+    "Behavior": 318779276,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (Level Exit From Hole)",
+    "Behavior": 318779280,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Warp (to level)",
+    "Behavior": 318779284,
+    "BP1 Name": "",
+    "BP2 Name": "Warp ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Yellow background",
+    "Behavior": 318779328,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Growing button (as in, after it is selected)",
+    "Behavior": 318779364,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Gray button",
+    "Behavior": 318779400,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star",
+    "Behavior": 318779436,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star selector",
+    "Behavior": 318779464,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coin inside of formation",
+    "Behavior": 318779496,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moving Blue Coin",
+    "Behavior": 318779556,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Blue coin (sliding)",
+    "Behavior": 318779604,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Blue coin (jumping)",
+    "Behavior": 318779652,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Seaweed",
+    "Behavior": 318779700,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bubbles?",
+    "Behavior": 318779736,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bob-Omb",
+    "Behavior": 318779764,
+    "BP1 Name": "",
+    "BP2 Name": "Is Patrolling",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Patrolling Bob-Omb"
+      },
+      {
+        "Value": "1",
+        "Name": "Stationary Bob-Omb"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Smoke spawned from Bob-omb",
+    "Behavior": 318779820,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pink Bob-omb (Generates Message)",
+    "Behavior": 318779868,
+    "BP1 Name": "",
+    "BP2 Name": "Message ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pink Bob-omb (Opens Cannons)",
+    "Behavior": 318779944,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cannon (Closed)",
+    "Behavior": 318780020,
+    "BP1 Name": "",
+    "BP2 Name": "Cannon Yaw",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Whirlpool death",
+    "Behavior": 318780072,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bubbles",
+    "Behavior": 318780104,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wooden Signpost",
+    "Behavior": 318780128,
+    "BP1 Name": "",
+    "BP2 Name": "Message ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sign On Wall",
+    "Behavior": 318780196,
+    "BP1 Name": "",
+    "BP2 Name": "Message ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Homing Amp",
+    "Behavior": 318780244,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Circling Amp",
+    "Behavior": 318780296,
+    "BP1 Name": "",
+    "BP2 Name": "Rotation Radius",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "200"
+      },
+      {
+        "Value": "1",
+        "Name": "300"
+      },
+      {
+        "Value": "2",
+        "Name": "400"
+      },
+      {
+        "Value": "3",
+        "Name": "0"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Butterfly",
+    "Behavior": 318780348,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Hoot the Owl",
+    "Behavior": 318780396,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Can be picked up (unused)",
+    "Behavior": 318780448,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318780500,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water wave ??",
+    "Behavior": 318780612,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Explosion",
+    "Behavior": 318780688,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Large white smoke cloud",
+    "Behavior": 318780760,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Smoke from Bob-omb",
+    "Behavior": 318780808,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White particle / water drop",
+    "Behavior": 318780848,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unkown",
+    "Behavior": 318780928,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Small Bully",
+    "Behavior": 318780972,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big Bully Boss",
+    "Behavior": 318781024,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bully group (spawn Big Bully when all 3 are destroyed)",
+    "Behavior": 318781076,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Small Chill Bully (unused)",
+    "Behavior": 318781128,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big Chill Bully",
+    "Behavior": 318781184,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Manta Rings (In Water Levels only)",
+    "Behavior": 318781240,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water rings",
+    "Behavior": 318781264,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water rings",
+    "Behavior": 318781336,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318781408,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Spikey Bowser bomb",
+    "Behavior": 318781420,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Explosion (from spikey bombs) pt.1",
+    "Behavior": 318781468,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Explosion (from spikey bombs) pt.2",
+    "Behavior": 318781504,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star (held up after collecting star)",
+    "Behavior": 318781544,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sparkles (when Mario grabs a key)",
+    "Behavior": 318781576,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "White puff type",
+    "Behavior": 318781616,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bascule Bridge",
+    "Behavior": 318781648,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tilting bridge part (LLL)",
+    "Behavior": 318781672,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rock Formation with eyes",
+    "Behavior": 318781712,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Large Rock With Eyes",
+    "Behavior": 318781760,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sliding Brick Platform",
+    "Behavior": 318781808,
+    "BP1 Name": "",
+    "BP2 Name": "Speed",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Slow"
+      },
+      {
+        "Value": "1",
+        "Name": "Medium"
+      },
+      {
+        "Value": "2",
+        "Name": "Fast"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moneybag transforming",
+    "Behavior": 318781856,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moneybag (with coin)",
+    "Behavior": 318781908,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Metal Balls",
+    "Behavior": 318781960,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rolling metal ball",
+    "Behavior": 318782000,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tiny metal ball",
+    "Behavior": 318782040,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Metal Ball Generator (less frequent)",
+    "Behavior": 318782080,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "BoB Upper"
+      },
+      {
+        "Value": "1",
+        "Name": "TTM"
+      },
+      {
+        "Value": "2",
+        "Name": "BoB Lower"
+      },
+      {
+        "Value": "3",
+        "Name": "THI Large"
+      },
+      {
+        "Value": "4",
+        "Name": "THI Small"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Metal Ball Generator (more frequent)",
+    "Behavior": 318782116,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "BoB Upper"
+      },
+      {
+        "Value": "1",
+        "Name": "TTM"
+      },
+      {
+        "Value": "2",
+        "Name": "BoB Lower"
+      },
+      {
+        "Value": "3",
+        "Name": "THI Large"
+      },
+      {
+        "Value": "4",
+        "Name": "THI Small"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Mini Metal Balls Generator",
+    "Behavior": 318782152,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flying Ship Wing",
+    "Behavior": 318782176,
+    "BP1 Name": "",
+    "BP2 Name": "Rotation",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Spindel",
+    "Behavior": 318782208,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Moving up and down (pyramid platforms)",
+    "Behavior": 318782256,
+    "BP1 Name": "",
+    "BP2 Name": "Starting Position",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "High"
+      },
+      {
+        "Value": "1",
+        "Name": "Mid"
+      },
+      {
+        "Value": "2",
+        "Name": "Low"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pyramid Elevator Case",
+    "Behavior": 318782304,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Metal balls for pyramid elevator",
+    "Behavior": 318782360,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pyramid Top",
+    "Behavior": 318782388,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pyramid top explosion",
+    "Behavior": 318782444,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318782476,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "PlaySound loop (waterfall)",
+    "Behavior": 318782512,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "PlaySound loop (volcano)",
+    "Behavior": 318782532,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Castle Flag",
+    "Behavior": 318782552,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "PlaySound loop (birds)",
+    "Behavior": 318782588,
+    "BP1 Name": "",
+    "BP2 Name": "Sound",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Sound 1"
+      },
+      {
+        "Value": "1",
+        "Name": "Sound 2"
+      },
+      {
+        "Value": "2",
+        "Name": "Sound 3"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Ambient Sounds?",
+    "Behavior": 318782608,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "PlaySound loop (sand)",
+    "Behavior": 318782628,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cannon Grill (disable if stars == 120)",
+    "Behavior": 318782648,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big snowman bottom",
+    "Behavior": 318782692,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big snowman head",
+    "Behavior": 318782732,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Checkpoint for big snowman's body",
+    "Behavior": 318782772,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big snowman (whole body)",
+    "Behavior": 318782796,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Big boulder",
+    "Behavior": 318782836,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Boulder spawn (Hazy Maze Cave)",
+    "Behavior": 318782880,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wing Cap",
+    "Behavior": 318782904,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Metal Cap",
+    "Behavior": 318782936,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Normal Cap",
+    "Behavior": 318782968,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Vanish Cap",
+    "Behavior": 318783004,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star",
+    "Behavior": 318783036,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star spawn (with coordinates)",
+    "Behavior": 318783076,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star (Red Coins)",
+    "Behavior": 318783116,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Coin (Red)",
+    "Behavior": 318783148,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star (Bowser Red Coins)",
+    "Behavior": 318783204,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Star (Secrets)",
+    "Behavior": 318783228,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Secret numbers (touch 5 to get a star)",
+    "Behavior": 318783260,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rolling Wooden Log",
+    "Behavior": 318783296,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Falling block inside volcano",
+    "Behavior": 318783352,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rolling log",
+    "Behavior": 318783396,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "1-up spawn (from box)",
+    "Behavior": 318783452,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "1-up spawn (moving away)",
+    "Behavior": 318783504,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "1-up (Sliding)",
+    "Behavior": 318783556,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "1-up mushroom",
+    "Behavior": 318783612,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Type 0"
+      },
+      {
+        "Value": "1",
+        "Name": "Type 1"
+      },
+      {
+        "Value": "1",
+        "Name": "Type 2"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "1-up (jumps when approached)",
+    "Behavior": 318783668,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "1-up mushroom (enable when behavior 0x13004124 is touched)",
+    "Behavior": 318783724,
+    "BP1 Name": "",
+    "BP2 Name": "Trigger Count",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Trigger for hidden 1-up",
+    "Behavior": 318783780,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "1-up (hidden in tree/pole)",
+    "Behavior": 318783816,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unused collectible item",
+    "Behavior": 318783872,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "1-up (hidden in tree or pole)",
+    "Behavior": 318783908,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Hovering Metal Platform",
+    "Behavior": 318783932,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318783984,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Breakable Box (Small)",
+    "Behavior": 318784024,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sliding snow mound",
+    "Behavior": 318784068,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snow mound spawn (Only in Snow Man's Land)",
+    "Behavior": 318784112,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Platform floating on water (square)",
+    "Behavior": 318784132,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Platform floating on water (rectangular)",
+    "Behavior": 318784180,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Platform floating on water (Jolly Roger Bay)",
+    "Behavior": 318784228,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Arrow Lift",
+    "Behavior": 318784276,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Orange number",
+    "Behavior": 318784328,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Manta Ray",
+    "Behavior": 318784368,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Falling Pillar",
+    "Behavior": 318784416,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318784452,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Falling Pillar Base",
+    "Behavior": 318784480,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Floating Jolly Roger box (unused)",
+    "Behavior": 318784512,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Clock Pendulum",
+    "Behavior": 318784556,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Treasure chest group (sunken ship)",
+    "Behavior": 318784588,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Treasure chest group (JRB)",
+    "Behavior": 318784624,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Treasure chest group (DDD)",
+    "Behavior": 318784660,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Treasure chest",
+    "Behavior": 318784696,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318784736,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "MIPS the Rabbit",
+    "Behavior": 318784764,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Yoshi",
+    "Behavior": 318784824,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Koopa",
+    "Behavior": 318784896,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Run around as if lost shell"
+      },
+      {
+        "Value": "1",
+        "Name": "Small Koopa"
+      },
+      {
+        "Value": "2",
+        "Name": "Koopa the Quick (Bob-Omb Battlefield)"
+      },
+      {
+        "Value": "3",
+        "Name": "Koopa the Quick (Tiny-Huge Island)"
+      },
+      {
+        "Value": "4",
+        "Name": "Tiny Koopa"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Koopa Flag (Only in Levels with Koopas)",
+    "Behavior": 318784976,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Koopa flag (not actual goal)",
+    "Behavior": 318785016,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pokey (Only use in SSL)",
+    "Behavior": 318785076,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pokey head",
+    "Behavior": 318785128,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Swoop (Bat)",
+    "Behavior": 318785176,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Fly Guy",
+    "Behavior": 318785244,
+    "BP1 Name": "",
+    "BP2 Name": "Shoots Fire?",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Fly Guy (No Fire)"
+      },
+      {
+        "Value": "1",
+        "Name": "Fly Guy (Shoots Fire)"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Goomba",
+    "Behavior": 318785324,
+    "BP1 Name": "",
+    "BP2 Name": "Size",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Normal Size Goomba"
+      },
+      {
+        "Value": "1",
+        "Name": "Big Goomba"
+      },
+      {
+        "Value": "2",
+        "Name": "Small Goomba"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Goomba group (x3)",
+    "Behavior": 318785392,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Normal Sized Goomba Triplets"
+      },
+      {
+        "Value": "1",
+        "Name": "Big Goomba Triplets"
+      },
+      {
+        "Value": "2",
+        "Name": "Small Goomba Triplets"
+      },
+      {
+        "Value": "3",
+        "Name": "Nothing"
+      },
+      {
+        "Value": "4",
+        "Name": "Four Normal Sized Goombas"
+      },
+      {
+        "Value": "5",
+        "Name": "Four Big Goombas"
+      },
+      {
+        "Value": "6",
+        "Name": "Four Small Goombas"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Chain Chomp",
+    "Behavior": 318785420,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Chain-Chomp chains",
+    "Behavior": 318785508,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Poundable Wooden Log",
+    "Behavior": 318785564,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "Disable coins",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Explodes when Chain-Chomp is freed",
+    "Behavior": 318785640,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wiggler Boss",
+    "Behavior": 318785688,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Wiggler body parts",
+    "Behavior": 318785760,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Lakitu (throws Spinies)",
+    "Behavior": 318785816,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Lakitu (behind mirror)",
+    "Behavior": 318785876,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Fwoosh (cloud enemy)",
+    "Behavior": 318785928,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Fwoosh (cloud enemy) face",
+    "Behavior": 318785964,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Spiny",
+    "Behavior": 318785992,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Monty Mole",
+    "Behavior": 318786048,
+    "BP1 Name": "",
+    "BP2 Name": "Throw Rock?",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "No"
+      },
+      {
+        "Value": "1",
+        "Name": "Yes"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Monty Mole in Hole",
+    "Behavior": 318786136,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Monty Mole rock",
+    "Behavior": 318786168,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Platform on tracks",
+    "Behavior": 318786224,
+    "BP1 Name": "Flags",
+    "BP1 Entries": [
+      {
+        "Value": "0",
+        "Name": "Normal"
+      },
+      {
+        "Value": "1",
+        "Name": "Don't Disappear"
+      },
+      {
+        "Value": "2",
+        "Name": "No Yaw"
+      },
+      {
+        "Value": "3",
+        "Name": "No Yaw + Don't Disappear"
+      },
+      {
+        "Value": "4",
+        "Name": "No Roll"
+      },
+      {
+        "Value": "5",
+        "Name": "No Roll + Don't Disappear"
+      },
+      {
+        "Value": "6",
+        "Name": "No Roll + No Yaw"
+      },
+      {
+        "Value": "7",
+        "Name": "No Roll + No Yaw + Don't Disappear"
+      }
+    ],
+    "BP2 Name": "Collision + Track ID",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Metal Balls for elevators (not actual paths)",
+    "Behavior": 318786292,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Tilting Bridge",
+    "Behavior": 318786332,
+    "BP1 Name": "",
+    "BP2 Name": "Collision",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "BitDW 1"
+      },
+      {
+        "Value": "1",
+        "Name": "BitS 1"
+      },
+      {
+        "Value": "2",
+        "Name": "BitS 2"
+      },
+      {
+        "Value": "3",
+        "Name": "BoB 1"
+      },
+      {
+        "Value": "4",
+        "Name": "BitFS 1"
+      },
+      {
+        "Value": "5",
+        "Name": "RR 1"
+      },
+      {
+        "Value": "6",
+        "Name": "RR 2"
+      },
+      {
+        "Value": "7",
+        "Name": "VCUtM 1"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Four Rotating Platforms",
+    "Behavior": 318786372,
+    "BP1 Name": "",
+    "BP2 Name": "Collision",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "BitS 1"
+      },
+      {
+        "Value": "1",
+        "Name": "BitDW 1"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Ferris Wheel Platform",
+    "Behavior": 318786412,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water Bomb Spawner",
+    "Behavior": 318786444,
+    "BP1 Name": "Radius ((p1 * 256 + p2) * 50 + 200)",
+    "BP2 Name": "Radius ((p1 * 256 + p2) * 50 + 200)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water bomb",
+    "Behavior": 318786472,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water bomb shadow",
+    "Behavior": 318786516,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "TTC Rotating Cube",
+    "Behavior": 318786544,
+    "BP1 Name": "",
+    "BP2 Name": "Shape",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Cube"
+      },
+      {
+        "Value": "1",
+        "Name": "Triangular Prism"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pendulum",
+    "Behavior": 318786596,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "TTC Treadmill",
+    "Behavior": 318786652,
+    "BP1 Name": "",
+    "BP2 Name": "Length",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Long"
+      },
+      {
+        "Value": "1",
+        "Name": "Short"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "TTC Moving Bar",
+    "Behavior": 318786708,
+    "BP1 Name": "",
+    "BP2 Name": "Initial Delay (value * 10)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "TTC Cog",
+    "Behavior": 318786764,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Hexagon (Counter-Clockwise)"
+      },
+      {
+        "Value": "1",
+        "Name": "Hexagon (Clockwise)"
+      },
+      {
+        "Value": "2",
+        "Name": "Triangle (Counter-Clockwise)"
+      },
+      {
+        "Value": "3",
+        "Name": "Triangle (Clockwise)"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "TTC Box Platform",
+    "Behavior": 318786808,
+    "BP1 Name": "",
+    "BP2 Name": "Collision",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Collision 1"
+      },
+      {
+        "Value": "1",
+        "Name": "Collision 2"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "TTC Elevator",
+    "Behavior": 318786856,
+    "BP1 Name": "Distance ((p1 * 256 + p2) * 100)",
+    "BP2 Name": "Distance ((p1 * 256 + p2) * 100)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Clock Big Hand Rotating",
+    "Behavior": 318786916,
+    "BP1 Name": "",
+    "BP2 Name": "Speed",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Slow"
+      },
+      {
+        "Value": "1",
+        "Name": "Fast"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Rotating Clockwork Gear",
+    "Behavior": 318786960,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Mr. Blizzard",
+    "Behavior": 318787004,
+    "BP1 Name": "",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Type 0"
+      },
+      {
+        "Value": "1",
+        "Name": "Type 1"
+      }
+    ],
+    "BP3 Name": "Disable Coins",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snowball from Snowman",
+    "Behavior": 318787080,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Sliding back and forth (param1 = collision pointer, param2 = movement length)",
+    "Behavior": 318787148,
+    "BP1 Name": "Collision Pointer",
+    "BP2 Name": "Movement Length",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Octogonal Platform Rotating",
+    "Behavior": 318787192,
+    "BP1 Name": "Speed + Direction",
+    "BP1 Entries": [
+      {
+        "Value": "0",
+        "Name": "Slow, Counter-Clockwise"
+      },
+      {
+        "Value": "1",
+        "Name": "Slow, Clockwise"
+      },
+      {
+        "Value": "2",
+        "Name": "Fast, Counter-Clockwise"
+      },
+      {
+        "Value": "3",
+        "Name": "Fast, Clockwise"
+      }
+    ],
+    "BP2 Name": "Collision",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "BitS 1"
+      },
+      {
+        "Value": "1",
+        "Name": "RR 1"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pyramidal Platforms",
+    "Behavior": 318787232,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Climbable Cage",
+    "Behavior": 318787276,
+    "BP1 Name": "Collision",
+    "BP1 Entries": [
+      {
+        "Value": "0",
+        "Name": "BitS Arrow Platform"
+      },
+      {
+        "Value": "1",
+        "Name": "BitFS Mesh Platform"
+      },
+      {
+        "Value": "2",
+        "Name": "BitFS Elevator"
+      }
+    ],
+    "BP2 Name": "Distance (value * 50) (signed)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Recovery Heart",
+    "Behavior": 318787320,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water Bomb Cannon",
+    "Behavior": 318787344,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Cannon barrel (shoots bubbles)",
+    "Behavior": 318787368,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unagi the eel (swimming)",
+    "Behavior": 318787392,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "Path",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Path 1 (from ship)"
+      },
+      {
+        "Value": "1",
+        "Name": "Path 2 (star)"
+      },
+      {
+        "Value": "2",
+        "Name": "Path 1"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318787448,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Dorrie",
+    "Behavior": 318787472,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Haunted Chair",
+    "Behavior": 318787540,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Mad Piano",
+    "Behavior": 318787620,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bookend",
+    "Behavior": 318787692,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "BookShelf Check?",
+    "Behavior": 318787764,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bookshelf Thing",
+    "Behavior": 318787796,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Book switch (Big Boo's Haunt)",
+    "Behavior": 318787828,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Piranha Plant (THI, Sizeable)",
+    "Behavior": 318787872,
+    "BP1 Name": "",
+    "BP2 Name": "Size",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Small Piranha Plant"
+      },
+      {
+        "Value": "1",
+        "Name": "Large Pirahna Plant"
+      }
+    ],
+    "BP3 Name": "Disable Coins",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (spawned from small Piranha Plant)",
+    "Behavior": 318787928,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Fire Spewer",
+    "Behavior": 318787980,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flame (spawned from Fly Guys)",
+    "Behavior": 318788012,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snufit",
+    "Behavior": 318788064,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Snufit bullet",
+    "Behavior": 318788124,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Grindel (Horizontal)",
+    "Behavior": 318788188,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Eyerok Boss",
+    "Behavior": 318788276,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Eyerok hand",
+    "Behavior": 318788304,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Klepto",
+    "Behavior": 318788368,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "Type",
+    "BP2 Entries": [
+      {
+        "Value": "0",
+        "Name": "Cap Thief"
+      },
+      {
+        "Value": "1",
+        "Name": "Star Holding"
+      }
+    ],
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bird Flock",
+    "Behavior": 318788436,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Penguin (Racing)",
+    "Behavior": 318788480,
+    "BP1 Name": "Star ID",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Finishing Line Check",
+    "Behavior": 318788548,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Shortcut Check (penguin won't give a star if touched)",
+    "Behavior": 318788572,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Haunted Room Check?",
+    "Behavior": 318788596,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Unknown",
+    "Behavior": 318788628,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Clam Shell",
+    "Behavior": 318788672,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Skeeter",
+    "Behavior": 318788712,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Water wave type?",
+    "Behavior": 318788768,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Pendulum Platform",
+    "Behavior": 318788792,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Donut platform group",
+    "Behavior": 318788844,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Donut platform (falls and explodes when stepped on)",
+    "Behavior": 318788868,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Yellow Poles (Dire, Dire Docks)",
+    "Behavior": 318788904,
+    "BP1 Name": "",
+    "BP2 Name": "Distance (value * 100)",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Flat blue star for red coins",
+    "Behavior": 318788972,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Three butterflies group (2 turn into bombs, 1 gives a mushroom)",
+    "Behavior": 318789016,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Bubba",
+    "Behavior": 318789084,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Lakitu at the beginning",
+    "Behavior": 318789136,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Peach at the beginning",
+    "Behavior": 318789176,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Birds at end 1",
+    "Behavior": 318789212,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Birds at end 2",
+    "Behavior": 318789248,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  },
+  {
+    "Name": "Calls intro scene stuff (Lakitu, Peach, etc.)",
+    "Behavior": 318789284,
+    "BP1 Name": "",
+    "BP2 Name": "",
+    "BP3 Name": "",
+    "BP4 Name": ""
+  }
+]

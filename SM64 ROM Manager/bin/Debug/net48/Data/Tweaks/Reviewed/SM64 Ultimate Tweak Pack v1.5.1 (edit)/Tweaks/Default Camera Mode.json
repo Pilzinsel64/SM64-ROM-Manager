@@ -1,0 +1,29 @@
+{
+  "Name": "Camera start mode",
+  "Scripts": [
+    {
+      "Name": "Lakitu mode",
+      "Script": "422C3: 04\n42BC7: 04",
+      "Type": "TweakScript",
+      "Description": "The camera will start in Lakitu mode without needing to press the 'R' button.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Mario mode",
+      "Script": "422C3: 05\n42BC7: 05",
+      "Type": "TweakScript",
+      "Description": "The camera will start in Mario mode without needing to press the 'R' button.",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Choose to start the camera in Lakitu mode or Mario mode",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

@@ -4,7 +4,7 @@
     <StartupObject>SM64_ROM_Manager.Updating.UpdateInstaller.My.MyApplication</StartupObject>
     <RootNamespace>SM64_ROM_Manager.Updating.UpdateInstaller</RootNamespace>
     <MyType>WindowsForms</MyType>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>

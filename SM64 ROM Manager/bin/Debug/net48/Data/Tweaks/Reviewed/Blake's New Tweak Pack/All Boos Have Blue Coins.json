@@ -1,0 +1,21 @@
+{
+  "Name": "All Boos Have Blue Coins",
+  "Scripts": [
+    {
+      "Name": "New Script",
+      "Script": "6719C: 00 00 00 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Tweak by jesusyoshi",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

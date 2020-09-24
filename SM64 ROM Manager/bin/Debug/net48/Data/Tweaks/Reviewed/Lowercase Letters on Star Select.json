@@ -1,0 +1,21 @@
+{
+  "Name": "Lowercase Letters on Star Select",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "\n227908:0C 0B 5D F7\n227960:0C 0B 5D F7\n\n227868:3C 18 02 01 27 18 1C C8\n2279B4:3C 09 02 01 25 29 1D 50\n\n227904:24 05 00 90\n22795C:24 05 00 C2\n\n",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Fixes the star select screen so it can properly display act names with lowercase letters. Made by anonymous_moose. There is a setting in Rom Manager to allow lowercase letter typing in the Text Manager.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}
