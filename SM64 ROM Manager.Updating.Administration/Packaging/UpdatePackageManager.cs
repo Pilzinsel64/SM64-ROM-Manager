@@ -4,6 +4,7 @@ using global::System.Reflection;
 using Microsoft.VisualBasic.CompilerServices;
 using global::Newtonsoft.Json.Linq;
 using Z.Collections.Extensions;
+using SM64_ROM_Manager.Updating.UpdateInstaller;
 
 namespace SM64_ROM_Manager.Updating.Administration.Packaging
 {

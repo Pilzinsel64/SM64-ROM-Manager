@@ -1,47 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="MSBuild.Sdk.Extras/1.6.68">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C45362EB-AB27-09FB-107A-77480E630CFC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>SM64_ROM_Manager.Updating.UpdateInstaller.My.MyApplication</StartupObject>
     <RootNamespace>SM64_ROM_Manager.Updating.UpdateInstaller</RootNamespace>
-    <AssemblyName>SM64 ROM Manager.Updating.UpdateInstaller</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFramework>net472</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
+    <AssemblyTitle>SM64 ROM Manager.Updating.UpdateInstaller</AssemblyTitle>
+    <Company>Pilzinsel64</Company>
+    <Product>SM64 ROM Manager.Updating.UpdateInstaller</Product>
+    <Copyright>Copyright © Pilzinsel64 2019 - 2020</Copyright>
+    <DocumentationFile>SM64 ROM Manager.Updating.UpdateInstaller.xml</DocumentationFile>
+    <DefineTrace>true</DefineTrace>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
+    <ExtrasEnableWinFormsProjectSetup>true</ExtrasEnableWinFormsProjectSetup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.UpdateInstaller.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.UpdateInstaller.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DefineConstants>TRACE</DefineConstants>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -59,17 +39,16 @@
     <ApplicationIcon>icons8_software_installer.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\RelMono\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.UpdateInstaller.xml</DocumentationFile>
     <Optimize>true</Optimize>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IO.Compression" Version="4.*" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
+    <PackageReference Include="System.Net.Http" Version="4.*" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="DevComponents.DotNetBar.Design">
@@ -79,18 +58,8 @@
     <Reference Include="DevComponents.DotNetBar2">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="mscorlib" />
   </ItemGroup>
   <ItemGroup>
@@ -108,63 +77,54 @@
     <Import Include="Z.IO.Extensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
-    <Compile Include="General.cs" />
-    <Compile Include="Main.cs">
+    <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Update="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="My Project\Application.Designer.cs">
+    <Compile Update="My Project\Application.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UpdateInstaller.cs" />
-    <Compile Include="UpdateInstallerGuiLangRes.de.Designer.cs">
+    <Compile Update="UpdateInstallerGuiLangRes.de.Designer.cs">
       <DependentUpon>UpdateInstallerGuiLangRes.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="UpdateInstallerGuiLangRes.Designer.cs">
+    <Compile Update="UpdateInstallerGuiLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateInstallerGuiLangRes.resx</DependentUpon>
     </Compile>
-    <Compile Include="UpdateInstallerStatus.cs" />
-    <Compile Include="UpdateInstallerStatusChangedEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Update="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.Updating.UpdateInstaller.My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateInstallerGuiLangRes.de.resx">
+    <EmbeddedResource Update="UpdateInstallerGuiLangRes.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UpdateInstallerGuiLangRes.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.Updating.UpdateInstaller.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateInstallerGuiLangRes.resx">
+    <EmbeddedResource Update="UpdateInstallerGuiLangRes.resx">
       <CustomToolNamespace>SM64_ROM_Manager.Updating.UpdateInstaller.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UpdateInstallerGuiLangRes.Designer.cs</LastGenOutput>
@@ -180,26 +140,21 @@
       <CustomToolNamespace>SM64_ROM_Manager.Updating.UpdateInstaller.My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_software_installer.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj">
-      <Project>{3D253AEF-6F82-0FC8-2B8A-C513D1800D4C}</Project>
-      <Name>SM64 ROM Manager.Updating</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Updating.Administration\SM64 ROM Manager.Updating.Administration.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Z.ExtensionMethods.WithNamespace">
-      <Version>2.1.1</Version>
-    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Z.ExtensionMethods.WithNamespace" Version="2.1.1" />
   </ItemGroup>
-  <Import Project="..\SM64 ROM Manager.Updating.Client.Shared\SM64 ROM Manager.Updating.Client.Shared.projitems" Label="Shared" />
-  <Import Project="..\SM64 ROM Manager.Updating.Administration.Shared\SM64 ROM Manager.Updating.Administration.Shared.projitems" Label="Shared" />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+  </ItemGroup>
 </Project>

@@ -1,39 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B7BAD350-BB62-0C04-249C-28A92C6008CC}</ProjectGuid>
-    <OutputType>Library</OutputType>
     <RootNamespace>SM64_ROM_Manager.Updating.Administration</RootNamespace>
-    <AssemblyName>SM64 ROM Manager.Updating.Administration</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <Deterministic>true</Deterministic>
+    <TargetFramework>net472</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
+    <AssemblyTitle>SM64 ROM Manager.Updating.Server</AssemblyTitle>
+    <Company>Pilzinsel64</Company>
+    <Product>SM64 ROM Manager.Updating.Server</Product>
+    <Copyright>Copyright © Pilzinsel64 2019 - 2020</Copyright>
+    <DocumentationFile>SM64 ROM Manager.Updating.Administration.xml</DocumentationFile>
+    <DefineTrace>true</DefineTrace>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CS0436</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.Administration.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CS0436</NoWarn>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.Administration.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CS0436</NoWarn>
-    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -48,34 +32,23 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\RelMono\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.Administration.xml</DocumentationFile>
     <Optimize>true</Optimize>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CS0436</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.*" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
+    <PackageReference Include="System.Net.Http" Version="4.*" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="drsPwEnc">
       <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Pilz.Cryptography">
       <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -92,36 +65,23 @@
     <Import Include="Z.IO.Extensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Discord\DiscordBot.cs" />
-    <Compile Include="Discord\DiscordBotConfig.cs" />
-    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
-    <Compile Include="ProxyConfiguration.cs" />
-    <Compile Include="UpdateServerManager.cs" />
-    <Compile Include="Packaging\UpdatePackageManager.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="My Project\Application.Designer.cs">
+    <Compile Update="My Project\Application.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Packaging\UpdatePackagePackager.cs" />
-    <Compile Include="Packaging\UpdatePackageTemplate.cs" />
-    <Compile Include="UpdateProject.cs" />
-    <Compile Include="UpdateServerConfig.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.Updating.My.Resources</CustomToolNamespace>
@@ -129,7 +89,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.cs</LastGenOutput>
@@ -141,41 +100,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj">
-      <Project>{3D253AEF-6F82-0FC8-2B8A-C513D1800D4C}</Project>
-      <Name>SM64 ROM Manager.Updating</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Discord.Net">
-      <Version>2.2.0</Version>
-    </PackageReference>
-    <PackageReference Include="Markdig">
-      <Version>0.21.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces">
-      <Version>1.1.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="System.Collections.Immutable">
-      <Version>1.7.1</Version>
-    </PackageReference>
-    <PackageReference Include="System.Interactive.Async">
-      <Version>4.1.1</Version>
-    </PackageReference>
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
-      <Version>4.7.1</Version>
-    </PackageReference>
-    <PackageReference Include="WebDav.Client">
-      <Version>2.7.0</Version>
-    </PackageReference>
-    <PackageReference Include="Z.ExtensionMethods.WithNamespace">
-      <Version>2.1.1</Version>
-    </PackageReference>
+    <PackageReference Include="Discord.Net" Version="2.2.0" />
+    <PackageReference Include="Markdig" Version="0.21.1" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.7.1" />
+    <PackageReference Include="System.Interactive.Async" Version="4.1.1" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.7.1" />
+    <PackageReference Include="WebDav.Client" Version="2.7.0" />
+    <PackageReference Include="Z.ExtensionMethods.WithNamespace" Version="2.1.1" />
   </ItemGroup>
-  <Import Project="..\SM64 ROM Manager.Updating.Client.Shared\SM64 ROM Manager.Updating.Client.Shared.projitems" Label="Shared" />
-  <Import Project="..\SM64 ROM Manager.Updating.Administration.Shared\SM64 ROM Manager.Updating.Administration.Shared.projitems" Label="Shared" />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+  </ItemGroup>
 </Project>

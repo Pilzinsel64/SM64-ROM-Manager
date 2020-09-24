@@ -1,41 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E23753FA-C065-0A5F-304E-B35C0255724C}</ProjectGuid>
-    <OutputType>Library</OutputType>
     <RootNamespace>SM64_ROM_Manager.Publics</RootNamespace>
-    <AssemblyName>SM64 ROM Manager.Publics</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
+    <TargetFramework>net472</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AssemblyTitle>Publics</AssemblyTitle>
+    <Company>Pilzinsel64</Company>
+    <Product>SM64 ROM Manager</Product>
+    <Copyright>Copyright © Pilzinsel64 2018</Copyright>
+    <DocumentationFile>SM64 ROM Manager.Publics.xml</DocumentationFile>
+    <DefineTrace>true</DefineTrace>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Publics.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Publics.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -50,26 +32,25 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\RelMono\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Publics.xml</DocumentationFile>
     <Optimize>true</Optimize>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.Threading.Tasks" Version="4.*" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
+    <PackageReference Include="System.Net.Http" Version="4.*" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="DevComponents.DotNetBar.Design, Version=14.0.0.3, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
       <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="drsPwEnc">
       <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
@@ -90,20 +71,11 @@
     <Reference Include="RegistryMonitor">
       <HintPath>..\Shared Libs\RegistryMonitor.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
     <Reference Include="System.configuration" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Design" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -118,87 +90,78 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dialogs\WebViewer.cs">
+    <Compile Update="Dialogs\WebViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\WebViewer.Designer.cs">
+    <Compile Update="Dialogs\WebViewer.Designer.cs">
       <DependentUpon>WebViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="InputDialog.cs">
+    <Compile Update="InputDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InputDialog.Designer.cs">
+    <Compile Update="InputDialog.Designer.cs">
       <DependentUpon>InputDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
-    <Compile Include="DataTableEx.cs">
+    <Compile Update="DataTableEx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Dialogs\FilesFilterDialog.Designer.cs">
+    <Compile Update="Dialogs\FilesFilterDialog.Designer.cs">
       <DependentUpon>FilesFilterDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\FilesFilterDialog.cs">
+    <Compile Update="Dialogs\FilesFilterDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\StringInputDialog.Designer.cs">
+    <Compile Update="Dialogs\StringInputDialog.Designer.cs">
       <DependentUpon>StringInputDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\StringInputDialog.cs">
+    <Compile Update="Dialogs\StringInputDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Extensions.cs" />
-    <Compile Include="FileDialogFilters.Designer.cs">
+    <Compile Update="FileDialogFilters.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FileDialogFilters.resx</DependentUpon>
     </Compile>
-    <Compile Include="General.cs" />
-    <Compile Include="ItemListBox.cs">
+    <Compile Update="ItemListBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="JobToDoManager.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="My Project\Application.Designer.cs">
+    <Compile Update="My Project\Application.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PublicFunctions.cs" />
-    <Compile Include="SwapInts.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dialogs\FilesFilterDialog.de.resx">
+    <EmbeddedResource Update="Dialogs\FilesFilterDialog.de.resx">
       <DependentUpon>FilesFilterDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\FilesFilterDialog.resx">
+    <EmbeddedResource Update="Dialogs\FilesFilterDialog.resx">
       <DependentUpon>FilesFilterDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\StringInputDialog.resx">
+    <EmbeddedResource Update="Dialogs\StringInputDialog.resx">
       <DependentUpon>StringInputDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\WebViewer.resx">
+    <EmbeddedResource Update="Dialogs\WebViewer.resx">
       <DependentUpon>WebViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FileDialogFilters.resx">
+    <EmbeddedResource Update="FileDialogFilters.resx">
       <CustomToolNamespace>SM64_ROM_Manager.Publics.My.Resources</CustomToolNamespace>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FileDialogFilters.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="InputDialog.resx">
+    <EmbeddedResource Update="InputDialog.resx">
       <DependentUpon>InputDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.Publics.My.Resources</CustomToolNamespace>
@@ -206,7 +169,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.cs</LastGenOutput>
@@ -218,44 +180,23 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj">
-      <Project>{24562e87-ba35-0cf9-13dc-be9f85e735bb}</Project>
-      <Name>SM64 ROM Manager.SettingsManager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj">
-      <Project>{E11312A8-5E8D-073F-0086-11D677519581}</Project>
-      <Name>SM64Lib.TextValueConverter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj">
-      <Project>{e29a037e-451d-05d8-12d2-fc9f72bd60ac}</Project>
-      <Name>SM64Lib</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj" />
+    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj" />
+    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="EPPlus">
-      <Version>5.3.1</Version>
-    </PackageReference>
-    <PackageReference Include="ini-parser">
-      <Version>2.5.2</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Toolkit.Forms.UI.Controls.WebView">
-      <Version>6.1.2</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Windows.SDK.Contracts">
-      <Version>10.0.19041.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="System.Runtime.WindowsRuntime">
-      <Version>4.7.0</Version>
-    </PackageReference>
-    <PackageReference Include="System.Runtime.WindowsRuntime.UI.Xaml">
-      <Version>4.7.0</Version>
-    </PackageReference>
-    <PackageReference Include="System.ValueTuple">
-      <Version>4.5.0</Version>
-    </PackageReference>
+    <PackageReference Include="EPPlus" Version="5.3.1" />
+    <PackageReference Include="ini-parser" Version="2.5.2" />
+    <PackageReference Include="Microsoft.Toolkit.Forms.UI.Controls.WebView" Version="6.1.2" />
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Runtime.WindowsRuntime" Version="4.7.0" />
+    <PackageReference Include="System.Runtime.WindowsRuntime.UI.Xaml" Version="4.7.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+  </ItemGroup>
 </Project>

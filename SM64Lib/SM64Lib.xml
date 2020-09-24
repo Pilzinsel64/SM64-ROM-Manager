@@ -39,15 +39,6 @@
             This defines an offset after which rectangular shadows with custom
             widths and heights can be defined.
         </member>
-        <member name="M:SM64Lib.Levels.SM64EditorLevelManager.LoadLevel(SM64Lib.Levels.Level,SM64Lib.RomManager,System.UInt16,System.UInt32)">
-            <summary>
-            Loads a SM64 Editor Level from ROM.
-            </summary>
-            <param name="lvl"></param>
-            <param name="rommgr"></param>
-            <param name="LevelID"></param>
-            <param name="segAddress"></param>
-        </member>
         <member name="M:SM64Lib.Levels.LevelManager.LoadLevel(SM64Lib.Levels.Level,SM64Lib.RomManager,System.UInt16,System.UInt32)">
             <summary>
             Loads a ROM Manager Level from ROM.
@@ -134,6 +125,29 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:SM64Lib.Levels.SM64EditorLevelManager.LoadLevel(SM64Lib.Levels.Level,SM64Lib.RomManager,System.UInt16,System.UInt32)">
+            <summary>
+            Loads a SM64 Editor Level from ROM.
+            </summary>
+            <param name="lvl"></param>
+            <param name="rommgr"></param>
+            <param name="LevelID"></param>
+            <param name="segAddress"></param>
+        </member>
+        <member name="M:SM64Lib.Model.Conversion.Fast3DParsing.Fast3DParser.Convert(Pilz.S3DFileParser.Object3D,SM64Lib.Model.Fast3D.DisplayLists.DisplayList,SM64Lib.RomManager,System.Nullable{System.Byte})">
+            <summary>Parse a Displaylist to an Object3D.</summary>
+            <param name="obj">The Object3D where the model should be parsed to.</param>
+            <param name="dl">The Displaylist which should be parsed.</param>
+            <param name="rommgr">The RomManager Instance to use.</param>
+            <param name="AreaID">The Area ID if avaiable.</param>
+        </member>
+        <member name="M:SM64Lib.Model.Conversion.Fast3DParsing.Fast3DParser.ConvertAsync(Pilz.S3DFileParser.Object3D,SM64Lib.Model.Fast3D.DisplayLists.DisplayList,SM64Lib.RomManager,System.Nullable{System.Byte})">
+            <summary>Parse a Displaylist to an Object3D.</summary>
+            <param name="obj">The Object3D where the model should be parsed to.</param>
+            <param name="dl">The Displaylist which should be parsed.</param>
+            <param name="rommgr">The RomManager Instance to use.</param>
+            <param name="AreaID">The Area ID if avaiable.</param>
+        </member>
         <member name="F:SM64Lib.Model.Conversion.Fast3DWriting.DisplaylistSelectionMode.Automatic">
             <summary>
             Automaticly choose a default Displaylist.
@@ -188,20 +202,6 @@
             <param name="input">The input model.</param>
             <returns></returns>
         </member>
-        <member name="M:SM64Lib.Model.Conversion.Fast3DParsing.Fast3DParser.Convert(Pilz.S3DFileParser.Object3D,SM64Lib.Model.Fast3D.DisplayLists.DisplayList,SM64Lib.RomManager,System.Nullable{System.Byte})">
-            <summary>Parse a Displaylist to an Object3D.</summary>
-            <param name="obj">The Object3D where the model should be parsed to.</param>
-            <param name="dl">The Displaylist which should be parsed.</param>
-            <param name="rommgr">The RomManager Instance to use.</param>
-            <param name="AreaID">The Area ID if avaiable.</param>
-        </member>
-        <member name="M:SM64Lib.Model.Conversion.Fast3DParsing.Fast3DParser.ConvertAsync(Pilz.S3DFileParser.Object3D,SM64Lib.Model.Fast3D.DisplayLists.DisplayList,SM64Lib.RomManager,System.Nullable{System.Byte})">
-            <summary>Parse a Displaylist to an Object3D.</summary>
-            <param name="obj">The Object3D where the model should be parsed to.</param>
-            <param name="dl">The Displaylist which should be parsed.</param>
-            <param name="rommgr">The RomManager Instance to use.</param>
-            <param name="AreaID">The Area ID if avaiable.</param>
-        </member>
         <member name="F:SM64Lib.Model.Fast3D.DisplayLists.Script.Commands.F3D_SETIMG.ColorFormat.RGBA">
             <summary>
             Color and alpha
@@ -240,6 +240,21 @@
         </member>
         <member name="F:SM64Lib.Model.ObjectInputSettings.ReduceDuplicateVerticesLevel.Level2">
             <summary>Reduce and push up. [Buggy]</summary>
+        </member>
+        <member name="M:SM64Lib.NPCs.CoinsManager.LoadCoinSettings">
+            <summary>
+            Loads all the properties from ROM.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.NPCs.CoinsManager.SaveCoinSettings">
+            <summary>
+            Saves all the properties to ROM and updates checksum.
+            </summary>
+        </member>
+        <member name="M:SM64Lib.NPCs.CoinsManager.SaveCoinSettings(System.Boolean)">
+            <summary>
+            Saves all the properties to ROM and updates checksum if requested.
+            </summary>
         </member>
         <member name="P:SM64Lib.Patching.PatchProfile.Name">
             <summary>
@@ -369,21 +384,6 @@
         <member name="F:SM64Lib.Patching.ScriptType.Armips">
             <summary>
             Code that can be applied using Armips.
-            </summary>
-        </member>
-        <member name="M:SM64Lib.NPCs.CoinsManager.LoadCoinSettings">
-            <summary>
-            Loads all the properties from ROM.
-            </summary>
-        </member>
-        <member name="M:SM64Lib.NPCs.CoinsManager.SaveCoinSettings">
-            <summary>
-            Saves all the properties to ROM and updates checksum.
-            </summary>
-        </member>
-        <member name="M:SM64Lib.NPCs.CoinsManager.SaveCoinSettings(System.Boolean)">
-            <summary>
-            Saves all the properties to ROM and updates checksum if requested.
             </summary>
         </member>
         <member name="P:SM64Lib.RomManager.ProgramVersion">

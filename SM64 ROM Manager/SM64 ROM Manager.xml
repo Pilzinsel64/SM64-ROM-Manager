@@ -964,6 +964,67 @@
               Sucht eine lokalisierte Zeichenfolge, die New Object ähnelt.
             </summary>
         </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.Global_Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Abort">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Abort ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Cancel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Cancel ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Close">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Close ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_No">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die No ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Okay">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Okay ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Yes">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Yes ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_Error">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Error ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_Off">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Off ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_On">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die On ähnelt.
+            </summary>
+        </member>
         <member name="T:SM64_ROM_Manager.My.Resources.Form_Main_Resources">
             <summary>
               Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
@@ -1451,67 +1512,6 @@
               Sucht eine lokalisierte Zeichenfolge, die The ROM was changed by an external program. To reload the ROM click on &apos;Reload ROM&apos;. ähnelt.
             </summary>
         </member>
-        <member name="T:SM64_ROM_Manager.My.Resources.Global_Resources">
-            <summary>
-              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.ResourceManager">
-            <summary>
-              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Culture">
-            <summary>
-              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Abort">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Abort ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Cancel">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Cancel ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Close">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Close ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_No">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die No ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Okay">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Okay ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Button_Yes">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Yes ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_Error">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Error ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_Off">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Off ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.My.Resources.Global_Resources.Text_On">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die On ähnelt.
-            </summary>
-        </member>
         <member name="T:SM64_ROM_Manager.My.Resources.Plugin_Installer_Resources">
             <summary>
               Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
@@ -1644,6 +1644,37 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="F:SM64_ROM_Manager.ImportLevelDialog.importMode">
+            <summary>
+            Possible modes:
+            0 = Import from ROM
+            1 = Import from level export
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,SM64Lib.Levels.Level,System.String,SM64Lib.Levels.ILevelManager)">
+            <summary>
+            Imports a level/area from a ROM file interactively.
+            </summary>
+            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+            <param name="destLevel">The destinated level where the areas should be added. Leave NULL if you want to import whole levels only.</param>
+            <param name="romPath">The path to the ROM file to import from.</param>
+            <param name="lvlmgr">A level manager to use for loading the levels from ROM.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,SM64Lib.Levels.Level,System.String)">
+            <summary>
+            Imports a level/Area from a level export file interactively.
+            </summary>
+            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+            <param name="destLevel">The destinated level where the areas should be added.</param>
+            <param name="exportPath">The path to the level export file to import from.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,System.String)">
+            <summary>
+            Imports a level/Area from a level export file interactively.
+            </summary>
+            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
+            <param name="exportPath">The path to the level export file to import from.</param>
+        </member>
         <member name="F:SM64_ROM_Manager.BehaviorBankManager.components">
             <summary>
             Required designer variable.
@@ -1746,23 +1777,6 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="F:SM64_ROM_Manager.CustomObjectImportDialog.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:SM64_ROM_Manager.CustomObjectImportDialog.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:SM64_ROM_Manager.CustomObjectImportDialog.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
         <member name="F:SM64_ROM_Manager.CustomBehaviorSelector.components">
             <summary>
             Required designer variable.
@@ -1792,6 +1806,23 @@
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
         <member name="M:SM64_ROM_Manager.CustomModelSelector.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.CustomObjectImportDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.CustomObjectImportDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.CustomObjectImportDialog.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
@@ -1831,54 +1862,6 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="F:SM64_ROM_Manager.ObjectShadowEditor.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:SM64_ROM_Manager.ObjectShadowEditor.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:SM64_ROM_Manager.ObjectShadowEditor.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="F:SM64_ROM_Manager.ImportLevelDialog.importMode">
-            <summary>
-            Possible modes:
-            0 = Import from ROM
-            1 = Import from level export
-            </summary>
-        </member>
-        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,SM64Lib.Levels.Level,System.String,SM64Lib.Levels.ILevelManager)">
-            <summary>
-            Imports a level/area from a ROM file interactively.
-            </summary>
-            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
-            <param name="destLevel">The destinated level where the areas should be added. Leave NULL if you want to import whole levels only.</param>
-            <param name="romPath">The path to the ROM file to import from.</param>
-            <param name="lvlmgr">A level manager to use for loading the levels from ROM.</param>
-        </member>
-        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,SM64Lib.Levels.Level,System.String)">
-            <summary>
-            Imports a level/Area from a level export file interactively.
-            </summary>
-            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
-            <param name="destLevel">The destinated level where the areas should be added.</param>
-            <param name="exportPath">The path to the level export file to import from.</param>
-        </member>
-        <member name="M:SM64_ROM_Manager.ImportLevelDialog.#ctor(SM64Lib.RomManager,System.String)">
-            <summary>
-            Imports a level/Area from a level export file interactively.
-            </summary>
-            <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
-            <param name="exportPath">The path to the level export file to import from.</param>
-        </member>
         <member name="F:SM64_ROM_Manager.CustomObjectsManager.components">
             <summary>
             Required designer variable.
@@ -1891,6 +1874,23 @@
             <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         </member>
         <member name="M:SM64_ROM_Manager.CustomObjectsManager.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SM64_ROM_Manager.ObjectShadowEditor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.ObjectShadowEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.ObjectShadowEditor.InitializeComponent">
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.

@@ -1,44 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3021444D-14A6-0377-1C4C-05EC09C09A67}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject />
     <RootNamespace>SM64_ROM_Manager.Updating.Client.GUI</RootNamespace>
-    <AssemblyName>SM64 ROM Manager.Updating.Client.GUI</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFramework>net472</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
+    <AssemblyTitle>SM64 ROM Manager.Updating.Client.GUI</AssemblyTitle>
+    <Product>SM64 ROM Manager.Updating.Client.GUI</Product>
+    <Copyright>Copyright ©  2019</Copyright>
+    <DocumentationFile>SM64 ROM Manager.Updating.Client.GUI.xml</DocumentationFile>
+    <DefineTrace>true</DefineTrace>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CS0436</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.Client.GUI.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CS0436</NoWarn>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.Client.GUI.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CS0436</NoWarn>
-    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -53,16 +33,14 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\RelMono\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.Updating.Client.GUI.xml</DocumentationFile>
     <Optimize>true</Optimize>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CS0436</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
+    <PackageReference Include="System.Net.Http" Version="4.*" />
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="DevComponents.DotNetBar.Design">
@@ -79,17 +57,8 @@
     <Reference Include="DevComponents.DotNetBar2">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -107,74 +76,69 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
-    <Compile Include="SimpleActionDialog.Designer.cs">
+    <Compile Update="SimpleActionDialog.Designer.cs">
       <DependentUpon>SimpleActionDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="SimpleActionDialog.cs">
+    <Compile Update="SimpleActionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateClientGUI.cs" />
-    <Compile Include="UpdatesAvailableDialog.cs">
+    <Compile Update="UpdatesAvailableDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdatesAvailableDialog.Designer.cs">
+    <Compile Update="UpdatesAvailableDialog.Designer.cs">
       <DependentUpon>UpdatesAvailableDialog.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="My Project\AssemblyInfo.cs" />
-    <Compile Include="My Project\Application.Designer.cs">
+    <Compile Update="My Project\Application.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="Resources.Designer.cs">
+    <Compile Update="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Settings.Designer.cs">
+    <Compile Update="My Project\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UpdatingClientGuiLangRes.de.Designer.cs">
+    <Compile Update="UpdatingClientGuiLangRes.de.Designer.cs">
       <DependentUpon>UpdatingClientGuiLangRes.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="UpdatingClientGuiLangRes.Designer.cs">
+    <Compile Update="UpdatingClientGuiLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdatingClientGuiLangRes.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SimpleActionDialog.de.resx">
+    <EmbeddedResource Update="SimpleActionDialog.de.resx">
       <DependentUpon>SimpleActionDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SimpleActionDialog.resx">
+    <EmbeddedResource Update="SimpleActionDialog.resx">
       <DependentUpon>SimpleActionDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdatesAvailableDialog.de.resx">
+    <EmbeddedResource Update="UpdatesAvailableDialog.de.resx">
       <DependentUpon>UpdatesAvailableDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdatesAvailableDialog.resx">
+    <EmbeddedResource Update="UpdatesAvailableDialog.resx">
       <DependentUpon>UpdatesAvailableDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources.resx">
+    <EmbeddedResource Update="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.Updating.Client.GUI.My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdatingClientGuiLangRes.de.resx">
+    <EmbeddedResource Update="UpdatingClientGuiLangRes.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UpdatingClientGuiLangRes.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.Updating.Client.GUI.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdatingClientGuiLangRes.resx">
+    <EmbeddedResource Update="UpdatingClientGuiLangRes.resx">
       <CustomToolNamespace>SM64_ROM_Manager.Updating.Client.GUI.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UpdatingClientGuiLangRes.Designer.cs</LastGenOutput>
@@ -190,38 +154,21 @@
       <CustomToolNamespace>SM64_ROM_Manager.Updating.Client.GUI.My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SM64 ROM Manager.Updating.Client\SM64 ROM Manager.Updating.Client.csproj">
-      <Project>{FCD7DC2F-9438-0E44-23B2-D0DFD601A79C}</Project>
-      <Name>SM64 ROM Manager.Updating.Client</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64 ROM Manager.Updating.GUIBase\SM64 ROM Manager.Updating.GUIBase.csproj">
-      <Project>{CD036355-ACD6-0073-29A6-C71B8D181D12}</Project>
-      <Name>SM64 ROM Manager.Updating.GUIBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj">
-      <Project>{3D253AEF-6F82-0FC8-2B8A-C513D1800D4C}</Project>
-      <Name>SM64 ROM Manager.Updating</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Updating.Client\SM64 ROM Manager.Updating.Client.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.Updating.GUIBase\SM64 ROM Manager.Updating.GUIBase.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <PackageReference Include="HtmlRenderer.Core" Version="1.5.0.6" />
+    <PackageReference Include="HtmlRenderer.WinForms" Version="1.5.0.6" />
+    <PackageReference Include="Markdig" Version="0.21.1" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.7.1" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="HtmlRenderer.Core">
-      <Version>1.5.0.6</Version>
-    </PackageReference>
-    <PackageReference Include="HtmlRenderer.WinForms">
-      <Version>1.5.0.6</Version>
-    </PackageReference>
-    <PackageReference Include="Markdig">
-      <Version>0.21.1</Version>
-    </PackageReference>
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
-      <Version>4.7.1</Version>
-    </PackageReference>
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

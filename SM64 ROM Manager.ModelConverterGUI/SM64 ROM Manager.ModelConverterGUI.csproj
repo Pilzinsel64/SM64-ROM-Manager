@@ -1,39 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C67AEB48-A50F-0A09-115D-429236E3E4D7}</ProjectGuid>
-    <OutputType>Library</OutputType>
     <RootNamespace>SM64_ROM_Manager.ModelConverterGUI</RootNamespace>
-    <AssemblyName>SM64 ROM Manager.ModelConverterGUI</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
+    <TargetFramework>net472</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
+    <AssemblyTitle>ModelConverterGUI</AssemblyTitle>
+    <Company>Pilzinsel64</Company>
+    <Product>SM64 ROM Manager</Product>
+    <Copyright>Copyright © Pilzinsel64 2018 - 2020</Copyright>
+    <DocumentationFile>SM64 ROM Manager.ModelConverterGUI.xml</DocumentationFile>
+    <DefineTrace>true</DefineTrace>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.ModelConverterGUI.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.ModelConverterGUI.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -48,22 +32,21 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\RelMono\</OutputPath>
-    <DocumentationFile>SM64 ROM Manager.ModelConverterGUI.xml</DocumentationFile>
     <Optimize>true</Optimize>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.Threading.Tasks" Version="4.*" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
+    <PackageReference Include="System.Net.Http" Version="4.*" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="DevComponents.DotNetBar.Design, Version=14.0.0.3, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
       <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevComponents.DotNetBar.Layout">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.dll</HintPath>
@@ -73,8 +56,8 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Pilz.Drawing.Drawing3D.OpenGLFactory">
       <HintPath>..\Shared Libs\Pilz.Drawing.Drawing3D.OpenGLFactory.dll</HintPath>
@@ -89,20 +72,10 @@
       <HintPath>..\Shared Libs\Pilz.Win32.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="System" />
     <Reference Include="System.configuration" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Numerics" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -119,130 +92,123 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
-    <Compile Include="CollisionEditor.designer.cs">
+    <Compile Update="CollisionEditor.designer.cs">
       <DependentUpon>CollisionEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="CollisionEditor.cs">
+    <Compile Update="CollisionEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomDisplaylistEditor.Designer.cs">
+    <Compile Update="CustomDisplaylistEditor.Designer.cs">
       <DependentUpon>CustomDisplaylistEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomDisplaylistEditor.cs">
+    <Compile Update="CustomDisplaylistEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomDisplaylistEntryEditor.Designer.cs">
+    <Compile Update="CustomDisplaylistEntryEditor.Designer.cs">
       <DependentUpon>CustomDisplaylistEntryEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomDisplaylistEntryEditor.cs">
+    <Compile Update="CustomDisplaylistEntryEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DialogSetUpPoint.Designer.cs">
+    <Compile Update="DialogSetUpPoint.Designer.cs">
       <DependentUpon>DialogSetUpPoint.cs</DependentUpon>
     </Compile>
-    <Compile Include="DialogSetUpPoint.cs">
+    <Compile Update="DialogSetUpPoint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GuiInputPreferences.cs" />
-    <Compile Include="Language Resources\MainModelconverter_Resources.de.Designer.cs">
+    <Compile Update="Language Resources\MainModelconverter_Resources.de.Designer.cs">
       <DependentUpon>MainModelconverter_Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Language Resources\MainModelconverter_Resources.Designer.cs">
+    <Compile Update="Language Resources\MainModelconverter_Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MainModelconverter_Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="MainModelConverter.designer.cs">
+    <Compile Update="MainModelConverter.designer.cs">
       <DependentUpon>MainModelConverter.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainModelConverter.cs">
+    <Compile Update="MainModelConverter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModelPreviewOfficeForm.Designer.cs">
+    <Compile Update="ModelPreviewOfficeForm.Designer.cs">
       <DependentUpon>ModelPreviewOfficeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelPreviewOfficeForm.cs">
+    <Compile Update="ModelPreviewOfficeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="My Project\Application.Designer.cs">
+    <Compile Update="My Project\Application.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="PublicFunctions.cs" />
-    <Compile Include="TextureGraphicFormatEditor.Designer.cs">
+    <Compile Update="TextureGraphicFormatEditor.Designer.cs">
       <DependentUpon>TextureGraphicFormatEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="TextureGraphicFormatEditor.cs">
+    <Compile Update="TextureGraphicFormatEditor.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CollisionEditor.de.resx">
+    <EmbeddedResource Update="CollisionEditor.de.resx">
       <DependentUpon>CollisionEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CollisionEditor.resx">
+    <EmbeddedResource Update="CollisionEditor.resx">
       <DependentUpon>CollisionEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomDisplaylistEditor.resx">
+    <EmbeddedResource Update="CustomDisplaylistEditor.resx">
       <DependentUpon>CustomDisplaylistEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomDisplaylistEntryEditor.resx">
+    <EmbeddedResource Update="CustomDisplaylistEntryEditor.resx">
       <DependentUpon>CustomDisplaylistEntryEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DialogSetUpPoint.resx">
+    <EmbeddedResource Update="DialogSetUpPoint.resx">
       <DependentUpon>DialogSetUpPoint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language Resources\MainModelconverter_Resources.de.resx">
+    <EmbeddedResource Update="Language Resources\MainModelconverter_Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MainModelconverter_Resources.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.ModelConverterGUI.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language Resources\MainModelconverter_Resources.resx">
+    <EmbeddedResource Update="Language Resources\MainModelconverter_Resources.resx">
       <CustomToolNamespace>SM64_ROM_Manager.ModelConverterGUI.My.Resources</CustomToolNamespace>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MainModelconverter_Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainModelConverter.de.resx">
+    <EmbeddedResource Update="MainModelConverter.de.resx">
       <DependentUpon>MainModelConverter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainModelConverter.resx">
+    <EmbeddedResource Update="MainModelConverter.resx">
       <DependentUpon>MainModelConverter.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModelPreviewOfficeForm.resx">
+    <EmbeddedResource Update="ModelPreviewOfficeForm.resx">
       <DependentUpon>ModelPreviewOfficeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <CustomToolNamespace>SM64_ROM_Manager.ModelConverterGUI.My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TextureGraphicFormatEditor.de.resx">
+    <EmbeddedResource Update="TextureGraphicFormatEditor.de.resx">
       <DependentUpon>TextureGraphicFormatEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TextureGraphicFormatEditor.resx">
+    <EmbeddedResource Update="TextureGraphicFormatEditor.resx">
       <DependentUpon>TextureGraphicFormatEditor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.cs</LastGenOutput>
@@ -254,55 +220,29 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj">
-      <Project>{e23753fa-c065-0a5f-304e-b35c0255724c}</Project>
-      <Name>SM64 ROM Manager.Publics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj">
-      <Project>{24562e87-ba35-0cf9-13dc-be9f85e735bb}</Project>
-      <Name>SM64 ROM Manager.SettingsManager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64Lib.N64Graphics\SM64Lib.N64Graphics.csproj">
-      <Project>{d9258483-950c-46d1-a333-31f32492cd7e}</Project>
-      <Name>SM64Lib.N64Graphics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj">
-      <Project>{e11312a8-5e8d-073f-0086-11d677519581}</Project>
-      <Name>SM64Lib.TextValueConverter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj">
-      <Project>{e29a037e-451d-05d8-12d2-fc9f72bd60ac}</Project>
-      <Name>SM64Lib</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj" />
+    <ProjectReference Include="..\SM64Lib.N64Graphics\SM64Lib.N64Graphics.csproj" />
+    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj" />
+    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_edit_16px.png" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_folder_16px.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="EPPlus">
-      <Version>5.3.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="OpenTK">
-      <Version>3.2.0</Version>
-    </PackageReference>
-    <PackageReference Include="OpenTK.GLControl">
-      <Version>3.1.0</Version>
-    </PackageReference>
-    <PackageReference Include="System.Numerics.Vectors">
-      <Version>4.5.0</Version>
-    </PackageReference>
-    <PackageReference Include="System.ValueTuple">
-      <Version>4.5.0</Version>
-    </PackageReference>
+    <PackageReference Include="EPPlus" Version="5.3.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="OpenTK" Version="3.2.0" />
+    <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+  </ItemGroup>
 </Project>

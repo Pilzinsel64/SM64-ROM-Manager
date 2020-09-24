@@ -91,6 +91,37 @@
               Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
+        <member name="T:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RevertScript">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Are you sure to revert the changes of the last execution of this script? This can&apos;t be undone. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RevertScript_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Revert changes ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RevertScriptBeforePatching">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die You already have patched this script a while ago. Do you want to revert the changes of the last execution of this script before re-patching it? ähnelt.
+            </summary>
+        </member>
         <member name="T:SM64_ROM_Manager.PatchScripts.MyIcons">
             <summary>
               Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
@@ -165,37 +196,6 @@
         <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_undo_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-            </summary>
-        </member>
-        <member name="T:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes">
-            <summary>
-              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.ResourceManager">
-            <summary>
-              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Culture">
-            <summary>
-              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RevertScript">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Are you sure to revert the changes of the last execution of this script? This can&apos;t be undone. ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RevertScript_Title">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die Revert changes ähnelt.
-            </summary>
-        </member>
-        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RevertScriptBeforePatching">
-            <summary>
-              Sucht eine lokalisierte Zeichenfolge, die You already have patched this script a while ago. Do you want to revert the changes of the last execution of this script before re-patching it? ähnelt.
             </summary>
         </member>
     </members>

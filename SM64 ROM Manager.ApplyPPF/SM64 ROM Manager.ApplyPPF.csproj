@@ -1,45 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="MSBuild.Sdk.Extras/1.6.68">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86A3BBE4-1487-0369-30C8-E49D84DDDEBF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <StartupObject>SM64_ROM_Manager.ApplyPPF.My.MyApplication</StartupObject>
     <RootNamespace>SM64_ROM_Manager.ApplyPPF</RootNamespace>
     <AssemblyName>Apply PPF</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
+    <TargetFramework>net472</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
+    <AssemblyTitle>ApplyPPF</AssemblyTitle>
+    <Company>Pilzinsel64</Company>
+    <Product>ApplyPPF</Product>
+    <Copyright>Copyright © Pilzinsel64 2018 - 2020</Copyright>
+    <DocumentationFile>Apply PPF.xml</DocumentationFile>
+    <DefineTrace>true</DefineTrace>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
+    <ExtrasEnableWinFormsProjectSetup>true</ExtrasEnableWinFormsProjectSetup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Apply PPF.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Apply PPF.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DefineConstants>TRACE</DefineConstants>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -57,38 +39,27 @@
     <ApplicationIcon>icons8_syringe.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
-    <DefineTrace>true</DefineTrace>
-    <OutputPath>bin\RelMono\</OutputPath>
-    <DocumentationFile>Apply PPF.xml</DocumentationFile>
     <Optimize>true</Optimize>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591</NoWarn>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.*" />
+    <PackageReference Include="System.Net.Http" Version="4.*" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="DevComponents.DotNetBar.Design, Version=14.0.0.3, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
       <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -104,60 +75,55 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="My Project\MyNamespace.Dynamic.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.1.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.2.Designer.cs" />
-    <Compile Include="My Project\MyNamespace.Static.3.Designer.cs" />
-    <Compile Include="ApplyPPFDialog.Designer.cs">
+    <Compile Update="ApplyPPFDialog.Designer.cs">
       <DependentUpon>ApplyPPFDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplyPPFDialog.cs">
+    <Compile Update="ApplyPPFDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Language Ressources\ApplyPPFTranslation.de.Designer.cs">
+    <Compile Update="Language Ressources\ApplyPPFTranslation.de.Designer.cs">
       <DependentUpon>ApplyPPFTranslation.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Language Ressources\ApplyPPFTranslation.Designer.cs">
+    <Compile Update="Language Ressources\ApplyPPFTranslation.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ApplyPPFTranslation.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="My Project\Application.Designer.cs">
+    <Compile Update="My Project\Application.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Update="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ApplyPPFDialog.de.resx">
+    <EmbeddedResource Update="ApplyPPFDialog.de.resx">
       <DependentUpon>ApplyPPFDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplyPPFDialog.resx">
+    <EmbeddedResource Update="ApplyPPFDialog.resx">
       <DependentUpon>ApplyPPFDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language Ressources\ApplyPPFTranslation.de.resx">
+    <EmbeddedResource Update="Language Ressources\ApplyPPFTranslation.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ApplyPPFTranslation.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.ApplyPPF.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Include="Language Ressources\ApplyPPFTranslation.resx">
+    <EmbeddedResource Update="Language Ressources\ApplyPPFTranslation.resx">
       <CustomToolNamespace>SM64_ROM_Manager.ApplyPPF.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ApplyPPFTranslation.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <CustomToolNamespace>SM64_ROM_Manager.ApplyPPF.My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
@@ -174,7 +140,6 @@
       <CustomToolNamespace>SM64_ROM_Manager.ApplyPPF.My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_pills.ico" />
@@ -182,18 +147,13 @@
     <None Include="Resources\icons8_folder_16px.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj">
-      <Project>{e23753fa-c065-0a5f-304e-b35c0255724c}</Project>
-      <Name>SM64 ROM Manager.Publics</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj">
-      <Project>{24562e87-ba35-0cf9-13dc-be9f85e735bb}</Project>
-      <Name>SM64 ROM Manager.SettingsManager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj">
-      <Project>{e29a037e-451d-05d8-12d2-fc9f72bd60ac}</Project>
-      <Name>SM64Lib</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj" />
+    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Remove="obj\RelMono\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+  </ItemGroup>
 </Project>
