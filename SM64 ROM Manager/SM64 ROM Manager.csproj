@@ -87,7 +87,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
@@ -1036,9 +1036,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\app.manifest">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.cs</LastGenOutput>
@@ -1226,5 +1223,10 @@
     <Compile Remove="RomManager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.de.Designer.cs" />
     <Compile Remove="RomManager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.Designer.cs" />
     <Compile Remove="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>
