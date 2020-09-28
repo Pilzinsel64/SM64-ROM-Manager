@@ -7,7 +7,8 @@
       "Type": "TweakScript",
       "Description": "Patches all requied 2D Camera codes.",
       "References": [],
-      "ID": null
+      "ID": "414A6D3108A5D542F57F4369B2CAF335",
+      "AllowRevert": false
     },
     {
       "Name": "Remove 2D Camera",
@@ -15,15 +16,16 @@
       "Type": "TweakScript",
       "Description": "Removes all 2D camera codes.",
       "References": [],
-      "ID": null
+      "ID": "68F12C6DAF2CBB68D78AED53A05A6E61",
+      "AllowRevert": false
     }
   ],
   "Version": "1.0.0.0",
   "MinVersion": "1.0.0.0",
-  "MaxVersion": "0.0.0.0",
+  "MaxVersion": "1.10.9999.0",
   "Description": "Patch/Remove codes for 2D Camera",
   "EmbeddedFiles": {
     "CompressedFiles": {}
   },
-  "ID": null
+  "ID": "3782B452F9F6B24E72D5EF6C3E6A3B9C"
 }
