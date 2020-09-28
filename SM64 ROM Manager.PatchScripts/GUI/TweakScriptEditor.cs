@@ -13,6 +13,7 @@ using global::SM64Lib;
 using System.Threading.Tasks;
 using SM64Lib.Patching;
 using Pilz.IO;
+using SM64_ROM_Manager.PatchScripts.LangRes;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -176,7 +177,7 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             var fileName = Path.GetFileName(filePath);
 
-            if (!filesContainer.HasFile(fileName) || MessageBoxEx.Show(this, "The file you are adding does already exist. If you continue the existing embedded file gets overwritten. Do you want to continue?", "Overwrite embedded file", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (!filesContainer.HasFile(fileName) || MessageBoxEx.Show(this, TweaksGUILangRes.MsgBox_EmbeddedFileAlreadyExists, TweaksGUILangRes.MsgBox_EmbeddedFileAlreadyExists_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (await filesContainer.AddFileAsync(fileName, filePath))
                     LoadEmbeddedFiles();
@@ -388,17 +389,17 @@ End Module
         {
             var mgr = new PatchingManager();
             var res = mgr.CompileScript(tempScript, Publics.General.GetAdditionalReferencedAssemblied());
-            string msg = "";
+            string msg = string.Empty;
             eTaskDialogIcon icon;
             string title;
             if (res.Errors.HasErrors)
             {
-                title = "Script contains errors";
+                title = TweaksGUILangRes.MsgBox_CompilerResult_ScriptContainsError_Title;
                 icon = eTaskDialogIcon.Delete;
             }
             else
             {
-                title = "Script is OK";
+                title = TweaksGUILangRes.MsgBox_CompilerResult_ScriptIsOK_Title;
                 if (res.Errors.HasWarnings)
                 {
                     icon = eTaskDialogIcon.Exclamation;
@@ -418,19 +419,19 @@ End Module
 
                 if (er.IsWarning)
                 {
-                    msg += "WARNING";
+                    msg += TweaksGUILangRes.Text_WARNING;
                 }
                 else
                 {
-                    msg += "ERROR";
+                    msg += TweaksGUILangRes.MsgBox_ErrorWhileExecutingScript;
                 }
 
-                msg += " Code: " + er.ErrorNumber;
-                msg += " Line: " + Conversions.ToString(er.Line);
+                msg += $" {TweaksGUILangRes.Text_Code}: " + er.ErrorNumber;
+                msg += $" {TweaksGUILangRes.Text_Line}: " + Conversions.ToString(er.Line);
                 msg += Constants.vbNewLine + er.ErrorText;
             }
 
-            TaskDialog.Show("Compiler Result", icon, title, msg, eTaskDialogButton.Ok);
+            TaskDialog.Show(TweaksGUILangRes.MsgBox_CompilerResult_Header, icon, title, msg, eTaskDialogButton.Ok);
         }
 
         private void RunScript()
@@ -497,7 +498,7 @@ End Module
             {
                 if (NeedToSave)
                 {
-                    var switchExpr = MessageBoxEx.Show("Do you want to save your changes?", "Save changes?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    var switchExpr = MessageBoxEx.Show(TweaksGUILangRes.MsgBox_SaveChanges, TweaksGUILangRes.MsgBox_SaveChanges_Title, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     switch (switchExpr)
                     {
                         case DialogResult.Yes:

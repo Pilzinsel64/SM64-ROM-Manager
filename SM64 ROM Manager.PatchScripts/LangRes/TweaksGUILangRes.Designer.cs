@@ -106,6 +106,51 @@ namespace SM64_ROM_Manager.PatchScripts.LangRes {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Compiler Result ähnelt.
+        /// </summary>
+        internal static string MsgBox_CompilerResult_Header {
+            get {
+                return ResourceManager.GetString("MsgBox_CompilerResult_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Script contains errors ähnelt.
+        /// </summary>
+        internal static string MsgBox_CompilerResult_ScriptContainsError_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_CompilerResult_ScriptContainsError_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Script is OK ähnelt.
+        /// </summary>
+        internal static string MsgBox_CompilerResult_ScriptIsOK_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_CompilerResult_ScriptIsOK_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The file you are adding does already exist. If you continue the existing embedded file gets overwritten. Do you want to continue? ähnelt.
+        /// </summary>
+        internal static string MsgBox_EmbeddedFileAlreadyExists {
+            get {
+                return ResourceManager.GetString("MsgBox_EmbeddedFileAlreadyExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Overwrite embedded file ähnelt.
+        /// </summary>
+        internal static string MsgBox_EmbeddedFileAlreadyExists_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_EmbeddedFileAlreadyExists_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Error while executing the script. It probably contains errors. ähnelt.
         /// </summary>
         internal static string MsgBox_ErrorWhileExecutingScript {
@@ -169,6 +214,24 @@ namespace SM64_ROM_Manager.PatchScripts.LangRes {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Do you want to save your changes? ähnelt.
+        /// </summary>
+        internal static string MsgBox_SaveChanges {
+            get {
+                return ResourceManager.GetString("MsgBox_SaveChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Save changes? ähnelt.
+        /// </summary>
+        internal static string MsgBox_SaveChanges_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_SaveChanges_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Tweaks not updated (completly). There happened an error! ähnelt.
         /// </summary>
         internal static string MsgBox_TweaksNotUpdated {
@@ -210,6 +273,42 @@ namespace SM64_ROM_Manager.PatchScripts.LangRes {
         internal static string Notify_PatchedSuccessfully {
             get {
                 return ResourceManager.GetString("Notify_PatchedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Code ähnelt.
+        /// </summary>
+        internal static string Text_Code {
+            get {
+                return ResourceManager.GetString("Text_Code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die ERROR ähnelt.
+        /// </summary>
+        internal static string Text_ERROR {
+            get {
+                return ResourceManager.GetString("Text_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Line ähnelt.
+        /// </summary>
+        internal static string Text_Line {
+            get {
+                return ResourceManager.GetString("Text_Line", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die WARNING ähnelt.
+        /// </summary>
+        internal static string Text_WARNING {
+            get {
+                return ResourceManager.GetString("Text_WARNING", resourceCulture);
             }
         }
         

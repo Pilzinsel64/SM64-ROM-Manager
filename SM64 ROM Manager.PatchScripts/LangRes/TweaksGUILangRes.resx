@@ -132,6 +132,21 @@
   <data name="MsgBox_AskForBackupTweak_Title" xml:space="preserve">
     <value>Create undo patch?</value>
   </data>
+  <data name="MsgBox_CompilerResult_Header" xml:space="preserve">
+    <value>Compiler Result</value>
+  </data>
+  <data name="MsgBox_CompilerResult_ScriptContainsError_Title" xml:space="preserve">
+    <value>Script contains errors</value>
+  </data>
+  <data name="MsgBox_CompilerResult_ScriptIsOK_Title" xml:space="preserve">
+    <value>Script is OK</value>
+  </data>
+  <data name="MsgBox_EmbeddedFileAlreadyExists" xml:space="preserve">
+    <value>The file you are adding does already exist. If you continue the existing embedded file gets overwritten. Do you want to continue?</value>
+  </data>
+  <data name="MsgBox_EmbeddedFileAlreadyExists_Title" xml:space="preserve">
+    <value>Overwrite embedded file</value>
+  </data>
   <data name="MsgBox_ErrorWhileExecutingScript" xml:space="preserve">
     <value>Error while executing the script. It probably contains errors.</value>
   </data>
@@ -153,6 +168,12 @@
   <data name="MsgBox_RevertScript_Title" xml:space="preserve">
     <value>Revert changes</value>
   </data>
+  <data name="MsgBox_SaveChanges" xml:space="preserve">
+    <value>Do you want to save your changes?</value>
+  </data>
+  <data name="MsgBox_SaveChanges_Title" xml:space="preserve">
+    <value>Save changes?</value>
+  </data>
   <data name="MsgBox_TweaksNotUpdated" xml:space="preserve">
     <value>Tweaks not updated (completly). There happened an error!</value>
   </data>
@@ -167,6 +188,18 @@
   </data>
   <data name="Notify_PatchedSuccessfully" xml:space="preserve">
     <value>Patched successfully</value>
+  </data>
+  <data name="Text_Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Text_ERROR" xml:space="preserve">
+    <value>ERROR</value>
+  </data>
+  <data name="Text_Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="Text_WARNING" xml:space="preserve">
+    <value>WARNING</value>
   </data>
   <data name="UntitledScript" xml:space="preserve">
     <value>Untitled</value>
