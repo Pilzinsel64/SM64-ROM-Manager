@@ -146,7 +146,7 @@ namespace SM64_ROM_Manager.PatchScripts
             foreach (string f in Directory.GetFiles(pathTweaks, "*.xml", SearchOption.AllDirectories).Concat(Directory.GetFiles(pathTweaks, "*.json", SearchOption.AllDirectories)))
             {
                 var p = mgr.Read(f);
-                if (p.MinVersion <= appVersion && (p.MaxVersion == nullVersion || p.MaxVersion >= appVersion))
+                if (p.MinVersion <= appVersion && (p.MaxVersion == nullVersion || p.MaxVersion >= appVersion) || General.IsDebugging)
                     myPatchs.Add(p);
             }
             
