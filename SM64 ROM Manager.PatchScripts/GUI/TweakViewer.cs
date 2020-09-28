@@ -128,7 +128,7 @@ namespace SM64_ROM_Manager.PatchScripts
                 var mgr = new PatchingManager();
                 foreach (var patch in patches)
                     mgr.Save(patch, Path.GetDirectoryName(patch.FileName));
-                General.ShowToastnotification(this, "All tweaks converted successfully!", eToastGlowColor.Green);
+                General.ShowToastnotification(this, TweaksGUILangRes.Notify_AllTweaksConvertedSuccessfully, eToastGlowColor.Green);
                 CheckForLegacyTweaks();
             }
         }
@@ -205,7 +205,7 @@ namespace SM64_ROM_Manager.PatchScripts
             }
             else
             {
-                LabelX_Description.Text = "(No description available.)";
+                LabelX_Description.Text = TweaksGUILangRes.Label_NoDescriptionAvailable;
                 SuperTooltip1.SetSuperTooltip(LabelX_Description, null);
             }
 
@@ -442,7 +442,7 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             ButtonItem btnItem = (ButtonItem)ItemListBox1.SelectedItem;
             PatchProfile patch = (PatchProfile)btnItem?.Tag;
-            if (patch is object && MessageBoxEx.Show(this, "Are you sure to remove this tweak? You will not be able to recover it.", "Remove Tweak", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (patch is object && MessageBoxEx.Show(this, TweaksGUILangRes.MsgBox_RemoveTweak, TweaksGUILangRes.MsgBox_RemoveTweak_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Flyout1.Close();
                 ItemListBox1.Items.Remove(btnItem);
@@ -456,21 +456,21 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             var frm = new TweakProfileEditor()
             {
-                Titel = "New Profile",
+                Titel = TweaksGUILangRes.DefaultTweakName,
                 Description = string.Empty,
                 Version = new Version("1.0.0.0"),
                 MinAppVersion = new Version(Application.ProductVersion)
             };
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                AddNewPatch(frm.Titel, frm.Description, frm.Version, frm.MinAppVersion, frm.MaxAppVersion, "New Script");
+                AddNewPatch(frm.Titel, frm.Description, frm.Version, frm.MinAppVersion, frm.MaxAppVersion, TweaksGUILangRes.DefaultScriptName);
             }
         }
 
         private void ButtonX1_Click(object sender, EventArgs e)
         {
             var patch = GetSelectedPatch();
-            AddNewScript("New Script", patch);
+            AddNewScript(TweaksGUILangRes.DefaultScriptName, patch);
             SaveSinglePatch(patch);
         }
 
@@ -505,7 +505,7 @@ namespace SM64_ROM_Manager.PatchScripts
                     }
                     else
                     {
-                        ci.Text = "Untitled";
+                        ci.Text = TweaksGUILangRes.UntitledScript;
                     }
                 }
 
@@ -531,7 +531,7 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             var res = false;
 
-            if (script.AllowRevert && MessageBoxEx.Show(owner, "This tweak has the ability to create a patch to revert this script after it has patched. Do you want to create such an undo patch?", "Create undo patch?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (script.AllowRevert && MessageBoxEx.Show(owner, TweaksGUILangRes.MsgBox_AskForBackupTweak, TweaksGUILangRes.MsgBox_AskForBackupTweak_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 res = true;
 
             return res;
@@ -561,12 +561,12 @@ namespace SM64_ROM_Manager.PatchScripts
                     General.GetAdditionalReferencedAssemblied(),
                     IsBackupEnabled(owner, script, profile));
                 TweakAfterApply?.Invoke();
-                General.ShowToastnotification(owner, "Patched successfully", eToastGlowColor.Green);
+                General.ShowToastnotification(owner, TweaksGUILangRes.Notify_PatchedSuccessfully, eToastGlowColor.Green);
             }
             catch (Exception)
             {
                 TweakFailedApply?.Invoke();
-                MessageBoxEx.Show(owner, "Error while executing the script. It probably contains errors.", "Script Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxEx.Show(owner, TweaksGUILangRes.MsgBox_ErrorWhileExecutingScript, TweaksGUILangRes.MsgBox_ErrorWhileExecutingScript_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -666,11 +666,11 @@ namespace SM64_ROM_Manager.PatchScripts
             if (res)
             {
                 LoadTweaks();
-                MessageBoxEx.Show(this, "Tweaks updated successfully!", "Tweak Updates", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBoxEx.Show(this, TweaksGUILangRes.MsgBox_TweaksUpdatedSuccessfully, TweaksGUILangRes.MsgBox_TweaksUpdates_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBoxEx.Show(this, "Tweaks not updated (completly). There happened an error!", "Tweak Updates", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxEx.Show(this, TweaksGUILangRes.MsgBox_TweaksNotUpdated, TweaksGUILangRes.MsgBox_TweaksUpdates_Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

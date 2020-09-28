@@ -61,6 +61,87 @@ namespace SM64_ROM_Manager.PatchScripts.LangRes {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die New Script ähnelt.
+        /// </summary>
+        internal static string DefaultScriptName {
+            get {
+                return ResourceManager.GetString("DefaultScriptName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die New Tweak ähnelt.
+        /// </summary>
+        internal static string DefaultTweakName {
+            get {
+                return ResourceManager.GetString("DefaultTweakName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die No description available. ähnelt.
+        /// </summary>
+        internal static string Label_NoDescriptionAvailable {
+            get {
+                return ResourceManager.GetString("Label_NoDescriptionAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This tweak has the ability to create a patch to revert this script after it has patched. Do you want to create such an undo patch? ähnelt.
+        /// </summary>
+        internal static string MsgBox_AskForBackupTweak {
+            get {
+                return ResourceManager.GetString("MsgBox_AskForBackupTweak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Create undo patch? ähnelt.
+        /// </summary>
+        internal static string MsgBox_AskForBackupTweak_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_AskForBackupTweak_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Error while executing the script. It probably contains errors. ähnelt.
+        /// </summary>
+        internal static string MsgBox_ErrorWhileExecutingScript {
+            get {
+                return ResourceManager.GetString("MsgBox_ErrorWhileExecutingScript", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Script Error ähnelt.
+        /// </summary>
+        internal static string MsgBox_ErrorWhileExecutingScript_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_ErrorWhileExecutingScript_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Are you sure to remove this tweak? You will not be able to recover it. ähnelt.
+        /// </summary>
+        internal static string MsgBox_RemoveTweak {
+            get {
+                return ResourceManager.GetString("MsgBox_RemoveTweak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Remove Tweak ähnelt.
+        /// </summary>
+        internal static string MsgBox_RemoveTweak_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_RemoveTweak_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Are you sure to revert the changes of the last execution of this script? This can&apos;t be undone. ähnelt.
         /// </summary>
         internal static string MsgBox_RevertScript {
@@ -84,6 +165,60 @@ namespace SM64_ROM_Manager.PatchScripts.LangRes {
         internal static string MsgBox_RevertScriptBeforePatching {
             get {
                 return ResourceManager.GetString("MsgBox_RevertScriptBeforePatching", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tweaks not updated (completly). There happened an error! ähnelt.
+        /// </summary>
+        internal static string MsgBox_TweaksNotUpdated {
+            get {
+                return ResourceManager.GetString("MsgBox_TweaksNotUpdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tweaks updated successfully! ähnelt.
+        /// </summary>
+        internal static string MsgBox_TweaksUpdatedSuccessfully {
+            get {
+                return ResourceManager.GetString("MsgBox_TweaksUpdatedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Tweak Updates ähnelt.
+        /// </summary>
+        internal static string MsgBox_TweaksUpdates_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_TweaksUpdates_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die All tweaks converted successfully! ähnelt.
+        /// </summary>
+        internal static string Notify_AllTweaksConvertedSuccessfully {
+            get {
+                return ResourceManager.GetString("Notify_AllTweaksConvertedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Patched successfully ähnelt.
+        /// </summary>
+        internal static string Notify_PatchedSuccessfully {
+            get {
+                return ResourceManager.GetString("Notify_PatchedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Untitled ähnelt.
+        /// </summary>
+        internal static string UntitledScript {
+            get {
+                return ResourceManager.GetString("UntitledScript", resourceCulture);
             }
         }
     }

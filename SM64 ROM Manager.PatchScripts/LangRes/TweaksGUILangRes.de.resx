@@ -117,6 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DefaultScriptName" xml:space="preserve">
+    <value>Neues Script</value>
+  </data>
+  <data name="DefaultTweakName" xml:space="preserve">
+    <value>Neuer Tweak</value>
+  </data>
+  <data name="Label_NoDescriptionAvailable" xml:space="preserve">
+    <value>Keine Beschreibung verfügbar.</value>
+  </data>
+  <data name="MsgBox_AskForBackupTweak" xml:space="preserve">
+    <value>Dieses Script hat die Möglichkeit einen Rücksetzpatch zu erstellen, um später die Änderungen des Scriptes rückgängig zu machen. Soll ein solcher Rücksetzpatch erstellt werden?</value>
+  </data>
+  <data name="MsgBox_AskForBackupTweak_Title" xml:space="preserve">
+    <value>Rücksetzpatch erstellen?</value>
+  </data>
+  <data name="MsgBox_ErrorWhileExecutingScript" xml:space="preserve">
+    <value>Ein Fehler ist während der Ausführung des Scriptes aufgetreten. Möglicherweise beinhaltet es Fehler.</value>
+  </data>
+  <data name="MsgBox_ErrorWhileExecutingScript_Title" xml:space="preserve">
+    <value>Script-Error</value>
+  </data>
+  <data name="MsgBox_RemoveTweak" xml:space="preserve">
+    <value>Are you sure to remove this tweak? You will not be able to recover it.</value>
+  </data>
+  <data name="MsgBox_RemoveTweak_Title" xml:space="preserve">
+    <value>Remove Tweak</value>
+  </data>
   <data name="MsgBox_RevertScript" xml:space="preserve">
     <value>Sind Sie sicher, die Änderungen der letzten Ausführung dieses Skripts zurückzusetzen? Dieser Schritt kann nicht rückgängig gemacht werden.</value>
   </data>
@@ -125,5 +152,23 @@
   </data>
   <data name="MsgBox_RevertScript_Title" xml:space="preserve">
     <value>Änderungen rückgängig machen.</value>
+  </data>
+  <data name="MsgBox_TweaksNotUpdated" xml:space="preserve">
+    <value>Tweaks wurden nicht (komplett) aktuallisiert. Es ist ein Fehler aufgetreten.</value>
+  </data>
+  <data name="MsgBox_TweaksUpdatedSuccessfully" xml:space="preserve">
+    <value>Tweaks wurden erfolgreich aktuallisiert.</value>
+  </data>
+  <data name="MsgBox_TweaksUpdates_Title" xml:space="preserve">
+    <value>Tweak-Aktuallisierungen</value>
+  </data>
+  <data name="Notify_AllTweaksConvertedSuccessfully" xml:space="preserve">
+    <value>Alle Tweaks erfolgreich konvertiert.</value>
+  </data>
+  <data name="Notify_PatchedSuccessfully" xml:space="preserve">
+    <value>Script erfolgreich ausgeführt!</value>
+  </data>
+  <data name="UntitledScript" xml:space="preserve">
+    <value>Untitled</value>
   </data>
 </root>

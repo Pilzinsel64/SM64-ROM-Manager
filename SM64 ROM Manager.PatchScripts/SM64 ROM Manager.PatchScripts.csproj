@@ -107,6 +107,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReflectionSymbols.resx</DependentUpon>
     </Compile>
+    <Compile Update="LangRes\TweaksGUILangRes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TweaksGUILangRes.resx</DependentUpon>
+    </Compile>
     <Compile Update="My Project\Application.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -144,11 +149,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyIcons.resx</DependentUpon>
     </Compile>
-    <Compile Update="LangRes\TweaksGUILangRes.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TweaksGUILangRes.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="GUI\ObjectCatalog.resx">
@@ -164,6 +164,10 @@
     </EmbeddedResource>
     <EmbeddedResource Update="GUI\TweakViewer.de.resx">
       <DependentUpon>TweakViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LangRes\TweaksGUILangRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TweaksGUILangRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
