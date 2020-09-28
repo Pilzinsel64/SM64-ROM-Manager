@@ -2219,6 +2219,11 @@ namespace SM64_ROM_Manager
             return (filePath, compression, mode);
         }
 
+        public bool CanUse2DCamera()
+        {
+            return RomManager.RomConfig.PatchingConfig.Patched2DCamera;
+        }
+
         // M u s i c   M a n a g e r
 
         private (string fileName, int filterIndex, bool hasExitedWithOK) OpenFileDialog_SelectMusicSequenceFile()

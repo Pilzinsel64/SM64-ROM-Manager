@@ -359,6 +359,24 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The 2D Camera codes has not been patched or are outdated. Please goto Tweaks and enable the 2D Camera using the tweak. ähnelt.
+        /// </summary>
+        public static string MsgBox_No2DCameraPatched {
+            get {
+                return ResourceManager.GetString("MsgBox_No2DCameraPatched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die 2D Camera functionallity not activated ähnelt.
+        /// </summary>
+        public static string MsgBox_No2DCameraPatched_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_No2DCameraPatched_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The ROM will be prepared for use with SM64 ROM Manager.&lt;br/&gt;&lt;br/&gt;Please Note:&lt;br/&gt;While prepairing your ROM, an additional file will be created. It will be named like your ROM but with a &quot;.config&quot; extension.&lt;br/&gt;This file contains many important settings and other stuff to provide some features in the SM64 ROM Manager.&lt;br/&gt;If you delete this .config file, you might get &lt;u&gt;some errors or unwanted behaviors&lt;/u&gt; in ROM Manager.&lt;br/&gt;So, if &lt;u&gt;you rename your ROM file&lt;/u&gt;, &lt;u&gt;always rename the config file&lt;/u&gt; to [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         public static string MsgBox_PrepaireRom {

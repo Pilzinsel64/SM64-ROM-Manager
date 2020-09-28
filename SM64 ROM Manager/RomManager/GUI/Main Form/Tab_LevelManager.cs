@@ -1185,7 +1185,13 @@ namespace SM64_ROM_Manager
         private void ComboBoxEx_LM_AreaBG_SelectedIndexChanged(object sender, EventArgs e) => ComboBoxEx_LM_AreaBG_SelectedIndexChanged();
         private void LM_SaveAreaBackgorund(object sender, EventArgs e) => LM_SaveAreaBackgorund();
         private void LM_LoadCustomBackground(object sender, EventArgs e) => LM_LoadCustomBackground();
-        private void Controls_HandleToSaveAreaSettings(object sender, EventArgs e) => Controls_HandleToSaveAreaSettings();
+        private void Controls_HandleToSaveAreaSettings(object sender, EventArgs e)
+        {
+            Controls_HandleToSaveAreaSettings();
+
+            if (sender == CheckBoxX_LM_Enable2DCamera && !Controller.CanUse2DCamera())
+                MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_No2DCameraPatched, Form_Main_Resources.MsgBox_No2DCameraPatched_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
         private void LM_OpenAreaEditor(object sender, EventArgs e) => LM_OpenAreaEditor();
 
         private void ButtonX_ManageLocalObjects_Click(object sender, EventArgs e)
