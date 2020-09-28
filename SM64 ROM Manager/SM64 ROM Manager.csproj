@@ -295,6 +295,7 @@
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.cs">
       <SubType>UserControl</SubType>
+      <SubType>Designer</SubType>
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.Designer.cs">
       <DependentUpon>TextProfileEditor.cs</DependentUpon>
@@ -358,6 +359,7 @@
     </Compile>
     <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.cs">
       <SubType>UserControl</SubType>
+      <SubType>Designer</SubType>
     </Compile>
     <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.Designer.cs">
       <DependentUpon>CustomObjectImportPropsEditor.cs</DependentUpon>
@@ -409,24 +411,28 @@
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Tab_General.cs">
       <SubType>UserControl</SubType>
+      <SubType>Designer</SubType>
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Tab_LevelManager.Designer.cs">
       <DependentUpon>Tab_LevelManager.cs</DependentUpon>
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Tab_LevelManager.cs">
       <SubType>UserControl</SubType>
+      <SubType>Designer</SubType>
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Tab_MusicManager.Designer.cs">
       <DependentUpon>Tab_MusicManager.cs</DependentUpon>
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Tab_MusicManager.cs">
       <SubType>UserControl</SubType>
+      <SubType>Designer</SubType>
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Tab_TextManager.Designer.cs">
       <DependentUpon>Tab_TextManager.cs</DependentUpon>
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Tab_TextManager.cs">
       <SubType>UserControl</SubType>
+      <SubType>Designer</SubType>
     </Compile>
     <Compile Update="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.Designer.cs">
       <DependentUpon>ScrollTexEditor.cs</DependentUpon>
