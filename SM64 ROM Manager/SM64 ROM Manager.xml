@@ -584,7 +584,7 @@
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die 0 ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die 2 ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.MoveCameraCross">
@@ -1205,6 +1205,16 @@
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_MaxSequenceCountReached_Title">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die Maximum reached ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_No2DCameraPatched">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The 2D Camera codes has not been patched or are outdated. Please goto Tweaks and enable the 2D Camera using the tweak. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_No2DCameraPatched_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die 2D Camera functionallity not activated ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_PrepaireRom">

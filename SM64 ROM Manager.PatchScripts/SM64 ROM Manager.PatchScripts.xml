@@ -107,6 +107,76 @@
               Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.DefaultScriptName">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die New Script ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.DefaultTweakName">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die New Tweak ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Label_NoDescriptionAvailable">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die No description available. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_AskForBackupTweak">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die This tweak has the ability to create a patch to revert this script after it has patched. Do you want to create such an undo patch? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_AskForBackupTweak_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Create undo patch? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_CompilerResult_Header">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Compiler Result ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_CompilerResult_ScriptContainsError_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Script contains errors ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_CompilerResult_ScriptIsOK_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Script is OK ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_EmbeddedFileAlreadyExists">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die The file you are adding does already exist. If you continue the existing embedded file gets overwritten. Do you want to continue? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_EmbeddedFileAlreadyExists_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Overwrite embedded file ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_ErrorWhileExecutingScript">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Error while executing the script. It probably contains errors. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_ErrorWhileExecutingScript_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Script Error ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RemoveTweak">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Are you sure to remove this tweak? You will not be able to recover it. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RemoveTweak_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Remove Tweak ähnelt.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RevertScript">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die Are you sure to revert the changes of the last execution of this script? This can&apos;t be undone. ähnelt.
@@ -120,6 +190,66 @@
         <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_RevertScriptBeforePatching">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die You already have patched this script a while ago. Do you want to revert the changes of the last execution of this script before re-patching it? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_SaveChanges">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Do you want to save your changes? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_SaveChanges_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Save changes? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_TweaksNotUpdated">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Tweaks not updated (completly). There happened an error! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_TweaksUpdatedSuccessfully">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Tweaks updated successfully! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.MsgBox_TweaksUpdates_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Tweak Updates ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Notify_AllTweaksConvertedSuccessfully">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die All tweaks converted successfully! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Notify_PatchedSuccessfully">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Patched successfully ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Text_Code">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Code ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Text_ERROR">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die ERROR ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Text_Line">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Line ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.Text_WARNING">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die WARNING ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.LangRes.TweaksGUILangRes.UntitledScript">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Untitled ähnelt.
             </summary>
         </member>
         <member name="T:SM64_ROM_Manager.PatchScripts.MyIcons">
