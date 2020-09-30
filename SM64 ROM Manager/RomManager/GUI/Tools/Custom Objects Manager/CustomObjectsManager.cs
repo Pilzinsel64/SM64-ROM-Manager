@@ -289,8 +289,6 @@ namespace SM64_ROM_Manager
         {
             if (imports.Any())
             {
-                var enableImport = true;
-
                 foreach (var kvpImport in imports)
                 {
                     foreach (var kvpMdl in kvpImport.Value.Data.CustomModels)
@@ -301,22 +299,24 @@ namespace SM64_ROM_Manager
 
                 var frm = new CustomObjectImportDialog(rommgr, imports);
                 if (frm.ShowDialog() == DialogResult.OK)
-                    enableImport = true;
-
-                if (!rommgr.GlobalBehaviorBank.Config.Enabled)
                 {
-                    if (MessageBoxEx.Show(this, MsgBox_ObjectsNeedGlobalBehavBank, MsgBox_ObjectsNeedGlobalBehavBank_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
-                        rommgr.LoadGlobalBehaviorBank(true);
-                    else
-                        enableImport = false;
-                }
+                    var enableImport = true;
 
-                if (enableImport)
-                {
-                    foreach (var import in imports.Values)
-                        customObjectCollection.Import(import);
-                    rommgr.CalculateGlobalBehaviorBankAddresses();
-                    LoadObjects();
+                    if (!rommgr.GlobalBehaviorBank.Config.Enabled)
+                    {
+                        if (MessageBoxEx.Show(this, MsgBox_ObjectsNeedGlobalBehavBank, MsgBox_ObjectsNeedGlobalBehavBank_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            rommgr.LoadGlobalBehaviorBank(true);
+                        else
+                            enableImport = false;
+                    }
+
+                    if (enableImport)
+                    {
+                        foreach (var import in imports.Values)
+                            customObjectCollection.Import(import);
+                        rommgr.CalculateGlobalBehaviorBankAddresses();
+                        LoadObjects();
+                    }
                 }
             }
         }
