@@ -510,6 +510,7 @@ namespace SM64_ROM_Manager.PatchScripts
             var script = GetSelectedScript();
             if (script is object)
             {
+                Flyout1.Close();
                 PatchScript(this, script, profile, rommgr);
             }
         }
