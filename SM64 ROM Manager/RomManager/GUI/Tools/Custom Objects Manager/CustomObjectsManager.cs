@@ -289,7 +289,7 @@ namespace SM64_ROM_Manager
         {
             if (imports.Any())
             {
-                var enableImport = false;
+                var enableImport = true;
 
                 foreach (var kvpImport in imports)
                 {
