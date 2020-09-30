@@ -198,6 +198,7 @@ namespace SM64_ROM_Manager
                             case false:
                                 {
                                     newLvl = lvl;
+                                    newLvl.RomManager = rommgr;
                                     newLvl.LevelID = levelinfo.ID;
                                     break;
                                 }
