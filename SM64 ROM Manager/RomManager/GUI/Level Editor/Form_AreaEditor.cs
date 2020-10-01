@@ -623,6 +623,8 @@ namespace SM64_ROM_Manager.LevelEditor
             ObjectDisplaylistScriptDumps.ForEach((m) => m.Value.ForEach((n) => n.Close()));
             AreaDisplaylistScriptDumps.ForEach((m) => m.Value.ForEach((n) => n.Close()));
 
+            Settings.WindowSettings.LevelEditor.SaveState(this);
+
             hasClosed = true;
         }
 
