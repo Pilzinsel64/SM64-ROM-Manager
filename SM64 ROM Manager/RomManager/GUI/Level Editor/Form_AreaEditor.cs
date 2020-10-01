@@ -358,7 +358,8 @@ namespace SM64_ROM_Manager.LevelEditor
             RibbonControl1.Expanded = Settings.AreaEditor.RibbonControlExpanded;
 
             // Setup Form Settings
-            WindowState = Settings.AreaEditor.DefaultWindowMode;
+            //WindowState = Settings.AreaEditor.DefaultWindowMode;
+            Settings.WindowSettings.LevelEditor.ApplyState(this);
 
             // Setup some Styles
             if (Settings.StyleManager.AlwaysKeepBlueColors && !Settings.StyleManager.IsDarkTheme())

@@ -13,6 +13,7 @@ namespace SM64_ROM_Manager.SettingsManager
         public JobsToDoStruc JobsToDo { get; set; }
         public TextManagerSettingsStruc TextManager { get; set; }
         public NetworkSettingsStruc Network { get; set; }
+        public WindowSettingsStruc WindowSettings { get; set; }
 
         public override void ResetValues()
         {
@@ -43,6 +44,9 @@ namespace SM64_ROM_Manager.SettingsManager
             if (Network is null)
                 Network = new NetworkSettingsStruc();
             Network.ResetValues();
+            if (WindowSettings is null)
+                WindowSettings = new WindowSettingsStruc();
+            WindowSettings.ResetValues();
         }
     }
 }
