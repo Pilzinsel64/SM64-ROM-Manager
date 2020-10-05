@@ -678,6 +678,11 @@
     <Compile Update="RomManager\GUI\Tools\Form_SM64TextConverter.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="WebLinks.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>WebLinks.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="MyIcons.resx">
@@ -1044,6 +1049,10 @@
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TextProfileEditorLangRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="WebLinks.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WebLinks.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

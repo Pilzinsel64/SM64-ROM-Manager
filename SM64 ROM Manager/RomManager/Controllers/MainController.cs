@@ -1076,27 +1076,23 @@ namespace SM64_ROM_Manager
 
         public void OpenThankYouPage()
         {
-            const string webAddress = "https://pilzinsel64.com/thank-you/";
-            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
+            Publics.Publics.OpenBrowser(new Uri(WebLinks.ThankYouPage), false, new Size(1200, 800));
         }
 
         public void OpenCommunityHelpDocument()
         {
-            const string webAddress = "https://docs.google.com/document/d/1pSYR91UiMVKnP3PyvJiCdwRF5wNS_nZzMe-r2WPQUJk";
-            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
+            Publics.Publics.OpenBrowser(new Uri(WebLinks.CommunityHelpDocument), false, new Size(1200, 800));
         }
 
         public void OpenQuestionAndAnswersDocument()
         {
-            const string webAddress = "https://cloud.pilzinsel64.com/apps/onlyoffice/s/nZ3J2YBwSQgdfk5";
-            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
+            Publics.Publics.OpenBrowser(new Uri(WebLinks.QuestionAndAnswersDocument), false, new Size(1200, 800));
         }
 
         public void OpenPublicHelpChat()
         {
-            const string webAddress = "https://cloud.pilzinsel64.com/call/q4cuy7fx";
             MessageBoxEx.Show(mainForm, Form_Main_Resources.MsgBox_OpenPublicHelpChat, Form_Main_Resources.MsgBox_OpenPublicHelpChat_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
+            Publics.Publics.OpenBrowser(new Uri(WebLinks.PublicHelpChat), false, new Size(1200, 800));
         }
 
         private void RomWatcher_Changed(object sender, FileSystemEventArgs e)
