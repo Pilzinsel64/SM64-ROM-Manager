@@ -107,7 +107,7 @@ namespace SM64_ROM_Manager
 
         // C o n s t a n t s
 
-        public const string UPDATE_URL = "https://pilzinsel64.com/pilzcloud/s/sm64rm-allupdatepackages/download?path=%2F&files=CurrentUpdates.json";
+        public const string UPDATE_URL = "https://cloud.pilzinsel64.com/s/sm64rm-allupdatepackages/download?path=%2F&files=CurrentUpdates.json";
 
         // F i e l d s
 
