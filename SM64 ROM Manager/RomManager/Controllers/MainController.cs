@@ -117,10 +117,6 @@ namespace SM64_ROM_Manager
         public event FinishedActionEventHAndler ImportedLevelArea;
         public event FinishedActionEventHAndler ImportedLevelAreaScript;
 
-        // C o n s t a n t s
-
-        public const string UPDATE_URL = "https://cloud.pilzinsel64.com/s/sm64rm-allupdatepackages/download?path=%2F&files=CurrentUpdates.json";
-
         // F i e l d s
 
         private readonly SM64_ROM_Manager.MainForm mainForm;
@@ -302,7 +298,7 @@ namespace SM64_ROM_Manager
             SM64Lib.Patching.PatchClass.ExitingExternalTool += PatchClass_ExitingExternalTool;
 
             var appVersion = new ApplicationVersion(new Version(Application.ProductVersion), Conversions.ToInteger(Resources.DevelopmentBuild), (Channels)Conversions.ToInteger(Resources.DevelopmentStage));
-            updateClient = new UpdateClient(UPDATE_URL, appVersion, Settings.Network.MinimumUpdateChannel)
+            updateClient = new UpdateClient(WebLinks.UpdateUrl, appVersion, Settings.Network.MinimumUpdateChannel)
             {
                 ApplicationName = Application.ProductName,
                 AutoCloseHostApplication = true,
@@ -396,7 +392,7 @@ namespace SM64_ROM_Manager
         private async Task<bool> CanAccessUpdateServer()
         {
             bool result = true;
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(UPDATE_URL);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(WebLinks.UpdateUrl);
             request.AllowAutoRedirect = false;
             request.Method = "HEAD";
             try
