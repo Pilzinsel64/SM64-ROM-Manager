@@ -750,7 +750,7 @@ namespace SM64_ROM_Manager
 
         private void ButtonItem_PublicHelpChat_Click(object sender, EventArgs e)
         {
-
+            Controller.OpenPublicHelpChat();
         }
     }
 }

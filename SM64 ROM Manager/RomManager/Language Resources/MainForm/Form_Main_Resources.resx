@@ -223,6 +223,12 @@
   <data name="MsgBox_No2DCameraPatched_Title" xml:space="preserve">
     <value>2D Camera functionallity not activated</value>
   </data>
+  <data name="MsgBox_OpenPublicHelpChat" xml:space="preserve">
+    <value>After the help chat has opened, please don't forget to change your default name "Guest" to a custom one, so the chat partner can identify you better and seperate from other users.</value>
+  </data>
+  <data name="MsgBox_OpenPublicHelpChat_Title" xml:space="preserve">
+    <value>Public help chat</value>
+  </data>
   <data name="MsgBox_PrepaireRom" xml:space="preserve">
     <value>The ROM will be prepared for use with SM64 ROM Manager.&lt;br/&gt;&lt;br/&gt;Please Note:&lt;br/&gt;While prepairing your ROM, an additional file will be created. It will be named like your ROM but with a ".config" extension.&lt;br/&gt;This file contains many important settings and other stuff to provide some features in the SM64 ROM Manager.&lt;br/&gt;If you delete this .config file, you might get &lt;u&gt;some errors or unwanted behaviors&lt;/u&gt; in ROM Manager.&lt;br/&gt;So, if &lt;u&gt;you rename your ROM file&lt;/u&gt;, &lt;u&gt;always rename the config file&lt;/u&gt; to match your ROM file name.&lt;br/&gt;If you &lt;u&gt;copy your ROM&lt;/u&gt; file, also &lt;u&gt;copy the config&lt;/u&gt; file and ensure the file name matches the copied ROM file.</value>
   </data>

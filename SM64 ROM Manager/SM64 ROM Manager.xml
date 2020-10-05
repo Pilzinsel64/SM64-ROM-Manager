@@ -60,6 +60,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_chat_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_checkmark_16px_1">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -215,6 +220,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_faq_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_filled_star_location_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -266,6 +276,11 @@
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_makeup_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_manual_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
@@ -425,6 +440,21 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_system_information_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_system_report_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_team_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_text_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -435,12 +465,22 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_translation_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_undo_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_upload_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_user_manual_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
@@ -1215,6 +1255,16 @@
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_No2DCameraPatched_Title">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die 2D Camera functionallity not activated ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_OpenPublicHelpChat">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die After the help chat has opened, please don&apos;t forget to change your default name &quot;Guest&quot; to a custom one, so the chat partner can identify you better and seperate from other users. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_OpenPublicHelpChat_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Public help chat ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_PrepaireRom">

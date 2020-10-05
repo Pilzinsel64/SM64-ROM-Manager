@@ -377,6 +377,24 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die After the help chat has opened, please don&apos;t forget to change your default name &quot;Guest&quot; to a custom one, so the chat partner can identify you better and seperate from other users. ähnelt.
+        /// </summary>
+        public static string MsgBox_OpenPublicHelpChat {
+            get {
+                return ResourceManager.GetString("MsgBox_OpenPublicHelpChat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Public help chat ähnelt.
+        /// </summary>
+        public static string MsgBox_OpenPublicHelpChat_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_OpenPublicHelpChat_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die The ROM will be prepared for use with SM64 ROM Manager.&lt;br/&gt;&lt;br/&gt;Please Note:&lt;br/&gt;While prepairing your ROM, an additional file will be created. It will be named like your ROM but with a &quot;.config&quot; extension.&lt;br/&gt;This file contains many important settings and other stuff to provide some features in the SM64 ROM Manager.&lt;br/&gt;If you delete this .config file, you might get &lt;u&gt;some errors or unwanted behaviors&lt;/u&gt; in ROM Manager.&lt;br/&gt;So, if &lt;u&gt;you rename your ROM file&lt;/u&gt;, &lt;u&gt;always rename the config file&lt;/u&gt; to [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
         /// </summary>
         public static string MsgBox_PrepaireRom {

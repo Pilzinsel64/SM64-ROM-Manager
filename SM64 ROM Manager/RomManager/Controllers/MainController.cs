@@ -1095,7 +1095,8 @@ namespace SM64_ROM_Manager
         public void OpenPublicHelpChat()
         {
             const string webAddress = "https://cloud.pilzinsel64.com/call/q4cuy7fx";
-            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(800, 800));
+            MessageBoxEx.Show(mainForm, Form_Main_Resources.MsgBox_OpenPublicHelpChat, Form_Main_Resources.MsgBox_OpenPublicHelpChat_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
         }
 
         private void RomWatcher_Changed(object sender, FileSystemEventArgs e)
