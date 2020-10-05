@@ -733,14 +733,24 @@ namespace SM64_ROM_Manager
             await Controller.OpenTextureEditor();
         }
 
-        private void ButtonItem_HackingDocuments_Click(object sender, EventArgs e)
-        {
-            Controller.CallPublicHackingDocuments();
-        }
-
         private void ButtonItem_GlobalAsmCodes_Click(object sender, EventArgs e)
         {
             Controller.OpenCustomAsmCodes();
+        }
+
+        private void ButtonItem_CommunityHelpDocument_Click(object sender, EventArgs e)
+        {
+            Controller.OpenCommunityHelpDocument();
+        }
+
+        private void ButtonItem_QuestionsAndAnswers_Click(object sender, EventArgs e)
+        {
+            Controller.OpenQuestionAndAnswersDocument();
+        }
+
+        private void ButtonItem_PublicHelpChat_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

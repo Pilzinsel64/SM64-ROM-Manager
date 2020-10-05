@@ -905,11 +905,6 @@ namespace SM64_ROM_Manager
             frm.Show();
         }
 
-        public void CallPublicHackingDocuments()
-        {
-            Process.Start("https://docs.google.com/document/d/1pSYR91UiMVKnP3PyvJiCdwRF5wNS_nZzMe-r2WPQUJk/edit?usp=sharing");
-        }
-
         public async Task OpenTextureEditor()
         {
             // Load main levelscript because the segmented banks
@@ -1083,6 +1078,24 @@ namespace SM64_ROM_Manager
         {
             const string webAddress = "https://pilzinsel64.com/thank-you/";
             Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
+        }
+
+        public void OpenCommunityHelpDocument()
+        {
+            const string webAddress = "https://docs.google.com/document/d/1pSYR91UiMVKnP3PyvJiCdwRF5wNS_nZzMe-r2WPQUJk";
+            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
+        }
+
+        public void OpenQuestionAndAnswersDocument()
+        {
+            const string webAddress = "https://cloud.pilzinsel64.com/apps/onlyoffice/s/nZ3J2YBwSQgdfk5";
+            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(1200, 800));
+        }
+
+        public void OpenPublicHelpChat()
+        {
+            const string webAddress = "https://cloud.pilzinsel64.com/call/q4cuy7fx";
+            Publics.Publics.OpenBrowser(new Uri(webAddress), false, new Size(800, 800));
         }
 
         private void RomWatcher_Changed(object sender, FileSystemEventArgs e)

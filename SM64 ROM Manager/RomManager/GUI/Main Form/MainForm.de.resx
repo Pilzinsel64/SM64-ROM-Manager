@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonItem2.Text" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="ButtonItem7.Text" xml:space="preserve">
+    <value>Module</value>
+  </data>
+  <data name="ButtonItem22.Text" xml:space="preserve">
+    <value>Mehr</value>
+  </data>
+  <data name="ButtonItem12.Text" xml:space="preserve">
+    <value>Werkzeug</value>
+  </data>
+  <data name="ButtonItem_Bar_Plugins.Text" xml:space="preserve">
+    <value>Erweiterungen</value>
+  </data>
+  <data name="ButtonItem558.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="ButtonItem24.Text" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
   <data name="TabItem_General.Text" xml:space="preserve">
     <value>Allgemein</value>
   </data>
@@ -140,9 +161,6 @@
   </data>
   <data name="ButtonItem6.Text" xml:space="preserve">
     <value>Beenden</value>
-  </data>
-  <data name="ButtonItem2.Text" xml:space="preserve">
-    <value>Datei</value>
   </data>
   <data name="LabelItem2.Text" xml:space="preserve">
     <value>Hauptmodule:</value>
@@ -2325,29 +2343,26 @@
   <data name="ButtonItem_CustomObjects.Text" xml:space="preserve">
     <value>Eigene Objekte</value>
   </data>
-  <data name="ButtonItem16.Text" xml:space="preserve">
-    <value>Münzeigenschaften</value>
-  </data>
-  <data name="ButtonItem_TrajectoryEditor.Text" xml:space="preserve">
-    <value>Pfad-Editor</value>
-  </data>
-  <data name="ButtonItem13.Text" xml:space="preserve">
-    <value>Sternposition-Editor</value>
-  </data>
-  <data name="labelItem4.Text" xml:space="preserve">
-    <value>Expertenmodule:</value>
+  <data name="ButtonItem18.Text" xml:space="preserve">
+    <value>Globale Modell-Bank</value>
   </data>
   <data name="ButtonItem14.Text" xml:space="preserve">
     <value>Itembox-Content-Editor</value>
   </data>
-  <data name="ButtonItem18.Text" xml:space="preserve">
-    <value>Globale Modell-Bank</value>
+  <data name="ButtonItem16.Text" xml:space="preserve">
+    <value>Münzeigenschaften</value>
+  </data>
+  <data name="ButtonItem13.Text" xml:space="preserve">
+    <value>Sternposition-Editor</value>
+  </data>
+  <data name="ButtonItem_TrajectoryEditor.Text" xml:space="preserve">
+    <value>Pfad-Editor</value>
+  </data>
+  <data name="labelItem4.Text" xml:space="preserve">
+    <value>Expertenmodule:</value>
   </data>
   <data name="ButtonItem_GlobalBehaviorBank.Text" xml:space="preserve">
     <value>Globale Verhaltens-Bank</value>
-  </data>
-  <data name="ButtonItem7.Text" xml:space="preserve">
-    <value>Module</value>
   </data>
   <data name="ButtonItem1.Text" xml:space="preserve">
     <value>Textkonverter</value>
@@ -2358,20 +2373,11 @@
   <data name="ButtonItem_M64ToMidiConverter.Text" xml:space="preserve">
     <value>M64-zu-MIDI-Konverter</value>
   </data>
-  <data name="ButtonItem22.Text" xml:space="preserve">
-    <value>Mehr</value>
-  </data>
   <data name="ButtonItem23.Text" xml:space="preserve">
     <value>Prüfsumme neu berechnen</value>
   </data>
-  <data name="ButtonItem12.Text" xml:space="preserve">
-    <value>Werkzeug</value>
-  </data>
   <data name="ButtonItem20.Text" xml:space="preserve">
     <value>Erweiterungen verwalten</value>
-  </data>
-  <data name="ButtonItem_Bar_Plugins.Text" xml:space="preserve">
-    <value>Erweiterungen</value>
   </data>
   <data name="ButtonItem25.Text" xml:space="preserve">
     <value>Einstellungen</value>
@@ -2379,23 +2385,8 @@
   <data name="ButtonItem5.Text" xml:space="preserve">
     <value>Stylemanager</value>
   </data>
-  <data name="ButtonItem27.Text" xml:space="preserve">
-    <value>Hilfe</value>
-  </data>
-  <data name="ButtonItem28.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAALxJREFUOE9j
-        GHiwa7bHf0ow2ID/7xaThcEGHFjo///tjW6sCvBhkB6QXrALjqwI+39+S8r/Lw+nYFWMjEFqzm1OBuuB
-        e+Hf28X/n51v+n9wceD/yzsz//94NgtDI0gMJAdSA1IL0gM3AKbo14s5/2/sz/9/YHHA/wcnK///ej7n
-        /08gfnCy6v+BRf5gOZAamHoMA2D4y6Op/y/tSP+/d57P/73zfYHsDLAYujqcBhCLh5MBlGBojhgwwMAA
-        ABjya0vTiJeXAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="ButtonItem29.Text" xml:space="preserve">
     <value>Aktuallisierungen</value>
-  </data>
-  <data name="ButtonItem558.Text" xml:space="preserve">
-    <value>Optionen</value>
   </data>
   <data name="ButtonItem_BugReport.Text" xml:space="preserve">
     <value>Fehlerbericht erstellen</value>
@@ -2406,14 +2397,20 @@
   <data name="ButtonItem21.Text" xml:space="preserve">
     <value>Übersetzung senden</value>
   </data>
+  <data name="ButtonItem_CommunityHelpDocument.Text" xml:space="preserve">
+    <value>Community Hilfe-Dokument</value>
+  </data>
+  <data name="ButtonItem_QuestionsAndAnswers.Text" xml:space="preserve">
+    <value>Fragen &amp;&amp; Antworten</value>
+  </data>
+  <data name="ButtonItem_PublicHelpChat.Text" xml:space="preserve">
+    <value>Öffentlicher Hilfe-Chat</value>
+  </data>
   <data name="ButtonItem_Supporter.Text" xml:space="preserve">
     <value>Unterstützer</value>
   </data>
   <data name="ButtonItem30.Text" xml:space="preserve">
     <value>Über</value>
-  </data>
-  <data name="ButtonItem24.Text" xml:space="preserve">
-    <value>Hilfe</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
