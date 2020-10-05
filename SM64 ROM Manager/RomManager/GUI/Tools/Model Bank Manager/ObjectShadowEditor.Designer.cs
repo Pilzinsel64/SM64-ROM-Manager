@@ -74,12 +74,13 @@
             // 
             this.ComboBoxEx_Type.DisplayMember = "Text";
             this.ComboBoxEx_Type.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxEx_Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxEx_Type.FormattingEnabled = true;
-            this.ComboBoxEx_Type.ItemHeight = 14;
+            this.ComboBoxEx_Type.ItemHeight = 15;
             this.ComboBoxEx_Type.Location = new System.Drawing.Point(60, 4);
             this.ComboBoxEx_Type.Margin = new System.Windows.Forms.Padding(0);
             this.ComboBoxEx_Type.Name = "ComboBoxEx_Type";
-            this.ComboBoxEx_Type.Size = new System.Drawing.Size(196, 20);
+            this.ComboBoxEx_Type.Size = new System.Drawing.Size(196, 21);
             this.ComboBoxEx_Type.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ComboBoxEx_Type.TabIndex = 0;
             // 
