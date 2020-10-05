@@ -460,7 +460,7 @@ namespace SM64_ROM_Manager
 
         public void LoadPlugins()
         {
-            string pluginsPath = Path.Combine(Publics.General.MyDataPath, "Plugins");
+            string pluginsPath = Path.Combine(Publics.General.MyPluginsPath);
             if (Directory.Exists(pluginsPath))
             {
                 Publics.General.PluginManager.LoadPlugins(pluginsPath);
