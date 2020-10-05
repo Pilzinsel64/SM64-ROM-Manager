@@ -144,5 +144,13 @@ namespace SM64_ROM_Manager.SettingsManager
             }
         }
 
+        public static WindowSettingsStruc WindowSettings
+        {
+            get
+            {
+                return Instance.WindowSettings;
+            }
+        }
+
     }
 }

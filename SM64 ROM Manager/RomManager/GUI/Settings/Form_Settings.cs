@@ -70,7 +70,7 @@ namespace SM64_ROM_Manager
             SwitchButton_SearchUpdates.Value = Settings.Network.AutoUpdates;
             ComboBox_DefaultValueType.SelectedIndex = Settings.General.IntegerValueMode;
             ComboBox_AreaEditor_DefaultCameraMode.SelectedIndex = (int)Settings.AreaEditor.DefaultCameraMode;
-            ComboBox_AreaEditor_DefaultWindowMode.SelectedIndex = Settings.AreaEditor.DefaultWindowMode == FormWindowState.Maximized ? 1 : 0;
+            //ComboBox_AreaEditor_DefaultWindowMode.SelectedIndex = Settings.AreaEditor.DefaultWindowMode == FormWindowState.Maximized ? 1 : 0;
             TextBoxX_HexEditorCustomPath.Text = Settings.General.HexEditMode.CustomPath;
             SwitchButton_UseLegacyCollisionDescriptions.Value = Settings.ModelConverter.UseLegacyCollisionDescriptions;
             SwitchButton_TMForceUppercase.Value = Settings.TextManager.ForceUpperCaseForActAndLevelNames;
@@ -240,7 +240,7 @@ namespace SM64_ROM_Manager
             Settings.General.IntegerValueMode = ComboBox_DefaultValueType.SelectedIndex;
             Settings.Network.AutoUpdates = SwitchButton_SearchUpdates.Value;
             Settings.AreaEditor.DefaultCameraMode = (Pilz.Drawing.Drawing3D.OpenGLFactory.CameraN.CameraMode)ComboBox_AreaEditor_DefaultCameraMode.SelectedIndex;
-            Settings.AreaEditor.DefaultWindowMode = ComboBox_AreaEditor_DefaultWindowMode.SelectedIndex == 1 ? FormWindowState.Maximized : FormWindowState.Normal;
+            //Settings.AreaEditor.DefaultWindowMode = ComboBox_AreaEditor_DefaultWindowMode.SelectedIndex == 1 ? FormWindowState.Maximized : FormWindowState.Normal;
             Settings.AreaEditor.EnableSlideMovementByDefaultForObjects = comboBoxEx_DefaultObjMoveMode.SelectedIndex == 1;
             Settings.FileParser.FileLoaderModule = Publics.Publics.GetLoaderIDFromModule((File3DLoaderModule)((ComboItem)ComboBoxEx_LoaderModule.SelectedItem).Tag);
             Settings.FileParser.FileExporterModule = Publics.Publics.GetExporterIDFromModule((File3DLoaderModule)((ComboItem)ComboBoxEx_ExporterModule.SelectedItem).Tag);

@@ -13,7 +13,7 @@
   "Version": "1.0.0.0",
   "MinVersion": "1.0.0.0",
   "MaxVersion": "0.0.0.0",
-  "Description": "Makes it so Toad won't fade in an out depending on distance. Code by JesusYoshi",
+  "Description": "Makes it so Toad won't fade in or out depending on distance. Code by JesusYoshi",
   "EmbeddedFiles": {
     "CompressedFiles": {}
   },

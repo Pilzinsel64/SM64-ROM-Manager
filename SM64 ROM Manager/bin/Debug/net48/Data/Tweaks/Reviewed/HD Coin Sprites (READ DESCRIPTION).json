@@ -13,7 +13,7 @@
   "Version": "1.0.0.0",
   "MinVersion": "1.0.0.0",
   "MaxVersion": "0.0.0.0",
-  "Description": "Doubles the resolution of the coin sprites. Tweak by scuttlebug_raiser, someone2639, and Pyro Jay. NOTICE: The coin sprites themselves are not included, DOWNLOAD THEM HERE: https://cdn.discordapp.com/attachments/137689925976981504/717617741179387964/HD_Coin_Sprites.zip In order to include these sprites in your rom, you will need to have a level already imported into Rom Manager. Go into the Area Editor (the window where you place objects), click on the Tools tab up top, then Texture Editor, you will find the coins in the Object Models category in the second category of texture locations in the window.",
+  "Description": "Doubles the resolution of the coin sprites. Tweak by scuttlebug_raiser, someone2639, and Pyro Jay. NOTICE: The coin sprites themselves are not included, DOWNLOAD THEM HERE: https://cdn.discordapp.com/attachments/369942629024137226/730791181818134649/HD_Coin_Sprites.zip In order to include these sprites in your rom, you will need to have a level already imported into Rom Manager. Go into the Area Editor (the window where you place objects), click on the Tools tab up top, then Texture Editor, you will find the coins in the Object Models category in the second category of texture locations in the window.",
   "EmbeddedFiles": {
     "CompressedFiles": {}
   },

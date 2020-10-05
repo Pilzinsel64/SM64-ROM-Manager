@@ -289,28 +289,38 @@ namespace SM64_ROM_Manager
         {
             if (imports.Any())
             {
-                var enableImport = false;
+                var enableImport = true;
 
-                foreach (var kvpImport in imports)
-                {
-                    foreach (var kvpMdl in kvpImport.Value.Data.CustomModels)
-                        kvpImport.Value.DestModelBanks.AddOrUpdate(kvpMdl.Key, rommgr.GlobalModelBank);
-                    kvpImport.Value.DestBehaviorBank = rommgr.GlobalBehaviorBank;
-                    kvpImport.Value.DestCustomAsmBank = rommgr.GlobalCustomAsmBank;
-                }
-
-                var frm = new CustomObjectImportDialog(rommgr, imports);
-                if (frm.ShowDialog() == DialogResult.OK)
-                    enableImport = true;
-
+                // Check if global behavior bank is enabled
                 if (!rommgr.GlobalBehaviorBank.Config.Enabled)
                 {
-                    if (MessageBoxEx.Show(this, MsgBox_ObjectsNeedGlobalBehavBank, MsgBox_ObjectsNeedGlobalBehavBank_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                    if (MessageBoxEx.Show(this, MsgBox_ObjectsNeedGlobalBehavBank, MsgBox_ObjectsNeedGlobalBehavBank_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         rommgr.LoadGlobalBehaviorBank(true);
                     else
                         enableImport = false;
                 }
 
+                // Set dest banks
+                if (enableImport)
+                {
+                    foreach (var kvpImport in imports)
+                    {
+                        foreach (var kvpMdl in kvpImport.Value.Data.CustomModels)
+                            kvpImport.Value.DestModelBanks.AddOrUpdate(kvpMdl.Key, rommgr.GlobalModelBank);
+                        kvpImport.Value.DestBehaviorBank = rommgr.GlobalBehaviorBank;
+                        kvpImport.Value.DestCustomAsmBank = rommgr.GlobalCustomAsmBank;
+                    }
+                }
+
+                // Open GUI
+                if (enableImport)
+                {
+                    var frm = new CustomObjectImportDialog(rommgr, imports);
+                    if (frm.ShowDialog() != DialogResult.OK)
+                        enableImport = false;
+                }
+
+                // Import objects
                 if (enableImport)
                 {
                     foreach (var import in imports.Values)

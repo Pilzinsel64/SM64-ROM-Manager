@@ -7,9 +7,16 @@
       "Type": "Armips",
       "Description": "",
       "References": [],
+      "ID": "1924BE8D7298F9FF5AE3DECB6B48B65E",
       "AllowRevert": true
     }
   ],
   "Version": "1.0.0.0",
-  "Description": "made by Kaze Emanuar"
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "made by Kaze Emanuar",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": "2747DA5CD5FFC4A31D303438425212E7"
 }

@@ -112,8 +112,8 @@ namespace SM64Lib.Objects.ObjectBanks
                                 import.DestCustomAsmBank.Areas.AddRangeIfNotContains(behav.Config.CustomAsmLinks.Select(n => n.CustomAsm).ToArray());
 
                             behav.ParseScript();
+                            cobj.BehaviorProps.BehaviorAddress = -1;
                         }
-                        cobj.BehaviorProps.BehaviorAddress = -1;
                     }
 
                     // Add Custom Behavior

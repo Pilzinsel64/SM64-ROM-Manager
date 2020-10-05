@@ -297,11 +297,8 @@ namespace SM64_ROM_Manager
                                 }
                             case false:
                                 newLvl = lvl;
+                                newLvl.RomManager = rommgr;
                                 newLvl.LevelID = levelinfo.ID;
-
-                                if (newLvl.RomManager == null)
-                                    newLvl.RomManager = rommgr;
-
                                 break;
                             default:
                                 newLvl = null;

@@ -13,7 +13,7 @@
   "Version": "1.0.0.0",
   "MinVersion": "1.0.0.0",
   "MaxVersion": "0.0.0.0",
-  "Description": "Makes the snow effect seen in CCM act more like rain. Texture location is at DA90BC. By hamius8000",
+  "Description": "Makes the unused 'Blizzard' environmental effect act more like rain would. Texture location is at DA90BC. By hamius8000",
   "EmbeddedFiles": {
     "CompressedFiles": {}
   },
