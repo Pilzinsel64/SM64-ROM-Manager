@@ -421,6 +421,13 @@
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
+    <Compile Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.Designer.cs">
+      <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
+    </Compile>
+    <Compile Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.cs">
+      <SubType>UserControl</SubType>
+      <SubType>Designer</SubType>
+    </Compile>
     <Compile Update="RomManager\GUI\Main Form\Tab_MusicManager.Designer.cs">
       <DependentUpon>Tab_MusicManager.cs</DependentUpon>
     </Compile>
@@ -846,6 +853,9 @@
     </EmbeddedResource>
     <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManager.resx">
       <DependentUpon>Tab_LevelManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.resx">
+      <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_MusicManager.de.resx">
       <DependentUpon>Tab_MusicManager.cs</DependentUpon>
