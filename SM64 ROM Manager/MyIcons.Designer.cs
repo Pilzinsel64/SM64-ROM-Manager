@@ -153,6 +153,16 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_checkmark_14px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_checkmark_14px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_checkmark_16px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_checkmark_16px_1", resourceCulture);
@@ -776,6 +786,16 @@ namespace SM64_ROM_Manager.My.Resources {
         public static System.Drawing.Bitmap icons8_preview_pane_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_preview_pane_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_process_14px_blue {
+            get {
+                object obj = ResourceManager.GetObject("icons8_process_14px_blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

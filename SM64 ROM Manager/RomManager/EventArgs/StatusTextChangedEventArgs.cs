@@ -24,13 +24,15 @@ using Z.Window.Forms.Extensions;
 
 namespace SM64_ROM_Manager.EventArguments
 {
-    public class StatusTextChangedEventArgs : global::System.EventArgs
+    public class StatusTextChangedEventArgs : EventArgs
     {
         public string NewStatus { get; private set; }
+        public bool IsReady { get; private set; }
 
-        public StatusTextChangedEventArgs(string newStatus)
+        public StatusTextChangedEventArgs(string newStatus, bool isReady)
         {
-            this.NewStatus = Conversions.ToString(newStatus);
+            NewStatus = newStatus;
+            IsReady = isReady;
         }
     }
 }

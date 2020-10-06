@@ -124,6 +124,10 @@ namespace SM64_ROM_Manager
         private void Controller_StatusTextChanged(StatusTextChangedEventArgs e)
         {
             LabelItem1.Text = e.NewStatus;
+            if (e.IsReady)
+                LabelItem1.Image = MyIcons.icons8_checkmark_14px;
+            else
+                LabelItem1.Image = MyIcons.icons8_process_14px_blue;
             Bar1.Refresh();
         }
 

@@ -229,10 +229,11 @@ namespace SM64_ROM_Manager
 
             set
             {
-                if (string.IsNullOrEmpty(value))
-                    value = My.Resources.Form_Main_Resources.Status_Ready;
+                var isReady = string.IsNullOrEmpty(value);
+                if (isReady)
+                    value = Form_Main_Resources.Status_Ready;
                 _StatusText = value;
-                StatusTextChanged?.Invoke(new EventArguments.StatusTextChangedEventArgs(_StatusText));
+                StatusTextChanged?.Invoke(new EventArguments.StatusTextChangedEventArgs(_StatusText, isReady));
             }
         }
 
