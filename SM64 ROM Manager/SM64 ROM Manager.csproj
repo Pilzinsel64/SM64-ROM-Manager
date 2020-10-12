@@ -40,6 +40,7 @@
     <DefineDebug>true</DefineDebug>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,CS1591</NoWarn>
     <RunCodeAnalysis>false</RunCodeAnalysis>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DefineDebug>false</DefineDebug>
