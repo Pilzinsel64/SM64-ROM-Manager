@@ -1189,7 +1189,7 @@ namespace SM64_ROM_Manager.GUI.Main_Form
             else
             {
                 LoadLevelSettings(indices.levelIndex);
-                EnableTabControl(indices.levelIndex == -1 ? null ? TabControl_LM_Level);
+                EnableTabControl(indices.levelIndex == -1 ? null : TabControl_LM_Level);
             }
 
             panel_Tools.ResumeLayout();
@@ -1207,6 +1207,22 @@ namespace SM64_ROM_Manager.GUI.Main_Form
                 tabControl.Dock = DockStyle.Fill;
                 tabControl.Visible = true;
             }
+        }
+
+        private void ButtonItem_RemoveItem_Click(object sender, EventArgs e)
+        {
+            if (true)
+                Button_LM_RemoveArea_Click(sender, e);
+            else
+                ButtonItem19_Click(sender, e);
+        }
+
+        private void ButtonItem_ExportLevelArea_Click(object sender, EventArgs e)
+        {
+            if (true)
+                ButtonItem_ExportArea_Click(sender, e);
+            else
+                ButtonItem_ExportLevel_Click(sender, e);
         }
     }
 }
