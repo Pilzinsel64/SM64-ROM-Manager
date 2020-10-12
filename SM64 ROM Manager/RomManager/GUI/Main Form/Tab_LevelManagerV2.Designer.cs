@@ -39,24 +39,6 @@
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.panel_SideMenu = new System.Windows.Forms.Panel();
             this.panel_Tools = new System.Windows.Forms.Panel();
-            this.bar1 = new DevComponents.DotNetBar.Bar();
-            this.ButtonItem_LevelTools_AddLevel = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_ImportLevel = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_AreaTools_AddArea = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_AreaTools_ImportArea = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_OpenLevelEditor = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_RemoveItem = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_ExportLevel = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_More = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_ChangeLevelID = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_EditLevelscript = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_ChangeLevelName = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19 = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_CopyRomAddress = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_AreaTools_More = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_AreaTools_ChangeAreaID = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_AreaTools_EditAreaLevelScript = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_AreaTools_EditGeolayoutScript = new DevComponents.DotNetBar.ButtonItem();
             this.TabControl_AreaProperties = new DevComponents.DotNetBar.TabControl();
             this.TabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
             this.RangeSlider_CameraFrustrum = new DevComponents.DotNetBar.Controls.RangeSlider();
@@ -81,6 +63,7 @@
             this.LabelX11 = new DevComponents.DotNetBar.LabelX();
             this.ComboBox_LM_CameraPreset = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.ColorPickerButton_LM_BackgroundColor = new DevComponents.DotNetBar.ColorPickerButton();
+            this.TabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
             this.Line2 = new DevComponents.DotNetBar.Controls.Line();
             this.line4 = new DevComponents.DotNetBar.Controls.Line();
@@ -110,7 +93,6 @@
             this.ColumnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeaderA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TabItem6 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControl_LM_Level = new DevComponents.DotNetBar.TabControl();
             this.TabControlPanel_LevelProperties = new DevComponents.DotNetBar.TabControlPanel();
             this.LabelX_TargetLevel = new DevComponents.DotNetBar.LabelX();
@@ -142,10 +124,27 @@
             this.SwitchButton_UseGlobalObjectBank = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.TableLayoutPanel_ObjectBankSelectorBoxes = new System.Windows.Forms.TableLayoutPanel();
             this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.ButtonItem_LevelTools_AddLevel = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_ImportLevel = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AreaTools_AddArea = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AreaTools_ImportArea = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_OpenLevelEditor = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_RemoveItem = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_ExportLevel = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_More = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_ChangeLevelID = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_EditLevelscript = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_ChangeLevelName = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_CopyRomAddress = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AreaTools_More = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AreaTools_ChangeAreaID = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AreaTools_EditAreaLevelScript = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_AreaTools_EditGeolayoutScript = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.LevelsTree)).BeginInit();
             this.panel_SideMenu.SuspendLayout();
             this.panel_Tools.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_AreaProperties)).BeginInit();
             this.TabControl_AreaProperties.SuspendLayout();
             this.TabControlPanel4.SuspendLayout();
@@ -158,6 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionYRotation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionAreaID)).BeginInit();
             this.TabControlPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
             // 
             // LevelsTree
@@ -180,6 +180,7 @@
             this.LevelsTree.Styles.Add(this.elementStyle1);
             this.LevelsTree.TabIndex = 0;
             this.LevelsTree.Text = "advTree1";
+            this.LevelsTree.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.LevelsTree_AfterNodeSelect);
             // 
             // nodeConnector1
             // 
@@ -211,183 +212,6 @@
             this.panel_Tools.Name = "panel_Tools";
             this.panel_Tools.Size = new System.Drawing.Size(494, 521);
             this.panel_Tools.TabIndex = 1;
-            // 
-            // bar1
-            // 
-            this.bar1.AccessibleDescription = "DotNetBar Bar (bar1)";
-            this.bar1.AccessibleName = "DotNetBar Bar";
-            this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
-            this.bar1.AntiAlias = true;
-            this.bar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bar1.IsMaximized = false;
-            this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_LevelTools_AddLevel,
-            this.ButtonItem_LevelTools_ImportLevel,
-            this.ButtonItem_AreaTools_AddArea,
-            this.ButtonItem_AreaTools_ImportArea,
-            this.ButtonItem_OpenLevelEditor,
-            this.ButtonItem_RemoveItem,
-            this.ButtonItem_LevelTools_ExportLevel,
-            this.ButtonItem_LevelTools_More,
-            this.ButtonItem_AreaTools_More});
-            this.bar1.Location = new System.Drawing.Point(0, 0);
-            this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(694, 25);
-            this.bar1.Stretch = true;
-            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bar1.TabIndex = 2;
-            this.bar1.TabStop = false;
-            // 
-            // ButtonItem_LevelTools_AddLevel
-            // 
-            this.ButtonItem_LevelTools_AddLevel.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_LevelTools_AddLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem_LevelTools_AddLevel.Name = "ButtonItem_LevelTools_AddLevel";
-            this.ButtonItem_LevelTools_AddLevel.Text = "Add Level";
-            // 
-            // ButtonItem_LevelTools_ImportLevel
-            // 
-            this.ButtonItem_LevelTools_ImportLevel.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_LevelTools_ImportLevel.GlobalItem = false;
-            this.ButtonItem_LevelTools_ImportLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
-            this.ButtonItem_LevelTools_ImportLevel.Name = "ButtonItem_LevelTools_ImportLevel";
-            this.ButtonItem_LevelTools_ImportLevel.Text = "Import Level";
-            // 
-            // ButtonItem_AreaTools_AddArea
-            // 
-            this.ButtonItem_AreaTools_AddArea.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_AreaTools_AddArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem_AreaTools_AddArea.Name = "ButtonItem_AreaTools_AddArea";
-            this.ButtonItem_AreaTools_AddArea.Text = "Add Area";
-            // 
-            // ButtonItem_AreaTools_ImportArea
-            // 
-            this.ButtonItem_AreaTools_ImportArea.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_AreaTools_ImportArea.GlobalItem = false;
-            this.ButtonItem_AreaTools_ImportArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
-            this.ButtonItem_AreaTools_ImportArea.Name = "ButtonItem_AreaTools_ImportArea";
-            this.ButtonItem_AreaTools_ImportArea.Text = "Import Area";
-            // 
-            // ButtonItem_OpenLevelEditor
-            // 
-            this.ButtonItem_OpenLevelEditor.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_OpenLevelEditor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
-            this.ButtonItem_OpenLevelEditor.Name = "ButtonItem_OpenLevelEditor";
-            this.ButtonItem_OpenLevelEditor.Text = "Level Editor";
-            // 
-            // ButtonItem_RemoveItem
-            // 
-            this.ButtonItem_RemoveItem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_RemoveItem.GlobalItem = false;
-            this.ButtonItem_RemoveItem.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.ButtonItem_RemoveItem.Name = "ButtonItem_RemoveItem";
-            this.ButtonItem_RemoveItem.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ButtonItem_RemoveItem.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonItem_RemoveItem.SymbolSize = 12F;
-            this.ButtonItem_RemoveItem.Text = "Remove";
-            // 
-            // ButtonItem_LevelTools_ExportLevel
-            // 
-            this.ButtonItem_LevelTools_ExportLevel.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_LevelTools_ExportLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
-            this.ButtonItem_LevelTools_ExportLevel.Name = "ButtonItem_LevelTools_ExportLevel";
-            this.ButtonItem_LevelTools_ExportLevel.Text = "Export Level";
-            // 
-            // ButtonItem_LevelTools_More
-            // 
-            this.ButtonItem_LevelTools_More.AutoExpandOnClick = true;
-            this.ButtonItem_LevelTools_More.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_LevelTools_More.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
-            this.ButtonItem_LevelTools_More.Name = "ButtonItem_LevelTools_More";
-            this.ButtonItem_LevelTools_More.ShowSubItems = false;
-            this.ButtonItem_LevelTools_More.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_LevelTools_ChangeLevelID,
-            this.ButtonItem_LevelTools_EditLevelscript,
-            this.ButtonItem_LevelTools_ChangeLevelName,
-            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19,
-            this.ButtonItem_LevelTools_CopyRomAddress});
-            this.ButtonItem_LevelTools_More.Text = "More";
-            // 
-            // ButtonItem_LevelTools_ChangeLevelID
-            // 
-            this.ButtonItem_LevelTools_ChangeLevelID.GlobalItem = false;
-            this.ButtonItem_LevelTools_ChangeLevelID.Name = "ButtonItem_LevelTools_ChangeLevelID";
-            this.ButtonItem_LevelTools_ChangeLevelID.SymbolColor = System.Drawing.Color.Goldenrod;
-            this.ButtonItem_LevelTools_ChangeLevelID.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonItem_LevelTools_ChangeLevelID.SymbolSize = 12F;
-            this.ButtonItem_LevelTools_ChangeLevelID.Text = "Change Level ID";
-            // 
-            // ButtonItem_LevelTools_EditLevelscript
-            // 
-            this.ButtonItem_LevelTools_EditLevelscript.BeginGroup = true;
-            this.ButtonItem_LevelTools_EditLevelscript.GlobalItem = false;
-            this.ButtonItem_LevelTools_EditLevelscript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
-            this.ButtonItem_LevelTools_EditLevelscript.Name = "ButtonItem_LevelTools_EditLevelscript";
-            this.ButtonItem_LevelTools_EditLevelscript.SymbolColor = System.Drawing.Color.Goldenrod;
-            this.ButtonItem_LevelTools_EditLevelscript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonItem_LevelTools_EditLevelscript.SymbolSize = 12F;
-            this.ButtonItem_LevelTools_EditLevelscript.Text = "Edit Level Script";
-            // 
-            // ButtonItem_LevelTools_ChangeLevelName
-            // 
-            this.ButtonItem_LevelTools_ChangeLevelName.BeginGroup = true;
-            this.ButtonItem_LevelTools_ChangeLevelName.GlobalItem = false;
-            this.ButtonItem_LevelTools_ChangeLevelName.Name = "ButtonItem_LevelTools_ChangeLevelName";
-            this.ButtonItem_LevelTools_ChangeLevelName.Text = "Change Level Name";
-            // 
-            // ButtonItem_LevelTools_ChangeSizeOfBank0x19
-            // 
-            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.GlobalItem = false;
-            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Name = "ButtonItem_LevelTools_ChangeSizeOfBank0x19";
-            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Text = "Change Size of Bank 0x19";
-            // 
-            // ButtonItem_LevelTools_CopyRomAddress
-            // 
-            this.ButtonItem_LevelTools_CopyRomAddress.BeginGroup = true;
-            this.ButtonItem_LevelTools_CopyRomAddress.GlobalItem = false;
-            this.ButtonItem_LevelTools_CopyRomAddress.Name = "ButtonItem_LevelTools_CopyRomAddress";
-            this.ButtonItem_LevelTools_CopyRomAddress.Text = "Copy ROM Address";
-            // 
-            // ButtonItem_AreaTools_More
-            // 
-            this.ButtonItem_AreaTools_More.AutoExpandOnClick = true;
-            this.ButtonItem_AreaTools_More.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_AreaTools_More.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
-            this.ButtonItem_AreaTools_More.Name = "ButtonItem_AreaTools_More";
-            this.ButtonItem_AreaTools_More.ShowSubItems = false;
-            this.ButtonItem_AreaTools_More.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_AreaTools_ChangeAreaID,
-            this.ButtonItem_AreaTools_EditAreaLevelScript,
-            this.ButtonItem_AreaTools_EditGeolayoutScript});
-            this.ButtonItem_AreaTools_More.Text = "More";
-            // 
-            // ButtonItem_AreaTools_ChangeAreaID
-            // 
-            this.ButtonItem_AreaTools_ChangeAreaID.GlobalItem = false;
-            this.ButtonItem_AreaTools_ChangeAreaID.Name = "ButtonItem_AreaTools_ChangeAreaID";
-            this.ButtonItem_AreaTools_ChangeAreaID.Text = "Change ID";
-            // 
-            // ButtonItem_AreaTools_EditAreaLevelScript
-            // 
-            this.ButtonItem_AreaTools_EditAreaLevelScript.BeginGroup = true;
-            this.ButtonItem_AreaTools_EditAreaLevelScript.GlobalItem = false;
-            this.ButtonItem_AreaTools_EditAreaLevelScript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
-            this.ButtonItem_AreaTools_EditAreaLevelScript.Name = "ButtonItem_AreaTools_EditAreaLevelScript";
-            this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolColor = System.Drawing.Color.Goldenrod;
-            this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolSize = 12F;
-            this.ButtonItem_AreaTools_EditAreaLevelScript.Text = "Edit Level Script";
-            // 
-            // ButtonItem_AreaTools_EditGeolayoutScript
-            // 
-            this.ButtonItem_AreaTools_EditGeolayoutScript.GlobalItem = false;
-            this.ButtonItem_AreaTools_EditGeolayoutScript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
-            this.ButtonItem_AreaTools_EditGeolayoutScript.Name = "ButtonItem_AreaTools_EditGeolayoutScript";
-            this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolColor = System.Drawing.Color.Goldenrod;
-            this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolSize = 12F;
-            this.ButtonItem_AreaTools_EditGeolayoutScript.Text = "Edit Geo Layout Script";
             // 
             // TabControl_AreaProperties
             // 
@@ -812,6 +636,12 @@
             this.ColorPickerButton_LM_BackgroundColor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ColorPickerButton_LM_BackgroundColor.TabIndex = 91;
             // 
+            // TabItem4
+            // 
+            this.TabItem4.AttachedControl = this.TabControlPanel4;
+            this.TabItem4.Name = "TabItem4";
+            this.TabItem4.Text = "Area Settings";
+            // 
             // TabControlPanel5
             // 
             this.TabControlPanel5.Controls.Add(this.Line2);
@@ -1163,12 +993,6 @@
             this.TabItem6.AttachedControl = this.TabControlPanel6;
             this.TabItem6.Name = "TabItem6";
             this.TabItem6.Text = "Special Boxes";
-            // 
-            // TabItem4
-            // 
-            this.TabItem4.AttachedControl = this.TabControlPanel4;
-            this.TabItem4.Name = "TabItem4";
-            this.TabItem4.Text = "Area Settings";
             // 
             // TabControl_LM_Level
             // 
@@ -1648,6 +1472,183 @@
             this.TabItem2.Name = "TabItem2";
             this.TabItem2.Text = "Object Banks";
             // 
+            // bar1
+            // 
+            this.bar1.AccessibleDescription = "DotNetBar Bar (bar1)";
+            this.bar1.AccessibleName = "DotNetBar Bar";
+            this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
+            this.bar1.AntiAlias = true;
+            this.bar1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bar1.IsMaximized = false;
+            this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_LevelTools_AddLevel,
+            this.ButtonItem_LevelTools_ImportLevel,
+            this.ButtonItem_AreaTools_AddArea,
+            this.ButtonItem_AreaTools_ImportArea,
+            this.ButtonItem_OpenLevelEditor,
+            this.ButtonItem_RemoveItem,
+            this.ButtonItem_LevelTools_ExportLevel,
+            this.ButtonItem_LevelTools_More,
+            this.ButtonItem_AreaTools_More});
+            this.bar1.Location = new System.Drawing.Point(0, 0);
+            this.bar1.Name = "bar1";
+            this.bar1.Size = new System.Drawing.Size(694, 25);
+            this.bar1.Stretch = true;
+            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bar1.TabIndex = 2;
+            this.bar1.TabStop = false;
+            // 
+            // ButtonItem_LevelTools_AddLevel
+            // 
+            this.ButtonItem_LevelTools_AddLevel.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_LevelTools_AddLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_LevelTools_AddLevel.Name = "ButtonItem_LevelTools_AddLevel";
+            this.ButtonItem_LevelTools_AddLevel.Text = "Add Level";
+            // 
+            // ButtonItem_LevelTools_ImportLevel
+            // 
+            this.ButtonItem_LevelTools_ImportLevel.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_LevelTools_ImportLevel.GlobalItem = false;
+            this.ButtonItem_LevelTools_ImportLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
+            this.ButtonItem_LevelTools_ImportLevel.Name = "ButtonItem_LevelTools_ImportLevel";
+            this.ButtonItem_LevelTools_ImportLevel.Text = "Import Level";
+            // 
+            // ButtonItem_AreaTools_AddArea
+            // 
+            this.ButtonItem_AreaTools_AddArea.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_AreaTools_AddArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_AreaTools_AddArea.Name = "ButtonItem_AreaTools_AddArea";
+            this.ButtonItem_AreaTools_AddArea.Text = "Add Area";
+            // 
+            // ButtonItem_AreaTools_ImportArea
+            // 
+            this.ButtonItem_AreaTools_ImportArea.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_AreaTools_ImportArea.GlobalItem = false;
+            this.ButtonItem_AreaTools_ImportArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
+            this.ButtonItem_AreaTools_ImportArea.Name = "ButtonItem_AreaTools_ImportArea";
+            this.ButtonItem_AreaTools_ImportArea.Text = "Import Area";
+            // 
+            // ButtonItem_OpenLevelEditor
+            // 
+            this.ButtonItem_OpenLevelEditor.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_OpenLevelEditor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.ButtonItem_OpenLevelEditor.Name = "ButtonItem_OpenLevelEditor";
+            this.ButtonItem_OpenLevelEditor.Text = "Level Editor";
+            // 
+            // ButtonItem_RemoveItem
+            // 
+            this.ButtonItem_RemoveItem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_RemoveItem.GlobalItem = false;
+            this.ButtonItem_RemoveItem.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.ButtonItem_RemoveItem.Name = "ButtonItem_RemoveItem";
+            this.ButtonItem_RemoveItem.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ButtonItem_RemoveItem.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonItem_RemoveItem.SymbolSize = 12F;
+            this.ButtonItem_RemoveItem.Text = "Remove";
+            // 
+            // ButtonItem_LevelTools_ExportLevel
+            // 
+            this.ButtonItem_LevelTools_ExportLevel.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_LevelTools_ExportLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
+            this.ButtonItem_LevelTools_ExportLevel.Name = "ButtonItem_LevelTools_ExportLevel";
+            this.ButtonItem_LevelTools_ExportLevel.Text = "Export Level";
+            // 
+            // ButtonItem_LevelTools_More
+            // 
+            this.ButtonItem_LevelTools_More.AutoExpandOnClick = true;
+            this.ButtonItem_LevelTools_More.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_LevelTools_More.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
+            this.ButtonItem_LevelTools_More.Name = "ButtonItem_LevelTools_More";
+            this.ButtonItem_LevelTools_More.ShowSubItems = false;
+            this.ButtonItem_LevelTools_More.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_LevelTools_ChangeLevelID,
+            this.ButtonItem_LevelTools_EditLevelscript,
+            this.ButtonItem_LevelTools_ChangeLevelName,
+            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19,
+            this.ButtonItem_LevelTools_CopyRomAddress});
+            this.ButtonItem_LevelTools_More.Text = "More";
+            // 
+            // ButtonItem_LevelTools_ChangeLevelID
+            // 
+            this.ButtonItem_LevelTools_ChangeLevelID.GlobalItem = false;
+            this.ButtonItem_LevelTools_ChangeLevelID.Name = "ButtonItem_LevelTools_ChangeLevelID";
+            this.ButtonItem_LevelTools_ChangeLevelID.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.ButtonItem_LevelTools_ChangeLevelID.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonItem_LevelTools_ChangeLevelID.SymbolSize = 12F;
+            this.ButtonItem_LevelTools_ChangeLevelID.Text = "Change Level ID";
+            // 
+            // ButtonItem_LevelTools_EditLevelscript
+            // 
+            this.ButtonItem_LevelTools_EditLevelscript.BeginGroup = true;
+            this.ButtonItem_LevelTools_EditLevelscript.GlobalItem = false;
+            this.ButtonItem_LevelTools_EditLevelscript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.ButtonItem_LevelTools_EditLevelscript.Name = "ButtonItem_LevelTools_EditLevelscript";
+            this.ButtonItem_LevelTools_EditLevelscript.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.ButtonItem_LevelTools_EditLevelscript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonItem_LevelTools_EditLevelscript.SymbolSize = 12F;
+            this.ButtonItem_LevelTools_EditLevelscript.Text = "Edit Level Script";
+            // 
+            // ButtonItem_LevelTools_ChangeLevelName
+            // 
+            this.ButtonItem_LevelTools_ChangeLevelName.BeginGroup = true;
+            this.ButtonItem_LevelTools_ChangeLevelName.GlobalItem = false;
+            this.ButtonItem_LevelTools_ChangeLevelName.Name = "ButtonItem_LevelTools_ChangeLevelName";
+            this.ButtonItem_LevelTools_ChangeLevelName.Text = "Change Level Name";
+            // 
+            // ButtonItem_LevelTools_ChangeSizeOfBank0x19
+            // 
+            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.GlobalItem = false;
+            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Name = "ButtonItem_LevelTools_ChangeSizeOfBank0x19";
+            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Text = "Change Size of Bank 0x19";
+            // 
+            // ButtonItem_LevelTools_CopyRomAddress
+            // 
+            this.ButtonItem_LevelTools_CopyRomAddress.BeginGroup = true;
+            this.ButtonItem_LevelTools_CopyRomAddress.GlobalItem = false;
+            this.ButtonItem_LevelTools_CopyRomAddress.Name = "ButtonItem_LevelTools_CopyRomAddress";
+            this.ButtonItem_LevelTools_CopyRomAddress.Text = "Copy ROM Address";
+            // 
+            // ButtonItem_AreaTools_More
+            // 
+            this.ButtonItem_AreaTools_More.AutoExpandOnClick = true;
+            this.ButtonItem_AreaTools_More.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_AreaTools_More.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
+            this.ButtonItem_AreaTools_More.Name = "ButtonItem_AreaTools_More";
+            this.ButtonItem_AreaTools_More.ShowSubItems = false;
+            this.ButtonItem_AreaTools_More.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_AreaTools_ChangeAreaID,
+            this.ButtonItem_AreaTools_EditAreaLevelScript,
+            this.ButtonItem_AreaTools_EditGeolayoutScript});
+            this.ButtonItem_AreaTools_More.Text = "More";
+            // 
+            // ButtonItem_AreaTools_ChangeAreaID
+            // 
+            this.ButtonItem_AreaTools_ChangeAreaID.GlobalItem = false;
+            this.ButtonItem_AreaTools_ChangeAreaID.Name = "ButtonItem_AreaTools_ChangeAreaID";
+            this.ButtonItem_AreaTools_ChangeAreaID.Text = "Change ID";
+            // 
+            // ButtonItem_AreaTools_EditAreaLevelScript
+            // 
+            this.ButtonItem_AreaTools_EditAreaLevelScript.BeginGroup = true;
+            this.ButtonItem_AreaTools_EditAreaLevelScript.GlobalItem = false;
+            this.ButtonItem_AreaTools_EditAreaLevelScript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.ButtonItem_AreaTools_EditAreaLevelScript.Name = "ButtonItem_AreaTools_EditAreaLevelScript";
+            this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolSize = 12F;
+            this.ButtonItem_AreaTools_EditAreaLevelScript.Text = "Edit Level Script";
+            // 
+            // ButtonItem_AreaTools_EditGeolayoutScript
+            // 
+            this.ButtonItem_AreaTools_EditGeolayoutScript.GlobalItem = false;
+            this.ButtonItem_AreaTools_EditGeolayoutScript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.ButtonItem_AreaTools_EditGeolayoutScript.Name = "ButtonItem_AreaTools_EditGeolayoutScript";
+            this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolSize = 12F;
+            this.ButtonItem_AreaTools_EditGeolayoutScript.Text = "Edit Geo Layout Script";
+            // 
             // Tab_LevelManagerV2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1660,7 +1661,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.LevelsTree)).EndInit();
             this.panel_SideMenu.ResumeLayout(false);
             this.panel_Tools.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_AreaProperties)).EndInit();
             this.TabControl_AreaProperties.ResumeLayout(false);
             this.TabControlPanel4.ResumeLayout(false);
@@ -1673,6 +1673,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionYRotation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionAreaID)).EndInit();
             this.TabControlPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.ResumeLayout(false);
 
         }

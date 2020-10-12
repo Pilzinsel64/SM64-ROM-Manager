@@ -710,8 +710,6 @@ namespace SM64_ROM_Manager.GUI.Main_Form
 
         private void LoadLevelSettings(int levelIndex)
         {
-            TabControl_LM_Level.Enabled = levelIndex >= 0;
-            TabControl_LM_Level.Enabled = levelIndex >= 0; // Yes, a second time! Otherwise id doesn't work for no reason.
             if (!loadingLevel)
             {
                 if (!Controller.IsLoadingRom)
@@ -1175,6 +1173,40 @@ namespace SM64_ROM_Manager.GUI.Main_Form
         {
             Controls_HandleToSaveLevelSettings();
             LM_UpdateObjectBankList(sender, e);
+        }
+
+        private void LevelsTree_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            var indices = CurrentIndicies;
+
+            panel_Tools.SuspendLayout();
+
+            if (indices.areaIndex != -1 && indices.levelIndex != -1)
+            {
+                LoadAreaSettings(indices.levelIndex, indices.areaIndex);
+                EnableTabControl(TabControl_AreaProperties);
+            }
+            else
+            {
+                LoadLevelSettings(indices.levelIndex);
+                EnableTabControl(indices.levelIndex == -1 ? null ? TabControl_LM_Level);
+            }
+
+            panel_Tools.ResumeLayout();
+        }
+
+        private void EnableTabControl(DevComponents.DotNetBar.TabControl tabControl)
+        {
+            // Disable all tab controls
+            TabControl_LM_Level.Visible = false;
+            TabControl_AreaProperties.Visible = false;
+
+            // Enable given tab control
+            if (tabControl is object)
+            {
+                tabControl.Dock = DockStyle.Fill;
+                tabControl.Visible = true;
+            }
         }
     }
 }
