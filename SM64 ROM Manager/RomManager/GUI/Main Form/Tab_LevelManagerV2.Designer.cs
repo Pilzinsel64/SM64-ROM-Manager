@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tab_LevelManagerV2));
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.LevelsTree = new DevComponents.AdvTree.AdvTree();
             this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
@@ -125,20 +121,24 @@
             this.TableLayoutPanel_ObjectBankSelectorBoxes = new System.Windows.Forms.TableLayoutPanel();
             this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.ButtonItem_LevelTools_AddLevel = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_ImportLevel = new DevComponents.DotNetBar.ButtonItem();
+            this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
             this.ButtonItem_AreaTools_AddArea = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_ImportArea = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_OpenLevelEditor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_RemoveItem = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_ExportLevelArea = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_More = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
             this.ButtonItem_LevelTools_ChangeLevelID = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_ChangeLevelName = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_EditLevelscript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_CopyRomAddress = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_AreaTools_More = new DevComponents.DotNetBar.ButtonItem();
+            this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
             this.ButtonItem_AreaTools_ChangeAreaID = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_EditAreaLevelScript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_EditGeolayoutScript = new DevComponents.DotNetBar.ButtonItem();
@@ -169,19 +169,15 @@
             // 
             this.LevelsTree.BackgroundStyle.Class = "TreeBorderKey";
             this.LevelsTree.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LevelsTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            resources.ApplyResources(this.LevelsTree, "LevelsTree");
             this.LevelsTree.DragDropEnabled = false;
             this.LevelsTree.DragDropNodeCopyEnabled = false;
             this.LevelsTree.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.LevelsTree.Location = new System.Drawing.Point(0, 0);
             this.LevelsTree.Name = "LevelsTree";
             this.LevelsTree.NodesConnector = this.nodeConnector1;
             this.LevelsTree.NodeStyle = this.elementStyle1;
             this.LevelsTree.PathSeparator = ";";
-            this.LevelsTree.Size = new System.Drawing.Size(200, 521);
             this.LevelsTree.Styles.Add(this.elementStyle1);
-            this.LevelsTree.TabIndex = 0;
-            this.LevelsTree.Text = "advTree1";
             this.LevelsTree.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.LevelsTree_AfterNodeSelect);
             // 
             // nodeConnector1
@@ -198,51 +194,38 @@
             // 
             this.panel_SideMenu.BackColor = System.Drawing.Color.Transparent;
             this.panel_SideMenu.Controls.Add(this.LevelsTree);
-            this.panel_SideMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_SideMenu.Location = new System.Drawing.Point(0, 25);
+            resources.ApplyResources(this.panel_SideMenu, "panel_SideMenu");
             this.panel_SideMenu.Name = "panel_SideMenu";
-            this.panel_SideMenu.Size = new System.Drawing.Size(200, 521);
-            this.panel_SideMenu.TabIndex = 1;
             // 
             // panel_Tools
             // 
             this.panel_Tools.BackColor = System.Drawing.Color.Transparent;
             this.panel_Tools.Controls.Add(this.TabControl_AreaProperties);
             this.panel_Tools.Controls.Add(this.TabControl_LM_Level);
-            this.panel_Tools.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Tools.Location = new System.Drawing.Point(200, 25);
+            resources.ApplyResources(this.panel_Tools, "panel_Tools");
             this.panel_Tools.Name = "panel_Tools";
-            this.panel_Tools.Size = new System.Drawing.Size(494, 521);
-            this.panel_Tools.TabIndex = 1;
             // 
             // TabControl_AreaProperties
             // 
-            this.TabControl_AreaProperties.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.TabControl_AreaProperties, "TabControl_AreaProperties");
             this.TabControl_AreaProperties.BackColor = System.Drawing.Color.Transparent;
             this.TabControl_AreaProperties.CanReorderTabs = false;
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel4);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel5);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel6);
             this.TabControl_AreaProperties.ForeColor = System.Drawing.Color.Black;
-            this.TabControl_AreaProperties.Location = new System.Drawing.Point(-4, 296);
             this.TabControl_AreaProperties.Name = "TabControl_AreaProperties";
             this.TabControl_AreaProperties.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.TabControl_AreaProperties.SelectedTabIndex = 0;
-            this.TabControl_AreaProperties.Size = new System.Drawing.Size(502, 234);
             this.TabControl_AreaProperties.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
-            this.TabControl_AreaProperties.TabIndex = 94;
             this.TabControl_AreaProperties.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem4);
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem5);
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem6);
-            this.TabControl_AreaProperties.Text = "TabControl2";
-            this.TabControl_AreaProperties.Visible = false;
             // 
             // TabControlPanel4
             // 
-            this.TabControlPanel4.AutoScroll = true;
+            resources.ApplyResources(this.TabControlPanel4, "TabControlPanel4");
             this.TabControlPanel4.Controls.Add(this.RangeSlider_CameraFrustrum);
             this.TabControlPanel4.Controls.Add(this.labelX17);
             this.TabControlPanel4.Controls.Add(this.Slider_AreaReverbLevel);
@@ -264,11 +247,7 @@
             this.TabControlPanel4.Controls.Add(this.ComboBox_LM_CameraPreset);
             this.TabControlPanel4.Controls.Add(this.ColorPickerButton_LM_BackgroundColor);
             this.TabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty;
-            this.TabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabControlPanel4.Location = new System.Drawing.Point(0, 27);
             this.TabControlPanel4.Name = "TabControlPanel4";
-            this.TabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
-            this.TabControlPanel4.Size = new System.Drawing.Size(502, 207);
             this.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -276,7 +255,6 @@
             this.TabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel4.Style.GradientAngle = 90;
-            this.TabControlPanel4.TabIndex = 1;
             this.TabControlPanel4.TabItem = this.TabItem4;
             // 
             // RangeSlider_CameraFrustrum
@@ -287,15 +265,13 @@
             // 
             this.RangeSlider_CameraFrustrum.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.RangeSlider_CameraFrustrum.FocusCuesEnabled = false;
-            this.RangeSlider_CameraFrustrum.Location = new System.Drawing.Point(163, 185);
+            resources.ApplyResources(this.RangeSlider_CameraFrustrum, "RangeSlider_CameraFrustrum");
             this.RangeSlider_CameraFrustrum.Maximum = 32767;
             this.RangeSlider_CameraFrustrum.Name = "RangeSlider_CameraFrustrum";
-            this.RangeSlider_CameraFrustrum.RangeTooltipFormat = "Near: {0} - Far: {1}";
-            this.RangeSlider_CameraFrustrum.Size = new System.Drawing.Size(140, 24);
             this.RangeSlider_CameraFrustrum.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.RangeSlider_CameraFrustrum.TabIndex = 105;
             this.RangeSlider_CameraFrustrum.TicksPosition = DevComponents.DotNetBar.eTicksPosition.TopAndBottom;
             this.RangeSlider_CameraFrustrum.TicksVisible = false;
+            this.RangeSlider_CameraFrustrum.Value = new DevComponents.DotNetBar.RangeValue(0, 10);
             // 
             // labelX17
             // 
@@ -304,12 +280,9 @@
             // 
             // 
             this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX17.Location = new System.Drawing.Point(5, 187);
+            resources.ApplyResources(this.labelX17, "labelX17");
             this.labelX17.Name = "labelX17";
-            this.labelX17.Size = new System.Drawing.Size(152, 20);
             this.labelX17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.labelX17.TabIndex = 103;
-            this.labelX17.Text = "Camera frustrum:";
             // 
             // Slider_AreaReverbLevel
             // 
@@ -319,12 +292,10 @@
             // 
             this.Slider_AreaReverbLevel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.Slider_AreaReverbLevel.LabelPosition = DevComponents.DotNetBar.eSliderLabelPosition.Right;
-            this.Slider_AreaReverbLevel.Location = new System.Drawing.Point(163, 160);
+            resources.ApplyResources(this.Slider_AreaReverbLevel, "Slider_AreaReverbLevel");
             this.Slider_AreaReverbLevel.Maximum = 9;
             this.Slider_AreaReverbLevel.Name = "Slider_AreaReverbLevel";
-            this.Slider_AreaReverbLevel.Size = new System.Drawing.Size(181, 23);
             this.Slider_AreaReverbLevel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Slider_AreaReverbLevel.TabIndex = 100;
             this.Slider_AreaReverbLevel.Value = 0;
             // 
             // labelX14
@@ -334,12 +305,9 @@
             // 
             // 
             this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX14.Location = new System.Drawing.Point(5, 161);
+            resources.ApplyResources(this.labelX14, "labelX14");
             this.labelX14.Name = "labelX14";
-            this.labelX14.Size = new System.Drawing.Size(152, 20);
             this.labelX14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.labelX14.TabIndex = 99;
-            this.labelX14.Text = "Echo Level:";
             // 
             // LabelX9
             // 
@@ -348,13 +316,9 @@
             // 
             // 
             this.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX9.Location = new System.Drawing.Point(219, 135);
+            resources.ApplyResources(this.LabelX9, "LabelX9");
             this.LabelX9.Name = "LabelX9";
-            this.LabelX9.Size = new System.Drawing.Size(53, 20);
             this.LabelX9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX9.TabIndex = 97;
-            this.LabelX9.Text = "Dialog ID:";
-            this.LabelX9.Visible = false;
             // 
             // ComboBoxEx_LM_AreaBG
             // 
@@ -363,23 +327,20 @@
             this.ComboBoxEx_LM_AreaBG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxEx_LM_AreaBG.ForeColor = System.Drawing.Color.Black;
             this.ComboBoxEx_LM_AreaBG.FormattingEnabled = true;
-            this.ComboBoxEx_LM_AreaBG.ItemHeight = 15;
+            resources.ApplyResources(this.ComboBoxEx_LM_AreaBG, "ComboBoxEx_LM_AreaBG");
             this.ComboBoxEx_LM_AreaBG.Items.AddRange(new object[] {
             this.ComboItem12,
             this.ComboItem13});
-            this.ComboBoxEx_LM_AreaBG.Location = new System.Drawing.Point(163, 108);
             this.ComboBoxEx_LM_AreaBG.Name = "ComboBoxEx_LM_AreaBG";
-            this.ComboBoxEx_LM_AreaBG.Size = new System.Drawing.Size(138, 21);
             this.ComboBoxEx_LM_AreaBG.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBoxEx_LM_AreaBG.TabIndex = 94;
             // 
             // ComboItem12
             // 
-            this.ComboItem12.Text = "Level Background";
+            resources.ApplyResources(this.ComboItem12, "ComboItem12");
             // 
             // ComboItem13
             // 
-            this.ComboItem13.Text = "Color";
+            resources.ApplyResources(this.ComboItem13, "ComboItem13");
             // 
             // TextBoxX_LM_ShowMsgID
             // 
@@ -391,12 +352,9 @@
             this.TextBoxX_LM_ShowMsgID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.TextBoxX_LM_ShowMsgID.DisabledBackColor = System.Drawing.Color.White;
             this.TextBoxX_LM_ShowMsgID.ForeColor = System.Drawing.Color.Black;
-            this.TextBoxX_LM_ShowMsgID.Location = new System.Drawing.Point(273, 135);
+            resources.ApplyResources(this.TextBoxX_LM_ShowMsgID, "TextBoxX_LM_ShowMsgID");
             this.TextBoxX_LM_ShowMsgID.Name = "TextBoxX_LM_ShowMsgID";
             this.TextBoxX_LM_ShowMsgID.PreventEnterBeep = true;
-            this.TextBoxX_LM_ShowMsgID.Size = new System.Drawing.Size(48, 20);
-            this.TextBoxX_LM_ShowMsgID.TabIndex = 96;
-            this.TextBoxX_LM_ShowMsgID.Visible = false;
             // 
             // LabelX1
             // 
@@ -405,12 +363,9 @@
             // 
             // 
             this.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX1.Location = new System.Drawing.Point(5, 108);
+            resources.ApplyResources(this.LabelX1, "LabelX1");
             this.LabelX1.Name = "LabelX1";
-            this.LabelX1.Size = new System.Drawing.Size(152, 20);
             this.LabelX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX1.TabIndex = 93;
-            this.LabelX1.Text = "Area Background:";
             // 
             // SwitchButton_LM_ShowMsgEnabled
             // 
@@ -419,19 +374,15 @@
             // 
             this.SwitchButton_LM_ShowMsgEnabled.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.SwitchButton_LM_ShowMsgEnabled.FocusCuesEnabled = false;
-            this.SwitchButton_LM_ShowMsgEnabled.Location = new System.Drawing.Point(163, 135);
+            resources.ApplyResources(this.SwitchButton_LM_ShowMsgEnabled, "SwitchButton_LM_ShowMsgEnabled");
             this.SwitchButton_LM_ShowMsgEnabled.Name = "SwitchButton_LM_ShowMsgEnabled";
-            this.SwitchButton_LM_ShowMsgEnabled.OffText = "Off";
             this.SwitchButton_LM_ShowMsgEnabled.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SwitchButton_LM_ShowMsgEnabled.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_LM_ShowMsgEnabled.OnText = "On";
             this.SwitchButton_LM_ShowMsgEnabled.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_LM_ShowMsgEnabled.Size = new System.Drawing.Size(50, 20);
             this.SwitchButton_LM_ShowMsgEnabled.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.SwitchButton_LM_ShowMsgEnabled.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_LM_ShowMsgEnabled.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_LM_ShowMsgEnabled.SwitchWidth = 15;
-            this.SwitchButton_LM_ShowMsgEnabled.TabIndex = 94;
             // 
             // LabelX2
             // 
@@ -440,12 +391,9 @@
             // 
             // 
             this.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX2.Location = new System.Drawing.Point(5, 135);
+            resources.ApplyResources(this.LabelX2, "LabelX2");
             this.LabelX2.Name = "LabelX2";
-            this.LabelX2.Size = new System.Drawing.Size(152, 20);
             this.LabelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX2.TabIndex = 95;
-            this.LabelX2.Text = "Area Start Message:";
             // 
             // CheckBoxX_LM_Enable2DCamera
             // 
@@ -454,21 +402,15 @@
             // 
             this.CheckBoxX_LM_Enable2DCamera.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.CheckBoxX_LM_Enable2DCamera.FocusCuesEnabled = false;
-            this.CheckBoxX_LM_Enable2DCamera.Location = new System.Drawing.Point(420, 56);
+            resources.ApplyResources(this.CheckBoxX_LM_Enable2DCamera, "CheckBoxX_LM_Enable2DCamera");
             this.CheckBoxX_LM_Enable2DCamera.Name = "CheckBoxX_LM_Enable2DCamera";
-            this.CheckBoxX_LM_Enable2DCamera.OffText = "3D";
             this.CheckBoxX_LM_Enable2DCamera.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CheckBoxX_LM_Enable2DCamera.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.CheckBoxX_LM_Enable2DCamera.OnText = "2D";
             this.CheckBoxX_LM_Enable2DCamera.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.CheckBoxX_LM_Enable2DCamera.Size = new System.Drawing.Size(50, 20);
             this.CheckBoxX_LM_Enable2DCamera.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.CheckBoxX_LM_Enable2DCamera.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.CheckBoxX_LM_Enable2DCamera.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.CheckBoxX_LM_Enable2DCamera.SwitchWidth = 15;
-            this.CheckBoxX_LM_Enable2DCamera.TabIndex = 43;
-            this.CheckBoxX_LM_Enable2DCamera.Text = "Enable 2D-Camera";
-            this.CheckBoxX_LM_Enable2DCamera.Visible = false;
             // 
             // LabelX6
             // 
@@ -477,12 +419,9 @@
             // 
             // 
             this.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX6.Location = new System.Drawing.Point(5, 4);
+            resources.ApplyResources(this.LabelX6, "LabelX6");
             this.LabelX6.Name = "LabelX6";
-            this.LabelX6.Size = new System.Drawing.Size(152, 20);
             this.LabelX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX6.TabIndex = 35;
-            this.LabelX6.Text = "Default Terrain Type:";
             // 
             // ComboBox_LM_Music
             // 
@@ -491,17 +430,12 @@
             this.ComboBox_LM_Music.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_Music.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_Music.FormattingEnabled = true;
-            this.ComboBox_LM_Music.IntegralHeight = false;
-            this.ComboBox_LM_Music.ItemHeight = 15;
+            resources.ApplyResources(this.ComboBox_LM_Music, "ComboBox_LM_Music");
             this.ComboBox_LM_Music.Items.AddRange(new object[] {
-            "No Background",
-            "Level Background"});
-            this.ComboBox_LM_Music.Location = new System.Drawing.Point(163, 82);
-            this.ComboBox_LM_Music.MaxDropDownItems = 16;
+            resources.GetString("ComboBox_LM_Music.Items"),
+            resources.GetString("ComboBox_LM_Music.Items1")});
             this.ComboBox_LM_Music.Name = "ComboBox_LM_Music";
-            this.ComboBox_LM_Music.Size = new System.Drawing.Size(251, 21);
             this.ComboBox_LM_Music.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBox_LM_Music.TabIndex = 42;
             // 
             // LabelX7
             // 
@@ -510,12 +444,9 @@
             // 
             // 
             this.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX7.Location = new System.Drawing.Point(5, 30);
+            resources.ApplyResources(this.LabelX7, "LabelX7");
             this.LabelX7.Name = "LabelX7";
-            this.LabelX7.Size = new System.Drawing.Size(152, 20);
             this.LabelX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX7.TabIndex = 36;
-            this.LabelX7.Text = "Environment Effects:";
             // 
             // ComboBox_LM_TerrainTyp
             // 
@@ -524,21 +455,17 @@
             this.ComboBox_LM_TerrainTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_TerrainTyp.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_TerrainTyp.FormattingEnabled = true;
-            this.ComboBox_LM_TerrainTyp.IntegralHeight = false;
-            this.ComboBox_LM_TerrainTyp.ItemHeight = 15;
+            resources.ApplyResources(this.ComboBox_LM_TerrainTyp, "ComboBox_LM_TerrainTyp");
             this.ComboBox_LM_TerrainTyp.Items.AddRange(new object[] {
-            "Normal A (Stone floor)",
-            "Normal B (Wood floor)",
-            "Snow Terrain",
-            "Sand Terrain",
-            "Big Boos Haunt",
-            "Water Levels",
-            "Slippery Slide"});
-            this.ComboBox_LM_TerrainTyp.Location = new System.Drawing.Point(163, 4);
+            resources.GetString("ComboBox_LM_TerrainTyp.Items"),
+            resources.GetString("ComboBox_LM_TerrainTyp.Items1"),
+            resources.GetString("ComboBox_LM_TerrainTyp.Items2"),
+            resources.GetString("ComboBox_LM_TerrainTyp.Items3"),
+            resources.GetString("ComboBox_LM_TerrainTyp.Items4"),
+            resources.GetString("ComboBox_LM_TerrainTyp.Items5"),
+            resources.GetString("ComboBox_LM_TerrainTyp.Items6")});
             this.ComboBox_LM_TerrainTyp.Name = "ComboBox_LM_TerrainTyp";
-            this.ComboBox_LM_TerrainTyp.Size = new System.Drawing.Size(138, 21);
             this.ComboBox_LM_TerrainTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBox_LM_TerrainTyp.TabIndex = 21;
             // 
             // LabelX8
             // 
@@ -547,12 +474,9 @@
             // 
             // 
             this.LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX8.Location = new System.Drawing.Point(5, 56);
+            resources.ApplyResources(this.LabelX8, "LabelX8");
             this.LabelX8.Name = "LabelX8";
-            this.LabelX8.Size = new System.Drawing.Size(152, 20);
             this.LabelX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX8.TabIndex = 37;
-            this.LabelX8.Text = "Camera Preset:";
             // 
             // ComboBox_LM_EnvironmentEffects
             // 
@@ -561,21 +485,17 @@
             this.ComboBox_LM_EnvironmentEffects.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_EnvironmentEffects.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_EnvironmentEffects.FormattingEnabled = true;
-            this.ComboBox_LM_EnvironmentEffects.IntegralHeight = false;
-            this.ComboBox_LM_EnvironmentEffects.ItemHeight = 15;
+            resources.ApplyResources(this.ComboBox_LM_EnvironmentEffects, "ComboBox_LM_EnvironmentEffects");
             this.ComboBox_LM_EnvironmentEffects.Items.AddRange(new object[] {
-            "None",
-            "Snow",
-            "Blizzard",
-            "Beta Flower",
-            "Lava",
-            "Water-Related? (1)",
-            "Water-Related? (2)"});
-            this.ComboBox_LM_EnvironmentEffects.Location = new System.Drawing.Point(163, 30);
+            resources.GetString("ComboBox_LM_EnvironmentEffects.Items"),
+            resources.GetString("ComboBox_LM_EnvironmentEffects.Items1"),
+            resources.GetString("ComboBox_LM_EnvironmentEffects.Items2"),
+            resources.GetString("ComboBox_LM_EnvironmentEffects.Items3"),
+            resources.GetString("ComboBox_LM_EnvironmentEffects.Items4"),
+            resources.GetString("ComboBox_LM_EnvironmentEffects.Items5"),
+            resources.GetString("ComboBox_LM_EnvironmentEffects.Items6")});
             this.ComboBox_LM_EnvironmentEffects.Name = "ComboBox_LM_EnvironmentEffects";
-            this.ComboBox_LM_EnvironmentEffects.Size = new System.Drawing.Size(138, 21);
             this.ComboBox_LM_EnvironmentEffects.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBox_LM_EnvironmentEffects.TabIndex = 23;
             // 
             // LabelX11
             // 
@@ -584,12 +504,9 @@
             // 
             // 
             this.LabelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX11.Location = new System.Drawing.Point(5, 82);
+            resources.ApplyResources(this.LabelX11, "LabelX11");
             this.LabelX11.Name = "LabelX11";
-            this.LabelX11.Size = new System.Drawing.Size(152, 20);
             this.LabelX11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX11.TabIndex = 39;
-            this.LabelX11.Text = "Music ID:";
             // 
             // ComboBox_LM_CameraPreset
             // 
@@ -598,30 +515,26 @@
             this.ComboBox_LM_CameraPreset.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_CameraPreset.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_CameraPreset.FormattingEnabled = true;
-            this.ComboBox_LM_CameraPreset.IntegralHeight = false;
-            this.ComboBox_LM_CameraPreset.ItemHeight = 15;
+            resources.ApplyResources(this.ComboBox_LM_CameraPreset, "ComboBox_LM_CameraPreset");
             this.ComboBox_LM_CameraPreset.Items.AddRange(new object[] {
-            "01 - Open Camera",
-            "02 - Tick Tock Clock",
-            "03 - Secret Aquarium",
-            "04 - Inside Castle / Hauted House",
-            "05 - Stationary",
-            "06 - Mario Facing Object",
-            "07 - Stationary",
-            "08 - Underwater Camera",
-            "09 - Peach Slide Camera",
-            "0A - Inside Cannon",
-            "0B - Bowser Fights, Distant",
-            "0C - Close Camera, Crashes",
-            "0D - Fixed Reference Point",
-            "0E - Platfrom Levels / 2D-Camera",
-            "0F - Stationary",
-            "10 - Free Roam Camera"});
-            this.ComboBox_LM_CameraPreset.Location = new System.Drawing.Point(163, 56);
+            resources.GetString("ComboBox_LM_CameraPreset.Items"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items1"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items2"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items3"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items4"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items5"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items6"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items7"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items8"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items9"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items10"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items11"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items12"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items13"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items14"),
+            resources.GetString("ComboBox_LM_CameraPreset.Items15")});
             this.ComboBox_LM_CameraPreset.Name = "ComboBox_LM_CameraPreset";
-            this.ComboBox_LM_CameraPreset.Size = new System.Drawing.Size(251, 21);
             this.ComboBox_LM_CameraPreset.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBox_LM_CameraPreset.TabIndex = 25;
             // 
             // ColorPickerButton_LM_BackgroundColor
             // 
@@ -630,18 +543,16 @@
             this.ColorPickerButton_LM_BackgroundColor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ColorPickerButton_LM_BackgroundColor.FocusCuesEnabled = false;
             this.ColorPickerButton_LM_BackgroundColor.Image = ((System.Drawing.Image)(resources.GetObject("ColorPickerButton_LM_BackgroundColor.Image")));
-            this.ColorPickerButton_LM_BackgroundColor.Location = new System.Drawing.Point(307, 107);
+            resources.ApplyResources(this.ColorPickerButton_LM_BackgroundColor, "ColorPickerButton_LM_BackgroundColor");
             this.ColorPickerButton_LM_BackgroundColor.Name = "ColorPickerButton_LM_BackgroundColor";
             this.ColorPickerButton_LM_BackgroundColor.SelectedColorImageRectangle = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.ColorPickerButton_LM_BackgroundColor.Size = new System.Drawing.Size(37, 23);
             this.ColorPickerButton_LM_BackgroundColor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ColorPickerButton_LM_BackgroundColor.TabIndex = 91;
             // 
             // TabItem4
             // 
             this.TabItem4.AttachedControl = this.TabControlPanel4;
             this.TabItem4.Name = "TabItem4";
-            this.TabItem4.Text = "Area Settings";
+            resources.ApplyResources(this.TabItem4, "TabItem4");
             // 
             // TabControlPanel5
             // 
@@ -659,11 +570,8 @@
             this.TabControlPanel5.Controls.Add(this.ButtonX_LM_ScrollTexEditor);
             this.TabControlPanel5.Controls.Add(this.Button_ImportModel);
             this.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty;
-            this.TabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabControlPanel5.Location = new System.Drawing.Point(0, 27);
+            resources.ApplyResources(this.TabControlPanel5, "TabControlPanel5");
             this.TabControlPanel5.Name = "TabControlPanel5";
-            this.TabControlPanel5.Padding = new System.Windows.Forms.Padding(1);
-            this.TabControlPanel5.Size = new System.Drawing.Size(502, 207);
             this.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -671,36 +579,26 @@
             this.TabControlPanel5.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel5.Style.GradientAngle = 90;
-            this.TabControlPanel5.TabIndex = 5;
             this.TabControlPanel5.TabItem = this.TabItem5;
             // 
             // Line2
             // 
             this.Line2.BackColor = System.Drawing.Color.Transparent;
-            this.Line2.Location = new System.Drawing.Point(237, 4);
+            resources.ApplyResources(this.Line2, "Line2");
             this.Line2.Name = "Line2";
-            this.Line2.Size = new System.Drawing.Size(7, 61);
-            this.Line2.TabIndex = 100;
-            this.Line2.Text = "Line1";
             this.Line2.VerticalLine = true;
             // 
             // line4
             // 
             this.line4.BackColor = System.Drawing.Color.Transparent;
-            this.line4.Location = new System.Drawing.Point(5, 104);
+            resources.ApplyResources(this.line4, "line4");
             this.line4.Name = "line4";
-            this.line4.Size = new System.Drawing.Size(302, 7);
-            this.line4.TabIndex = 100;
-            this.line4.Text = "Line1";
             // 
             // line1
             // 
             this.line1.BackColor = System.Drawing.Color.Transparent;
-            this.line1.Location = new System.Drawing.Point(5, 62);
+            resources.ApplyResources(this.line1, "line1");
             this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(405, 7);
-            this.line1.TabIndex = 100;
-            this.line1.Text = "Line1";
             // 
             // LabelX_Area_CountOfTexAnimations
             // 
@@ -709,11 +607,8 @@
             // 
             // 
             this.LabelX_Area_CountOfTexAnimations.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX_Area_CountOfTexAnimations.Location = new System.Drawing.Point(121, 117);
+            resources.ApplyResources(this.LabelX_Area_CountOfTexAnimations, "LabelX_Area_CountOfTexAnimations");
             this.LabelX_Area_CountOfTexAnimations.Name = "LabelX_Area_CountOfTexAnimations";
-            this.LabelX_Area_CountOfTexAnimations.Size = new System.Drawing.Size(24, 23);
-            this.LabelX_Area_CountOfTexAnimations.TabIndex = 99;
-            this.LabelX_Area_CountOfTexAnimations.Text = "0";
             this.LabelX_Area_CountOfTexAnimations.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // LabelX10
@@ -723,114 +618,86 @@
             // 
             // 
             this.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX10.Location = new System.Drawing.Point(5, 117);
+            resources.ApplyResources(this.LabelX10, "LabelX10");
             this.LabelX10.Name = "LabelX10";
-            this.LabelX10.Size = new System.Drawing.Size(110, 23);
-            this.LabelX10.TabIndex = 99;
-            this.LabelX10.Text = "Texture Animations:";
             // 
             // ButtonX_EditCollision
             // 
             this.ButtonX_EditCollision.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_EditCollision.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_EditCollision.Enabled = false;
+            resources.ApplyResources(this.ButtonX_EditCollision, "ButtonX_EditCollision");
             this.ButtonX_EditCollision.FocusCuesEnabled = false;
-            this.ButtonX_EditCollision.Location = new System.Drawing.Point(115, 75);
             this.ButtonX_EditCollision.Name = "ButtonX_EditCollision";
-            this.ButtonX_EditCollision.Size = new System.Drawing.Size(104, 23);
             this.ButtonX_EditCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_EditCollision.TabIndex = 97;
-            this.ButtonX_EditCollision.Text = "Edit Collision";
             // 
             // ButtonX_EditFast3D
             // 
             this.ButtonX_EditFast3D.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_EditFast3D.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_EditFast3D.FocusCuesEnabled = false;
-            this.ButtonX_EditFast3D.Location = new System.Drawing.Point(5, 75);
+            resources.ApplyResources(this.ButtonX_EditFast3D, "ButtonX_EditFast3D");
             this.ButtonX_EditFast3D.Name = "ButtonX_EditFast3D";
-            this.ButtonX_EditFast3D.Size = new System.Drawing.Size(104, 23);
             this.ButtonX_EditFast3D.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_EditFast3D.TabIndex = 97;
-            this.ButtonX_EditFast3D.Text = "Edit Fast3D";
             // 
             // buttonX2
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.FocusCuesEnabled = false;
-            this.buttonX2.Location = new System.Drawing.Point(250, 33);
+            resources.ApplyResources(this.buttonX2, "buttonX2");
             this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(160, 23);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 97;
-            this.buttonX2.Text = "Export Collision";
             // 
             // ButtonX_ImportCollision
             // 
             this.ButtonX_ImportCollision.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_ImportCollision.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_ImportCollision.FocusCuesEnabled = false;
-            this.ButtonX_ImportCollision.Location = new System.Drawing.Point(71, 33);
+            resources.ApplyResources(this.ButtonX_ImportCollision, "ButtonX_ImportCollision");
             this.ButtonX_ImportCollision.Name = "ButtonX_ImportCollision";
-            this.ButtonX_ImportCollision.Size = new System.Drawing.Size(160, 23);
             this.ButtonX_ImportCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ImportCollision.TabIndex = 97;
-            this.ButtonX_ImportCollision.Text = "Import Collision";
             // 
             // buttonX1
             // 
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX1.FocusCuesEnabled = false;
-            this.buttonX1.Location = new System.Drawing.Point(250, 4);
+            resources.ApplyResources(this.buttonX1, "buttonX1");
             this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(160, 23);
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 97;
-            this.buttonX1.Text = "Export Visual Map";
             // 
             // ButtonX_ImportVisualMap
             // 
             this.ButtonX_ImportVisualMap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_ImportVisualMap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_ImportVisualMap.FocusCuesEnabled = false;
-            this.ButtonX_ImportVisualMap.Location = new System.Drawing.Point(71, 4);
+            resources.ApplyResources(this.ButtonX_ImportVisualMap, "ButtonX_ImportVisualMap");
             this.ButtonX_ImportVisualMap.Name = "ButtonX_ImportVisualMap";
-            this.ButtonX_ImportVisualMap.Size = new System.Drawing.Size(160, 23);
             this.ButtonX_ImportVisualMap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ImportVisualMap.TabIndex = 97;
-            this.ButtonX_ImportVisualMap.Text = "Import Visual Map";
             // 
             // ButtonX_LM_ScrollTexEditor
             // 
             this.ButtonX_LM_ScrollTexEditor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_LM_ScrollTexEditor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_LM_ScrollTexEditor.FocusCuesEnabled = false;
-            this.ButtonX_LM_ScrollTexEditor.Location = new System.Drawing.Point(151, 117);
+            resources.ApplyResources(this.ButtonX_LM_ScrollTexEditor, "ButtonX_LM_ScrollTexEditor");
             this.ButtonX_LM_ScrollTexEditor.Name = "ButtonX_LM_ScrollTexEditor";
-            this.ButtonX_LM_ScrollTexEditor.Size = new System.Drawing.Size(156, 23);
             this.ButtonX_LM_ScrollTexEditor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_LM_ScrollTexEditor.TabIndex = 97;
-            this.ButtonX_LM_ScrollTexEditor.Text = "Texture Animation Editor";
             // 
             // Button_ImportModel
             // 
             this.Button_ImportModel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_ImportModel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_ImportModel.FocusCuesEnabled = false;
-            this.Button_ImportModel.Location = new System.Drawing.Point(5, 4);
+            resources.ApplyResources(this.Button_ImportModel, "Button_ImportModel");
             this.Button_ImportModel.Name = "Button_ImportModel";
-            this.Button_ImportModel.Size = new System.Drawing.Size(60, 52);
             this.Button_ImportModel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_ImportModel.TabIndex = 85;
-            this.Button_ImportModel.Text = "Import Model";
             // 
             // TabItem5
             // 
             this.TabItem5.AttachedControl = this.TabControlPanel5;
             this.TabItem5.Name = "TabItem5";
-            this.TabItem5.Text = "Area Model";
+            resources.ApplyResources(this.TabItem5, "TabItem5");
             // 
             // TabControlPanel6
             // 
@@ -839,11 +706,8 @@
             this.TabControlPanel6.Controls.Add(this.Button_LM_EditSpecial);
             this.TabControlPanel6.Controls.Add(this.ListViewEx_LM_Specials);
             this.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty;
-            this.TabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabControlPanel6.Location = new System.Drawing.Point(0, 27);
+            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
             this.TabControlPanel6.Name = "TabControlPanel6";
-            this.TabControlPanel6.Padding = new System.Windows.Forms.Padding(1);
-            this.TabControlPanel6.Size = new System.Drawing.Size(502, 207);
             this.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -851,26 +715,20 @@
             this.TabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel6.Style.GradientAngle = 90;
-            this.TabControlPanel6.TabIndex = 9;
             this.TabControlPanel6.TabItem = this.TabItem6;
             // 
             // Button_LM_RemoveSpecial
             // 
             this.Button_LM_RemoveSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.Button_LM_RemoveSpecial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.Button_LM_RemoveSpecial, "Button_LM_RemoveSpecial");
             this.Button_LM_RemoveSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.Button_LM_RemoveSpecial.Enabled = false;
             this.Button_LM_RemoveSpecial.FocusCuesEnabled = false;
             this.Button_LM_RemoveSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.Button_LM_RemoveSpecial.Location = new System.Drawing.Point(420, 4);
             this.Button_LM_RemoveSpecial.Name = "Button_LM_RemoveSpecial";
-            this.Button_LM_RemoveSpecial.Size = new System.Drawing.Size(75, 23);
             this.Button_LM_RemoveSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_RemoveSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Button_LM_RemoveSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_RemoveSpecial.SymbolSize = 12F;
-            this.Button_LM_RemoveSpecial.TabIndex = 3;
-            this.Button_LM_RemoveSpecial.Text = "Remove";
             // 
             // Button_LM_AddSpecial
             // 
@@ -878,38 +736,29 @@
             this.Button_LM_AddSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_LM_AddSpecial.FocusCuesEnabled = false;
             this.Button_LM_AddSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.Button_LM_AddSpecial.Location = new System.Drawing.Point(5, 4);
+            resources.ApplyResources(this.Button_LM_AddSpecial, "Button_LM_AddSpecial");
             this.Button_LM_AddSpecial.Name = "Button_LM_AddSpecial";
-            this.Button_LM_AddSpecial.Size = new System.Drawing.Size(75, 23);
             this.Button_LM_AddSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_AddSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
             this.Button_LM_AddSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_AddSpecial.SymbolSize = 12F;
-            this.Button_LM_AddSpecial.TabIndex = 1;
-            this.Button_LM_AddSpecial.Text = "Add ...";
             // 
             // Button_LM_EditSpecial
             // 
             this.Button_LM_EditSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.Button_LM_EditSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.Button_LM_EditSpecial.Enabled = false;
+            resources.ApplyResources(this.Button_LM_EditSpecial, "Button_LM_EditSpecial");
             this.Button_LM_EditSpecial.FocusCuesEnabled = false;
             this.Button_LM_EditSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
-            this.Button_LM_EditSpecial.Location = new System.Drawing.Point(86, 4);
             this.Button_LM_EditSpecial.Name = "Button_LM_EditSpecial";
-            this.Button_LM_EditSpecial.Size = new System.Drawing.Size(75, 23);
             this.Button_LM_EditSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_EditSpecial.SymbolColor = System.Drawing.Color.Goldenrod;
             this.Button_LM_EditSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_EditSpecial.SymbolSize = 12F;
-            this.Button_LM_EditSpecial.TabIndex = 2;
-            this.Button_LM_EditSpecial.Text = "Edit";
             // 
             // ListViewEx_LM_Specials
             // 
-            this.ListViewEx_LM_Specials.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.ListViewEx_LM_Specials, "ListViewEx_LM_Specials");
             this.ListViewEx_LM_Specials.BackColor = System.Drawing.Color.White;
             // 
             // 
@@ -930,92 +779,72 @@
             this.ListViewEx_LM_Specials.ForeColor = System.Drawing.Color.Black;
             this.ListViewEx_LM_Specials.FullRowSelect = true;
             this.ListViewEx_LM_Specials.GridLines = true;
-            listViewGroup5.Header = "ListViewGroup";
-            listViewGroup5.Name = "Water";
-            listViewGroup6.Header = "ListViewGroup";
-            listViewGroup6.Name = "Toxic Haze";
-            listViewGroup7.Header = "ListViewGroup";
-            listViewGroup7.Name = "Mist";
-            listViewGroup8.Header = "ListViewGroup";
-            listViewGroup8.Name = "Scrolling Textures";
             this.ListViewEx_LM_Specials.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7,
-            listViewGroup8});
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups"))),
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups1"))),
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups2"))),
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups3")))});
             this.ListViewEx_LM_Specials.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.ListViewEx_LM_Specials.HideSelection = false;
-            this.ListViewEx_LM_Specials.Location = new System.Drawing.Point(5, 33);
             this.ListViewEx_LM_Specials.MultiSelect = false;
             this.ListViewEx_LM_Specials.Name = "ListViewEx_LM_Specials";
             this.ListViewEx_LM_Specials.ShowGroups = false;
-            this.ListViewEx_LM_Specials.Size = new System.Drawing.Size(490, 168);
-            this.ListViewEx_LM_Specials.TabIndex = 0;
             this.ListViewEx_LM_Specials.UseCompatibleStateImageBehavior = false;
             this.ListViewEx_LM_Specials.View = System.Windows.Forms.View.Details;
             // 
             // ColumnHeaderA1
             // 
-            this.ColumnHeaderA1.Text = "#";
-            this.ColumnHeaderA1.Width = 20;
+            resources.ApplyResources(this.ColumnHeaderA1, "ColumnHeaderA1");
             // 
             // ColumnHeader2
             // 
-            this.ColumnHeader2.Text = "Box Type";
-            this.ColumnHeader2.Width = 70;
+            resources.ApplyResources(this.ColumnHeader2, "ColumnHeader2");
             // 
             // ColumnHeader3
             // 
-            this.ColumnHeader3.Text = "X-1";
+            resources.ApplyResources(this.ColumnHeader3, "ColumnHeader3");
             // 
             // ColumnHeader4
             // 
-            this.ColumnHeader4.Text = "Z-1";
+            resources.ApplyResources(this.ColumnHeader4, "ColumnHeader4");
             // 
             // ColumnHeader5
             // 
-            this.ColumnHeader5.Text = "X-2";
+            resources.ApplyResources(this.ColumnHeader5, "ColumnHeader5");
             // 
             // ColumnHeader6
             // 
-            this.ColumnHeader6.Text = "Z-2";
+            resources.ApplyResources(this.ColumnHeader6, "ColumnHeader6");
             // 
             // ColumnHeader7
             // 
-            this.ColumnHeader7.Text = "Height";
+            resources.ApplyResources(this.ColumnHeader7, "ColumnHeader7");
             // 
             // ColumnHeaderA
             // 
-            this.ColumnHeaderA.Text = "Water Type";
-            this.ColumnHeaderA.Width = 75;
+            resources.ApplyResources(this.ColumnHeaderA, "ColumnHeaderA");
             // 
             // TabItem6
             // 
             this.TabItem6.AttachedControl = this.TabControlPanel6;
             this.TabItem6.Name = "TabItem6";
-            this.TabItem6.Text = "Special Boxes";
+            resources.ApplyResources(this.TabItem6, "TabItem6");
             // 
             // TabControl_LM_Level
             // 
-            this.TabControl_LM_Level.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.TabControl_LM_Level, "TabControl_LM_Level");
             this.TabControl_LM_Level.BackColor = System.Drawing.Color.Transparent;
             this.TabControl_LM_Level.CanReorderTabs = false;
             this.TabControl_LM_Level.Controls.Add(this.TabControlPanel_LevelProperties);
             this.TabControl_LM_Level.Controls.Add(this.TabControlPanel2);
             this.TabControl_LM_Level.ForeColor = System.Drawing.Color.Black;
-            this.TabControl_LM_Level.Location = new System.Drawing.Point(-4, -10);
             this.TabControl_LM_Level.Name = "TabControl_LM_Level";
             this.TabControl_LM_Level.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.TabControl_LM_Level.SelectedTabIndex = 0;
-            this.TabControl_LM_Level.Size = new System.Drawing.Size(502, 300);
             this.TabControl_LM_Level.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
-            this.TabControl_LM_Level.TabIndex = 95;
             this.TabControl_LM_Level.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.TabControl_LM_Level.Tabs.Add(this.TabItem1);
             this.TabControl_LM_Level.Tabs.Add(this.TabItem2);
-            this.TabControl_LM_Level.Text = "TabControl1";
-            this.TabControl_LM_Level.Visible = false;
             // 
             // TabControlPanel_LevelProperties
             // 
@@ -1037,11 +866,8 @@
             this.TabControlPanel_LevelProperties.Controls.Add(this.Button_LM_LoadLevelBG);
             this.TabControlPanel_LevelProperties.Controls.Add(this.Button_LM_SetUpStartPosition);
             this.TabControlPanel_LevelProperties.DisabledBackColor = System.Drawing.Color.Empty;
-            this.TabControlPanel_LevelProperties.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabControlPanel_LevelProperties.Location = new System.Drawing.Point(0, 27);
+            resources.ApplyResources(this.TabControlPanel_LevelProperties, "TabControlPanel_LevelProperties");
             this.TabControlPanel_LevelProperties.Name = "TabControlPanel_LevelProperties";
-            this.TabControlPanel_LevelProperties.Padding = new System.Windows.Forms.Padding(1);
-            this.TabControlPanel_LevelProperties.Size = new System.Drawing.Size(502, 273);
             this.TabControlPanel_LevelProperties.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel_LevelProperties.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.TabControlPanel_LevelProperties.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -1049,7 +875,6 @@
             this.TabControlPanel_LevelProperties.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel_LevelProperties.Style.GradientAngle = 90;
-            this.TabControlPanel_LevelProperties.TabIndex = 1;
             this.TabControlPanel_LevelProperties.TabItem = this.TabItem1;
             // 
             // LabelX_TargetLevel
@@ -1059,12 +884,9 @@
             // 
             // 
             this.LabelX_TargetLevel.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX_TargetLevel.Location = new System.Drawing.Point(163, 4);
+            resources.ApplyResources(this.LabelX_TargetLevel, "LabelX_TargetLevel");
             this.LabelX_TargetLevel.Name = "LabelX_TargetLevel";
-            this.LabelX_TargetLevel.Size = new System.Drawing.Size(335, 20);
             this.LabelX_TargetLevel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX_TargetLevel.TabIndex = 94;
-            this.LabelX_TargetLevel.Text = "-";
             // 
             // LabelX12
             // 
@@ -1073,22 +895,15 @@
             // 
             // 
             this.LabelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX12.Location = new System.Drawing.Point(5, 4);
+            resources.ApplyResources(this.LabelX12, "LabelX12");
             this.LabelX12.Name = "LabelX12";
-            this.LabelX12.Size = new System.Drawing.Size(152, 20);
             this.LabelX12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX12.TabIndex = 94;
-            this.LabelX12.Text = "Target Level:";
             // 
             // PictureBox_BGImage
             // 
             this.PictureBox_BGImage.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox_BGImage.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.PictureBox_BGImage.Location = new System.Drawing.Point(163, 136);
+            resources.ApplyResources(this.PictureBox_BGImage, "PictureBox_BGImage");
             this.PictureBox_BGImage.Name = "PictureBox_BGImage";
-            this.PictureBox_BGImage.Size = new System.Drawing.Size(160, 133);
-            this.PictureBox_BGImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox_BGImage.TabIndex = 93;
             this.PictureBox_BGImage.TabStop = false;
             // 
             // ComboBoxEx_LM_BGMode
@@ -1098,28 +913,25 @@
             this.ComboBoxEx_LM_BGMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxEx_LM_BGMode.ForeColor = System.Drawing.Color.Black;
             this.ComboBoxEx_LM_BGMode.FormattingEnabled = true;
-            this.ComboBoxEx_LM_BGMode.ItemHeight = 15;
+            resources.ApplyResources(this.ComboBoxEx_LM_BGMode, "ComboBoxEx_LM_BGMode");
             this.ComboBoxEx_LM_BGMode.Items.AddRange(new object[] {
             this.ComboItem1,
             this.ComboItem2,
             this.ComboItem3});
-            this.ComboBoxEx_LM_BGMode.Location = new System.Drawing.Point(163, 108);
             this.ComboBoxEx_LM_BGMode.Name = "ComboBoxEx_LM_BGMode";
-            this.ComboBoxEx_LM_BGMode.Size = new System.Drawing.Size(104, 21);
             this.ComboBoxEx_LM_BGMode.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBoxEx_LM_BGMode.TabIndex = 92;
             // 
             // ComboItem1
             // 
-            this.ComboItem1.Text = "Original Image";
+            resources.ApplyResources(this.ComboItem1, "ComboItem1");
             // 
             // ComboItem2
             // 
-            this.ComboItem2.Text = "Custom Image";
+            resources.ApplyResources(this.ComboItem2, "ComboItem2");
             // 
             // ComboItem3
             // 
-            this.ComboItem3.Text = "No Image";
+            resources.ApplyResources(this.ComboItem3, "ComboItem3");
             // 
             // LabelX15
             // 
@@ -1128,12 +940,9 @@
             // 
             // 
             this.LabelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX15.Location = new System.Drawing.Point(5, 108);
+            resources.ApplyResources(this.LabelX15, "LabelX15");
             this.LabelX15.Name = "LabelX15";
-            this.LabelX15.Size = new System.Drawing.Size(152, 20);
             this.LabelX15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX15.TabIndex = 90;
-            this.LabelX15.Text = "Level Background:";
             // 
             // LabelX3
             // 
@@ -1142,12 +951,9 @@
             // 
             // 
             this.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX3.Location = new System.Drawing.Point(5, 30);
+            resources.ApplyResources(this.LabelX3, "LabelX3");
             this.LabelX3.Name = "LabelX3";
-            this.LabelX3.Size = new System.Drawing.Size(152, 20);
             this.LabelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX3.TabIndex = 3;
-            this.LabelX3.Text = "Act Selector:";
             // 
             // SwitchButton_LM_ActSelector
             // 
@@ -1156,19 +962,15 @@
             // 
             this.SwitchButton_LM_ActSelector.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.SwitchButton_LM_ActSelector.FocusCuesEnabled = false;
-            this.SwitchButton_LM_ActSelector.Location = new System.Drawing.Point(163, 30);
+            resources.ApplyResources(this.SwitchButton_LM_ActSelector, "SwitchButton_LM_ActSelector");
             this.SwitchButton_LM_ActSelector.Name = "SwitchButton_LM_ActSelector";
-            this.SwitchButton_LM_ActSelector.OffText = "Off";
             this.SwitchButton_LM_ActSelector.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SwitchButton_LM_ActSelector.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_LM_ActSelector.OnText = "On";
             this.SwitchButton_LM_ActSelector.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_LM_ActSelector.Size = new System.Drawing.Size(50, 20);
             this.SwitchButton_LM_ActSelector.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.SwitchButton_LM_ActSelector.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_LM_ActSelector.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_LM_ActSelector.SwitchWidth = 15;
-            this.SwitchButton_LM_ActSelector.TabIndex = 2;
             this.SwitchButton_LM_ActSelector.Value = true;
             this.SwitchButton_LM_ActSelector.ValueObject = "Y";
             // 
@@ -1179,12 +981,9 @@
             // 
             // 
             this.LabelX57.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX57.Location = new System.Drawing.Point(5, 82);
+            resources.ApplyResources(this.LabelX57, "LabelX57");
             this.LabelX57.Name = "LabelX57";
-            this.LabelX57.Size = new System.Drawing.Size(152, 20);
             this.LabelX57.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX57.TabIndex = 27;
-            this.LabelX57.Text = "Default Start Position:";
             // 
             // SwitchButton_LM_HardcodedCameraSettings
             // 
@@ -1193,19 +992,15 @@
             // 
             this.SwitchButton_LM_HardcodedCameraSettings.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.SwitchButton_LM_HardcodedCameraSettings.FocusCuesEnabled = false;
-            this.SwitchButton_LM_HardcodedCameraSettings.Location = new System.Drawing.Point(163, 56);
+            resources.ApplyResources(this.SwitchButton_LM_HardcodedCameraSettings, "SwitchButton_LM_HardcodedCameraSettings");
             this.SwitchButton_LM_HardcodedCameraSettings.Name = "SwitchButton_LM_HardcodedCameraSettings";
-            this.SwitchButton_LM_HardcodedCameraSettings.OffText = "Off";
             this.SwitchButton_LM_HardcodedCameraSettings.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SwitchButton_LM_HardcodedCameraSettings.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_LM_HardcodedCameraSettings.OnText = "On";
             this.SwitchButton_LM_HardcodedCameraSettings.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_LM_HardcodedCameraSettings.Size = new System.Drawing.Size(50, 20);
             this.SwitchButton_LM_HardcodedCameraSettings.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.SwitchButton_LM_HardcodedCameraSettings.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_LM_HardcodedCameraSettings.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_LM_HardcodedCameraSettings.SwitchWidth = 15;
-            this.SwitchButton_LM_HardcodedCameraSettings.TabIndex = 4;
             // 
             // LabelX4
             // 
@@ -1214,12 +1009,9 @@
             // 
             // 
             this.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX4.Location = new System.Drawing.Point(5, 56);
+            resources.ApplyResources(this.LabelX4, "LabelX4");
             this.LabelX4.Name = "LabelX4";
-            this.LabelX4.Size = new System.Drawing.Size(152, 20);
             this.LabelX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX4.TabIndex = 5;
-            this.LabelX4.Text = "Hardcoded Camera Settings:";
             // 
             // ComboBox_LM_LevelBG
             // 
@@ -1228,24 +1020,20 @@
             this.ComboBox_LM_LevelBG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_LM_LevelBG.ForeColor = System.Drawing.Color.Black;
             this.ComboBox_LM_LevelBG.FormattingEnabled = true;
-            this.ComboBox_LM_LevelBG.IntegralHeight = false;
-            this.ComboBox_LM_LevelBG.ItemHeight = 15;
+            resources.ApplyResources(this.ComboBox_LM_LevelBG, "ComboBox_LM_LevelBG");
             this.ComboBox_LM_LevelBG.Items.AddRange(new object[] {
-            "Haunted Forest",
-            "Snowy Mountains",
-            "Desert",
-            "Ocean",
-            "Underwater City",
-            "Below Clouds",
-            "Above Clouds",
-            "Cavern",
-            "Flaming Sky",
-            "Purple Clouds"});
-            this.ComboBox_LM_LevelBG.Location = new System.Drawing.Point(273, 108);
+            resources.GetString("ComboBox_LM_LevelBG.Items"),
+            resources.GetString("ComboBox_LM_LevelBG.Items1"),
+            resources.GetString("ComboBox_LM_LevelBG.Items2"),
+            resources.GetString("ComboBox_LM_LevelBG.Items3"),
+            resources.GetString("ComboBox_LM_LevelBG.Items4"),
+            resources.GetString("ComboBox_LM_LevelBG.Items5"),
+            resources.GetString("ComboBox_LM_LevelBG.Items6"),
+            resources.GetString("ComboBox_LM_LevelBG.Items7"),
+            resources.GetString("ComboBox_LM_LevelBG.Items8"),
+            resources.GetString("ComboBox_LM_LevelBG.Items9")});
             this.ComboBox_LM_LevelBG.Name = "ComboBox_LM_LevelBG";
-            this.ComboBox_LM_LevelBG.Size = new System.Drawing.Size(169, 21);
             this.ComboBox_LM_LevelBG.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ComboBox_LM_LevelBG.TabIndex = 24;
             // 
             // LabelX24
             // 
@@ -1254,16 +1042,13 @@
             // 
             // 
             this.LabelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX24.Location = new System.Drawing.Point(335, 82);
+            resources.ApplyResources(this.LabelX24, "LabelX24");
             this.LabelX24.Name = "LabelX24";
-            this.LabelX24.Size = new System.Drawing.Size(43, 20);
             this.LabelX24.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX24.TabIndex = 86;
-            this.LabelX24.Text = "Area-ID:";
             // 
             // NUD_LM_DefaultPositionYRotation
             // 
-            this.NUD_LM_DefaultPositionYRotation.Location = new System.Drawing.Point(263, 83);
+            resources.ApplyResources(this.NUD_LM_DefaultPositionYRotation, "NUD_LM_DefaultPositionYRotation");
             this.NUD_LM_DefaultPositionYRotation.Maximum = new decimal(new int[] {
             359,
             0,
@@ -1275,8 +1060,6 @@
             0,
             -2147483648});
             this.NUD_LM_DefaultPositionYRotation.Name = "NUD_LM_DefaultPositionYRotation";
-            this.NUD_LM_DefaultPositionYRotation.Size = new System.Drawing.Size(58, 20);
-            this.NUD_LM_DefaultPositionYRotation.TabIndex = 89;
             // 
             // LabelX25
             // 
@@ -1285,24 +1068,19 @@
             // 
             // 
             this.LabelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX25.Location = new System.Drawing.Point(195, 82);
+            resources.ApplyResources(this.LabelX25, "LabelX25");
             this.LabelX25.Name = "LabelX25";
-            this.LabelX25.Size = new System.Drawing.Size(62, 20);
             this.LabelX25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX25.TabIndex = 87;
-            this.LabelX25.Text = "Y- Rotation:";
             // 
             // NUD_LM_DefaultPositionAreaID
             // 
-            this.NUD_LM_DefaultPositionAreaID.Location = new System.Drawing.Point(384, 83);
+            resources.ApplyResources(this.NUD_LM_DefaultPositionAreaID, "NUD_LM_DefaultPositionAreaID");
             this.NUD_LM_DefaultPositionAreaID.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.NUD_LM_DefaultPositionAreaID.Name = "NUD_LM_DefaultPositionAreaID";
-            this.NUD_LM_DefaultPositionAreaID.Size = new System.Drawing.Size(58, 20);
-            this.NUD_LM_DefaultPositionAreaID.TabIndex = 88;
             // 
             // Button_LM_LoadLevelBG
             // 
@@ -1310,16 +1088,12 @@
             this.Button_LM_LoadLevelBG.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_LM_LoadLevelBG.FocusCuesEnabled = false;
             this.Button_LM_LoadLevelBG.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_open_folder_16px;
-            this.Button_LM_LoadLevelBG.Location = new System.Drawing.Point(273, 107);
+            resources.ApplyResources(this.Button_LM_LoadLevelBG, "Button_LM_LoadLevelBG");
             this.Button_LM_LoadLevelBG.Name = "Button_LM_LoadLevelBG";
-            this.Button_LM_LoadLevelBG.Size = new System.Drawing.Size(66, 23);
             this.Button_LM_LoadLevelBG.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_LoadLevelBG.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
             this.Button_LM_LoadLevelBG.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_LoadLevelBG.SymbolSize = 12F;
-            this.Button_LM_LoadLevelBG.TabIndex = 44;
-            this.Button_LM_LoadLevelBG.Text = "Load ...";
-            this.Button_LM_LoadLevelBG.Visible = false;
             // 
             // Button_LM_SetUpStartPosition
             // 
@@ -1327,19 +1101,17 @@
             this.Button_LM_SetUpStartPosition.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.Button_LM_SetUpStartPosition.FocusCuesEnabled = false;
             this.Button_LM_SetUpStartPosition.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_support_16px;
-            this.Button_LM_SetUpStartPosition.Location = new System.Drawing.Point(163, 81);
+            resources.ApplyResources(this.Button_LM_SetUpStartPosition, "Button_LM_SetUpStartPosition");
             this.Button_LM_SetUpStartPosition.Name = "Button_LM_SetUpStartPosition";
-            this.Button_LM_SetUpStartPosition.Size = new System.Drawing.Size(23, 23);
             this.Button_LM_SetUpStartPosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_SetUpStartPosition.SymbolColor = System.Drawing.Color.Gray;
             this.Button_LM_SetUpStartPosition.SymbolSize = 12F;
-            this.Button_LM_SetUpStartPosition.TabIndex = 85;
             // 
             // TabItem1
             // 
             this.TabItem1.AttachedControl = this.TabControlPanel_LevelProperties;
             this.TabItem1.Name = "TabItem1";
-            this.TabItem1.Text = "Level Settings";
+            resources.ApplyResources(this.TabItem1, "TabItem1");
             // 
             // TabControlPanel2
             // 
@@ -1350,11 +1122,8 @@
             this.TabControlPanel2.Controls.Add(this.SwitchButton_UseGlobalObjectBank);
             this.TabControlPanel2.Controls.Add(this.TableLayoutPanel_ObjectBankSelectorBoxes);
             this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabControlPanel2.Location = new System.Drawing.Point(0, 27);
+            resources.ApplyResources(this.TabControlPanel2, "TabControlPanel2");
             this.TabControlPanel2.Name = "TabControlPanel2";
-            this.TabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.TabControlPanel2.Size = new System.Drawing.Size(502, 273);
             this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
             this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -1362,7 +1131,6 @@
             this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel2.Style.GradientAngle = 90;
-            this.TabControlPanel2.TabIndex = 5;
             this.TabControlPanel2.TabItem = this.TabItem2;
             // 
             // ButtonX_ManageLocalObjects
@@ -1370,12 +1138,9 @@
             this.ButtonX_ManageLocalObjects.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_ManageLocalObjects.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_ManageLocalObjects.FocusCuesEnabled = false;
-            this.ButtonX_ManageLocalObjects.Location = new System.Drawing.Point(219, 28);
+            resources.ApplyResources(this.ButtonX_ManageLocalObjects, "ButtonX_ManageLocalObjects");
             this.ButtonX_ManageLocalObjects.Name = "ButtonX_ManageLocalObjects";
-            this.ButtonX_ManageLocalObjects.Size = new System.Drawing.Size(156, 23);
             this.ButtonX_ManageLocalObjects.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ManageLocalObjects.TabIndex = 98;
-            this.ButtonX_ManageLocalObjects.Text = "Manager local objects";
             // 
             // labelX5
             // 
@@ -1384,12 +1149,9 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(5, 30);
+            resources.ApplyResources(this.labelX5, "labelX5");
             this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(152, 20);
             this.labelX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.labelX5.TabIndex = 47;
-            this.labelX5.Text = "Local Model Bank:";
             // 
             // SwitchButton_UseLocalObjectBank
             // 
@@ -1398,19 +1160,15 @@
             // 
             this.SwitchButton_UseLocalObjectBank.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.SwitchButton_UseLocalObjectBank.FocusCuesEnabled = false;
-            this.SwitchButton_UseLocalObjectBank.Location = new System.Drawing.Point(163, 30);
+            resources.ApplyResources(this.SwitchButton_UseLocalObjectBank, "SwitchButton_UseLocalObjectBank");
             this.SwitchButton_UseLocalObjectBank.Name = "SwitchButton_UseLocalObjectBank";
-            this.SwitchButton_UseLocalObjectBank.OffText = "Off";
             this.SwitchButton_UseLocalObjectBank.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SwitchButton_UseLocalObjectBank.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_UseLocalObjectBank.OnText = "On";
             this.SwitchButton_UseLocalObjectBank.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_UseLocalObjectBank.Size = new System.Drawing.Size(50, 20);
             this.SwitchButton_UseLocalObjectBank.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.SwitchButton_UseLocalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_UseLocalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_UseLocalObjectBank.SwitchWidth = 15;
-            this.SwitchButton_UseLocalObjectBank.TabIndex = 46;
             // 
             // LabelX13
             // 
@@ -1419,12 +1177,9 @@
             // 
             // 
             this.LabelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LabelX13.Location = new System.Drawing.Point(5, 4);
+            resources.ApplyResources(this.LabelX13, "LabelX13");
             this.LabelX13.Name = "LabelX13";
-            this.LabelX13.Size = new System.Drawing.Size(152, 20);
             this.LabelX13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.LabelX13.TabIndex = 45;
-            this.LabelX13.Text = "Global Model Bank:";
             // 
             // SwitchButton_UseGlobalObjectBank
             // 
@@ -1432,80 +1187,79 @@
             // 
             // 
             this.SwitchButton_UseGlobalObjectBank.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SwitchButton_UseGlobalObjectBank.Enabled = false;
+            resources.ApplyResources(this.SwitchButton_UseGlobalObjectBank, "SwitchButton_UseGlobalObjectBank");
             this.SwitchButton_UseGlobalObjectBank.FocusCuesEnabled = false;
-            this.SwitchButton_UseGlobalObjectBank.Location = new System.Drawing.Point(163, 4);
             this.SwitchButton_UseGlobalObjectBank.Name = "SwitchButton_UseGlobalObjectBank";
-            this.SwitchButton_UseGlobalObjectBank.OffText = "Off";
             this.SwitchButton_UseGlobalObjectBank.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SwitchButton_UseGlobalObjectBank.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.SwitchButton_UseGlobalObjectBank.OnText = "On";
             this.SwitchButton_UseGlobalObjectBank.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.SwitchButton_UseGlobalObjectBank.Size = new System.Drawing.Size(50, 20);
             this.SwitchButton_UseGlobalObjectBank.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.SwitchButton_UseGlobalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_UseGlobalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_UseGlobalObjectBank.SwitchWidth = 15;
-            this.SwitchButton_UseGlobalObjectBank.TabIndex = 44;
             // 
             // TableLayoutPanel_ObjectBankSelectorBoxes
             // 
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.TableLayoutPanel_ObjectBankSelectorBoxes, "TableLayoutPanel_ObjectBankSelectorBoxes");
             this.TableLayoutPanel_ObjectBankSelectorBoxes.BackColor = System.Drawing.Color.Transparent;
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.ColumnCount = 3;
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.Location = new System.Drawing.Point(1, 56);
             this.TableLayoutPanel_ObjectBankSelectorBoxes.Name = "TableLayoutPanel_ObjectBankSelectorBoxes";
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.RowCount = 1;
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 216F));
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 216F));
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.Size = new System.Drawing.Size(500, 216);
-            this.TableLayoutPanel_ObjectBankSelectorBoxes.TabIndex = 43;
             // 
             // TabItem2
             // 
             this.TabItem2.AttachedControl = this.TabControlPanel2;
             this.TabItem2.Name = "TabItem2";
-            this.TabItem2.Text = "Object Banks";
+            resources.ApplyResources(this.TabItem2, "TabItem2");
             // 
             // bar1
             // 
-            this.bar1.AccessibleDescription = "DotNetBar Bar (bar1)";
-            this.bar1.AccessibleName = "DotNetBar Bar";
+            resources.ApplyResources(this.bar1, "bar1");
             this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
             this.bar1.AntiAlias = true;
-            this.bar1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bar1.IsMaximized = false;
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_LevelTools_AddLevel,
-            this.ButtonItem_LevelTools_ImportLevel,
-            this.ButtonItem_AreaTools_AddArea,
-            this.ButtonItem_AreaTools_ImportArea,
+            this.buttonItem2,
             this.ButtonItem_OpenLevelEditor,
             this.ButtonItem_RemoveItem,
             this.ButtonItem_ExportLevelArea,
-            this.ButtonItem_LevelTools_More,
-            this.ButtonItem_AreaTools_More});
-            this.bar1.Location = new System.Drawing.Point(0, 0);
+            this.buttonItem1});
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(694, 25);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bar1.TabIndex = 2;
             this.bar1.TabStop = false;
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.AutoExpandOnClick = true;
+            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem2.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.ShowSubItems = false;
+            this.buttonItem2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.labelItem1,
+            this.ButtonItem_LevelTools_AddLevel,
+            this.ButtonItem_LevelTools_ImportLevel,
+            this.labelItem2,
+            this.ButtonItem_AreaTools_AddArea,
+            this.ButtonItem_AreaTools_ImportArea});
+            resources.ApplyResources(this.buttonItem2, "buttonItem2");
+            // 
+            // labelItem1
+            // 
+            this.labelItem1.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem1.BorderType = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.labelItem1.Name = "labelItem1";
+            this.labelItem1.PaddingBottom = 1;
+            this.labelItem1.PaddingLeft = 10;
+            this.labelItem1.PaddingTop = 1;
+            this.labelItem1.SingleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            resources.ApplyResources(this.labelItem1, "labelItem1");
             // 
             // ButtonItem_LevelTools_AddLevel
             // 
             this.ButtonItem_LevelTools_AddLevel.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_LevelTools_AddLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
             this.ButtonItem_LevelTools_AddLevel.Name = "ButtonItem_LevelTools_AddLevel";
-            this.ButtonItem_LevelTools_AddLevel.Text = "Add Level";
+            resources.ApplyResources(this.ButtonItem_LevelTools_AddLevel, "ButtonItem_LevelTools_AddLevel");
             this.ButtonItem_LevelTools_AddLevel.Click += new System.EventHandler(this.Button_LM_AddNewLevel_Click);
             // 
             // ButtonItem_LevelTools_ImportLevel
@@ -1514,15 +1268,26 @@
             this.ButtonItem_LevelTools_ImportLevel.GlobalItem = false;
             this.ButtonItem_LevelTools_ImportLevel.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
             this.ButtonItem_LevelTools_ImportLevel.Name = "ButtonItem_LevelTools_ImportLevel";
-            this.ButtonItem_LevelTools_ImportLevel.Text = "Import Level";
+            resources.ApplyResources(this.ButtonItem_LevelTools_ImportLevel, "ButtonItem_LevelTools_ImportLevel");
             this.ButtonItem_LevelTools_ImportLevel.Click += new System.EventHandler(this.ButtonItem26_Click);
+            // 
+            // labelItem2
+            // 
+            this.labelItem2.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem2.BorderType = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.labelItem2.Name = "labelItem2";
+            this.labelItem2.PaddingBottom = 1;
+            this.labelItem2.PaddingLeft = 10;
+            this.labelItem2.PaddingTop = 1;
+            this.labelItem2.SingleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            resources.ApplyResources(this.labelItem2, "labelItem2");
             // 
             // ButtonItem_AreaTools_AddArea
             // 
             this.ButtonItem_AreaTools_AddArea.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_AreaTools_AddArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
             this.ButtonItem_AreaTools_AddArea.Name = "ButtonItem_AreaTools_AddArea";
-            this.ButtonItem_AreaTools_AddArea.Text = "Add Area";
+            resources.ApplyResources(this.ButtonItem_AreaTools_AddArea, "ButtonItem_AreaTools_AddArea");
             this.ButtonItem_AreaTools_AddArea.Click += new System.EventHandler(this.Button_LM_AddArea_Click);
             // 
             // ButtonItem_AreaTools_ImportArea
@@ -1531,7 +1296,7 @@
             this.ButtonItem_AreaTools_ImportArea.GlobalItem = false;
             this.ButtonItem_AreaTools_ImportArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
             this.ButtonItem_AreaTools_ImportArea.Name = "ButtonItem_AreaTools_ImportArea";
-            this.ButtonItem_AreaTools_ImportArea.Text = "Import Area";
+            resources.ApplyResources(this.ButtonItem_AreaTools_ImportArea, "ButtonItem_AreaTools_ImportArea");
             this.ButtonItem_AreaTools_ImportArea.Click += new System.EventHandler(this.ButtonItem_ImportArea_Click);
             // 
             // ButtonItem_OpenLevelEditor
@@ -1539,7 +1304,7 @@
             this.ButtonItem_OpenLevelEditor.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_OpenLevelEditor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
             this.ButtonItem_OpenLevelEditor.Name = "ButtonItem_OpenLevelEditor";
-            this.ButtonItem_OpenLevelEditor.Text = "Level Editor";
+            resources.ApplyResources(this.ButtonItem_OpenLevelEditor, "ButtonItem_OpenLevelEditor");
             this.ButtonItem_OpenLevelEditor.Click += new System.EventHandler(this.LM_OpenAreaEditor);
             // 
             // ButtonItem_RemoveItem
@@ -1551,7 +1316,7 @@
             this.ButtonItem_RemoveItem.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ButtonItem_RemoveItem.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem_RemoveItem.SymbolSize = 12F;
-            this.ButtonItem_RemoveItem.Text = "Remove";
+            resources.ApplyResources(this.ButtonItem_RemoveItem, "ButtonItem_RemoveItem");
             this.ButtonItem_RemoveItem.Click += new System.EventHandler(this.ButtonItem_RemoveItem_Click);
             // 
             // ButtonItem_ExportLevelArea
@@ -1559,23 +1324,39 @@
             this.ButtonItem_ExportLevelArea.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.ButtonItem_ExportLevelArea.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
             this.ButtonItem_ExportLevelArea.Name = "ButtonItem_ExportLevelArea";
-            this.ButtonItem_ExportLevelArea.Text = "Export";
+            resources.ApplyResources(this.ButtonItem_ExportLevelArea, "ButtonItem_ExportLevelArea");
             this.ButtonItem_ExportLevelArea.Click += new System.EventHandler(this.ButtonItem_ExportLevelArea_Click);
             // 
-            // ButtonItem_LevelTools_More
+            // buttonItem1
             // 
-            this.ButtonItem_LevelTools_More.AutoExpandOnClick = true;
-            this.ButtonItem_LevelTools_More.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_LevelTools_More.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
-            this.ButtonItem_LevelTools_More.Name = "ButtonItem_LevelTools_More";
-            this.ButtonItem_LevelTools_More.ShowSubItems = false;
-            this.ButtonItem_LevelTools_More.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem1.AutoExpandOnClick = true;
+            this.buttonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem1.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.ShowSubItems = false;
+            this.buttonItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.labelItem3,
             this.ButtonItem_LevelTools_ChangeLevelID,
             this.ButtonItem_LevelTools_ChangeLevelName,
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19,
             this.ButtonItem_LevelTools_EditLevelscript,
-            this.ButtonItem_LevelTools_CopyRomAddress});
-            this.ButtonItem_LevelTools_More.Text = "More";
+            this.ButtonItem_LevelTools_CopyRomAddress,
+            this.labelItem4,
+            this.ButtonItem_AreaTools_ChangeAreaID,
+            this.ButtonItem_AreaTools_EditAreaLevelScript,
+            this.ButtonItem_AreaTools_EditGeolayoutScript});
+            resources.ApplyResources(this.buttonItem1, "buttonItem1");
+            // 
+            // labelItem3
+            // 
+            this.labelItem3.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem3.BorderType = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.labelItem3.Name = "labelItem3";
+            this.labelItem3.PaddingBottom = 1;
+            this.labelItem3.PaddingLeft = 10;
+            this.labelItem3.PaddingTop = 1;
+            this.labelItem3.SingleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            resources.ApplyResources(this.labelItem3, "labelItem3");
             // 
             // ButtonItem_LevelTools_ChangeLevelID
             // 
@@ -1584,21 +1365,21 @@
             this.ButtonItem_LevelTools_ChangeLevelID.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonItem_LevelTools_ChangeLevelID.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem_LevelTools_ChangeLevelID.SymbolSize = 12F;
-            this.ButtonItem_LevelTools_ChangeLevelID.Text = "Change Level ID";
+            resources.ApplyResources(this.ButtonItem_LevelTools_ChangeLevelID, "ButtonItem_LevelTools_ChangeLevelID");
             this.ButtonItem_LevelTools_ChangeLevelID.Click += new System.EventHandler(this.ButtonItem_ExportLevel_Click);
             // 
             // ButtonItem_LevelTools_ChangeLevelName
             // 
             this.ButtonItem_LevelTools_ChangeLevelName.GlobalItem = false;
             this.ButtonItem_LevelTools_ChangeLevelName.Name = "ButtonItem_LevelTools_ChangeLevelName";
-            this.ButtonItem_LevelTools_ChangeLevelName.Text = "Change Level Name";
+            resources.ApplyResources(this.ButtonItem_LevelTools_ChangeLevelName, "ButtonItem_LevelTools_ChangeLevelName");
             this.ButtonItem_LevelTools_ChangeLevelName.Click += new System.EventHandler(this.ButtonItem_ExportLevel_Click);
             // 
             // ButtonItem_LevelTools_ChangeSizeOfBank0x19
             // 
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.GlobalItem = false;
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Name = "ButtonItem_LevelTools_ChangeSizeOfBank0x19";
-            this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Text = "Change Size of Bank 0x19";
+            resources.ApplyResources(this.ButtonItem_LevelTools_ChangeSizeOfBank0x19, "ButtonItem_LevelTools_ChangeSizeOfBank0x19");
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Click += new System.EventHandler(this.ButtonItem_ExportLevel_Click);
             // 
             // ButtonItem_LevelTools_EditLevelscript
@@ -1610,7 +1391,7 @@
             this.ButtonItem_LevelTools_EditLevelscript.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonItem_LevelTools_EditLevelscript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem_LevelTools_EditLevelscript.SymbolSize = 12F;
-            this.ButtonItem_LevelTools_EditLevelscript.Text = "Edit Level Script";
+            resources.ApplyResources(this.ButtonItem_LevelTools_EditLevelscript, "ButtonItem_LevelTools_EditLevelscript");
             this.ButtonItem_LevelTools_EditLevelscript.Click += new System.EventHandler(this.ButtonItem15_Click);
             // 
             // ButtonItem_LevelTools_CopyRomAddress
@@ -1618,27 +1399,25 @@
             this.ButtonItem_LevelTools_CopyRomAddress.BeginGroup = true;
             this.ButtonItem_LevelTools_CopyRomAddress.GlobalItem = false;
             this.ButtonItem_LevelTools_CopyRomAddress.Name = "ButtonItem_LevelTools_CopyRomAddress";
-            this.ButtonItem_LevelTools_CopyRomAddress.Text = "Copy ROM Address";
+            resources.ApplyResources(this.ButtonItem_LevelTools_CopyRomAddress, "ButtonItem_LevelTools_CopyRomAddress");
             this.ButtonItem_LevelTools_CopyRomAddress.Click += new System.EventHandler(this.ButtonItem15_Click);
             // 
-            // ButtonItem_AreaTools_More
+            // labelItem4
             // 
-            this.ButtonItem_AreaTools_More.AutoExpandOnClick = true;
-            this.ButtonItem_AreaTools_More.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_AreaTools_More.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_expand_arrow_16px;
-            this.ButtonItem_AreaTools_More.Name = "ButtonItem_AreaTools_More";
-            this.ButtonItem_AreaTools_More.ShowSubItems = false;
-            this.ButtonItem_AreaTools_More.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_AreaTools_ChangeAreaID,
-            this.ButtonItem_AreaTools_EditAreaLevelScript,
-            this.ButtonItem_AreaTools_EditGeolayoutScript});
-            this.ButtonItem_AreaTools_More.Text = "More";
+            this.labelItem4.BorderSide = DevComponents.DotNetBar.eBorderSide.Bottom;
+            this.labelItem4.BorderType = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.labelItem4.Name = "labelItem4";
+            this.labelItem4.PaddingBottom = 1;
+            this.labelItem4.PaddingLeft = 10;
+            this.labelItem4.PaddingTop = 1;
+            this.labelItem4.SingleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            resources.ApplyResources(this.labelItem4, "labelItem4");
             // 
             // ButtonItem_AreaTools_ChangeAreaID
             // 
             this.ButtonItem_AreaTools_ChangeAreaID.GlobalItem = false;
             this.ButtonItem_AreaTools_ChangeAreaID.Name = "ButtonItem_AreaTools_ChangeAreaID";
-            this.ButtonItem_AreaTools_ChangeAreaID.Text = "Change ID";
+            resources.ApplyResources(this.ButtonItem_AreaTools_ChangeAreaID, "ButtonItem_AreaTools_ChangeAreaID");
             this.ButtonItem_AreaTools_ChangeAreaID.Click += new System.EventHandler(this.ButtonItem_ChangeAreaID_Click);
             // 
             // ButtonItem_AreaTools_EditAreaLevelScript
@@ -1650,7 +1429,7 @@
             this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem_AreaTools_EditAreaLevelScript.SymbolSize = 12F;
-            this.ButtonItem_AreaTools_EditAreaLevelScript.Text = "Edit Level Script";
+            resources.ApplyResources(this.ButtonItem_AreaTools_EditAreaLevelScript, "ButtonItem_AreaTools_EditAreaLevelScript");
             this.ButtonItem_AreaTools_EditAreaLevelScript.Click += new System.EventHandler(this.ButtonItem_EditAreaLevelScript_Click);
             // 
             // ButtonItem_AreaTools_EditGeolayoutScript
@@ -1661,18 +1440,17 @@
             this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolColor = System.Drawing.Color.Goldenrod;
             this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonItem_AreaTools_EditGeolayoutScript.SymbolSize = 12F;
-            this.ButtonItem_AreaTools_EditGeolayoutScript.Text = "Edit Geo Layout Script";
+            resources.ApplyResources(this.ButtonItem_AreaTools_EditGeolayoutScript, "ButtonItem_AreaTools_EditGeolayoutScript");
             this.ButtonItem_AreaTools_EditGeolayoutScript.Click += new System.EventHandler(this.ButtonItem2_EditGeolayoutScript_Click);
             // 
             // Tab_LevelManagerV2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel_Tools);
             this.Controls.Add(this.panel_SideMenu);
             this.Controls.Add(this.bar1);
             this.Name = "Tab_LevelManagerV2";
-            this.Size = new System.Drawing.Size(694, 546);
             ((System.ComponentModel.ISupportInitialize)(this.LevelsTree)).EndInit();
             this.panel_SideMenu.ResumeLayout(false);
             this.panel_Tools.ResumeLayout(false);
@@ -1708,13 +1486,11 @@
         private DevComponents.DotNetBar.ButtonItem ButtonItem_OpenLevelEditor;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportLevelArea;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_RemoveItem;
-        private DevComponents.DotNetBar.ButtonItem ButtonItem_LevelTools_More;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_LevelTools_EditLevelscript;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_LevelTools_ChangeLevelName;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_LevelTools_ChangeSizeOfBank0x19;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_LevelTools_CopyRomAddress;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_LevelTools_ChangeLevelID;
-        private DevComponents.DotNetBar.ButtonItem ButtonItem_AreaTools_More;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_AreaTools_ChangeAreaID;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_AreaTools_EditAreaLevelScript;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_AreaTools_EditGeolayoutScript;
@@ -1803,5 +1579,11 @@
         private DevComponents.DotNetBar.Controls.SwitchButton SwitchButton_UseGlobalObjectBank;
         private System.Windows.Forms.TableLayoutPanel TableLayoutPanel_ObjectBankSelectorBoxes;
         private DevComponents.DotNetBar.TabItem TabItem2;
+        private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.LabelItem labelItem1;
+        private DevComponents.DotNetBar.LabelItem labelItem2;
+        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.LabelItem labelItem3;
+        private DevComponents.DotNetBar.LabelItem labelItem4;
     }
 }

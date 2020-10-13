@@ -745,6 +745,13 @@
     <EmbeddedResource Update="RomManager\GUI\Main Form\MainForm.de.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManagerV2 - Kopieren.resx">
+      <GenFilePath>%(RecursiveDir)%(Filename)$(ExtrasDefaultDesignerFileSuffix)$(DefaultLanguageSourceExtension)</GenFilePath>
+      <_SdkHasLangId>$([System.Text.RegularExpressions.Regex]::IsMatch('%(FileName)', '$(_SdkLangIdRegEx)'))</_SdkHasLangId>
+      <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
+      <LastGenOutput>%(Filename)$(ExtrasDefaultDesignerFileSuffix)$(DefaultLanguageSourceExtension)</LastGenOutput>
+      <Generator>$(_SdkEmbeddedResourceCodeGeneratorTool)</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.resx">
       <DependentUpon>TextProfileEditor.cs</DependentUpon>
     </EmbeddedResource>
