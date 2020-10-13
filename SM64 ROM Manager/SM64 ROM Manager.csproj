@@ -634,9 +634,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="RomManager\GUI\Settings\Form_Settings.Designer.cs">
-      <DependentUpon>Form_Settings.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
+      <DependentUpon>Form_Settings.cs</DependentUpon>
     </Compile>
     <Compile Update="RomManager\GUI\Settings\Form_Settings.cs">
       <SubType>Form</SubType>
@@ -1030,8 +1028,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="RomManager\GUI\Settings\Form_Settings.resx">
       <DependentUpon>Form_Settings.cs</DependentUpon>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Form_Settings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="RomManager\GUI\Tools\Form_SM64TextConverter.resx">
       <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
