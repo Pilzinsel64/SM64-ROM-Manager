@@ -63,8 +63,14 @@ namespace SM64_ROM_Manager
             Slider_AreaReverbLevel.Maximum = reverbLevels.Length - 1;
 
             // Init nodes
-            nCustomLevels = new Node("Custom Levels");
-            nVanillaLevels = new Node("Vanilla Levels");
+            nCustomLevels = new Node("Custom Levels")
+            {
+                Expanded = true
+            };
+            nVanillaLevels = new Node("Vanilla Levels")
+            {
+                Expanded = true
+            };
             LevelsTree.Nodes.AddRange(new[] { nCustomLevels/*, nVanillaLevels*/ });
         }
 
@@ -146,7 +152,7 @@ namespace SM64_ROM_Manager
                 var n = LevelsTree.SelectedNode;
                 int selIndex;
 
-                if (n is object && n.Parent?.Parent == nCustomLevels)
+                if (n?.Tag is object && (int)n.Tag == 1)
                     selIndex = n.Index;
                 else
                     selIndex = -1;
@@ -160,17 +166,15 @@ namespace SM64_ROM_Manager
             get
             {
                 var n = LevelsTree.SelectedNode;
-                int selIndex;
+                int selIndex = -1;
 
-                if (n is object && n.Parent is object)
+                if (n?.Tag is object)
                 {
-                    if (n.Parent == nCustomLevels)
+                    if ((int)n.Tag == 0)
                         selIndex = n.Index;
-                    else
+                    else if ((int)n.Tag == 1)
                         selIndex = n.Parent.Index;
                 }
-                else
-                    selIndex = -1;
 
                 return selIndex;
             }
@@ -457,7 +461,10 @@ namespace SM64_ROM_Manager
             // Load all Levels
             foreach (ushort lvlID in levelIDs)
             {
-                var n = new Node(GetLevelDisplayName(lvlID));
+                var n = new Node(GetLevelDisplayName(lvlID))
+                {
+                    Tag = 0
+                };
 
                 // Load areas
                 LoadAreaList(n, levelIDs.IndexOf(lvlID));
@@ -475,7 +482,10 @@ namespace SM64_ROM_Manager
             var areaIDs = Controller.GetUsedLevelAreaIDs((ushort)levelIndex);
             foreach (byte areaID in areaIDs)
             {
-                var n = new Node(Form_Main_Resources.Text_Area + " " + areaID.ToString());
+                var n = new Node(Form_Main_Resources.Text_Area + " " + areaID.ToString())
+                {
+                    Tag = 1
+                };
 
                 // Add item
                 nLevel.Nodes.Add(n);
@@ -521,7 +531,10 @@ namespace SM64_ROM_Manager
 
         private void AddLevelToList(ushort levelID)
         {
-            var n = new Node(Controller.GetLevelName(levelID));
+            var n = new Node(Controller.GetLevelName(levelID))
+            {
+                Tag = 0
+            };
             LevelsTree.Nodes.Add(n);
             LevelsTree.SelectedNode = n;
             n.EnsureVisible();
@@ -530,7 +543,10 @@ namespace SM64_ROM_Manager
         private void AddAreaToList(int levelIndex, byte areaIndex)
         {
             var id = Controller.GetLevelAreaID(levelIndex, areaIndex);
-            var n = new Node(Form_Main_Resources.Text_Area + " " + areaIndex.ToString());
+            var n = new Node(Form_Main_Resources.Text_Area + " " + areaIndex.ToString())
+            {
+                Tag = 1
+            };
             nCustomLevels.Nodes[levelIndex].Nodes.Add(n);
         }
 
@@ -711,38 +727,35 @@ namespace SM64_ROM_Manager
 
         private void LoadLevelSettings(int levelIndex)
         {
-            if (!loadingLevel)
+            if (!loadingLevel && !Controller.IsLoadingRom && levelIndex != -1)
             {
-                if (!Controller.IsLoadingRom)
+                loadingLevel = true;
+                Controller.StatusText = Form_Main_Resources.Status_LoadingLevel;
+                var info = Controller.GetLevelSettings(levelIndex);
+
+                // Load Levelsettings
+                LoadLevelObjectBankDataSettings(levelIndex);
+                SwitchButton_LM_ActSelector.Value = info.enableActSelector;
+                SwitchButton_LM_HardcodedCameraSettings.Value = info.enableHardcodedCamera;
+
+                // Default Start Psoition
+                if (info.hasDefStartPos)
                 {
-                    loadingLevel = true;
-                    Controller.StatusText = Form_Main_Resources.Status_LoadingLevel;
-                    var info = Controller.GetLevelSettings(levelIndex);
-
-                    // Load Levelsettings
-                    LoadLevelObjectBankDataSettings(levelIndex);
-                    SwitchButton_LM_ActSelector.Value = info.enableActSelector;
-                    SwitchButton_LM_HardcodedCameraSettings.Value = info.enableHardcodedCamera;
-
-                    // Default Start Psoition
-                    if (info.hasDefStartPos)
-                    {
-                        NUD_LM_DefaultPositionAreaID.Value = info.defStartPosAreaID;
-                        NUD_LM_DefaultPositionYRotation.Value = info.defStartPosYRot;
-                    }
-
-                    // Load Level Bachground
-                    ComboBoxEx_LM_BGMode.SelectedIndex = info.bgMode;
-                    UpdateBackgroundControlsVisible(info.bgMode);
-                    PictureBox_BGImage.Image = info.bgImage;
-                    if (info.bgMode != 1 && info.bgOriginal != SM64Lib.Geolayout.BackgroundIDs.Custom)
-                        ComboBox_LM_LevelBG.SelectedIndex = General.GetBackgroundIndexOfID(info.bgOriginal);
-
-                    // Load Level Name
-                    LabelX_TargetLevel.Text = Controller.GetLevelName(levelIndex);
-                    Controller.StatusText = string.Empty;
-                    loadingLevel = false;
+                    NUD_LM_DefaultPositionAreaID.Value = info.defStartPosAreaID;
+                    NUD_LM_DefaultPositionYRotation.Value = info.defStartPosYRot;
                 }
+
+                // Load Level Bachground
+                ComboBoxEx_LM_BGMode.SelectedIndex = info.bgMode;
+                UpdateBackgroundControlsVisible(info.bgMode);
+                PictureBox_BGImage.Image = info.bgImage;
+                if (info.bgMode != 1 && info.bgOriginal != SM64Lib.Geolayout.BackgroundIDs.Custom)
+                    ComboBox_LM_LevelBG.SelectedIndex = General.GetBackgroundIndexOfID(info.bgOriginal);
+
+                // Load Level Name
+                LabelX_TargetLevel.Text = Controller.GetLevelName(levelIndex);
+                Controller.StatusText = string.Empty;
+                loadingLevel = false;
             }
         }
 

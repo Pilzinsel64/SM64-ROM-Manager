@@ -134,9 +134,9 @@
             this.ButtonItem_ExportLevelArea = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_More = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_ChangeLevelID = new DevComponents.DotNetBar.ButtonItem();
-            this.ButtonItem_LevelTools_EditLevelscript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_ChangeLevelName = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_LevelTools_EditLevelscript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_LevelTools_CopyRomAddress = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_More = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_ChangeAreaID = new DevComponents.DotNetBar.ButtonItem();
@@ -170,6 +170,8 @@
             this.LevelsTree.BackgroundStyle.Class = "TreeBorderKey";
             this.LevelsTree.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.LevelsTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LevelsTree.DragDropEnabled = false;
+            this.LevelsTree.DragDropNodeCopyEnabled = false;
             this.LevelsTree.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.LevelsTree.Location = new System.Drawing.Point(0, 0);
             this.LevelsTree.Name = "LevelsTree";
@@ -223,7 +225,6 @@
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel4);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel5);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel6);
-            this.TabControl_AreaProperties.Enabled = false;
             this.TabControl_AreaProperties.ForeColor = System.Drawing.Color.Black;
             this.TabControl_AreaProperties.Location = new System.Drawing.Point(-4, 296);
             this.TabControl_AreaProperties.Name = "TabControl_AreaProperties";
@@ -237,6 +238,7 @@
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem5);
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem6);
             this.TabControl_AreaProperties.Text = "TabControl2";
+            this.TabControl_AreaProperties.Visible = false;
             // 
             // TabControlPanel4
             // 
@@ -294,7 +296,6 @@
             this.RangeSlider_CameraFrustrum.TabIndex = 105;
             this.RangeSlider_CameraFrustrum.TicksPosition = DevComponents.DotNetBar.eTicksPosition.TopAndBottom;
             this.RangeSlider_CameraFrustrum.TicksVisible = false;
-            this.RangeSlider_CameraFrustrum.Value = new DevComponents.DotNetBar.RangeValue(100, 30000);
             // 
             // labelX17
             // 
@@ -1002,7 +1003,6 @@
             this.TabControl_LM_Level.CanReorderTabs = false;
             this.TabControl_LM_Level.Controls.Add(this.TabControlPanel_LevelProperties);
             this.TabControl_LM_Level.Controls.Add(this.TabControlPanel2);
-            this.TabControl_LM_Level.Enabled = false;
             this.TabControl_LM_Level.ForeColor = System.Drawing.Color.Black;
             this.TabControl_LM_Level.Location = new System.Drawing.Point(-4, -10);
             this.TabControl_LM_Level.Name = "TabControl_LM_Level";
@@ -1015,6 +1015,7 @@
             this.TabControl_LM_Level.Tabs.Add(this.TabItem1);
             this.TabControl_LM_Level.Tabs.Add(this.TabItem2);
             this.TabControl_LM_Level.Text = "TabControl1";
+            this.TabControl_LM_Level.Visible = false;
             // 
             // TabControlPanel_LevelProperties
             // 
@@ -1586,18 +1587,6 @@
             this.ButtonItem_LevelTools_ChangeLevelID.Text = "Change Level ID";
             this.ButtonItem_LevelTools_ChangeLevelID.Click += new System.EventHandler(this.ButtonItem_ExportLevel_Click);
             // 
-            // ButtonItem_LevelTools_EditLevelscript
-            // 
-            this.ButtonItem_LevelTools_EditLevelscript.BeginGroup = true;
-            this.ButtonItem_LevelTools_EditLevelscript.GlobalItem = false;
-            this.ButtonItem_LevelTools_EditLevelscript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
-            this.ButtonItem_LevelTools_EditLevelscript.Name = "ButtonItem_LevelTools_EditLevelscript";
-            this.ButtonItem_LevelTools_EditLevelscript.SymbolColor = System.Drawing.Color.Goldenrod;
-            this.ButtonItem_LevelTools_EditLevelscript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.ButtonItem_LevelTools_EditLevelscript.SymbolSize = 12F;
-            this.ButtonItem_LevelTools_EditLevelscript.Text = "Edit Level Script";
-            this.ButtonItem_LevelTools_EditLevelscript.Click += new System.EventHandler(this.ButtonItem15_Click);
-            // 
             // ButtonItem_LevelTools_ChangeLevelName
             // 
             this.ButtonItem_LevelTools_ChangeLevelName.GlobalItem = false;
@@ -1611,6 +1600,18 @@
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Name = "ButtonItem_LevelTools_ChangeSizeOfBank0x19";
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Text = "Change Size of Bank 0x19";
             this.ButtonItem_LevelTools_ChangeSizeOfBank0x19.Click += new System.EventHandler(this.ButtonItem_ExportLevel_Click);
+            // 
+            // ButtonItem_LevelTools_EditLevelscript
+            // 
+            this.ButtonItem_LevelTools_EditLevelscript.BeginGroup = true;
+            this.ButtonItem_LevelTools_EditLevelscript.GlobalItem = false;
+            this.ButtonItem_LevelTools_EditLevelscript.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.ButtonItem_LevelTools_EditLevelscript.Name = "ButtonItem_LevelTools_EditLevelscript";
+            this.ButtonItem_LevelTools_EditLevelscript.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.ButtonItem_LevelTools_EditLevelscript.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonItem_LevelTools_EditLevelscript.SymbolSize = 12F;
+            this.ButtonItem_LevelTools_EditLevelscript.Text = "Edit Level Script";
+            this.ButtonItem_LevelTools_EditLevelscript.Click += new System.EventHandler(this.ButtonItem15_Click);
             // 
             // ButtonItem_LevelTools_CopyRomAddress
             // 
