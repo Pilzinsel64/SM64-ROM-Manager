@@ -1028,6 +1028,7 @@
     </EmbeddedResource>
     <EmbeddedResource Update="RomManager\GUI\Settings\Form_Settings.resx">
       <DependentUpon>Form_Settings.cs</DependentUpon>
+      <AutoGen>False</AutoGen>
     </EmbeddedResource>
     <EmbeddedResource Update="RomManager\GUI\Tools\Form_SM64TextConverter.resx">
       <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
