@@ -1745,6 +1745,23 @@
             <param name="rommgr">The destinated ROM Manager where the level/areas should be added.</param>
             <param name="exportPath">The path to the level export file to import from.</param>
         </member>
+        <member name="F:SM64_ROM_Manager.GUI.Main_Form.Tab_LevelManagerV2.components">
+            <summary> 
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:SM64_ROM_Manager.GUI.Main_Form.Tab_LevelManagerV2.Dispose(System.Boolean)">
+            <summary> 
+            Verwendete Ressourcen bereinigen.
+            </summary>
+            <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+        </member>
+        <member name="M:SM64_ROM_Manager.GUI.Main_Form.Tab_LevelManagerV2.InitializeComponent">
+            <summary> 
+            Erforderliche Methode für die Designerunterstützung. 
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
         <member name="F:SM64_ROM_Manager.BehaviorBankManager.components">
             <summary>
             Required designer variable.
