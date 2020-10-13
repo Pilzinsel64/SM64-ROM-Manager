@@ -14,7 +14,7 @@ namespace SM64_ROM_Manager.SettingsManager
         public TextManagerSettingsStruc TextManager { get; set; }
         public NetworkSettingsStruc Network { get; set; }
         public WindowSettingsStruc WindowSettings { get; set; }
-        public LevelManagerSettingsStruc LevelManagerSettings { get; set; }
+        public LevelManagerSettingsStruc LevelManager { get; set; }
 
         public override void ResetValues()
         {
@@ -48,9 +48,9 @@ namespace SM64_ROM_Manager.SettingsManager
             if (WindowSettings is null)
                 WindowSettings = new WindowSettingsStruc();
             WindowSettings.ResetValues();
-            if (LevelManagerSettings is null)
-                LevelManagerSettings = new LevelManagerSettingsStruc();
-            LevelManagerSettings.ResetValues();
+            if (LevelManager is null)
+                LevelManager = new LevelManagerSettingsStruc();
+            LevelManager.ResetValues();
         }
     }
 }

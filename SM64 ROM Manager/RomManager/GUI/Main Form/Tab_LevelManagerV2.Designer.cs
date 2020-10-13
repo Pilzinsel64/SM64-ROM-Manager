@@ -1,4 +1,4 @@
-﻿namespace SM64_ROM_Manager.GUI.Main_Form
+﻿namespace SM64_ROM_Manager
 {
     partial class Tab_LevelManagerV2
     {

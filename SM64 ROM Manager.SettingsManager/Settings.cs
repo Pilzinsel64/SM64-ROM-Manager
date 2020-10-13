@@ -152,9 +152,9 @@ namespace SM64_ROM_Manager.SettingsManager
             }
         }
 
-        public static LevelManagerSettingsStruc LevelManagerSettings
+        public static LevelManagerSettingsStruc LevelManager
         {
-            get => Instance.LevelManagerSettings;
+            get => Instance.LevelManager;
         }
 
     }

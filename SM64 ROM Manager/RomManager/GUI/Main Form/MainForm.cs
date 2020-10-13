@@ -112,6 +112,9 @@ namespace SM64_ROM_Manager
             tabTextManager.TMController = Controller.TextManagerController;
             tabMusicManager.Controller = Controller;
 
+            // Init level manager
+            tabLevelManager.InitialiseTab(Settings.LevelManager.UseNewGUI);
+            
             // Set my style
             UpdateAmbientColors();
             UpdatedAmbientColors += (_, __)

@@ -17,8 +17,9 @@ using DevComponents.DotNetBar;
 using SM64Lib.Objects.ObjectBanks.Data;
 using Microsoft.VisualBasic.CompilerServices;
 using SM64_ROM_Manager.My.Resources;
+using Z.Core.Extensions;
 
-namespace SM64_ROM_Manager.GUI.Main_Form
+namespace SM64_ROM_Manager
 {
     public partial class Tab_LevelManagerV2 : UserControl
     {
@@ -447,7 +448,7 @@ namespace SM64_ROM_Manager.GUI.Main_Form
 
         private void LoadLevelList()
         {
-            var levelIDs = Controller.GetUsedLevelIDs();
+            var levelIDs = Controller.GetUsedLevelIDs().ToArray();
 
             // Clear Items
             LevelsTree.BeginUpdate();
@@ -459,7 +460,7 @@ namespace SM64_ROM_Manager.GUI.Main_Form
                 var n = new Node(GetLevelDisplayName(lvlID));
 
                 // Load areas
-                LoadAreaList(n, lvlID);
+                LoadAreaList(n, levelIDs.IndexOf(lvlID));
 
                 // Add item
                 nCustomLevels.Nodes.Add(n);
@@ -469,9 +470,9 @@ namespace SM64_ROM_Manager.GUI.Main_Form
             LevelsTree.EndUpdate();
         }
 
-        private void LoadAreaList(Node nLevel, int levelID)
+        private void LoadAreaList(Node nLevel, int levelIndex)
         {
-            var areaIDs = Controller.GetUsedLevelAreaIDs(Conversions.ToUShort(CurrentLevelIndex));
+            var areaIDs = Controller.GetUsedLevelAreaIDs((ushort)levelIndex);
             foreach (byte areaID in areaIDs)
             {
                 var n = new Node(Form_Main_Resources.Text_Area + " " + areaID.ToString());
