@@ -256,411 +256,411 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Coins Settings\Coins Settings.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Coins Settings\Coins Settings.Designer.cs">
       <DependentUpon>Coins Settings.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Coins Settings\Coins Settings.cs">
+    <Compile Update="Rom Manager\GUI\Coins Settings\Coins Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\DataEditor.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\DataEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\DataEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\DataEditor.Designer.cs">
       <DependentUpon>DataEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\FormScriptDumps.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\FormScriptDumps.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\FormScriptDumps.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\FormScriptDumps.Designer.cs">
       <DependentUpon>FormScriptDumps.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\InformationListsDialog.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\InformationListsDialog.Designer.cs">
       <DependentUpon>InformationListsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\InformationListsDialog.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\InformationListsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\TextureEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\TextureEditor.Designer.cs">
       <DependentUpon>TextureEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\TextureEditor.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\TextureEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankDataEditor.Designer.cs">
       <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankDataEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.Designer.cs">
       <DependentUpon>ObjectBankSelectorBox.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.cs">
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Text Manager\TextProfileEditor.Designer.cs">
       <DependentUpon>TextProfileEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Text Manager\TextProfileEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.Designer.cs">
       <DependentUpon>BehaviorBankManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.Designer.cs">
       <DependentUpon>BehaviorParameterInfoEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.Designer.cs">
       <DependentUpon>CustomAsmCodeSelector.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.Designer.cs">
       <DependentUpon>AsmToHexConverter.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.Designer.cs">
       <DependentUpon>ChangeRomAreaForAsmCodesDialog.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.Designer.cs">
       <DependentUpon>CustomAsmCodesManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.Designer.cs">
       <DependentUpon>CustomObjectImportDialog.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.Designer.cs">
       <DependentUpon>CustomBehaviorSelector.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomModelSelector.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomModelSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomModelSelector.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomModelSelector.Designer.cs">
       <DependentUpon>CustomModelSelector.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.cs">
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.Designer.cs">
       <DependentUpon>CustomObjectImportPropsEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.Designer.cs">
       <DependentUpon>CustomObjectsDatabaseViewer.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.Designer.cs">
       <DependentUpon>ObjectShadowEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Model Bank Manager\AddressListEditor.Designer.cs">
       <DependentUpon>AddressListEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Model Bank Manager\AddressListEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Model Bank Manager\ModelBankManager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Model Bank Manager\ModelBankManager.Designer.cs">
       <DependentUpon>ModelBankManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Model Bank Manager\ModelBankManager.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Model Bank Manager\ModelBankManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\ImportLevelDialog.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ImportLevelDialog.Designer.cs">
       <DependentUpon>ImportLevelDialog.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\ImportLevelDialog.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ImportLevelDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\ApplyStyleMgrStyle.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\ApplyStyleMgrStyle.Designer.cs">
       <DependentUpon>ApplyStyleMgrStyle.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\ApplyStyleMgrStyle.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\ApplyStyleMgrStyle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\MainForm.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\MainForm.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_General.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_General.Designer.cs">
       <DependentUpon>Tab_General.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_General.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_General.cs">
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_LevelManager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManager.Designer.cs">
       <DependentUpon>Tab_LevelManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_LevelManager.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManager.cs">
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.Designer.cs">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.cs">
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_MusicManager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_MusicManager.Designer.cs">
       <DependentUpon>Tab_MusicManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_MusicManager.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_MusicManager.cs">
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_TextManager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_TextManager.Designer.cs">
       <DependentUpon>Tab_TextManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Tab_TextManager.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Tab_TextManager.cs">
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.Designer.cs">
       <DependentUpon>ScrollTexEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Settings\LevelEditorInputSettings.cs">
+    <Compile Update="Rom Manager\GUI\Settings\LevelEditorInputSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.Designer.cs">
       <DependentUpon>CustomObjectsManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\HexEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\HexEditor.Designer.cs">
       <DependentUpon>HexEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\HexEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\HexEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\HUDOptions\HUDOptionsForm.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsForm.Designer.cs">
       <DependentUpon>HUDOptionsForm.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\HUDOptions\HUDOptionsForm.cs">
+    <Compile Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\HUDOptions\HUDOptionsLangRes.de.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsLangRes.de.Designer.cs">
       <DependentUpon>HUDOptionsLangRes.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\HUDOptions\HUDOptionsLangRes.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HUDOptionsLangRes.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\ItemBoxContentEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\ItemBoxContentEditor.Designer.cs">
       <DependentUpon>ItemBoxContentEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\ItemBoxContentEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\ItemBoxContentEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\PluginInstallerForm.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\PluginInstallerForm.Designer.cs">
       <DependentUpon>PluginInstallerForm.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\PluginInstallerForm.cs">
+    <Compile Update="Rom Manager\GUI\Tools\PluginInstallerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\RGB Editor\RGBEditInfoEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\RGB Editor\RGBEditInfoEditor.Designer.cs">
       <DependentUpon>RGBEditInfoEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\RGB Editor\RGBEditInfoEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\RGB Editor\RGBEditInfoEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\RGB Editor\RGBEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\RGB Editor\RGBEditor.Designer.cs">
       <DependentUpon>RGBEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\RGB Editor\RGBEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\RGB Editor\RGBEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\StarPositionEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\StarPositionEditor.Designer.cs">
       <DependentUpon>StarPositionEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\StarPositionEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\StarPositionEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\TrajectoryEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\TrajectoryEditor.Designer.cs">
       <DependentUpon>TrajectoryEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\TrajectoryEditor.cs">
+    <Compile Update="Rom Manager\GUI\Tools\TrajectoryEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.de.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.de.Designer.cs">
       <DependentUpon>BehaviorBankManagerLangRes.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BehaviorBankManagerLangRes.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Coins Properties\LangResCoinsManager.de.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Coins Properties\LangResCoinsManager.de.Designer.cs">
       <DependentUpon>LangResCoinsManager.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Coins Properties\LangResCoinsManager.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Coins Properties\LangResCoinsManager.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LangResCoinsManager.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.Designer.cs">
       <DependentUpon>CustomObjectsManagerLangRes.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomObjectsManagerLangRes.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\Language Resources\MainForm\Form_Main_Resources.de.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\MainForm\Form_Main_Resources.de.Designer.cs">
       <DependentUpon>Form_Main_Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="RomManager\Language Resources\MainForm\Form_Main_Resources.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\MainForm\Form_Main_Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Form_Main_Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Global\Global_Resources.de.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Global\Global_Resources.de.Designer.cs">
       <DependentUpon>Global_Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Global\Global_Resources.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Global\Global_Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Global_Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\Form_AreaEditor.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\Form_AreaEditor.Designer.cs">
       <DependentUpon>Form_AreaEditor.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Level Editor\Form_AreaEditor.cs">
+    <Compile Update="Rom Manager\GUI\Level Editor\Form_AreaEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\ValueInputDialog.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ValueInputDialog.Designer.cs">
       <DependentUpon>ValueInputDialog.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\ValueInputDialog.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ValueInputDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Script\ScriptDumper.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Script\ScriptDumper.Designer.cs">
       <DependentUpon>ScriptDumper.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Script\ScriptDumper.cs">
+    <Compile Update="Rom Manager\GUI\Script\ScriptDumper.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Plugin Installer\Plugin_Installer_Resources.de.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Plugin Installer\Plugin_Installer_Resources.de.Designer.cs">
       <DependentUpon>Plugin_Installer_Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Plugin Installer\Plugin_Installer_Resources.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Plugin Installer\Plugin_Installer_Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Plugin_Installer_Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.de.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.de.Designer.cs">
       <DependentUpon>Star_Position_Editor_Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Star_Position_Editor_Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\Language Resources\Text Profile Editor\TextProfileEditorLangRes.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Text Profile Editor\TextProfileEditorLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TextProfileEditorLangRes.resx</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Settings\LevelEditorInputManager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Settings\LevelEditorInputManager.Designer.cs">
       <DependentUpon>LevelEditorInputManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Settings\LevelEditorInputManager.cs">
+    <Compile Update="Rom Manager\GUI\Settings\LevelEditorInputManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Settings\Form_Stylemanager.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Settings\Form_Stylemanager.Designer.cs">
       <DependentUpon>Form_Stylemanager.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Settings\Form_Stylemanager.cs">
+    <Compile Update="Rom Manager\GUI\Settings\Form_Stylemanager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Other\Form_ErrorDialog.designer.cs">
+    <Compile Update="Rom Manager\GUI\Other\Form_ErrorDialog.designer.cs">
       <DependentUpon>Form_ErrorDialog.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Other\Form_ErrorDialog.cs">
+    <Compile Update="Rom Manager\GUI\Other\Form_ErrorDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Other\Form_About.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Other\Form_About.Designer.cs">
       <DependentUpon>Form_About.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Other\Form_About.cs">
+    <Compile Update="Rom Manager\GUI\Other\Form_About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Settings\Form_Settings.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Settings\Form_Settings.Designer.cs">
       <DependentUpon>Form_Settings.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Settings\Form_Settings.cs">
+    <Compile Update="Rom Manager\GUI\Settings\Form_Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Form_AddSpecialItem.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Form_AddSpecialItem.Designer.cs">
       <DependentUpon>Form_AddSpecialItem.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Form_AddSpecialItem.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Form_AddSpecialItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Form_AddNewLevel.Designer.cs">
       <DependentUpon>Form_AddNewLevel.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Form_AddNewLevel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Form_SetUpRGBA.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Form_SetUpRGBA.Designer.cs">
       <DependentUpon>Form_SetUpRGBA.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Form_SetUpRGBA.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Form_SetUpRGBA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\Components\ListBoxCustomModelItem.Designer.cs">
+    <Compile Update="Rom Manager\Components\ListBoxCustomModelItem.Designer.cs">
       <DependentUpon>ListBoxCustomModelItem.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\Components\ListBoxCustomModelItem.cs">
+    <Compile Update="Rom Manager\Components\ListBoxCustomModelItem.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Update="My Project\Application.Designer.cs">
@@ -672,16 +672,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Form_SetUpPoint.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Form_SetUpPoint.Designer.cs">
       <DependentUpon>Form_SetUpPoint.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Main Form\Level Manager\Form_SetUpPoint.cs">
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\Form_SetUpPoint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Form_SM64TextConverter.Designer.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Form_SM64TextConverter.Designer.cs">
       <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
     </Compile>
-    <Compile Update="RomManager\GUI\Tools\Form_SM64TextConverter.cs">
+    <Compile Update="Rom Manager\GUI\Tools\Form_SM64TextConverter.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="WebLinks.Designer.cs">
@@ -702,329 +702,329 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MyOldIcons.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Coins Settings\Coins Settings.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Coins Settings\Coins Settings.de.resx">
       <DependentUpon>Coins Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Coins Settings\Coins Settings.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Coins Settings\Coins Settings.resx">
       <DependentUpon>Coins Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Level Editor\DataEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Level Editor\DataEditor.resx">
       <DependentUpon>DataEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Level Editor\FormScriptDumps.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Level Editor\FormScriptDumps.resx">
       <DependentUpon>FormScriptDumps.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Level Editor\Form_AreaEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Level Editor\Form_AreaEditor.de.resx">
       <DependentUpon>Form_AreaEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Level Editor\InformationListsDialog.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Level Editor\InformationListsDialog.de.resx">
       <DependentUpon>InformationListsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Level Editor\InformationListsDialog.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Level Editor\InformationListsDialog.resx">
       <DependentUpon>InformationListsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Level Editor\TextureEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Level Editor\TextureEditor.resx">
       <DependentUpon>TextureEditor.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\Form_AddNewLevel.de.resx">
       <DependentUpon>Form_AddNewLevel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankDataEditor.de.resx">
       <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\ObjectBankDataEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankDataEditor.resx">
       <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankSelectorBox.resx">
       <DependentUpon>ObjectBankSelectorBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.de.resx">
       <DependentUpon>ScrollTexEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\MainForm.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\MainForm.de.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManagerV2 - Kopieren.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2 - Kopieren.resx">
       <GenFilePath>%(RecursiveDir)%(Filename)$(ExtrasDefaultDesignerFileSuffix)$(DefaultLanguageSourceExtension)</GenFilePath>
       <_SdkHasLangId>$([System.Text.RegularExpressions.Regex]::IsMatch('%(FileName)', '$(_SdkLangIdRegEx)'))</_SdkHasLangId>
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
       <LastGenOutput>%(Filename)$(ExtrasDefaultDesignerFileSuffix)$(DefaultLanguageSourceExtension)</LastGenOutput>
       <Generator>$(_SdkEmbeddedResourceCodeGeneratorTool)</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Text Manager\TextProfileEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Text Manager\TextProfileEditor.resx">
       <DependentUpon>TextProfileEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.de.resx">
       <DependentUpon>BehaviorBankManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Behavior Bank Manager\BehaviorBankManager.resx">
       <DependentUpon>BehaviorBankManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.de.resx">
       <DependentUpon>BehaviorParameterInfoEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Behavior Bank Manager\BehaviorParameterInfoEditor.resx">
       <DependentUpon>BehaviorParameterInfoEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.de.resx">
       <DependentUpon>CustomAsmCodeSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Behavior Bank Manager\CustomAsmCodeSelector.resx">
       <DependentUpon>CustomAsmCodeSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.de.resx">
       <DependentUpon>AsmToHexConverter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Asm Codes\AsmToHexConverter.resx">
       <DependentUpon>AsmToHexConverter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.de.resx">
       <DependentUpon>ChangeRomAreaForAsmCodesDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Asm Codes\ChangeRomAreaForAsmCodesDialog.resx">
       <DependentUpon>ChangeRomAreaForAsmCodesDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.de.resx">
       <DependentUpon>CustomAsmCodesManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Asm Codes\CustomAsmCodesManager.resx">
       <DependentUpon>CustomAsmCodesManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.de.resx">
       <DependentUpon>CustomObjectImportDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectImportDialog.resx">
       <DependentUpon>CustomObjectImportDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.de.resx">
       <DependentUpon>CustomBehaviorSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomBehaviorSelector.resx">
       <DependentUpon>CustomBehaviorSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomModelSelector.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomModelSelector.de.resx">
       <DependentUpon>CustomModelSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomModelSelector.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomModelSelector.resx">
       <DependentUpon>CustomModelSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.de.resx">
       <DependentUpon>CustomObjectImportPropsEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectImportPropsEditor.resx">
       <DependentUpon>CustomObjectImportPropsEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.de.resx">
       <DependentUpon>CustomObjectsDatabaseViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsDatabaseViewer.resx">
       <DependentUpon>CustomObjectsDatabaseViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.de.resx">
       <DependentUpon>CustomObjectsManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Model Bank Manager\ObjectShadowEditor.resx">
       <DependentUpon>ObjectShadowEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Model Bank Manager\AddressListEditor.de.resx">
       <DependentUpon>AddressListEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Model Bank Manager\AddressListEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Model Bank Manager\AddressListEditor.resx">
       <DependentUpon>AddressListEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Model Bank Manager\ModelBankManager.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Model Bank Manager\ModelBankManager.de.resx">
       <DependentUpon>ModelBankManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Model Bank Manager\ModelBankManager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Model Bank Manager\ModelBankManager.resx">
       <DependentUpon>ModelBankManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\ImportLevelDialog.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\ImportLevelDialog.resx">
       <DependentUpon>ImportLevelDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\ApplyStyleMgrStyle.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\ApplyStyleMgrStyle.resx">
       <DependentUpon>ApplyStyleMgrStyle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\MainForm.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_General.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_General.de.resx">
       <DependentUpon>Tab_General.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_General.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_General.resx">
       <DependentUpon>Tab_General.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManager.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManager.de.resx">
       <DependentUpon>Tab_LevelManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManager.resx">
       <DependentUpon>Tab_LevelManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.resx">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.de.resx">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_MusicManager.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_MusicManager.de.resx">
       <DependentUpon>Tab_MusicManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_MusicManager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_MusicManager.resx">
       <DependentUpon>Tab_MusicManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_TextManager.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_TextManager.de.resx">
       <DependentUpon>Tab_TextManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_TextManager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_TextManager.resx">
       <DependentUpon>Tab_TextManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\Scrolling Texture Editor\ScrollTexEditor.resx">
       <DependentUpon>ScrollTexEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Settings\Form_Settings.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Settings\Form_Settings.de.resx">
       <DependentUpon>Form_Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Settings\Form_Stylemanager.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Settings\Form_Stylemanager.de.resx">
       <DependentUpon>Form_Stylemanager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Other\Form_About.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Other\Form_About.de.resx">
       <DependentUpon>Form_About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Other\Form_ErrorDialog.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Other\Form_ErrorDialog.de.resx">
       <DependentUpon>Form_ErrorDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.resx">
       <DependentUpon>CustomObjectsManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Form_SM64TextConverter.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Form_SM64TextConverter.de.resx">
       <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\HexEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\HexEditor.resx">
       <DependentUpon>HexEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\HUDOptions\HUDOptionsForm.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsForm.resx">
       <DependentUpon>HUDOptionsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\HUDOptions\HUDOptionsLangRes.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsLangRes.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>HUDOptionsLangRes.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\HUDOptions\HUDOptionsLangRes.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsLangRes.resx">
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>HUDOptionsLangRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\ItemBoxContentEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\ItemBoxContentEditor.de.resx">
       <DependentUpon>ItemBoxContentEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\ItemBoxContentEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\ItemBoxContentEditor.resx">
       <DependentUpon>ItemBoxContentEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\PluginInstallerForm.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\PluginInstallerForm.de.resx">
       <DependentUpon>PluginInstallerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\PluginInstallerForm.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\PluginInstallerForm.resx">
       <DependentUpon>PluginInstallerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\RGB Editor\RGBEditInfoEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\RGB Editor\RGBEditInfoEditor.resx">
       <DependentUpon>RGBEditInfoEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\RGB Editor\RGBEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\RGB Editor\RGBEditor.resx">
       <DependentUpon>RGBEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\StarPositionEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\StarPositionEditor.de.resx">
       <DependentUpon>StarPositionEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\StarPositionEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\StarPositionEditor.resx">
       <DependentUpon>StarPositionEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\TrajectoryEditor.de.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\TrajectoryEditor.de.resx">
       <DependentUpon>TrajectoryEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\TrajectoryEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\TrajectoryEditor.resx">
       <DependentUpon>TrajectoryEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.de.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>BehaviorBankManagerLangRes.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Behavior Bank Manager\BehaviorBankManagerLangRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>BehaviorBankManagerLangRes.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Coins Properties\LangResCoinsManager.de.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Coins Properties\LangResCoinsManager.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LangResCoinsManager.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Coins Properties\LangResCoinsManager.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Coins Properties\LangResCoinsManager.resx">
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LangResCoinsManager.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Global\Global_Resources.de.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Global\Global_Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Global_Resources.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Global\Global_Resources.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Global\Global_Resources.resx">
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Global_Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\MainForm\Form_Main_Resources.de.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\MainForm\Form_Main_Resources.de.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Form_Main_Resources.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\MainForm\Form_Main_Resources.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\MainForm\Form_Main_Resources.resx">
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Form_Main_Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Level Editor\Form_AreaEditor.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Level Editor\Form_AreaEditor.resx">
       <DependentUpon>Form_AreaEditor.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\ValueInputDialog.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\ValueInputDialog.resx">
       <DependentUpon>ValueInputDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Script\ScriptDumper.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Script\ScriptDumper.resx">
       <DependentUpon>ScriptDumper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Settings\LevelEditorInputManager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Settings\LevelEditorInputManager.resx">
       <DependentUpon>LevelEditorInputManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Settings\Form_Stylemanager.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Settings\Form_Stylemanager.resx">
       <DependentUpon>Form_Stylemanager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Other\Form_ErrorDialog.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Other\Form_ErrorDialog.resx">
       <DependentUpon>Form_ErrorDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Other\Form_About.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Other\Form_About.resx">
       <DependentUpon>Form_About.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\Form_AddNewLevel.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\Form_AddNewLevel.resx">
       <DependentUpon>Form_AddNewLevel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\Form_AddSpecialItem.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\Form_AddSpecialItem.resx">
       <DependentUpon>Form_AddSpecialItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\Form_SetUpRGBA.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\Form_SetUpRGBA.resx">
       <DependentUpon>Form_SetUpRGBA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
@@ -1033,37 +1033,37 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Main Form\Level Manager\Form_SetUpPoint.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Level Manager\Form_SetUpPoint.resx">
       <DependentUpon>Form_SetUpPoint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Settings\Form_Settings.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Settings\Form_Settings.resx">
       <DependentUpon>Form_Settings.cs</DependentUpon>
       <AutoGen>False</AutoGen>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\GUI\Tools\Form_SM64TextConverter.resx">
+    <EmbeddedResource Update="Rom Manager\GUI\Tools\Form_SM64TextConverter.resx">
       <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Plugin Installer\Plugin_Installer_Resources.de.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Plugin Installer\Plugin_Installer_Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Plugin_Installer_Resources.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Plugin Installer\Plugin_Installer_Resources.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Plugin Installer\Plugin_Installer_Resources.resx">
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Plugin_Installer_Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.de.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Star_Position_Editor_Resources.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Star Position Editor\Star_Position_Editor_Resources.resx">
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Star_Position_Editor_Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="RomManager\Language Resources\Text Profile Editor\TextProfileEditorLangRes.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Text Profile Editor\TextProfileEditorLangRes.resx">
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TextProfileEditorLangRes.Designer.cs</LastGenOutput>
@@ -1206,7 +1206,7 @@
     <None Include="Resources\icons8_delete_database_16px.png" />
     <None Include="Resources\icons8_batman_16px.png" />
     <None Include="Resources\icons8_makeup_16px.png" />
-    <Content Include="RomManager\Others\RomMap.txt" />
+    <Content Include="Rom Manager\Others\RomMap.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SM64 ROM Manager.ApplyPPF\SM64 ROM Manager.ApplyPPF.csproj" />
@@ -1258,9 +1258,9 @@
     <Compile Remove="obj\x86\RelMono\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Remove="obj\x86\RelMono\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Remove="obj\x86\RelMono\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Remove="RomManager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.de.Designer.cs" />
-    <Compile Remove="RomManager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.Designer.cs" />
-    <Compile Remove="RomManager\GUI\Tools\Custom Bank Manager\AddressListEditor.Designer.cs" />
+    <Compile Remove="Rom Manager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.de.Designer.cs" />
+    <Compile Remove="Rom Manager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.Designer.cs" />
+    <Compile Remove="Rom Manager\GUI\Tools\Custom Bank Manager\AddressListEditor.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Properties\app.manifest">

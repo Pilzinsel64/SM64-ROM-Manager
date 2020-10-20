@@ -124,7 +124,6 @@ namespace SM64_ROM_Manager
             this.LabelX2 = new DevComponents.DotNetBar.LabelX();
             this.TabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
-            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
             this.TabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
             this.PictureBox_Warning = new System.Windows.Forms.PictureBox();
@@ -137,7 +136,6 @@ namespace SM64_ROM_Manager
             this.TabControlPanel5.SuspendLayout();
             this.TabControlPanel4.SuspendLayout();
             this.TabControlPanel_LoaderModules.SuspendLayout();
-            this.TabControlPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Warning)).BeginInit();
             this.SuspendLayout();
             // 
@@ -249,13 +247,13 @@ namespace SM64_ROM_Manager
             this.TabControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TabControl2.CanReorderTabs = false;
             this.TabControl2.Controls.Add(this.TabControlPanel1);
+            this.TabControl2.Controls.Add(this.TabControlPanel3);
             this.TabControl2.Controls.Add(this.TabControlPanel7);
             this.TabControl2.Controls.Add(this.TabControlPanel2);
             this.TabControl2.Controls.Add(this.TabControlPanel6);
             this.TabControl2.Controls.Add(this.TabControlPanel5);
             this.TabControl2.Controls.Add(this.TabControlPanel4);
             this.TabControl2.Controls.Add(this.TabControlPanel_LoaderModules);
-            this.TabControl2.Controls.Add(this.TabControlPanel3);
             resources.ApplyResources(this.TabControl2, "TabControl2");
             this.TabControl2.ForeColor = System.Drawing.Color.Black;
             this.TabControl2.Name = "TabControl2";
@@ -1061,7 +1059,6 @@ namespace SM64_ROM_Manager
             // 
             // TabControlPanel3
             // 
-            this.TabControlPanel3.Controls.Add(this.ButtonX1);
             this.TabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             resources.ApplyResources(this.TabControlPanel3, "TabControlPanel3");
             this.TabControlPanel3.Name = "TabControlPanel3";
@@ -1073,16 +1070,6 @@ namespace SM64_ROM_Manager
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel3.Style.GradientAngle = 90;
             this.TabControlPanel3.TabItem = this.TabItem3;
-            // 
-            // ButtonX1
-            // 
-            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX1.FocusCuesEnabled = false;
-            resources.ApplyResources(this.ButtonX1, "ButtonX1");
-            this.ButtonX1.Name = "ButtonX1";
-            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX1.Click += new System.EventHandler(this.ButtonX1_Click);
             // 
             // TabItem3
             // 
@@ -1125,7 +1112,6 @@ namespace SM64_ROM_Manager
             this.TabControlPanel5.ResumeLayout(false);
             this.TabControlPanel4.ResumeLayout(false);
             this.TabControlPanel_LoaderModules.ResumeLayout(false);
-            this.TabControlPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Warning)).EndInit();
             this.ResumeLayout(false);
 
@@ -1162,8 +1148,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.TabControlPanel TabControlPanel3;
 
         private DevComponents.DotNetBar.TabItem TabItem3;
-
-        private DevComponents.DotNetBar.ButtonX ButtonX1;
 
         private DevComponents.DotNetBar.TabControlPanel TabControlPanel_LoaderModules;
 
