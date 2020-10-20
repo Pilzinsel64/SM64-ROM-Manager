@@ -816,6 +816,60 @@
   <data name="&gt;&gt;TabControlPanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="labelX22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 4</value>
+  </data>
+  <data name="labelX22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 22</value>
+  </data>
+  <data name="labelX22.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="labelX22.Text" xml:space="preserve">
+    <value>Enable new Level Manager GUI &lt;i&gt;(BETA)&lt;/i&gt;</value>
+  </data>
+  <data name="&gt;&gt;labelX22.Name" xml:space="preserve">
+    <value>labelX22</value>
+  </data>
+  <data name="&gt;&gt;labelX22.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX22.Parent" xml:space="preserve">
+    <value>TabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;labelX22.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="switchButton_EnableNewLevelManagerGUI.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="switchButton_EnableNewLevelManagerGUI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>538, 4</value>
+  </data>
+  <data name="switchButton_EnableNewLevelManagerGUI.OffText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="switchButton_EnableNewLevelManagerGUI.OnText" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="switchButton_EnableNewLevelManagerGUI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 22</value>
+  </data>
+  <data name="switchButton_EnableNewLevelManagerGUI.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;switchButton_EnableNewLevelManagerGUI.Name" xml:space="preserve">
+    <value>switchButton_EnableNewLevelManagerGUI</value>
+  </data>
+  <data name="&gt;&gt;switchButton_EnableNewLevelManagerGUI.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.SwitchButton, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;switchButton_EnableNewLevelManagerGUI.Parent" xml:space="preserve">
+    <value>TabControlPanel3</value>
+  </data>
+  <data name="&gt;&gt;switchButton_EnableNewLevelManagerGUI.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="TabControlPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -1012,7 +1066,7 @@
     <value>TabControl2</value>
   </data>
   <data name="&gt;&gt;TabControlPanel7.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="comboBoxEx_DefaultObjMoveMode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1099,7 +1153,7 @@
     <value>TabControl2</value>
   </data>
   <data name="&gt;&gt;TabControlPanel2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="labelX17.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 30</value>
@@ -1237,7 +1291,7 @@
     <value>TabControl2</value>
   </data>
   <data name="&gt;&gt;TabControlPanel6.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="ButtonX6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -1348,7 +1402,7 @@
     <value>TabControl2</value>
   </data>
   <data name="&gt;&gt;TabControlPanel5.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="LabelX9.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 4</value>
@@ -1588,7 +1642,7 @@
     <value>TabControl2</value>
   </data>
   <data name="&gt;&gt;TabControlPanel4.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>24</value>
   </data>
   <data name="ComboBoxEx_ExporterModule.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -1720,7 +1774,7 @@
     <value>TabControl2</value>
   </data>
   <data name="&gt;&gt;TabControlPanel_LoaderModules.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>28</value>
   </data>
   <data name="TabControl2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2422,6 +2476,12 @@
   <data name="&gt;&gt;TabItem1.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;TabItem3.Name" xml:space="preserve">
+    <value>TabItem3</value>
+  </data>
+  <data name="&gt;&gt;TabItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;ComboItem12.Name" xml:space="preserve">
     <value>ComboItem12</value>
   </data>
@@ -2498,12 +2558,6 @@
     <value>TabItem4</value>
   </data>
   <data name="&gt;&gt;TabItem4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabItem3.Name" xml:space="preserve">
-    <value>TabItem3</value>
-  </data>
-  <data name="&gt;&gt;TabItem3.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;SuperTooltip1.Name" xml:space="preserve">
