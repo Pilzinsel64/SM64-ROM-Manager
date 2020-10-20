@@ -1199,13 +1199,17 @@ namespace SM64_ROM_Manager
             {
                 LoadAreaSettings(indices.levelIndex, indices.areaIndex);
                 EnableTabControl(TabControl_AreaProperties);
+                bar1.Enabled = false;
             }
             else
             {
+                var isNull = indices.levelIndex == -1;
                 LoadLevelSettings(indices.levelIndex);
-                EnableTabControl(indices.levelIndex == -1 ? null : TabControl_LM_Level);
+                EnableTabControl(isNull ? null : TabControl_LM_Level);
+                bar1.Enabled = !isNull;
             }
 
+            bar1.Refresh();
             panel_Tools.ResumeLayout();
         }
 

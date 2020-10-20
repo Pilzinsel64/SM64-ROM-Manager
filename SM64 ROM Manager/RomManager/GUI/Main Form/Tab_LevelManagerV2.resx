@@ -2138,6 +2138,9 @@
   <data name="bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="bar1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="bar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
@@ -2193,7 +2196,7 @@
     <value>Area</value>
   </data>
   <data name="ButtonItem_AreaTools_ChangeAreaID.Text" xml:space="preserve">
-    <value>Change ID</value>
+    <value>Change Area ID</value>
   </data>
   <data name="ButtonItem_AreaTools_EditAreaLevelScript.Text" xml:space="preserve">
     <value>Edit Level Script</value>

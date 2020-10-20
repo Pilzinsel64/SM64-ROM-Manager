@@ -863,6 +863,9 @@
     <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.resx">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_LevelManagerV2.de.resx">
+      <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Update="RomManager\GUI\Main Form\Tab_MusicManager.de.resx">
       <DependentUpon>Tab_MusicManager.cs</DependentUpon>
     </EmbeddedResource>

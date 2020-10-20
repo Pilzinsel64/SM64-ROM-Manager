@@ -117,6 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TextBoxX_LM_ShowMsgID.ButtonCustom2.Tooltip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelX1.Text" xml:space="preserve">
+    <value>Bereichshindergrund:</value>
+  </data>
+  <data name="SwitchButton_LM_ShowMsgEnabled.OffText" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="SwitchButton_LM_ShowMsgEnabled.OnText" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="LabelX2.Text" xml:space="preserve">
+    <value>Bereich-Start-Nachricht::</value>
+  </data>
+  <data name="LabelX6.Text" xml:space="preserve">
+    <value>Standart Terraintyp:</value>
+  </data>
+  <data name="LabelX7.Text" xml:space="preserve">
+    <value>Umgebungseffekt:</value>
+  </data>
+  <data name="LabelX8.Text" xml:space="preserve">
+    <value>Kameravoreinstellung:</value>
+  </data>
+  <data name="LabelX11.Text" xml:space="preserve">
+    <value>Musik-ID:</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ColorPickerButton_LM_BackgroundColor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -124,6 +174,48 @@
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAqSURBVDhPY/j//z9FGEIAKXIwigEgmhQ8asCoASA8
         HA0gB8MNIB//ZwAAsSyVh9SDH54AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="TabItem4.Text" xml:space="preserve">
+    <value>Bereichseinstellungen</value>
+  </data>
+  <data name="LabelX10.Text" xml:space="preserve">
+    <value>Texturanimationen:</value>
+  </data>
+  <data name="ButtonX_EditCollision.Text" xml:space="preserve">
+    <value>Kollision bearbeiten</value>
+  </data>
+  <data name="ButtonX_EditFast3D.Text" xml:space="preserve">
+    <value>Fast3D bearbeiten</value>
+  </data>
+  <data name="buttonX2.Text" xml:space="preserve">
+    <value>Kollisionsmodell exportieren</value>
+  </data>
+  <data name="ButtonX_ImportCollision.Text" xml:space="preserve">
+    <value>Kollisionsmodell Importieren</value>
+  </data>
+  <data name="buttonX1.Text" xml:space="preserve">
+    <value>Visuelles Modell exportieren</value>
+  </data>
+  <data name="ButtonX_ImportVisualMap.Text" xml:space="preserve">
+    <value>Visuelles Modell importieren</value>
+  </data>
+  <data name="ButtonX_LM_ScrollTexEditor.Text" xml:space="preserve">
+    <value>Textureanimationseditor</value>
+  </data>
+  <data name="Button_ImportModel.Text" xml:space="preserve">
+    <value>Modell importieren</value>
+  </data>
+  <data name="TabItem5.Text" xml:space="preserve">
+    <value>Bereichsmodell</value>
+  </data>
+  <data name="Button_LM_RemoveSpecial.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="Button_LM_AddSpecial.Text" xml:space="preserve">
+    <value>Neu ...</value>
+  </data>
+  <data name="Button_LM_EditSpecial.Text" xml:space="preserve">
+    <value>Bearbeiten</value>
   </data>
   <data name="ListViewEx_LM_Specials.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -165,17 +257,71 @@
         bWVudAEAAAAHdmFsdWVfXwAIAgAAAAAAAAAKBgUAAAASU2Nyb2xsaW5nIFRleHR1cmVzCw==
 </value>
   </data>
-  <data name="ButtonItem_OpenLevelEditor.Text" xml:space="preserve">
-    <value>Level-Editor</value>
+  <data name="TabItem6.Text" xml:space="preserve">
+    <value>Spezialboxen</value>
   </data>
-  <data name="ButtonItem_RemoveItem.Text" xml:space="preserve">
-    <value>Löschen</value>
+  <data name="LabelX12.Text" xml:space="preserve">
+    <value>Original-Level:</value>
   </data>
-  <data name="ButtonItem_ExportLevelArea.Text" xml:space="preserve">
-    <value>Exportieren</value>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>Original</value>
   </data>
-  <data name="buttonItem1.Text" xml:space="preserve">
-    <value>Mehr</value>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Eigen</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>Kein</value>
+  </data>
+  <data name="LabelX15.Text" xml:space="preserve">
+    <value>Levelhindergrund:</value>
+  </data>
+  <data name="LabelX3.Text" xml:space="preserve">
+    <value>Sternauswahl:</value>
+  </data>
+  <data name="SwitchButton_LM_ActSelector.OffText" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="SwitchButton_LM_ActSelector.OnText" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="LabelX57.Text" xml:space="preserve">
+    <value>Standart Startposition:</value>
+  </data>
+  <data name="SwitchButton_LM_HardcodedCameraSettings.OffText" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="SwitchButton_LM_HardcodedCameraSettings.OnText" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="Button_LM_LoadLevelBG.Text" xml:space="preserve">
+    <value>Laden ...</value>
+  </data>
+  <data name="TabItem1.Text" xml:space="preserve">
+    <value>Leveleinstellungen</value>
+  </data>
+  <data name="ButtonX_ManageLocalObjects.Text" xml:space="preserve">
+    <value>Lokale Modelle verwalten</value>
+  </data>
+  <data name="labelX5.Text" xml:space="preserve">
+    <value>Lokale Modell-Bank:</value>
+  </data>
+  <data name="SwitchButton_UseLocalObjectBank.OffText" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="SwitchButton_UseLocalObjectBank.OnText" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="LabelX13.Text" xml:space="preserve">
+    <value>Globale Modell-Bank:</value>
+  </data>
+  <data name="SwitchButton_UseGlobalObjectBank.OffText" xml:space="preserve">
+    <value>Aus</value>
+  </data>
+  <data name="SwitchButton_UseGlobalObjectBank.OnText" xml:space="preserve">
+    <value>Ein</value>
+  </data>
+  <data name="TabItem2.Text" xml:space="preserve">
+    <value>Object-Banken</value>
   </data>
   <data name="ButtonItem_LevelTools_AddLevel.Text" xml:space="preserve">
     <value>Neues Level</value>
@@ -192,202 +338,46 @@
   <data name="ButtonItem_AreaTools_ImportArea.Text" xml:space="preserve">
     <value>Bereich importieren</value>
   </data>
-  <data name="labelItem4.Text" xml:space="preserve">
-    <value>Bereich</value>
-  </data>
-  <data name="ButtonItem1.Text1" xml:space="preserve">
-    <value>Levelname ändern</value>
-  </data>
-  <data name="ButtonItem15.Text" xml:space="preserve">
-    <value>Levelscript bearbeiten</value>
-  </data>
-  <data name="ButtonItem19.Text" xml:space="preserve">
-    <value>Löschen</value>
-  </data>
   <data name="buttonItem2.Text" xml:space="preserve">
     <value>Objekte exportieren ...</value>
   </data>
-  <data name="ButtonItem20.Text" xml:space="preserve">
+  <data name="ButtonItem_OpenLevelEditor.Text" xml:space="preserve">
+    <value>Level-Editor</value>
+  </data>
+  <data name="ButtonItem_RemoveItem.Text" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="ButtonItem_ExportLevelArea.Text" xml:space="preserve">
+    <value>Exportieren</value>
+  </data>
+  <data name="ButtonItem_LevelTools_ChangeLevelID.Text" xml:space="preserve">
     <value>Level-ID ändern</value>
   </data>
-  <data name="ButtonItem21.Text" xml:space="preserve">
-    <value>ROM-Adresse kopieren</value>
+  <data name="ButtonItem_LevelTools_ChangeLevelName.Text" xml:space="preserve">
+    <value>Levelnamen ändern</value>
   </data>
-  <data name="ButtonItem24.Text" xml:space="preserve">
-    <value>Größe von Bank 0x19 ändern</value>
+  <data name="ButtonItem_LevelTools_ChangeSizeOfBank0x19.Text" xml:space="preserve">
+    <value>Größe von Bank 0x9 anpassen</value>
   </data>
-  <data name="ButtonItem26.Text" xml:space="preserve">
-    <value>Level importieren ...</value>
-  </data>
-  <data name="ButtonItem2_EditGeolayoutScript.Text" xml:space="preserve">
-    <value>Geolayoutscript bearbeiten</value>
-  </data>
-  <data name="buttonItem3.Text" xml:space="preserve">
-    <value>Warps exportieren ...</value>
-  </data>
-  <data name="ButtonItem_ChangeAreaID.Text" xml:space="preserve">
-    <value>Bereichs-ID ändern</value>
-  </data>
-  <data name="ButtonItem_EditAreaLevelScript.Text" xml:space="preserve">
+  <data name="ButtonItem_LevelTools_EditLevelscript.Text" xml:space="preserve">
     <value>Levelscript bearbeiten</value>
   </data>
-  <data name="ButtonItem_ExportArea.Text" xml:space="preserve">
-    <value>Bereich exportiern ...</value>
+  <data name="ButtonItem_LevelTools_CopyRomAddress.Text" xml:space="preserve">
+    <value>ROM-Adresse kopieren</value>
   </data>
-  <data name="ButtonItem_ExportLevel.Text" xml:space="preserve">
-    <value>Level exportieren ...</value>
+  <data name="labelItem4.Text" xml:space="preserve">
+    <value>Bereich</value>
   </data>
-  <data name="ButtonItem_ImportArea.Text" xml:space="preserve">
-    <value>Bereich importieren ...</value>
+  <data name="ButtonItem_AreaTools_ChangeAreaID.Text" xml:space="preserve">
+    <value>Bereichs-ID ändern</value>
   </data>
-  <data name="buttonX1.Text" xml:space="preserve">
-    <value>Visuelles Modell exportieren</value>
+  <data name="ButtonItem_AreaTools_EditAreaLevelScript.Text" xml:space="preserve">
+    <value>Levelscript bearbeiten</value>
   </data>
-  <data name="buttonX2.Text" xml:space="preserve">
-    <value>Kollisionsmodell exportieren</value>
+  <data name="ButtonItem_AreaTools_EditGeolayoutScript.Text" xml:space="preserve">
+    <value>Geolayoutscript bearbeiten</value>
   </data>
-  <data name="ButtonX_EditCollision.Text" xml:space="preserve">
-    <value>Kollision bearbeiten</value>
-  </data>
-  <data name="ButtonX_EditFast3D.Text" xml:space="preserve">
-    <value>Fast3D bearbeiten</value>
-  </data>
-  <data name="ButtonX_ImportCollision.Text" xml:space="preserve">
-    <value>Kollisionsmodell Importieren</value>
-  </data>
-  <data name="ButtonX_ImportVisualMap.Text" xml:space="preserve">
-    <value>Visuelles Modell importieren</value>
-  </data>
-  <data name="ButtonX_LM_LevelsMore.Text" xml:space="preserve">
-    <value>Mehr ...</value>
-  </data>
-  <data name="ButtonX_LM_ScrollTexEditor.Text" xml:space="preserve">
-    <value>Textureanimationseditor</value>
-  </data>
-  <data name="ButtonX_ManageLocalObjects.Text" xml:space="preserve">
-    <value>Lokale Modelle verwalten</value>
-  </data>
-  <data name="Button_ImportModel.Text" xml:space="preserve">
-    <value>Modell importieren</value>
-  </data>
-  <data name="Button_LM_AddArea.Text" xml:space="preserve">
-    <value>Neu</value>
-  </data>
-  <data name="Button_LM_AddNewLevel.Text" xml:space="preserve">
-    <value>Neu</value>
-  </data>
-  <data name="Button_LM_AddSpecial.Text" xml:space="preserve">
-    <value>Neu ...</value>
-  </data>
-  <data name="Button_LM_EditSpecial.Text" xml:space="preserve">
-    <value>Bearbeiten</value>
-  </data>
-  <data name="Button_LM_LoadLevelBG.Text" xml:space="preserve">
-    <value>Laden ...</value>
-  </data>
-  <data name="Button_LM_RemoveArea.Text" xml:space="preserve">
-    <value>Löschen</value>
-  </data>
-  <data name="Button_LM_RemoveSpecial.Text" xml:space="preserve">
-    <value>Löschen</value>
-  </data>
-  <data name="ComboItem1.Text" xml:space="preserve">
-    <value>Original</value>
-  </data>
-  <data name="ComboItem2.Text" xml:space="preserve">
-    <value>Eigen</value>
-  </data>
-  <data name="ComboItem3.Text" xml:space="preserve">
-    <value>Kein</value>
-  </data>
-  <data name="GroupBox_LM_Areas.Text" xml:space="preserve">
-    <value>Bereiche</value>
-  </data>
-  <data name="GroupPanel1.Text" xml:space="preserve">
-    <value>Level</value>
-  </data>
-  <data name="LabelX1.Text" xml:space="preserve">
-    <value>Bereichshindergrund:</value>
-  </data>
-  <data name="LabelX10.Text" xml:space="preserve">
-    <value>Texturanimationen:</value>
-  </data>
-  <data name="LabelX11.Text" xml:space="preserve">
-    <value>Musik-ID:</value>
-  </data>
-  <data name="LabelX12.Text" xml:space="preserve">
-    <value>Original-Level:</value>
-  </data>
-  <data name="LabelX13.Text" xml:space="preserve">
-    <value>Globale Modell-Bank:</value>
-  </data>
-  <data name="LabelX15.Text" xml:space="preserve">
-    <value>Levelhindergrund:</value>
-  </data>
-  <data name="LabelX2.Text" xml:space="preserve">
-    <value>Bereich-Start-Nachricht::</value>
-  </data>
-  <data name="LabelX3.Text" xml:space="preserve">
-    <value>Sternauswahl:</value>
-  </data>
-  <data name="labelX5.Text" xml:space="preserve">
-    <value>Lokale Modell-Bank:</value>
-  </data>
-  <data name="LabelX57.Text" xml:space="preserve">
-    <value>Standart Startposition:</value>
-  </data>
-  <data name="LabelX6.Text" xml:space="preserve">
-    <value>Standart Terraintyp:</value>
-  </data>
-  <data name="LabelX7.Text" xml:space="preserve">
-    <value>Umgebungseffekt:</value>
-  </data>
-  <data name="LabelX8.Text" xml:space="preserve">
-    <value>Kameravoreinstellung:</value>
-  </data>
-  <data name="SwitchButton_LM_ActSelector.OffText" xml:space="preserve">
-    <value>Aus</value>
-  </data>
-  <data name="SwitchButton_LM_ActSelector.OnText" xml:space="preserve">
-    <value>Ein</value>
-  </data>
-  <data name="SwitchButton_LM_HardcodedCameraSettings.OffText" xml:space="preserve">
-    <value>Aus</value>
-  </data>
-  <data name="SwitchButton_LM_HardcodedCameraSettings.OnText" xml:space="preserve">
-    <value>Ein</value>
-  </data>
-  <data name="SwitchButton_LM_ShowMsgEnabled.OffText" xml:space="preserve">
-    <value>Aus</value>
-  </data>
-  <data name="SwitchButton_LM_ShowMsgEnabled.OnText" xml:space="preserve">
-    <value>Ein</value>
-  </data>
-  <data name="SwitchButton_UseGlobalObjectBank.OffText" xml:space="preserve">
-    <value>Aus</value>
-  </data>
-  <data name="SwitchButton_UseGlobalObjectBank.OnText" xml:space="preserve">
-    <value>Ein</value>
-  </data>
-  <data name="SwitchButton_UseLocalObjectBank.OffText" xml:space="preserve">
-    <value>Aus</value>
-  </data>
-  <data name="SwitchButton_UseLocalObjectBank.OnText" xml:space="preserve">
-    <value>Ein</value>
-  </data>
-  <data name="TabItem1.Text" xml:space="preserve">
-    <value>Leveleinstellungen</value>
-  </data>
-  <data name="TabItem2.Text" xml:space="preserve">
-    <value>Object-Banken</value>
-  </data>
-  <data name="TabItem4.Text" xml:space="preserve">
-    <value>Bereichseinstellungen</value>
-  </data>
-  <data name="TabItem5.Text" xml:space="preserve">
-    <value>Bereichsmodell</value>
-  </data>
-  <data name="TabItem6.Text" xml:space="preserve">
-    <value>Spezialboxen</value>
+  <data name="buttonItem1.Text" xml:space="preserve">
+    <value>Mehr</value>
   </data>
 </root>
