@@ -248,12 +248,12 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             if (!forRotation)
             {
-                short newY = Conversions.ToShort(-Math.Truncate(30 * (e.Y - moveObj_UpDown_lastMouseY) * Main.ObjectMoveSpeed));
+                short newY = (short)-Math.Truncate(30 * (e.Y - moveObj_UpDown_lastMouseY) * Main.ObjectMoveSpeed);
                 obj.Position = new System.Numerics.Vector3(obj.Position.X, savedPos.Y + newY, obj.Position.Z);
             }
             else
             {
-                short newY = Conversions.ToShort(-Math.Truncate((double)(e.Y - rotObj_Yaw_lastMouseY)));
+                short newY = (short)-Math.Truncate((double)(e.Y - rotObj_Yaw_lastMouseY));
                 RotateObject(obj, new System.Numerics.Vector3(obj.Rotation.X, newY, obj.Rotation.Z));
             }
 
@@ -267,12 +267,12 @@ namespace SM64_ROM_Manager.LevelEditor
 
             if (!forRotation)
             {
-                short newY = Conversions.ToShort(obj.PositionY - Conversions.ToShort(Math.Truncate(mvy * Main.ObjectMoveSpeed)));
+                short newY = (short)(obj.PositionY - (short)Math.Truncate(mvy * Main.ObjectMoveSpeed));
                 obj.Position = new System.Numerics.Vector3(obj.Position.X, newY, obj.Position.Z);
             }
             else
             {
-                short newY = Conversions.ToShort(-Math.Truncate(0.5F * mvy));
+                short newY = (short)-Math.Truncate(0.5F * mvy);
                 RotateObject(obj, new System.Numerics.Vector3(obj.Rotation.X, newY, obj.Rotation.Z));
             }
 
@@ -294,18 +294,18 @@ namespace SM64_ROM_Manager.LevelEditor
                 my = -(e.Y - rotObj_lastMouseY);
             }
 
-            float CX = Conversions.ToSingle(Math.Sin(Main.Camera.Yaw));
-            float CZ = Conversions.ToSingle(-Math.Cos(Main.Camera.Yaw));
-            float CX_2 = Conversions.ToSingle(Math.Sin(Main.Camera.Yaw + Math.PI / 2));
-            float CZ_2 = Conversions.ToSingle(-Math.Cos(Main.Camera.Yaw + Math.PI / 2));
+            float CX = (float)Math.Sin(Main.Camera.Yaw);
+            float CZ = (float)-Math.Cos(Main.Camera.Yaw);
+            float CX_2 = (float)Math.Sin(Main.Camera.Yaw + Math.PI / 2);
+            float CZ_2 = (float)-Math.Cos(Main.Camera.Yaw + Math.PI / 2);
             float newX, newZ;
             float moveSpeed = forRotation ? 1 : Main.ObjectMoveSpeed;
-            newX = Conversions.ToSingle(Math.Truncate(savedPos.X - Conversions.ToShort(Math.Truncate(CX * my * speedMult * moveSpeed)) - Conversions.ToShort(Math.Truncate(CX_2 * mx * speedMult * moveSpeed))));
-            newZ = Conversions.ToSingle(Math.Truncate(savedPos.Z - Conversions.ToShort(Math.Truncate(CZ * my * speedMult * moveSpeed)) - Conversions.ToShort(Math.Truncate(CZ_2 * mx * speedMult * moveSpeed))));
+            newX = (float)Math.Truncate(savedPos.X - (short)Math.Truncate(CX * my * speedMult * moveSpeed) - (short)Math.Truncate(CX_2 * mx * speedMult * moveSpeed));
+            newZ = (float)Math.Truncate(savedPos.Z - (short)Math.Truncate(CZ * my * speedMult * moveSpeed) - (short)Math.Truncate(CZ_2 * mx * speedMult * moveSpeed));
             if (!forRotation)
             {
                 var oldPos = obj.Position;
-                var newPos = new System.Numerics.Vector3(Conversions.ToShort(newX), oldPos.Y, Conversions.ToShort(newZ));
+                var newPos = new System.Numerics.Vector3((short)newX, oldPos.Y, (short)newZ);
                 SetObjectPosition(obj, newPos);
             }
             else
@@ -337,16 +337,16 @@ namespace SM64_ROM_Manager.LevelEditor
             else
                 oldPos = obj.Rotation;
 
-            float CX = Conversions.ToSingle(Math.Sin(Main.Camera.Yaw));
-            float CZ = Conversions.ToSingle(Math.Cos(Main.Camera.Yaw));
-            float CX_2 = Conversions.ToSingle(Math.Sin(Main.Camera.Yaw + Math.PI / 2));
-            float CZ_2 = Conversions.ToSingle(Math.Cos(Main.Camera.Yaw + Math.PI / 2));
-            newX = Conversions.ToSingle(Math.Truncate(oldPos.X - Conversions.ToShort(Math.Truncate(CX * mx * Main.ObjectMoveSpeed)) - Conversions.ToShort(Math.Truncate(CX_2 * mx * Main.ObjectMoveSpeed))));
-            newZ = Conversions.ToSingle(Math.Truncate(oldPos.Z - Conversions.ToShort(Math.Truncate(CZ * my * Main.ObjectMoveSpeed)) - Conversions.ToShort(Math.Truncate(CZ_2 * my * Main.ObjectMoveSpeed))));
+            float CX = (float)Math.Sin(Main.Camera.Yaw);
+            float CZ = (float)Math.Cos(Main.Camera.Yaw);
+            float CX_2 = (float)Math.Sin(Main.Camera.Yaw + Math.PI / 2);
+            float CZ_2 = (float)Math.Cos(Main.Camera.Yaw + Math.PI / 2);
+            newX = (float)Math.Truncate(oldPos.X - (short)Math.Truncate(CX * mx * Main.ObjectMoveSpeed) - (short)Math.Truncate(CX_2 * mx * Main.ObjectMoveSpeed));
+            newZ = (float)Math.Truncate(oldPos.Z - (short)Math.Truncate(CZ * my * Main.ObjectMoveSpeed) - (short)Math.Truncate(CZ_2 * my * Main.ObjectMoveSpeed));
 
             if (!forRotation)
             {
-                var newPos = new System.Numerics.Vector3(Conversions.ToShort(newX), oldPos.Y, Conversions.ToShort(newZ));
+                var newPos = new System.Numerics.Vector3((short)newX, oldPos.Y, (short)newZ);
                 SetObjectPosition(obj, newPos);
             }
             else
@@ -370,12 +370,12 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void RotateObject(Managed3DObject obj, System.Numerics.Vector3 val)
         {
-            obj.Rotation = new System.Numerics.Vector3(Publics.General.KeepDegreesWithin360(Conversions.ToShort(obj.Rotation.X + val.X)), Publics.General.KeepDegreesWithin360(Conversions.ToShort(obj.Rotation.Y + val.Y)), Publics.General.KeepDegreesWithin360(Conversions.ToShort(obj.Rotation.Z + val.Z)));
+            obj.Rotation = new System.Numerics.Vector3(Publics.General.KeepDegreesWithin360((short)(obj.Rotation.X + val.X)), Publics.General.KeepDegreesWithin360((short)(obj.Rotation.Y + val.Y)), Publics.General.KeepDegreesWithin360((short)(obj.Rotation.Z + val.Z)));
         }
 
         private void SetObjectRotation(Managed3DObject obj, System.Numerics.Vector3 rot)
         {
-            obj.Rotation = new System.Numerics.Vector3(Publics.General.KeepDegreesWithin360(Conversions.ToShort(rot.X)), Publics.General.KeepDegreesWithin360(Conversions.ToShort(rot.Y)), Publics.General.KeepDegreesWithin360(Conversions.ToShort(rot.Z)));
+            obj.Rotation = new System.Numerics.Vector3(Publics.General.KeepDegreesWithin360((short)rot.X), Publics.General.KeepDegreesWithin360((short)rot.Y), Publics.General.KeepDegreesWithin360((short)rot.Z));
         }
 
         private void PictureBox_ObjRotWheel_MouseDown(object sender, MouseEventArgs e)
