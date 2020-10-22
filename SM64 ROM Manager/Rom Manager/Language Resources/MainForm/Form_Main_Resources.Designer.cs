@@ -39,7 +39,7 @@ namespace SM64_ROM_Manager.My.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.RomManager.Language_Resources.MainForm.Form_Main_Resources", typeof(Form_Main_Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom_Manager.Language_Resources.MainForm.Form_Main_Resources", typeof(Form_Main_Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -70,7 +70,7 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die This ROM was modified by SM64 Editor and isn&apos;t compatible with SM64 ROM Manager. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die This ROM was modified by SM64 Editor and isn&apos;t compatible with SM64 ROM Manager. But in Level Manager you can import Levels from other ROMs (including SM64 Editor ROMs). ähnelt.
         /// </summary>
         public static string Exception_RomWasUsedBySM64E {
             get {

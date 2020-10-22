@@ -121,7 +121,7 @@
     <value>Open ROM...</value>
   </data>
   <data name="Exception_RomWasUsedBySM64E" xml:space="preserve">
-    <value>This ROM was modified by SM64 Editor and isn't compatible with SM64 ROM Manager.</value>
+    <value>This ROM was modified by SM64 Editor and isn't compatible with SM64 ROM Manager. But in Level Manager you can import Levels from other ROMs (including SM64 Editor ROMs).</value>
   </data>
   <data name="FileDialog_ExportLevelOrArea_CbCompression_DisableCompression" xml:space="preserve">
     <value>Fast (no compression)</value>
