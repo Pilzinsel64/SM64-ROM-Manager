@@ -339,7 +339,7 @@
     <value>Bereich importieren</value>
   </data>
   <data name="buttonItem2.Text" xml:space="preserve">
-    <value>Objekte exportieren ...</value>
+    <value>Level/Bereich erstellen</value>
   </data>
   <data name="ButtonItem_OpenLevelEditor.Text" xml:space="preserve">
     <value>Level-Editor</value>

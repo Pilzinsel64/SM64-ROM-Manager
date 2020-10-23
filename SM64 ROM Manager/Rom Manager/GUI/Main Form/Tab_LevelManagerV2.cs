@@ -983,7 +983,15 @@ namespace SM64_ROM_Manager
         {
             if (!savingRom)
             {
-                Controller.OpenAreaEditor(CurrentLevelIndex, CurrentAreaIndex);
+                var curLevelIndex = CurrentLevelIndex;
+                var curAreaIndex = CurrentAreaIndex;
+                if (curAreaIndex == -1)
+                {
+                    var usedIDs = Controller.GetUsedLevelAreaIDs((ushort)curLevelIndex);
+                    if (usedIDs.Any())
+                        curAreaIndex = usedIDs.First();
+                }
+                Controller.OpenAreaEditor(curLevelIndex, curAreaIndex);
             }
         }
 
@@ -1199,7 +1207,7 @@ namespace SM64_ROM_Manager
             {
                 LoadAreaSettings(indices.levelIndex, indices.areaIndex);
                 EnableTabControl(TabControl_AreaProperties);
-                bar1.Enabled = false;
+                bar1.Enabled = true;
             }
             else
             {
@@ -1229,17 +1237,17 @@ namespace SM64_ROM_Manager
 
         private void ButtonItem_RemoveItem_Click(object sender, EventArgs e)
         {
-            if (true)
+            if (CurrentAreaIndex != -1)
                 Button_LM_RemoveArea_Click(sender, e);
-            else
+            else if (CurrentLevelIndex != -1)
                 ButtonItem19_Click(sender, e);
         }
 
         private void ButtonItem_ExportLevelArea_Click(object sender, EventArgs e)
         {
-            if (true)
+            if (CurrentAreaIndex != -1)
                 ButtonItem_ExportArea_Click(sender, e);
-            else
+            else if (CurrentLevelIndex != -1)
                 ButtonItem_ExportLevel_Click(sender, e);
         }
     }
