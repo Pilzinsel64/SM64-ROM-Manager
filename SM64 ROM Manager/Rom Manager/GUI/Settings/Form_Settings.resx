@@ -1066,7 +1066,7 @@
     <value>TabControl2</value>
   </data>
   <data name="&gt;&gt;TabControlPanel7.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="comboBoxEx_DefaultObjMoveMode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>

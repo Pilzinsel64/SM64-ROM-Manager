@@ -79,6 +79,8 @@ namespace SM64_ROM_Manager
             this.LabelX10 = new DevComponents.DotNetBar.LabelX();
             this.TabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
+            this.labelX22 = new DevComponents.DotNetBar.LabelX();
+            this.switchButton_EnableNewLevelManagerGUI = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.TabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel7 = new DevComponents.DotNetBar.TabControlPanel();
             this.TextBoxX_ProxyPwd = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -127,8 +129,6 @@ namespace SM64_ROM_Manager
             this.TabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
             this.SuperTooltip1 = new DevComponents.DotNetBar.SuperTooltip();
             this.PictureBox_Warning = new System.Windows.Forms.PictureBox();
-            this.labelX22 = new DevComponents.DotNetBar.LabelX();
-            this.switchButton_EnableNewLevelManagerGUI = new DevComponents.DotNetBar.Controls.SwitchButton();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl2)).BeginInit();
             this.TabControl2.SuspendLayout();
             this.TabControlPanel1.SuspendLayout();
@@ -570,12 +570,40 @@ namespace SM64_ROM_Manager
             this.TabControlPanel3.Style.GradientAngle = 90;
             this.TabControlPanel3.TabItem = this.TabItem3;
             // 
+            // labelX22
+            // 
+            this.labelX22.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.labelX22, "labelX22");
+            this.labelX22.Name = "labelX22";
+            this.labelX22.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            // 
+            // switchButton_EnableNewLevelManagerGUI
+            // 
+            resources.ApplyResources(this.switchButton_EnableNewLevelManagerGUI, "switchButton_EnableNewLevelManagerGUI");
+            // 
+            // 
+            // 
+            this.switchButton_EnableNewLevelManagerGUI.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchButton_EnableNewLevelManagerGUI.Name = "switchButton_EnableNewLevelManagerGUI";
+            this.switchButton_EnableNewLevelManagerGUI.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.switchButton_EnableNewLevelManagerGUI.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
+            this.switchButton_EnableNewLevelManagerGUI.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
+            this.switchButton_EnableNewLevelManagerGUI.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchButton_EnableNewLevelManagerGUI.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
+            this.switchButton_EnableNewLevelManagerGUI.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
+            this.switchButton_EnableNewLevelManagerGUI.SwitchWidth = 15;
+            this.switchButton_EnableNewLevelManagerGUI.Value = true;
+            this.switchButton_EnableNewLevelManagerGUI.ValueObject = "Y";
+            // 
             // TabItem3
             // 
             this.TabItem3.AttachedControl = this.TabControlPanel3;
             this.TabItem3.Name = "TabItem3";
             resources.ApplyResources(this.TabItem3, "TabItem3");
-            this.TabItem3.Visible = false;
             // 
             // TabControlPanel7
             // 
@@ -1095,35 +1123,6 @@ namespace SM64_ROM_Manager
             this.PictureBox_Warning.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_error_16px;
             this.PictureBox_Warning.Name = "PictureBox_Warning";
             this.PictureBox_Warning.TabStop = false;
-            // 
-            // labelX22
-            // 
-            this.labelX22.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.labelX22, "labelX22");
-            this.labelX22.Name = "labelX22";
-            this.labelX22.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
-            // 
-            // switchButton_EnableNewLevelManagerGUI
-            // 
-            resources.ApplyResources(this.switchButton_EnableNewLevelManagerGUI, "switchButton_EnableNewLevelManagerGUI");
-            // 
-            // 
-            // 
-            this.switchButton_EnableNewLevelManagerGUI.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchButton_EnableNewLevelManagerGUI.Name = "switchButton_EnableNewLevelManagerGUI";
-            this.switchButton_EnableNewLevelManagerGUI.OffTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.switchButton_EnableNewLevelManagerGUI.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(195)))), ((int)(((byte)(80)))));
-            this.switchButton_EnableNewLevelManagerGUI.OnTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(66)))), ((int)(((byte)(139)))));
-            this.switchButton_EnableNewLevelManagerGUI.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchButton_EnableNewLevelManagerGUI.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
-            this.switchButton_EnableNewLevelManagerGUI.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
-            this.switchButton_EnableNewLevelManagerGUI.SwitchWidth = 15;
-            this.switchButton_EnableNewLevelManagerGUI.Value = true;
-            this.switchButton_EnableNewLevelManagerGUI.ValueObject = "Y";
             // 
             // Form_Settings
             // 
