@@ -84,34 +84,34 @@ namespace SM64Lib.Trajectorys
                         data.Position = 0xA9AB4;
                         data.Write(0x3C048040); // LUI A0, 0x8040
                         data.Position = 0xA9ABC;
-                        data.Write((0x3484)); // ORI A0, A0, 0x8040xxxx
-                        data.Write(Conversions.ToUShort(ramAddr & 0xFFFF));
+                        data.Write((short)0x3484); // ORI A0, A0, 0x8040xxxx
+                        data.Write((short)(ramAddr & 0xFFFF));
                         break;
                     case TrajectoryName.MetalBallsGenerators_BParam2_01:
                         data.Position = 0xA9AD4;
                         data.Write(0x3C048040); // LUI A0, 0x8040
                         data.Position = 0xA9ADC;
-                        data.Write(0x3484); // ORI A0, A0, 0x8040xxxx
-                        data.Write(Conversions.ToUShort(ramAddr & 0xFFFF));
+                        data.Write((short)0x3484); // ORI A0, A0, 0x8040xxxx
+                        data.Write((short)(ramAddr & 0xFFFF));
                         break;
                     case TrajectoryName.MetalBallsGenerators_BParam2_02:
                         data.Position = 0xA9AF4;
                         data.Write(0x3C048040); // LUI A0, 0x8040
                         data.Position = 0xA9AFC;
-                        data.Write(0x3484); // ORI A0, A0, 0x8040xxxx
-                        data.Write(Conversions.ToUShort(ramAddr & 0xFFFF));
+                        data.Write((short)0x3484); // ORI A0, A0, 0x8040xxxx
+                        data.Write((short)(ramAddr & 0xFFFF));
                         break;
                     case TrajectoryName.MiniMetalBallGenerator_BParam2_03:
                         data.Position = 0xA9B1C;
                         data.Write(0x3C098040); // LU3 T3, 0x8040
-                        data.Write(0x356B); // ORI T3, T3, 0x8040xxxx
-                        data.Write(Conversions.ToUShort(ramAddr & 0xFFFF));
+                        data.Write((short)0x356B); // ORI T3, T3, 0x8040xxxx
+                        data.Write((short)(ramAddr & 0xFFFF));
                         break;
                     case TrajectoryName.MiniMetalBallGenerator_BParam2_04:
                         data.Position = 0xA9B38;
                         data.Write(0x3C098040); // LU3 T3, 0x8040
-                        data.Write(0x356B); // ORI T3, T3, 0x8040xxxx
-                        data.Write(Conversions.ToUShort(ramAddr & 0xFFFF));
+                        data.Write((short)0x356B); // ORI T3, T3, 0x8040xxxx
+                        data.Write((short)(ramAddr & 0xFFFF));
                         break;
                     case TrajectoryName.MipsTheRabbit:
                         continue;
@@ -145,9 +145,9 @@ namespace SM64Lib.Trajectorys
             AddTrajectory(data, addr, name, 1);
         }
 
-        private void AddTrajectory(BinaryData data, int addr, TrajectoryName name, ushort count)
+        private void AddTrajectory(BinaryData data, int addr, TrajectoryName name, ushort count, bool checkAddress = true)
         {
-            if ((uint)addr > 0x80400000 && (uint)addr < 0x80410000)
+            if (!checkAddress || ((uint)addr > 0x80400000 && (uint)addr < 0x80410000))
             {
                 data.Position = (uint)addr - 0x80400000 + 0x1200000;
                 for (int i = 1, loopTo = count; i <= loopTo; i++)
@@ -179,14 +179,14 @@ namespace SM64Lib.Trajectorys
 
             // Racing Penguin
             data.Position = 0xCCA6E;
-            addr = Conversions.ToInteger(data.ReadUInt16()) << 16;
+            addr = data.ReadUInt16() << 16;
             data.Position = 0xCCA76;
             addr = addr | data.ReadUInt16();
             AddTrajectory(data, addr, TrajectoryName.RacingPenguin);
 
             // Snowman's Bottom
             data.Position = 0xABC9E;
-            addr = Conversions.ToInteger(data.ReadUInt16()) << 16;
+            addr = data.ReadUInt16() << 16;
             data.Position = 0xABCA6;
             addr = addr | data.ReadUInt16();
             AddTrajectory(data, addr, TrajectoryName.SnowmansBottom);
@@ -201,42 +201,43 @@ namespace SM64Lib.Trajectorys
 
             // Metal Balls Generators - B.Param 2 = 00
             data.Position = 0xA9AB4 + 2;
-            addr = Conversions.ToInteger(data.ReadUInt16()) << 16;
+            addr = data.ReadUInt16() << 16;
             data.Position = 0xA9ABC + 2;
-            addr = addr | data.ReadUInt16();
+            var val3 = data.ReadUInt16();
+            addr = addr | val3;
             AddTrajectory(data, addr, TrajectoryName.MetalBallsGenerators_BParam2_00);
 
             // Metal Balls Generators - B.Param 2 = 01
             data.Position = 0xA9AD4 + 2;
-            addr = Conversions.ToInteger(data.ReadUInt16()) << 16;
+            addr = data.ReadUInt16() << 16;
             data.Position = 0xA9ADC + 2;
             addr = addr | data.ReadUInt16();
             AddTrajectory(data, addr, TrajectoryName.MetalBallsGenerators_BParam2_01);
 
             // Metal Balls Generators - B.Param 2 = 02
             data.Position = 0xA9AF4 + 2;
-            addr = Conversions.ToInteger(data.ReadUInt16()) << 16;
+            addr = data.ReadUInt16() << 16;
             data.Position = 0xA9AFC + 2;
             addr = addr | data.ReadUInt16();
             AddTrajectory(data, addr, TrajectoryName.MetalBallsGenerators_BParam2_02);
 
             // Mini-Metal Ball Generator - B.Param 2 = 03
             data.Position = 0xA9B1C + 2;
-            addr = Conversions.ToInteger(data.ReadUInt16()) << 16;
+            addr = data.ReadUInt16() << 16;
             data.Position += 2;
             addr = addr | data.ReadUInt16();
             AddTrajectory(data, addr, TrajectoryName.MiniMetalBallGenerator_BParam2_03);
 
             // Mini-Metal Ball Generator - B.Param 2 = 04
             data.Position = 0xA9B1C + 2;
-            addr = Conversions.ToInteger(data.ReadUInt16()) << 16;
+            addr = data.ReadUInt16() << 16;
             data.Position += 2;
             addr = addr | data.ReadUInt16();
             AddTrajectory(data, addr, TrajectoryName.MiniMetalBallGenerator_BParam2_04);
 
             // Mips the Rabbit
             data.Position = 0xB3816;
-            addr = Conversions.ToInteger(data.ReadUInt16()) << 16;
+            addr = data.ReadUInt16();
             data.Position += 6;
             addr = addr | data.ReadUInt16();
             data.Position = 0xB371E;
