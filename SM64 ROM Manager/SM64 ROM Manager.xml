@@ -1098,7 +1098,7 @@
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Exception_RomWasUsedBySM64E">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die This ROM was modified by SM64 Editor and isn&apos;t compatible with SM64 ROM Manager. ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die This ROM was modified by SM64 Editor and isn&apos;t compatible with SM64 ROM Manager. But in Level Manager you can import Levels from other ROMs (including SM64 Editor ROMs). ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbCompression_DisableCompression">
