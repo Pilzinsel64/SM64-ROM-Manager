@@ -18,7 +18,8 @@ namespace SM64Lib.Patching
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         public void ApplyPPF(string Romfile, string PPFFile)
         {
-            RunProcess(General.MyFilePaths["ApplyPPF3.exe"], string.Format("a \"{0}\" \"{1}\"", Romfile, PPFFile));
+            var ppf = new PPF();
+            ppf.ApplyPatch(Romfile, PPFFile);
         }
 
         private int RunProcess(string Filename, string Args = "")

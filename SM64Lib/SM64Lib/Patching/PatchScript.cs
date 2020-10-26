@@ -131,6 +131,18 @@ namespace SM64Lib.Patching
         /// <summary>
         /// Code that can be applied using Armips.
         /// </summary>
-        Armips
+        Armips,
+        /// <summary>
+        /// Patch a BSP patch using Flips.
+        /// </summary>
+        BPS,
+        /// <summary>
+        /// Patch an IPS patch using Flips.
+        /// </summary>
+        IPS,
+        /// <summary>
+        /// Patch a PPF patch using ApplyPPF3.
+        /// </summary>
+        PPF
     }
 }

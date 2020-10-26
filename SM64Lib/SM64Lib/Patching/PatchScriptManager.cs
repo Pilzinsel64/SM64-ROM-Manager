@@ -152,14 +152,21 @@ namespace SM64Lib.Patching
             if (script is null)
                 throw new ArgumentNullException(nameof(script));
 
-            object oromfile = "";
+            object oromfile;
             if (@params is null || !@params.TryGetValue("romfile", out oromfile))
                 oromfile = rommgr.RomFile;
 
+            object oEmbeddedFiles;
+            if (@params is null || !@params.TryGetValue("files", out oEmbeddedFiles))
+                oEmbeddedFiles = null;
+
             string romfile = (string)oromfile;
             string romfileBackup = null;
+            var embeddedFiles = (EmbeddedFilesContainer)oEmbeddedFiles;
+
             var result = new PatchScriptResult();
             var flips = new Flips();
+
             createUndoPatch &= script.AllowRevert && script.ID.HasID && flips.Enabled;
 
             if (createUndoPatch)
@@ -363,6 +370,24 @@ namespace SM64Lib.Patching
                         RunArmips(script.Script, romfile, Path.GetDirectoryName(Conversions.ToString(@params["profilepath"])));
                         break;
                     }
+
+                case ScriptType.BPS:
+                case ScriptType.IPS:
+                    {
+                        var infos = PatchFileInformations.Get(script);
+                        var fileToPatch = embeddedFiles.GetLocalFilePath(infos.PatchFileName);
+                        flips.ApplyPatch(romfile, fileToPatch);
+                    }
+                    break;
+
+                case ScriptType.PPF:
+                    {
+                        var infos = PatchFileInformations.Get(script);
+                        var fileToPatch = embeddedFiles.GetLocalFilePath(infos.PatchFileName);
+                        var ppf = new PPF();
+                        ppf.ApplyPatch(romfile, fileToPatch);
+                    }
+                    break;
             }
 
             if (createUndoPatch)
