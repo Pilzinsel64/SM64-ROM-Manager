@@ -413,8 +413,14 @@ namespace SM64Lib
                             if (patch.ID == paths[1])
                             {
                                 var script = patch.Scripts.FirstOrDefault(n => n.ID == paths[2]);
+                                var dicParams = new Dictionary<string, object>()
+                                {
+                                    { "files", patch.EmbeddedFiles },
+                                    { "rommgr", this },
+                                    { "romfile", RomFile }
+                                };
                                 if (script is object)
-                                    mgr.Patch(script, this, null, null, null, false);
+                                    mgr.Patch(script, this, null, dicParams, null);
                             }
                         }
                         else
@@ -981,35 +987,29 @@ namespace SM64Lib
 
         private void PrepairROM()
         {
-            // Patch things
-            var proc = new Process();
+            var baseTweakFile = General.MyFilePaths["BaseTweak"];
+            var patchingManager = new Patching.PatchingManager();
+            var baseTweak = patchingManager.Read(baseTweakFile);
+            var allScripts = baseTweak.Scripts.Select(n => new BaseTweakScriptInfo(n));
+
+            // Raise Event to let the user choose what to enable
+            // ...
+
+            // Get only enabled script
+            allScripts = allScripts.Where(n => n.Enabled);
+
+            // Patch all scripts
+            if (allScripts.Any())
             {
-                proc.StartInfo.FileName = General.MyFilePaths["ApplyPPF3.exe"];
-                proc.StartInfo.UseShellExecute = false;
-                proc.StartInfo.Arguments = string.Format("a \"{0}\" \"{1}\"", RomFile, General.MyFilePaths["SM64_ROM_Manager.ppf"]);
-                proc.StartInfo.CreateNoWindow = true;
+                var dicParams = new Dictionary<string, object>()
+                {
+                    {"files", baseTweak.EmbeddedFiles },
+                    {"rommgr", this },
+                    {"romfile", RomFile }
+                };
+                foreach (var info in allScripts)
+                    patchingManager.Patch(info.Script, this, null, dicParams, null);
             }
-            proc.Start();
-            proc.WaitForExit();
-
-            var fs = new BinaryRom(this, FileAccess.ReadWrite);
-
-            // Write Custom Background Pointer
-            fs.Position = 0x1202500;
-            foreach (string s in "0A 02 00 00 0A 01 88 00 0A 02 00 00 0A 02 00 00 0A 02 00 00 0A 02 00 00 0A 01 48 00 0A 02 00 00 0A 01 48 00 0A 02 00 00 0A 02 00 00".Split(' '))
-                fs.WriteByte(Conversions.ToByte("&H" + s));
-
-            // Patch Act-Selector
-            General.PatchClass.Open(fs);
-            General.PatchClass.ActSelector_ApplyPatch();
-
-            // Hardcoded Camera Settings
-            General.PatchClass.HardcodedCamera_ApplyPatch();
-            General.PatchClass.HardcodedCamera_DisableAll();
-
-            // Restore Checksum Check
-            General.PatchClass.RestoreChecksum();
-            fs.Close();
 
             // Repaire patched music
             MusicList.Read(this);

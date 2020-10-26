@@ -13,7 +13,7 @@ namespace SM64Lib
         {
             get
             {
-                return new[] { "rn64crc.exe","ApplyPPF3.exe", "Level Tabel.json", "Update-Patches.json", "Update Patches Folder", "Text Profiles.json", "SM64_ROM_Manager.ppf", "sm64extend.exe", "Original Level Pointers.bin", "armips.exe", "Flips.exe" };
+                return new[] { "rn64crc.exe","ApplyPPF3.exe", "Level Tabel.json", "Update-Patches.json", "Update Patches Folder", "Text Profiles.json", "BaseTweak", "sm64extend.exe", "Original Level Pointers.bin", "armips.exe", "Flips.exe" };
             }
         }
 

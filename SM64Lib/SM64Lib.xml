@@ -386,6 +386,21 @@
             Code that can be applied using Armips.
             </summary>
         </member>
+        <member name="F:SM64Lib.Patching.ScriptType.BPS">
+            <summary>
+            Patch a BSP patch using Flips.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Patching.ScriptType.IPS">
+            <summary>
+            Patch an IPS patch using Flips.
+            </summary>
+        </member>
+        <member name="F:SM64Lib.Patching.ScriptType.PPF">
+            <summary>
+            Patch a PPF patch using ApplyPPF3.
+            </summary>
+        </member>
         <member name="P:SM64Lib.RomManager.ProgramVersion">
             <summary>
             Gets or sets the lastly used program version for this ROM.

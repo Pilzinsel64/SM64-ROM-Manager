@@ -190,7 +190,7 @@ namespace SM64_ROM_Manager.Publics
             config.SetFilePath("Update-Patches.json", Path.Combine(MyDataPath, @"Patchs\Update-Patches\Update-Patches.json"));
             config.SetFilePath("Update Patches Folder", Path.Combine(MyDataPath, @"Patchs\Update-Patches"));
             config.SetFilePath("Text Profiles.json", Path.Combine(MyDataPath, @"Text Manager\Profiles.json"));
-            config.SetFilePath("SM64_ROM_Manager.ppf", Path.Combine(MyDataPath, @"Patchs\SM64_ROM_Manager.ppf"));
+            config.SetFilePath("BaseTweak", Path.Combine(MyDataPath, @"Patchs\Base Tweak.json"));
             config.SetFilePath("sm64extend.exe", Path.Combine(MyDataPath, @"Tools\sm64extend.exe"));
             config.SetFilePath("Original Level Pointers.bin", Path.Combine(MyDataPath, @"Other\Original Level Pointers.bin"));
             config.SetFilePath("armips.exe", Path.Combine(MyToolsPath, @"armips.exe"));
