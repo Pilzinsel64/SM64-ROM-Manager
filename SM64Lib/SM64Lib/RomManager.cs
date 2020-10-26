@@ -405,7 +405,20 @@ namespace SM64Lib
                     // Patch update-patches
                     foreach (KeyValuePair<string, RomVersion> kvp in dicUpdatePatches.Where(n => n.Value > ProgramVersion).OrderBy(n => n.Key))
                     {
-                        General.PatchClass.ApplyPPF(RomFile, Path.Combine(General.MyFilePaths["Update Patches Folder"], kvp.Value.Filename));
+                        if (kvp.Value.Filename.StartsWith("#"))
+                        {
+                            var paths = kvp.Value.Filename.Substring(1).Split('#');
+                            var mgr = new Patching.PatchingManager();
+                            var patch = mgr.Read(Path.Combine(General.MyFilePaths["Update Patches Folder"], paths[0]));
+                            if (patch.ID == paths[1])
+                            {
+                                var script = patch.Scripts.FirstOrDefault(n => n.ID == paths[2]);
+                                if (script is object)
+                                    mgr.Patch(script, this, null, null, null, false);
+                            }
+                        }
+                        else
+                            General.PatchClass.ApplyPPF(RomFile, Path.Combine(General.MyFilePaths["Update Patches Folder"], kvp.Value.Filename));
                         needUpdateChecksum = true;
                     }
                 }
