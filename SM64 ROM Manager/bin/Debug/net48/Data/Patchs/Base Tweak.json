@@ -20,7 +20,7 @@
       "AllowRevert": false
     },
     {
-      "Name": "20#w#y#Write Custom Background Pointer",
+      "Name": "15#w#y#Write Custom Background Pointer",
       "Script": "1202500: 0A 02 00 00 0A 01 88 00 0A 02 00 00 0A 02 00 00 0A 02 00 00 0A 02 00 00 0A 01 48 00 0A 02 00 00 0A 01 48 00 0A 02 00 00 0A 02 00 00",
       "Type": "TweakScript",
       "Description": "This is requied to get custom background pointer to work.",
@@ -56,7 +56,7 @@
       "AllowRevert": false
     },
     {
-      "Name": "10#r#y#Open fs",
+      "Name": "20#r#y#Open fs",
       "Script": "Imports Microsoft.VisualBasic\r\nImports System\r\nImports System.Collections.Generic\r\nImports System.IO\r\nImports System.Linq\r\nImports System.Windows.Forms\r\nImports SM64Lib\r\n\r\nModule Script\r\n\r\n    Sub Main(params as IReadOnlyDictionary(Of String, Object))\r\n        General.PatchClass.Open(params(\"romfile\"), false)\r\n    End Sub\r\n\r\nEnd Module\r\n",
       "Type": "VisualBasic",
       "Description": "",
