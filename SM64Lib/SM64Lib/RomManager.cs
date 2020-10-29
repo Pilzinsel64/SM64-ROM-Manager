@@ -995,8 +995,8 @@ namespace SM64Lib
             // Raise Event to let the user choose what to enable
             // ...
 
-            // Get only enabled script
-            allScripts = allScripts.Where(n => n.Enabled);
+            // Get only enabled script and sort by priority
+            allScripts = allScripts.Where(n => n.Enabled).OrderBy(n => n.Priority);
 
             // Patch all scripts
             if (allScripts.Any())
