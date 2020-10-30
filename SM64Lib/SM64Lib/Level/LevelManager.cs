@@ -556,7 +556,8 @@ namespace SM64Lib.Levels
                             tArea = lvl.Areas[CurrentAreaIndex];
                             byte areaid = tArea.AreaID;
                             areaidindex.Add(areaid, Conversions.ToByte(areaidindex.Count));
-                            clStartArea.SetSegGeolayoutAddr((LevelscriptCommand)c, (uint)(lvl.Areas[CurrentAreaIndex].Geolayout.NewGeoOffset - lvl.Bank0x19.RomStart + lvl.Bank0x19.BankAddress));
+                            clStartArea.SetSegGeolayoutAddr(c, (uint)(lvl.Areas[CurrentAreaIndex].Geolayout.NewGeoOffset - lvl.Bank0x19.RomStart + lvl.Bank0x19.BankAddress));
+                            clStartArea.SetAreaID(c, areaid);
                             areaobjwarpindextoinsertdic.Add(areaid, lvl.Levelscript.IndexOf(c) + 1);
                             break;
                         }
