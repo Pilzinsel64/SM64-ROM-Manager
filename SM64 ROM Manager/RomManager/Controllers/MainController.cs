@@ -1963,12 +1963,11 @@ namespace SM64_ROM_Manager
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     if (!addAreasOnly)
-                    {
                         destLevel = frm.LevelCopy;
-                    }
 
                     SetLevelscriptNeedToSave(destLevel);
                     SetLevelBank0x0ENeedToSave(destLevel);
+
                     if (addAreasOnly)
                     {
                         foreach (LevelArea area in frm.AreasCopy)
