@@ -611,6 +611,9 @@ namespace SM64_ROM_Manager.LevelEditor
             // Stop Circular Progress, otherwise it will crash
             CircularProgress1.Stop();
 
+            // Commit unsaved changed of property grid
+            AdvPropertyGrid1.CommitEdit();
+
             // Save all Objects
             SaveAllObjectProperties();
             SaveAllWarpProperties();

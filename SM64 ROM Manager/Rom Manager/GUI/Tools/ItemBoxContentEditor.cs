@@ -270,6 +270,12 @@ namespace SM64_ROM_Manager
             return "Itembox Content File (SM64 ROM Manager Format) (*.ibc)|*.ibc|Itembox Content File (SM64 Editor Format) (*.txt)|*.txt|All files (*)|*";
         }
 
+        private void ItemBoxContentEditor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Commit unsaved changed of property grid
+            AdvPropertyGrid1.CommitEdit();
+        }
+
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
     }
 }

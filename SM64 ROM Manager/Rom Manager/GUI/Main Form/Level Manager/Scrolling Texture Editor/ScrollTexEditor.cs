@@ -354,5 +354,11 @@ namespace SM64_ROM_Manager
             ButtonItem_AddNew.Visible = !simplifiedView;
             bar1.Refresh();
         }
+
+        private void ScrollTexEditor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Commit unsaved changed of property grid
+            AdvPropertyGrid1.CommitEdit();
+        }
     }
 }

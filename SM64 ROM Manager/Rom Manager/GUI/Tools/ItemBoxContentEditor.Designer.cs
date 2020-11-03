@@ -225,6 +225,7 @@ namespace SM64_ROM_Manager
             this.Name = "ItemBoxContentEditor";
             this.TopLeftCornerSize = 0;
             this.TopRightCornerSize = 0;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ItemBoxContentEditor_FormClosing);
             this.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvPropertyGrid1)).EndInit();

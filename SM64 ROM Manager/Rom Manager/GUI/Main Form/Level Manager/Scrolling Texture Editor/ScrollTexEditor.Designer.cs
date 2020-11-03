@@ -242,6 +242,7 @@ namespace SM64_ROM_Manager
             this.Name = "ScrollTexEditor";
             this.TopLeftCornerSize = 0;
             this.TopRightCornerSize = 0;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScrollTexEditor_FormClosing);
             this.SplitContainer1.Panel1.ResumeLayout(false);
             this.SplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer1)).EndInit();
