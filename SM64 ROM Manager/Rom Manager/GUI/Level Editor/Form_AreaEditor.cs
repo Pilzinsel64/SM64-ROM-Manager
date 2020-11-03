@@ -680,6 +680,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     {
                         SelectedList = ListViewEx_Objects;
                         DockContainerItem4.Selected = true;
+                        ReSelectCurrentItemsInList();
                         break;
                     }
 
@@ -687,6 +688,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     {
                         SelectedList = ListViewEx_Warps;
                         DockContainerItem1.Selected = true;
+                        ReSelectCurrentItemsInList();
                         break;
                     }
 
@@ -1743,6 +1745,15 @@ namespace SM64_ROM_Manager.LevelEditor
             ogl.UpdateOrbitCamera();
             ogl.Invalidate();
             ogl.Update();
+        }
+
+        internal void ReSelectCurrentItemsInList()
+        {
+            var items = SelectedList.SelectedItems;
+            var newitems = new ListViewItem[] { };
+            Array.Resize(ref newitems, items.Count);
+            items.CopyTo(newitems, 0);
+            SelectItemsInList(SelectedList, newitems, true);
         }
 
         internal void DeselectAllObjects(bool UpdateGLAndCamera = true)
