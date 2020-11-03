@@ -54,7 +54,7 @@ namespace SM64_ROM_Manager.LevelEditor
         internal Level CLevel { get; set; } = null;
         internal DateTime LastKeyLeaveTimer { get; set; } = DateTime.Now;
         internal List<Keys> PressedKeys { get; private set; } = new List<Keys>();
-        internal ListViewEx SelectedList { get; set; }
+        internal AdvTree SelectedList { get; set; }
         internal byte AreaIdToLoad { get; set; } = 1;
         internal byte LevelID { get; set; } = 0;
         internal List<System.Numerics.Vector3> OrigObjPos { get; private set; } = new List<System.Numerics.Vector3>();
@@ -73,6 +73,7 @@ namespace SM64_ROM_Manager.LevelEditor
         internal Dictionary<byte, Geolayoutscript> GeolayoutScriptDumps { get; private set; } = new Dictionary<byte, Geolayoutscript>();
         internal Dictionary<byte, DisplayListScript[]> ObjectDisplaylistScriptDumps { get; private set; } = new Dictionary<byte, DisplayListScript[]>();
         internal Dictionary<byte, DisplayListScript[]> AreaDisplaylistScriptDumps { get; private set; } = new Dictionary<byte, DisplayListScript[]>();
+        internal List<Managed3DObject> selectedObjects = new List<Managed3DObject>();
 
         // Modules
         internal ObjectControlling objectControlling;
@@ -340,16 +341,12 @@ namespace SM64_ROM_Manager.LevelEditor
 
             // Initialize Components
             InitializeComponent();
-            SelectedList = ListViewEx_Objects;
+            SelectedList = advTree_Objects;
             
             // Create Modules
             ogl = new OpenGLManager(this, Panel_GLControl);
             objectControlling = new ObjectControlling(this);
             maps = new MapManagement(this);
-
-            // ListViews
-            ListViewEx_Objects.SetValue("DoubleBuffered", true);
-            ListViewEx_Warps.SetValue("DoubleBuffered", true);
 
             // Stop drawing
             SuspendLayout();
@@ -375,8 +372,7 @@ namespace SM64_ROM_Manager.LevelEditor
             EnableSlideMovementForObjects = Settings.AreaEditor.EnableSlideMovementByDefaultForObjects;
 
             // Add Groups to ListView Controls
-            ListViewEx_Warps.Groups.AddRange(new[] { lvg_ConnectedWarps, lvg_WarpsForGame, lvg_PaintingWarps, lvg_InstantWarps });
-            // ListViewEx_Objects.Groups.AddRange({lvg_Objects, lvg_MacroObjects})
+            advTree_Warps.Nodes.AddRange(new[] { nConnectedWarps, nWarpsForGame, nPaintingWarps, nInstantWarps});
 
             // Bring CircularProgress to front
             CircularProgress1.BringToFront();
@@ -422,7 +418,7 @@ namespace SM64_ROM_Manager.LevelEditor
             LoadComboBoxObjComboEntries();
             LoadLevelsStringList();
             LoadAreaIDs();
-            SelectedList = ListViewEx_Objects;
+            SelectedList = advTree_Objects;
             ogl.Invalidate();
         }
 
@@ -678,7 +674,7 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 case object _ when srti.Equals(RibbonTabItem_Objects):
                     {
-                        SelectedList = ListViewEx_Objects;
+                        SelectedList = advTree_Objects;
                         DockContainerItem4.Selected = true;
                         ReSelectCurrentItemsInList();
                         break;
@@ -686,7 +682,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
                 case object _ when srti.Equals(RibbonTabItem_Warps):
                     {
-                        SelectedList = ListViewEx_Warps;
+                        SelectedList = advTree_Warps;
                         DockContainerItem1.Selected = true;
                         ReSelectCurrentItemsInList();
                         break;
@@ -1430,10 +1426,10 @@ namespace SM64_ROM_Manager.LevelEditor
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        internal ListViewGroup lvg_ConnectedWarps = new ListViewGroup() { Header = "Connected Warps" };
-        internal ListViewGroup lvg_WarpsForGame = new ListViewGroup() { Header = "Warps for Game" };
-        internal ListViewGroup lvg_PaintingWarps = new ListViewGroup() { Header = "Painting Warps" };
-        internal ListViewGroup lvg_InstantWarps = new ListViewGroup() { Header = "Instant Warps" };
+        internal Node nConnectedWarps = new Node("Connected Warps") { Selectable = false };
+        internal Node nWarpsForGame = new Node("Warps for Game") { Selectable = false };
+        internal Node nPaintingWarps = new Node("Painting Warps") { Selectable = false };
+        internal Node nInstantWarps = new Node("Instant Warps") { Selectable = false };
         // Friend lvg_Objects As New ListViewGroup With {.Header = "3D Objects"}
         // Friend lvg_MacroObjects As New ListViewGroup With {.Header = "Macro 3D Objects"}
 
@@ -1455,74 +1451,56 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void LoadObjectLists()
         {
-            ListViewEx_Objects.SuspendLayout();
-            ListViewEx_Objects.Items.Clear();
+            advTree_Objects.BeginUpdate();
+            advTree_Objects.Nodes.Clear();
+
             ManagedObjects.Clear();
             int i = 0;
-            foreach (var objj in CArea.Objects)
+            Node firstItem = null;
+
+            for (int i1 = 0; i1 < CArea.Objects.Count; i1++)
             {
+                LevelscriptCommand objj = (LevelscriptCommand)CArea.Objects[i1];
                 var objNew = new Managed3DObject(objj, AllObjectCombos);
                 ManagedObjects.Add(objNew);
-                var lvi = new ListViewItem();
-                lvi.Tag = objNew;
-                lvi.SubItems.Add(new ListViewItem.ListViewSubItem());
-                SetObjectPropertiesToListViewItem(ref lvi, objNew, i);
-                ListViewEx_Objects.Items.Add(lvi);
+                var lvi = new Node { Tag = objNew, Name = i1.ToString() };
+                lvi.Cells.Add(new Cell());
+                SetObjectPropertiesToListViewItem(lvi, objNew, i);
+                advTree_Objects.Nodes.Add(lvi);
                 i += 1;
+                if (firstItem == null) firstItem = lvi;
             }
 
             // Select first Item
-            SelectItemAtIndexInList(ListViewEx_Objects, 0, true);
-            ListViewEx_Objects.ResumeLayout();
-        }
+            advTree_Objects.SelectedNode = firstItem;
 
-        internal void SelectItemsInList(ListViewEx list, ListViewItem[] items, bool deselectAllOtherItems)
-        {
-            list.SuspendLayout();
-
-            if (deselectAllOtherItems)
-                foreach (ListViewItem item in list.SelectedItems)
-                    item.Selected = false;
-
-            foreach (var item in items)
-                item.Selected = true;
-
-            items.LastOrDefault()?.EnsureVisible();
-
-            list.ResumeLayout();
-        }
-
-        internal void SelectItemAtIndexInList(ListViewEx list, int index, bool deselectAllOtherItems)
-        {
-            for (int i = 0, loopTo = list.Items.Count - 1; i <= loopTo; i++)
-            {
-                if (i == index)
-                {
-                    list.Items[i].Selected = true;
-                    list.EnsureVisible(i);
-                }
-                else if (deselectAllOtherItems)
-                {
-                    list.Items[i].Selected = false;
-                }
-            }
+            advTree_Objects.EndUpdate();
         }
 
         internal void LoadWarpsLists()
         {
-            ListViewEx_Warps.SuspendLayout();
-            ListViewEx_Warps.Items.Clear();
+            advTree_Warps.BeginUpdate();
+            nConnectedWarps.Nodes.Clear();
+            nWarpsForGame.Nodes.Clear();
+            nInstantWarps.Nodes.Clear();
+            nPaintingWarps.Nodes.Clear();
             ManagedWarps.Clear();
+
             var allWarps = new List<LevelscriptCommand>();
             int gameWarpsStart, gameWarpCount;
+            Node firstItem = null;
+
             allWarps.AddRange(CArea.Warps);
             gameWarpsStart = allWarps.Count;
             gameWarpCount = CArea.WarpsForGame.Count;
             allWarps.AddRange(CArea.WarpsForGame);
-            foreach (LevelscriptCommand warp in allWarps)
+
+            for (int i1 = 0; i1 < allWarps.Count; i1++)
             {
+                LevelscriptCommand warp = (LevelscriptCommand)allWarps[i1];
                 IManagedLevelscriptCommand warpNew = null;
-                var lvi = new ListViewItem() { Tag = warpNew };
+                var lvi = new Node() { Tag = warpNew };
+                Node nParent = null;
 
                 // Set the ListViewGroup for the ListViewItem
                 var switchExpr = warp.CommandType;
@@ -1532,13 +1510,9 @@ namespace SM64_ROM_Manager.LevelEditor
                         {
                             int warpIndex = allWarps.IndexOf(warp);
                             if (warpIndex >= gameWarpsStart && warpIndex <= gameWarpsStart + gameWarpCount)
-                            {
-                                lvi.Group = lvg_WarpsForGame;
-                            }
+                                nParent = nWarpsForGame;
                             else
-                            {
-                                lvi.Group = lvg_ConnectedWarps;
-                            }
+                                nParent = nConnectedWarps;
 
                             warpNew = new ManagedWarp(warp);
                             break;
@@ -1546,13 +1520,14 @@ namespace SM64_ROM_Manager.LevelEditor
 
                     case LevelscriptCommandTypes.PaintingWarp:
                         {
-                            lvi.Group = lvg_PaintingWarps;
+                            nParent = nPaintingWarps;
                             warpNew = new ManagedWarp(warp);
                             break;
                         }
 
                     case LevelscriptCommandTypes.InstantWarp:
                         {
+                            nParent = nInstantWarps;
                             warpNew = new ManagedInstantWarp(warp);
                             break;
                         }
@@ -1563,36 +1538,38 @@ namespace SM64_ROM_Manager.LevelEditor
 
                 // Add enought SubItems to ListviewItem
                 for (int i = 2; i <= 4; i++)
-                    lvi.SubItems.Add(new ListViewItem.ListViewSubItem());
+                    lvi.Cells.Add(new Cell());
+
+                // Set node name
+                lvi.Name = i1.ToString();
 
                 // Set all Properties as Text to the SubItems
-                SetWarpPropertiesToListViewItem(ref lvi, warpNew);
+                SetWarpPropertiesToListViewItem(lvi, warpNew);
                 ManagedWarps.Add(warpNew);
-                ListViewEx_Warps.Items.Add(lvi);
+                nParent.Nodes.Add(lvi);
+
+                // Remember first item to select
+                if (firstItem == null)
+                    firstItem = lvi;
             }
 
             // Select first Item
-            if (ListViewEx_Warps.Items.Count > 0)
-            {
-                {
-                    var withBlock = ListViewEx_Warps.Items[0];
-                    withBlock.Selected = true;
-                }
-            }
+            if (firstItem is object)
+                advTree_Warps.SelectedNode = null;
 
-            ListViewEx_Warps.ResumeLayout();
+            advTree_Warps.EndUpdate();
         }
 
-        internal void SetWarpPropertiesToListViewItem(ref ListViewItem lvi, IManagedLevelscriptCommand iwarp)
+        internal void SetWarpPropertiesToListViewItem(Node lvi, IManagedLevelscriptCommand iwarp)
         {
             if (iwarp is ManagedWarp)
             {
                 ManagedWarp warp = (ManagedWarp)iwarp;
                 var destLevel = Rommgr.LevelInfoData.FirstOrDefault(n => n.ID == (ushort)warp.DestLevelID);
-                lvi.SubItems[0].Text = WarpIDToString(warp.WarpID);
-                lvi.SubItems[1].Text = $"{destLevel?.TypeString}-{destLevel?.Number}";
-                lvi.SubItems[2].Text = TextValueConverter.TextFromValue(warp.DestAreaID);
-                lvi.SubItems[3].Text = TextValueConverter.TextFromValue(warp.DestWarpID);
+                lvi.Cells[0].Text = WarpIDToString(warp.WarpID);
+                lvi.Cells[1].Text = $"{destLevel?.TypeString}-{destLevel?.Number}";
+                lvi.Cells[2].Text = TextValueConverter.TextFromValue(warp.DestAreaID);
+                lvi.Cells[3].Text = TextValueConverter.TextFromValue(warp.DestWarpID);
                 Color colorToUse;
                 try
                 {
@@ -1603,23 +1580,23 @@ namespace SM64_ROM_Manager.LevelEditor
                     colorToUse = default;
                 }
 
-                foreach (ListViewItem.ListViewSubItem subitem in lvi.SubItems)
-                    subitem.ForeColor = colorToUse;
+                foreach (Cell cell in lvi.Cells)
+                    cell.StyleNormal.TextColor = colorToUse;
             }
             else if (iwarp is ManagedInstantWarp)
             {
                 ManagedInstantWarp warp = (ManagedInstantWarp)iwarp;
-                lvi.SubItems[0].Text = string.Empty;
-                lvi.SubItems[1].Text = Conversions.ToString(TextValueConverter.ValueFromText(Conversions.ToString(warp.CollisionType)));
-                lvi.SubItems[2].Text = Conversions.ToString(TextValueConverter.ValueFromText(Conversions.ToString(warp.DestAreaID)));
-                lvi.SubItems[3].Text = string.Empty;
+                lvi.Cells[0].Text = string.Empty;
+                lvi.Cells[1].Text = Conversions.ToString(TextValueConverter.ValueFromText(Conversions.ToString(warp.CollisionType)));
+                lvi.Cells[2].Text = Conversions.ToString(TextValueConverter.ValueFromText(Conversions.ToString(warp.DestAreaID)));
+                lvi.Cells[3].Text = string.Empty;
             }
         }
 
-        internal void SetObjectPropertiesToListViewItem(ref ListViewItem lvi, Managed3DObject obj, int objIndex = -1)
+        internal void SetObjectPropertiesToListViewItem(Node lvi, Managed3DObject obj, int objIndex = -1)
         {
             if (objIndex > -1)
-                lvi.SubItems[0].Text = Conversions.ToString(objIndex + 1);
+                lvi.Cells[0].Text = Convert.ToString(objIndex + 1);
             var combo = AllObjectCombos.GetObjectComboOfObject(obj);
             string txt = "";
             if (combo is null || combo == ObjectComboList.UnknownCombo)
@@ -1631,7 +1608,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 txt = combo.Name;
             }
 
-            lvi.SubItems[1].Text = txt;
+            lvi.Cells[1].Text = txt;
         }
 
         internal string WarpIDToString(byte id)
@@ -1667,25 +1644,19 @@ namespace SM64_ROM_Manager.LevelEditor
             ListView.ResumeLayout();
         }
 
-        internal void ListViewEx_Objects_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            {
-                var withBlock = Timer_ListViewEx_Objects_SelectionChanged;
-                if (withBlock.Enabled)
-                {
-                    withBlock.Stop();
-                }
-
-                withBlock.Start();
-            }
-        }
-
         internal void Timer_ListViewEx_Objects_SelectionChanged_Elapsed(object sender, ElapsedEventArgs e)
         {
             if (!loadingObj && SelectedObject is object)
             {
+                var nodes = advTree_Objects.SelectedNodes;
+                var objs = new List<Managed3DObject>();
+                selectedObjects.Clear();
+                foreach (Node item in nodes)
+                    selectedObjects.Add((Managed3DObject)item.Tag);
+
                 SelectObjects(SelectedObjects);
                 ShowObjectProperties();
+
                 if (objectControlling.WasInOrbitMode)
                     ogl.SetCameraMode(CameraMode.ORBIT);
             }
@@ -1693,23 +1664,14 @@ namespace SM64_ROM_Manager.LevelEditor
             PanelDockContainer10.DockContainerItem.Selected = true;
         }
 
-        internal void ListViewEx_Warps_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selectedIndexes = ListViewEx_Warps.SelectedIndices;
-            if (selectedIndexes.Count > 0)
-            {
-                ShowWarpProterties();
-                PanelDockContainer10.DockContainerItem.Selected = true;
-            }
-        }
-
         internal Managed3DObject SelectedObject
         {
             get
             {
-                if (ListViewEx_Objects.SelectedIndices.Count == 0)
+                var nodes = advTree_Objects.SelectedNodes;
+                if (nodes.Count == 0)
                     return null;
-                return (Managed3DObject)ListViewEx_Objects.SelectedItems[0].Tag;
+                return (Managed3DObject)nodes[0].Tag;
             }
         }
 
@@ -1717,12 +1679,7 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             get
             {
-                if (ListViewEx_Objects.SelectedIndices.Count == 0)
-                    return Array.Empty<Managed3DObject>();
-                var objs = new List<Managed3DObject>();
-                foreach (ListViewItem item in ListViewEx_Objects.SelectedItems)
-                    objs.Add((Managed3DObject)item.Tag);
-                return objs.ToArray();
+                return selectedObjects.ToArray();
             }
         }
 
@@ -1749,11 +1706,14 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void ReSelectCurrentItemsInList()
         {
-            var items = SelectedList.SelectedItems;
-            var newitems = new ListViewItem[] { };
-            Array.Resize(ref newitems, items.Count);
-            items.CopyTo(newitems, 0);
-            SelectItemsInList(SelectedList, newitems, true);
+            var nodes = SelectedList.SelectedNodes;
+            var newnodes = new Node[] { };
+            Array.Resize(ref newnodes, nodes.Count);
+            nodes.CopyTo(newnodes, 0);
+            SelectedList.BeginUpdate();
+            nodes.Clear();
+            nodes.AddRange(newnodes);
+            SelectedList.EndUpdate();
         }
 
         internal void DeselectAllObjects(bool UpdateGLAndCamera = true)
@@ -1771,10 +1731,17 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void ToogleObjectSelection(Managed3DObject obj)
         {
+            var objindex = ManagedObjects.IndexOf(obj);
             obj.IsSelected = !obj.IsSelected;
+
+            var n = advTree_Objects.FindNodeByName(objindex.ToString());
+            if (obj.IsSelected != n.IsSelected)
             {
-                var withBlock = ListViewEx_Objects.Items[ManagedObjects.IndexOf(obj)];
-                withBlock.Selected = !withBlock.Selected;
+                if (obj.IsSelected)
+                    selectedObjects.AddIfNotContains(obj);
+                else
+                    selectedObjects.RemoveIfContains(obj);
+                ShowObjectProperties();
             }
 
             ogl.UpdateOrbitCamera();
@@ -1786,9 +1753,10 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             get
             {
-                if (ListViewEx_Warps.SelectedIndices.Count == 0)
+                var nodes = advTree_Warps.SelectedNodes;
+                if (nodes.Count == 0)
                     return null;
-                return (IManagedLevelscriptCommand)ListViewEx_Warps.SelectedItems[0].Tag;
+                return (IManagedLevelscriptCommand)nodes[0].Tag;
             }
         }
 
@@ -1796,10 +1764,11 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             get
             {
-                if (ListViewEx_Warps.SelectedIndices.Count == 0)
+                var nodes = advTree_Warps.SelectedNodes;
+                if (nodes.Count == 0)
                     return Array.Empty<IManagedLevelscriptCommand>();
                 var objs = new List<IManagedLevelscriptCommand>();
-                foreach (ListViewItem item in ListViewEx_Warps.SelectedItems)
+                foreach (Node item in nodes)
                     objs.Add((IManagedLevelscriptCommand)item.Tag);
                 return objs.ToArray();
             }
@@ -3363,6 +3332,43 @@ namespace SM64_ROM_Manager.LevelEditor
             ogl.FOV = value * ((float)Math.PI / 180.0f);
             ogl.ChangeViewMode();
             sliderItem_FOV.Text = "FOV: " + value;
+        }
+
+        private void advTree_Objects_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void advTree_Warps_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void advTree_Objects_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void advTree_Warps_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void advTree_Objects_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            var withBlock = Timer_ListViewEx_Objects_SelectionChanged;
+            if (withBlock.Enabled)
+                withBlock.Stop();
+            withBlock.Start();
+        }
+
+        private void advTree_Warps_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            if (advTree_Warps.SelectedNodes.Count > 0)
+            {
+                ShowWarpProterties();
+                PanelDockContainer10.DockContainerItem.Selected = true;
+            }
         }
     }
 }

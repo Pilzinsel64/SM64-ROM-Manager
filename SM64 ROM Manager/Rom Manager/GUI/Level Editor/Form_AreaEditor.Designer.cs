@@ -39,14 +39,6 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AreaEditor));
-            this.ListViewEx_Warps = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ListViewEx_Objects = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Panel_GLControl = new DevComponents.DotNetBar.PanelEx();
             this.CircularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
             this.ComboItem1 = new DevComponents.Editors.ComboItem();
@@ -113,8 +105,20 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Bar2 = new DevComponents.DotNetBar.Bar();
             this.PanelDockContainer7 = new DevComponents.DotNetBar.PanelDockContainer();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.advTree_Objects = new DevComponents.AdvTree.AdvTree();
+            this.columnHeader_ObjectNumber = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_ComboName = new DevComponents.AdvTree.ColumnHeader();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.PanelDockContainer1 = new DevComponents.DotNetBar.PanelDockContainer();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.advTree_Warps = new DevComponents.AdvTree.AdvTree();
+            this.columnHeader_WarpID = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_ToLevel = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_ToArea = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_ToWarpID = new DevComponents.AdvTree.ColumnHeader();
+            this.nodeConnector2 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
             this.DockContainerItem4 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.DockSite2 = new DevComponents.DotNetBar.DockSite();
@@ -229,8 +233,8 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.RibbonBar25 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer16 = new DevComponents.DotNetBar.ItemContainer();
-            this.ButtonItem_ButtonItem_AddDeathFloor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_ButtonItem_AddDeathFloor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonBar24 = new DevComponents.DotNetBar.RibbonBar();
             this.ItemContainer17 = new DevComponents.DotNetBar.ItemContainer();
@@ -326,8 +330,10 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Bar2.SuspendLayout();
             this.PanelDockContainer7.SuspendLayout();
             this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_Objects)).BeginInit();
             this.PanelDockContainer1.SuspendLayout();
             this.Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_Warps)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).BeginInit();
             this.RibbonControl1.SuspendLayout();
             this.RibbonPanel1.SuspendLayout();
@@ -338,83 +344,6 @@ namespace SM64_ROM_Manager.LevelEditor
             this.RibbonPanel2.SuspendLayout();
             this.RibbonPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ListViewEx_Warps
-            // 
-            resources.ApplyResources(this.ListViewEx_Warps, "ListViewEx_Warps");
-            this.ListViewEx_Warps.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx_Warps.Border.Class = "ListViewBorder";
-            this.ListViewEx_Warps.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_Warps.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader2,
-            this.ColumnHeader4,
-            this.ColumnHeader5,
-            this.ColumnHeader6});
-            this.ListViewEx_Warps.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_Warps.FocusCuesEnabled = false;
-            this.ListViewEx_Warps.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_Warps.FullRowSelect = true;
-            this.ListViewEx_Warps.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx_Warps.HideSelection = false;
-            this.ListViewEx_Warps.MultiSelect = false;
-            this.ListViewEx_Warps.Name = "ListViewEx_Warps";
-            this.ListViewEx_Warps.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_Warps.View = System.Windows.Forms.View.Details;
-            this.ListViewEx_Warps.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_Warps_SelectedIndexChanged);
-            this.ListViewEx_Warps.Click += new System.EventHandler(this.ListViewEx_Objects_Click);
-            this.ListViewEx_Warps.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListViewEx_Warps_MouseClick);
-            // 
-            // ColumnHeader2
-            // 
-            resources.ApplyResources(this.ColumnHeader2, "ColumnHeader2");
-            // 
-            // ColumnHeader4
-            // 
-            resources.ApplyResources(this.ColumnHeader4, "ColumnHeader4");
-            // 
-            // ColumnHeader5
-            // 
-            resources.ApplyResources(this.ColumnHeader5, "ColumnHeader5");
-            // 
-            // ColumnHeader6
-            // 
-            resources.ApplyResources(this.ColumnHeader6, "ColumnHeader6");
-            // 
-            // ListViewEx_Objects
-            // 
-            resources.ApplyResources(this.ListViewEx_Objects, "ListViewEx_Objects");
-            this.ListViewEx_Objects.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx_Objects.Border.Class = "ListViewBorder";
-            this.ListViewEx_Objects.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_Objects.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader1,
-            this.ColumnHeader3});
-            this.ListViewEx_Objects.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_Objects.FocusCuesEnabled = false;
-            this.ListViewEx_Objects.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_Objects.FullRowSelect = true;
-            this.ListViewEx_Objects.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx_Objects.HideSelection = false;
-            this.ListViewEx_Objects.Name = "ListViewEx_Objects";
-            this.ListViewEx_Objects.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_Objects.View = System.Windows.Forms.View.Details;
-            this.ListViewEx_Objects.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_Objects_SelectedIndexChanged);
-            this.ListViewEx_Objects.Click += new System.EventHandler(this.ListViewEx_Objects_Click);
-            this.ListViewEx_Objects.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListViewEx_Objects_MouseClick);
-            // 
-            // ColumnHeader1
-            // 
-            resources.ApplyResources(this.ColumnHeader1, "ColumnHeader1");
-            // 
-            // ColumnHeader3
-            // 
-            resources.ApplyResources(this.ColumnHeader3, "ColumnHeader3");
             // 
             // Panel_GLControl
             // 
@@ -1176,9 +1105,53 @@ namespace SM64_ROM_Manager.LevelEditor
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.Panel1.Controls.Add(this.ListViewEx_Objects);
+            this.Panel1.Controls.Add(this.advTree_Objects);
             resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
+            // 
+            // advTree_Objects
+            // 
+            this.advTree_Objects.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTree_Objects.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTree_Objects.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree_Objects.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree_Objects.Columns.Add(this.columnHeader_ObjectNumber);
+            this.advTree_Objects.Columns.Add(this.columnHeader_ComboName);
+            resources.ApplyResources(this.advTree_Objects, "advTree_Objects");
+            this.advTree_Objects.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_Objects.Name = "advTree_Objects";
+            this.advTree_Objects.NodesConnector = this.nodeConnector1;
+            this.advTree_Objects.NodeStyle = this.elementStyle1;
+            this.advTree_Objects.PathSeparator = ";";
+            this.advTree_Objects.Styles.Add(this.elementStyle1);
+            this.advTree_Objects.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTree_Objects_AfterNodeSelect);
+            this.advTree_Objects.Click += new System.EventHandler(this.advTree_Objects_Click);
+            this.advTree_Objects.MouseClick += new System.Windows.Forms.MouseEventHandler(this.advTree_Objects_MouseClick);
+            // 
+            // columnHeader_ObjectNumber
+            // 
+            this.columnHeader_ObjectNumber.Name = "columnHeader_ObjectNumber";
+            resources.ApplyResources(this.columnHeader_ObjectNumber, "columnHeader_ObjectNumber");
+            this.columnHeader_ObjectNumber.Width.Absolute = 50;
+            // 
+            // columnHeader_ComboName
+            // 
+            this.columnHeader_ComboName.Name = "columnHeader_ComboName";
+            resources.ApplyResources(this.columnHeader_ComboName, "columnHeader_ComboName");
+            this.columnHeader_ComboName.Width.Absolute = 180;
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // PanelDockContainer1
             // 
@@ -1195,9 +1168,67 @@ namespace SM64_ROM_Manager.LevelEditor
             // Panel2
             // 
             this.Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.Panel2.Controls.Add(this.ListViewEx_Warps);
+            this.Panel2.Controls.Add(this.advTree_Warps);
             resources.ApplyResources(this.Panel2, "Panel2");
             this.Panel2.Name = "Panel2";
+            // 
+            // advTree_Warps
+            // 
+            this.advTree_Warps.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTree_Warps.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTree_Warps.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree_Warps.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree_Warps.Columns.Add(this.columnHeader_WarpID);
+            this.advTree_Warps.Columns.Add(this.columnHeader_ToLevel);
+            this.advTree_Warps.Columns.Add(this.columnHeader_ToArea);
+            this.advTree_Warps.Columns.Add(this.columnHeader_ToWarpID);
+            resources.ApplyResources(this.advTree_Warps, "advTree_Warps");
+            this.advTree_Warps.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_Warps.Name = "advTree_Warps";
+            this.advTree_Warps.NodesConnector = this.nodeConnector2;
+            this.advTree_Warps.NodeStyle = this.elementStyle2;
+            this.advTree_Warps.PathSeparator = ";";
+            this.advTree_Warps.Styles.Add(this.elementStyle2);
+            this.advTree_Warps.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTree_Warps_AfterNodeSelect);
+            this.advTree_Warps.Click += new System.EventHandler(this.advTree_Warps_Click);
+            this.advTree_Warps.MouseClick += new System.Windows.Forms.MouseEventHandler(this.advTree_Warps_MouseClick);
+            // 
+            // columnHeader_WarpID
+            // 
+            this.columnHeader_WarpID.Name = "columnHeader_WarpID";
+            resources.ApplyResources(this.columnHeader_WarpID, "columnHeader_WarpID");
+            this.columnHeader_WarpID.Width.Absolute = 70;
+            // 
+            // columnHeader_ToLevel
+            // 
+            this.columnHeader_ToLevel.Name = "columnHeader_ToLevel";
+            resources.ApplyResources(this.columnHeader_ToLevel, "columnHeader_ToLevel");
+            this.columnHeader_ToLevel.Width.Absolute = 50;
+            // 
+            // columnHeader_ToArea
+            // 
+            this.columnHeader_ToArea.Name = "columnHeader_ToArea";
+            resources.ApplyResources(this.columnHeader_ToArea, "columnHeader_ToArea");
+            this.columnHeader_ToArea.Width.Absolute = 45;
+            // 
+            // columnHeader_ToWarpID
+            // 
+            this.columnHeader_ToWarpID.Name = "columnHeader_ToWarpID";
+            resources.ApplyResources(this.columnHeader_ToWarpID, "columnHeader_ToWarpID");
+            this.columnHeader_ToWarpID.Width.Absolute = 60;
+            // 
+            // nodeConnector2
+            // 
+            this.nodeConnector2.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle2
+            // 
+            this.elementStyle2.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle2.Name = "elementStyle2";
+            this.elementStyle2.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // DockContainerItem4
             // 
@@ -2712,23 +2743,23 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             this.ItemContainer16.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
+            // ButtonItem_ButtonItem_AddDeathFloorWithExtBounds
+            // 
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Name = "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds";
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_ButtonItem_AddDeathFloor});
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds, "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds");
+            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Click += new System.EventHandler(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds_Click);
+            // 
             // ButtonItem_ButtonItem_AddDeathFloor
             // 
             this.ButtonItem_ButtonItem_AddDeathFloor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
             this.ButtonItem_ButtonItem_AddDeathFloor.Name = "ButtonItem_ButtonItem_AddDeathFloor";
             resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloor, "ButtonItem_ButtonItem_AddDeathFloor");
             this.ButtonItem_ButtonItem_AddDeathFloor.Click += new System.EventHandler(this.ButtonItem8_Click);
-            // 
-            // ButtonItem_ButtonItem_AddDeathFloorWithExtBounds
-            // 
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Name = "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds";
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.SubItemsExpandWidth = 14;
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem_ButtonItem_AddDeathFloor});
-            resources.ApplyResources(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds, "ButtonItem_ButtonItem_AddDeathFloorWithExtBounds");
-            this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Click += new System.EventHandler(this.ButtonItem_ButtonItem_AddDeathFloorWithExtBounds_Click);
             // 
             // ButtonItem4
             // 
@@ -3684,8 +3715,10 @@ namespace SM64_ROM_Manager.LevelEditor
             this.Bar2.ResumeLayout(false);
             this.PanelDockContainer7.ResumeLayout(false);
             this.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_Objects)).EndInit();
             this.PanelDockContainer1.ResumeLayout(false);
             this.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_Warps)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).EndInit();
             this.RibbonControl1.ResumeLayout(false);
             this.RibbonControl1.PerformLayout();
@@ -3700,11 +3733,6 @@ namespace SM64_ROM_Manager.LevelEditor
 
         }
         internal DevComponents.DotNetBar.PanelEx Panel_GLControl;
-        internal DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_Warps;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader2;
-        internal DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_Objects;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader3;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader1;
         internal DevComponents.Editors.ComboItem ComboItem1;
         internal DevComponents.Editors.ComboItem ComboItem2;
         internal DevComponents.DotNetBar.DotNetBarManager DotNetBarManager1;
@@ -3750,9 +3778,6 @@ namespace SM64_ROM_Manager.LevelEditor
         internal DevComponents.DotNetBar.DockContainerItem DockContainerItem6;
         internal DevComponents.DotNetBar.SuperTooltip SuperTooltip1;
         internal DevComponents.DotNetBar.ContextMenuBar ContextMenuBar1;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader4;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader5;
-        internal System.Windows.Forms.ColumnHeader ColumnHeader6;
         internal DevComponents.DotNetBar.ButtonItem ButtonItem_PasteWarpDefault;
         internal DevComponents.DotNetBar.ButtonX ButtonX_CamMode;
         internal DevComponents.DotNetBar.LabelItem LabelItem1;
@@ -3958,6 +3983,18 @@ namespace SM64_ROM_Manager.LevelEditor
         private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvObjPrecise;
         private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvObjSlide;
         private DevComponents.DotNetBar.SliderItem sliderItem_FOV;
+        private DevComponents.AdvTree.AdvTree advTree_Objects;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_ObjectNumber;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_ComboName;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
+        private DevComponents.AdvTree.AdvTree advTree_Warps;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_WarpID;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_ToLevel;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_ToArea;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_ToWarpID;
+        private DevComponents.AdvTree.NodeConnector nodeConnector2;
+        private DevComponents.DotNetBar.ElementStyle elementStyle2;
     }
 
 }
