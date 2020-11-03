@@ -75,6 +75,7 @@ namespace SM64_ROM_Manager
             SwitchButton_UseLegacyCollisionDescriptions.Value = Settings.ModelConverter.UseLegacyCollisionDescriptions;
             SwitchButton_TMForceUppercase.Value = Settings.TextManager.ForceUpperCaseForActAndLevelNames;
             SwitchButton_AutoDetectStartEndQuotationMarks.Value = Settings.TextManager.AutoDetectStartEndQuotationMarks;
+            switchButton_AutoFocusEditorTextBox.Value = Settings.TextManager.AutoFocusEditorTextBox;
             TextBoxX_ProxyUsr.Text = Settings.Network.ProxyUsername;
             TextBoxX_ProxyPwd.Text = string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted) ? string.Empty : crypter.DecryptData(Settings.Network.ProxyPasswordEncrypted);
             comboBoxEx_DefaultObjMoveMode.SelectedIndex = Settings.AreaEditor.EnableSlideMovementByDefaultForObjects ? 1 : 0;
@@ -248,6 +249,7 @@ namespace SM64_ROM_Manager
             Settings.ModelConverter.UseLegacyCollisionDescriptions = SwitchButton_UseLegacyCollisionDescriptions.Value;
             Settings.TextManager.ForceUpperCaseForActAndLevelNames = SwitchButton_TMForceUppercase.Value;
             Settings.TextManager.AutoDetectStartEndQuotationMarks = SwitchButton_AutoDetectStartEndQuotationMarks.Value;
+            Settings.TextManager.AutoFocusEditorTextBox = switchButton_AutoFocusEditorTextBox.Value;
             Settings.Network.ProxyUsername = TextBoxX_ProxyUsr.Text.Trim();
             Settings.Network.ProxyPasswordEncrypted = string.IsNullOrEmpty(TextBoxX_ProxyPwd.Text) ? string.Empty : crypter.EncryptData(TextBoxX_ProxyPwd.Text);
             Settings.General.OpenThankYouFormAfterUpdates = switchButton_ThankYouPageAfterUpdates.Value;

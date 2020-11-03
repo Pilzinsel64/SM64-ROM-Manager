@@ -147,12 +147,6 @@
   <data name="labelX21.Text" xml:space="preserve">
     <value>Öffne Dankes-Seite nach Aktuallisierungen:</value>
   </data>
-  <data name="switchButton1.OffText" xml:space="preserve">
-    <value>Nein</value>
-  </data>
-  <data name="switchButton1.OnText" xml:space="preserve">
-    <value>Ja</value>
-  </data>
   <data name="labelX20.Text" xml:space="preserve">
     <value>Internen Browser verwenden:</value>
   </data>
@@ -201,20 +195,14 @@
   <data name="ComboItem3.Text" xml:space="preserve">
     <value>Nein</value>
   </data>
-  <data name="TextBoxX_ProxyPwd.WatermarkText" xml:space="preserve">
-    <value>Passwort</value>
+  <data name="labelX23.Text" xml:space="preserve">
+    <value>Editor-Textbox automatisch fokusieren</value>
   </data>
-  <data name="TextBoxX_ProxyUsr.WatermarkText" xml:space="preserve">
-    <value>Benutzername</value>
+  <data name="switchButton_AutoFocusEditorTextBox.OffText" xml:space="preserve">
+    <value>Nein</value>
   </data>
-  <data name="LabelX16.Text" xml:space="preserve">
-    <value>Proxy-Anmeldedaten:</value>
-  </data>
-  <data name="TabItem8.Text" xml:space="preserve">
-    <value>Netzwerk</value>
-  </data>
-  <data name="TabItem2.Text" xml:space="preserve">
-    <value>Bereichseditor</value>
+  <data name="switchButton_AutoFocusEditorTextBox.OnText" xml:space="preserve">
+    <value>Ja</value>
   </data>
   <data name="labelX17.Text" xml:space="preserve">
     <value>Automatisch Start-/Endhochkomma identifizieren:</value>
@@ -237,6 +225,30 @@
   <data name="TabItem7.Text" xml:space="preserve">
     <value>Text-Manager</value>
   </data>
+  <data name="LabelX2.Text" xml:space="preserve">
+    <value>Lader-Modul:</value>
+  </data>
+  <data name="TabItem4.Text" xml:space="preserve">
+    <value>Dateiparser</value>
+  </data>
+  <data name="TextBoxX_ProxyPwd.WatermarkText" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="TextBoxX_ProxyUsr.WatermarkText" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="LabelX16.Text" xml:space="preserve">
+    <value>Proxy-Anmeldedaten:</value>
+  </data>
+  <data name="TabItem8.Text" xml:space="preserve">
+    <value>Netzwerk</value>
+  </data>
+  <data name="TabItem3.Text" xml:space="preserve">
+    <value>Levelmanager</value>
+  </data>
+  <data name="TabItem2.Text" xml:space="preserve">
+    <value>Bereichseditor</value>
+  </data>
   <data name="LabelX9.Text" xml:space="preserve">
     <value>Spiel-Starten Parameter:</value>
   </data>
@@ -245,15 +257,6 @@
   </data>
   <data name="ButtonX3.Text" xml:space="preserve">
     <value>Starten mit 'Öffnen mit'</value>
-  </data>
-  <data name="LabelX2.Text" xml:space="preserve">
-    <value>Lader-Modul:</value>
-  </data>
-  <data name="TabItem4.Text" xml:space="preserve">
-    <value>Dateiparser</value>
-  </data>
-  <data name="TabItem3.Text" xml:space="preserve">
-    <value>Levelmanager</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

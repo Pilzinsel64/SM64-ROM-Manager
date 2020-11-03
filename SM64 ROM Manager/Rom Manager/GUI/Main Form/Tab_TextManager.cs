@@ -14,6 +14,7 @@ using Z.Core.Extensions;
 using SM64Lib.Text;
 using System.IO;
 using DevComponents.AdvTree;
+using SM64_ROM_Manager.SettingsManager;
 
 namespace SM64_ROM_Manager
 {
@@ -490,10 +491,14 @@ namespace SM64_ROM_Manager
             SaveItemText();
         }
 
-        private void AdvTree1_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
+        private void AdvTree1_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
         {
             if (IsAnyTextItemSelected())
+            {
                 ShowTextItemData();
+                if (Settings.TextManager.AutoFocusEditorTextBox)
+                    TextBoxX_TM_TextEditor.Focus();
+            }
         }
 
         private void ButtonItem_AddTextItem_Click(object sender, EventArgs e)
