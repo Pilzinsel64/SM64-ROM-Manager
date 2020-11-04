@@ -6717,6 +6717,13 @@
             Gets a value indicating whether the tree node is in the selected state. true if the tree node is in the selected state; otherwise, false.
             </summary>
         </member>
+        <member name="M:DevComponents.AdvTree.Node.SetSelected(System.Boolean)">
+            <summary>
+            Select or deselect this Node in tree view.
+            </summary>
+            <param name="value">The value that represents if the new state should be selected or not.</param>
+            <returns>Returns true if selection/deselection was successfull, else returns false.</returns>
+        </member>
         <member name="P:DevComponents.AdvTree.Node.Selectable">
             <summary>
             Gets or sets whether node can be selected by user by clicking it with the mouse or using keyboard. Default value is true.
