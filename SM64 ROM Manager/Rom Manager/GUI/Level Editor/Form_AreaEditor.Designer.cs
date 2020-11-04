@@ -1127,9 +1127,9 @@ namespace SM64_ROM_Manager.LevelEditor
             this.advTree_Objects.NodeStyle = this.elementStyle1;
             this.advTree_Objects.PathSeparator = ";";
             this.advTree_Objects.Styles.Add(this.elementStyle1);
-            this.advTree_Objects.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTree_Objects_AfterNodeSelect);
-            this.advTree_Objects.Click += new System.EventHandler(this.advTree_Objects_Click);
-            this.advTree_Objects.MouseClick += new System.Windows.Forms.MouseEventHandler(this.advTree_Objects_MouseClick);
+            this.advTree_Objects.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_Objects_AfterNodeSelect);
+            this.advTree_Objects.Click += new System.EventHandler(this.AdvTree_Objects_Click);
+            this.advTree_Objects.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AdvTree_Objects_MouseClick);
             // 
             // columnHeader_ObjectNumber
             // 
@@ -1192,9 +1192,9 @@ namespace SM64_ROM_Manager.LevelEditor
             this.advTree_Warps.NodeStyle = this.elementStyle2;
             this.advTree_Warps.PathSeparator = ";";
             this.advTree_Warps.Styles.Add(this.elementStyle2);
-            this.advTree_Warps.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTree_Warps_AfterNodeSelect);
-            this.advTree_Warps.Click += new System.EventHandler(this.advTree_Warps_Click);
-            this.advTree_Warps.MouseClick += new System.Windows.Forms.MouseEventHandler(this.advTree_Warps_MouseClick);
+            this.advTree_Warps.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_Warps_AfterNodeSelect);
+            this.advTree_Warps.Click += new System.EventHandler(this.AdvTree_Warps_Click);
+            this.advTree_Warps.MouseClick += new System.Windows.Forms.MouseEventHandler(this.AdvTree_Warps_MouseClick);
             // 
             // columnHeader_WarpID
             // 

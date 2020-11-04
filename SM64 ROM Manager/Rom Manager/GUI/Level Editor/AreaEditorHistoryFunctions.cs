@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using global::SM64Lib.Levels;
 using global::SM64Lib.Levels.Script;
 using global::SM64Lib.Model.Collision;
+using DevComponents.AdvTree;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -28,7 +29,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        public static void AddObjects(LevelArea area, List<Managed3DObject> objList, IEnumerable<Managed3DObject> objs, ListView.ListViewItemCollection lvic, IEnumerable<ListViewItem> lvis)
+        public static void AddObjects(LevelArea area, List<Managed3DObject> objList, IEnumerable<Managed3DObject> objs, NodeCollection lvic, IEnumerable<Node> lvis)
         {
             for (int i = 0, loopTo = objs.Count() - 1; i <= loopTo; i++)
             {
@@ -38,7 +39,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        public static void RemoveObjects(LevelArea area, List<Managed3DObject> objList, IEnumerable<Managed3DObject> objs, ListView.ListViewItemCollection lvic, IEnumerable<ListViewItem> lvis)
+        public static void RemoveObjects(LevelArea area, List<Managed3DObject> objList, IEnumerable<Managed3DObject> objs, NodeCollection lvic, IEnumerable<Node> lvis)
         {
             for (int i = 0, loopTo = objs.Count() - 1; i <= loopTo; i++)
             {
@@ -48,19 +49,19 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        public static void InsertObjects(LevelArea area, List<Managed3DObject> objList, ListView.ListViewItemCollection lvic, Dictionary<int, Managed3DObject> removedObjs, Dictionary<int, ListViewItem> removedlvis, Dictionary<int, LevelscriptCommand> removedCmds)
+        public static void InsertObjects(LevelArea area, List<Managed3DObject> objList, NodeCollection lvic, Dictionary<int, Managed3DObject> removedObjs, Dictionary<int, Node> removedlvis, Dictionary<int, LevelscriptCommand> removedCmds)
         {
             foreach (KeyValuePair<int, Managed3DObject> kvp in removedObjs.OrderBy(n => n.Key))
                 objList.Insert(kvp.Key, kvp.Value);
             foreach (KeyValuePair<int, LevelscriptCommand> kvp in removedCmds.OrderBy(n => n.Key))
                 area.Objects.Insert(kvp.Key, kvp.Value);
-            foreach (KeyValuePair<int, ListViewItem> kvp in removedlvis.OrderBy(n => n.Key))
+            foreach (KeyValuePair<int, Node> kvp in removedlvis.OrderBy(n => n.Key))
                 lvic.Insert(kvp.Key, kvp.Value);
         }
 
-        public static void RemoveAtObjects(LevelArea area, List<Managed3DObject> objList, ListView.ListViewItemCollection lvic, Dictionary<int, Managed3DObject> removedObjs, Dictionary<int, ListViewItem> removedlvis, Dictionary<int, LevelscriptCommand> removedCmds)
+        public static void RemoveAtObjects(LevelArea area, List<Managed3DObject> objList, NodeCollection lvic, Dictionary<int, Managed3DObject> removedObjs, Dictionary<int, Node> removedlvis, Dictionary<int, LevelscriptCommand> removedCmds)
         {
-            foreach (KeyValuePair<int, ListViewItem> kvp in removedlvis.OrderByDescending(n => n.Key))
+            foreach (KeyValuePair<int, Node> kvp in removedlvis.OrderByDescending(n => n.Key))
                 lvic.RemoveAt(kvp.Key);
             foreach (KeyValuePair<int, Managed3DObject> kvp in removedObjs.OrderByDescending(n => n.Key))
                 objList.RemoveAt(kvp.Key);
@@ -68,7 +69,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 area.Objects.RemoveAt(kvp.Key);
         }
 
-        public static void AddWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, IEnumerable<IManagedLevelscriptCommand> objs, ListView.ListViewItemCollection lvic, IEnumerable<ListViewItem> lvis, Dictionary<ListViewItem, ListViewGroup> lviGroups)
+        public static void AddWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, IEnumerable<IManagedLevelscriptCommand> objs, NodeCollection lvic, IEnumerable<Node> lvis, Dictionary<Node, ListViewGroup> lviGroups)
         {
             for (int i = 0, loopTo = objs.Count() - 1; i <= loopTo; i++)
             {
@@ -80,7 +81,7 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        public static void RemoveWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, IEnumerable<IManagedLevelscriptCommand> objs, ListView.ListViewItemCollection lvic, IEnumerable<ListViewItem> lvis, Dictionary<ListViewItem, ListViewGroup> lviGroups)
+        public static void RemoveWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, IEnumerable<IManagedLevelscriptCommand> objs, NodeCollection lvic, IEnumerable<Node> lvis, Dictionary<Node, Node> lviGroups)
         {
             for (int i = 0, loopTo = objs.Count() - 1; i <= loopTo; i++)
             {
@@ -90,22 +91,22 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        public static void InsertWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, ListView.ListViewItemCollection lvic, Dictionary<int, IManagedLevelscriptCommand> removedObjs, Dictionary<int, ListViewItem> removedlvis, Dictionary<int, LevelscriptCommand> removedCmds, Dictionary<ListViewItem, ListViewGroup> lviGroups)
+        public static void InsertWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, NodeCollection lvic, Dictionary<int, IManagedLevelscriptCommand> removedObjs, Dictionary<int, Node> removedlvis, Dictionary<int, LevelscriptCommand> removedCmds, Dictionary<Node, Node> lviGroups)
         {
             foreach (KeyValuePair<int, IManagedLevelscriptCommand> kvp in removedObjs.OrderBy(n => n.Key))
                 objList.Insert(kvp.Key, kvp.Value);
             foreach (KeyValuePair<int, LevelscriptCommand> kvp in removedCmds.OrderBy(n => n.Key))
                 area.Warps.Insert(kvp.Key, kvp.Value);
-            foreach (KeyValuePair<int, ListViewItem> kvp in removedlvis.OrderBy(n => n.Key))
+            foreach (KeyValuePair<int, Node> kvp in removedlvis.OrderBy(n => n.Key))
             {
                 kvp.Value.Group = lviGroups[kvp.Value];
                 lvic.Insert(kvp.Key, kvp.Value);
             }
         }
 
-        public static void RemoveAtWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, ListView.ListViewItemCollection lvic, Dictionary<int, IManagedLevelscriptCommand> removedObjs, Dictionary<int, ListViewItem> removedlvis, Dictionary<int, LevelscriptCommand> removedCmds, Dictionary<ListViewItem, ListViewGroup> lviGroups)
+        public static void RemoveAtWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, NodeCollection lvic, Dictionary<int, IManagedLevelscriptCommand> removedObjs, Dictionary<int, Node> removedlvis, Dictionary<int, LevelscriptCommand> removedCmds, Dictionary<Node, Node> lviGroups)
         {
-            foreach (KeyValuePair<int, ListViewItem> kvp in removedlvis.OrderByDescending(n => n.Key))
+            foreach (KeyValuePair<int, Node> kvp in removedlvis.OrderByDescending(n => n.Key))
                 lvic.RemoveAt(kvp.Key);
             foreach (KeyValuePair<int, IManagedLevelscriptCommand> kvp in removedObjs.OrderByDescending(n => n.Key))
                 objList.RemoveAt(kvp.Key);

@@ -7551,6 +7551,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:DevComponents.AdvTree.NodeCollection.ToArray">
+            <summary>
+            Copies all Nodes to an array.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:DevComponents.AdvTree.NodeComparer.#ctor">
             <summary>
             Creates new instance of NodeComparer class. You can use NodeComparer to sort the nodes by specific column/cell by calling
