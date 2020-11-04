@@ -7545,6 +7545,12 @@
             <param name="searchAllChildren">true to search child nodes of tree nodes; otherwise, false. </param>
             <returns>An array of Node objects whose Name property matches the specified key.</returns>
         </member>
+        <member name="P:DevComponents.AdvTree.NodeCollection.AllNodes">
+            <summary>
+            Gets the Node collection to enumerate easier.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:DevComponents.AdvTree.NodeComparer.#ctor">
             <summary>
             Creates new instance of NodeComparer class. You can use NodeComparer to sort the nodes by specific column/cell by calling
