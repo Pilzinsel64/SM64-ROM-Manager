@@ -1423,12 +1423,13 @@ namespace SM64_ROM_Manager.LevelEditor
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
-        internal Node nConnectedWarps = new Node("Connected Warps") { Selectable = false };
-        internal Node nWarpsForGame = new Node("Warps for Game") { Selectable = false };
-        internal Node nPaintingWarps = new Node("Painting Warps") { Selectable = false };
-        internal Node nInstantWarps = new Node("Instant Warps") { Selectable = false };
-        // Friend lvg_Objects As New ListViewGroup With {.Header = "3D Objects"}
-        // Friend lvg_MacroObjects As New ListViewGroup With {.Header = "Macro 3D Objects"}
+        internal Node nConnectedWarps = new Node("Connected Warps") { Selectable = false, Expanded = true };
+        internal Node nWarpsForGame = new Node("Warps for Game") { Selectable = false, Expanded = true };
+        internal Node nPaintingWarps = new Node("Painting Warps") { Selectable = false, Expanded = true };
+        internal Node nInstantWarps = new Node("Instant Warps") { Selectable = false, Expanded = true };
+        private ElementStyle style_OrangeTextColor = new ElementStyle(Color.FromArgb(-4754112));
+        private ElementStyle style_GreenTextColor = new ElementStyle(Color.FromArgb(-9073592));
+        private ElementStyle style_RedTextColor = new ElementStyle(Color.FromArgb(-7324615));
 
         internal void LoadAreaIDs()
         {
@@ -1534,7 +1535,7 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 LevelscriptCommand warp = (LevelscriptCommand)allWarps[i1];
                 IManagedLevelscriptCommand warpNew = null;
-                var lvi = new Node() { Tag = warpNew };
+                var lvi = new Node();
                 Node nParent = null;
 
                 // Set the ListViewGroup for the ListViewItem
@@ -1573,6 +1574,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     lvi.Cells.Add(new Cell());
 
                 // Set node name
+                lvi.Tag = warpNew;
                 lvi.Name = i1.ToString();
 
                 // Set all Properties as Text to the SubItems
@@ -1602,7 +1604,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 lvi.Cells[1].Text = $"{destLevel?.TypeString}-{destLevel?.Number}";
                 lvi.Cells[2].Text = TextValueConverter.TextFromValue(warp.DestAreaID);
                 lvi.Cells[3].Text = TextValueConverter.TextFromValue(warp.DestWarpID);
-                Color colorToUse;
+                ElementStyle colorToUse;
                 try
                 {
                     colorToUse = GetColorOfWarpDestinationValidationResult(warp);
@@ -1611,9 +1613,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 {
                     colorToUse = default;
                 }
-
-                foreach (Cell cell in lvi.Cells)
-                    cell.StyleNormal.TextColor = colorToUse;
+                lvi.Style = colorToUse;
             }
             else if (iwarp is ManagedInstantWarp)
             {
@@ -1662,18 +1662,6 @@ namespace SM64_ROM_Manager.LevelEditor
                         return TextValueConverter.TextFromValue(id);
                     }
             }
-        }
-
-        internal void DeselectAllListViewItems(ListViewEx ListView)
-        {
-            ListView.SuspendLayout();
-            foreach (ListViewItem item in ListView.Items)
-            {
-                item.Focused = false;
-                item.Selected = false;
-            }
-
-            ListView.ResumeLayout();
         }
 
         internal void Timer_ListViewEx_Objects_SelectionChanged_Elapsed(object sender, ElapsedEventArgs e)
@@ -1800,11 +1788,12 @@ namespace SM64_ROM_Manager.LevelEditor
             get
             {
                 var nodes = advTree_Warps.SelectedNodes;
-                if (nodes.Count == 0)
-                    return Array.Empty<IManagedLevelscriptCommand>();
                 var objs = new List<IManagedLevelscriptCommand>();
-                foreach (Node item in nodes)
-                    objs.Add((IManagedLevelscriptCommand)item.Tag);
+                if (nodes.Count != 0)
+                {
+                    foreach (Node item in nodes)
+                        objs.Add((IManagedLevelscriptCommand)item.Tag);
+                }
                 return objs.ToArray();
             }
         }
@@ -1861,22 +1850,6 @@ namespace SM64_ROM_Manager.LevelEditor
         internal bool IsGroupWarpForGame(Node item)
         {
             return item.Parent == nWarpsForGame;
-        }
-
-        internal void ListViewEx_Objects_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                ButtonItem_CM_Objects.Popup(Cursor.Position);
-            }
-        }
-
-        internal void ListViewEx_Warps_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                ButtonItem1_CM_Warps.Popup(Cursor.Position);
-            }
         }
 
         internal void LoadSpecailBoxList()
@@ -2683,7 +2656,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 return WarpDestinationValidationResult.LevelNotFound;
         }
 
-        internal Color GetColorOfWarpDestinationValidationResult(IManagedLevelscriptCommand warp)
+        internal ElementStyle GetColorOfWarpDestinationValidationResult(IManagedLevelscriptCommand warp)
         {
             if ((new[] { LevelscriptCommandTypes.PaintingWarp, LevelscriptCommandTypes.ConnectedWarp }).Contains(warp.Command.CommandType))
             {
@@ -2693,13 +2666,13 @@ namespace SM64_ROM_Manager.LevelEditor
                     case WarpDestinationValidationResult.DuplicatedWarpIDsAtDestination:
                     case WarpDestinationValidationResult.WarpDestUsedMultipleTimes:
                     case WarpDestinationValidationResult.WarpSourceUsedMultipleTimes:
-                        return Color.FromArgb(-4754112); // Orange
+                        return style_OrangeTextColor; // Orange
                     case WarpDestinationValidationResult.WarpFoundInCustomLevel:
-                        return Color.FromArgb(-9073592); // Green
+                        return style_GreenTextColor; // Green
                     case WarpDestinationValidationResult.AreaNotFound:
                     case WarpDestinationValidationResult.WarpDestNotFound:
                     case WarpDestinationValidationResult.WarpDestNotUsed:
-                        return Color.FromArgb(-7324615); // Green
+                        return style_RedTextColor; // Green
                 }
             }
             return default;
@@ -3370,17 +3343,19 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void AdvTree_Warps_Click(object sender, EventArgs e)
         {
-
+            SelectedList = (AdvTree)sender;
         }
 
         private void AdvTree_Objects_MouseClick(object sender, MouseEventArgs e)
         {
-
+            if (e.Button == MouseButtons.Right)
+                ButtonItem_CM_Objects.Popup(Cursor.Position);
         }
 
         private void AdvTree_Warps_MouseClick(object sender, MouseEventArgs e)
         {
-
+            if (e.Button == MouseButtons.Right)
+                ButtonItem1_CM_Warps.Popup(Cursor.Position);
         }
 
         private void AdvTree_Objects_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)

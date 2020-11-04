@@ -542,7 +542,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     }
                     else
                     {
-                        Main.SelectItemAtIndexInList(Main.ListViewEx_Objects, newIndex, true);
+                        Main.SelectItemAtIndexInList(newIndex, true);
                     }
                     break;
             }

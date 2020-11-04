@@ -76,7 +76,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 area.Objects.Add(objs.ElementAtOrDefault(i).Command);
                 objList.Add(objs.ElementAtOrDefault(i));
                 var lvi = lvis.ElementAtOrDefault(i);
-                lvi.Group = lviGroups[lvi];
+                //lvi.Group = lviGroups[lvi];
                 lvic.Add(lvi);
             }
         }
@@ -99,7 +99,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 area.Warps.Insert(kvp.Key, kvp.Value);
             foreach (KeyValuePair<int, Node> kvp in removedlvis.OrderBy(n => n.Key))
             {
-                kvp.Value.Group = lviGroups[kvp.Value];
+                //kvp.Value.Group = lviGroups[kvp.Value];
                 lvic.Insert(kvp.Key, kvp.Value);
             }
         }

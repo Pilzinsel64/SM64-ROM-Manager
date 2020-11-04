@@ -1122,6 +1122,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.advTree_Objects.Columns.Add(this.columnHeader_ComboName);
             resources.ApplyResources(this.advTree_Objects, "advTree_Objects");
             this.advTree_Objects.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_Objects.MultiSelect = true;
             this.advTree_Objects.Name = "advTree_Objects";
             this.advTree_Objects.NodesConnector = this.nodeConnector1;
             this.advTree_Objects.NodeStyle = this.elementStyle1;
@@ -1187,6 +1188,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.advTree_Warps.Columns.Add(this.columnHeader_ToWarpID);
             resources.ApplyResources(this.advTree_Warps, "advTree_Warps");
             this.advTree_Warps.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_Warps.MultiSelect = true;
             this.advTree_Warps.Name = "advTree_Warps";
             this.advTree_Warps.NodesConnector = this.nodeConnector2;
             this.advTree_Warps.NodeStyle = this.elementStyle2;
@@ -3983,18 +3985,18 @@ namespace SM64_ROM_Manager.LevelEditor
         private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvObjPrecise;
         private DevComponents.DotNetBar.CheckBoxItem checkBoxItem_MvObjSlide;
         private DevComponents.DotNetBar.SliderItem sliderItem_FOV;
-        private DevComponents.AdvTree.AdvTree advTree_Objects;
         private DevComponents.AdvTree.ColumnHeader columnHeader_ObjectNumber;
         private DevComponents.AdvTree.ColumnHeader columnHeader_ComboName;
         private DevComponents.AdvTree.NodeConnector nodeConnector1;
         private DevComponents.DotNetBar.ElementStyle elementStyle1;
-        private DevComponents.AdvTree.AdvTree advTree_Warps;
         private DevComponents.AdvTree.ColumnHeader columnHeader_WarpID;
         private DevComponents.AdvTree.ColumnHeader columnHeader_ToLevel;
         private DevComponents.AdvTree.ColumnHeader columnHeader_ToArea;
         private DevComponents.AdvTree.ColumnHeader columnHeader_ToWarpID;
         private DevComponents.AdvTree.NodeConnector nodeConnector2;
         private DevComponents.DotNetBar.ElementStyle elementStyle2;
+        internal DevComponents.AdvTree.AdvTree advTree_Objects;
+        internal DevComponents.AdvTree.AdvTree advTree_Warps;
     }
 
 }
