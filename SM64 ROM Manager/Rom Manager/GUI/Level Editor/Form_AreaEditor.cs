@@ -354,7 +354,6 @@ namespace SM64_ROM_Manager.LevelEditor
             RibbonControl1.Expanded = Settings.AreaEditor.RibbonControlExpanded;
 
             // Setup Form Settings
-            //WindowState = Settings.AreaEditor.DefaultWindowMode;
             Settings.WindowSettings.LevelEditor.ApplyState(this);
 
             // Setup some Styles
@@ -1884,19 +1883,19 @@ namespace SM64_ROM_Manager.LevelEditor
                 SaveAllWarpProperties();
                 maps.cCollisionMap = null;
                 maps.cVisualMap = null;
+
+                CArea.SetSegmentedBanks(Rommgr);
+
                 maps.LoadAreaModel();
                 AreaDisplaylistScriptDumps.AddOrUpdate(CArea.AreaID, lastlyLoadedDisplaylists.Select((n) => n.Script).ToArray());
                 LoadObjectLists();
                 LoadWarpsLists();
                 LoadSpecailBoxList();
+
                 if (Settings.AreaEditor.DefaultCameraMode == CameraMode.ORBIT)
-                {
                     ButtonItem_CamOrbit.RaiseClick();
-                }
                 else
-                {
                     ButtonItem_CamFly.RaiseClick();
-                }
             }
         }
 

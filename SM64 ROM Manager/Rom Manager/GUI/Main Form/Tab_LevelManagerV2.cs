@@ -987,9 +987,9 @@ namespace SM64_ROM_Manager
                 var curAreaIndex = CurrentAreaIndex;
                 if (curAreaIndex == -1)
                 {
-                    var usedIDs = Controller.GetUsedLevelAreaIDs((ushort)curLevelIndex);
-                    if (usedIDs.Any())
-                        curAreaIndex = usedIDs.First();
+                    var usedIDs = Controller.GetLevelAreasCount((ushort)curLevelIndex);
+                    if (usedIDs > 0)
+                        curAreaIndex = 0;
                 }
                 Controller.OpenAreaEditor(curLevelIndex, curAreaIndex);
             }
