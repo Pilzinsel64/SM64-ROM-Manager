@@ -1121,8 +1121,10 @@ namespace SM64_ROM_Manager.LevelEditor
             this.advTree_Objects.Columns.Add(this.columnHeader_ObjectNumber);
             this.advTree_Objects.Columns.Add(this.columnHeader_ComboName);
             resources.ApplyResources(this.advTree_Objects, "advTree_Objects");
+            this.advTree_Objects.DragDropEnabled = false;
             this.advTree_Objects.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.advTree_Objects.MultiSelect = true;
+            this.advTree_Objects.MultiSelectRule = DevComponents.AdvTree.eMultiSelectRule.AnyNode;
             this.advTree_Objects.Name = "advTree_Objects";
             this.advTree_Objects.NodesConnector = this.nodeConnector1;
             this.advTree_Objects.NodeStyle = this.elementStyle1;
@@ -1187,8 +1189,10 @@ namespace SM64_ROM_Manager.LevelEditor
             this.advTree_Warps.Columns.Add(this.columnHeader_ToArea);
             this.advTree_Warps.Columns.Add(this.columnHeader_ToWarpID);
             resources.ApplyResources(this.advTree_Warps, "advTree_Warps");
+            this.advTree_Warps.DragDropEnabled = false;
             this.advTree_Warps.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.advTree_Warps.MultiSelect = true;
+            this.advTree_Warps.MultiSelectRule = DevComponents.AdvTree.eMultiSelectRule.AnyNode;
             this.advTree_Warps.Name = "advTree_Warps";
             this.advTree_Warps.NodesConnector = this.nodeConnector2;
             this.advTree_Warps.NodeStyle = this.elementStyle2;
@@ -1202,7 +1206,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             this.columnHeader_WarpID.Name = "columnHeader_WarpID";
             resources.ApplyResources(this.columnHeader_WarpID, "columnHeader_WarpID");
-            this.columnHeader_WarpID.Width.Absolute = 70;
+            this.columnHeader_WarpID.Width.Absolute = 80;
             // 
             // columnHeader_ToLevel
             // 
@@ -1220,7 +1224,7 @@ namespace SM64_ROM_Manager.LevelEditor
             // 
             this.columnHeader_ToWarpID.Name = "columnHeader_ToWarpID";
             resources.ApplyResources(this.columnHeader_ToWarpID, "columnHeader_ToWarpID");
-            this.columnHeader_ToWarpID.Width.Absolute = 60;
+            this.columnHeader_ToWarpID.Width.Absolute = 50;
             // 
             // nodeConnector2
             // 
