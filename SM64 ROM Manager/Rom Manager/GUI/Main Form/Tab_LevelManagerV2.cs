@@ -72,6 +72,8 @@ namespace SM64_ROM_Manager
                 Expanded = true
             };
             LevelsTree.Nodes.AddRange(new[] { nCustomLevels/*, nVanillaLevels*/ });
+
+            LoadCurrentSelection(true);
         }
 
         // P r o p e r t i e s
@@ -1202,23 +1204,32 @@ namespace SM64_ROM_Manager
 
         private void LevelsTree_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
         {
-            var indices = CurrentIndicies;
-            bool menuItemsEnabled;
+            LoadCurrentSelection();
+        }
 
-            panel_Tools.SuspendLayout();
+        private void LoadCurrentSelection(bool forceLoadingNothing = false)
+        {
+            bool menuItemsEnabled = false;
+            
+            if (!forceLoadingNothing)
+            {
+                var indices = CurrentIndicies;
 
-            if (indices.areaIndex != -1 && indices.levelIndex != -1)
-            {
-                LoadAreaSettings(indices.levelIndex, indices.areaIndex);
-                EnableTabControl(TabControl_AreaProperties);
-                menuItemsEnabled = true;
-            }
-            else
-            {
-                var isNull = indices.levelIndex == -1;
-                LoadLevelSettings(indices.levelIndex);
-                EnableTabControl(isNull ? null : TabControl_LM_Level);
-                menuItemsEnabled = !isNull;
+                panel_Tools.SuspendLayout();
+
+                if (indices.areaIndex != -1 && indices.levelIndex != -1)
+                {
+                    LoadAreaSettings(indices.levelIndex, indices.areaIndex);
+                    EnableTabControl(TabControl_AreaProperties);
+                    menuItemsEnabled = true;
+                }
+                else
+                {
+                    var isNull = indices.levelIndex == -1;
+                    LoadLevelSettings(indices.levelIndex);
+                    EnableTabControl(isNull ? null : TabControl_LM_Level);
+                    menuItemsEnabled = !isNull;
+                }
             }
 
             ButtonItem_OpenLevelEditor.Enabled = menuItemsEnabled;
