@@ -535,7 +535,7 @@ namespace SM64_ROM_Manager
             {
                 Tag = 0
             };
-            LevelsTree.Nodes.Add(n);
+            nCustomLevels.Nodes.Add(n);
             LevelsTree.SelectedNode = n;
             n.EnsureVisible();
         }
@@ -547,7 +547,10 @@ namespace SM64_ROM_Manager
             {
                 Tag = 1
             };
-            nCustomLevels.Nodes[levelIndex].Nodes.Add(n);
+            var parentNode = nCustomLevels.Nodes[levelIndex];
+            parentNode.Nodes.Add(n);
+            parentNode.Expanded = true;
+            LevelsTree.SelectedNode = n;
         }
 
         private void RemoveAreaFromList(int levelIndex, int areaIndex)
@@ -1222,6 +1225,8 @@ namespace SM64_ROM_Manager
             ButtonItem_RemoveItem.Enabled = menuItemsEnabled;
             ButtonItem_ExportLevelArea.Enabled = menuItemsEnabled;
             buttonItem1.Enabled = menuItemsEnabled;
+            ButtonItem_AreaTools_AddArea.Enabled = menuItemsEnabled;
+            ButtonItem_AreaTools_ImportArea.Enabled = menuItemsEnabled;
 
             bar1.Refresh();
             panel_Tools.ResumeLayout();
