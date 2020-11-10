@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json.Linq;
-using SM64Lib.Patching;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace SM64Lib.Patching
 {
-    public class PatchFileInformations
+    public class DLLFunctionInformation
     {
-        public string PatchFileName { get; set; }
-        public string ClassPath { get; set; }
-        public string MethodName { get; set; }
+        public string EmbeddedFileName { get; set; }
+        public string Typename { get; set; }
 
         public void Set(PatchScript script)
         {

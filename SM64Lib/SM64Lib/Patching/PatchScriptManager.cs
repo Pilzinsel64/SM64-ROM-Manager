@@ -365,6 +365,16 @@ namespace SM64Lib.Patching
                         break;
                     }
 
+                case ScriptType.DynamicLinkLibrary:
+                    {
+                        var infos = DLLFunctionInformation.Get(script);
+                        var assemblyRaw = (MemoryStream)embeddedFiles.GetStream(infos.PatchFileName);
+                        var assembly = Assembly.Load(assemblyRaw.ToArray());
+                        assemblyRaw.Close();
+                        ExecuteDLLFunction(assembly, infos.ClassPath, infos.MethodName);
+                    }
+                    break;
+
                 case ScriptType.Armips:
                     {
                         RunArmips(script.Script, romfile, Path.GetDirectoryName(Conversions.ToString(@params["profilepath"])));
@@ -492,6 +502,17 @@ namespace SM64Lib.Patching
             else
             {
                 throw new SyntaxErrorException("Error hat compiling Script. Either there are syntax errors or there are missing some references.");
+            }
+        }
+
+        public void ExecuteDLLFunction(Assembly assembly, string classPath, string methodName)
+        {
+            var t = assembly.GetType(classPath, false);
+            if (t is object)
+            {
+                var m = t.GetMethod(methodName);
+                if (m is object)
+                    m.Invoke(null, null);
             }
         }
 
