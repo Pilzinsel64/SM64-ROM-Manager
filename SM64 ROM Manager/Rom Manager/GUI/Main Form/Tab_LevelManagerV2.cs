@@ -1200,6 +1200,7 @@ namespace SM64_ROM_Manager
         private void LevelsTree_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
         {
             var indices = CurrentIndicies;
+            bool menuItemsEnabled;
 
             panel_Tools.SuspendLayout();
 
@@ -1207,15 +1208,20 @@ namespace SM64_ROM_Manager
             {
                 LoadAreaSettings(indices.levelIndex, indices.areaIndex);
                 EnableTabControl(TabControl_AreaProperties);
-                bar1.Enabled = true;
+                menuItemsEnabled = true;
             }
             else
             {
                 var isNull = indices.levelIndex == -1;
                 LoadLevelSettings(indices.levelIndex);
                 EnableTabControl(isNull ? null : TabControl_LM_Level);
-                bar1.Enabled = !isNull;
+                menuItemsEnabled = !isNull;
             }
+
+            ButtonItem_OpenLevelEditor.Enabled = menuItemsEnabled;
+            ButtonItem_RemoveItem.Enabled = menuItemsEnabled;
+            ButtonItem_ExportLevelArea.Enabled = menuItemsEnabled;
+            buttonItem1.Enabled = menuItemsEnabled;
 
             bar1.Refresh();
             panel_Tools.ResumeLayout();
