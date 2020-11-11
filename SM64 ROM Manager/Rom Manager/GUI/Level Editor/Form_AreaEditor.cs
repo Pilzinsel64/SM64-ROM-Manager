@@ -2346,8 +2346,8 @@ namespace SM64_ROM_Manager.LevelEditor
             var objcombo = MyObjectCombos.FirstOrDefault(n => n.ModelID == SelectedObject.ModelID && n.BehaviorAddress == SelectedObject.BehaviorID);
             if (objcombo is null)
                 return;
-            foreach (int index in advTree_Objects.SelectedNodes)
-                advTree_Objects.Nodes[index].Cells[1].Text = objcombo.Name;
+            foreach (Node index in advTree_Objects.SelectedNodes)
+                index.Cells[1].Text = objcombo.Name;
         }
 
         internal void ChangeObjectComboWithDialog()
