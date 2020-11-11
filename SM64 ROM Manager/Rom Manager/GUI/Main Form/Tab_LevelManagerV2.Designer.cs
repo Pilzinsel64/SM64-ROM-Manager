@@ -210,9 +210,9 @@
             resources.ApplyResources(this.TabControl_AreaProperties, "TabControl_AreaProperties");
             this.TabControl_AreaProperties.BackColor = System.Drawing.Color.Transparent;
             this.TabControl_AreaProperties.CanReorderTabs = false;
-            this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel4);
-            this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel5);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel6);
+            this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel5);
+            this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel4);
             this.TabControl_AreaProperties.ForeColor = System.Drawing.Color.Black;
             this.TabControl_AreaProperties.Name = "TabControl_AreaProperties";
             this.TabControl_AreaProperties.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
@@ -272,6 +272,7 @@
             this.RangeSlider_CameraFrustrum.TicksPosition = DevComponents.DotNetBar.eTicksPosition.TopAndBottom;
             this.RangeSlider_CameraFrustrum.TicksVisible = false;
             this.RangeSlider_CameraFrustrum.Value = new DevComponents.DotNetBar.RangeValue(0, 10);
+            this.RangeSlider_CameraFrustrum.ValueChanged += new System.EventHandler(this.RangeSlider_CameraFrustrum_ValueChanged);
             // 
             // labelX17
             // 
@@ -297,6 +298,7 @@
             this.Slider_AreaReverbLevel.Name = "Slider_AreaReverbLevel";
             this.Slider_AreaReverbLevel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Slider_AreaReverbLevel.Value = 0;
+            this.Slider_AreaReverbLevel.TextChanged += new System.EventHandler(this.Slider_AreaReverbLevel_ValueChanged);
             // 
             // labelX14
             // 
@@ -333,6 +335,7 @@
             this.ComboItem13});
             this.ComboBoxEx_LM_AreaBG.Name = "ComboBoxEx_LM_AreaBG";
             this.ComboBoxEx_LM_AreaBG.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBoxEx_LM_AreaBG.SelectedIndexChanged += new System.EventHandler(this.ComboBoxEx_LM_AreaBG_SelectedIndexChanged);
             // 
             // ComboItem12
             // 
@@ -355,6 +358,7 @@
             resources.ApplyResources(this.TextBoxX_LM_ShowMsgID, "TextBoxX_LM_ShowMsgID");
             this.TextBoxX_LM_ShowMsgID.Name = "TextBoxX_LM_ShowMsgID";
             this.TextBoxX_LM_ShowMsgID.PreventEnterBeep = true;
+            this.TextBoxX_LM_ShowMsgID.TextChanged += new System.EventHandler(this.TextBoxX_LM_ShowMsgID_TextChanged);
             // 
             // LabelX1
             // 
@@ -383,6 +387,7 @@
             this.SwitchButton_LM_ShowMsgEnabled.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_LM_ShowMsgEnabled.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_LM_ShowMsgEnabled.SwitchWidth = 15;
+            this.SwitchButton_LM_ShowMsgEnabled.ValueChanged += new System.EventHandler(this.SwitchButton_LM_ShowMsgEnabled_ValueChanged);
             // 
             // LabelX2
             // 
@@ -411,6 +416,7 @@
             this.CheckBoxX_LM_Enable2DCamera.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.CheckBoxX_LM_Enable2DCamera.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.CheckBoxX_LM_Enable2DCamera.SwitchWidth = 15;
+            this.CheckBoxX_LM_Enable2DCamera.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveAreaSettings);
             // 
             // LabelX6
             // 
@@ -436,6 +442,7 @@
             resources.GetString("ComboBox_LM_Music.Items1")});
             this.ComboBox_LM_Music.Name = "ComboBox_LM_Music";
             this.ComboBox_LM_Music.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBox_LM_Music.SelectedIndexChanged += new System.EventHandler(this.Controls_HandleToSaveAreaSettings);
             // 
             // LabelX7
             // 
@@ -466,6 +473,7 @@
             resources.GetString("ComboBox_LM_TerrainTyp.Items6")});
             this.ComboBox_LM_TerrainTyp.Name = "ComboBox_LM_TerrainTyp";
             this.ComboBox_LM_TerrainTyp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBox_LM_TerrainTyp.SelectedIndexChanged += new System.EventHandler(this.Controls_HandleToSaveAreaSettings);
             // 
             // LabelX8
             // 
@@ -496,6 +504,7 @@
             resources.GetString("ComboBox_LM_EnvironmentEffects.Items6")});
             this.ComboBox_LM_EnvironmentEffects.Name = "ComboBox_LM_EnvironmentEffects";
             this.ComboBox_LM_EnvironmentEffects.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBox_LM_EnvironmentEffects.SelectedIndexChanged += new System.EventHandler(this.Controls_HandleToSaveAreaSettings);
             // 
             // LabelX11
             // 
@@ -535,6 +544,7 @@
             resources.GetString("ComboBox_LM_CameraPreset.Items15")});
             this.ComboBox_LM_CameraPreset.Name = "ComboBox_LM_CameraPreset";
             this.ComboBox_LM_CameraPreset.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBox_LM_CameraPreset.SelectedIndexChanged += new System.EventHandler(this.ComboBox_LM_CameraPreset_SelectedIndexChanged);
             // 
             // ColorPickerButton_LM_BackgroundColor
             // 
@@ -547,6 +557,7 @@
             this.ColorPickerButton_LM_BackgroundColor.Name = "ColorPickerButton_LM_BackgroundColor";
             this.ColorPickerButton_LM_BackgroundColor.SelectedColorImageRectangle = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.ColorPickerButton_LM_BackgroundColor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ColorPickerButton_LM_BackgroundColor.SelectedColorChanged += new System.EventHandler(this.LM_SaveAreaBackgorund);
             // 
             // TabItem4
             // 
@@ -638,6 +649,7 @@
             resources.ApplyResources(this.ButtonX_EditFast3D, "ButtonX_EditFast3D");
             this.ButtonX_EditFast3D.Name = "ButtonX_EditFast3D";
             this.ButtonX_EditFast3D.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_EditFast3D.Click += new System.EventHandler(this.ButtonX_EditFast3D_Click);
             // 
             // buttonX2
             // 
@@ -647,6 +659,7 @@
             resources.ApplyResources(this.buttonX2, "buttonX2");
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.Click += new System.EventHandler(this.ButtonItem_ExportCollisionMap_Click);
             // 
             // ButtonX_ImportCollision
             // 
@@ -656,6 +669,7 @@
             resources.ApplyResources(this.ButtonX_ImportCollision, "ButtonX_ImportCollision");
             this.ButtonX_ImportCollision.Name = "ButtonX_ImportCollision";
             this.ButtonX_ImportCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ImportCollision.Click += new System.EventHandler(this.LM_ImportModel);
             // 
             // buttonX1
             // 
@@ -665,6 +679,7 @@
             resources.ApplyResources(this.buttonX1, "buttonX1");
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.Click += new System.EventHandler(this.ButtonItem_ExportVisualMap_Click);
             // 
             // ButtonX_ImportVisualMap
             // 
@@ -674,6 +689,7 @@
             resources.ApplyResources(this.ButtonX_ImportVisualMap, "ButtonX_ImportVisualMap");
             this.ButtonX_ImportVisualMap.Name = "ButtonX_ImportVisualMap";
             this.ButtonX_ImportVisualMap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ImportVisualMap.Click += new System.EventHandler(this.LM_ImportModel);
             // 
             // ButtonX_LM_ScrollTexEditor
             // 
@@ -683,6 +699,7 @@
             resources.ApplyResources(this.ButtonX_LM_ScrollTexEditor, "ButtonX_LM_ScrollTexEditor");
             this.ButtonX_LM_ScrollTexEditor.Name = "ButtonX_LM_ScrollTexEditor";
             this.ButtonX_LM_ScrollTexEditor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_LM_ScrollTexEditor.Click += new System.EventHandler(this.ButtonX_LM_ScrollTexEditor_Click);
             // 
             // Button_ImportModel
             // 
@@ -692,6 +709,7 @@
             resources.ApplyResources(this.Button_ImportModel, "Button_ImportModel");
             this.Button_ImportModel.Name = "Button_ImportModel";
             this.Button_ImportModel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_ImportModel.Click += new System.EventHandler(this.LM_ImportModel);
             // 
             // TabItem5
             // 
@@ -729,6 +747,7 @@
             this.Button_LM_RemoveSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Button_LM_RemoveSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_RemoveSpecial.SymbolSize = 12F;
+            this.Button_LM_RemoveSpecial.Click += new System.EventHandler(this.Button_LM_RemoveSpecial_Click);
             // 
             // Button_LM_AddSpecial
             // 
@@ -742,6 +761,7 @@
             this.Button_LM_AddSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
             this.Button_LM_AddSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_AddSpecial.SymbolSize = 12F;
+            this.Button_LM_AddSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
             // 
             // Button_LM_EditSpecial
             // 
@@ -755,6 +775,7 @@
             this.Button_LM_EditSpecial.SymbolColor = System.Drawing.Color.Goldenrod;
             this.Button_LM_EditSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_EditSpecial.SymbolSize = 12F;
+            this.Button_LM_EditSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
             // 
             // ListViewEx_LM_Specials
             // 
@@ -791,6 +812,7 @@
             this.ListViewEx_LM_Specials.ShowGroups = false;
             this.ListViewEx_LM_Specials.UseCompatibleStateImageBehavior = false;
             this.ListViewEx_LM_Specials.View = System.Windows.Forms.View.Details;
+            this.ListViewEx_LM_Specials.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_LM_Specials_SelectedIndexChanged);
             // 
             // ColumnHeaderA1
             // 
@@ -920,6 +942,7 @@
             this.ComboItem3});
             this.ComboBoxEx_LM_BGMode.Name = "ComboBoxEx_LM_BGMode";
             this.ComboBoxEx_LM_BGMode.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBoxEx_LM_BGMode.SelectedIndexChanged += new System.EventHandler(this.ComboBoxEx_LM_BGMode_SelectedIndexChanged);
             // 
             // ComboItem1
             // 
@@ -973,6 +996,7 @@
             this.SwitchButton_LM_ActSelector.SwitchWidth = 15;
             this.SwitchButton_LM_ActSelector.Value = true;
             this.SwitchButton_LM_ActSelector.ValueObject = "Y";
+            this.SwitchButton_LM_ActSelector.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
             // 
             // LabelX57
             // 
@@ -1001,6 +1025,7 @@
             this.SwitchButton_LM_HardcodedCameraSettings.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_LM_HardcodedCameraSettings.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_LM_HardcodedCameraSettings.SwitchWidth = 15;
+            this.SwitchButton_LM_HardcodedCameraSettings.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
             // 
             // LabelX4
             // 
@@ -1034,6 +1059,7 @@
             resources.GetString("ComboBox_LM_LevelBG.Items9")});
             this.ComboBox_LM_LevelBG.Name = "ComboBox_LM_LevelBG";
             this.ComboBox_LM_LevelBG.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBox_LM_LevelBG.SelectedIndexChanged += new System.EventHandler(this.LM_SaveGameBackground);
             // 
             // LabelX24
             // 
@@ -1060,6 +1086,7 @@
             0,
             -2147483648});
             this.NUD_LM_DefaultPositionYRotation.Name = "NUD_LM_DefaultPositionYRotation";
+            this.NUD_LM_DefaultPositionYRotation.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
             // 
             // LabelX25
             // 
@@ -1081,6 +1108,7 @@
             0,
             0});
             this.NUD_LM_DefaultPositionAreaID.Name = "NUD_LM_DefaultPositionAreaID";
+            this.NUD_LM_DefaultPositionAreaID.ValueChanged += new System.EventHandler(this.Controls_HandleToSaveLevelSettings);
             // 
             // Button_LM_LoadLevelBG
             // 
@@ -1094,6 +1122,7 @@
             this.Button_LM_LoadLevelBG.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(172)))), ((int)(((byte)(106)))));
             this.Button_LM_LoadLevelBG.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.Button_LM_LoadLevelBG.SymbolSize = 12F;
+            this.Button_LM_LoadLevelBG.Click += new System.EventHandler(this.LM_LoadCustomBackground);
             // 
             // Button_LM_SetUpStartPosition
             // 
@@ -1106,6 +1135,7 @@
             this.Button_LM_SetUpStartPosition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Button_LM_SetUpStartPosition.SymbolColor = System.Drawing.Color.Gray;
             this.Button_LM_SetUpStartPosition.SymbolSize = 12F;
+            this.Button_LM_SetUpStartPosition.Click += new System.EventHandler(this.Button_LM_SetUpOffsetModelPosition_Click);
             // 
             // TabItem1
             // 
@@ -1141,6 +1171,7 @@
             resources.ApplyResources(this.ButtonX_ManageLocalObjects, "ButtonX_ManageLocalObjects");
             this.ButtonX_ManageLocalObjects.Name = "ButtonX_ManageLocalObjects";
             this.ButtonX_ManageLocalObjects.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ManageLocalObjects.Click += new System.EventHandler(this.ButtonX_ManageLocalObjects_Click);
             // 
             // labelX5
             // 
@@ -1169,6 +1200,7 @@
             this.SwitchButton_UseLocalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_UseLocalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_UseLocalObjectBank.SwitchWidth = 15;
+            this.SwitchButton_UseLocalObjectBank.ValueChanged += new System.EventHandler(this.SwitchButton_UseCustomObjectBank_ValueChanged);
             // 
             // LabelX13
             // 
@@ -1197,6 +1229,7 @@
             this.SwitchButton_UseGlobalObjectBank.SwitchBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(164)))), ((int)(((byte)(181)))));
             this.SwitchButton_UseGlobalObjectBank.SwitchBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(85)))), ((int)(((byte)(107)))));
             this.SwitchButton_UseGlobalObjectBank.SwitchWidth = 15;
+            this.SwitchButton_UseGlobalObjectBank.ValueChanged += new System.EventHandler(this.SwitchButton_UseCustomObjectBank_ValueChanged);
             // 
             // TableLayoutPanel_ObjectBankSelectorBoxes
             // 

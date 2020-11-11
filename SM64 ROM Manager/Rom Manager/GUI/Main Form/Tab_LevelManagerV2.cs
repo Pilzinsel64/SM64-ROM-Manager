@@ -73,16 +73,6 @@ namespace SM64_ROM_Manager
             };
             LevelsTree.Nodes.AddRange(new[] { nCustomLevels/*, nVanillaLevels*/ });
 
-            // Add some event handlers
-            SwitchButton_LM_ActSelector.ValueChanged += Controls_HandleToSaveLevelSettings;
-            SwitchButton_LM_HardcodedCameraSettings.ValueChanged += Controls_HandleToSaveLevelSettings;
-            NUD_LM_DefaultPositionYRotation.ValueChanged += Controls_HandleToSaveLevelSettings;
-            NUD_LM_DefaultPositionAreaID.ValueChanged += Controls_HandleToSaveLevelSettings;
-            CheckBoxX_LM_Enable2DCamera.ValueChanged += Controls_HandleToSaveAreaSettings;
-            ComboBox_LM_Music.SelectedIndexChanged += Controls_HandleToSaveAreaSettings;
-            ComboBox_LM_TerrainTyp.SelectedIndexChanged += Controls_HandleToSaveAreaSettings;
-            ComboBox_LM_EnvironmentEffects.SelectedIndexChanged += Controls_HandleToSaveAreaSettings;
-
             LoadCurrentSelection(true);
         }
 
