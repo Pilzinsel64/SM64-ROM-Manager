@@ -11,10 +11,10 @@ namespace SM64Lib.Geolayout
         /// <summary>
         /// This is essentially render distance of geometry.
         /// </summary>
-        public short CameraFar { get; set; } = 0x64;
+        public short CameraFar { get; set; } = 0x7530;
         /// <summary>
         /// Defines how close to the camera geometry will render.
         /// </summary>
-        public short CameraNear { get; set; } = 0x7530;
+        public short CameraNear { get; set; } = 0x64;
     }
 }
