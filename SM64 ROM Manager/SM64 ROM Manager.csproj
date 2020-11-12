@@ -286,6 +286,15 @@
     <Compile Update="Rom Manager\GUI\Level Editor\TextureEditor.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\CameraFrustumDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\CameraFrustumDialog.Designer.cs">
+      <DependentUpon>CameraFrustumDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\CameraFrustumDialog.resx">
+      <DependentUpon>CameraFrustumDialog.cs</DependentUpon>
+    </Compile>
     <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankDataEditor.Designer.cs">
       <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
     </Compile>

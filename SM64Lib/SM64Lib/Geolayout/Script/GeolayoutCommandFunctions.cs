@@ -256,8 +256,8 @@ namespace SM64Lib.Geolayout.Script
             {
                 command.Position = 4;
 
-                frustrum.CameraFar = command.ReadInt16();
                 frustrum.CameraNear = command.ReadInt16();
+                frustrum.CameraFar = command.ReadInt16();
 
                 command.Position = 0;
             }
@@ -266,8 +266,8 @@ namespace SM64Lib.Geolayout.Script
             {
                 command.Position = 4;
 
-                command.Write(frustrum.CameraFar);
                 command.Write(frustrum.CameraNear);
+                command.Write(frustrum.CameraFar);
 
                 command.Position = 0;
             }

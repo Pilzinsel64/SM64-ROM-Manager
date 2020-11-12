@@ -36,8 +36,36 @@
             this.panel_SideMenu = new System.Windows.Forms.Panel();
             this.panel_Tools = new System.Windows.Forms.Panel();
             this.TabControl_AreaProperties = new DevComponents.DotNetBar.TabControl();
+            this.TabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
+            this.Button_LM_RemoveSpecial = new DevComponents.DotNetBar.ButtonX();
+            this.Button_LM_AddSpecial = new DevComponents.DotNetBar.ButtonX();
+            this.Button_LM_EditSpecial = new DevComponents.DotNetBar.ButtonX();
+            this.ListViewEx_LM_Specials = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.ColumnHeaderA1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ColumnHeaderA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TabItem6 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.TabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
+            this.Line2 = new DevComponents.DotNetBar.Controls.Line();
+            this.line4 = new DevComponents.DotNetBar.Controls.Line();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
+            this.LabelX_Area_CountOfTexAnimations = new DevComponents.DotNetBar.LabelX();
+            this.LabelX10 = new DevComponents.DotNetBar.LabelX();
+            this.ButtonX_EditCollision = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_EditFast3D = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_ImportCollision = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_ImportVisualMap = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_LM_ScrollTexEditor = new DevComponents.DotNetBar.ButtonX();
+            this.Button_ImportModel = new DevComponents.DotNetBar.ButtonX();
+            this.TabItem5 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
-            this.RangeSlider_CameraFrustrum = new DevComponents.DotNetBar.Controls.RangeSlider();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
             this.Slider_AreaReverbLevel = new DevComponents.DotNetBar.Controls.Slider();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
@@ -60,35 +88,6 @@
             this.ComboBox_LM_CameraPreset = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.ColorPickerButton_LM_BackgroundColor = new DevComponents.DotNetBar.ColorPickerButton();
             this.TabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
-            this.Line2 = new DevComponents.DotNetBar.Controls.Line();
-            this.line4 = new DevComponents.DotNetBar.Controls.Line();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.LabelX_Area_CountOfTexAnimations = new DevComponents.DotNetBar.LabelX();
-            this.LabelX10 = new DevComponents.DotNetBar.LabelX();
-            this.ButtonX_EditCollision = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX_EditFast3D = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX_ImportCollision = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX_ImportVisualMap = new DevComponents.DotNetBar.ButtonX();
-            this.ButtonX_LM_ScrollTexEditor = new DevComponents.DotNetBar.ButtonX();
-            this.Button_ImportModel = new DevComponents.DotNetBar.ButtonX();
-            this.TabItem5 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
-            this.Button_LM_RemoveSpecial = new DevComponents.DotNetBar.ButtonX();
-            this.Button_LM_AddSpecial = new DevComponents.DotNetBar.ButtonX();
-            this.Button_LM_EditSpecial = new DevComponents.DotNetBar.ButtonX();
-            this.ListViewEx_LM_Specials = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeaderA1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeaderA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TabItem6 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControl_LM_Level = new DevComponents.DotNetBar.TabControl();
             this.TabControlPanel_LevelProperties = new DevComponents.DotNetBar.TabControlPanel();
             this.LabelX_TargetLevel = new DevComponents.DotNetBar.LabelX();
@@ -142,14 +141,15 @@
             this.ButtonItem_AreaTools_ChangeAreaID = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_EditAreaLevelScript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_EditGeolayoutScript = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonX_EditCameraFrustum = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.LevelsTree)).BeginInit();
             this.panel_SideMenu.SuspendLayout();
             this.panel_Tools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_AreaProperties)).BeginInit();
             this.TabControl_AreaProperties.SuspendLayout();
-            this.TabControlPanel4.SuspendLayout();
-            this.TabControlPanel5.SuspendLayout();
             this.TabControlPanel6.SuspendLayout();
+            this.TabControlPanel5.SuspendLayout();
+            this.TabControlPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Level)).BeginInit();
             this.TabControl_LM_Level.SuspendLayout();
             this.TabControlPanel_LevelProperties.SuspendLayout();
@@ -210,9 +210,9 @@
             resources.ApplyResources(this.TabControl_AreaProperties, "TabControl_AreaProperties");
             this.TabControl_AreaProperties.BackColor = System.Drawing.Color.Transparent;
             this.TabControl_AreaProperties.CanReorderTabs = false;
+            this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel4);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel6);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel5);
-            this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel4);
             this.TabControl_AreaProperties.ForeColor = System.Drawing.Color.Black;
             this.TabControl_AreaProperties.Name = "TabControl_AreaProperties";
             this.TabControl_AreaProperties.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
@@ -223,10 +223,297 @@
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem5);
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem6);
             // 
+            // TabControlPanel6
+            // 
+            this.TabControlPanel6.Controls.Add(this.Button_LM_RemoveSpecial);
+            this.TabControlPanel6.Controls.Add(this.Button_LM_AddSpecial);
+            this.TabControlPanel6.Controls.Add(this.Button_LM_EditSpecial);
+            this.TabControlPanel6.Controls.Add(this.ListViewEx_LM_Specials);
+            this.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
+            this.TabControlPanel6.Name = "TabControlPanel6";
+            this.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel6.Style.GradientAngle = 90;
+            this.TabControlPanel6.TabItem = this.TabItem6;
+            // 
+            // Button_LM_RemoveSpecial
+            // 
+            this.Button_LM_RemoveSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.Button_LM_RemoveSpecial, "Button_LM_RemoveSpecial");
+            this.Button_LM_RemoveSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.Button_LM_RemoveSpecial.FocusCuesEnabled = false;
+            this.Button_LM_RemoveSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.Button_LM_RemoveSpecial.Name = "Button_LM_RemoveSpecial";
+            this.Button_LM_RemoveSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_LM_RemoveSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Button_LM_RemoveSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.Button_LM_RemoveSpecial.SymbolSize = 12F;
+            this.Button_LM_RemoveSpecial.Click += new System.EventHandler(this.Button_LM_RemoveSpecial_Click);
+            // 
+            // Button_LM_AddSpecial
+            // 
+            this.Button_LM_AddSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.Button_LM_AddSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.Button_LM_AddSpecial.FocusCuesEnabled = false;
+            this.Button_LM_AddSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            resources.ApplyResources(this.Button_LM_AddSpecial, "Button_LM_AddSpecial");
+            this.Button_LM_AddSpecial.Name = "Button_LM_AddSpecial";
+            this.Button_LM_AddSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_LM_AddSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.Button_LM_AddSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.Button_LM_AddSpecial.SymbolSize = 12F;
+            this.Button_LM_AddSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
+            // 
+            // Button_LM_EditSpecial
+            // 
+            this.Button_LM_EditSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.Button_LM_EditSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.Button_LM_EditSpecial, "Button_LM_EditSpecial");
+            this.Button_LM_EditSpecial.FocusCuesEnabled = false;
+            this.Button_LM_EditSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.Button_LM_EditSpecial.Name = "Button_LM_EditSpecial";
+            this.Button_LM_EditSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_LM_EditSpecial.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.Button_LM_EditSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.Button_LM_EditSpecial.SymbolSize = 12F;
+            this.Button_LM_EditSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
+            // 
+            // ListViewEx_LM_Specials
+            // 
+            resources.ApplyResources(this.ListViewEx_LM_Specials, "ListViewEx_LM_Specials");
+            this.ListViewEx_LM_Specials.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.ListViewEx_LM_Specials.Border.Class = "ListViewBorder";
+            this.ListViewEx_LM_Specials.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ListViewEx_LM_Specials.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ColumnHeaderA1,
+            this.ColumnHeader2,
+            this.ColumnHeader3,
+            this.ColumnHeader4,
+            this.ColumnHeader5,
+            this.ColumnHeader6,
+            this.ColumnHeader7,
+            this.ColumnHeaderA});
+            this.ListViewEx_LM_Specials.DisabledBackColor = System.Drawing.Color.Empty;
+            this.ListViewEx_LM_Specials.FocusCuesEnabled = false;
+            this.ListViewEx_LM_Specials.ForeColor = System.Drawing.Color.Black;
+            this.ListViewEx_LM_Specials.FullRowSelect = true;
+            this.ListViewEx_LM_Specials.GridLines = true;
+            this.ListViewEx_LM_Specials.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups"))),
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups1"))),
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups2"))),
+            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups3")))});
+            this.ListViewEx_LM_Specials.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.ListViewEx_LM_Specials.HideSelection = false;
+            this.ListViewEx_LM_Specials.MultiSelect = false;
+            this.ListViewEx_LM_Specials.Name = "ListViewEx_LM_Specials";
+            this.ListViewEx_LM_Specials.ShowGroups = false;
+            this.ListViewEx_LM_Specials.UseCompatibleStateImageBehavior = false;
+            this.ListViewEx_LM_Specials.View = System.Windows.Forms.View.Details;
+            this.ListViewEx_LM_Specials.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_LM_Specials_SelectedIndexChanged);
+            // 
+            // ColumnHeaderA1
+            // 
+            resources.ApplyResources(this.ColumnHeaderA1, "ColumnHeaderA1");
+            // 
+            // ColumnHeader2
+            // 
+            resources.ApplyResources(this.ColumnHeader2, "ColumnHeader2");
+            // 
+            // ColumnHeader3
+            // 
+            resources.ApplyResources(this.ColumnHeader3, "ColumnHeader3");
+            // 
+            // ColumnHeader4
+            // 
+            resources.ApplyResources(this.ColumnHeader4, "ColumnHeader4");
+            // 
+            // ColumnHeader5
+            // 
+            resources.ApplyResources(this.ColumnHeader5, "ColumnHeader5");
+            // 
+            // ColumnHeader6
+            // 
+            resources.ApplyResources(this.ColumnHeader6, "ColumnHeader6");
+            // 
+            // ColumnHeader7
+            // 
+            resources.ApplyResources(this.ColumnHeader7, "ColumnHeader7");
+            // 
+            // ColumnHeaderA
+            // 
+            resources.ApplyResources(this.ColumnHeaderA, "ColumnHeaderA");
+            // 
+            // TabItem6
+            // 
+            this.TabItem6.AttachedControl = this.TabControlPanel6;
+            this.TabItem6.Name = "TabItem6";
+            resources.ApplyResources(this.TabItem6, "TabItem6");
+            // 
+            // TabControlPanel5
+            // 
+            this.TabControlPanel5.Controls.Add(this.Line2);
+            this.TabControlPanel5.Controls.Add(this.line4);
+            this.TabControlPanel5.Controls.Add(this.line1);
+            this.TabControlPanel5.Controls.Add(this.LabelX_Area_CountOfTexAnimations);
+            this.TabControlPanel5.Controls.Add(this.LabelX10);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_EditCollision);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_EditFast3D);
+            this.TabControlPanel5.Controls.Add(this.buttonX2);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_ImportCollision);
+            this.TabControlPanel5.Controls.Add(this.buttonX1);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_ImportVisualMap);
+            this.TabControlPanel5.Controls.Add(this.ButtonX_LM_ScrollTexEditor);
+            this.TabControlPanel5.Controls.Add(this.Button_ImportModel);
+            this.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel5, "TabControlPanel5");
+            this.TabControlPanel5.Name = "TabControlPanel5";
+            this.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel5.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel5.Style.GradientAngle = 90;
+            this.TabControlPanel5.TabItem = this.TabItem5;
+            // 
+            // Line2
+            // 
+            this.Line2.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.Line2, "Line2");
+            this.Line2.Name = "Line2";
+            this.Line2.VerticalLine = true;
+            // 
+            // line4
+            // 
+            this.line4.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.line4, "line4");
+            this.line4.Name = "line4";
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.line1, "line1");
+            this.line1.Name = "line1";
+            // 
+            // LabelX_Area_CountOfTexAnimations
+            // 
+            this.LabelX_Area_CountOfTexAnimations.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.LabelX_Area_CountOfTexAnimations.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX_Area_CountOfTexAnimations, "LabelX_Area_CountOfTexAnimations");
+            this.LabelX_Area_CountOfTexAnimations.Name = "LabelX_Area_CountOfTexAnimations";
+            this.LabelX_Area_CountOfTexAnimations.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // LabelX10
+            // 
+            this.LabelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            resources.ApplyResources(this.LabelX10, "LabelX10");
+            this.LabelX10.Name = "LabelX10";
+            // 
+            // ButtonX_EditCollision
+            // 
+            this.ButtonX_EditCollision.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_EditCollision.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.ButtonX_EditCollision, "ButtonX_EditCollision");
+            this.ButtonX_EditCollision.FocusCuesEnabled = false;
+            this.ButtonX_EditCollision.Name = "ButtonX_EditCollision";
+            this.ButtonX_EditCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // ButtonX_EditFast3D
+            // 
+            this.ButtonX_EditFast3D.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_EditFast3D.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_EditFast3D.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX_EditFast3D, "ButtonX_EditFast3D");
+            this.ButtonX_EditFast3D.Name = "ButtonX_EditFast3D";
+            this.ButtonX_EditFast3D.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_EditFast3D.Click += new System.EventHandler(this.ButtonX_EditFast3D_Click);
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.FocusCuesEnabled = false;
+            resources.ApplyResources(this.buttonX2, "buttonX2");
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.Click += new System.EventHandler(this.ButtonItem_ExportCollisionMap_Click);
+            // 
+            // ButtonX_ImportCollision
+            // 
+            this.ButtonX_ImportCollision.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_ImportCollision.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_ImportCollision.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX_ImportCollision, "ButtonX_ImportCollision");
+            this.ButtonX_ImportCollision.Name = "ButtonX_ImportCollision";
+            this.ButtonX_ImportCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ImportCollision.Click += new System.EventHandler(this.LM_ImportModel);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.FocusCuesEnabled = false;
+            resources.ApplyResources(this.buttonX1, "buttonX1");
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.Click += new System.EventHandler(this.ButtonItem_ExportVisualMap_Click);
+            // 
+            // ButtonX_ImportVisualMap
+            // 
+            this.ButtonX_ImportVisualMap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_ImportVisualMap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_ImportVisualMap.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX_ImportVisualMap, "ButtonX_ImportVisualMap");
+            this.ButtonX_ImportVisualMap.Name = "ButtonX_ImportVisualMap";
+            this.ButtonX_ImportVisualMap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ImportVisualMap.Click += new System.EventHandler(this.LM_ImportModel);
+            // 
+            // ButtonX_LM_ScrollTexEditor
+            // 
+            this.ButtonX_LM_ScrollTexEditor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_LM_ScrollTexEditor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_LM_ScrollTexEditor.FocusCuesEnabled = false;
+            resources.ApplyResources(this.ButtonX_LM_ScrollTexEditor, "ButtonX_LM_ScrollTexEditor");
+            this.ButtonX_LM_ScrollTexEditor.Name = "ButtonX_LM_ScrollTexEditor";
+            this.ButtonX_LM_ScrollTexEditor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_LM_ScrollTexEditor.Click += new System.EventHandler(this.ButtonX_LM_ScrollTexEditor_Click);
+            // 
+            // Button_ImportModel
+            // 
+            this.Button_ImportModel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.Button_ImportModel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.Button_ImportModel.FocusCuesEnabled = false;
+            resources.ApplyResources(this.Button_ImportModel, "Button_ImportModel");
+            this.Button_ImportModel.Name = "Button_ImportModel";
+            this.Button_ImportModel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_ImportModel.Click += new System.EventHandler(this.LM_ImportModel);
+            // 
+            // TabItem5
+            // 
+            this.TabItem5.AttachedControl = this.TabControlPanel5;
+            this.TabItem5.Name = "TabItem5";
+            resources.ApplyResources(this.TabItem5, "TabItem5");
+            // 
             // TabControlPanel4
             // 
             resources.ApplyResources(this.TabControlPanel4, "TabControlPanel4");
-            this.TabControlPanel4.Controls.Add(this.RangeSlider_CameraFrustrum);
+            this.TabControlPanel4.Controls.Add(this.buttonX_EditCameraFrustum);
             this.TabControlPanel4.Controls.Add(this.labelX17);
             this.TabControlPanel4.Controls.Add(this.Slider_AreaReverbLevel);
             this.TabControlPanel4.Controls.Add(this.labelX14);
@@ -256,23 +543,6 @@
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel4.Style.GradientAngle = 90;
             this.TabControlPanel4.TabItem = this.TabItem4;
-            // 
-            // RangeSlider_CameraFrustrum
-            // 
-            this.RangeSlider_CameraFrustrum.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.RangeSlider_CameraFrustrum.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RangeSlider_CameraFrustrum.FocusCuesEnabled = false;
-            resources.ApplyResources(this.RangeSlider_CameraFrustrum, "RangeSlider_CameraFrustrum");
-            this.RangeSlider_CameraFrustrum.Maximum = 32767;
-            this.RangeSlider_CameraFrustrum.Name = "RangeSlider_CameraFrustrum";
-            this.RangeSlider_CameraFrustrum.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.RangeSlider_CameraFrustrum.TicksPosition = DevComponents.DotNetBar.eTicksPosition.TopAndBottom;
-            this.RangeSlider_CameraFrustrum.TicksVisible = false;
-            this.RangeSlider_CameraFrustrum.Value = new DevComponents.DotNetBar.RangeValue(0, 10);
-            this.RangeSlider_CameraFrustrum.ValueChanged += new System.EventHandler(this.RangeSlider_CameraFrustrum_ValueChanged);
             // 
             // labelX17
             // 
@@ -564,293 +834,6 @@
             this.TabItem4.AttachedControl = this.TabControlPanel4;
             this.TabItem4.Name = "TabItem4";
             resources.ApplyResources(this.TabItem4, "TabItem4");
-            // 
-            // TabControlPanel5
-            // 
-            this.TabControlPanel5.Controls.Add(this.Line2);
-            this.TabControlPanel5.Controls.Add(this.line4);
-            this.TabControlPanel5.Controls.Add(this.line1);
-            this.TabControlPanel5.Controls.Add(this.LabelX_Area_CountOfTexAnimations);
-            this.TabControlPanel5.Controls.Add(this.LabelX10);
-            this.TabControlPanel5.Controls.Add(this.ButtonX_EditCollision);
-            this.TabControlPanel5.Controls.Add(this.ButtonX_EditFast3D);
-            this.TabControlPanel5.Controls.Add(this.buttonX2);
-            this.TabControlPanel5.Controls.Add(this.ButtonX_ImportCollision);
-            this.TabControlPanel5.Controls.Add(this.buttonX1);
-            this.TabControlPanel5.Controls.Add(this.ButtonX_ImportVisualMap);
-            this.TabControlPanel5.Controls.Add(this.ButtonX_LM_ScrollTexEditor);
-            this.TabControlPanel5.Controls.Add(this.Button_ImportModel);
-            this.TabControlPanel5.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel5, "TabControlPanel5");
-            this.TabControlPanel5.Name = "TabControlPanel5";
-            this.TabControlPanel5.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel5.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel5.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel5.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel5.Style.GradientAngle = 90;
-            this.TabControlPanel5.TabItem = this.TabItem5;
-            // 
-            // Line2
-            // 
-            this.Line2.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.Line2, "Line2");
-            this.Line2.Name = "Line2";
-            this.Line2.VerticalLine = true;
-            // 
-            // line4
-            // 
-            this.line4.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.line4, "line4");
-            this.line4.Name = "line4";
-            // 
-            // line1
-            // 
-            this.line1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.line1, "line1");
-            this.line1.Name = "line1";
-            // 
-            // LabelX_Area_CountOfTexAnimations
-            // 
-            this.LabelX_Area_CountOfTexAnimations.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.LabelX_Area_CountOfTexAnimations.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.LabelX_Area_CountOfTexAnimations, "LabelX_Area_CountOfTexAnimations");
-            this.LabelX_Area_CountOfTexAnimations.Name = "LabelX_Area_CountOfTexAnimations";
-            this.LabelX_Area_CountOfTexAnimations.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // LabelX10
-            // 
-            this.LabelX10.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(this.LabelX10, "LabelX10");
-            this.LabelX10.Name = "LabelX10";
-            // 
-            // ButtonX_EditCollision
-            // 
-            this.ButtonX_EditCollision.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_EditCollision.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            resources.ApplyResources(this.ButtonX_EditCollision, "ButtonX_EditCollision");
-            this.ButtonX_EditCollision.FocusCuesEnabled = false;
-            this.ButtonX_EditCollision.Name = "ButtonX_EditCollision";
-            this.ButtonX_EditCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // ButtonX_EditFast3D
-            // 
-            this.ButtonX_EditFast3D.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_EditFast3D.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_EditFast3D.FocusCuesEnabled = false;
-            resources.ApplyResources(this.ButtonX_EditFast3D, "ButtonX_EditFast3D");
-            this.ButtonX_EditFast3D.Name = "ButtonX_EditFast3D";
-            this.ButtonX_EditFast3D.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_EditFast3D.Click += new System.EventHandler(this.ButtonX_EditFast3D_Click);
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.FocusCuesEnabled = false;
-            resources.ApplyResources(this.buttonX2, "buttonX2");
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.Click += new System.EventHandler(this.ButtonItem_ExportCollisionMap_Click);
-            // 
-            // ButtonX_ImportCollision
-            // 
-            this.ButtonX_ImportCollision.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_ImportCollision.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_ImportCollision.FocusCuesEnabled = false;
-            resources.ApplyResources(this.ButtonX_ImportCollision, "ButtonX_ImportCollision");
-            this.ButtonX_ImportCollision.Name = "ButtonX_ImportCollision";
-            this.ButtonX_ImportCollision.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ImportCollision.Click += new System.EventHandler(this.LM_ImportModel);
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.FocusCuesEnabled = false;
-            resources.ApplyResources(this.buttonX1, "buttonX1");
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.Click += new System.EventHandler(this.ButtonItem_ExportVisualMap_Click);
-            // 
-            // ButtonX_ImportVisualMap
-            // 
-            this.ButtonX_ImportVisualMap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_ImportVisualMap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_ImportVisualMap.FocusCuesEnabled = false;
-            resources.ApplyResources(this.ButtonX_ImportVisualMap, "ButtonX_ImportVisualMap");
-            this.ButtonX_ImportVisualMap.Name = "ButtonX_ImportVisualMap";
-            this.ButtonX_ImportVisualMap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_ImportVisualMap.Click += new System.EventHandler(this.LM_ImportModel);
-            // 
-            // ButtonX_LM_ScrollTexEditor
-            // 
-            this.ButtonX_LM_ScrollTexEditor.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.ButtonX_LM_ScrollTexEditor.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.ButtonX_LM_ScrollTexEditor.FocusCuesEnabled = false;
-            resources.ApplyResources(this.ButtonX_LM_ScrollTexEditor, "ButtonX_LM_ScrollTexEditor");
-            this.ButtonX_LM_ScrollTexEditor.Name = "ButtonX_LM_ScrollTexEditor";
-            this.ButtonX_LM_ScrollTexEditor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ButtonX_LM_ScrollTexEditor.Click += new System.EventHandler(this.ButtonX_LM_ScrollTexEditor_Click);
-            // 
-            // Button_ImportModel
-            // 
-            this.Button_ImportModel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.Button_ImportModel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.Button_ImportModel.FocusCuesEnabled = false;
-            resources.ApplyResources(this.Button_ImportModel, "Button_ImportModel");
-            this.Button_ImportModel.Name = "Button_ImportModel";
-            this.Button_ImportModel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_ImportModel.Click += new System.EventHandler(this.LM_ImportModel);
-            // 
-            // TabItem5
-            // 
-            this.TabItem5.AttachedControl = this.TabControlPanel5;
-            this.TabItem5.Name = "TabItem5";
-            resources.ApplyResources(this.TabItem5, "TabItem5");
-            // 
-            // TabControlPanel6
-            // 
-            this.TabControlPanel6.Controls.Add(this.Button_LM_RemoveSpecial);
-            this.TabControlPanel6.Controls.Add(this.Button_LM_AddSpecial);
-            this.TabControlPanel6.Controls.Add(this.Button_LM_EditSpecial);
-            this.TabControlPanel6.Controls.Add(this.ListViewEx_LM_Specials);
-            this.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
-            this.TabControlPanel6.Name = "TabControlPanel6";
-            this.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel6.Style.GradientAngle = 90;
-            this.TabControlPanel6.TabItem = this.TabItem6;
-            // 
-            // Button_LM_RemoveSpecial
-            // 
-            this.Button_LM_RemoveSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            resources.ApplyResources(this.Button_LM_RemoveSpecial, "Button_LM_RemoveSpecial");
-            this.Button_LM_RemoveSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.Button_LM_RemoveSpecial.FocusCuesEnabled = false;
-            this.Button_LM_RemoveSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.Button_LM_RemoveSpecial.Name = "Button_LM_RemoveSpecial";
-            this.Button_LM_RemoveSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_LM_RemoveSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Button_LM_RemoveSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.Button_LM_RemoveSpecial.SymbolSize = 12F;
-            this.Button_LM_RemoveSpecial.Click += new System.EventHandler(this.Button_LM_RemoveSpecial_Click);
-            // 
-            // Button_LM_AddSpecial
-            // 
-            this.Button_LM_AddSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.Button_LM_AddSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.Button_LM_AddSpecial.FocusCuesEnabled = false;
-            this.Button_LM_AddSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            resources.ApplyResources(this.Button_LM_AddSpecial, "Button_LM_AddSpecial");
-            this.Button_LM_AddSpecial.Name = "Button_LM_AddSpecial";
-            this.Button_LM_AddSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_LM_AddSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
-            this.Button_LM_AddSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.Button_LM_AddSpecial.SymbolSize = 12F;
-            this.Button_LM_AddSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
-            // 
-            // Button_LM_EditSpecial
-            // 
-            this.Button_LM_EditSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.Button_LM_EditSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            resources.ApplyResources(this.Button_LM_EditSpecial, "Button_LM_EditSpecial");
-            this.Button_LM_EditSpecial.FocusCuesEnabled = false;
-            this.Button_LM_EditSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
-            this.Button_LM_EditSpecial.Name = "Button_LM_EditSpecial";
-            this.Button_LM_EditSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_LM_EditSpecial.SymbolColor = System.Drawing.Color.Goldenrod;
-            this.Button_LM_EditSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.Button_LM_EditSpecial.SymbolSize = 12F;
-            this.Button_LM_EditSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
-            // 
-            // ListViewEx_LM_Specials
-            // 
-            resources.ApplyResources(this.ListViewEx_LM_Specials, "ListViewEx_LM_Specials");
-            this.ListViewEx_LM_Specials.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx_LM_Specials.Border.Class = "ListViewBorder";
-            this.ListViewEx_LM_Specials.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_LM_Specials.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeaderA1,
-            this.ColumnHeader2,
-            this.ColumnHeader3,
-            this.ColumnHeader4,
-            this.ColumnHeader5,
-            this.ColumnHeader6,
-            this.ColumnHeader7,
-            this.ColumnHeaderA});
-            this.ListViewEx_LM_Specials.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_LM_Specials.FocusCuesEnabled = false;
-            this.ListViewEx_LM_Specials.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_LM_Specials.FullRowSelect = true;
-            this.ListViewEx_LM_Specials.GridLines = true;
-            this.ListViewEx_LM_Specials.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups"))),
-            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups1"))),
-            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups2"))),
-            ((System.Windows.Forms.ListViewGroup)(resources.GetObject("ListViewEx_LM_Specials.Groups3")))});
-            this.ListViewEx_LM_Specials.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx_LM_Specials.HideSelection = false;
-            this.ListViewEx_LM_Specials.MultiSelect = false;
-            this.ListViewEx_LM_Specials.Name = "ListViewEx_LM_Specials";
-            this.ListViewEx_LM_Specials.ShowGroups = false;
-            this.ListViewEx_LM_Specials.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_LM_Specials.View = System.Windows.Forms.View.Details;
-            this.ListViewEx_LM_Specials.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_LM_Specials_SelectedIndexChanged);
-            // 
-            // ColumnHeaderA1
-            // 
-            resources.ApplyResources(this.ColumnHeaderA1, "ColumnHeaderA1");
-            // 
-            // ColumnHeader2
-            // 
-            resources.ApplyResources(this.ColumnHeader2, "ColumnHeader2");
-            // 
-            // ColumnHeader3
-            // 
-            resources.ApplyResources(this.ColumnHeader3, "ColumnHeader3");
-            // 
-            // ColumnHeader4
-            // 
-            resources.ApplyResources(this.ColumnHeader4, "ColumnHeader4");
-            // 
-            // ColumnHeader5
-            // 
-            resources.ApplyResources(this.ColumnHeader5, "ColumnHeader5");
-            // 
-            // ColumnHeader6
-            // 
-            resources.ApplyResources(this.ColumnHeader6, "ColumnHeader6");
-            // 
-            // ColumnHeader7
-            // 
-            resources.ApplyResources(this.ColumnHeader7, "ColumnHeader7");
-            // 
-            // ColumnHeaderA
-            // 
-            resources.ApplyResources(this.ColumnHeaderA, "ColumnHeaderA");
-            // 
-            // TabItem6
-            // 
-            this.TabItem6.AttachedControl = this.TabControlPanel6;
-            this.TabItem6.Name = "TabItem6";
-            resources.ApplyResources(this.TabItem6, "TabItem6");
             // 
             // TabControl_LM_Level
             // 
@@ -1476,6 +1459,19 @@
             resources.ApplyResources(this.ButtonItem_AreaTools_EditGeolayoutScript, "ButtonItem_AreaTools_EditGeolayoutScript");
             this.ButtonItem_AreaTools_EditGeolayoutScript.Click += new System.EventHandler(this.ButtonItem2_EditGeolayoutScript_Click);
             // 
+            // buttonX_EditCameraFrustum
+            // 
+            this.buttonX_EditCameraFrustum.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX_EditCameraFrustum.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX_EditCameraFrustum.FocusCuesEnabled = false;
+            this.buttonX_EditCameraFrustum.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_support_16px;
+            resources.ApplyResources(this.buttonX_EditCameraFrustum, "buttonX_EditCameraFrustum");
+            this.buttonX_EditCameraFrustum.Name = "buttonX_EditCameraFrustum";
+            this.buttonX_EditCameraFrustum.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX_EditCameraFrustum.SymbolColor = System.Drawing.Color.Gray;
+            this.buttonX_EditCameraFrustum.SymbolSize = 12F;
+            this.buttonX_EditCameraFrustum.Click += new System.EventHandler(this.buttonX_EditCameraFrustum_Click);
+            // 
             // Tab_LevelManagerV2
             // 
             resources.ApplyResources(this, "$this");
@@ -1489,9 +1485,9 @@
             this.panel_Tools.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_AreaProperties)).EndInit();
             this.TabControl_AreaProperties.ResumeLayout(false);
-            this.TabControlPanel4.ResumeLayout(false);
-            this.TabControlPanel5.ResumeLayout(false);
             this.TabControlPanel6.ResumeLayout(false);
+            this.TabControlPanel5.ResumeLayout(false);
+            this.TabControlPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Level)).EndInit();
             this.TabControl_LM_Level.ResumeLayout(false);
             this.TabControlPanel_LevelProperties.ResumeLayout(false);
@@ -1529,7 +1525,6 @@
         private DevComponents.DotNetBar.ButtonItem ButtonItem_AreaTools_EditGeolayoutScript;
         private DevComponents.DotNetBar.TabControl TabControl_AreaProperties;
         private DevComponents.DotNetBar.TabControlPanel TabControlPanel4;
-        private DevComponents.DotNetBar.Controls.RangeSlider RangeSlider_CameraFrustrum;
         private DevComponents.DotNetBar.LabelX labelX17;
         private DevComponents.DotNetBar.Controls.Slider Slider_AreaReverbLevel;
         private DevComponents.DotNetBar.LabelX labelX14;
@@ -1618,5 +1613,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.LabelItem labelItem3;
         private DevComponents.DotNetBar.LabelItem labelItem4;
+        private DevComponents.DotNetBar.ButtonX buttonX_EditCameraFrustum;
     }
 }

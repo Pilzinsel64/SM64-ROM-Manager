@@ -381,28 +381,25 @@
   <data name="TabControlPanel4.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="RangeSlider_CameraFrustrum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 185</value>
+  <data name="ButtonX_EditCameraFrustum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 186</value>
   </data>
-  <data name="RangeSlider_CameraFrustrum.RangeTooltipFormat" xml:space="preserve">
-    <value>Near: {0} - Far: {1}</value>
+  <data name="ButtonX_EditCameraFrustum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
   </data>
-  <data name="RangeSlider_CameraFrustrum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 24</value>
+  <data name="ButtonX_EditCameraFrustum.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
   </data>
-  <data name="RangeSlider_CameraFrustrum.TabIndex" type="System.Int32, mscorlib">
-    <value>105</value>
+  <data name="&gt;&gt;ButtonX_EditCameraFrustum.Name" xml:space="preserve">
+    <value>ButtonX_EditCameraFrustum</value>
   </data>
-  <data name="&gt;&gt;RangeSlider_CameraFrustrum.Name" xml:space="preserve">
-    <value>RangeSlider_CameraFrustrum</value>
+  <data name="&gt;&gt;ButtonX_EditCameraFrustum.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;RangeSlider_CameraFrustrum.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.RangeSlider, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;RangeSlider_CameraFrustrum.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ButtonX_EditCameraFrustum.Parent" xml:space="preserve">
     <value>TabControlPanel4</value>
   </data>
-  <data name="&gt;&gt;RangeSlider_CameraFrustrum.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ButtonX_EditCameraFrustum.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="labelX17.Location" type="System.Drawing.Point, System.Drawing">
