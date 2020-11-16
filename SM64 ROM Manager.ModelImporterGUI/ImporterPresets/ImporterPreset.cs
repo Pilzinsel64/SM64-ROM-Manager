@@ -17,6 +17,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI.ImporterPresets
         public Version MinVersion { get; set; } = new Version("1.0.0.0");
         [JsonConverter(typeof(Newtonsoft.Json.Converters.VersionConverter))]
         public Version MaxVersion { get; set; } = new Version("0.0.0.0");
+        [JsonIgnore]
         public string FileName { get; set; } = "";
         public EmbeddedFilesContainer EmbeddedFiles { get; } = new EmbeddedFilesContainer();
     }
