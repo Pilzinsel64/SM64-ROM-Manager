@@ -11,8 +11,8 @@
         "Type": "VisualBasic",
         "Description": "",
         "References": [
-          "Newtonsoft.Json.dll",
-          "SM64 ROM Manager.exe"
+          "SM64 ROM Manager.exe",
+          "Data\\Lib\\Newtonsoft.Json.dll"
         ],
         "ID": null,
         "AllowRevert": false
@@ -35,7 +35,7 @@
       ]
     }
   ],
-  "Version": "1.2.0.0",
+  "Version": "1.2.0.1",
   "MinVersion": "1.10.0.0",
   "MaxVersion": "0.0.0.0",
   "FileName": "E:\\Userdata\\source\\repos\\SM64 ROM Manager\\SM64 ROM Manager\\bin\\Debug\\net48\\Data\\Importer Presets\\3D-Coins.json",
