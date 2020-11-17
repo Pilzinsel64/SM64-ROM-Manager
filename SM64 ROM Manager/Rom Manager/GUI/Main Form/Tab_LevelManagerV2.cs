@@ -72,6 +72,8 @@ namespace SM64_ROM_Manager
                 Expanded = true
             };
             LevelsTree.Nodes.AddRange(new[] { nCustomLevels/*, nVanillaLevels*/ });
+
+            LoadCurrentSelection(true);
         }
 
         // P r o p e r t i e s
@@ -535,7 +537,7 @@ namespace SM64_ROM_Manager
             {
                 Tag = 0
             };
-            LevelsTree.Nodes.Add(n);
+            nCustomLevels.Nodes.Add(n);
             LevelsTree.SelectedNode = n;
             n.EnsureVisible();
         }
@@ -547,7 +549,10 @@ namespace SM64_ROM_Manager
             {
                 Tag = 1
             };
-            nCustomLevels.Nodes[levelIndex].Nodes.Add(n);
+            var parentNode = nCustomLevels.Nodes[levelIndex];
+            parentNode.Nodes.Add(n);
+            parentNode.Expanded = true;
+            LevelsTree.SelectedNode = n;
         }
 
         private void RemoveAreaFromList(int levelIndex, int areaIndex)
@@ -629,8 +634,7 @@ namespace SM64_ROM_Manager
                     General.GetCameraPresetTypeOfIndex(ComboBox_LM_CameraPreset.SelectedIndex),
                     CheckBoxX_LM_Enable2DCamera.Value, SwitchButton_LM_ShowMsgEnabled.Value,
                     Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX_LM_ShowMsgID.Text)),
-                    (AreaReverbLevel)Enum.GetValues(typeof(AreaReverbLevel)).GetValue(Slider_AreaReverbLevel.Value),
-                    (short)RangeSlider_CameraFrustrum.Value.Min, (short)RangeSlider_CameraFrustrum.Value.Max);
+                    (AreaReverbLevel)Enum.GetValues(typeof(AreaReverbLevel)).GetValue(Slider_AreaReverbLevel.Value));
 
             }
         }
@@ -709,9 +713,6 @@ namespace SM64_ROM_Manager
                         Slider_AreaReverbLevel.Value = iReverbLevel;
                 }
                 Slider_AreaReverbLevel.Enabled = infos.areaID >= 1 && infos.areaID <= 3;
-
-                // Camera Frustrum
-                RangeSlider_CameraFrustrum.Value = new RangeValue(infos.cameraFrustrumNear, infos.cameraFrustrumFar);
 
                 // Model Infos
                 LoadScrollTexCount();
@@ -1199,23 +1200,40 @@ namespace SM64_ROM_Manager
 
         private void LevelsTree_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
         {
-            var indices = CurrentIndicies;
+            LoadCurrentSelection();
+        }
 
-            panel_Tools.SuspendLayout();
+        private void LoadCurrentSelection(bool forceLoadingNothing = false)
+        {
+            bool menuItemsEnabled = false;
+            
+            if (!forceLoadingNothing)
+            {
+                var indices = CurrentIndicies;
 
-            if (indices.areaIndex != -1 && indices.levelIndex != -1)
-            {
-                LoadAreaSettings(indices.levelIndex, indices.areaIndex);
-                EnableTabControl(TabControl_AreaProperties);
-                bar1.Enabled = true;
+                panel_Tools.SuspendLayout();
+
+                if (indices.areaIndex != -1 && indices.levelIndex != -1)
+                {
+                    LoadAreaSettings(indices.levelIndex, indices.areaIndex);
+                    EnableTabControl(TabControl_AreaProperties);
+                    menuItemsEnabled = true;
+                }
+                else
+                {
+                    var isNull = indices.levelIndex == -1;
+                    LoadLevelSettings(indices.levelIndex);
+                    EnableTabControl(isNull ? null : TabControl_LM_Level);
+                    menuItemsEnabled = !isNull;
+                }
             }
-            else
-            {
-                var isNull = indices.levelIndex == -1;
-                LoadLevelSettings(indices.levelIndex);
-                EnableTabControl(isNull ? null : TabControl_LM_Level);
-                bar1.Enabled = !isNull;
-            }
+
+            ButtonItem_OpenLevelEditor.Enabled = menuItemsEnabled;
+            ButtonItem_RemoveItem.Enabled = menuItemsEnabled;
+            ButtonItem_ExportLevelArea.Enabled = menuItemsEnabled;
+            buttonItem1.Enabled = menuItemsEnabled;
+            ButtonItem_AreaTools_AddArea.Enabled = menuItemsEnabled;
+            ButtonItem_AreaTools_ImportArea.Enabled = menuItemsEnabled;
 
             bar1.Refresh();
             panel_Tools.ResumeLayout();
@@ -1249,6 +1267,13 @@ namespace SM64_ROM_Manager
                 ButtonItem_ExportArea_Click(sender, e);
             else if (CurrentLevelIndex != -1)
                 ButtonItem_ExportLevel_Click(sender, e);
+        }
+
+        private void buttonX_EditCameraFrustum_Click(object sender, EventArgs e)
+        {
+            var cameraFrustum = Controller.GetLevelAreaCameraFrustum(CurrentLevelIndex, CurrentAreaIndex);
+            var dialog = new CameraFrustumDialog(cameraFrustum);
+            dialog.ShowDialog(this);
         }
     }
 }

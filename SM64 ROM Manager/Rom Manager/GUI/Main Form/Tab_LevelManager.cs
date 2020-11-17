@@ -680,8 +680,7 @@ namespace SM64_ROM_Manager
                     General.GetCameraPresetTypeOfIndex(ComboBox_LM_CameraPreset.SelectedIndex),
                     CheckBoxX_LM_Enable2DCamera.Value, SwitchButton_LM_ShowMsgEnabled.Value,
                     Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX_LM_ShowMsgID.Text)),
-                    (AreaReverbLevel)Enum.GetValues(typeof(AreaReverbLevel)).GetValue(Slider_AreaReverbLevel.Value),
-                    (short)RangeSlider_CameraFrustrum.Value.Min, (short)RangeSlider_CameraFrustrum.Value.Max);
+                    (AreaReverbLevel)Enum.GetValues(typeof(AreaReverbLevel)).GetValue(Slider_AreaReverbLevel.Value));
                 
             }
         }
@@ -764,9 +763,6 @@ namespace SM64_ROM_Manager
                         Slider_AreaReverbLevel.Value = iReverbLevel;
                 }
                 Slider_AreaReverbLevel.Enabled = infos.areaID >= 1 && infos.areaID <= 3;
-
-                // Camera Frustrum
-                RangeSlider_CameraFrustrum.Value = new RangeValue(infos.cameraFrustrumNear, infos.cameraFrustrumFar);
 
                 // Model Infos
                 LoadScrollTexCount();
@@ -1259,6 +1255,13 @@ namespace SM64_ROM_Manager
                     Controller.ExportLevelAreaWarps(res.filePath, res.compression, CurrentLevelIndex, CurrentAreaIndex);
                     break;
             }
+        }
+
+        private void ButtonX_EditCameraFrustum_Click(object sender, EventArgs e)
+        {
+            var cameraFrustum = Controller.GetLevelAreaCameraFrustum(CurrentLevelIndex, CurrentAreaIndex);
+            var dialog = new CameraFrustumDialog(cameraFrustum);
+            dialog.ShowDialog(this);
         }
     }
 }

@@ -279,7 +279,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI
                 ComboBoxEx2.Items.Add(ci);
             }
 
-            ComboBoxEx2.SelectedIndex = 0;
+            ComboBoxEx2.SelectedIndex = ComboBoxEx2.Items.Count > 1 ? 1 : 0;
             ComboBoxEx2.ResumeLayout();
         }
 

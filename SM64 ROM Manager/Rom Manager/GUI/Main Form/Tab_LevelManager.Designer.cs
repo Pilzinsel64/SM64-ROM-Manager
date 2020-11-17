@@ -63,7 +63,6 @@ namespace SM64_ROM_Manager
             this.ListBoxAdv_LM_Levels = new SM64_ROM_Manager.Publics.Controls.ItemListBox();
             this.TabControl_LM_Area = new DevComponents.DotNetBar.TabControl();
             this.TabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
-            this.RangeSlider_CameraFrustrum = new DevComponents.DotNetBar.Controls.RangeSlider();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
             this.Slider_AreaReverbLevel = new DevComponents.DotNetBar.Controls.Slider();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
@@ -146,6 +145,7 @@ namespace SM64_ROM_Manager
             this.SwitchButton_UseGlobalObjectBank = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.TableLayoutPanel_ObjectBankSelectorBoxes = new System.Windows.Forms.TableLayoutPanel();
             this.TabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.ButtonX_EditCameraFrustum = new DevComponents.DotNetBar.ButtonX();
             this.GroupBox_LM_Areas.SuspendLayout();
             this.GroupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Area)).BeginInit();
@@ -500,7 +500,7 @@ namespace SM64_ROM_Manager
             // TabControlPanel4
             // 
             resources.ApplyResources(this.TabControlPanel4, "TabControlPanel4");
-            this.TabControlPanel4.Controls.Add(this.RangeSlider_CameraFrustrum);
+            this.TabControlPanel4.Controls.Add(this.ButtonX_EditCameraFrustum);
             this.TabControlPanel4.Controls.Add(this.labelX17);
             this.TabControlPanel4.Controls.Add(this.Slider_AreaReverbLevel);
             this.TabControlPanel4.Controls.Add(this.labelX14);
@@ -530,23 +530,6 @@ namespace SM64_ROM_Manager
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel4.Style.GradientAngle = 90;
             this.TabControlPanel4.TabItem = this.TabItem4;
-            // 
-            // RangeSlider_CameraFrustrum
-            // 
-            this.RangeSlider_CameraFrustrum.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.RangeSlider_CameraFrustrum.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.RangeSlider_CameraFrustrum.FocusCuesEnabled = false;
-            resources.ApplyResources(this.RangeSlider_CameraFrustrum, "RangeSlider_CameraFrustrum");
-            this.RangeSlider_CameraFrustrum.Maximum = 32767;
-            this.RangeSlider_CameraFrustrum.Name = "RangeSlider_CameraFrustrum";
-            this.RangeSlider_CameraFrustrum.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.RangeSlider_CameraFrustrum.TicksPosition = DevComponents.DotNetBar.eTicksPosition.TopAndBottom;
-            this.RangeSlider_CameraFrustrum.TicksVisible = false;
-            this.RangeSlider_CameraFrustrum.Value = new DevComponents.DotNetBar.RangeValue(100, 30000);
-            this.RangeSlider_CameraFrustrum.ValueChanged += new System.EventHandler(this.RangeSlider_CameraFrustrum_ValueChanged);
             // 
             // labelX17
             // 
@@ -1517,6 +1500,19 @@ namespace SM64_ROM_Manager
             this.TabItem2.Name = "TabItem2";
             resources.ApplyResources(this.TabItem2, "TabItem2");
             // 
+            // ButtonX_EditCameraFrustum
+            // 
+            this.ButtonX_EditCameraFrustum.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_EditCameraFrustum.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_EditCameraFrustum.FocusCuesEnabled = false;
+            this.ButtonX_EditCameraFrustum.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_support_16px;
+            resources.ApplyResources(this.ButtonX_EditCameraFrustum, "ButtonX_EditCameraFrustum");
+            this.ButtonX_EditCameraFrustum.Name = "ButtonX_EditCameraFrustum";
+            this.ButtonX_EditCameraFrustum.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_EditCameraFrustum.SymbolColor = System.Drawing.Color.Gray;
+            this.ButtonX_EditCameraFrustum.SymbolSize = 12F;
+            this.ButtonX_EditCameraFrustum.Click += new System.EventHandler(this.ButtonX_EditCameraFrustum_Click);
+            // 
             // Tab_LevelManager
             // 
             resources.ApplyResources(this, "$this");
@@ -1826,9 +1822,9 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelX labelX14;
         private DevComponents.DotNetBar.Controls.Slider Slider_AreaReverbLevel;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ChangeAreaID;
-        private DevComponents.DotNetBar.Controls.RangeSlider RangeSlider_CameraFrustrum;
         private DevComponents.DotNetBar.LabelX labelX17;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportArea;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ExportLevel;
+        private DevComponents.DotNetBar.ButtonX ButtonX_EditCameraFrustum;
     }
 }

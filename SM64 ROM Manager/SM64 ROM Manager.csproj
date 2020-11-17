@@ -20,8 +20,8 @@
     <Company>Pilzinsel64</Company>
     <Product>SM64 ROM Manager</Product>
     <Copyright>Copyright © Pilzinsel64 2017 - 2020</Copyright>
-    <AssemblyVersion>1.11.0.0</AssemblyVersion>
-    <FileVersion>1.10.0.0</FileVersion>
+    <AssemblyVersion>1.11.5.0</AssemblyVersion>
+    <FileVersion>1.11.5.0</FileVersion>
     <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
     <WarningLevel>1</WarningLevel>
     <DefineTrace>true</DefineTrace>
@@ -98,7 +98,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>false</GenerateManifests>
-    <Version>1.11.0.0</Version>
+    <Version>1.11.5.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
@@ -285,6 +285,15 @@
     </Compile>
     <Compile Update="Rom Manager\GUI\Level Editor\TextureEditor.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\CameraFrustumDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\CameraFrustumDialog.Designer.cs">
+      <DependentUpon>CameraFrustumDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Rom Manager\GUI\Main Form\Level Manager\CameraFrustumDialog.resx">
+      <DependentUpon>CameraFrustumDialog.cs</DependentUpon>
     </Compile>
     <Compile Update="Rom Manager\GUI\Main Form\Level Manager\ObjectBankDataEditor.Designer.cs">
       <DependentUpon>ObjectBankDataEditor.cs</DependentUpon>
