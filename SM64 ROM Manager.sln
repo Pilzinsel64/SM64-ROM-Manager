@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SM64 ROM Manager", "SM64 ROM Manager\SM64 ROM Manager.csproj", "{C3A773EB-A29D-032A-29A7-BC008496BDA0}"
 EndProject
@@ -66,13 +66,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SM64 ROM Manager.Plugins.RomConfigEditor", "SM64 ROM Manager.Plugins.RomConfigEditor\SM64 ROM Manager.Plugins.RomConfigEditor.csproj", "{88EC28BC-AABF-4740-ADE0-843313F8CFB3}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		SM64 ROM Manager.Updating.Administration.Shared\SM64 ROM Manager.Updating.Administration.Shared.projitems*{b7bad350-bb62-0c04-249c-28a92c6008cc}*SharedItemsImports = 4
-		SM64 ROM Manager.Updating.Client.Shared\SM64 ROM Manager.Updating.Client.Shared.projitems*{b7bad350-bb62-0c04-249c-28a92c6008cc}*SharedItemsImports = 4
-		SM64 ROM Manager.Updating.Administration.Shared\SM64 ROM Manager.Updating.Administration.Shared.projitems*{c45362eb-ab27-09fb-107a-77480e630cfc}*SharedItemsImports = 4
-		SM64 ROM Manager.Updating.Client.Shared\SM64 ROM Manager.Updating.Client.Shared.projitems*{c45362eb-ab27-09fb-107a-77480e630cfc}*SharedItemsImports = 4
-		SM64 ROM Manager.Updating.Client.Shared\SM64 ROM Manager.Updating.Client.Shared.projitems*{fcd7dc2f-9438-0e44-23b2-d0dfd601a79c}*SharedItemsImports = 4
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
