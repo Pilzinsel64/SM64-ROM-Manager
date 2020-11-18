@@ -3,11 +3,12 @@
   "Scripts": [
     {
       "Name": "Apply 3D Coins",
-      "Script": "Imports Microsoft.VisualBasic\r\nImports System\r\nImports System.Linq\r\nImports System.Windows.Forms\r\nImports System.IO\r\nImports SM64Lib\r\nImports System.Collections.Generic\r\nImports SM64Lib.Model\r\nImports System.Reflection\r\nImports SM64Lib.Data\r\nImports Pilz.IO\r\n\r\nModule Script\r\n\r\n    Private Const PATCH_FILE as String = \"Apply 3D Coins.ppf\"\r\n    Private Const BEHAV_FILE as String = \"behav3d.json\"\r\n    Private Const BEHAV_DLL as String = \"behav.dll\"\r\n    Private Const EXTRA_BEHAV_ADDRESS As Integer = 318785892\r\n\r\n    Sub Main(params as IReadOnlyDictionary(Of String, Object))\r\n        Dim myDataPath as string = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), \"Data\")\r\n        Dim rommgr as RomManager = params(\"rommgr\")\r\n        Dim files as EmbeddedFilesContainer = params(\"files\")\r\n        \r\n        'Get Paths\r\n        Dim p_romfile as string = rommgr.RomFile\r\n        Dim p_ppf as string = files.GetLocalFilePath(PATCH_FILE)\r\n        \r\n        'Patch 3D-Coins Patch\r\n        General.PatchClass.ApplyPPF(p_romfile, p_ppf)\r\n        \r\n        'Apply behavior changes for GBB\r\n        If rommgr.GlobalBehaviorBank.Config.Enabled AndAlso Not rommgr.RomConfig.NPCConfig.Enabled3DCoins Then\r\n            If rommgr.GlobalBehaviorBank.GetBehaviorByBankAddress(EXTRA_BEHAV_ADDRESS) Is Nothing Then\r\n                'Load DLL\r\n                Dim fileDLL as String = files.GetLocalFilePath(BEHAV_DLL)\r\n                Dim dll as Assembly = Assembly.LoadFile(fileDLL)\r\n                Dim t = dll.GetType(\"Behav.Behav\")\r\n                Dim m = t.GetMethod(\"PatchBehaviors\")\r\n                \r\n                'Get json as string\r\n                Dim jsonStream As Stream = files.GetStream(BEHAV_FILE)\r\n                jsonStream.Position = 0\r\n                Dim srJson as new StreamReader(jsonStream)\r\n                Dim json As String = srJson.ReadToEnd()\r\n                srJson.Close()\r\n                \r\n                'Execute patch\r\n                m.Invoke(Nothing, {json, rommgr})\r\n            End If\r\n            \r\n            'Set 3d coins enabled flag to true\r\n            rommgr.RomConfig.NPCConfig.Enabled3DCoins = True\r\n        End If\r\n    End Sub\r\n\r\nEnd Module\r\n",
+      "Script": "Imports Microsoft.VisualBasic\r\nImports System\r\nImports System.Linq\r\nImports System.Windows.Forms\r\nImports System.IO\r\nImports SM64Lib\r\nImports System.Collections.Generic\r\nImports SM64Lib.Model\r\nImports System.Reflection\r\nImports SM64Lib.Data\r\nImports Pilz.IO\r\n\r\nModule Script\r\n\r\n    Private Const PATCH_FILE as String = \"Apply 3D Coins.ppf\"\r\n    Private Const BEHAV_FILE as String = \"behav3d.json\"\r\n    Private Const BEHAV_DLL as String = \"behav.dll\"\r\n    Private Const EXTRA_BEHAV_ADDRESS As Integer = 318785892\r\n\r\n    Sub Main(params as IReadOnlyDictionary(Of String, Object))\r\n        Dim myDataPath as string = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), \"Data\")\r\n        Dim rommgr as RomManager = params(\"rommgr\")\r\n        Dim files as EmbeddedFilesContainer = params(\"files\")\r\n        \r\n        'Get Paths\r\n        Dim p_romfile as string = rommgr.RomFile\r\n        Dim p_ppf as string = files.GetLocalFilePath(PATCH_FILE)\r\n        \r\n        'Patch 3D-Coins Patch\r\n        General.PatchClass.ApplyPPF(p_romfile, p_ppf)\r\n        \r\n        'Apply behavior changes for GBB\r\n        If rommgr.GlobalBehaviorBank.Config.Enabled AndAlso Not rommgr.RomConfig.NPCConfig.Enabled3DCoins Then\r\n            If rommgr.GlobalBehaviorBank.GetBehaviorByBankAddress(EXTRA_BEHAV_ADDRESS) Is Nothing Then\r\n                'Load DLL\r\n                Dim fileDLL as String = files.GetLocalFilePath(BEHAV_DLL)\r\n                Dim dll as Assembly = Assembly.LoadFile(fileDLL)\r\n                Dim t = dll.GetType(\"Behav.Behav\")\r\n                Dim m = t.GetMethod(\"PatchBehaviors\")\r\n                \r\n                'Get json as string\r\n                Dim jsonStream As Stream = files.GetStream(BEHAV_FILE)\r\n                jsonStream.Position = 0\r\n                Dim srJson as new StreamReader(jsonStream)\r\n                Dim json As String = srJson.ReadToEnd()\r\n                srJson.Close()\r\n                \r\n                'Execute patch\r\n                m.Invoke(Nothing, {json, rommgr})\r\n            End If\r\n        End If\r\n        \r\n        'Set 3d coins enabled flag to true\r\n        rommgr.RomConfig.NPCConfig.Enabled3DCoins = True\r\n    End Sub\r\n\r\nEnd Module\r\n",
       "Type": "VisualBasic",
       "Description": "",
       "References": [],
-      "ID": "B6BA6F2E418D0C98223497A52B092DC7"
+      "ID": "B6BA6F2E418D0C98223497A52B092DC7",
+      "AllowRevert": false
     },
     {
       "Name": "Remove 3D Coins",
@@ -15,10 +16,29 @@
       "Type": "VisualBasic",
       "Description": "",
       "References": [],
-      "ID": "C3A9088532A8AD7A6EB4F3B2F632ADF1"
+      "ID": "C3A9088532A8AD7A6EB4F3B2F632ADF1",
+      "AllowRevert": false
+    },
+    {
+      "Name": "Change coin spinning speed",
+      "Script": "21A732: [8, \"Speed (DEFAULT: 0A)\", hex]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": "EC1ACAFD9FE515F76AF994A6D7F98E1B",
+      "AllowRevert": true
+    },
+    {
+      "Name": "Lakitu Fix",
+      "Script": "21E758: 11 01 20 41 27 26",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": "74C937D94B9D8DD90749E412B4FB5177",
+      "AllowRevert": true
     }
   ],
-  "Version": "1.0.0.0",
+  "Version": "1.1.0.0",
   "MinVersion": "1.10.0.0",
   "MaxVersion": "0.0.0.0",
   "Description": "Apply/Remove Kaze's 3D Coins patch.\r\nThis tweak is requied to import custom 3D coins via Model Importer.",
