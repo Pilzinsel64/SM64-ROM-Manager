@@ -1,9 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>LIBMIO0</AssemblyTitle>
     <Product>Quad64</Product>
     <Copyright>Copyright © David 2018</Copyright>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
     <DefineConstants>TRACE</DefineConstants>
