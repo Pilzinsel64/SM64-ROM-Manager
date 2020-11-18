@@ -1,10 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>N64Graphics</AssemblyTitle>
     <Company>Pilzinsel64</Company>
     <Product>N64Graphics</Product>
     <Copyright>Copyright © Pilzinsel64 2017 - 2018</Copyright>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
     <DefineConstants>TRACE</DefineConstants>
