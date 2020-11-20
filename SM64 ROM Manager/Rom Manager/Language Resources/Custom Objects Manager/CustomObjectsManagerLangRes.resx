@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Button_SetupScript" xml:space="preserve">
+    <value>Setup Script</value>
+  </data>
+  <data name="MsgBox_ExportSingleFiles" xml:space="preserve">
+    <value>You are going to export multiple custom objects. Do you want to save all objects to one single file (Yes) or do you want to save every single object to one file (No)?</value>
+  </data>
+  <data name="MsgBox_Export_Titel" xml:space="preserve">
+    <value>Export Custom Objects</value>
+  </data>
   <data name="MsgBox_ObjectsNeedGlobalBehavBank" xml:space="preserve">
-    <value>You are going to import custom object(s) that need the Global Behavior Bank activated. Right now it is disabled. Do you want to enable it now and continue importing the custom objects?</value>
+    <value>This object needs the Global Behavior Bank activated. Should it get activated?&lt;br/&gt;&lt;br/&gt;Note:&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM.</value>
   </data>
   <data name="MsgBox_ObjectsNeedGlobalBehavBank_Title" xml:space="preserve">
     <value>Global Behavior Bank requied</value>
+  </data>
+  <data name="MsgBox_RemoveReferences" xml:space="preserve">
+    <value>The object you want to remove has some references. Do you also want to remove all referenced Behaviors, Custom ASM Codes, Custom Models and Custom Objects?</value>
+  </data>
+  <data name="MsgBox_Remove_Titel" xml:space="preserve">
+    <value>Delete Custom Object</value>
+  </data>
+  <data name="NewObjectTitel" xml:space="preserve">
+    <value>New Object</value>
   </data>
 </root>
