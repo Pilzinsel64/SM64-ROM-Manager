@@ -279,6 +279,176 @@
             Contains a collection of KeyboardLayout objects.
             </summary>
         </member>
+        <member name="T:DevComponents.DotNetBar.Keyboard.KeyboardControl">
+            <summary>
+            Represents virtual keyboard control.
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.#ctor">
+            <summary>
+            Creates a new VirtualKeyboard control.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.Keyboard">
+            <summary>
+            Gets or sets the Keyboard object that describes the VirtualKeyboard.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.DefaultWidth">
+            <summary>
+            Default width for the keyboard in pixels.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.DefaultHeight">
+            <summary>
+            Default height for the keyboard in pixels.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.ColorTable">
+            <summary>
+            Gets or set the ColorTable used to draw the keyboard.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.Renderer">
+            <summary>
+            Gets or sets the Renderer used to render the keyboard.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.IsTopBarVisible">
+            <summary>
+            Gets or sets a value indicating if the top bar of the keyboard is visible.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.CaptionHeight">
+            <summary>
+            Indicates the height of the keyboard caption which hosts the close button.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.TouchEnabled">
+            <summary>
+            Indicates whether touch support is enabled when provided by hardware.
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnTouchEnabledChanged(System.Boolean,System.Boolean)">
+            <summary>
+            Called when TouchEnabled property has changed.
+            </summary>
+            <param name="oldValue">Old property value</param>
+            <param name="newValue">New property value</param>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.HitTest(System.Drawing.Point)">
+            <summary>
+            Returns the Key at given location. Location expected is in control coordinates.
+            </summary>
+            <param name="location">Location is control coordinates.</param>
+            <returns>Key if there is a key at given location or null/nothing if no key exists at given location.</returns>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.AttachTo(System.Windows.Forms.Control)">
+            <summary>
+            Attaches the Keyboard to the specified control. The keyboard will automatically appear when the control receives input focus.
+            </summary>
+            <param name="control">The control to which the Keyboard will be attached.</param>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.DetachFrom(System.Windows.Forms.Control)">
+            <summary>
+            Detaches the Keyboard from the specified control.
+            </summary>
+            <param name="control">The control from which the Keyboard will be detached.</param>
+        </member>
+        <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.KeyboardClosing">
+            <summary>
+            Occurs before the keyboard is closed and allows canceling of keyboard closing.
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnKeyboardClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Raises KeyboardClosing event.
+            </summary>
+            <param name="e">Provides event arguments.</param>
+        </member>
+        <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.KeyboardClosed">
+            <summary>
+            Occurs after keyboard is closed.
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnKeyboardClosed(System.EventArgs)">
+            <summary>
+            Raises KeyboardClosed event.
+            </summary>
+            <param name="e">Provides event arguments.</param>
+        </member>
+        <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.SendingKey">
+            <summary>
+            Occurs before the key pressed on keyboard is sent to target control and allows cancellation of the message
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnSendingKey(DevComponents.DotNetBar.Keyboard.KeyboardKeyCancelEventArgs)">
+            <summary>
+            Raises SendingKey event.
+            </summary>
+            <param name="e">Provides event arguments.</param>
+        </member>
+        <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.KeySent">
+            <summary>
+            Occurs after the key is sent to target control.
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnKeySent(DevComponents.DotNetBar.Keyboard.KeyboardKeyEventArgs)">
+            <summary>
+            Raises KeySent event.
+            </summary>
+            <param name="e">Provides event arguments.</param>
+        </member>
+        <member name="T:DevComponents.DotNetBar.Keyboard.KeyEventHandler">
+            <summary>
+            Defines delegate for key-related events.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:DevComponents.DotNetBar.Keyboard.KeyboardKeyEventArgs">
+            <summary>
+            Provides data for key related events.
+            </summary>
+        </member>
+        <member name="F:DevComponents.DotNetBar.Keyboard.KeyboardKeyEventArgs.Key">
+            <summary>
+            Gets the key being pressed. The format of this information
+            must confirm to the description for the SendKeys.Send function. For more details, see:
+            http://msdn.microsoft.com/en-us/library/system.windows.forms.sendkeys.aspx
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardKeyEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the KeyboardKeyEventArgs class.
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="T:DevComponents.DotNetBar.Keyboard.KeyCancelEventHandler">
+            <summary>
+            Defines delegate for key-related events.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:DevComponents.DotNetBar.Keyboard.KeyboardKeyCancelEventArgs">
+            <summary>
+            Provides data for key related events.
+            </summary>
+        </member>
+        <member name="F:DevComponents.DotNetBar.Keyboard.KeyboardKeyCancelEventArgs.Key">
+            <summary>
+            Gets the key being pressed. The format of this information
+            must confirm to the description for the SendKeys.Send function. For more details, see:
+            http://msdn.microsoft.com/en-us/library/system.windows.forms.sendkeys.aspx
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardKeyCancelEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the KeyCancelEventArgs class.
+            </summary>
+            <param name="key"></param>
+        </member>
         <member name="M:DevComponents.DotNetBar.Keyboard.PopupVirtualKeyboard.#ctor">
             <summary>
             Creates a new floating virtual keyboard.
@@ -724,176 +894,6 @@
             <summary>
             Gets or sets the keyboard style.
             </summary>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Keyboard.KeyboardControl">
-            <summary>
-            Represents virtual keyboard control.
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.#ctor">
-            <summary>
-            Creates a new VirtualKeyboard control.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.Keyboard">
-            <summary>
-            Gets or sets the Keyboard object that describes the VirtualKeyboard.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.DefaultWidth">
-            <summary>
-            Default width for the keyboard in pixels.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.DefaultHeight">
-            <summary>
-            Default height for the keyboard in pixels.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.ColorTable">
-            <summary>
-            Gets or set the ColorTable used to draw the keyboard.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.Renderer">
-            <summary>
-            Gets or sets the Renderer used to render the keyboard.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.IsTopBarVisible">
-            <summary>
-            Gets or sets a value indicating if the top bar of the keyboard is visible.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.CaptionHeight">
-            <summary>
-            Indicates the height of the keyboard caption which hosts the close button.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.TouchEnabled">
-            <summary>
-            Indicates whether touch support is enabled when provided by hardware.
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnTouchEnabledChanged(System.Boolean,System.Boolean)">
-            <summary>
-            Called when TouchEnabled property has changed.
-            </summary>
-            <param name="oldValue">Old property value</param>
-            <param name="newValue">New property value</param>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.HitTest(System.Drawing.Point)">
-            <summary>
-            Returns the Key at given location. Location expected is in control coordinates.
-            </summary>
-            <param name="location">Location is control coordinates.</param>
-            <returns>Key if there is a key at given location or null/nothing if no key exists at given location.</returns>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.AttachTo(System.Windows.Forms.Control)">
-            <summary>
-            Attaches the Keyboard to the specified control. The keyboard will automatically appear when the control receives input focus.
-            </summary>
-            <param name="control">The control to which the Keyboard will be attached.</param>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.DetachFrom(System.Windows.Forms.Control)">
-            <summary>
-            Detaches the Keyboard from the specified control.
-            </summary>
-            <param name="control">The control from which the Keyboard will be detached.</param>
-        </member>
-        <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.KeyboardClosing">
-            <summary>
-            Occurs before the keyboard is closed and allows canceling of keyboard closing.
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnKeyboardClosing(System.ComponentModel.CancelEventArgs)">
-            <summary>
-            Raises KeyboardClosing event.
-            </summary>
-            <param name="e">Provides event arguments.</param>
-        </member>
-        <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.KeyboardClosed">
-            <summary>
-            Occurs after keyboard is closed.
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnKeyboardClosed(System.EventArgs)">
-            <summary>
-            Raises KeyboardClosed event.
-            </summary>
-            <param name="e">Provides event arguments.</param>
-        </member>
-        <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.SendingKey">
-            <summary>
-            Occurs before the key pressed on keyboard is sent to target control and allows cancellation of the message
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnSendingKey(DevComponents.DotNetBar.Keyboard.KeyboardKeyCancelEventArgs)">
-            <summary>
-            Raises SendingKey event.
-            </summary>
-            <param name="e">Provides event arguments.</param>
-        </member>
-        <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.KeySent">
-            <summary>
-            Occurs after the key is sent to target control.
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnKeySent(DevComponents.DotNetBar.Keyboard.KeyboardKeyEventArgs)">
-            <summary>
-            Raises KeySent event.
-            </summary>
-            <param name="e">Provides event arguments.</param>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Keyboard.KeyEventHandler">
-            <summary>
-            Defines delegate for key-related events.
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Keyboard.KeyboardKeyEventArgs">
-            <summary>
-            Provides data for key related events.
-            </summary>
-        </member>
-        <member name="F:DevComponents.DotNetBar.Keyboard.KeyboardKeyEventArgs.Key">
-            <summary>
-            Gets the key being pressed. The format of this information
-            must confirm to the description for the SendKeys.Send function. For more details, see:
-            http://msdn.microsoft.com/en-us/library/system.windows.forms.sendkeys.aspx
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardKeyEventArgs.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the KeyboardKeyEventArgs class.
-            </summary>
-            <param name="key"></param>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Keyboard.KeyCancelEventHandler">
-            <summary>
-            Defines delegate for key-related events.
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Keyboard.KeyboardKeyCancelEventArgs">
-            <summary>
-            Provides data for key related events.
-            </summary>
-        </member>
-        <member name="F:DevComponents.DotNetBar.Keyboard.KeyboardKeyCancelEventArgs.Key">
-            <summary>
-            Gets the key being pressed. The format of this information
-            must confirm to the description for the SendKeys.Send function. For more details, see:
-            http://msdn.microsoft.com/en-us/library/system.windows.forms.sendkeys.aspx
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardKeyCancelEventArgs.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the KeyCancelEventArgs class.
-            </summary>
-            <param name="key"></param>
         </member>
         <member name="T:DevComponents.DotNetBar.Keyboard.VirtualKeyboardColorTable">
             <summary>

@@ -3666,7 +3666,7 @@
             Gets item2 comparison element
             </summary>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "P:DevComponents.DotNetBar.Schedule.CalendarItemEventArgs.Result" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "P:DevComponents.DotNetBar.Schedule.CalendarItemEventArgs.Result" -->
         <member name="T:DevComponents.DotNetBar.Schedule.SelectedOwnerChangedEventArgs">
             <summary>
             SelectedOwnerChangedEventArgs
@@ -5303,8 +5303,8 @@
             Gets or sets the current Week, same Year, end format label
             </summary>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentWeekSameMonthYearStartLabel" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentWeekSameMonthYearEndLabel" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentWeekSameMonthYearStartLabel" -->
+        <!-- Badly formed XML comment ignored for member "P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentWeekSameMonthYearEndLabel" -->
         <member name="P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentMonthStartLabel">
             <summary>
             Gets or sets the current Month, start format label
@@ -5350,8 +5350,8 @@
             Gets or sets the current TimeLine Day, same Year, end format label
             </summary>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentTimeLineDaySameMonthYearStartLabel" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentTimeLineDaySameMonthYearEndLabel" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentTimeLineDaySameMonthYearStartLabel" -->
+        <!-- Badly formed XML comment ignored for member "P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentTimeLineDaySameMonthYearEndLabel" -->
         <member name="P:DevComponents.DotNetBar.Schedule.DateNavigator.CurrentTimeLineYearStartLabel">
             <summary>
             Gets or sets the current TimeLine Year, start format label
@@ -13145,7 +13145,7 @@
             <param name="startDate">Start date for generation.</param>
             <param name="endDate">End date for generation.</param>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:DevComponents.Schedule.Model.IRecurrenceGenerator.GenerateYearlyRecurrence(DevComponents.Schedule.Model.AppointmentSubsetCollection,DevComponents.Schedule.Model.AppointmentRecurrence,System.DateTime,System.DateTime)" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "M:DevComponents.Schedule.Model.IRecurrenceGenerator.GenerateYearlyRecurrence(DevComponents.Schedule.Model.AppointmentSubsetCollection,DevComponents.Schedule.Model.AppointmentRecurrence,System.DateTime,System.DateTime)" -->
         <member name="T:DevComponents.Schedule.Model.Reminder">
             <summary>
             Represents an appointment reminder.

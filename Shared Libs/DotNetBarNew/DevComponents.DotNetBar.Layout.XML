@@ -917,7 +917,7 @@
             Represents the method that will handle the ResolveImage event.
             </summary>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "E:DevComponents.DotNetBar.Layout.TextMarkup.MarkupSettings.ResolveImage" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "E:DevComponents.DotNetBar.Layout.TextMarkup.MarkupSettings.ResolveImage" -->
         <member name="T:DevComponents.DotNetBar.Layout.TextMarkup.HyperlinkStyle">
             <summary>
             Defines the text-markup hyperlink appearance style.
@@ -963,7 +963,7 @@
             Gets whether style has been changed from its default state.
             </summary>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "T:DevComponents.DotNetBar.Layout.TextMarkup.ResolveImageEventArgs" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "T:DevComponents.DotNetBar.Layout.TextMarkup.ResolveImageEventArgs" -->
         <member name="F:DevComponents.DotNetBar.Layout.TextMarkup.ResolveImageEventArgs.Handled">
             <summary>
             Indicates that event has been handled and that ResolvedImage should be used.
@@ -1008,104 +1008,6 @@
         <member name="T:DevComponents.DotNetBar.Layout.DotNetBarLayoutResourcesAttribute">
             <summary>
             Summary description for DotNetBarResourcesAttribute.
-            </summary>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Layout.LayoutLabelItem">
-            <summary>
-            Represents the label item.
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Layout.Symbols.GetFontAwesome(System.Single)">
-            <summary>
-            Returns FontAwesome at specific size.
-            </summary>
-            <param name="fontSize">Font size in points</param>
-            <returns>Font in desired size.</returns>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.Symbols.FontAwesome">
-            <summary>
-            Gets FontAwesome at default size.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.Symbols.FontAwesomeFamily">
-            <summary>
-            Returns FontAwesome Family.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.Symbols.FontAwesomeDefaultSize">
-            <summary>
-            Gets the default size for the FontAwesome font size in points.
-            </summary>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Layout.BarUtilities">
-            <summary>
-            Represents class with static functions that provide commonly used utility functions when working with
-            Bar objects and items hosted by Bar object.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.UseGenericDefaultStringFormat">
-            <summary>
-            Gets or sets whether StringFormat internally used by all DotNetBar controls to render text is GenericDefault. Default value is false
-            which indicates that GenericTypographic is used.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.AntiAliasTextRenderingHint">
-            <summary>
-            Gets or sets the anti-alias text rendering hint that will be used to render text on controls that have AntiAlias property set to true.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.AlwaysGenerateAccessibilityFocusEvent">
-            <summary>
-            Gets or sets whether items always generate the Focus accessibility event when mouse enters the item. Default value is false which indicates
-            that focus event will be raised only when item is on menu bar.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.AutoRemoveMessageFilter">
-            <summary>
-            Gets or sets whether Application Message Filter that is registered by popup controls
-            is automatically unregistered when last control is disposed. Default value is false and
-            in most cases should not be changed.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.TextMarkupCultureSpecificPadding">
-            <summary>
-            Get or sets the text-markup padding for text measurement when running on Japanese version of Windows.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.DisposeItemImages">
-            <summary>
-            Gets or sets whether Image and Icon resources assigned to items and controls are automatically disposed when
-            control or item is disposed. Default value is false.
-            </summary>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Layout.BarUtilities.DisposeImage(System.Drawing.Image@)">
-            <summary>
-            Disposes image reference and sets it to null.
-            </summary>
-            <param name="image">Reference to image to dispose.</param>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Layout.BarUtilities.DisposeImage(System.Drawing.Icon@)">
-            <summary>
-            Disposes image reference and sets it to null.
-            </summary>
-            <param name="image">Reference to image to dispose.</param>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Layout.BarUtilities.InvokeDelayed(System.Windows.Forms.MethodInvoker)">
-            <summary>
-            Invokes the method asynchronously using the WinForms Timer.
-            </summary>
-            <param name="method">Method to invoke.</param>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Layout.BarUtilities.InvokeDelayed(System.Windows.Forms.MethodInvoker,System.Int32)">
-            <summary>
-            Invokes the method asynchronously using the WinForms Timer.
-            </summary>
-            <param name="method">Method to invoke.</param>
-            <param name="delayInterval">Time in milliseconds after which method is invoked.</param>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Layout.DisplayHelp">
-            <summary>
-            Summary description for Display.
             </summary>
         </member>
         <member name="M:DevComponents.DotNetBar.Layout.DoubleHelpers.AreClose(System.Double,System.Double)">
@@ -2422,6 +2324,11 @@
             <param name="count"></param>
             <param name="comparer"></param>
         </member>
+        <member name="T:DevComponents.DotNetBar.Layout.LayoutLabelItem">
+            <summary>
+            Represents the label item.
+            </summary>
+        </member>
         <member name="T:DevComponents.DotNetBar.Layout.LayoutSpacerItem">
             <summary>
             Represents the item used as empty spacer element.
@@ -2562,6 +2469,99 @@
         <member name="E:DevComponents.DotNetBar.Layout.SimpleStyle.PropertyChanged">
             <summary>
             Occurs when property on object has changed.
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Layout.Symbols.GetFontAwesome(System.Single)">
+            <summary>
+            Returns FontAwesome at specific size.
+            </summary>
+            <param name="fontSize">Font size in points</param>
+            <returns>Font in desired size.</returns>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.Symbols.FontAwesome">
+            <summary>
+            Gets FontAwesome at default size.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.Symbols.FontAwesomeFamily">
+            <summary>
+            Returns FontAwesome Family.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.Symbols.FontAwesomeDefaultSize">
+            <summary>
+            Gets the default size for the FontAwesome font size in points.
+            </summary>
+        </member>
+        <member name="T:DevComponents.DotNetBar.Layout.BarUtilities">
+            <summary>
+            Represents class with static functions that provide commonly used utility functions when working with
+            Bar objects and items hosted by Bar object.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.UseGenericDefaultStringFormat">
+            <summary>
+            Gets or sets whether StringFormat internally used by all DotNetBar controls to render text is GenericDefault. Default value is false
+            which indicates that GenericTypographic is used.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.AntiAliasTextRenderingHint">
+            <summary>
+            Gets or sets the anti-alias text rendering hint that will be used to render text on controls that have AntiAlias property set to true.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.AlwaysGenerateAccessibilityFocusEvent">
+            <summary>
+            Gets or sets whether items always generate the Focus accessibility event when mouse enters the item. Default value is false which indicates
+            that focus event will be raised only when item is on menu bar.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.AutoRemoveMessageFilter">
+            <summary>
+            Gets or sets whether Application Message Filter that is registered by popup controls
+            is automatically unregistered when last control is disposed. Default value is false and
+            in most cases should not be changed.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.TextMarkupCultureSpecificPadding">
+            <summary>
+            Get or sets the text-markup padding for text measurement when running on Japanese version of Windows.
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Layout.BarUtilities.DisposeItemImages">
+            <summary>
+            Gets or sets whether Image and Icon resources assigned to items and controls are automatically disposed when
+            control or item is disposed. Default value is false.
+            </summary>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Layout.BarUtilities.DisposeImage(System.Drawing.Image@)">
+            <summary>
+            Disposes image reference and sets it to null.
+            </summary>
+            <param name="image">Reference to image to dispose.</param>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Layout.BarUtilities.DisposeImage(System.Drawing.Icon@)">
+            <summary>
+            Disposes image reference and sets it to null.
+            </summary>
+            <param name="image">Reference to image to dispose.</param>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Layout.BarUtilities.InvokeDelayed(System.Windows.Forms.MethodInvoker)">
+            <summary>
+            Invokes the method asynchronously using the WinForms Timer.
+            </summary>
+            <param name="method">Method to invoke.</param>
+        </member>
+        <member name="M:DevComponents.DotNetBar.Layout.BarUtilities.InvokeDelayed(System.Windows.Forms.MethodInvoker,System.Int32)">
+            <summary>
+            Invokes the method asynchronously using the WinForms Timer.
+            </summary>
+            <param name="method">Method to invoke.</param>
+            <param name="delayInterval">Time in milliseconds after which method is invoked.</param>
+        </member>
+        <member name="T:DevComponents.DotNetBar.Layout.DisplayHelp">
+            <summary>
+            Summary description for Display.
             </summary>
         </member>
         <member name="T:DevComponents.DotNetBar.Layout.Thickness">

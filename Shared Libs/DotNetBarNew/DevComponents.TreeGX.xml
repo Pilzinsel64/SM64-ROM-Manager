@@ -2756,7 +2756,7 @@
         <member name="P:DevComponents.Tree.Design.TreeGXDesigner.SelectionRules">
             <summary>Specifies selection rules for designer.</summary>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:DevComponents.Tree.Design.TreeGXDesigner.OnControlAdded(System.Windows.Forms.ControlEventArgs)" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "M:DevComponents.Tree.Design.TreeGXDesigner.OnControlAdded(System.Windows.Forms.ControlEventArgs)" -->
         <member name="M:DevComponents.Tree.Design.TreeGXDesigner.OnNodeSelected(DevComponents.Tree.Node)">
             <summary>
             Called after node has been selected by designer as response to mouse action
@@ -4575,8 +4575,8 @@
             <param name="text">Text to paint.</param>
             <param name="defaultFont">Default font if no font by style is specified.</param>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:DevComponents.Tree.ElementStyleDisplay.PaintText(DevComponents.Tree.ElementStyleDisplayInfo,System.String,System.Drawing.Font,System.Boolean)" ignoriert -->
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:DevComponents.Tree.ElementStyleDisplay.PaintText(DevComponents.Tree.ElementStyleDisplayInfo,System.String,System.Drawing.Font,System.Boolean,DevComponents.Tree.eTextFormat)" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "M:DevComponents.Tree.ElementStyleDisplay.PaintText(DevComponents.Tree.ElementStyleDisplayInfo,System.String,System.Drawing.Font,System.Boolean)" -->
+        <!-- Badly formed XML comment ignored for member "M:DevComponents.Tree.ElementStyleDisplay.PaintText(DevComponents.Tree.ElementStyleDisplayInfo,System.String,System.Drawing.Font,System.Boolean,DevComponents.Tree.eTextFormat)" -->
         <member name="M:DevComponents.Tree.ElementStyleDisplay.GetStyleRegion(DevComponents.Tree.ElementStyleDisplayInfo)">
             <summary>Returns new Region object for given ElementStyle.</summary>
             <returns>New instance of Region object.</returns>
@@ -9165,7 +9165,7 @@
             <param name="tree">TreeGX to save</param>
             <param name="writer">XmlWriter to write nodes to</param>
         </member>
-        <!-- Ungültiger XML-Kommentar wurde für den Member "M:DevComponents.Tree.TreeSerializer.Save(DevComponents.Tree.TreeGX)" ignoriert -->
+        <!-- Badly formed XML comment ignored for member "M:DevComponents.Tree.TreeSerializer.Save(DevComponents.Tree.TreeGX)" -->
         <member name="M:DevComponents.Tree.TreeSerializer.Save(DevComponents.Tree.TreeGX,System.Xml.XmlDocument)">
             <summary>
             Saves TreeGX to an existing XmlDocument. New node TreeGX is created in document and Nodes are serialized into it.
