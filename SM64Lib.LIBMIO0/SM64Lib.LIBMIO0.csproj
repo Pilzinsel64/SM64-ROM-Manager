@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <AssemblyTitle>LIBMIO0</AssemblyTitle>
     <Product>Quad64</Product>
     <Copyright>Copyright © David 2018</Copyright>

@@ -5,7 +5,7 @@
     <RootNamespace>SM64_ROM_Manager.ModelImporterGUI</RootNamespace>
     <AssemblyName>SM64 Model Importer</AssemblyName>
     <MyType>WindowsForms</MyType>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
     <AssemblyTitle>SM64 Model Importer</AssemblyTitle>

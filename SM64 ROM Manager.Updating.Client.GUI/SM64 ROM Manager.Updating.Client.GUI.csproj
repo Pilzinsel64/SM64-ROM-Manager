@@ -3,7 +3,7 @@
     <StartupObject />
     <RootNamespace>SM64_ROM_Manager.Updating.Client.GUI</RootNamespace>
     <MyType>Windows</MyType>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
