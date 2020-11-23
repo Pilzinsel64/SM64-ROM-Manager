@@ -1239,7 +1239,6 @@
   <ItemGroup>
     <PackageReference Include="Ben.Demystifier" Version="0.1.6" />
     <PackageReference Include="FCTB" Version="2.16.24" />
-    <PackageReference Include="ini-parser" Version="2.5.2" />
     <PackageReference Include="Microsoft.Bcl" Version="1.1.10" />
     <PackageReference Include="Microsoft.Bcl.Async" Version="1.0.168" />
     <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.21" />
