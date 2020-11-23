@@ -45,6 +45,7 @@ using Color = System.Drawing.Color;
 using Bitmap = System.Drawing.Bitmap;
 using SM64Lib.Objects.ModelBanks;
 using SM64Lib.Objects.ObjectBanks;
+using OpenTK.Windowing.Common;
 
 namespace SM64_ROM_Manager.LevelEditor
 {

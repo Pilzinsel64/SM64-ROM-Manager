@@ -15,6 +15,7 @@ using Image = System.Drawing.Image;
 using Bitmap = System.Drawing.Bitmap;
 using System.Collections.Generic;
 using System.Linq;
+using OpenTK.Mathematics;
 
 namespace SM64_ROM_Manager.LevelEditor
 {

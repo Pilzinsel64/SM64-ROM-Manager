@@ -125,6 +125,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4" />
+    <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
     <PackageReference Include="System.DirectoryServices" Version="5.0.0" />
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
