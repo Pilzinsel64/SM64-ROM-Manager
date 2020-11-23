@@ -21,6 +21,6 @@
     <ProjectReference Include="..\SM64Lib\SM64Lib.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="EPPlus" Version="5.3.2" />
+    <PackageReference Include="EPPlus" Version="5.4.2" />
   </ItemGroup>
 </Project>

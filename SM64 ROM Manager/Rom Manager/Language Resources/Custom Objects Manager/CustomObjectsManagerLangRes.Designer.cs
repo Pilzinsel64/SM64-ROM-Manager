@@ -19,7 +19,7 @@ namespace SM64_ROM_Manager.My.Resources {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class CustomObjectsManagerLangRes {
@@ -39,8 +39,8 @@ namespace SM64_ROM_Manager.My.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.RomManager.Language_Resources.Custom_Objects_Manager.CustomObjec" +
-                            "tsManagerLangRes", typeof(CustomObjectsManagerLangRes).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom_Manager.Language_Resources.Custom_Objects_Manager.CustomObje" +
+                            "ctsManagerLangRes", typeof(CustomObjectsManagerLangRes).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -62,7 +62,34 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die You are going to import custom object(s) that need the Global Behavior Bank activated. Right now it is disabled. Do you want to enable it now and continue importing the custom objects? ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Setup Script ähnelt.
+        /// </summary>
+        internal static string Button_SetupScript {
+            get {
+                return ResourceManager.GetString("Button_SetupScript", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Export Custom Objects ähnelt.
+        /// </summary>
+        internal static string MsgBox_Export_Titel {
+            get {
+                return ResourceManager.GetString("MsgBox_Export_Titel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die You are going to export multiple custom objects. Do you want to save all objects to one single file (Yes) or do you want to save every single object to one file (No)? ähnelt.
+        /// </summary>
+        internal static string MsgBox_ExportSingleFiles {
+            get {
+                return ResourceManager.GetString("MsgBox_ExportSingleFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die This object needs the Global Behavior Bank activated. Should it get activated?&lt;br/&gt;&lt;br/&gt;Note:&lt;br/&gt;- If you enable it, all existing behaviors will be copied to a new Segmented Bank replacing the vanilla one.&lt;br/&gt;- All existing behaviors that get copied will not be re-aligned while saving the ROM. ähnelt.
         /// </summary>
         internal static string MsgBox_ObjectsNeedGlobalBehavBank {
             get {
@@ -76,6 +103,33 @@ namespace SM64_ROM_Manager.My.Resources {
         internal static string MsgBox_ObjectsNeedGlobalBehavBank_Title {
             get {
                 return ResourceManager.GetString("MsgBox_ObjectsNeedGlobalBehavBank_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Delete Custom Object ähnelt.
+        /// </summary>
+        internal static string MsgBox_Remove_Titel {
+            get {
+                return ResourceManager.GetString("MsgBox_Remove_Titel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The object you want to remove has some references. Do you also want to remove all referenced Behaviors, Custom ASM Codes, Custom Models and Custom Objects? ähnelt.
+        /// </summary>
+        internal static string MsgBox_RemoveReferences {
+            get {
+                return ResourceManager.GetString("MsgBox_RemoveReferences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die New Object ähnelt.
+        /// </summary>
+        internal static string NewObjectTitel {
+            get {
+                return ResourceManager.GetString("NewObjectTitel", resourceCulture);
             }
         }
     }

@@ -105,12 +105,12 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Discord.Net" Version="2.2.0" />
-    <PackageReference Include="Markdig" Version="0.21.1" />
-    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.1" />
+    <PackageReference Include="Markdig" Version="0.22.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="System.Collections.Immutable" Version="1.7.1" />
-    <PackageReference Include="System.Interactive.Async" Version="4.1.1" />
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.7.1" />
+    <PackageReference Include="System.Collections.Immutable" Version="5.0.0" />
+    <PackageReference Include="System.Interactive.Async" Version="5.0.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
     <PackageReference Include="WebDav.Client" Version="2.7.0" />
     <PackageReference Include="Z.ExtensionMethods.WithNamespace" Version="2.1.1" />
   </ItemGroup>
