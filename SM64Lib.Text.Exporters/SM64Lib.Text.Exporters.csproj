@@ -13,11 +13,6 @@
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Security" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SM64Lib\SM64Lib.csproj" />
   </ItemGroup>
   <ItemGroup>
