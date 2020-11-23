@@ -20,8 +20,8 @@
     <Company>Pilzinsel64</Company>
     <Product>SM64 ROM Manager</Product>
     <Copyright>Copyright © Pilzinsel64 2017 - 2020</Copyright>
-    <AssemblyVersion>1.11.5.0</AssemblyVersion>
-    <FileVersion>1.11.5.0</FileVersion>
+    <AssemblyVersion>1.11.6.0</AssemblyVersion>
+    <FileVersion>1.11.6.0</FileVersion>
     <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
     <WarningLevel>1</WarningLevel>
     <DefineTrace>true</DefineTrace>
@@ -99,7 +99,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>false</GenerateManifests>
-    <Version>1.11.5.0</Version>
+    <Version>1.11.6.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
@@ -124,7 +124,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.DirectoryServices" Version="4.7.0" />
+    <PackageReference Include="System.DirectoryServices" Version="5.0.0" />
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
@@ -546,12 +546,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LangResCoinsManager.resx</DependentUpon>
     </Compile>
-    <Compile Update="Rom Manager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.de.Designer.cs">
       <DependentUpon>CustomObjectsManagerLangRes.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Update="Rom Manager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.Designer.cs">
+    <Compile Update="Rom Manager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomObjectsManagerLangRes.resx</DependentUpon>
@@ -975,12 +975,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LangResCoinsManager.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.de.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.de.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\Language Resources\Custom Object Manager\CustomObjectsManagerLangRes.resx">
+    <EmbeddedResource Update="Rom Manager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
@@ -1248,11 +1248,11 @@
     <PackageReference Include="Microsoft.WindowsAPICodePack-Core" Version="1.1.0.2" />
     <PackageReference Include="Microsoft.WindowsAPICodePack-Shell" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="OpenTK" Version="3.2.0" />
+    <PackageReference Include="OpenTK" Version="3.3.1" />
     <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
     <PackageReference Include="SharpDX.DirectInput" Version="4.2.0" />
-    <PackageReference Include="System.Reflection.Metadata" Version="1.8.1" />
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.7.1" />
+    <PackageReference Include="System.Reflection.Metadata" Version="5.0.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
     <PackageReference Include="System.Runtime.WindowsRuntime.UI.Xaml" Version="4.7.0" />
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
@@ -1268,8 +1268,6 @@
     <Compile Remove="obj\x86\RelMono\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Remove="obj\x86\RelMono\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Remove="obj\x86\RelMono\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Remove="Rom Manager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.de.Designer.cs" />
-    <Compile Remove="Rom Manager\Language Resources\Custom Objects Manager\CustomObjectsManagerLangRes.Designer.cs" />
     <Compile Remove="Rom Manager\GUI\Tools\Custom Bank Manager\AddressListEditor.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
