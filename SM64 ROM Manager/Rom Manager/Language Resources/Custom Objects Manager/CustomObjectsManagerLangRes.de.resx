@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Button_SetupScript" xml:space="preserve">
+    <value>Skript Bearbeiten</value>
+  </data>
+  <data name="MsgBox_ExportSingleFiles" xml:space="preserve">
+    <value>Du versuchst mehrere Objekte gleichzeitung zu exportieren. Möchtest du jedes Objekt in eine einzelne Datei speichern (Ja) oder alle Objekte zusammen in eine Datei (Nein)?</value>
+  </data>
+  <data name="MsgBox_Export_Titel" xml:space="preserve">
+    <value>Objekte exportieren</value>
+  </data>
   <data name="MsgBox_ObjectsNeedGlobalBehavBank" xml:space="preserve">
-    <value>Du versuchts gerade Objekte zu importieren, die eine Globale Verhaltens-Bank benötigen, welche zurzeit deaktiviert ist. Möchtest Du diese aktivieren und die Objekte importieren?</value>
+    <value>Dieses Objekt benötigt die Globale Verhaltens-Bank. Möchtest Du sie aktivieren?&lt;br/&gt;&lt;br/&gt;Hinweis:&lt;br/&gt;- Wenn Du sie aktivierst, werden alle existierenden Verhalten werden in eine neue Segmented-Bank kopiert, welche die originale ersetzt.&lt;br/&gt;- Alle existierenden Verhalten werden beim Speichern der ROM nicht neu geordnet.</value>
   </data>
   <data name="MsgBox_ObjectsNeedGlobalBehavBank_Title" xml:space="preserve">
     <value>Globale Verhaltens-Bank benötigt</value>
+  </data>
+  <data name="MsgBox_RemoveReferences" xml:space="preserve">
+    <value>Das Objekt, welches Du löschen möchtest, hat noch Referenzen. Möchtest du alle referenzierten Verthalten, ASM-Codes, Modelle und Objekte gleich mit löschen?</value>
+  </data>
+  <data name="MsgBox_Remove_Titel" xml:space="preserve">
+    <value>Objekte löschen</value>
+  </data>
+  <data name="NewObjectTitel" xml:space="preserve">
+    <value>Neues Objekt</value>
   </data>
 </root>
