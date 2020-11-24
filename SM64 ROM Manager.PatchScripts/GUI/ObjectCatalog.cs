@@ -13,20 +13,30 @@ namespace SM64_ROM_Manager.PatchScripts
 {
     public partial class ObjectCatalog
     {
-        public ObjectCatalog()
+        public ObjectCatalog(BindingFlags methodBindingFlags, Assembly[] assemblies, bool selectionMode, MemberTypes selectMemberTypes)
         {
+            this.selectMemberTypes = selectMemberTypes;
+            myBindingFlags = methodBindingFlags;
+            this.assemblies = assemblies;
+            this.selectionMode = selectionMode;
             base.Shown += ObjectCatalog_Shown;
             InitializeComponent();
             base.UpdateAmbientColors();
+            panel1.Visible = selectionMode;
             CreateImageList();
         }
 
-        private readonly BindingFlags myBindingFlags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public;
+        private readonly MemberTypes selectMemberTypes;
+        private readonly bool selectionMode;
+        private readonly Assembly[] assemblies;
+        private readonly BindingFlags myBindingFlags;
         private readonly string[] blackMethodNameStarts = new[] { "get_", "set_", "add_", "remove_" };
         private readonly List<SerializedAssemblyMember> AsmXmls = new List<SerializedAssemblyMember>();
 
         private Dictionary<string, Node> searchTypes_knownNamespaces = new Dictionary<string, Node>();
         private Dictionary<Type, Node> searchTypes_knownTypes = new Dictionary<Type, Node>();
+
+        public MemberInfo CurrentMemberInfo { get; private set; }
 
         private void CreateImageList()
         {
@@ -41,10 +51,9 @@ namespace SM64_ROM_Manager.PatchScripts
 
         private void LoadCatalog()
         {
-            var asms = new List<Assembly>();
             var nodes = new List<Node>();
-            asms.Add(typeof(SM64Lib.RomManager).Assembly);
-            foreach (Assembly asm in asms)
+
+            foreach (Assembly asm in assemblies)
             {
                 // Create Node
                 var nasm = GetNode(asm.FullName, asm);
@@ -205,33 +214,48 @@ in {path}";
                     nns.Nodes.Add(nt);
                     searchTypes_knownTypes.Add(t, nt);
                     SearchTypes(t.GetNestedTypes(), nt);
-                    foreach (FieldInfo f in t.GetFields(myBindingFlags))
-                    {
-                        var np = GetNode(f.Name + " : " + f.FieldType.ToString(), f);
-                        nt.Nodes.Add(np);
-                    }
 
-                    foreach (PropertyInfo p in t.GetProperties(myBindingFlags))
+                    foreach (MemberInfo memberInfo in t.GetMembers(myBindingFlags))
                     {
-                        var np = GetNode(p.Name + " : " + p.PropertyType.ToString(), p);
-                        nt.Nodes.Add(np);
-                    }
-
-                    foreach (MethodInfo m in t.GetMethods(myBindingFlags))
-                    {
-                        if (IsMethodeValue(m.Name))
+                        if (memberInfo.MemberType == (memberInfo.MemberType & selectMemberTypes))
                         {
-                            string @params = "";
-                            Array.ForEach(m.GetParameters(), n => @params += n.ParameterType.ToString() + ", ");
-                            var nm = GetNode(m.Name + "(" + @params.TrimEnd(',', ' ') + ") : " + m.ReturnType.ToString(), m);
-                            nt.Nodes.Add(nm);
+                            switch (memberInfo.MemberType)
+                            {
+                                case MemberTypes.Field:
+                                    {
+                                        var f = (FieldInfo)memberInfo;
+                                        var np = GetNode(f.Name + " : " + f.FieldType.ToString(), f);
+                                        nt.Nodes.Add(np);
+                                    }
+                                    break;
+                                case MemberTypes.Property:
+                                    {
+                                        var p = (PropertyInfo)memberInfo;
+                                        var np = GetNode(p.Name + " : " + p.PropertyType.ToString(), p);
+                                        nt.Nodes.Add(np);
+                                    }
+                                    break;
+                                case MemberTypes.Method:
+                                    {
+                                        var m = (MethodInfo)memberInfo;
+                                        if (IsMethodeValue(m.Name))
+                                        {
+                                            string @params = "";
+                                            Array.ForEach(m.GetParameters(), n => @params += n.ParameterType.ToString() + ", ");
+                                            var nm = GetNode(m.Name + "(" + @params.TrimEnd(',', ' ') + ") : " + m.ReturnType.ToString(), m);
+                                            nt.Nodes.Add(nm);
+                                        }
+                                    }
+                                    break;
+                                case MemberTypes.Event:
+                                    {
+                                        var e = (EventInfo)memberInfo;
+                                        var np = GetNode(e.ToString(), e);
+                                        nt.Nodes.Add(np);
+                                    }
+                                    break;
+                            }
                         }
-                    }
-
-                    foreach (EventInfo e in t.GetEvents(myBindingFlags))
-                    {
-                        var np = GetNode(e.ToString(), e);
-                        nt.Nodes.Add(np);
                     }
                 }
             }
@@ -262,7 +286,10 @@ in {path}";
         {
             if (e.Node?.Tag is object)
             {
-                LabelX_MemberInfo.Text = GetMemberInfo(e.Node.Tag as MemberInfo);
+                CurrentMemberInfo = e.Node.Tag as MemberInfo;
+                LabelX_MemberInfo.Text = GetMemberInfo(CurrentMemberInfo);
+                if (selectionMode)
+                    buttonX_Select.Enabled = CurrentMemberInfo != null;
             }
             else
             {

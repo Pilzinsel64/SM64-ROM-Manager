@@ -130,7 +130,7 @@
     <value>True</value>
   </data>
   <data name="TextBoxX_ScriptDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 109</value>
+    <value>371, 80</value>
   </data>
   <data name="TextBoxX_ScriptDescription.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -193,7 +193,43 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_TweakScript.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Name" xml:space="preserve">
+    <value>checkBoxX_PPFPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Name" xml:space="preserve">
+    <value>checkBoxX_IPSPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Name" xml:space="preserve">
+    <value>checkBoxX_BPSPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_ArmipsScript.Name" xml:space="preserve">
     <value>CheckBoxX_ArmipsScript</value>
@@ -205,7 +241,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_ArmipsScript.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_CSharpScript.Name" xml:space="preserve">
     <value>CheckBoxX_CSharpScript</value>
@@ -217,7 +253,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_CSharpScript.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_VBScript.Name" xml:space="preserve">
     <value>CheckBoxX_VBScript</value>
@@ -229,16 +265,16 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_VBScript.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 200</value>
+    <value>4, 171</value>
   </data>
   <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 23</value>
+    <value>371, 52</value>
   </data>
   <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -277,7 +313,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_ArmipsScript.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="CheckBoxX_CSharpScript.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 0</value>
@@ -301,7 +337,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_CSharpScript.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="CheckBoxX_VBScript.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 0</value>
@@ -325,10 +361,40 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_VBScript.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 651</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Text" xml:space="preserve">
+    <value>itemPanel1</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;itemPanel_SelectEmbeddedFile.Name" xml:space="preserve">
+    <value>itemPanel_SelectEmbeddedFile</value>
+  </data>
+  <data name="&gt;&gt;itemPanel_SelectEmbeddedFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ItemPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;itemPanel_SelectEmbeddedFile.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;itemPanel_SelectEmbeddedFile.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 3</value>
@@ -615,18 +681,6 @@
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="CheckBoxX_AllowRevert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="CheckBoxX_AllowRevert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 23</value>
-  </data>
-  <data name="CheckBoxX_AllowRevert.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="CheckBoxX_AllowRevert.Text" xml:space="preserve">
-    <value>Allow Revert</value>
-  </data>
   <data name="&gt;&gt;CheckBoxX_AllowRevert.Name" xml:space="preserve">
     <value>CheckBoxX_AllowRevert</value>
   </data>
@@ -665,24 +719,6 @@
   </data>
   <data name="LayoutControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
-  </data>
-  <data name="LayoutControlItem1.Text" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="LayoutControlItem2.Text" xml:space="preserve">
-    <value>Description:</value>
-  </data>
-  <data name="LayoutControlItem3.Text" xml:space="preserve">
-    <value>Type:</value>
-  </data>
-  <data name="layoutControlItem6.Text" xml:space="preserve">
-    <value>Options:</value>
-  </data>
-  <data name="LayoutControlItem4.Text" xml:space="preserve">
-    <value>Additional References:</value>
-  </data>
-  <data name="layoutControlItem5.Text" xml:space="preserve">
-    <value>Embedded Files:</value>
   </data>
   <data name="LayoutControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>379, 658</value>
@@ -831,6 +867,48 @@
   <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="CheckBoxX_AllowRevert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="CheckBoxX_AllowRevert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 23</value>
+  </data>
+  <data name="CheckBoxX_AllowRevert.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="CheckBoxX_AllowRevert.Text" xml:space="preserve">
+    <value>Allow Revert</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_AllowRevert.Name" xml:space="preserve">
+    <value>CheckBoxX_AllowRevert</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_AllowRevert.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_AllowRevert.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxX_AllowRevert.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LayoutControlItem1.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="LayoutControlItem2.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="LayoutControlItem3.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="layoutControlItem6.Text" xml:space="preserve">
+    <value>Options:</value>
+  </data>
+  <data name="LayoutControlItem4.Text" xml:space="preserve">
+    <value>Additional References:</value>
+  </data>
+  <data name="layoutControlItem5.Text" xml:space="preserve">
+    <value>Embedded Files:</value>
+  </data>
   <data name="Panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -950,6 +1028,78 @@
   </data>
   <data name="&gt;&gt;contextMenuBar1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="checkBoxX_PPFPatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 29</value>
+  </data>
+  <data name="checkBoxX_PPFPatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="checkBoxX_PPFPatch.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="checkBoxX_PPFPatch.Text" xml:space="preserve">
+    <value>PPF Patch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Name" xml:space="preserve">
+    <value>checkBoxX_PPFPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBoxX_IPSPatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 29</value>
+  </data>
+  <data name="checkBoxX_IPSPatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="checkBoxX_IPSPatch.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="checkBoxX_IPSPatch.Text" xml:space="preserve">
+    <value>IPS Patch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Name" xml:space="preserve">
+    <value>checkBoxX_IPSPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBoxX_BPSPatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 29</value>
+  </data>
+  <data name="checkBoxX_BPSPatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="checkBoxX_BPSPatch.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="checkBoxX_BPSPatch.Text" xml:space="preserve">
+    <value>BPS Patch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Name" xml:space="preserve">
+    <value>checkBoxX_BPSPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Parent" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

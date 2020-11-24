@@ -3,6 +3,7 @@
     <RootNamespace>SM64_ROM_Manager.PatchScripts</RootNamespace>
     <MyType>Windows</MyType>
     <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(ProjectDir)**\*.vb</DefaultItemExcludes>
     <LangVersion>latest</LangVersion>
     <AssemblyTitle>PatchScripts</AssemblyTitle>
@@ -168,6 +169,10 @@
     <EmbeddedResource Update="LangRes\TweaksGUILangRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TweaksGUILangRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MyIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyIcons.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
