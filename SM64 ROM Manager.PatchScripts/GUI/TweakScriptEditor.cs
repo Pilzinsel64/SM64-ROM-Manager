@@ -288,10 +288,10 @@ namespace SM64_ROM_Manager.PatchScripts
                         itemPanel_SelectEmbeddedFile.Items.Add(cbi);
                     }
                 }
-            }
 
-            itemPanel_SelectEmbeddedFile.Visible = true;
-            itemPanel_SelectEmbeddedFile.Refresh();
+                itemPanel_SelectEmbeddedFile.Visible = true;
+                itemPanel_SelectEmbeddedFile.Refresh();
+            }
         }
 
         private void LoadAllData()
@@ -325,6 +325,9 @@ namespace SM64_ROM_Manager.PatchScripts
                     break;
                 case ScriptType.PPF:
                     checkBoxX_PPFPatch.Checked = true;
+                    break;
+                case ScriptType.DynamicLinkLibrary:
+                    checkBoxX_DLL.Checked = true;
                     break;
             }
 
@@ -647,13 +650,19 @@ End Module
                         tempScript.Type = ScriptType.PPF;
                         LoadEmbeddedFileSelectorBox();
                     }
+                    else if (sender == checkBoxX_DLL)
+                    {
+                        tempScript.Type = ScriptType.DynamicLinkLibrary;
+                        LoadEmbeddedFileSelectorBox();
+                    }
                 }
             }
 
             bool isDotNet = CheckBoxX_CSharpScript.Checked || CheckBoxX_VBScript.Checked;
             bool isPatch = checkBoxX_BPSPatch.Checked || checkBoxX_IPSPatch.Checked || checkBoxX_PPFPatch.Checked;
+            bool isDLL = checkBoxX_DLL.Checked;
             LayoutControlItem4.Visible = isDotNet;
-            layoutControlItem5.Visible = (isDotNet || isPatch) && filesContainer is object;
+            layoutControlItem5.Visible = (isDotNet || isPatch || isDLL) && filesContainer is object;
             ButtonItem_CheckForErrors.Enabled = isDotNet;
         }
 

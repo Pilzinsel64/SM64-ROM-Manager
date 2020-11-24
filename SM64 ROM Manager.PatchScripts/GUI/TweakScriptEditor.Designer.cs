@@ -41,6 +41,9 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TextBoxX_ScriptName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.CheckBoxX_TweakScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxX_PPFPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX_IPSPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX_BPSPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.CheckBoxX_ArmipsScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.CheckBoxX_CSharpScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.CheckBoxX_VBScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
@@ -80,9 +83,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonItem_CheckForErrors = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_ShowObjectCatalog = new DevComponents.DotNetBar.ButtonItem();
             this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
-            this.checkBoxX_PPFPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBoxX_IPSPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.checkBoxX_BPSPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX_DLL = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
@@ -145,6 +146,7 @@ namespace SM64_ROM_Manager.PatchScripts
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.checkBoxX_DLL);
             this.Panel1.Controls.Add(this.checkBoxX_PPFPatch);
             this.Panel1.Controls.Add(this.checkBoxX_IPSPatch);
             this.Panel1.Controls.Add(this.checkBoxX_BPSPatch);
@@ -154,6 +156,45 @@ namespace SM64_ROM_Manager.PatchScripts
             this.Panel1.Controls.Add(this.CheckBoxX_TweakScript);
             resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
+            // 
+            // checkBoxX_PPFPatch
+            // 
+            // 
+            // 
+            // 
+            this.checkBoxX_PPFPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_PPFPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_PPFPatch.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_PPFPatch, "checkBoxX_PPFPatch");
+            this.checkBoxX_PPFPatch.Name = "checkBoxX_PPFPatch";
+            this.checkBoxX_PPFPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_PPFPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
+            // 
+            // checkBoxX_IPSPatch
+            // 
+            // 
+            // 
+            // 
+            this.checkBoxX_IPSPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_IPSPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_IPSPatch.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_IPSPatch, "checkBoxX_IPSPatch");
+            this.checkBoxX_IPSPatch.Name = "checkBoxX_IPSPatch";
+            this.checkBoxX_IPSPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_IPSPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
+            // 
+            // checkBoxX_BPSPatch
+            // 
+            // 
+            // 
+            // 
+            this.checkBoxX_BPSPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_BPSPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_BPSPatch.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_BPSPatch, "checkBoxX_BPSPatch");
+            this.checkBoxX_BPSPatch.Name = "checkBoxX_BPSPatch";
+            this.checkBoxX_BPSPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_BPSPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
             // 
             // CheckBoxX_ArmipsScript
             // 
@@ -565,44 +606,18 @@ namespace SM64_ROM_Manager.PatchScripts
             this.contextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.contextMenuBar1.TabStop = false;
             // 
-            // checkBoxX_PPFPatch
+            // checkBoxX_DLL
             // 
             // 
             // 
             // 
-            this.checkBoxX_PPFPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX_PPFPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX_PPFPatch.FocusCuesEnabled = false;
-            resources.ApplyResources(this.checkBoxX_PPFPatch, "checkBoxX_PPFPatch");
-            this.checkBoxX_PPFPatch.Name = "checkBoxX_PPFPatch";
-            this.checkBoxX_PPFPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBoxX_PPFPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
-            // 
-            // checkBoxX_IPSPatch
-            // 
-            // 
-            // 
-            // 
-            this.checkBoxX_IPSPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX_IPSPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX_IPSPatch.FocusCuesEnabled = false;
-            resources.ApplyResources(this.checkBoxX_IPSPatch, "checkBoxX_IPSPatch");
-            this.checkBoxX_IPSPatch.Name = "checkBoxX_IPSPatch";
-            this.checkBoxX_IPSPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBoxX_IPSPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
-            // 
-            // checkBoxX_BPSPatch
-            // 
-            // 
-            // 
-            // 
-            this.checkBoxX_BPSPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX_BPSPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX_BPSPatch.FocusCuesEnabled = false;
-            resources.ApplyResources(this.checkBoxX_BPSPatch, "checkBoxX_BPSPatch");
-            this.checkBoxX_BPSPatch.Name = "checkBoxX_BPSPatch";
-            this.checkBoxX_BPSPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBoxX_BPSPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
+            this.checkBoxX_DLL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_DLL.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_DLL.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_DLL, "checkBoxX_DLL");
+            this.checkBoxX_DLL.Name = "checkBoxX_DLL";
+            this.checkBoxX_DLL.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_DLL.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
             // 
             // TweakScriptEditor
             // 
@@ -708,5 +723,6 @@ namespace SM64_ROM_Manager.PatchScripts
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_PPFPatch;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_IPSPatch;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_BPSPatch;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_DLL;
     }
 }
