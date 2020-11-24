@@ -1275,4 +1275,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Rom Manager\Language Resources\Custom Object Manager\" />
+  </ItemGroup>
 </Project>
