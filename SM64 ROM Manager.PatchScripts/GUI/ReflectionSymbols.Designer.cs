@@ -43,7 +43,7 @@ namespace SM64_ROM_Manager.PatchScripts.My.Resources
             {
                 if (ReferenceEquals(resourceMan, null))
                 {
-                    var temp = new System.Resources.ResourceManager("SM64_ROM_Manager.PatchScripts.ReflectionSymbols", typeof(ReflectionSymbols).Assembly);
+                    var temp = new System.Resources.ResourceManager("SM64_ROM_Manager.PatchScripts.GUI.ReflectionSymbols", typeof(ReflectionSymbols).Assembly);
                     resourceMan = temp;
                 }
 
