@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <MyType>Windows</MyType>
     <TargetFramework>net48</TargetFramework>
@@ -11,6 +11,7 @@
     <DocumentationFile>SM64Lib.xml</DocumentationFile>
     <DefineTrace>true</DefineTrace>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,CS1591,CS0660,CS0661,CA1009</NoWarn>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineDebug>true</DefineDebug>
@@ -36,7 +37,7 @@
     <DefineConstants>TRACE;RelMono</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Management" Version="4.7.0" />
+    <PackageReference Include="System.Management" Version="5.0.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
@@ -111,7 +112,6 @@
     <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ini-parser" Version="2.5.2" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
