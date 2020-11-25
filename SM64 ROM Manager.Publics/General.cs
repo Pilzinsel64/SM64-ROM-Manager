@@ -247,6 +247,9 @@ namespace SM64_ROM_Manager.Publics
         {
             // Set default font
             SetDefaultControlFont();
+
+            // Set high Dpi Mode to completly ignore DPI changes and use 100%
+            Application.SetHighDpiMode(HighDpiMode.DpiUnaware);
         }
 
         public static void DoDefaultInitsAfterApplicationStartup()
