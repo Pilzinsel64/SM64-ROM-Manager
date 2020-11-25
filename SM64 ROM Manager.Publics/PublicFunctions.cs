@@ -17,6 +17,8 @@ using System.Drawing;
 using System.Diagnostics;
 using SM64Lib;
 using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace SM64_ROM_Manager.Publics
 {
@@ -257,19 +259,35 @@ namespace SM64_ROM_Manager.Publics
 
         public static void OpenBrowser(Uri uri, bool maximized = false, Size? windowSize = null)
         {
+            bool useExternal = false;
+
             if (Settings.General.UseInternalBrowser)
             {
+#if !DEBUG
+                try
+                {
+#endif
                 var frm = new WebViewer(uri);
 
-                if (maximized)
-                    frm.WindowState = FormWindowState.Maximized;
+                    if (maximized)
+                        frm.WindowState = FormWindowState.Maximized;
 
-                if (windowSize != null)
-                    frm.ClientSize = (Size)windowSize;
+                    if (windowSize != null)
+                        frm.ClientSize = (Size)windowSize;
 
-                frm.Show();
+                    frm.Show();
+#if !DEBUG
+                }
+                catch(Exception)
+                {
+                    useExternal = true;
+                }
+#endif
             }
             else
+                useExternal = true;
+
+            if (useExternal)
                 Process.Start(uri.AbsoluteUri);
         }
 
