@@ -125,7 +125,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4" />
-    <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />
+    <PackageReference Include="OpenTK.GLWpfControl" Version="4.0.0-pre.9" />
     <PackageReference Include="System.DirectoryServices" Version="5.0.0" />
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
@@ -181,6 +181,9 @@
     </Reference>
     <Reference Include="drsPwEnc">
       <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>..\Shared Libs\FastColoredTextBox.dll</HintPath>
     </Reference>
     <Reference Include="HexEditExample">
       <HintPath>..\Shared Libs\HexEditExample.dll</HintPath>
@@ -1231,7 +1234,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Ben.Demystifier" Version="0.1.6" />
-    <PackageReference Include="FCTB" Version="2.16.24" />
     <PackageReference Include="Microsoft.Bcl" Version="1.1.10" />
     <PackageReference Include="Microsoft.Bcl.Async" Version="1.0.168" />
     <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.21" />
