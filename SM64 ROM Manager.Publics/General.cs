@@ -236,6 +236,19 @@ namespace SM64_ROM_Manager.Publics
             }
         }
 
+        private static void SetDefaultControlFont()
+        {
+            var settingsType = typeof(Control);
+            var defaultFontField = settingsType.GetField("s_defaultFont", BindingFlags.Static | BindingFlags.NonPublic);
+            defaultFontField.SetValue(null, new System.Drawing.Font("Microsoft Sans Serif", 8.25F)); //"Segoe UI", 8.25F
+        }
+
+        public static void DoDefaultInitsBeforeApplicationStartup()
+        {
+            // Set default font
+            SetDefaultControlFont();
+        }
+
         public static void DoDefaultInitsAfterApplicationStartup()
         {
             if (RuntimeInformationsEx.OSType != OSType.Windows)

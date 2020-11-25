@@ -13,7 +13,7 @@ namespace SM64_ROM_Manager.ModelImporterGUI.My
     {
         private void OnAppStart(object sender, Microsoft.VisualBasic.ApplicationServices.StartupEventArgs e)
         {
-            SM64Lib.TextValueConverter.TextValueConverter.WantIntegerValueMode += ee => ee.IntegerValueMode = SettingsManager.Settings.General.IntegerValueMode;
+            Publics.General.DoDefaultInitsBeforeApplicationStartup();
         }
     }
 }

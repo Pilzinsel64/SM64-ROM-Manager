@@ -16,7 +16,7 @@ namespace SM64_ROM_Manager.My
     {
         private void OnAppStart(object sender, Microsoft.VisualBasic.ApplicationServices.StartupEventArgs e)
         {
-            TextValueConverter.WantIntegerValueMode += ee => ee.IntegerValueMode = SettingsManager.Settings.General.IntegerValueMode;
+            Publics.General.DoDefaultInitsBeforeApplicationStartup();
         }
 
         private void OnErrorMessage(object sender, Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs e)
