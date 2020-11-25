@@ -16,6 +16,8 @@ using Bitmap = System.Drawing.Bitmap;
 using System.Collections.Generic;
 using System.Linq;
 using OpenTK.Mathematics;
+using System.Windows.Forms.Integration;
+using OpenTK.Wpf;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -67,46 +69,8 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        private GLControl _GLControl1;
-        private GLControl GLControl1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _GLControl1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_GLControl1 != null)
-                {
-                    _GLControl1.Load -= glControl1_Load;
-                    _GLControl1.Paint -= GlControl1_Paint;
-                    _GLControl1.Resize -= glControl1_Resize;
-                    _GLControl1.MouseWheel -= glControl1_Wheel;
-                    _GLControl1.MouseDown -= glControl1_MouseDown;
-                    _GLControl1.MouseUp -= glControl1_MouseUp;
-                    _GLControl1.MouseLeave -= glControl1_MouseUp;
-                    _GLControl1.MouseMove -= glControl1_MouseMove;
-                    _GLControl1.KeyDown -= ModelPreview_KeyDown;
-                }
-
-                _GLControl1 = value;
-                if (_GLControl1 != null)
-                {
-                    _GLControl1.Load += glControl1_Load;
-                    _GLControl1.Paint += GlControl1_Paint;
-                    _GLControl1.Resize += glControl1_Resize;
-                    _GLControl1.MouseWheel += glControl1_Wheel;
-                    _GLControl1.MouseDown += glControl1_MouseDown;
-                    _GLControl1.MouseUp += glControl1_MouseUp;
-                    _GLControl1.MouseLeave += glControl1_MouseUp;
-                    _GLControl1.MouseMove += glControl1_MouseMove;
-                    _GLControl1.KeyDown += ModelPreview_KeyDown;
-                }
-            }
-        }
+        private GLWpfControl GLControl1;
+        private ElementHost GLControlHost;
 
         private Camera _CameraPrivate;
         private Camera CameraPrivate
@@ -165,7 +129,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public OpenGLManager(Form targetForm, Control targetControl)
         {
-            GLControl1 = new GLControl();
+            GLControl1 = new GLWpfControl();
             CameraPrivate = new Camera();
             RenderTimer = new System.Timers.Timer(20);
             Main = (Form_AreaEditor)targetForm;
@@ -217,11 +181,11 @@ namespace SM64_ROM_Manager.LevelEditor
             }
         }
 
-        public GLControl GLControl
+        public ElementHost GLControl
         {
             get
             {
-                return GLControl1;
+                return GLControlHost;
             }
         }
 
@@ -246,35 +210,54 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void InitializeGLControl()
         {
-            GLControl1.BackColor = Color.Black;
-            GLControl1.Location = new System.Drawing.Point(0, 0);
-            GLControl1.MinimumSize = new Size(600, 120);
-            GLControl1.Name = "glControl1";
-            GLControl1.Size = new Size(880, 538);
-            GLControl1.TabIndex = 0;
-            GLControl1.TabStop = false;
-            GLControl1.VSync = true;
-            GLControl1.Dock = DockStyle.Fill;
-            TargetControl.Controls.Add(GLControl1);
-            GLControl1.CreateControl();
-            GLControl1.Enabled = false;
+            GLControl1 = new GLWpfControl();
+            
+            GLControlHost = new ElementHost();
+            GLControlHost.BackColor = Color.Black;
+            GLControlHost.Location = new System.Drawing.Point(0, 0);
+            GLControlHost.MinimumSize = new Size(600, 120);
+            GLControlHost.Name = "glControl1";
+            GLControlHost.Size = new Size(880, 538);
+            GLControlHost.TabIndex = 0;
+            GLControlHost.TabStop = false;
+            //GLControl1.VSync = true;
+            GLControlHost.Dock = DockStyle.Fill;
+
+            GLControlHost.Child = GLControl1;
+
+            var controlSettings = new GLWpfControlSettings();
+            GLControl1.Start(controlSettings);
+
+            GLControlHost.Enabled = false;
+            
+            GLControl1.Loaded += glControl1_Load;
+            GLControl1.Render += GlControl1_Paint;
+
+            GLControlHost.Resize += glControl1_Resize;
+            GLControlHost.MouseWheel += glControl1_Wheel;
+            GLControlHost.MouseDown += glControl1_MouseDown;
+            GLControlHost.MouseUp += glControl1_MouseUp;
+            GLControlHost.MouseLeave += glControl1_MouseUp;
+            GLControlHost.MouseMove += glControl1_MouseMove;
+            GLControlHost.KeyDown += ModelPreview_KeyDown;
+
             UpdateProjMatrix(false);
             Camera.UpdateMatrix(ref camMtx);
         }
 
         public void Invalidate()
         {
-            GLControl1.Invalidate();
+            GLControlHost.Invalidate();
         }
 
         public void Update()
         {
-            GLControl1.Invalidate();
+            GLControlHost.Invalidate();
         }
 
         public void MakeCurrent()
         {
-            GLControl1.MakeCurrent();
+            //GLControl1.MakeCurrent();
         }
 
         public void ChangeViewMode()
@@ -321,7 +304,7 @@ namespace SM64_ROM_Manager.LevelEditor
             GL.Enable(EnableCap.CullFace);
         }
 
-        private void GlControl1_Paint(object sender, PaintEventArgs e)
+        private void GlControl1_Paint(TimeSpan span)
         {
             if (!Main.isDeactivated)
             {
@@ -349,7 +332,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 }
 
                 DrawAllObjects();
-                GLControl1.SwapBuffers();
+                //GLControl1.SwapBuffers();
             }
         }
 
@@ -374,13 +357,13 @@ namespace SM64_ROM_Manager.LevelEditor
         internal Image TakeScreenshotOfGL()
         {
             // Create new Bitmap
-            var bmp = new Bitmap(GLControl1.Width, GLControl1.Height);
+            var bmp = new Bitmap(GLControlHost.Width, GLControlHost.Height);
 
             // Lock Bits & Get Bitmap Data
-            var bmpdata = bmp.LockBits(new Rectangle(0, 0, GLControl1.Size.Width, GLControl1.Size.Height), System.Drawing.Imaging.ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+            var bmpdata = bmp.LockBits(new Rectangle(0, 0, GLControlHost.Size.Width, GLControlHost.Size.Height), System.Drawing.Imaging.ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
 
             // Get Screenshot
-            GL.ReadPixels(0, 0, GLControl1.Size.Width, GLControl1.Size.Height, PixelFormat.Bgr, PixelType.UnsignedByte, bmpdata.Scan0);
+            GL.ReadPixels(0, 0, GLControlHost.Size.Width, GLControlHost.Size.Height, PixelFormat.Bgr, PixelType.UnsignedByte, bmpdata.Scan0);
 
             // Unlook Bits
             bmp.UnlockBits(bmpdata);
@@ -392,8 +375,8 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void glControl1_Resize(object sender, EventArgs e)
         {
-            GLControl1.Context.Update(GLControl1.WindowInfo);
-            GL.Viewport(0, 0, GLControl1.Width, GLControl1.Height);
+            //GLControl1.Context.Update(GLControl1.WindowInfo);
+            GL.Viewport(0, 0, GLControlHost.Width, GLControlHost.Height);
             UpdateProjMatrix();
         }
 
@@ -408,7 +391,7 @@ namespace SM64_ROM_Manager.LevelEditor
             Camera.ResetMouseStuff();
             Camera.UpdateCameraMatrixWithScrollWheel((int)(e.Delta * (Main.IsShiftPressed ? 3.5F : 1.5F)), ref camMtx);
             savedCamPos = Camera.Position;
-            GLControl1.Invalidate();
+            Invalidate();
         }
 
         private void glControl1_MouseDown(object sender, MouseEventArgs e)
@@ -418,7 +401,7 @@ namespace SM64_ROM_Manager.LevelEditor
             if (e.Button == MouseButtons.Right)
             {
                 SelectViaGLControl(e.X, e.Y);
-                GLControl1.Invalidate();
+                Invalidate();
             }
         }
 
@@ -434,14 +417,14 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 if (Main.IsShiftPressed)
                 {
-                    Camera.UpdateCameraOffsetWithMouse(savedCamPos, e.X, e.Y, GLControl1.Width, GLControl1.Height, ref camMtx);
+                    Camera.UpdateCameraOffsetWithMouse(savedCamPos, e.X, e.Y, GLControlHost.Width, GLControlHost.Height, ref camMtx);
                 }
                 else
                 {
                     Camera.UpdateCameraMatrixWithMouse(e.X, e.Y, ref camMtx);
                 }
 
-                GLControl1.Invalidate();
+                Invalidate();
             }
         }
 
@@ -512,7 +495,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public void SelectViaGLControl(int mx, int my)
         {
-            int h = GLControl1.Height;
+            int h = GLControlHost.Height;
             GL.ClearColor(1.0F, 1.0F, 1.0F, 1.0F);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.MatrixMode(MatrixMode.Projection);
@@ -627,7 +610,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void CameraPrivate_PerspectiveChanged(object sender, EventArgs e)
         {
-            GLControl1.Invoke(new Action(() => GLControl1.Invalidate()));
+            GLControlHost.Invoke(new Action(() => Invalidate()));
         }
     }
 
