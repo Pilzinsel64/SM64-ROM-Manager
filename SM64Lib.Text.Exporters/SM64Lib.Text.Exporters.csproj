@@ -5,6 +5,7 @@
     <Product>SM64Lib.Text.Exporters</Product>
     <Copyright>Copyright ©  2020</Copyright>
     <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />

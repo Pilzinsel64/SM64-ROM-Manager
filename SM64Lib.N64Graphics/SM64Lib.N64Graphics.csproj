@@ -6,8 +6,15 @@
     <Product>N64Graphics</Product>
     <Copyright>Copyright © Pilzinsel64 2017 - 2018</Copyright>
     <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <LangVersion>latest</LangVersion>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelMono|x86'">
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <LangVersion>latest</LangVersion>
