@@ -367,7 +367,7 @@ namespace SM64_ROM_Manager
             Color colorToUse = (Color)(col is object ? col : IsSelected ? Color.Yellow : Color.Red);
 
             void drawMdl(Renderer rndr) =>
-                rndr.DrawModel(mode, new OpenTK.Vector3(Position.X, Position.Y, Position.Z), new OpenTK.Quaternion(Rotation.X, Rotation.Y, Rotation.Z, 1.0F), OpenTK.Vector3.One);
+                rndr.DrawModel(mode, new OpenTK.Mathematics.Vector3(Position.X, Position.Y, Position.Z), new OpenTK.Mathematics.Quaternion(Rotation.X, Rotation.Y, Rotation.Z, 1.0F), OpenTK.Mathematics.Vector3.One);
 
             if (ModelRenderer is object)
                 drawMdl(ModelRenderer);

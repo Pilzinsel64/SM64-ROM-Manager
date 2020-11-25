@@ -5,6 +5,7 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::SM64Lib.Geolayout.Script;
 using global::SM64Lib.Geolayout.Script.Commands;
 using Newtonsoft.Json;
+using System;
 
 namespace SM64Lib.Geolayout
 {
@@ -306,7 +307,7 @@ namespace SM64Lib.Geolayout
                 }
 
                 if (output != string.Empty)
-                    output += Constants.vbNewLine;
+                    output += Environment.NewLine;
                 output += tbytelist;
             }
 
@@ -327,7 +328,7 @@ namespace SM64Lib.Geolayout
                 }
 
                 if (output != string.Empty)
-                    output += Constants.vbNewLine;
+                    output += Environment.NewLine;
                 output += tbytelist;
             }
 

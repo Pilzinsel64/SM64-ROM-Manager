@@ -10,6 +10,7 @@ using global::SM64Lib.Objects.ObjectBanks.Data;
 using global::SM64Lib.SegmentedBanking;
 using SM64Lib.Objects.ModelBanks;
 using Newtonsoft.Json;
+using System;
 
 namespace SM64Lib.Levels
 {
@@ -318,7 +319,7 @@ namespace SM64Lib.Levels
                 }
 
                 if (output != string.Empty)
-                    output += Constants.vbNewLine;
+                    output += Environment.NewLine;
                 output += tbytelist;
             }
 

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualBasic;
 
@@ -27,7 +28,7 @@ namespace SM64Lib.Script
             var Lines = new List<string>();
             foreach (TCmd cmd in this)
                 Lines.Add(cmd.ToString());
-            return string.Join(Constants.vbNewLine, Lines.ToArray());
+            return string.Join(Environment.NewLine, Lines.ToArray());
         }
 
         public void Close()

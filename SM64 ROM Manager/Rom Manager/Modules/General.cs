@@ -20,6 +20,7 @@ using global::SM64Lib.Model.Fast3D.DisplayLists;
 using global::SM64Lib.Patching;
 using Z.Collections.Extensions;
 using Z.Core.Extensions;
+using TaskDialog = DevComponents.DotNetBar.TaskDialog;
 
 namespace SM64_ROM_Manager
 {

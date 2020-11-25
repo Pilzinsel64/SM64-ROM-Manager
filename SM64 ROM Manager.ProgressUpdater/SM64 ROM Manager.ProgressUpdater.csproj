@@ -62,6 +62,12 @@
     <Reference Include="drsPwEnc">
       <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlRenderer">
+      <HintPath>..\Shared Libs\HtmlRenderer\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.WinForms">
+      <HintPath>..\Shared Libs\HtmlRenderer\HtmlRenderer.WinForms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />

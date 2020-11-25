@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using SM64Lib.Patching;
 using Pilz.IO;
 using SM64_ROM_Manager.PatchScripts.LangRes;
+using TaskDialog = DevComponents.DotNetBar.TaskDialog;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -430,7 +431,7 @@ End Module
                 msg += $" {TweaksGUILangRes.Text_Line}: " + Conversions.ToString(er.Line);
                 msg += Constants.vbNewLine + er.ErrorText;
             }
-
+            
             TaskDialog.Show(TweaksGUILangRes.MsgBox_CompilerResult_Header, icon, title, msg, eTaskDialogButton.Ok);
         }
 

@@ -609,7 +609,7 @@ namespace SM64Lib.Text
 
                     case 0xFE:
                         {
-                            txt += Constants.vbNewLine;
+                            txt += Environment.NewLine;
                             break;
                         }
 
@@ -639,7 +639,7 @@ namespace SM64Lib.Text
             s = s.Replace("[x]", "{");
             s = s.Replace("{sqm}", "[");
             s = s.Replace("{eqm}", "]");
-            s = s.Replace(Constants.vbNewLine, "§");
+            s = s.Replace(Environment.NewLine, "§");
             if (s is object)
             {
                 foreach (char ccb in s)
