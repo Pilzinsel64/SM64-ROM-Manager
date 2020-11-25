@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>SM64_ROM_Manager.SettingsManager</RootNamespace>
     <AssemblyName>SM64 ROM Manager.Settings</AssemblyName>

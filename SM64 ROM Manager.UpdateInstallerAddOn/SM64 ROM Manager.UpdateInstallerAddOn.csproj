@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>SM64_ROM_Manager.UpdateInstallerAddOn</RootNamespace>
     <MyType>Windows</MyType>
