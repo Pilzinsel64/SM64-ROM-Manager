@@ -52,9 +52,10 @@ namespace SM64_ROM_Manager.Publics
         {
         }
 
-        private void WebViewer_Shown(object sender, EventArgs e)
+        private async void WebViewer_Shown(object sender, EventArgs e)
         {
             Controls.Add(webViewCompatible1);
+            await webViewCompatible1.EnsureCoreWebView2Async();
             webViewCompatible1.NavigateToString(navigateTo.ToString());
         }
 
