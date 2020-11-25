@@ -222,14 +222,8 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControlHost.TabStop = false;
             //GLControl1.VSync = true;
             GLControlHost.Dock = DockStyle.Fill;
-
-            GLControlHost.Child = GLControl1;
-
-            var controlSettings = new GLWpfControlSettings();
-            GLControl1.Start(controlSettings);
-
             GLControlHost.Enabled = false;
-            
+
             GLControl1.Loaded += glControl1_Load;
             GLControl1.Render += GlControl1_Paint;
 
@@ -240,6 +234,12 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControlHost.MouseLeave += glControl1_MouseUp;
             GLControlHost.MouseMove += glControl1_MouseMove;
             GLControlHost.KeyDown += ModelPreview_KeyDown;
+
+            GLControlHost.Child = GLControl1;
+            TargetControl.Controls.Add(GLControlHost);
+
+            var controlSettings = new GLWpfControlSettings();
+            GLControl1.Start(controlSettings);
 
             UpdateProjMatrix(false);
             Camera.UpdateMatrix(ref camMtx);
