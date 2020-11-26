@@ -22,14 +22,15 @@ using global::SM64Lib.Levels;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
 using Pilz.Runtime;
+using Pilz.Cryptography;
 
 namespace SM64_ROM_Manager.Publics
 {
     public static class General
     {
-        private readonly static drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
+        private readonly static AESStringCrypter crypter = new AESStringCrypter();
 
-        public static Pilz.Reflection.PluginSystem.PluginManager PluginManager { get; private set; }
+        public static Pilz.Reflection.PluginSystem.PluginManager PluginManager { get; private set; } = new Pilz.Reflection.PluginSystem.PluginManager();
 
         //[DllImport("user32.dll", EntryPoint = "SetProcessDPIAware")]
         //public static extern void SetDPIAware();
@@ -47,6 +48,8 @@ namespace SM64_ROM_Manager.Publics
 
         static General()
         {
+            AESStringCrypter.DefaultKey = "iZbNfbTQgBVfg+UoRWBBaTeJa0wvLLtSoLljUHTOtAA=";
+            AESStringCrypter.DefaultIV = "5meO/fPEWftScQ9+3wKT8Q==";
             //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         }
 
@@ -56,7 +59,6 @@ namespace SM64_ROM_Manager.Publics
             {
                 if (string.IsNullOrEmpty(pMyDataPath))
                 {
-                    MessageBox.Show("1.ab");
                     pMyDataPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "Data");
                 }
 
@@ -229,7 +231,7 @@ namespace SM64_ROM_Manager.Publics
         {
             if (!string.IsNullOrEmpty(Settings.Network.ProxyUsername) || !string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted))
             {
-                WebRequest.DefaultWebProxy.Credentials = new NetworkCredential(Settings.Network.ProxyUsername, string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted) ? string.Empty : crypter.DecryptData(Settings.Network.ProxyPasswordEncrypted));
+                WebRequest.DefaultWebProxy.Credentials = new NetworkCredential(Settings.Network.ProxyUsername, string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted) ? string.Empty : crypter.Decrypt(Settings.Network.ProxyPasswordEncrypted));
             }
             else
             {

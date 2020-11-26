@@ -11,7 +11,6 @@ namespace SM64_ROM_Manager.PatchScripts
 {
     public class TweakDatabaseManager
     {
-        private static readonly drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
         private static readonly Random random = new Random();
 
         private Dictionary<TweakDatabaseLoginTypes, WebDavClient> dicClients = new Dictionary<TweakDatabaseLoginTypes, WebDavClient>();

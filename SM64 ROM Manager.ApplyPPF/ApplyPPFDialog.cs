@@ -17,18 +17,12 @@ namespace SM64_ROM_Manager.ApplyPPF
 
         public ApplyPPFDialog()
         {
-            MessageBox.Show("1");
-
             if (Assembly.GetExecutingAssembly() == Assembly.GetEntryAssembly())
             {
-                MessageBox.Show("1.a");
                 Settings.SettingsConfigFilePath = Path.Combine(General.MyDataPath, "Settings.json");
-                MessageBox.Show("1.b");
                 StyleManager.Style = eStyle.Metro;
                 StyleManager.MetroColorGeneratorParameters = Settings.StyleManager.MetroColorParams;
             }
-
-            MessageBox.Show("2");
 
             InitializeComponent();
         }

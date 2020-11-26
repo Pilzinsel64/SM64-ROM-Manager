@@ -51,7 +51,6 @@ namespace SM64_ROM_Manager
         }
 
         private bool finishedLoading = false;
-        private readonly drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
 
         private void Form_Settings_Load(object sender, EventArgs e)
         {
@@ -77,7 +76,7 @@ namespace SM64_ROM_Manager
             SwitchButton_AutoDetectStartEndQuotationMarks.Value = Settings.TextManager.AutoDetectStartEndQuotationMarks;
             switchButton_AutoFocusEditorTextBox.Value = Settings.TextManager.AutoFocusEditorTextBox;
             TextBoxX_ProxyUsr.Text = Settings.Network.ProxyUsername;
-            TextBoxX_ProxyPwd.Text = string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted) ? string.Empty : crypter.DecryptData(Settings.Network.ProxyPasswordEncrypted);
+            TextBoxX_ProxyPwd.Text = Settings.Network.ProxyPasswordEncrypted;
             comboBoxEx_DefaultObjMoveMode.SelectedIndex = Settings.AreaEditor.EnableSlideMovementByDefaultForObjects ? 1 : 0;
             switchButton_UseInternalBrowser.Value = Settings.General.UseInternalBrowser;
             switchButton_ThankYouPageAfterUpdates.Value = Settings.General.OpenThankYouFormAfterUpdates;
@@ -251,7 +250,7 @@ namespace SM64_ROM_Manager
             Settings.TextManager.AutoDetectStartEndQuotationMarks = SwitchButton_AutoDetectStartEndQuotationMarks.Value;
             Settings.TextManager.AutoFocusEditorTextBox = switchButton_AutoFocusEditorTextBox.Value;
             Settings.Network.ProxyUsername = TextBoxX_ProxyUsr.Text.Trim();
-            Settings.Network.ProxyPasswordEncrypted = string.IsNullOrEmpty(TextBoxX_ProxyPwd.Text) ? string.Empty : crypter.EncryptData(TextBoxX_ProxyPwd.Text);
+            Settings.Network.ProxyPasswordEncrypted = TextBoxX_ProxyPwd.Text;
             Settings.General.OpenThankYouFormAfterUpdates = switchButton_ThankYouPageAfterUpdates.Value;
             Settings.LevelManager.UseNewGUI = switchButton_EnableNewLevelManagerGUI.Value;
 

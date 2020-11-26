@@ -1,14 +1,13 @@
 ﻿using global::Newtonsoft.Json;
+using Pilz.Cryptography;
+using Pilz.Json.Converters;
 
 namespace SM64_ROM_Manager.UserRequests
 {
     public class UserRequestUploadSettings
     {
-        [JsonProperty]
-        internal string Link { get; set; }
-        [JsonProperty]
-        internal string Username { get; set; }
-        [JsonProperty]
-        internal string Password { get; set; }
+        internal SecureString Link { get; set; }
+        internal SecureString Username { get; set; }
+        internal SecureString Password { get; set; }
     }
 }

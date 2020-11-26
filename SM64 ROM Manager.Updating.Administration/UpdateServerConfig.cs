@@ -1,5 +1,4 @@
-﻿using drsPwEnc;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Pilz.Cryptography;
 using System;
 using System.Collections.Generic;
@@ -16,19 +15,6 @@ namespace SM64_ROM_Manager.Updating.Administration
         public string PublicPackageBaseURL { get; set; }
         public string UpdateInfoFilename { get; set; }
         public string Username { get; set; }
-
-        [JsonProperty("Password")]
-        private string PasswordOld
-        {
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    Password = string.Empty;
-                else
-                    Password = new drsPwEnc.drsPwEnc().DecryptData(value);
-            }
-        }
-
         [JsonProperty("Password2")]
         public SecureString Password { get; set; }
     }

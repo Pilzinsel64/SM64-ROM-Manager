@@ -55,9 +55,6 @@
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="drsPwEnc">
-      <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
-    </Reference>
     <Reference Include="Pilz.Cryptography">
       <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
     </Reference>

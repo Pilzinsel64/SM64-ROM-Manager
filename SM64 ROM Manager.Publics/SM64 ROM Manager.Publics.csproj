@@ -65,14 +65,14 @@
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="drsPwEnc">
-      <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
-    </Reference>
     <Reference Include="Pilz">
       <HintPath>..\Shared Libs\Pilz.dll</HintPath>
     </Reference>
     <Reference Include="Pilz.Configuration">
       <HintPath>..\Shared Libs\Pilz.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Pilz.Cryptography">
+      <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="Pilz.Reflection.PluginSystem">
       <HintPath>..\Shared Libs\Pilz.Reflection.PluginSystem.dll</HintPath>

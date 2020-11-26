@@ -198,9 +198,6 @@
     <Reference Include="DevComponents.TreeGX">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.TreeGX.dll</HintPath>
     </Reference>
-    <Reference Include="drsPwEnc">
-      <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
-    </Reference>
     <Reference Include="FastColoredTextBox">
       <HintPath>..\Shared Libs\FastColoredTextBox.dll</HintPath>
     </Reference>

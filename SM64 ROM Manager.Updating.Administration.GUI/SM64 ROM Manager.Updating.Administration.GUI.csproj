@@ -67,9 +67,6 @@
     <Reference Include="DevComponents.DotNetBar2">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
-    <Reference Include="drsPwEnc">
-      <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
-    </Reference>
     <Reference Include="DevComponents.DotNetBar.Design">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Design.dll</HintPath>
       <Private>False</Private>

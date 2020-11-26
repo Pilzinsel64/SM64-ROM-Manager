@@ -9,18 +9,14 @@ namespace SM64_ROM_Manager.UserRequests
     internal class UserRequestUploadManager
     {
 
-        // F i e l d s
-
-        private readonly drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
-
         // F e a t u r e s
 
         private WebDavClientParams CreateParams(UserRequestUploadSettings settings)
         {
             return new WebDavClientParams()
             {
-                BaseAddress = new Uri(crypter.DecryptData(settings.Link)),
-                Credentials = new NetworkCredential(crypter.DecryptData(settings.Username), crypter.DecryptData(settings.Password)),
+                BaseAddress = new Uri(settings.Link),
+                Credentials = new NetworkCredential(settings.Username, settings.Password),
                 UseProxy = false,
             };
         }

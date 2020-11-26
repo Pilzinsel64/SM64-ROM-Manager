@@ -72,10 +72,6 @@
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar2.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="drsPwEnc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Shared Libs\drsPwEnc.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="FastColoredTextBox">
       <HintPath>..\Shared Libs\FastColoredTextBox.dll</HintPath>
     </Reference>

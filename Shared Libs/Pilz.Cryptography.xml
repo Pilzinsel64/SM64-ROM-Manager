@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pilz.Cryptography</name>
+    </assembly>
+    <members>
+        <member name="E:Pilz.Cryptography.AESStringCrypter.NeedKey">
+            <summary>
+            This event throws if no key and no default key was found. You can now provide a key or default key (maybe depending on the given instance). If no value is provided, a default key will be created.
+            </summary>
+        </member>
+        <member name="E:Pilz.Cryptography.AESStringCrypter.NeedIV">
+            <summary>
+            This event throws if no IV and no default IV was found. You can now provide a IV or default IV (maybe depending on the given instance). If no value is provided, a default IV will be created.
+            </summary>
+        </member>
+    </members>
+</doc>
