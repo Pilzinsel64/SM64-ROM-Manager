@@ -12,7 +12,7 @@ namespace SM64Lib.Text.Exporters
     {
         public ExcelExporter()
         {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         }
 
         public async Task Export(string destFilePath, TextGroup[] groups)
@@ -64,7 +64,7 @@ namespace SM64Lib.Text.Exporters
                 }
             }
 
-            await pkg.SaveAsAsync(new FileInfo(destFilePath));
+            pkg.SaveAs(new FileInfo(destFilePath));
             pkg.Dispose();
         }
 
@@ -73,7 +73,9 @@ namespace SM64Lib.Text.Exporters
             try
             {
                 var pkg = new ExcelPackage();
-                await pkg.LoadAsync(new FileInfo(filePath));
+                var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+                pkg.Load(fs);
+                fs.Close();
 
                 foreach (var tg in groups)
                 {

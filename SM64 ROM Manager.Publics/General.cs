@@ -29,7 +29,7 @@ namespace SM64_ROM_Manager.Publics
     {
         private readonly static drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
 
-        public static Pilz.Reflection.PluginSystem.PluginManager PluginManager { get; private set; } = new Pilz.Reflection.PluginSystem.PluginManager();
+        public static Pilz.Reflection.PluginSystem.PluginManager PluginManager { get; private set; }
 
         //[DllImport("user32.dll", EntryPoint = "SetProcessDPIAware")]
         //public static extern void SetDPIAware();
@@ -47,7 +47,7 @@ namespace SM64_ROM_Manager.Publics
 
         static General()
         {
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+            //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         }
 
         public static string MyDataPath
@@ -56,6 +56,7 @@ namespace SM64_ROM_Manager.Publics
             {
                 if (string.IsNullOrEmpty(pMyDataPath))
                 {
+                    MessageBox.Show("1.ab");
                     pMyDataPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "Data");
                 }
 
