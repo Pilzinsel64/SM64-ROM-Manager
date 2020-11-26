@@ -213,7 +213,6 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControl1 = new GLWpfControl();
             
             GLControlHost = new ElementHost();
-            GLControlHost.BackColor = Color.Black;
             GLControlHost.Location = new System.Drawing.Point(0, 0);
             GLControlHost.MinimumSize = new Size(600, 120);
             GLControlHost.Name = "glControl1";
@@ -224,7 +223,7 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControlHost.Dock = DockStyle.Fill;
             GLControlHost.Enabled = false;
 
-            GLControl1.Loaded += glControl1_Load;
+            GLControl1.Ready += glControl1_Load;
             GLControl1.Render += GlControl1_Paint;
 
             GLControlHost.Resize += glControl1_Resize;
@@ -239,7 +238,8 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 //MajorVersion = 4,
                 //MinorVersion = 3,
-                RenderContinuously = true
+                RenderContinuously = true,
+                GraphicsProfile = OpenTK.Windowing.Common.ContextProfile.Compatability
             };
             GLControl1.Start(controlSettings);
 
@@ -298,7 +298,7 @@ namespace SM64_ROM_Manager.LevelEditor
             Invalidate();
         }
 
-        private void glControl1_Load(object sender, EventArgs e)
+        private void glControl1_Load(/*object sender, EventArgs e*/)
         {
             GL.Enable(EnableCap.Blend);
             GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
