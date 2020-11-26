@@ -235,11 +235,16 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControlHost.MouseMove += glControl1_MouseMove;
             GLControlHost.KeyDown += ModelPreview_KeyDown;
 
+            var controlSettings = new GLWpfControlSettings()
+            {
+                //MajorVersion = 4,
+                //MinorVersion = 3,
+                RenderContinuously = true
+            };
+            GLControl1.Start(controlSettings);
+
             GLControlHost.Child = GLControl1;
             TargetControl.Controls.Add(GLControlHost);
-
-            var controlSettings = new GLWpfControlSettings();
-            GLControl1.Start(controlSettings);
 
             UpdateProjMatrix(false);
             Camera.UpdateMatrix(ref camMtx);
@@ -247,12 +252,13 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public void Invalidate()
         {
+            GLControl1.InvalidateVisual();
             GLControlHost.Invalidate();
         }
 
         public void Update()
         {
-            GLControlHost.Invalidate();
+            //GLControl1.InvalidateVisual();
         }
 
         public void MakeCurrent()
@@ -310,6 +316,7 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 GL.ClearColor(Settings.StyleManager.AlwaysKeepBlueColors ? Color.CornflowerBlue : Main.BackColor);
                 GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+                GL.LoadIdentity();
                 GL.MatrixMode(MatrixMode.Projection);
                 GL.LoadMatrix(ref ProjMatrix);
                 GL.MatrixMode(MatrixMode.Modelview);
@@ -332,6 +339,9 @@ namespace SM64_ROM_Manager.LevelEditor
                 }
 
                 DrawAllObjects();
+
+                GL.End();
+                GL.Finish();
                 //GLControl1.SwapBuffers();
             }
         }
@@ -383,7 +393,7 @@ namespace SM64_ROM_Manager.LevelEditor
         public void UpdateProjMatrix(bool update = true)
         {
             ProjMatrix = Matrix4.CreatePerspectiveFieldOfView(FOV, (float)(GLControl1.Width / (double)GLControl1.Height), 100.0F, 100000.0F);
-            if (update) Update();
+            if (update) Invalidate();
         }
 
         private void glControl1_Wheel(object sender, MouseEventArgs e)
