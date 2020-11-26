@@ -1,0 +1,21 @@
+{
+  "Name": "Disable Mario Screen level demos",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "579C23: 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Disables the level demos on the Mario Screen.\n\nNOTE: To revert / undo this tweak, simply change the value from 00 to 07. ",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

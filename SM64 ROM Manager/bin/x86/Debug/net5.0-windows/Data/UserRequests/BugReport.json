@@ -1,0 +1,48 @@
+{
+    "Properties":
+    [
+        {
+            "Name": "Category",
+            "Type": "Text",
+            "Description": "e.g. \"Level Editor\" or \"Music Manager\""
+        },
+        {
+            "Name": "Title",
+            "Description": "Please explain quickly what the problem is.",
+            "Type": "Text"
+        },
+        {
+            "Name": "Description",
+            "Description": "Please explain it very detailed, so I can easily reproduce this bug.",
+            "Type": "LongText"
+        },
+        {
+            "Name": "Version",
+            "Description": "e.g. \"Version 1.2.0.0 Beta 3\"",
+            "Type": "Text"
+        },
+        {
+            "Name": "Error Messages",
+            "Description": "Have you got an error message?\nIf yes, copy the text of the message and past it here.",
+            "Type": "LongText",
+            "AllowEmptyState": true
+        },
+        {
+            "Name": "Attachments",
+            "Description": "What I would need (if possible):\n- Your ROM File where this error/bug happend to (if it is deticted to your ROM)\n- Screenshots or other pictures if they are helpful",
+            "Type": "Files"
+        },
+        {
+            "Name": "Contact",
+            "Description": "It would be good to know how you can be contacted.\nWrite down your Discord#0000 or Skype Name or E-Mail Address.",
+            "Type": "Text",
+            "AllowEmptyState": true
+        }
+    ],
+    "UploadSettings": {
+        "Link": "E/BWdsulKDhuPEQTjb0gpiez9Axs09e+fK+ETuK/yi95nKBnRl3fz99HT1NYFkRhGaywhyPZ9ziGiYX4Ef18oBqL6z5lzDFow16vqemc149Hc1lPuM9oO0Z/SxuBOyg3bgMWFomvg9Y=",
+        "Username": "zu4GFfoXl32foAqn9QozSFRb3zxhc2wKxhuRtN0UNlCDh6hh+VcoCyHmMkUMwdBLekgvYlrWZ9aFUEklShvFlg==",
+        "Password": "sNur0M/ogUfx4xMqOlfz3c36gzoB2L5LreSKVPviKSoG5ec+CN9Kkw=="
+    },
+    "Name": "Bug Report"
+}

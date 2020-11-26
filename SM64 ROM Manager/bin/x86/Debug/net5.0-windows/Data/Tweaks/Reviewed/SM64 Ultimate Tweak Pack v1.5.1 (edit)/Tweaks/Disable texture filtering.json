@@ -1,0 +1,21 @@
+{
+  "Name": "Disable texture filtering",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "2030: 00 00 60 25",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Disables the filtering on textures that gives them their blurry look, almost like SM64DS.\nCredit to Shygoo.\n\nNOTE: To revert / undo this tweak, simply change the bytes from 00 00 60 25 to 24 0C 20 00. ",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

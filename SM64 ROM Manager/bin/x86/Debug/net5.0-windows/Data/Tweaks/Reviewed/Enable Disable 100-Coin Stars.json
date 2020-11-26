@@ -1,0 +1,37 @@
+{
+  "Name": "Enable/Disable 100-Coin Stars",
+  "Scripts": [
+    {
+      "Name": "Disable completly",
+      "Script": "8B94: 10 20 00 0E\n8BC8: 00 00 00 00 00 00 00 00",
+      "Type": "TweakScript",
+      "Description": "Disables the 100-Coin-Star in all Levels.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Enable only in main courses (Default)",
+      "Script": "8BC8: 0C 0A AD 56 24 04 00 06\n8B94: 10 20 00 0E",
+      "Type": "TweakScript",
+      "Description": "Enables the 100-Coin-Star in all main courses (Default).",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Enable in all courses",
+      "Script": "8BC8: 0C 0A AD 56 24 04 00 06\n8B94: 00 00 00 00",
+      "Type": "TweakScript",
+      "Description": "Enables the 100-Coin-Star in all levels.",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Enable or Disable the 100-Coin-Star in all Levels.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

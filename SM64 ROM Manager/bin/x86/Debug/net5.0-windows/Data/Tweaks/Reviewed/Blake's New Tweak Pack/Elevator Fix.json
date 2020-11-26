@@ -1,0 +1,21 @@
+{
+  "Name": "Elevator Fix",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "D448: 0C 0E 10 F8 00 00 00 00\n101160: 3C 09 80 36 8D 29 11 58 8D 28 02 14 11 00 00 0E 00 00 00 00 C5 02 00 B0 3C 0A 80 34 C5 44 B1 BC 44 80 30 00 46 06 10 3C 00 00 00 00 45 01 00 06 00 00 00 00 46 04 11 00 E5 44 B1 BC C5 52 B1 B0 46 02 94 80 E5 52 B1 B0 03 E0 00 08 00 00 00 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Fixes elevators. Original code by either Kaze or jesusyoshi\nTweak Version by Blakeoramo.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

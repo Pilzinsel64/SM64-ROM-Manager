@@ -1,0 +1,32 @@
+{
+    "Properties":
+    [
+        {
+            "Name": "Destination Language",
+            "Type": "Text",
+            "Description": "In what language did you translate?"
+        },
+        {
+            "Name": "Translation Files",
+            "Description": "Please add your translated files.",
+            "Type": "Files"
+        },
+        {
+            "Name": "Contact",
+            "Description": "How can you be contacted If there are more questions open?\nWrite down your Discord#0000 or Skype Name or E-Mail Address.",
+            "Type": "Text",
+            "AllowEmptyState": true
+        },
+        {
+            "Name": "Nickname",
+            "Description": "What is your nickname?\nI need it to mention you in the changelog that everyone knows you are the translator of this language.",
+            "Type": "Text"
+        }
+    ],
+    "UploadSettings": {
+        "Link": "E/BWdsulKDhuPEQTjb0gpiez9Axs09e+fK+ETuK/yi95nKBnRl3fz99HT1NYFkRhGaywhyPZ9ziGiYX4Ef18oBqL6z5lzDFow16vqemc149Hc1lPuM9oO0Z/SxuBOyg3bgMWFomvg9Y=",
+        "Username": "zu4GFfoXl32zMO+Xh1zq3gWy9MK26UVJdq02Pym2WaTzfrmWENOczkRAkTzL4vvW2fMkQZY+BpYLzV8MMldmxg==",
+        "Password": "ZJVzBKeJspm5tbsxvUkLJVSu4ludKoEen9AJrJpoOs9Yy6orK7lJklXOjVzobNlHgOkYOQtXKzhrox6v+OvEE2naKrw5RNdD"
+    },
+    "Name": "Submit Translation"
+}

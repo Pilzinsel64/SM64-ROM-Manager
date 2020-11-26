@@ -1,0 +1,21 @@
+{
+  "Name": "Camera starts in zoomed-out view",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "42038:\n24 08 00 02\n00 00 00 00\n3C 01 80 34\nA4 28 C8 48",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "The camera will start in zoomed-out view.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

@@ -1,0 +1,24 @@
+{
+  "Name": "Parallel Lakitu Camera",
+  "Scripts": [
+    {
+      "Name": "Patch parallel laktiu camera",
+      "Script": "Imports Microsoft.VisualBasic\r\nImports System\r\nImports System.Collections.Generic\r\nImports System.IO\r\nImports System.Linq\r\nImports System.Windows.Forms\r\nImports SM64Lib\r\nImports Pilz.IO\r\n\r\nModule Script\r\n\r\n    Sub Main(params as IReadOnlyDictionary(Of String, Object))\r\n        Const ppfFileName = \"parallel.ppf\"\r\n            Dim files As EmbeddedFilesContainer = params(\"files\")\r\n            Dim patchFile As String = files.GetLocalFilePath(ppfFileName)\r\n            \r\n            General.PatchClass.ApplyPPF(params(\"romfile\"), patchFile)\r\n    End Sub\r\n\r\nEnd Module\r\n",
+      "Type": "VisualBasic",
+      "Description": "",
+      "References": [],
+      "ID": "0564DF68784F47593213F62476ECD79B",
+      "AllowRevert": true
+    }
+  ],
+  "Version": "1.0.1.0",
+  "MinVersion": "1.10.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Better parallel camera (made by abglab2)\r\n- used version of 14th December 2018\r\n\r\nControls for better parallel lakitu camera:\r\n- All old c-stick controls work the same leaving camera in 8-way angle mode without changing align\r\n- Camera does not get stuck in c-up mode and cannons\r\n- L button switches between parallel lakitu and non-parallel lakitu for water and flying\r\n- Non-parallel mode for water and flying fixes camera when switching mario->lakitu to closest aligned 8-way direction\r\n- D-pad left/right precise rotates lakitu camera allowing to change align\r\n- D-pad down switches camera back to closest aligned 8-way direction\r\n- D-pad up switches camera back to mario's angle",
+  "EmbeddedFiles": {
+    "CompressedFiles": {
+      "parallel.ppf": "VVI9SBxBFP5m99Q5F7y5U3IcJvBMhCyExFu0EbawibFcuCZVUDxhRY+DeJoUgSxh7K5In0bE8uAgWEqSQrBImzL+dCks0ggWKTazu28MecXM975v3nzv7U4ULc83nWittx7T+uuNtd5Gm95s9mKKouWnrd5ue7NLe8GzZkD/B0woFCGnRj+8V6/8lfCnmxP3QieZD91kIZSJPyO3j11/6WEDLZbr+RY2Ev/R4vZpKJIF7Q8PA7nFuktVdC0eA3YYP4Y56/f9ziwJCJg7s3xgcstXgQrwic9Pgv115m80CQxZm7DaUa59YdqDy5O5+M7c1F2rOh4e6PbZ20A4VyyOKspKftl2Tem1vWuSdPotEAKKbq1utj+MHaiUYXmCNJYCIVE+LxhBnkUjitFIf+Vydb/OmVtTmGZcGSOdwLR3GIiSsXty/s9ujnEdpBWa+gpHZgT+YlRtvGDdk9maW8gWc6XajPz4kpNaIE1tXNQOFjvk0pb1MbVd2y9OpkvFgApfGYrn7+4XqCTHvcoPTsrmkfjVg/QCl8x46Mf5fzSXXTMn8Nsi58ZWDlY7pJB+Rnp3avYBW2TLXw=="
+    }
+  },
+  "ID": "C6913E02021594711F8E6A57517F6BAB"
+}

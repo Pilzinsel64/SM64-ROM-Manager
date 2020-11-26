@@ -1,0 +1,21 @@
+{
+  "Name": "1-ups Heal Mario",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "\nAEC9B: AE 34 0F 08 80 A5 CF 00 AE\n",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "1-ups will heal Mario completely, by someone2369 (WILL NOT give an extra life)",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

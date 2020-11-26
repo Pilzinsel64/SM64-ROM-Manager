@@ -1,0 +1,21 @@
+{
+  "Name": "Disable Pausing",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "DEB70: 15 80 00 09 3C 09 80 33 85 29 DD F8 29 29 00 04 97 AE 00 08 51 20 00 01 31 CE EF FF A4 8E 00 00 97 A8 00 0A A4 88 00 02",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Disables Pausing in Courses\nOrignal ASM Code by jesusyoshi\nTweak Version by Blakeoramo.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

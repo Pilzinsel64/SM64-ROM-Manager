@@ -1,0 +1,21 @@
+{
+  "Name": "No air underwater",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "F180: 00 00 00 00\nF1B8: 00 00 00 00\n9E600: 10 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Allows you to swim freely without having to worry about running out of air and dying.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "Disable Wing Cap momentum",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "261D4: 00 00 00 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Disable momentum when flying with the Wing Cap.\nCredit goes to supermariosan.\n\nNOTE: To revert / undo this tweak, simply change the bytes from 00 00 00 00 to E5 D0 00 54. ",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

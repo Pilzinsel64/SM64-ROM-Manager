@@ -1,0 +1,1931 @@
+{
+  "11": [
+    {
+      "Name": "Several Objects",
+      "Objects": [
+        "Several Objects"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAFhYAA4g="
+        },
+        {
+          "Command": "IggAFxYAD+g="
+        },
+        {
+          "Command": "IggAGBYAEAA="
+        },
+        {
+          "Command": "IggAGRYAEBg="
+        },
+        {
+          "Command": "IggAGxYAEEg="
+        },
+        {
+          "Command": "IggAHxYABfg="
+        },
+        {
+          "Command": "IggAIBYABow="
+        },
+        {
+          "Command": "IggAIhYAB7Q="
+        },
+        {
+          "Command": "IggAIxYACGg="
+        },
+        {
+          "Command": "IggAJBYACRw="
+        },
+        {
+          "Command": "IggAJRYACdA="
+        },
+        {
+          "Command": "IggAJhYAA6g="
+        },
+        {
+          "Command": "BggAABUABmA="
+        },
+        {
+          "Command": "FwwACwDaKHAA2pYQ"
+        },
+        {
+          "Command": "FwwACACoGGAAqqRQ"
+        },
+        {
+          "Command": "FwwADwAgCNAAIBQQ"
+        }
+      ]
+    }
+  ],
+  "12": [
+    {
+      "Name": "Haunted Objects",
+      "Objects": [
+        "Bookend",
+        "Haunted Chair",
+        "Small Key",
+        "Mad Piano",
+        "Boo",
+        "Haunted Cage"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACEw="
+        },
+        {
+          "Command": "FwwBBQCRvrAAksAw"
+        },
+        {
+          "Command": "FwwADAAW1cAAFthw"
+        }
+      ]
+    },
+    {
+      "Name": "Snow Objects",
+      "Objects": [
+        "Spindrift",
+        "Penguin",
+        "Mr. Blizzard"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACAw="
+        },
+        {
+          "Command": "FwwBBQCPuLAAkIng"
+        },
+        {
+          "Command": "FwwADAAWVuAAFlpQ"
+        }
+      ]
+    },
+    {
+      "Name": "Assorted Enemies (1)",
+      "Objects": [
+        "Monty Mole",
+        "Ukiki Monkey",
+        "Fwoosh"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUAB+g="
+        },
+        {
+          "Command": "FwwBBQCN1/AAjziw"
+        },
+        {
+          "Command": "FwwADAAWAuAAFgZw"
+        }
+      ]
+    },
+    {
+      "Name": "Desert Objects",
+      "Objects": [
+        "Klepto",
+        "Eyerock",
+        "Pokey"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUAB7Q="
+        },
+        {
+          "Command": "FwwBBQCMEaAAjVfw"
+        },
+        {
+          "Command": "FwwADAAVG3AAFSHQ"
+        }
+      ]
+    },
+    {
+      "Name": "Big Bob-Omb Boss",
+      "Objects": [
+        "Big Bob-Omb",
+        "Water Bubble"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUAB2w="
+        },
+        {
+          "Command": "FwwBBQCIw9AAidRw"
+        },
+        {
+          "Command": "FwwADAATtdAAE7kQ"
+        }
+      ]
+    },
+    {
+      "Name": "Assorted Enemies (2)",
+      "Objects": [
+        "Yellow Sphere",
+        "Hoot the Owl",
+        "Yoshi Egg",
+        "Thwomp",
+        "Bullet Bill",
+        "Heave-Ho"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUABxw="
+        },
+        {
+          "Command": "FwwBBQCGDvAAh2JQ"
+        },
+        {
+          "Command": "FwwADAATKFAAEyxg"
+        }
+      ]
+    },
+    {
+      "Name": "Water Objects",
+      "Objects": [
+        "Clam",
+        "Shark",
+        "Unagi"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUAB4g="
+        },
+        {
+          "Command": "FwwBBQCKVHAAi5Gg"
+        },
+        {
+          "Command": "FwwADAAUXBAAFF6Q"
+        }
+      ]
+    },
+    {
+      "Name": "Assorted Enemies (3)",
+      "Objects": [
+        "Bubba",
+        "Wiggler",
+        "Lakitu",
+        "Spiny Ball",
+        "Spiny"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACKQ="
+        },
+        {
+          "Command": "FwwBBQCWAjAAl3Dw"
+        },
+        {
+          "Command": "FwwADAAYf6AAGIRA"
+        }
+      ]
+    },
+    {
+      "Name": "Peach & Yoshi",
+      "Objects": [
+        "Birds",
+        "Peach",
+        "Yoshi"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACIg="
+        },
+        {
+          "Command": "FwwBBQCTQDAAlYIw"
+        },
+        {
+          "Command": "FwwADAAYBUAAGAuw"
+        }
+      ]
+    },
+    {
+      "Name": "Switches",
+      "Objects": [
+        "Beta Trampoline",
+        "Cap Switches"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACDA="
+        },
+        {
+          "Command": "FwwBBQCRCeAAkT6w"
+        },
+        {
+          "Command": "FwwADAAWa9AAFmxg"
+        }
+      ]
+    },
+    {
+      "Name": "Lava Objects",
+      "Objects": [
+        "Small Bully",
+        "Big Bully",
+        "Beta Blargg"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUAB1A="
+        },
+        {
+          "Command": "FwwBBQCH4lAAiEPQ"
+        },
+        {
+          "Command": "FwwADAATSnAAE00g"
+        }
+      ]
+    }
+  ],
+  "13": [
+    {
+      "Name": "Assorted Enemies (4)",
+      "Objects": [
+        "Mr. I",
+        "Bat (Swoop)",
+        "Snufit",
+        "Dorrie",
+        "Scuttlebug"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACdw="
+        },
+        {
+          "Command": "FwwBBgCmR/AAp5hg"
+        },
+        {
+          "Command": "FwwADQAfGzAAHyIA"
+        }
+      ]
+    },
+    {
+      "Name": "Moneybags",
+      "Objects": [
+        "Moneybags",
+        "Chill Bully"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACcA="
+        },
+        {
+          "Command": "FwwBBgClaXAApcfw"
+        },
+        {
+          "Command": "FwwADQAefZAAHn7g"
+        }
+      ]
+    },
+    {
+      "Name": "Castle Objects",
+      "Objects": [
+        "Lakitu",
+        "Toads",
+        "MIPS the rabbit",
+        "Boo"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACZw="
+        },
+        {
+          "Command": "FwwBBgCjavAApOlw"
+        },
+        {
+          "Command": "FwwADQAeS/AAHlHw"
+        }
+      ]
+    },
+    {
+      "Name": "Ground Enemies",
+      "Objects": [
+        "Koopa Flag",
+        "Wooden Log",
+        "Koopa-the-Quick",
+        "Koopa",
+        "Piranha Plant",
+        "Whomp",
+        "Metallic Ball",
+        "Chain Chomp"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACVg="
+        },
+        {
+          "Command": "FwwBBgCgmWAAourw"
+        },
+        {
+          "Command": "FwwADQAdfJAAHYMQ"
+        }
+      ]
+    },
+    {
+      "Name": "Water Objects (2)",
+      "Objects": [
+        "Skeeter",
+        "Bowser Bomb",
+        "Fish",
+        "Cheep Cheep",
+        "Manta Ring",
+        "Treasure Chest"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACRQ="
+        },
+        {
+          "Command": "FwwBBgCeoAAAoBlg"
+        },
+        {
+          "Command": "FwwADQAcPbAAHEIw"
+        }
+      ]
+    },
+    {
+      "Name": "Bowser",
+      "Objects": [
+        "Bowser Flames",
+        "Yellow Sphere (Bowser 1)",
+        "Bowser",
+        "Bowser 2",
+        "Bowser Bomb",
+        "Bowser Clouds"
+      ],
+      "Commands": [
+        {
+          "Command": "BggAABUACNg="
+        },
+        {
+          "Command": "FwwBBgCX8PAAniAA"
+        },
+        {
+          "Command": "FwwADQAbkHAAG5zA"
+        }
+      ]
+    }
+  ],
+  "9": [
+    {
+      "Name": "Big Boo's Haunt",
+      "Objects": [
+        "Haunted Staircase",
+        "Floor Part",
+        "Tumbling Bridge",
+        "Bookshelf",
+        "Tumbling Bridge",
+        "Merry-Go-Round",
+        "Coffin"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAHRYAByA="
+        },
+        {
+          "Command": "IggANRIABbA="
+        },
+        {
+          "Command": "IggANhIABcg="
+        },
+        {
+          "Command": "IggANxIABeA="
+        },
+        {
+          "Command": "IggAOBIABfg="
+        },
+        {
+          "Command": "IggAORIABhA="
+        },
+        {
+          "Command": "IggAOhIABig="
+        },
+        {
+          "Command": "IggAOxIABkA="
+        },
+        {
+          "Command": "IggAPBIABlg="
+        },
+        {
+          "Command": "GgwACQDL1BAAzLUw"
+        },
+        {
+          "Command": "FwwAEgA4KMAAODlQ"
+        },
+        {
+          "Command": "FwwBBwDbFhAA3YRg"
+        }
+      ]
+    },
+    {
+      "Name": "Cool, Cool Mountain",
+      "Objects": [
+        "Wooden Cablecar",
+        "Snowman's Bottom/Head/Base",
+        "Cabin",
+        "Ice Column",
+        "Mountain Part"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIABDw="
+        },
+        {
+          "Command": "IggABBIABGw="
+        },
+        {
+          "Command": "IggABRIABKQ="
+        },
+        {
+          "Command": "IggABhIABMw="
+        },
+        {
+          "Command": "IggABxIABPQ="
+        },
+        {
+          "Command": "IggAJxYABDw="
+        },
+        {
+          "Command": "IggANhIAA+A="
+        },
+        {
+          "Command": "IggA0hIABAA="
+        },
+        {
+          "Command": "IggANxIABBw="
+        },
+        {
+          "Command": "GgwACQDQ/pAA0bKw"
+        },
+        {
+          "Command": "FwwAEgA5XJAAOWNA"
+        },
+        {
+          "Command": "FwwBBwDeBGAA4DwQ"
+        }
+      ]
+    },
+    {
+      "Name": "Inside Castle",
+      "Objects": [
+        "Star Door",
+        "Castle Floor Trap",
+        "Pendulum",
+        "Clock Big/Small Arms",
+        "Brick Pillar"
+      ],
+      "Commands": [
+        {
+          "Command": "IggANRIADxg="
+        },
+        {
+          "Command": "IggANhIAGUA="
+        },
+        {
+          "Command": "IggANxIAFTA="
+        },
+        {
+          "Command": "IggAOBIAFUg="
+        },
+        {
+          "Command": "IggAORIAFRg="
+        },
+        {
+          "Command": "IggAJxYABNA="
+        },
+        {
+          "Command": "IggAKRYABfg="
+        },
+        {
+          "Command": "IggAHBYAA6g="
+        },
+        {
+          "Command": "IggAHRYABNA="
+        },
+        {
+          "Command": "IggA0BIADwA="
+        },
+        {
+          "Command": "IggA1RIADwA="
+        },
+        {
+          "Command": "IggA0RIADwA="
+        },
+        {
+          "Command": "IggA1hIADwA="
+        },
+        {
+          "Command": "GgwACQDSMrAA0xPQ"
+        },
+        {
+          "Command": "FwwAEgA88NAAPQ3A"
+        },
+        {
+          "Command": "FwwBBwDgvBAA6E0w"
+        }
+      ]
+    },
+    {
+      "Name": "Hazy Maze Cave",
+      "Objects": [
+        "Red Mesh Wall",
+        "Giant Boulder",
+        "Falling Rock",
+        "Small Rock",
+        "Metal Platform",
+        "Elevator Platform"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAHRYABNA="
+        },
+        {
+          "Command": "IggANhIABaA="
+        },
+        {
+          "Command": "IggANxIABbg="
+        },
+        {
+          "Command": "IggAOBIABdA="
+        },
+        {
+          "Command": "IggAORIABUg="
+        },
+        {
+          "Command": "IggAOhIABXA="
+        },
+        {
+          "Command": "IggAOxIABYg="
+        },
+        {
+          "Command": "IggAPBIABTA="
+        },
+        {
+          "Command": "GgwACQDSMrAA0xPQ"
+        },
+        {
+          "Command": "FwwAEgA+agAAPnaw"
+        },
+        {
+          "Command": "FwwBBwDozTAA64ag"
+        }
+      ]
+    },
+    {
+      "Name": "Shifting Sand Land",
+      "Objects": [
+        "Sand Pits",
+        "Pyramid Top",
+        "Tox Box",
+        "Grindel",
+        "Spindel",
+        "Pyramid Wall",
+        "Pyramid Elevator Cage"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIABcA="
+        },
+        {
+          "Command": "IggABBIABdg="
+        },
+        {
+          "Command": "IggAOhIABhg="
+        },
+        {
+          "Command": "IggANhIABzQ="
+        },
+        {
+          "Command": "IggANxIAB2Q="
+        },
+        {
+          "Command": "IggAOBIAB5Q="
+        },
+        {
+          "Command": "IggAORIAB6w="
+        },
+        {
+          "Command": "IggAxxIABjA="
+        },
+        {
+          "Command": "GgwACQDNNTAAzgRQ"
+        },
+        {
+          "Command": "FwwAEgA/uZAAP8Kw"
+        },
+        {
+          "Command": "FwwBBwDsBqAA7o9Q"
+        }
+      ]
+    },
+    {
+      "Name": "Bob-Omb Battlefield",
+      "Objects": [
+        "Star Cage Bars",
+        "Wooden Bridge",
+        "Grills Door"
+      ],
+      "Commands": [
+        {
+          "Command": "IggANhIABEA="
+        },
+        {
+          "Command": "IggANxIABFg="
+        },
+        {
+          "Command": "IggAOBIABHA="
+        },
+        {
+          "Command": "GgwACQDNNTAAzgRQ"
+        },
+        {
+          "Command": "FwwAEgBAWmAAQF+w"
+        },
+        {
+          "Command": "FwwBBwDvD1AA8Ccg"
+        }
+      ]
+    },
+    {
+      "Name": "Snowman's Land",
+      "Objects": [
+        "Ice Square",
+        "Small Triangle",
+        "Snow Wave"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAHRYAByA="
+        },
+        {
+          "Command": "IggANhIAA5A="
+        },
+        {
+          "Command": "IggANxIAA2A="
+        },
+        {
+          "Command": "IggAOBIAA3g="
+        },
+        {
+          "Command": "GgwACQDQ/pAA0bKw"
+        },
+        {
+          "Command": "FwwAEgBA6EAAQO1w"
+        },
+        {
+          "Command": "FwwBBwDwpyAA8aGw"
+        }
+      ]
+    },
+    {
+      "Name": "Wet-Dry World",
+      "Objects": [
+        "Wooden Platform",
+        "Arrow Lift Platform",
+        "Water Level Diamond",
+        "Square Wooden Platform",
+        "Wooden Platform",
+        "Hexagonal Platform"
+      ],
+      "Commands": [
+        {
+          "Command": "IggANhIABYA="
+        },
+        {
+          "Command": "IggANxIABZg="
+        },
+        {
+          "Command": "IggAOBIABcA="
+        },
+        {
+          "Command": "IggAORIABeg="
+        },
+        {
+          "Command": "IggAOhIABhA="
+        },
+        {
+          "Command": "IggAOxIABig="
+        },
+        {
+          "Command": "IggAPBIABkA="
+        },
+        {
+          "Command": "GgwACQDWEpAA1uqw"
+        },
+        {
+          "Command": "FwwAEgBBn5AAQadg"
+        },
+        {
+          "Command": "FwwBBwDyIbAA86lA"
+        }
+      ]
+    },
+    {
+      "Name": "Jolly Roger Bay",
+      "Objects": [
+        "Pillar (Stalagtite)",
+        "Pillar Base",
+        "Jolly Rock",
+        "Floating Bridge",
+        "Exploding Box",
+        "Sunken ShipShip Parts"
+      ],
+      "Commands": [
+        {
+          "Command": "IggANRIACXg="
+        },
+        {
+          "Command": "IggANhIACbA="
+        },
+        {
+          "Command": "IggANxIACeg="
+        },
+        {
+          "Command": "IggAOBIACgA="
+        },
+        {
+          "Command": "IggAORIACZA="
+        },
+        {
+          "Command": "IggAOhIACcg="
+        },
+        {
+          "Command": "IggAOxIACTA="
+        },
+        {
+          "Command": "IggAPBIACWA="
+        },
+        {
+          "Command": "IggAPRIACQA="
+        },
+        {
+          "Command": "IggAPhIACRg="
+        },
+        {
+          "Command": "IggAPxIACUg="
+        },
+        {
+          "Command": "GgwACQDOhFAAz2Vw"
+        },
+        {
+          "Command": "FwwAEgBCOyAAQkbQ"
+        },
+        {
+          "Command": "FwwBBwD0KUAA9Tzw"
+        }
+      ]
+    },
+    {
+      "Name": "Tiny-Huge Island",
+      "Objects": [
+        "Huge Island Top",
+        "Tiny Island Top",
+        "Grassy Island"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIABfA="
+        },
+        {
+          "Command": "IggANhIABbA="
+        },
+        {
+          "Command": "IggANxIABcg="
+        },
+        {
+          "Command": "GgwACQDWEpAA1uqw"
+        },
+        {
+          "Command": "FwwAEgBCxuAAQs8g"
+        },
+        {
+          "Command": "FwwBBwD1vPAA9qCw"
+        }
+      ]
+    },
+    {
+      "Name": "Tick Tock Clock",
+      "Objects": [
+        "Clock Cube",
+        "Clock Prism",
+        "Clock Pendulum",
+        "Clock Metal Platform",
+        "Square Prism Platform",
+        "Hexagonal Gear Platform",
+        "Triangular Clock Gear",
+        "Clock Box",
+        "Clock Platform",
+        "Clock Big Arm",
+        "Clockwork Gear Platform",
+        "Small Gear",
+        "Big Gear"
+      ],
+      "Commands": [
+        {
+          "Command": "IggANhIAAkA="
+        },
+        {
+          "Command": "IggANxIAAlg="
+        },
+        {
+          "Command": "IggAOBIAAnA="
+        },
+        {
+          "Command": "IggAORIAAog="
+        },
+        {
+          "Command": "IggAOhIAAqg="
+        },
+        {
+          "Command": "IggAOxIAAsg="
+        },
+        {
+          "Command": "IggAPBIAAuA="
+        },
+        {
+          "Command": "IggAPRIAAvg="
+        },
+        {
+          "Command": "IggAPhIAAxA="
+        },
+        {
+          "Command": "IggAPxIAAyg="
+        },
+        {
+          "Command": "IggAQBIAA0A="
+        },
+        {
+          "Command": "IggAQRIAA1g="
+        },
+        {
+          "Command": "IggAQhIAA3A="
+        },
+        {
+          "Command": "IggAQxIAA4g="
+        },
+        {
+          "Command": "IggARBIAA6A="
+        },
+        {
+          "Command": "GgwACQDTk9AA1DFw"
+        },
+        {
+          "Command": "FwwAEgBDdAAAQ3hw"
+        },
+        {
+          "Command": "FwwBBwD3ILAA+IrQ"
+        }
+      ]
+    },
+    {
+      "Name": "Rainbow Ride",
+      "Objects": [
+        "Flying Carpet",
+        "Rainbow Ring",
+        "Rainbow Path Parts",
+        "Wing",
+        "Many non-solid platforms"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIABmA="
+        },
+        {
+          "Command": "IggABBIABng="
+        },
+        {
+          "Command": "IggABRIABpA="
+        },
+        {
+          "Command": "IggABhIABqg="
+        },
+        {
+          "Command": "IggABxIABsA="
+        },
+        {
+          "Command": "IggACBIABtg="
+        },
+        {
+          "Command": "IggACRIABvA="
+        },
+        {
+          "Command": "IggAChIABwg="
+        },
+        {
+          "Command": "IggACxIAByA="
+        },
+        {
+          "Command": "IggADBIABzg="
+        },
+        {
+          "Command": "IggADRIAB1g="
+        },
+        {
+          "Command": "IggADhIAB3A="
+        },
+        {
+          "Command": "IggADxIAB4g="
+        },
+        {
+          "Command": "IggAEBIAB6A="
+        },
+        {
+          "Command": "IggAERIAB7g="
+        },
+        {
+          "Command": "IggAEhIAB9A="
+        },
+        {
+          "Command": "IggAExIAB+g="
+        },
+        {
+          "Command": "IggAFBIACAA="
+        },
+        {
+          "Command": "IggAFRIACBg="
+        },
+        {
+          "Command": "IggAIRIACDA="
+        },
+        {
+          "Command": "IggANhIACMA="
+        },
+        {
+          "Command": "IggANxIACEg="
+        },
+        {
+          "Command": "IggAOBIACKg="
+        },
+        {
+          "Command": "IggAORIACHg="
+        },
+        {
+          "Command": "IggAOhIACNg="
+        },
+        {
+          "Command": "IggAOxIACJA="
+        },
+        {
+          "Command": "IggAPBIACQg="
+        },
+        {
+          "Command": "IggAPRIACUA="
+        },
+        {
+          "Command": "IggAPhIACGA="
+        },
+        {
+          "Command": "IggAPxIACSA="
+        },
+        {
+          "Command": "IggAQBIACPA="
+        },
+        {
+          "Command": "IggAQRIACVg="
+        },
+        {
+          "Command": "IggAQhIACXA="
+        },
+        {
+          "Command": "IggAQxIACYg="
+        },
+        {
+          "Command": "IggARBIACaA="
+        },
+        {
+          "Command": "IggARRIACbg="
+        },
+        {
+          "Command": "GgwACQDP5XAA0H6Q"
+        },
+        {
+          "Command": "FwwAEgBEoUAARKvA"
+        },
+        {
+          "Command": "FwwBBwD5CtAA+/lQ"
+        }
+      ]
+    },
+    {
+      "Name": "Castle Grounds",
+      "Objects": [
+        "Castle Flag",
+        "Castle Tower (non-solid)",
+        "Castle Moat Grills",
+        "Castle Grills"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIABvQ="
+        },
+        {
+          "Command": "IggAKRYABfg="
+        },
+        {
+          "Command": "IggANhIABww="
+        },
+        {
+          "Command": "IggANxIABmA="
+        },
+        {
+          "Command": "IggAOBIAByQ="
+        },
+        {
+          "Command": "GgwACQDXarAA2EdQ"
+        },
+        {
+          "Command": "FwwAEgBFReAARU4A"
+        },
+        {
+          "Command": "FwwBBwD8eVAA/ZHQ"
+        }
+      ]
+    },
+    {
+      "Name": "Bowser First Course",
+      "Objects": [
+        "Quartz Cristal",
+        "Quartzy Path",
+        "Wooden Bridge & Fences",
+        "Magic Staircase",
+        "Many non-solid platforms"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIAA8A="
+        },
+        {
+          "Command": "IggABBIAA9g="
+        },
+        {
+          "Command": "IggABRIAA/A="
+        },
+        {
+          "Command": "IggABhIABAg="
+        },
+        {
+          "Command": "IggABxIABCA="
+        },
+        {
+          "Command": "IggACBIABDg="
+        },
+        {
+          "Command": "IggACRIABFA="
+        },
+        {
+          "Command": "IggAChIABGg="
+        },
+        {
+          "Command": "IggACxIABIA="
+        },
+        {
+          "Command": "IggADBIABJg="
+        },
+        {
+          "Command": "IggADRIABLA="
+        },
+        {
+          "Command": "IggADhIABMg="
+        },
+        {
+          "Command": "IggADxIABOA="
+        },
+        {
+          "Command": "IggAEBIABPg="
+        },
+        {
+          "Command": "IggAERIABRA="
+        },
+        {
+          "Command": "IggANhIABVg="
+        },
+        {
+          "Command": "IggANxIABUA="
+        },
+        {
+          "Command": "IggAOBIABSg="
+        },
+        {
+          "Command": "IggAORIABXA="
+        },
+        {
+          "Command": "IggAOhIABYg="
+        },
+        {
+          "Command": "IggAOxIABaA="
+        },
+        {
+          "Command": "IggAPBIABbg="
+        },
+        {
+          "Command": "IggAPRIABdA="
+        },
+        {
+          "Command": "IggAPhIABeg="
+        },
+        {
+          "Command": "IggAPxIABgA="
+        },
+        {
+          "Command": "GgwACQDP5XAA0H6Q"
+        },
+        {
+          "Command": "FwwAEgBFv2AARcYA"
+        },
+        {
+          "Command": "FwwBBwD+EdAA/xAA"
+        }
+      ]
+    },
+    {
+      "Name": "Vanish Cap",
+      "Objects": [
+        "Wood Platform"
+      ],
+      "Commands": [
+        {
+          "Command": "IggANg4AAfA="
+        },
+        {
+          "Command": "GgwACQDXarAA2EdQ"
+        },
+        {
+          "Command": "FwwAEgBGEiAARhTQ"
+        },
+        {
+          "Command": "FwwBBwD/kAABADzQ"
+        }
+      ]
+    },
+    {
+      "Name": "Bowser Second Course",
+      "Objects": [
+        "Platform and Cage Track",
+        "Cage Track",
+        "Wire Meshes",
+        "Flat Star",
+        "Warp Cone",
+        "Mesh Cage Elevator",
+        "Cage Platform",
+        "Sinking Platforms",
+        "Many non-solid platforms"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIABLA="
+        },
+        {
+          "Command": "IggABBIABMg="
+        },
+        {
+          "Command": "IggABRIABOA="
+        },
+        {
+          "Command": "IggABhIABPg="
+        },
+        {
+          "Command": "IggABxIABRA="
+        },
+        {
+          "Command": "IggACBIABSg="
+        },
+        {
+          "Command": "IggACRIABUA="
+        },
+        {
+          "Command": "IggAChIABVg="
+        },
+        {
+          "Command": "IggACxIABXA="
+        },
+        {
+          "Command": "IggADBIABYg="
+        },
+        {
+          "Command": "IggADRIABaA="
+        },
+        {
+          "Command": "IggADhIABbg="
+        },
+        {
+          "Command": "IggADxIABdA="
+        },
+        {
+          "Command": "IggAEBIABeg="
+        },
+        {
+          "Command": "IggAERIABgA="
+        },
+        {
+          "Command": "IggAEhIABhg="
+        },
+        {
+          "Command": "IggAExIABjA="
+        },
+        {
+          "Command": "IggAFBIABkg="
+        },
+        {
+          "Command": "IggAFRIABmA="
+        },
+        {
+          "Command": "IggANhIAB1g="
+        },
+        {
+          "Command": "IggANxIABsA="
+        },
+        {
+          "Command": "IggAOBIAB3A="
+        },
+        {
+          "Command": "IggAORIABqg="
+        },
+        {
+          "Command": "IggAOhIABpA="
+        },
+        {
+          "Command": "IggAOxIABng="
+        },
+        {
+          "Command": "IggAPBIABwg="
+        },
+        {
+          "Command": "IggAPRIAB4g="
+        },
+        {
+          "Command": "IggAPhIAByg="
+        },
+        {
+          "Command": "IggAPxIAB0A="
+        },
+        {
+          "Command": "IggAQBIABtg="
+        },
+        {
+          "Command": "IggAQRIABvA="
+        },
+        {
+          "Command": "GgwACQDP5XAA0H6Q"
+        },
+        {
+          "Command": "FwwAEgBGqEAARrCQ"
+        },
+        {
+          "Command": "FwwBBwEAvNABAhjg"
+        }
+      ]
+    },
+    {
+      "Name": "Bowser Third Course",
+      "Objects": [
+        "Fences",
+        "Platforms Path",
+        "Track For Platform",
+        "Pole & Spike",
+        "Rainbow Staircase",
+        "Many non-solid platforms"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIABDA="
+        },
+        {
+          "Command": "IggABBIABEg="
+        },
+        {
+          "Command": "IggABRIABGA="
+        },
+        {
+          "Command": "IggABhIABHg="
+        },
+        {
+          "Command": "IggABxIABJA="
+        },
+        {
+          "Command": "IggACBIABKg="
+        },
+        {
+          "Command": "IggACRIABMA="
+        },
+        {
+          "Command": "IggAChIABNg="
+        },
+        {
+          "Command": "IggACxIABPA="
+        },
+        {
+          "Command": "IggADBIABQg="
+        },
+        {
+          "Command": "IggADRIABSA="
+        },
+        {
+          "Command": "IggADhIABTg="
+        },
+        {
+          "Command": "IggADxIABVA="
+        },
+        {
+          "Command": "IggAEBIABWg="
+        },
+        {
+          "Command": "IggAERIABYA="
+        },
+        {
+          "Command": "IggAEhIABZg="
+        },
+        {
+          "Command": "IggAExIABbA="
+        },
+        {
+          "Command": "IggAFBIABcg="
+        },
+        {
+          "Command": "IggANhIABeA="
+        },
+        {
+          "Command": "IggANxIABfg="
+        },
+        {
+          "Command": "IggAORIABhA="
+        },
+        {
+          "Command": "IggAPBIABig="
+        },
+        {
+          "Command": "IggAPRIABkA="
+        },
+        {
+          "Command": "IggAPhIABlg="
+        },
+        {
+          "Command": "IggAPxIABnA="
+        },
+        {
+          "Command": "IggAQBIABog="
+        },
+        {
+          "Command": "IggAQRIABqA="
+        },
+        {
+          "Command": "IggAQhIABrg="
+        },
+        {
+          "Command": "IggAQxIABtA="
+        },
+        {
+          "Command": "IggARBIABug="
+        },
+        {
+          "Command": "IggARRIABwA="
+        },
+        {
+          "Command": "GgwACQDP5XAA0H6Q"
+        },
+        {
+          "Command": "FwwAEgBHfQAAR4Sg"
+        },
+        {
+          "Command": "FwwBBwEDTBABBQQQ"
+        }
+      ]
+    },
+    {
+      "Name": "Lethal Lava Land",
+      "Objects": [
+        "Bascule Bridge",
+        "Wooden Bridge Path",
+        "Long Sinking Platform",
+        "Bowser Puzzle Pieces",
+        "Giant Log",
+        "Many non-solid platforms"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIACeA="
+        },
+        {
+          "Command": "IggABBIACfg="
+        },
+        {
+          "Command": "IggABRIAChA="
+        },
+        {
+          "Command": "IggABhIACig="
+        },
+        {
+          "Command": "IggABxIACkA="
+        },
+        {
+          "Command": "IggACBIACmA="
+        },
+        {
+          "Command": "IggAChIACpA="
+        },
+        {
+          "Command": "IggACxIACqg="
+        },
+        {
+          "Command": "IggADBIACsA="
+        },
+        {
+          "Command": "IggADRIACtg="
+        },
+        {
+          "Command": "IggADhIACvA="
+        },
+        {
+          "Command": "IggAOBIACyA="
+        },
+        {
+          "Command": "IggAOhIACzg="
+        },
+        {
+          "Command": "IggAPhIAC7A="
+        },
+        {
+          "Command": "IggAPxIAC8g="
+        },
+        {
+          "Command": "IggAQBIAC+A="
+        },
+        {
+          "Command": "IggAQRIAC/g="
+        },
+        {
+          "Command": "IggAQxIADBA="
+        },
+        {
+          "Command": "IggARBIADDA="
+        },
+        {
+          "Command": "IggARRIADFA="
+        },
+        {
+          "Command": "IggARhIADHA="
+        },
+        {
+          "Command": "IggARxIADJA="
+        },
+        {
+          "Command": "IggASBIADLA="
+        },
+        {
+          "Command": "IggASRIADNA="
+        },
+        {
+          "Command": "IggAShIADPA="
+        },
+        {
+          "Command": "IggASxIADRA="
+        },
+        {
+          "Command": "IggATBIADTA="
+        },
+        {
+          "Command": "IggATRIADVA="
+        },
+        {
+          "Command": "IggAThIADXA="
+        },
+        {
+          "Command": "IggATxIADZA="
+        },
+        {
+          "Command": "IggAUBIADbA="
+        },
+        {
+          "Command": "IggANhIACwg="
+        },
+        {
+          "Command": "IggANxIADdA="
+        },
+        {
+          "Command": "IggAORIADeg="
+        },
+        {
+          "Command": "IggACRIACng="
+        },
+        {
+          "Command": "IggANRIAC1A="
+        },
+        {
+          "Command": "IggAOxIAC2g="
+        },
+        {
+          "Command": "GgwACQDKe/AAy1QQ"
+        },
+        {
+          "Command": "FwwAEgBIybAASNkw"
+        },
+        {
+          "Command": "FwwBBwEFhBABCAzg"
+        }
+      ]
+    },
+    {
+      "Name": "Dire, Dire Docks",
+      "Objects": [
+        "Yellow Pole",
+        "Bowser Picture Door",
+        "Bowser Submarine"
+      ],
+      "Commands": [
+        {
+          "Command": "IggANhIABHg="
+        },
+        {
+          "Command": "IggANxIABKA="
+        },
+        {
+          "Command": "IggAOBIABFA="
+        },
+        {
+          "Command": "GgwACQDOhFAAz2Vw"
+        },
+        {
+          "Command": "FwwAEgBJWmAASWCQ"
+        },
+        {
+          "Command": "FwwBBwEIjOABCYnw"
+        }
+      ]
+    },
+    {
+      "Name": "Whomp's Fortress",
+      "Objects": [
+        "Rocky Staircase",
+        "Floating Brick Platform",
+        "Whomp's Tower",
+        "Bullet Bill Cannon",
+        "Platform an Wooden Board Bridge",
+        "Grass & Flowers",
+        "Clock-Like Rotating Bridge",
+        "Concrete Bridge",
+        "Giant Pole",
+        "Whomp's Tower Platforms",
+        "Breakable Wall Corners",
+        "Giant Wooden Board",
+        "Tower Door"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIAB+A="
+        },
+        {
+          "Command": "IggABBIACCA="
+        },
+        {
+          "Command": "IggABRIACGA="
+        },
+        {
+          "Command": "IggABhIACHg="
+        },
+        {
+          "Command": "IggABxIACJA="
+        },
+        {
+          "Command": "IggACBIACKg="
+        },
+        {
+          "Command": "IggACRIACOg="
+        },
+        {
+          "Command": "IggAChIACQA="
+        },
+        {
+          "Command": "IggADBIACUA="
+        },
+        {
+          "Command": "IggADRIACuA="
+        },
+        {
+          "Command": "IggADhIACVg="
+        },
+        {
+          "Command": "IggADxIACaA="
+        },
+        {
+          "Command": "IggAEBIACbg="
+        },
+        {
+          "Command": "IggAERIACdA="
+        },
+        {
+          "Command": "IggAEhIACeg="
+        },
+        {
+          "Command": "IggArhIACgA="
+        },
+        {
+          "Command": "IggAsRIACkA="
+        },
+        {
+          "Command": "IggArxIAClg="
+        },
+        {
+          "Command": "IggArRIACpg="
+        },
+        {
+          "Command": "IggAsBIACrA="
+        },
+        {
+          "Command": "IggAshIACsg="
+        },
+        {
+          "Command": "IggALBIACvg="
+        },
+        {
+          "Command": "IggALRIACxA="
+        },
+        {
+          "Command": "IggALhIACzg="
+        },
+        {
+          "Command": "IggALxIAC2A="
+        },
+        {
+          "Command": "IggANhIAC3g="
+        },
+        {
+          "Command": "IggANxIAC5A="
+        },
+        {
+          "Command": "IggAOBIAC6g="
+        },
+        {
+          "Command": "IggAORIAC+A="
+        },
+        {
+          "Command": "IggAOhIAC8g="
+        },
+        {
+          "Command": "GgwACQDWEpAA1uqw"
+        },
+        {
+          "Command": "FwwAEgBJ2lAASecQ"
+        },
+        {
+          "Command": "FwwBBwEKCfABCygQ"
+        }
+      ]
+    },
+    {
+      "Name": "Castle Courtyard",
+      "Objects": [
+        "Castle Courtyard Tower"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAJxYABNA="
+        },
+        {
+          "Command": "IggAAxIAAgA="
+        },
+        {
+          "Command": "GgwACQDXarAA2EdQ"
+        },
+        {
+          "Command": "FwwAEgBK9nAASvkw"
+        },
+        {
+          "Command": "FwwBBwEOm2ABDwng"
+        }
+      ]
+    },
+    {
+      "Name": "Wing Cap",
+      "Objects": [
+        "Cloud"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAAxIAAWA="
+        },
+        {
+          "Command": "GgwACQDP5XAA0H6Q"
+        },
+        {
+          "Command": "FwwAEgBMJwAATCkg"
+        },
+        {
+          "Command": "FwwBBwESWjABEuQA"
+        }
+      ]
+    },
+    {
+      "Name": "Bowser Second Battle",
+      "Objects": [
+        "Bowser's Lava Platform"
+      ],
+      "Commands": [
+        {
+          "Command": "IggAJBIAAXA="
+        },
+        {
+          "Command": "GgwACQDKe/AAy1QQ"
+        },
+        {
+          "Command": "FwwAEgBM6fAATOwA"
+        },
+        {
+          "Command": "FwwBBwEVxoABFeIg"
+        }
+      ]
+    },
+    {
+      "Name": "Bowser Third Battle",
+      "Objects": [
+        "Bowser Platforms",
+        "Bowser Bomb Stand"
+      ],
+      "Commands": [
+        {
+          "Command": "IggANhIAApA="
+        },
+        {
+          "Command": "IggANxIAAqg="
+        },
+        {
+          "Command": "IggAOBIAAsA="
+        },
+        {
+          "Command": "IggAORIAAtg="
+        },
+        {
+          "Command": "IggAOhIAAvA="
+        },
+        {
+          "Command": "IggAOxIAAwg="
+        },
+        {
+          "Command": "IggAPBIAAyA="
+        },
+        {
+          "Command": "IggAPRIAAzg="
+        },
+        {
+          "Command": "IggAPhIAA1A="
+        },
+        {
+          "Command": "IggAPxIAA2g="
+        },
+        {
+          "Command": "IggAAxIAA4A="
+        },
+        {
+          "Command": "FwwAEgBNFPAATRkQ"
+        },
+        {
+          "Command": "FwwBBwEWYiABFrLg"
+        },
+        {
+          "Command": "FwwACgDH+rAAyfvw"
+        }
+      ]
+    },
+    {
+      "Name": "Tall, Tall Mountain",
+      "Objects": [
+        "Little Cage",
+        "Giant Wooden Log (Pitoune)",
+        "Mushroom Platforms",
+        "Cannon Hole",
+        "Mountain Bridge Parts",
+        "Vine Bridge",
+        "Blue Smiley",
+        "Yellow Smiley",
+        "Star Smiley",
+        "Moon Smiley",
+        "Tall Tall Slide Exit Podium",
+        ""
+      ],
+      "Commands": [
+        {
+          "Command": "IggAexIADfQ="
+        },
+        {
+          "Command": "IggANRIABzA="
+        },
+        {
+          "Command": "IggANhIABxA="
+        },
+        {
+          "Command": "IggANxIADRQ="
+        },
+        {
+          "Command": "IggAOBIADUw="
+        },
+        {
+          "Command": "IggAORIADYQ="
+        },
+        {
+          "Command": "IggAOhIADbw="
+        },
+        {
+          "Command": "IggAAxIAB0g="
+        },
+        {
+          "Command": "IggABBIAB3g="
+        },
+        {
+          "Command": "IggABRIAB6g="
+        },
+        {
+          "Command": "IggABhIAB9g="
+        },
+        {
+          "Command": "IggABxIACAg="
+        },
+        {
+          "Command": "IggACBIACDA="
+        },
+        {
+          "Command": "IggACRIACFg="
+        },
+        {
+          "Command": "IggAChIACIA="
+        },
+        {
+          "Command": "IggACxIACKg="
+        },
+        {
+          "Command": "IggADBIACNA="
+        },
+        {
+          "Command": "IggADRIACPg="
+        },
+        {
+          "Command": "IggADxIACSA="
+        },
+        {
+          "Command": "IggAEBIACUg="
+        },
+        {
+          "Command": "IggAERIACXA="
+        },
+        {
+          "Command": "IggAEhIACZA="
+        },
+        {
+          "Command": "IggAExIACcA="
+        },
+        {
+          "Command": "IggAFBIACfA="
+        },
+        {
+          "Command": "IggAFRIAChg="
+        },
+        {
+          "Command": "IggAIRIACkA="
+        },
+        {
+          "Command": "GgwACQDUsXAA1ZKQ"
+        },
+        {
+          "Command": "FwwAEgBOsfAATsAA"
+        },
+        {
+          "Command": "FwwBBwEXMuABGjdg"
+        }
+      ]
+    }
+  ]
+}

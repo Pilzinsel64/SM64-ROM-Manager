@@ -1,9 +1,11 @@
 # Include Data-Folder in bin/Data/Debug
 !bin/
 bin/*
-!bin/Debug/
-bin/Debug/*
-!bin/Debug/net48/
-bin/Debug/net48/*
-!bin/Debug/net48/Data/
-bin/Debug/net48/Data/Settings.json
+!bin/x86/
+bin/x86/*
+!bin/x86/Debug/
+bin/x86/Debug/*
+!bin/x86/Debug/net5.0-windows/
+bin/x86/Debug/net5.0-windows/*
+!bin/x86/Debug/net5.0-windows/Data/
+bin/x86/Debug/net5.0-windows/Data/Settings.json

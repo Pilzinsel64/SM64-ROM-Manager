@@ -1,0 +1,22 @@
+{
+  "Name": "ROM Updates",
+  "Scripts": [
+    {
+      "Name": "v1.11.0.0 Beta 4",
+      "Script": "108694: 80 40 20 00\r\n1202F34: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\n1203468: 10 00 00 11 00 00 00 00 8F BE 00 1C 03 E0 00 08 27 BD 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3C 08 80 34 91 0A BA CB 00 0A 59 80 00 0A 51 00 00 4A 10 20 00 4B 10 20 00 00 00 00 AF C2 00 00 8F C2 00 00 03 C0 E8 21 8F BE 00 1C 03 E0 00 08 27 BD 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\n",
+      "Type": "TweakScript",
+      "Description": "changes jump for cmd17 ptr, pads function at 1202F34 with 00s instead of 01s, fixes water crash on vc",
+      "References": [],
+      "ID": "DAB49957287B8480C658476CA4F3247B",
+      "AllowRevert": false
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.10.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": "9649695AE2AF539E298D328B77CF32B7"
+}

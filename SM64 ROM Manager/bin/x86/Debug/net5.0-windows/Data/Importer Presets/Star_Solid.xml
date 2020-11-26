@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<m64custom name="Star (Solid)" version="1.0.0.0">
+  <description></description>
+  <preset name="">
+    <description></description>
+    <script></script>
+    <max_length>8000</max_length>
+    <rom_address>AE5758</rom_address>
+    <ram_address>3033308</ram_address>
+    <script name="Extend Bank 03 for Importing" description=" Extend Bank 03.&#xD;&#xA;" type="0" references="">2ABCAC: 17 0C 00 03 00 AB 24 50 00 AE D7 58</script>
+    <collision_pointers></collision_pointers>
+    <geometry_pointers>
+      <ptr>219C5C</ptr>
+    </geometry_pointers>
+  </preset>
+</m64custom>

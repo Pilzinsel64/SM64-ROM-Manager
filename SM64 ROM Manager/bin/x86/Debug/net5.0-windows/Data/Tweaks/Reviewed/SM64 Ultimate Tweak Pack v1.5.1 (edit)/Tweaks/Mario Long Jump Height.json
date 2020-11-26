@@ -1,0 +1,21 @@
+{
+  "Name": "Mario Long Jump Height",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//DEFAULT VALUE: 41F0\n\nD8AE: [16, \"Height (DEFAULT: 41F0)\", hex]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modify the height of Mario's long jump (Default: 41F0)\n\nCredit goes to Viper for creating the gameshark code",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

@@ -1,0 +1,448 @@
+{
+  "Name": "Default",
+  "TextTableGroups": [
+    {
+      "Encoding": "m64",
+      "Segmented": {
+        "BankAddress": 33554432,
+        "BankStartRom": 8401238
+      },
+      "Data": {
+        "TableRomOffset": 8469438,
+        "TableMaxItems": 170,
+        "DataRomOffset": 8433290,
+        "DataMaxSize": 33428
+      },
+      "DialogData": {
+        "TableRomOffset": 8466718,
+        "SoundEffectTable": 974424,
+        "HasSoundEffects": true
+      },
+      "ItemDescriptions": "Levelentry (BOB)\r\nPink Bob-Omb (BOB)\r\nPink Bob-Omb (BOB)\r\nPink Bob-Omb (BOB)\r\nPink Bob-Omb open cannon (BOB)\r\nKoopa - Start (BOB)\r\nKoopa - Cheated (BOB)\r\nKoopa - defeated (BOB)\r\nWooden signpost (BOB)\r\nKoopa - Start (THI)\r\nActivated switch - Wing cap\r\nActivated switch - Metal cap\r\nActivated switch - Vanish cap\r\n100 coins collected\r\nGeneral star collected (Behavior 3EE4)\r\nWooden signpost (BOB)\r\nWooden signpost (SSS, LLL, SML)\r\nKing Bob-Omb - start (BOB)\r\nWooden signpost (WF)\r\nSignpost (IC)\r\nPeach's letter\r\nBowser welcome (IC)\r\nKeydoor - Need a key (IC)\r\nKeydoor - Wrong key (IC)\r\nStardoormessage - 1 star left\r\nStardoormessage - 3 stars left\r\nStardoormessage - 8 stars left\r\nStardoormessage - 30 stars left\r\nStardoormessage - 50 stars left\r\nStardoormessage - 70 stars left\r\nLevelentry (WF)\r\nKoopa - Defeated (THI)\r\nWooden signpost (BOB & SSS)\r\nInitial Start\r\nLakitu\r\nWooden signpost (BOB)\r\nWooden signpost (WF)\r\nPenguin - lost (CCM)\r\nUnlocking star-door\r\nWooden signpost (BOB)\r\nWooden signpost (CCM)\r\nKoopa - lost (BOB)\r\nWooden signpost (WF)\r\nWooden signpost (SSS, HMC)\r\nHoot Hoot - Wake up (WF)\r\nHoot Hoot - Mario is too heavy (WF)\r\nSignpost (IC)\r\nPink Bob-Omb (Open a cannon)\r\nLevelentry (CCM)\r\nWooden signpost (CCM)\r\nWooden signpost (BOB & HMC)\r\nWooden signpost (CG, WF & JRB)\r\nSignpost (IC)\r\nWooden signpost (BOB, DDD & WDW)\r\nWooden signpost (CCM)\r\nRacing Penguin - Start (CCM)\r\nRacing Penguin - Won (CCM)\r\nPenguin mother - Lost baby (CCM)\r\nPenguin mother - Correct baby (CCM)\r\nPenguin mother - Lost baby (CCM)\r\nWooden signpost (JRB)\r\nWooden signpost (SML)\r\nWooden signpost (HMC)\r\nWooden signpost (BBH)\r\nWooden signpost (BOB)\r\nWooden signpost (CG)\r\nWooden signpost (1st Bowser course)\r\nBowser battle message (1st Bowser fight)\r\nWooden signpost (LLL)\r\nSignpost (IC)\r\nSignpost (IC)\r\nWooden signpost (HMC)\r\nWooden signpost (TTM)\r\nWooden signpost (JRB)\r\nWooden signpost (BOB)\r\nSignpost (IC)\r\nStar from Toad (IC)\r\nSignpost (IC)\r\nWooden signpost (WF)\r\nUkiki - start (TTM)\r\nUkiki - star giving (TTM)\r\nWooden signpost (WDW)\r\nStar from Toad (IC)\r\nStar from Toad (IC)\r\nMips 1\r\nWooden signpost (BBH)\r\nWooden signpost (BBH, LLL & SML)\r\nWooden signpost (CCM)\r\nWooden signpost (HMC)\r\nWooden signpost (HMC)\r\nBowser message (1st Bowser course)\r\nWooden signpost (CCM, THI & TTM)\r\nBowser battle message (2nd Bowser fight)\r\nBowser battle message (3rd Bowser fight)\r\nWooden signpost (CCM & TTM)\r\nWooden signpost (BOB)\r\nWooden signpost (WF)\r\nLevelentry (LLL)\r\nLevelentry (BBH)\r\nUnused\r\nUkiki - caught cap (TTM)\r\nUkiki - cap recovered\r\nWooden signpost (CC)\r\nWooden signpost (SSS)\r\nWooden signpost (BOB & WF)\r\nPink Bob-Omb - cannon opened (BOB)\r\nPink Bob-Omb - cannon opened\r\nKilling Boo (BBH)\r\nAll Boos killed (BBH)\r\nSnowman - body lost (CCM)\r\nSnowman - start rolling (CCM)\r\nSnowman - succesfully (CCM)\r\nWooden signpost (BOB)\r\nWooden signpost (BOB, WF & JRB)\r\nWhomp - start (WF)\r\nWhomp - defeated (WF)\r\nKing Bob-Omb - defeated (BOB)\r\nEyerok - Start (SSS)\r\nEyerok - Defeated (SSS)\r\nBowser - defeated (1st Bowser fight)\r\nBowser - defeated (2nd Bowser fight)\r\nBowser - defeated under 120 stars (Bowser 3rd Battle)\r\nWooden signpost (HMC)\r\nWooden signpost (Metal cap)\r\nWooden signpost (HMC)\r\nWooden signpost (HMC)\r\nWooden signpost (HMC)\r\nWooden signpost (HMC)\r\nKing Bob-Omb - Cheated (BOB)\r\nLevelentry (Vanish cap)\r\nLevelentry (Metal cap)\r\nLevelentry (Wing cap)\r\nRacing Penguin - Cheated (CCM)\r\nToad (IC)\r\nToad (IC)\r\nToad (IC)\r\nToad (IC)\r\nToad (IC)\r\nWooden signpost (HMC)\r\nWooden signpost (HMC)\r\nWooden signpost (HMC)\r\nStar Message - one star\r\nStar Message - three stars\r\nStar Message - eight stars\r\nStar Message - 30 stars\r\nStar Message - 50 stars\r\nStar Message - 70 stars\r\nSignpost (IC)\r\nWooden signpost (SML)\r\nWooden signpost (secret slide)\r\nWiggler - Start (THI)\r\nWiggler - 1st hit (THI)\r\nWiggler - Defeated (THI)\r\nEntering Snowman's path (SML)\r\nToad - after giving star from text #82\r\nToad - after giving star from text #76\r\nToad - after giving star from text #83\r\nWooden signpost (SSS)\r\nWooden signpost (CC)\r\nWooden signpost (CC)\r\nWooden signpost (CC, BBH)\r\nYoshi\r\nMips 2\r\nBowser - Defeated at 120 stars (3rd Bowser fight)\r\nRacing Penguin - At 120 stars (CCM)\r\nWooden signpost (THI)\r\nWooden signpost (THI)\r\nWooden signpost (CG)\r\nWiggler - 2nd hit (THI)\r\nWooden signpost (JRB)",
+      "TableType": 1,
+      "Name": "Dialogs"
+    },
+    {
+      "Encoding": "m64",
+      "Segmented": {
+        "BankAddress": 33554432,
+        "BankStartRom": 8401238
+      },
+      "Data": {
+        "TableRomOffset": 8470718,
+        "TableMaxItems": 26,
+        "DataRomOffset": 8470122,
+        "DataMaxSize": 595
+      },
+      "DialogData": {
+        "TableRomOffset": 0
+      },
+      "ItemDescriptions": "Level 01: 1\r\nLevel 02: 2\r\nLevel 03: 3\r\nLevel 04: 4\r\nLevel 05: 5\r\nLevel 06: 6\r\nLevel 07: 7\r\nLevel 08: 8\r\nLevel 09: 9\r\nLevel 10: 10\r\nLevel 11: 11\r\nLevel 12: 12\r\nLevel 13: 13\r\nLevel 14: 14\r\nLevel 15: 15\r\nBowser 1\r\nBowser 2\r\nBowser 3\r\nPrincess's Secret Slide\r\nMetal Cap\r\nWing Cap\r\nVanish Cap\r\nRainbow Secret Level\r\nSecret Aquarium\r\nUnused\r\nSecret Stars",
+      "TableType": 0,
+      "Name": "Levels"
+    },
+    {
+      "Encoding": "m64",
+      "Segmented": {
+        "BankAddress": 33554432,
+        "BankStartRom": 8401238
+      },
+      "Data": {
+        "TableRomOffset": 8473218,
+        "TableMaxItems": 97,
+        "DataRomOffset": 8470826,
+        "DataMaxSize": 2389
+      },
+      "DialogData": {
+        "TableRomOffset": 0
+      },
+      "ItemDescriptions": "Level 01, Star 1\r\nLevel 01, Star 2\r\nLevel 01, Star 3\r\nLevel 01, Star 4\r\nLevel 01, Star 5\r\nLevel 01, Star 6\r\nLevel 02, Star 1\r\nLevel 02, Star 2\r\nLevel 02, Star 3\r\nLevel 02, Star 4\r\nLevel 02, Star 5\r\nLevel 02, Star 6\r\nLevel 03, Star 1\r\nLevel 03, Star 2\r\nLevel 03, Star 3\r\nLevel 03, Star 4\r\nLevel 03, Star 5\r\nLevel 03, Star 6\r\nLevel 04, Star 1\r\nLevel 04, Star 2\r\nLevel 04, Star 3\r\nLevel 04, Star 4\r\nLevel 04, Star 5\r\nLevel 04, Star 6\r\nLevel 05, Star 1\r\nLevel 05, Star 2\r\nLevel 05, Star 3\r\nLevel 05, Star 4\r\nLevel 05, Star 5\r\nLevel 05, Star 6\r\nLevel 06, Star 1\r\nLevel 06, Star 2\r\nLevel 06, Star 3\r\nLevel 06, Star 4\r\nLevel 06, Star 5\r\nLevel 06, Star 6\r\nLevel 07, Star 1\r\nLevel 07, Star 2\r\nLevel 07, Star 3\r\nLevel 07, Star 4\r\nLevel 07, Star 5\r\nLevel 07, Star 6\r\nLevel 08, Star 1\r\nLevel 08, Star 2\r\nLevel 08, Star 3\r\nLevel 08, Star 4\r\nLevel 08, Star 5\r\nLevel 08, Star 6\r\nLevel 09, Star 1\r\nLevel 09, Star 2\r\nLevel 09, Star 3\r\nLevel 09, Star 4\r\nLevel 09, Star 5\r\nLevel 09, Star 6\r\nLevel 10, Star 1\r\nLevel 10, Star 2\r\nLevel 10, Star 3\r\nLevel 10, Star 4\r\nLevel 10, Star 5\r\nLevel 10, Star 6\r\nLevel 11, Star 1\r\nLevel 11, Star 2\r\nLevel 11, Star 3\r\nLevel 11, Star 4\r\nLevel 11, Star 5\r\nLevel 11, Star 6\r\nLevel 12, Star 1\r\nLevel 12, Star 2\r\nLevel 12, Star 3\r\nLevel 12, Star 4\r\nLevel 12, Star 5\r\nLevel 12, Star 6\r\nLevel 13, Star 1\r\nLevel 13, Star 2\r\nLevel 13, Star 3\r\nLevel 13, Star 4\r\nLevel 13, Star 5\r\nLevel 13, Star 6\r\nLevel 14, Star 1\r\nLevel 14, Star 2\r\nLevel 14, Star 3\r\nLevel 14, Star 4\r\nLevel 14, Star 5\r\nLevel 14, Star 6\r\nLevel 15, Star 1\r\nLevel 15, Star 2\r\nLevel 15, Star 3\r\nLevel 15, Star 4\r\nLevel 15, Star 5\r\nLevel 15, Star 6\r\nSecret Star\r\nUnbekannt\r\nUnbekannt\r\nUnbekannt\r\nUnbekannt\r\nUnbekannt\r\nUnbekannt",
+      "TableType": 0,
+      "Name": "Acts"
+    },
+    {
+      "Encoding": "m64",
+      "Segmented": {
+        "BankAddress": 2149863424,
+        "BankStartRom": 0
+      },
+      "Data": {
+        "TableRomOffset": 968164,
+        "TableMaxItems": 9,
+        "DataRomOffset": 967932,
+        "DataMaxSize": 232
+      },
+      "DialogData": {
+        "TableRomOffset": 0
+      },
+      "TableType": 0,
+      "Name": "Ending"
+    }
+  ],
+  "TextArrayGroups": [
+    {
+      "Encoding": "m64",
+      "Texts": [
+        {
+          "RomAddress": 2458200,
+          "MaxLength": 8
+        },
+        {
+          "RomAddress": 2458208,
+          "MaxLength": 8
+        },
+        {
+          "RomAddress": 2458216,
+          "MaxLength": 8
+        },
+        {
+          "RomAddress": 2458224,
+          "MaxLength": 8
+        },
+        {
+          "RomAddress": 2458232,
+          "MaxLength": 4
+        },
+        {
+          "RomAddress": 2458244,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 2458256,
+          "MaxLength": 8
+        },
+        {
+          "RomAddress": 2458264,
+          "MaxLength": 8
+        },
+        {
+          "RomAddress": 2458272,
+          "MaxLength": 8
+        },
+        {
+          "RomAddress": 2458280,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 2458292,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 2458316,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 2458328,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 2458348,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 2458372,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 2458392,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 2458412,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 2458428,
+          "MaxLength": 4
+        },
+        {
+          "RomAddress": 2458432,
+          "MaxLength": 4
+        },
+        {
+          "RomAddress": 2458436,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 2458448,
+          "MaxLength": 8
+        },
+        {
+          "RomAddress": 2458456,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 2458480,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 2458500,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 2458520,
+          "MaxLength": 16
+        }
+      ],
+      "Name": "File Menu"
+    },
+    {
+      "Encoding": "ascii",
+      "Texts": [
+        {
+          "RomAddress": 986016,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986032,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986052,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 986076,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986096,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986112,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986132,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986152,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986172,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986188,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986204,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986220,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986236,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986256,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 986280,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986296,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986312,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986332,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986348,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986368,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986388,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986400,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986412,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986432,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986452,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986468,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986484,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986500,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986512,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986528,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986548,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986564,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986580,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986596,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986616,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986632,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 986656,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986672,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986692,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986708,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986728,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986740,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986760,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 986784,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 986808,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986824,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986836,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986856,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986868,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986880,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986892,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986904,
+          "MaxLength": 16
+        },
+        {
+          "RomAddress": 986920,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986932,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986952,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986964,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 986984,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 986996,
+          "MaxLength": 24
+        },
+        {
+          "RomAddress": 987020,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 987040,
+          "MaxLength": 12
+        },
+        {
+          "RomAddress": 987052,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 987072,
+          "MaxLength": 20
+        },
+        {
+          "RomAddress": 987092,
+          "MaxLength": 20
+        }
+      ],
+      "Name": "Credits"
+    }
+  ]
+}

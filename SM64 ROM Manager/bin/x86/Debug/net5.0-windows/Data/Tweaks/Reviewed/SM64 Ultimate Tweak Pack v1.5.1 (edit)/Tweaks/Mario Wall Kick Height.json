@@ -1,0 +1,21 @@
+{
+  "Name": "Mario Wall Kick Height",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//DEFAULT VALUE: 4278\n\nD766: [16, \"Height (DEFAULT: 4278)\", hex]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modify the height of Mario's wall jump (Default: 4278)\n\nCredit goes to Viper for creating the gameshark code",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "Remove Star Select Course number",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "227594: 00 00 00 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Removes the Course number in the Star Select.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

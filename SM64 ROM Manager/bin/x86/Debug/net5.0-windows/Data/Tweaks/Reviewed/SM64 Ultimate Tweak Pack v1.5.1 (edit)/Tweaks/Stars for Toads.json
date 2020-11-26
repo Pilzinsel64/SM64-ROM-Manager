@@ -1,0 +1,37 @@
+{
+  "Name": "Stars for Toads",
+  "Scripts": [
+    {
+      "Name": "Stars for 1st Toad",
+      "Script": "3199B: [8, \"Stars required\"]",
+      "Type": "TweakScript",
+      "Description": "Modify the number of stars required for the first star-giving Toad to appear.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Stars for 2nd Toad",
+      "Script": "319CF: [8, \"Stars required\"]",
+      "Type": "TweakScript",
+      "Description": "Modify the number of stars required for the second star-giving Toad to appear.",
+      "References": [],
+      "ID": null
+    },
+    {
+      "Name": "Stars for 3rd Toad",
+      "Script": "31A03: [8, \"Stars required\"]",
+      "Type": "TweakScript",
+      "Description": "Modify the number of stars required for the third star-giving Toad to appear.",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modify the number of stars required for each star-giving Toad to appear.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

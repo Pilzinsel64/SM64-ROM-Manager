@@ -1,0 +1,21 @@
+{
+  "Name": "Set Start Level",
+  "Scripts": [
+    {
+      "Name": "Set Start Level",
+      "Script": "6D68:\nAF A5 00 2C\nAF B0 00 18\n3C 01 80 34\nA0 20 B2 48\n3C 01 80 34\n\n6D68:\n24 05 [level]\n\n6D78:\nAF A5 00 2C",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

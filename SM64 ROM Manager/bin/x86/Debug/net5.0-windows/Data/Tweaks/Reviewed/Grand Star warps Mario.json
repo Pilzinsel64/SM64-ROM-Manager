@@ -1,0 +1,21 @@
+{
+  "Name": "Grand Star warps Mario",
+  "Scripts": [
+    {
+      "Name": "Enable",
+      "Script": "Imports Microsoft.VisualBasic\r\nImports System\r\nImports System.Collections.Generic\r\nImports System.IO\r\nImports System.Linq\r\nImports System.Windows.Forms\r\nImports SM64Lib\r\nImports SM64Lib.Data\r\nImports SM64Lib.Behaviors\r\nImports SM64Lib.Behaviors.Script\r\nImports DevComponents.DotNetBar\r\n\r\nModule Script\r\n\r\n    Private Const VALUE_PATCHED as Byte = &H20\r\n    Private Const VALUE_VANILLA as Byte = &H10\r\n    Private Const BEHAVIOR_ADDRESS as integer = &H13001714\r\n    Private Const COMMAND_ID = BehaviorscriptCommandTypes.x2F_SetInteraction\r\n\r\n    Sub Main(params as IReadOnlyDictionary(Of String, Object))\r\n        Dim mgr as RomManager = params(\"rommgr\")\r\n        Dim msgRes = MessageBox.Show(\"Do you want to enable (Yes) or disable (No) this patch?\", \"Grand Star Warps Mario\", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)\r\n        \r\n        If msgRes <> DialogResult.Cancel Then\r\n            Dim valueToPatch As Byte\r\n            If msgRes = DialogResult.Yes\r\n                valueToPatch =  VALUE_PATCHED\r\n            else\r\n                valueToPatch = VALUE_VANILLA\r\n            end if\r\n            \r\n            'Check if Global Behavior Bank is enabled\r\n            if mgr.GlobalBehaviorBank.Config.Enabled Then\r\n                'Try getting behavior by segmented address\r\n                Dim behav = mgr.GlobalBehaviorBank.GetBehaviorByBankAddress(BEHAVIOR_ADDRESS)\r\n                \r\n                'If behav exists, check every behaviorscript command\r\n                If behav IsNot Nothing Then\r\n                    Dim cmd = behav.Script.FirstOfType(COMMAND_ID)\r\n                    \r\n                    'If command is that we are searching for, then write the new value to it\r\n                    cmd.Position                        = 6\r\n                    cmd.Write(valueToPatch)\r\n                    cmd.Position = 0\r\n                End If\r\n            Else\r\n                'Write directly to ROM\r\n                Dim rom = mgr.GetBinaryRom(FileAccess.ReadWrite)\r\n                rom.Position = &H21B522\r\n                rom.Write(valueToPatch)\r\n                rom.Close()\r\n            End IF\r\n        End IF\r\n    End Sub\r\n\r\nEnd Module\r\n",
+      "Type": "VisualBasic",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "The Grand Star that the final Bowser fight drops warps Mario instead of starting a cutscene. In order to use this, in your hack's 3rd Bowser fight, go to editor, go to the warps tab (the one next to the objects tab and the collision tab). Create a warp with ID 0, and then set the destination of the warp to someplace valid, note that the End Cake screen is a valid destination. This tweak is identical to the Grand Star Warps to Credits Level tweak, barring requiring to set up the warp without aid of the tweak and being a little safer to apply.\n",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

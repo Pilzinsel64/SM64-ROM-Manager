@@ -1,0 +1,21 @@
+{
+  "Name": "Skip Opening (Console Compatible)",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "// Peach\n6BF0: 34 06 00 08\n\n// Lakitu\n6D90: 24 10 00 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Skip events the Peach and Lakitu introduction scene. (Console Compatible? Not exactly sure what this does. - Tweak reviewer)\n\nCredit to Eddio0141.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

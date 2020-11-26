@@ -1,0 +1,21 @@
+{
+  "Name": "Mario Runs Upright (Beta Run)",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "0322B9: 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "When applying this tweak, Mario will run with his back straight instead of slanting forward (Similar to SM64's Beta)\n\nNOTE: To revert / undo this tweak, simply change the value from 00 to 08. Credit goes to Vertrex (and possibly Skelux) for documenting / providing this data",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

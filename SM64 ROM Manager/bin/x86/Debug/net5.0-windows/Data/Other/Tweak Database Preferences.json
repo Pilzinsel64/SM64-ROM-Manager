@@ -1,0 +1,19 @@
+{
+    "CategoryPaths":{
+        "Reviewed":"Reviewed",
+        "Experimental":"Experimental",
+        "Uploads":"Uploads"
+    },
+    "Logins":{
+        "ReadOnlyAll":{
+            "Link":"E/BWdsulKDhuPEQTjb0gpiez9Axs09e+fK+ETuK/yi95nKBnRl3fz99HT1NYFkRhGaywhyPZ9ziGiYX4Ef18oBqL6z5lzDFow16vqemc149Hc1lPuM9oO0Z/SxuBOyg3bgMWFomvg9Y=",
+            "Username":"zu4GFfoXl32zMO+Xh1zq3sVXlFaeJC16pC03eadkYjs1idzHMiLz5SNxOYqwbhR16f5G9FlBy1/a+TDxK+UO4w==",
+            "Password":"X/7lqnm1Ov2GUbBg2alZUfTArKCtprJH"
+        },
+        "UserUploads":{
+            "Link":"E/BWdsulKDhuPEQTjb0gpiez9Axs09e+fK+ETuK/yi95nKBnRl3fz99HT1NYFkRhGaywhyPZ9ziGiYX4Ef18oBqL6z5lzDFow16vqemc149Hc1lPuM9oO0Z/SxuBOyg3bgMWFomvg9Y=",
+            "Username":"zu4GFfoXl32zMO+Xh1zq3sVXlFaeJC16pC03eadkYjs1idzHMiLz5c0mFIoRVZpdigUXZFwzvthPGNn/EPjB+Q==",
+            "Password":"bKXpLffN74ZSy6X1ibC0RmyWVC1v8sBv"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "Mario Won't Fall Upon Grabbing a Star",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "\n8D26: 13 03\nEA804: 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44 44\n",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Mario will do his underwater star grab animation instead of falling and doing the star dance animation, works even if stars won't warp Mario out of the level. Tweak by Pyro Jay (Thanks to Arthurtilly for help)",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

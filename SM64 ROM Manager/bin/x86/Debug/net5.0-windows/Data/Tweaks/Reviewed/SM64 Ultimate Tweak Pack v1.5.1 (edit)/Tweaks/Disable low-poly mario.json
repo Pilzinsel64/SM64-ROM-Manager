@@ -1,0 +1,21 @@
+{
+  "Name": "Disable low-poly mario",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "//Disable low poly Mario. (Mario is always high poly)\n12A7C6: 2E 18",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Disables the lower poly version of Mario if the camera gets too far away from Mario.\n\nNOTE: To revert / undo this tweak, simply change the bytes from 2E 18 to 2D 7C. ",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

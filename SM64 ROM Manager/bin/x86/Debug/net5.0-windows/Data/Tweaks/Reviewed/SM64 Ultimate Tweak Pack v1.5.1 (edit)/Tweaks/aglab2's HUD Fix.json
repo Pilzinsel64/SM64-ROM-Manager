@@ -1,0 +1,21 @@
+{
+  "Name": "aglab2's HUD Fix",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "91BCB: 10\n91C66: 04 55\n91DB2: 1B 60\n9DDA7: 10\n9DE3E: 04 55\n9E09A: 04 55\n9EAA2: 1B 60\n9EBAE: 1B 60",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Fixes the HUD on less accurate graphic plugins by removing the black outlines and making it not blurry. Will cause graphical artifacts on more accurate plugins.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "Remove Some Console Anti-aliasing",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "\nF09CD: 00\nF09FD: 00 \nF09CE: 32\nF09FE: 32\n",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": -2
+    }
+  ],
+  "Version": "1.1.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Removes some of the anti-aliasing that is noticable on console, boosts performance slightly on console.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": -2
+}

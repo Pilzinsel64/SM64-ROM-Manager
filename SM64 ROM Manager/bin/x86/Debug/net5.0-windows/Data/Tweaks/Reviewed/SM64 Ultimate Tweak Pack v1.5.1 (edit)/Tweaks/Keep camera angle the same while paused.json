@@ -1,0 +1,21 @@
+{
+  "Name": "Keep camera angle the same while paused",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "65A4: 00 00 00 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Bacon's code to keep the camera angle the same while the game is paused.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

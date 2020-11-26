@@ -1,0 +1,21 @@
+{
+  "Name": "Chill Bully death height",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "F3590: [half, \"Height\"] ",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Modifies the height a Chill Bully dies at. (Default 1024)",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

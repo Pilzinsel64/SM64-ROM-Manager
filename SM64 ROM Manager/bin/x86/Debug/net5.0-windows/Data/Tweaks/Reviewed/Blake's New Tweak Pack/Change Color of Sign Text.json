@@ -1,0 +1,21 @@
+{
+  "Name": "Change Color of Sign Text",
+  "Scripts": [
+    {
+      "Name": "New Script",
+      "Script": "9436A: [8, \"Text Color\", hex]",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Toggles the color of sign text\r\nNote: Changes sign text not NPC text",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}
