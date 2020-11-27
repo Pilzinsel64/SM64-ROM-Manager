@@ -21,7 +21,14 @@ namespace SM64Lib.Patching
 
         public static PatchFileInformations Get(PatchScript script)
         {
-            return JObject.Parse(script.Script).ToObject<PatchFileInformations>();
+            try
+            {
+                return JObject.Parse(script.Script).ToObject<PatchFileInformations>();
+            }
+            catch(Exception)
+            {
+                return new PatchFileInformations();
+            }
         }
     }
 }
