@@ -1232,24 +1232,6 @@
     <Content Include="Rom Manager\Others\RomMap.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SM64 ROM Manager.ApplyPPF\SM64 ROM Manager.ApplyPPF.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.ModelConverterGUI\SM64 ROM Manager.ModelConverterGUI.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.ModelImporterGUI\SM64 ROM Manager.ModelImporterGUI.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.PatchScripts\SM64 ROM Manager.PatchScripts.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.Updating.Client.GUI\SM64 ROM Manager.Updating.Client.GUI.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.Updating.Client\SM64 ROM Manager.Updating.Client.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.UserRequests.GUI\SM64 ROM Manager.UserRequests.GUI.csproj" />
-    <ProjectReference Include="..\SM64 ROM Manager.UserRequests\SM64 ROM Manager.UserRequests.csproj" />
-    <ProjectReference Include="..\SM64Lib.LIBMIO0\SM64Lib.LIBMIO0.csproj" />
-    <ProjectReference Include="..\SM64Lib.N64Graphics\SM64Lib.N64Graphics.csproj" />
-    <ProjectReference Include="..\SM64Lib.Text.Exporters\SM64Lib.Text.Exporters.csproj" />
-    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj" />
-    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Ben.Demystifier" Version="0.1.6" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="OpenTK" Version="4.3.0" />
@@ -1280,5 +1262,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Rom Manager\Language Resources\Custom Object Manager\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SM64 ROM Manager.ApplyPPF\SM64 ROM Manager.ApplyPPF.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.ModelConverterGUI\SM64 ROM Manager.ModelConverterGUI.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.ModelImporterGUI\SM64 ROM Manager.ModelImporterGUI.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.PatchScripts\SM64 ROM Manager.PatchScripts.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.Updating.Client.GUI\SM64 ROM Manager.Updating.Client.GUI.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.Updating.Client\SM64 ROM Manager.Updating.Client.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.Updating\SM64 ROM Manager.Updating.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.UserRequests.GUI\SM64 ROM Manager.UserRequests.GUI.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.UserRequests\SM64 ROM Manager.UserRequests.csproj" />
+    <ProjectReference Include="..\SM64Lib.LIBMIO0\SM64Lib.LIBMIO0.csproj" />
+    <ProjectReference Include="..\SM64Lib.N64Graphics\SM64Lib.N64Graphics.csproj" />
+    <ProjectReference Include="..\SM64Lib.Text.Exporters\SM64Lib.Text.Exporters.csproj" />
+    <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj" />
+    <ProjectReference Include="..\SM64Lib\SM64Lib.csproj" />
   </ItemGroup>
 </Project>
