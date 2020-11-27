@@ -18,6 +18,7 @@ using System.Linq;
 using OpenTK.Mathematics;
 using System.Windows.Forms.Integration;
 using OpenTK.Wpf;
+using System.Windows.Input;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -135,6 +136,7 @@ namespace SM64_ROM_Manager.LevelEditor
             Main = (Form_AreaEditor)targetForm;
             TargetControl = targetControl;
             Main.KeyUp += ModelPreview_KeyUp;
+            Main.KeyDown += ModelPreview_KeyDown;
             InitializeGLControl();
 
             RenderTimer.SynchronizingObject = null;
@@ -227,18 +229,17 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControl1.Render += GlControl1_Paint;
 
             GLControlHost.Resize += glControl1_Resize;
-            GLControlHost.MouseWheel += glControl1_Wheel;
-            GLControlHost.MouseDown += glControl1_MouseDown;
-            GLControlHost.MouseUp += glControl1_MouseUp;
-            GLControlHost.MouseLeave += glControl1_MouseUp;
-            GLControlHost.MouseMove += glControl1_MouseMove;
-            GLControlHost.KeyDown += ModelPreview_KeyDown;
+            GLControl1.MouseWheel += glControl1_Wheel;
+            GLControl1.MouseDown += glControl1_MouseDown;
+            GLControl1.MouseUp += glControl1_MouseUp;
+            GLControl1.MouseLeave += glControl1_MouseUp;
+            GLControl1.MouseMove += glControl1_MouseMove;
 
             var controlSettings = new GLWpfControlSettings()
             {
                 //MajorVersion = 4,
                 //MinorVersion = 3,
-                RenderContinuously = true,
+                RenderContinuously = false,
                 GraphicsProfile = OpenTK.Windowing.Common.ContextProfile.Compatability
             };
             GLControl1.Start(controlSettings);
@@ -392,11 +393,11 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public void UpdateProjMatrix(bool update = true)
         {
-            ProjMatrix = Matrix4.CreatePerspectiveFieldOfView(FOV, (float)(GLControl1.Width / (double)GLControl1.Height), 100.0F, 100000.0F);
+            ProjMatrix = Matrix4.CreatePerspectiveFieldOfView(FOV, (float)(GLControlHost.Width / (double)GLControlHost.Height), 100.0F, 100000.0F);
             if (update) Invalidate();
         }
 
-        private void glControl1_Wheel(object sender, MouseEventArgs e)
+        private void glControl1_Wheel(object sender, MouseWheelEventArgs e)
         {
             Camera.ResetMouseStuff();
             Camera.UpdateCameraMatrixWithScrollWheel((int)(e.Delta * (Main.IsShiftPressed ? 3.5F : 1.5F)), ref camMtx);
@@ -404,13 +405,14 @@ namespace SM64_ROM_Manager.LevelEditor
             Invalidate();
         }
 
-        private void glControl1_MouseDown(object sender, MouseEventArgs e)
+        private void glControl1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             isMouseDown = true;
             savedCamPos = Camera.Position;
-            if (e.Button == MouseButtons.Right)
+            if (e.RightButton == MouseButtonState.Pressed)
             {
-                SelectViaGLControl(e.X, e.Y);
+                var pos = e.GetPosition(GLControl1);
+                SelectViaGLControl((int)pos.X, (int)pos.Y);
                 Invalidate();
             }
         }
@@ -421,30 +423,31 @@ namespace SM64_ROM_Manager.LevelEditor
             isMouseDown = false;
         }
 
-        private void glControl1_MouseMove(object sender, MouseEventArgs e)
+        private void glControl1_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            if (isMouseDown && e.Button == MouseButtons.Left)
+            if (isMouseDown && e.LeftButton == MouseButtonState.Pressed)
             {
+                var pos = e.GetPosition(GLControl1);
                 if (Main.IsShiftPressed)
                 {
-                    Camera.UpdateCameraOffsetWithMouse(savedCamPos, e.X, e.Y, GLControlHost.Width, GLControlHost.Height, ref camMtx);
+                    Camera.UpdateCameraOffsetWithMouse(savedCamPos, (int)pos.X, (int)pos.Y, GLControlHost.Width, GLControlHost.Height, ref camMtx);
                 }
                 else
                 {
-                    Camera.UpdateCameraMatrixWithMouse(e.X, e.Y, ref camMtx);
+                    Camera.UpdateCameraMatrixWithMouse((int)pos.X, (int)pos.Y, ref camMtx);
                 }
 
                 Invalidate();
             }
         }
 
-        private void ModelPreview_KeyDown(object sender, KeyEventArgs e)
+        private void ModelPreview_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (!Main.PressedKeys.Contains(e.KeyCode))
                 Main.PressedKeys.Add(e.KeyCode);
         }
 
-        private void ModelPreview_KeyUp(object sender, KeyEventArgs e)
+        private void ModelPreview_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             Main.LastKeyLeaveTimer = DateTime.Now;
             if (Main.PressedKeys.Contains(e.KeyCode))

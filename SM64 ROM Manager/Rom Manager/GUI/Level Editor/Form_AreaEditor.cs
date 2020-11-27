@@ -46,6 +46,11 @@ using Bitmap = System.Drawing.Bitmap;
 using SM64Lib.Objects.ModelBanks;
 using SM64Lib.Objects.ObjectBanks;
 using OpenTK.Windowing.Common;
+using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
+using KeyEventArgs = System.Windows.Forms.KeyEventArgs;
+using Cursor = System.Windows.Forms.Cursor;
+using System.Windows.Input;
+using System.Threading;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
