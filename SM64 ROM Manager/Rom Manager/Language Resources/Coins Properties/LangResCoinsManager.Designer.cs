@@ -39,7 +39,7 @@ namespace SM64_ROM_Manager.My.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.RomManager.Language_Resources.Coins_Properties.LangResCoinsManag" +
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom_Manager.Language_Resources.Coins_Properties.LangResCoinsManag" +
                             "er", typeof(LangResCoinsManager).Assembly);
                     resourceMan = temp;
                 }
