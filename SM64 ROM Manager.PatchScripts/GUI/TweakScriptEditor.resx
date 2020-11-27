@@ -130,7 +130,7 @@
     <value>True</value>
   </data>
   <data name="TextBoxX_ScriptDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 109</value>
+    <value>371, 80</value>
   </data>
   <data name="TextBoxX_ScriptDescription.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -193,67 +193,103 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_TweakScript.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Name" xml:space="preserve">
-    <value>CheckBoxX_ArmipsScript</value>
+  <data name="checkBoxX_DLL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 29</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Type" xml:space="preserve">
+  <data name="checkBoxX_DLL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="checkBoxX_DLL.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="checkBoxX_DLL.Text" xml:space="preserve">
+    <value>DLL</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_DLL.Name" xml:space="preserve">
+    <value>checkBoxX_DLL</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_DLL.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_ArmipsScript.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxX_DLL.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_ArmipsScript.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxX_DLL.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.Name" xml:space="preserve">
-    <value>CheckBoxX_CSharpScript</value>
+  <data name="checkBoxX_PPFPatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 29</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.Type" xml:space="preserve">
+  <data name="checkBoxX_PPFPatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="checkBoxX_PPFPatch.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="checkBoxX_PPFPatch.Text" xml:space="preserve">
+    <value>PPF Patch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Name" xml:space="preserve">
+    <value>checkBoxX_PPFPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxX_PPFPatch.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_CSharpScript.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxX_PPFPatch.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Name" xml:space="preserve">
-    <value>CheckBoxX_VBScript</value>
+  <data name="checkBoxX_IPSPatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 29</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Type" xml:space="preserve">
+  <data name="checkBoxX_IPSPatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="checkBoxX_IPSPatch.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="checkBoxX_IPSPatch.Text" xml:space="preserve">
+    <value>IPS Patch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Name" xml:space="preserve">
+    <value>checkBoxX_IPSPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxX_IPSPatch.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>
-  <data name="&gt;&gt;CheckBoxX_VBScript.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxX_IPSPatch.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 200</value>
+  <data name="checkBoxX_BPSPatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 29</value>
   </data>
-  <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="checkBoxX_BPSPatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
   </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 23</value>
+  <data name="checkBoxX_BPSPatch.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="checkBoxX_BPSPatch.Text" xml:space="preserve">
+    <value>BPS Patch</value>
   </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Name" xml:space="preserve">
+    <value>checkBoxX_BPSPatch</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;checkBoxX_BPSPatch.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="CheckBoxX_ArmipsScript.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 0</value>
@@ -277,7 +313,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_ArmipsScript.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="CheckBoxX_CSharpScript.Location" type="System.Drawing.Point, System.Drawing">
     <value>161, 0</value>
@@ -301,7 +337,7 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_CSharpScript.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="CheckBoxX_VBScript.Location" type="System.Drawing.Point, System.Drawing">
     <value>114, 0</value>
@@ -325,10 +361,64 @@
     <value>Panel1</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_VBScript.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 171</value>
+  </data>
+  <data name="Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 52</value>
+  </data>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="Panel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 651</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Text" xml:space="preserve">
+    <value>itemPanel1</value>
+  </data>
+  <data name="itemPanel_SelectEmbeddedFile.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;itemPanel_SelectEmbeddedFile.Name" xml:space="preserve">
+    <value>itemPanel_SelectEmbeddedFile</value>
+  </data>
+  <data name="&gt;&gt;itemPanel_SelectEmbeddedFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ItemPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;itemPanel_SelectEmbeddedFile.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;itemPanel_SelectEmbeddedFile.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Panel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 3</value>
@@ -378,45 +468,6 @@
   <data name="&gt;&gt;ItemListBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Name" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonX3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonX4" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="TextBoxX_ReferenceName" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,26,Absolute,26" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 296</value>
-  </data>
-  <data name="Panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 175</value>
-  </data>
-  <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
-    <value>LayoutControl1</value>
-  </data>
-  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <data name="TableLayoutPanel2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -425,69 +476,6 @@
   </data>
   <data name="TableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.Name" xml:space="preserve">
-    <value>ButtonX3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.Parent" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;ButtonX3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.Name" xml:space="preserve">
-    <value>ButtonX4</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.Parent" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;ButtonX4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ReferenceName.Name" xml:space="preserve">
-    <value>TextBoxX_ReferenceName</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ReferenceName.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ReferenceName.Parent" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_ReferenceName.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
-  </data>
-  <data name="TableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 26</value>
-  </data>
-  <data name="TableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Name" xml:space="preserve">
-    <value>TableLayoutPanel2</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.Parent" xml:space="preserve">
-    <value>Panel3</value>
-  </data>
-  <data name="&gt;&gt;TableLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonX3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonX4" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="TextBoxX_ReferenceName" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,26,Absolute,26" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="ButtonX3.Location" type="System.Drawing.Point, System.Drawing">
     <value>322, 3</value>
@@ -561,8 +549,71 @@
   <data name="&gt;&gt;TextBoxX_ReferenceName.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="TableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="TableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 26</value>
+  </data>
+  <data name="TableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Name" xml:space="preserve">
+    <value>TableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.Parent" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;TableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonX3" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonX4" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="TextBoxX_ReferenceName" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,26,Absolute,26" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="Panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 296</value>
+  </data>
+  <data name="Panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="Panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 175</value>
+  </data>
+  <data name="Panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Name" xml:space="preserve">
+    <value>Panel3</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel3.Parent" xml:space="preserve">
+    <value>LayoutControl1</value>
+  </data>
+  <data name="&gt;&gt;Panel3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="LayoutControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
+  </data>
+  <data name="ListViewEx_EmbeddedFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ListViewEx_EmbeddedFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="ListViewEx_EmbeddedFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>365, 123</value>
+  </data>
+  <data name="ListViewEx_EmbeddedFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="&gt;&gt;ListViewEx_EmbeddedFiles.Name" xml:space="preserve">
     <value>ListViewEx_EmbeddedFiles</value>
@@ -575,6 +626,72 @@
   </data>
   <data name="&gt;&gt;ListViewEx_EmbeddedFiles.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="tableLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ButtonX_AddEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 3</value>
+  </data>
+  <data name="ButtonX_AddEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="ButtonX_AddEmbeddedFile.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Name" xml:space="preserve">
+    <value>ButtonX_AddEmbeddedFile</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ButtonX_RemoveEmbeddedFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="ButtonX_RemoveEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 3</value>
+  </data>
+  <data name="ButtonX_RemoveEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="ButtonX_RemoveEmbeddedFile.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Name" xml:space="preserve">
+    <value>ButtonX_RemoveEmbeddedFile</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 26</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -702,135 +819,6 @@
   <data name="&gt;&gt;LayoutControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="ListViewEx_EmbeddedFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="ListViewEx_EmbeddedFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
-  </data>
-  <data name="ListViewEx_EmbeddedFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>365, 123</value>
-  </data>
-  <data name="ListViewEx_EmbeddedFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_EmbeddedFiles.Name" xml:space="preserve">
-    <value>ListViewEx_EmbeddedFiles</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_EmbeddedFiles.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_EmbeddedFiles.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_EmbeddedFiles.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="tableLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Name" xml:space="preserve">
-    <value>ButtonX_AddEmbeddedFile</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Name" xml:space="preserve">
-    <value>ButtonX_RemoveEmbeddedFile</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
-  </data>
-  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 26</value>
-  </data>
-  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonX_AddEmbeddedFile" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonX_RemoveEmbeddedFile" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,26,Absolute,26" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="ButtonX_AddEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 3</value>
-  </data>
-  <data name="ButtonX_AddEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="ButtonX_AddEmbeddedFile.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Name" xml:space="preserve">
-    <value>ButtonX_AddEmbeddedFile</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddEmbeddedFile.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ButtonX_RemoveEmbeddedFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="ButtonX_RemoveEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 3</value>
-  </data>
-  <data name="ButtonX_RemoveEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="ButtonX_RemoveEmbeddedFile.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Name" xml:space="preserve">
-    <value>ButtonX_RemoveEmbeddedFile</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="Panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -867,8 +855,32 @@
   <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
+  <data name="ButtonItem1.Text" xml:space="preserve">
+    <value>VB</value>
+  </data>
+  <data name="ButtonItem2.Text" xml:space="preserve">
+    <value>C#</value>
+  </data>
+  <data name="ButtonItem_NewTemplate.Text" xml:space="preserve">
+    <value>New Template</value>
+  </data>
+  <data name="ButtonItem_SaveToFile.Text" xml:space="preserve">
+    <value>Save to File ...</value>
+  </data>
+  <data name="ButtonItem_LoadFromFile.Text" xml:space="preserve">
+    <value>Load from File ...</value>
+  </data>
   <data name="ButtonItem5.Text" xml:space="preserve">
     <value>File</value>
+  </data>
+  <data name="ButtonItem3.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="ButtonItem_RunInTestMode.Text" xml:space="preserve">
+    <value>Test Mode (Run Temporary)</value>
+  </data>
+  <data name="ButtonItem_CheckForErrors.Text" xml:space="preserve">
+    <value>Check for Errors</value>
   </data>
   <data name="ButtonItem4.Text" xml:space="preserve">
     <value>Script</value>
@@ -899,30 +911,6 @@
   </data>
   <data name="&gt;&gt;Bar1.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="ButtonItem_NewTemplate.Text" xml:space="preserve">
-    <value>New Template</value>
-  </data>
-  <data name="ButtonItem1.Text" xml:space="preserve">
-    <value>VB</value>
-  </data>
-  <data name="ButtonItem2.Text" xml:space="preserve">
-    <value>C#</value>
-  </data>
-  <data name="ButtonItem_SaveToFile.Text" xml:space="preserve">
-    <value>Save to File ...</value>
-  </data>
-  <data name="ButtonItem_LoadFromFile.Text" xml:space="preserve">
-    <value>Load from File ...</value>
-  </data>
-  <data name="ButtonItem3.Text" xml:space="preserve">
-    <value>Run</value>
-  </data>
-  <data name="ButtonItem_RunInTestMode.Text" xml:space="preserve">
-    <value>Test Mode (Run Temporary)</value>
-  </data>
-  <data name="ButtonItem_CheckForErrors.Text" xml:space="preserve">
-    <value>Check for Errors</value>
   </data>
   <data name="contextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
