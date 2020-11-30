@@ -124,6 +124,11 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Rom Manager\Language Resources\Custom Object Manager\**" />
+    <EmbeddedResource Remove="Rom Manager\Language Resources\Custom Object Manager\**" />
+    <None Remove="Rom Manager\Language Resources\Custom Object Manager\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="System.DirectoryServices" Version="5.0.0" />
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
@@ -1274,8 +1279,5 @@
     <None Update="Properties\app.manifest">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Rom Manager\Language Resources\Custom Object Manager\" />
   </ItemGroup>
 </Project>
