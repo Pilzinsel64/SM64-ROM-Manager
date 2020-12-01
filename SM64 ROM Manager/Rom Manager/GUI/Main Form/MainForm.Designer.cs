@@ -51,7 +51,7 @@ namespace SM64_ROM_Manager
             this.tabTextManager = new SM64_ROM_Manager.Tab_TextManager();
             this.TabItem_TextManager = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabLevelManager = new SM64_ROM_Manager.Tab_LevelManagerUniversal();
+            this.tabLevelManager = new SM64_ROM_Manager.Tab_LevelManagerV2();
             this.TabItem_LevelManager = new DevComponents.DotNetBar.TabItem(this.components);
             this.Bar2 = new DevComponents.DotNetBar.Bar();
             this.ButtonItem2 = new DevComponents.DotNetBar.ButtonItem();
@@ -851,7 +851,7 @@ namespace SM64_ROM_Manager
 
         private Tab_General tabGeneral;
 
-        private Tab_LevelManagerUniversal tabLevelManager;
+        private Tab_LevelManagerV2 tabLevelManager;
 
         private Tab_MusicManager tabMusicManager;
 

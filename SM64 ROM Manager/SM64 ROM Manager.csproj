@@ -431,13 +431,6 @@
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManager.Designer.cs">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManager.cs">
-      <SubType>UserControl</SubType>
-      <SubType>Designer</SubType>
-    </Compile>
     <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.Designer.cs">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
     </Compile>
@@ -869,12 +862,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_General.resx">
       <DependentUpon>Tab_General.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManager.de.resx">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManager.resx">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.resx">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
