@@ -15,6 +15,7 @@ using SM64Lib.Patching;
 using Pilz.IO;
 using SM64_ROM_Manager.PatchScripts.LangRes;
 using System.Reflection;
+using DevComponents.AdvTree;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -164,20 +165,21 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             if (filesContainer is object)
             {
-                ListViewEx_EmbeddedFiles.BeginUpdate();
-                ListViewEx_EmbeddedFiles.Items.Clear();
+                AdvTree_EmbeddedFiles.BeginUpdate();
+                AdvTree_EmbeddedFiles.Nodes.Clear();
 
                 foreach (var fileName in filesContainer.AllFileNames)
                 {
                     var item =
-                    ListViewEx_EmbeddedFiles.Items.Add(
-                        new ListViewItem(fileName)
+                    AdvTree_EmbeddedFiles.Nodes.Add(
+                        new Node
                         {
+                            Text = fileName,
                             Tag = fileName
                         });
                 }
 
-                ListViewEx_EmbeddedFiles.EndUpdate();
+                AdvTree_EmbeddedFiles.EndUpdate();
             }
         }
 
@@ -208,11 +210,9 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             var fileName = string.Empty;
 
-            foreach (ListViewItem item in ListViewEx_EmbeddedFiles.SelectedItems)
-            {
-                if (string.IsNullOrEmpty(fileName) && item.Tag is string && !string.IsNullOrEmpty((string)item.Tag))
-                    fileName = (string)item.Tag;
-            }
+            var selNode = AdvTree_EmbeddedFiles.SelectedNode;
+            if (selNode?.Tag is string)
+                fileName = selNode.Tag as string;
 
             return fileName;
         }
@@ -792,6 +792,11 @@ End Module
 
         private void ItemPanel_SelectEmbeddedFile_ItemClick(object sender, EventArgs e)
         {
+        }
+
+        private void AdvTree_EmbeddedFiles_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
+        {
+
         }
     }
 }
