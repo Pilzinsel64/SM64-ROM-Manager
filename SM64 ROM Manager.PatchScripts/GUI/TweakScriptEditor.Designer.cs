@@ -621,6 +621,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.AdvTree_EmbeddedFiles.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.AdvTree_EmbeddedFiles.Name = "AdvTree_EmbeddedFiles";
             this.AdvTree_EmbeddedFiles.DragDropEnabled = false;
+            this.AdvTree_EmbeddedFiles.ExpandWidth = 0;
             this.AdvTree_EmbeddedFiles.MultiSelect = false;
             this.AdvTree_EmbeddedFiles.NodesConnector = this.nodeConnector1;
             this.AdvTree_EmbeddedFiles.NodeStyle = this.elementStyle1;
