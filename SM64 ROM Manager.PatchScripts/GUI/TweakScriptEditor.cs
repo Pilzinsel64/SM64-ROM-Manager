@@ -187,7 +187,10 @@ namespace SM64_ROM_Manager.PatchScripts
         private void RemoveEmbeddedFile(string fileName)
         {
             if (!string.IsNullOrEmpty(fileName))
+            {
                 filesContainer.RemoveFile(fileName);
+                LoadEmbeddedFiles();
+            }
         }
 
         private string GetSelectedEmbeddedFile()
