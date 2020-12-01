@@ -36,7 +36,6 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjectCatalog));
-            this.ListViewEx1 = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.AdvTree1 = new DevComponents.AdvTree.AdvTree();
             this.ImageList_RefSymbols = new System.Windows.Forms.ImageList(this.components);
             this.Node1 = new DevComponents.AdvTree.Node();
@@ -47,31 +46,13 @@ namespace SM64_ROM_Manager.PatchScripts
             this.LabelX_MemberInfo = new DevComponents.DotNetBar.LabelX();
             this.CircularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonX_Select = new DevComponents.DotNetBar.ButtonX();
             this.buttonX_Cancel = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX_Select = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.AdvTree1)).BeginInit();
             this.TableLayoutPanel_2.SuspendLayout();
             this.TableLayoutPanel_1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ListViewEx1
-            // 
-            this.ListViewEx1.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx1.Border.Class = "ListViewBorder";
-            this.ListViewEx1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListViewEx1.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx1.HideSelection = false;
-            this.ListViewEx1.Location = new System.Drawing.Point(400, 3);
-            this.ListViewEx1.Name = "ListViewEx1";
-            this.ListViewEx1.Size = new System.Drawing.Size(391, 329);
-            this.ListViewEx1.TabIndex = 0;
-            this.ListViewEx1.UseCompatibleStateImageBehavior = false;
             // 
             // AdvTree1
             // 
@@ -94,7 +75,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.AdvTree1.NodesConnector = this.NodeConnector1;
             this.AdvTree1.NodeStyle = this.ElementStyle1;
             this.AdvTree1.PathSeparator = ";";
-            this.AdvTree1.Size = new System.Drawing.Size(391, 329);
+            this.AdvTree1.Size = new System.Drawing.Size(388, 329);
             this.AdvTree1.Styles.Add(this.ElementStyle1);
             this.AdvTree1.TabIndex = 1;
             this.AdvTree1.Text = "AdvTree1";
@@ -125,17 +106,15 @@ namespace SM64_ROM_Manager.PatchScripts
             // TableLayoutPanel_2
             // 
             this.TableLayoutPanel_2.BackColor = System.Drawing.Color.Transparent;
-            this.TableLayoutPanel_2.ColumnCount = 2;
-            this.TableLayoutPanel_2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TableLayoutPanel_2.ColumnCount = 1;
             this.TableLayoutPanel_2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableLayoutPanel_2.Controls.Add(this.AdvTree1, 0, 0);
-            this.TableLayoutPanel_2.Controls.Add(this.ListViewEx1, 1, 0);
             this.TableLayoutPanel_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TableLayoutPanel_2.Location = new System.Drawing.Point(3, 3);
             this.TableLayoutPanel_2.Name = "TableLayoutPanel_2";
             this.TableLayoutPanel_2.RowCount = 1;
             this.TableLayoutPanel_2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TableLayoutPanel_2.Size = new System.Drawing.Size(794, 335);
+            this.TableLayoutPanel_2.Size = new System.Drawing.Size(394, 335);
             this.TableLayoutPanel_2.TabIndex = 2;
             // 
             // TableLayoutPanel_1
@@ -151,7 +130,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TableLayoutPanel_1.RowCount = 2;
             this.TableLayoutPanel_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableLayoutPanel_1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.TableLayoutPanel_1.Size = new System.Drawing.Size(800, 421);
+            this.TableLayoutPanel_1.Size = new System.Drawing.Size(400, 421);
             this.TableLayoutPanel_1.TabIndex = 3;
             this.TableLayoutPanel_1.Visible = false;
             // 
@@ -164,17 +143,18 @@ namespace SM64_ROM_Manager.PatchScripts
             this.LabelX_MemberInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelX_MemberInfo.Location = new System.Drawing.Point(3, 344);
             this.LabelX_MemberInfo.Name = "LabelX_MemberInfo";
-            this.LabelX_MemberInfo.Size = new System.Drawing.Size(794, 74);
+            this.LabelX_MemberInfo.Size = new System.Drawing.Size(394, 74);
             this.LabelX_MemberInfo.TabIndex = 3;
             this.LabelX_MemberInfo.TextLineAlignment = System.Drawing.StringAlignment.Near;
             // 
             // CircularProgress1
             // 
+            this.CircularProgress1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             // 
             // 
             // 
             this.CircularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.CircularProgress1.Location = new System.Drawing.Point(363, 188);
+            this.CircularProgress1.Location = new System.Drawing.Point(163, 188);
             this.CircularProgress1.Name = "CircularProgress1";
             this.CircularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot;
             this.CircularProgress1.SetVisibleStateOnStart = true;
@@ -191,35 +171,37 @@ namespace SM64_ROM_Manager.PatchScripts
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 421);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 29);
+            this.panel1.Size = new System.Drawing.Size(400, 29);
             this.panel1.TabIndex = 6;
-            // 
-            // buttonX_Select
-            // 
-            this.buttonX_Select.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX_Select.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX_Select.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonX_Select.Enabled = false;
-            this.buttonX_Select.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_checkmark_16px;
-            this.buttonX_Select.Location = new System.Drawing.Point(722, 3);
-            this.buttonX_Select.Name = "buttonX_Select";
-            this.buttonX_Select.Size = new System.Drawing.Size(75, 23);
-            this.buttonX_Select.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX_Select.TabIndex = 0;
-            this.buttonX_Select.Text = "Select";
             // 
             // buttonX_Cancel
             // 
             this.buttonX_Cancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX_Cancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonX_Cancel.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_delete_sign_16px_1;
-            this.buttonX_Cancel.Location = new System.Drawing.Point(641, 3);
+            this.buttonX_Cancel.Location = new System.Drawing.Point(241, 3);
             this.buttonX_Cancel.Name = "buttonX_Cancel";
             this.buttonX_Cancel.Size = new System.Drawing.Size(75, 23);
             this.buttonX_Cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX_Cancel.TabIndex = 0;
             this.buttonX_Cancel.Text = "Cancel";
+            // 
+            // buttonX_Select
+            // 
+            this.buttonX_Select.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX_Select.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonX_Select.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX_Select.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonX_Select.Enabled = false;
+            this.buttonX_Select.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_checkmark_16px;
+            this.buttonX_Select.Location = new System.Drawing.Point(322, 3);
+            this.buttonX_Select.Name = "buttonX_Select";
+            this.buttonX_Select.Size = new System.Drawing.Size(75, 23);
+            this.buttonX_Select.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX_Select.TabIndex = 0;
+            this.buttonX_Select.Text = "Select";
             // 
             // ObjectCatalog
             // 
@@ -227,7 +209,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonX_Cancel;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(400, 450);
             this.Controls.Add(this.CircularProgress1);
             this.Controls.Add(this.TableLayoutPanel_1);
             this.Controls.Add(this.panel1);
@@ -244,8 +226,6 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ResumeLayout(false);
 
         }
-
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx1;
 
         private DevComponents.AdvTree.AdvTree AdvTree1;
 
