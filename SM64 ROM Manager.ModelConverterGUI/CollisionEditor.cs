@@ -12,6 +12,7 @@ using global::Pilz.S3DFileParser;
 using global::SM64_ROM_Manager.SettingsManager;
 using global::SM64Lib.Model.Fast3D;
 using SM64Lib.TextValueConverter;
+using DevComponents.AdvTree;
 
 namespace SM64_ROM_Manager.ModelConverterGUI
 {
@@ -43,11 +44,13 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             ResumeLayout();
         }
 
+        private static readonly Size imageSize = new Size(64, 64);
         private static List<ComboItem> terrainTypesComboItems = new List<ComboItem>();
         private static bool loadingTerrainTypesComboItems = false;
         private bool LoadingColItemSettings = false;
         private Object3D obj3d = null;
-        private readonly Dictionary<int, Image> realTextures = new Dictionary<int, Image>();
+        private List<int> colorImages = new List<int>();
+        private readonly Dictionary<Image, Image> realTextures = new Dictionary<Image, Image>();
 
         public SM64Lib.Model.Collision.CollisionSettings CollisionSettings { get; set; } = null;
 
@@ -59,41 +62,54 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private void LoadTexturesFromModel()
         {
-            ListViewItem firstItem = null;
-            var imgList = new ImageList();
+            Node firstItem = null;
+
+            advTree1.BeginUpdate();
 
             // Clear Items
-            ListViewEx1.Items.Clear();
+            advTree1.Nodes.Clear();
+            colorImages.Clear();
+            realTextures.Clear();
 
             // Setup Imagelist
-            imgList.ImageSize = new Size(64, 64);
-            ListViewEx1.LargeImageList = imgList;
             foreach (KeyValuePair<string, Material> mat in obj3d.Materials)
             {
-                var item = new ListViewItem();
+                var item = new Node();
                 item.Tag = mat;
                 item.Text = mat.Key;
                 if (mat.Value.Image is object)
                 {
-                    int imageIndex = imgList.Images.Count;
-                    var bmp = TextureManager.ResizeImage(mat.Value.Image, imgList.ImageSize, true, true);
-                    item.ImageIndex = imageIndex;
-                    realTextures.Add(item.ImageIndex, mat.Value.Image);
-                    imgList.Images.Add(bmp);
+                    var bmp = TextureManager.ResizeImage(mat.Value.Image, imageSize, true, true);
+                    item.Image = bmp;
+                    realTextures.Add(item.Image, mat.Value.Image);
+                }
+                else
+                {
+                    Image img = GetImageFromColor((Color)mat.Value.Color, imageSize);
+                    item.Image = img;
+                    colorImages.Add(item.ImageIndex);
                 }
 
                 if (firstItem is null)
                     firstItem = item;
-                ListViewEx1.Items.Add(item);
+                advTree1.Nodes.Add(item);
             }
 
             // Select First Item
             if (firstItem is object)
             {
-                firstItem.Selected = true;
+                advTree1.SelectedNode = firstItem;
             }
 
-            ListViewEx1.Visible = true;
+            advTree1.EndUpdate();
+        }
+
+        private Bitmap GetImageFromColor(Color color, Size size)
+        {
+            var bmp = new Bitmap(size.Width, size.Height);
+            var g = Graphics.FromImage(bmp);
+            g.Clear(color);
+            return bmp;
         }
 
         private async Task LoadFloorTypes()
@@ -210,18 +226,18 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             loadingTerrainTypesComboItems = false;
         }
 
-        private void ListBoxAdv_CI_Textures_ItemClick(object sender, EventArgs e)
+        private void advTree1_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
         {
-            if (ListViewEx1.SelectedIndices.Count > 0)
+            if (advTree1.SelectedNode != null)
             {
-                var curItem = ListViewEx1.SelectedItems[0];
+                var curItem = advTree1.SelectedNode;
                 KeyValuePair<string, Material> mat = (KeyValuePair<string, Material>)curItem.Tag;
                 var curEntry = CollisionSettings.GetEntry(mat.Key);
                 bool found = false;
                 LoadingColItemSettings = true;
                 foreach (ComboItem item in ComboBox_ColType.Items)
                 {
-                    if(!found && (byte)((object[])item.Tag)[0] == curEntry.CollisionType)
+                    if (!found && (byte)((object[])item.Tag)[0] == curEntry.CollisionType)
                     {
                         ComboBox_ColType.SelectedItem = item;
                         found = true;
@@ -235,13 +251,13 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 if (curItem.ImageIndex > -1)
                 {
                     Image realImg;
-                    if (realTextures.ContainsKey(curItem.ImageIndex))
+                    if (realTextures.ContainsKey(curItem.Image))
                     {
-                        realImg = realTextures[curItem.ImageIndex];
+                        realImg = realTextures[curItem.Image];
                     }
                     else
                     {
-                        realImg = ListViewEx1.LargeImageList.Images[curItem.ImageIndex];
+                        realImg = curItem.Image;
                     }
 
                     PictureBox1.Image = realImg;
@@ -360,11 +376,11 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private void UpdateTextureListItemSettings(byte ct)
         {
-            if (ListViewEx1.SelectedIndices.Count > 0)
+            if (advTree1.SelectedNode is object)
             {
                 byte cp1 = Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX_ColParam1.Text));
                 byte cp2 = Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX_ColParam2.Text));
-                foreach (ListViewItem item in ListViewEx1.SelectedItems)
+                foreach (Node item in advTree1.SelectedNodes)
                 {
                     KeyValuePair<string, Material> mat = (KeyValuePair<string, Material>)item.Tag;
                     var curEntry = CollisionSettings.GetEntry(mat.Key);
@@ -399,11 +415,6 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 byte id = (byte)((object[])selItem.Tag)[0];
                 this.UpdateTextureListItemSettings(id);
             }
-        }
-
-        private void advTree1_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
-        {
-
         }
     }
 }

@@ -13,19 +13,21 @@ using global::SM64Lib.Model.Conversion.Fast3DWriting;
 using global::SM64Lib.Model.Fast3D;
 using global::SM64Lib.N64Graphics;
 using SM64Lib.Model.Conversion;
+using DevComponents.AdvTree;
 
 namespace SM64_ROM_Manager.ModelConverterGUI
 {
     public partial class TextureGraphicFormatEditor
     {
 
+        private readonly Size imageSize = new Size(64, 64);
         private LabelX labelX_TexSize;
         private Object3D obj3d = null;
         private bool loadingtexItemSettings = false;
         private bool hasInit = false;
         private List<int> colorImages = new List<int>();
         private TextureFormatSettings _TextureFormatSettings = null;
-        private readonly Dictionary<int, Image> realTextures = new Dictionary<int, Image>();
+        private readonly Dictionary<Image, Image> realTextures = new Dictionary<Image, Image>();
 
         public TextureFormatSettings TextureFormatSettings
         {
@@ -109,51 +111,47 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private void LoadTexturesFromModel()
         {
-            ListViewItem firstItem = null;
-            var imgList = new ImageList();
+            Node firstItem = null;
+            advTree1.BeginUpdate();
 
             // Clear Items
-            ListViewEx1.Items.Clear();
+            advTree1.Nodes.Clear();
             colorImages.Clear();
             realTextures.Clear();
 
             // Setup Imagelist
-            imgList.ImageSize = new Size(64, 64);
-            ListViewEx1.LargeImageList = imgList;
             foreach (KeyValuePair<string, Material> mat in obj3d.Materials)
             {
-                int imageIndex = imgList.Images.Count;
-                var item = new ListViewItem()
+                var item = new Node()
                 {
                     Text = mat.Key,
-                    ImageIndex = imageIndex,
                     Tag = mat
                 };
                 if (mat.Value.Image is object)
                 {
-                    var bmp = TextureManager.ResizeImage(mat.Value.Image, imgList.ImageSize, true, true);
-                    realTextures.Add(imageIndex, mat.Value.Image);
-                    imgList.Images.Add(bmp);
+                    var bmp = TextureManager.ResizeImage(mat.Value.Image, imageSize, true, true);
+                    item.Image = bmp;
+                    realTextures.Add(bmp, mat.Value.Image);
                 }
                 else
                 {
-                    Image img = GetImageFromColor((Color)mat.Value.Color, new Size(32, 32));
+                    Image img = GetImageFromColor((Color)mat.Value.Color, imageSize);
+                    item.Image = img;
                     colorImages.Add(item.ImageIndex);
-                    imgList.Images.Add(img);
                 }
 
                 if (firstItem is null)
                     firstItem = item;
-                ListViewEx1.Items.Add(item);
+                advTree1.Nodes.Add(item);
             }
 
             // Select First Item
             if (firstItem is object)
             {
-                firstItem.Selected = true;
+                advTree1.SelectedNode = firstItem;
             }
 
-            ListViewEx1.Refresh();
+            advTree1.EndUpdate();
         }
 
         private Bitmap GetImageFromColor(Color color, Size size)
@@ -184,9 +182,9 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private void LoadTextureProps()
         {
-            if (ListViewEx1.SelectedIndices.Count > 0)
+            if (advTree1.SelectedNode is object)
             {
-                var curItem = ListViewEx1.SelectedItems[0];
+                var curItem = advTree1.SelectedNode;
                 string matName = ((KeyValuePair<string, Material>)curItem.Tag).Key;
                 var curEntry = TextureFormatSettings.GetEntry(matName);
 
@@ -208,13 +206,13 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 if (curItem.ImageIndex > -1)
                 {
                     Image realImg;
-                    if (realTextures.ContainsKey(curItem.ImageIndex))
+                    if (realTextures.ContainsKey(curItem.Image))
                     {
-                        realImg = realTextures[curItem.ImageIndex];
+                        realImg = realTextures[curItem.Image];
                     }
                     else
                     {
-                        realImg = ListViewEx1.LargeImageList.Images[curItem.ImageIndex];
+                        realImg = curItem.Image;
                     }
 
                     PictureBox1.Image = realImg;
@@ -270,11 +268,6 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             }
         }
 
-        private void ListBoxAdv_CI_Textures_ItemClick(object sender, EventArgs e)
-        {
-            LoadTextureProps();
-        }
-
         private ComboItem GetRotateFlipComboItem(RotateFlipType type)
         {
             ComboItem var = null;
@@ -307,9 +300,9 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private void UpdateTextureListItemSettings(string id)
         {
-            if (ListViewEx1.SelectedIndices.Count > 0)
+            if (advTree1.SelectedNode is object)
             {
-                foreach (ListViewItem item in ListViewEx1.SelectedItems)
+                foreach (Node item in advTree1.SelectedNodes)
                 {
                     KeyValuePair<string, Material> mat = (KeyValuePair<string, Material>)item.Tag;
                     var curEntry = TextureFormatSettings.GetEntry(mat.Key);
@@ -370,6 +363,11 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         {
             panel_MatOptions.Enabled = checkBoxX_Include.Checked;
             ControlsOccusUpdateTextureListItemSettings(sender, e);
+        }
+
+        private void advTree1_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
+        {
+            LoadTextureProps();
         }
     }
 }
