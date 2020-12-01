@@ -202,6 +202,7 @@ namespace SM64_ROM_Manager.PatchScripts
             if (!string.IsNullOrEmpty(fileName))
             {
                 filesContainer.RemoveFile(fileName);
+                LoadEmbeddedFiles();
                 LoadEmbeddedFileSelectorBox(true);
             }
         }

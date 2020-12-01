@@ -666,6 +666,7 @@ namespace SM64_ROM_Manager
             this.advTree_TextEntries.Columns.Add(this.columnHeader_Description);
             this.advTree_TextEntries.Columns.Add(this.columnHeader_Message);
             resources.ApplyResources(this.advTree_TextEntries, "advTree_TextEntries");
+            this.advTree_TextEntries.DragDropEnabled = false;
             this.advTree_TextEntries.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.advTree_TextEntries.Name = "advTree_TextEntries";
             this.advTree_TextEntries.NodesConnector = this.nodeConnector1;
