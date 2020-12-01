@@ -400,5 +400,10 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 this.UpdateTextureListItemSettings(id);
             }
         }
+
+        private void advTree1_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
+        {
+
+        }
     }
 }
