@@ -39,15 +39,6 @@ namespace SM64_ROM_Manager
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScrollTexEditor));
             this.SplitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.ListViewEx_LM_ScrollTexList = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeader_Number = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_MaterialName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader_Behavior = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader_Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader_Duration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader_Speed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader_VertexPointer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader_Vertices = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.ButtonItem_AddNew = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_Remove = new DevComponents.DotNetBar.ButtonItem();
@@ -56,12 +47,24 @@ namespace SM64_ROM_Manager
             this.CheckBoxItem_ViewMode_Simplified = new DevComponents.DotNetBar.CheckBoxItem();
             this.CheckBoxItem_ViewMode_Expert = new DevComponents.DotNetBar.CheckBoxItem();
             this.AdvPropertyGrid1 = new DevComponents.DotNetBar.AdvPropertyGrid();
+            this.advTree_ScrollTexList = new DevComponents.AdvTree.AdvTree();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
+            this.columnHeader_Number = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_Material = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_Behavior = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_Type = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_Duration = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_Speed = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_VertexPointer = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader_Vertices = new DevComponents.AdvTree.ColumnHeader();
             ((System.ComponentModel.ISupportInitialize)(this.SplitContainer1)).BeginInit();
             this.SplitContainer1.Panel1.SuspendLayout();
             this.SplitContainer1.Panel2.SuspendLayout();
             this.SplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvPropertyGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_ScrollTexList)).BeginInit();
             this.SuspendLayout();
             // 
             // SplitContainer1
@@ -73,74 +76,12 @@ namespace SM64_ROM_Manager
             // 
             // SplitContainer1.Panel1
             // 
-            this.SplitContainer1.Panel1.Controls.Add(this.ListViewEx_LM_ScrollTexList);
+            this.SplitContainer1.Panel1.Controls.Add(this.advTree_ScrollTexList);
             this.SplitContainer1.Panel1.Controls.Add(this.bar1);
             // 
             // SplitContainer1.Panel2
             // 
             this.SplitContainer1.Panel2.Controls.Add(this.AdvPropertyGrid1);
-            // 
-            // ListViewEx_LM_ScrollTexList
-            // 
-            this.ListViewEx_LM_ScrollTexList.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx_LM_ScrollTexList.Border.Class = "ListViewBorder";
-            this.ListViewEx_LM_ScrollTexList.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_LM_ScrollTexList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader_Number,
-            this.columnHeader_MaterialName,
-            this.ColumnHeader_Behavior,
-            this.ColumnHeader_Type,
-            this.ColumnHeader_Duration,
-            this.ColumnHeader_Speed,
-            this.ColumnHeader_VertexPointer,
-            this.ColumnHeader_Vertices});
-            this.ListViewEx_LM_ScrollTexList.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.ListViewEx_LM_ScrollTexList, "ListViewEx_LM_ScrollTexList");
-            this.ListViewEx_LM_ScrollTexList.FocusCuesEnabled = false;
-            this.ListViewEx_LM_ScrollTexList.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_LM_ScrollTexList.FullRowSelect = true;
-            this.ListViewEx_LM_ScrollTexList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx_LM_ScrollTexList.HideSelection = false;
-            this.ListViewEx_LM_ScrollTexList.MultiSelect = false;
-            this.ListViewEx_LM_ScrollTexList.Name = "ListViewEx_LM_ScrollTexList";
-            this.ListViewEx_LM_ScrollTexList.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_LM_ScrollTexList.View = System.Windows.Forms.View.Details;
-            this.ListViewEx_LM_ScrollTexList.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_LM_ScrollTexList_SelectedIndexChanged);
-            // 
-            // ColumnHeader_Number
-            // 
-            resources.ApplyResources(this.ColumnHeader_Number, "ColumnHeader_Number");
-            // 
-            // columnHeader_MaterialName
-            // 
-            resources.ApplyResources(this.columnHeader_MaterialName, "columnHeader_MaterialName");
-            // 
-            // ColumnHeader_Behavior
-            // 
-            resources.ApplyResources(this.ColumnHeader_Behavior, "ColumnHeader_Behavior");
-            // 
-            // ColumnHeader_Type
-            // 
-            resources.ApplyResources(this.ColumnHeader_Type, "ColumnHeader_Type");
-            // 
-            // ColumnHeader_Duration
-            // 
-            resources.ApplyResources(this.ColumnHeader_Duration, "ColumnHeader_Duration");
-            // 
-            // ColumnHeader_Speed
-            // 
-            resources.ApplyResources(this.ColumnHeader_Speed, "ColumnHeader_Speed");
-            // 
-            // ColumnHeader_VertexPointer
-            // 
-            resources.ApplyResources(this.ColumnHeader_VertexPointer, "ColumnHeader_VertexPointer");
-            // 
-            // ColumnHeader_Vertices
-            // 
-            resources.ApplyResources(this.ColumnHeader_Vertices, "ColumnHeader_Vertices");
             // 
             // bar1
             // 
@@ -162,6 +103,7 @@ namespace SM64_ROM_Manager
             // ButtonItem_AddNew
             // 
             this.ButtonItem_AddNew.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.ButtonItem_AddNew.Visible = false;
             this.ButtonItem_AddNew.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
             this.ButtonItem_AddNew.Name = "ButtonItem_AddNew";
             this.ButtonItem_AddNew.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlN);
@@ -232,6 +174,92 @@ namespace SM64_ROM_Manager
             this.AdvPropertyGrid1.ConvertFromStringToPropertyValue += new DevComponents.DotNetBar.ConvertValueEventHandler(this.AdvPropertyGrid1_ConvertFromStringToPropertyValue);
             this.AdvPropertyGrid1.PropertyValueChanged += new System.ComponentModel.PropertyChangedEventHandler(this.AdvPropertyGrid1_PropertyValueChanged);
             // 
+            // advTree_ScrollTexList
+            // 
+            this.advTree_ScrollTexList.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTree_ScrollTexList.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTree_ScrollTexList.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree_ScrollTexList.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree_ScrollTexList.Columns.Add(this.columnHeader_Number);
+            this.advTree_ScrollTexList.Columns.Add(this.columnHeader_Material);
+            this.advTree_ScrollTexList.Columns.Add(this.columnHeader_Behavior);
+            this.advTree_ScrollTexList.Columns.Add(this.columnHeader_Type);
+            this.advTree_ScrollTexList.Columns.Add(this.columnHeader_Duration);
+            this.advTree_ScrollTexList.Columns.Add(this.columnHeader_Speed);
+            this.advTree_ScrollTexList.Columns.Add(this.columnHeader_VertexPointer);
+            this.advTree_ScrollTexList.Columns.Add(this.columnHeader_Vertices);
+            resources.ApplyResources(this.advTree_ScrollTexList, "advTree_ScrollTexList");
+            this.advTree_ScrollTexList.DragDropEnabled = false;
+            this.advTree_ScrollTexList.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_ScrollTexList.MultiSelect = true;
+            this.advTree_ScrollTexList.Name = "advTree_ScrollTexList";
+            this.advTree_ScrollTexList.NodesConnector = this.nodeConnector1;
+            this.advTree_ScrollTexList.NodeStyle = this.elementStyle1;
+            this.advTree_ScrollTexList.PathSeparator = ";";
+            this.advTree_ScrollTexList.Styles.Add(this.elementStyle1);
+            this.advTree_ScrollTexList.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_ScrollTexList_AfterNodeSelect);
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // columnHeader_Number
+            // 
+            this.columnHeader_Number.Name = "columnHeader_Number";
+            resources.ApplyResources(this.columnHeader_Number, "columnHeader_Number");
+            this.columnHeader_Number.Width.Absolute = 60;
+            // 
+            // columnHeader_Material
+            // 
+            this.columnHeader_Material.Name = "columnHeader_Material";
+            resources.ApplyResources(this.columnHeader_Material, "columnHeader_Material");
+            this.columnHeader_Material.Width.Absolute = 100;
+            // 
+            // columnHeader_Behavior
+            // 
+            this.columnHeader_Behavior.Name = "columnHeader_Behavior";
+            resources.ApplyResources(this.columnHeader_Behavior, "columnHeader_Behavior");
+            this.columnHeader_Behavior.Width.Absolute = 100;
+            // 
+            // columnHeader_Type
+            // 
+            this.columnHeader_Type.Name = "columnHeader_Type";
+            resources.ApplyResources(this.columnHeader_Type, "columnHeader_Type");
+            this.columnHeader_Type.Width.Absolute = 100;
+            // 
+            // columnHeader_Duration
+            // 
+            this.columnHeader_Duration.Name = "columnHeader_Duration";
+            resources.ApplyResources(this.columnHeader_Duration, "columnHeader_Duration");
+            this.columnHeader_Duration.Width.Absolute = 60;
+            // 
+            // columnHeader_Speed
+            // 
+            this.columnHeader_Speed.Name = "columnHeader_Speed";
+            resources.ApplyResources(this.columnHeader_Speed, "columnHeader_Speed");
+            this.columnHeader_Speed.Width.Absolute = 60;
+            // 
+            // columnHeader_VertexPointer
+            // 
+            this.columnHeader_VertexPointer.Name = "columnHeader_VertexPointer";
+            resources.ApplyResources(this.columnHeader_VertexPointer, "columnHeader_VertexPointer");
+            this.columnHeader_VertexPointer.Width.Absolute = 100;
+            // 
+            // columnHeader_Vertices
+            // 
+            this.columnHeader_Vertices.Name = "columnHeader_Vertices";
+            resources.ApplyResources(this.columnHeader_Vertices, "columnHeader_Vertices");
+            this.columnHeader_Vertices.Width.Absolute = 100;
+            // 
             // ScrollTexEditor
             // 
             resources.ApplyResources(this, "$this");
@@ -249,27 +277,12 @@ namespace SM64_ROM_Manager
             this.SplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvPropertyGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_ScrollTexList)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_LM_ScrollTexList;
-
-        private ColumnHeader ColumnHeader_Number;
-
-        private ColumnHeader ColumnHeader_Behavior;
-
-        private ColumnHeader ColumnHeader_Type;
-
-        private ColumnHeader ColumnHeader_Duration;
-
-        private ColumnHeader ColumnHeader_Speed;
-
         private DevComponents.DotNetBar.AdvPropertyGrid AdvPropertyGrid1;
-
-        private ColumnHeader ColumnHeader_VertexPointer;
-
-        private ColumnHeader ColumnHeader_Vertices;
 
         private DevComponents.DotNetBar.ButtonItem ButtonItem_AddNew;
 
@@ -281,6 +294,16 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.LabelItem labelItem1;
         private DevComponents.DotNetBar.CheckBoxItem CheckBoxItem_ViewMode_Simplified;
         private DevComponents.DotNetBar.CheckBoxItem CheckBoxItem_ViewMode_Expert;
-        private ColumnHeader columnHeader_MaterialName;
+        private DevComponents.AdvTree.AdvTree advTree_ScrollTexList;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Number;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Material;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Behavior;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Type;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Duration;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Speed;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_VertexPointer;
+        private DevComponents.AdvTree.ColumnHeader columnHeader_Vertices;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
     }
 }
