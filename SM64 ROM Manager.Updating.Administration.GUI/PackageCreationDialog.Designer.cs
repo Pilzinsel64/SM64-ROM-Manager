@@ -41,14 +41,12 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.SuperTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.SuperTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.AdvTree1 = new DevComponents.AdvTree.AdvTree();
+            this.circularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
             this.NodeConnector1 = new DevComponents.AdvTree.NodeConnector();
             this.ElementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.SuperTabItem_Pkg_Files = new DevComponents.DotNetBar.SuperTabItem();
             this.SuperTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.Panel4 = new System.Windows.Forms.Panel();
-            this.ListViewEx_Files = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuperTabItem_Pkg_Extensions = new DevComponents.DotNetBar.SuperTabItem();
             this.RibbonControl_Main = new DevComponents.DotNetBar.RibbonControl();
             this.RibbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
@@ -67,7 +65,11 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.ButtonItem_Pkg_SaveTemplate = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_Pkg_SaveTemplateAs = new DevComponents.DotNetBar.ButtonItem();
             this.RibbonTabItem_Packaging = new DevComponents.DotNetBar.RibbonTabItem();
-            this.circularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
+            this.advTree_Extensions = new DevComponents.AdvTree.AdvTree();
+            this.nodeConnector2 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
+            this.columnHeader3 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader4 = new DevComponents.AdvTree.ColumnHeader();
             ((System.ComponentModel.ISupportInitialize)(this.SuperTabControl1)).BeginInit();
             this.SuperTabControl1.SuspendLayout();
             this.SuperTabControlPanel2.SuspendLayout();
@@ -77,6 +79,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.Panel4.SuspendLayout();
             this.RibbonControl_Main.SuspendLayout();
             this.RibbonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_Extensions)).BeginInit();
             this.SuspendLayout();
             // 
             // SuperTabControl1
@@ -100,8 +103,8 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.SuperTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.SuperTabControl1.ControlBox.MenuBox,
             this.SuperTabControl1.ControlBox.CloseBox});
-            this.SuperTabControl1.Controls.Add(this.SuperTabControlPanel2);
             this.SuperTabControl1.Controls.Add(this.SuperTabControlPanel4);
+            this.SuperTabControl1.Controls.Add(this.SuperTabControlPanel2);
             this.SuperTabControl1.ForeColor = System.Drawing.Color.Black;
             this.SuperTabControl1.Location = new System.Drawing.Point(1, 155);
             this.SuperTabControl1.Name = "SuperTabControl1";
@@ -152,6 +155,24 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.AdvTree1.TabIndex = 0;
             this.AdvTree1.Text = "AdvTree1";
             // 
+            // circularProgress1
+            // 
+            this.circularProgress1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.circularProgress1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.circularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.circularProgress1.Location = new System.Drawing.Point(239, 160);
+            this.circularProgress1.Name = "circularProgress1";
+            this.circularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot;
+            this.circularProgress1.SetVisibleStateOnStart = true;
+            this.circularProgress1.SetVisibleStateOnStop = true;
+            this.circularProgress1.Size = new System.Drawing.Size(75, 75);
+            this.circularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
+            this.circularProgress1.TabIndex = 6;
+            this.circularProgress1.Visible = false;
+            // 
             // NodeConnector1
             // 
             this.NodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
@@ -182,46 +203,12 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             // Panel4
             // 
             this.Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.Panel4.Controls.Add(this.ListViewEx_Files);
+            this.Panel4.Controls.Add(this.advTree_Extensions);
             this.Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel4.Location = new System.Drawing.Point(0, 0);
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(552, 394);
             this.Panel4.TabIndex = 1;
-            // 
-            // ListViewEx_Files
-            // 
-            this.ListViewEx_Files.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx_Files.Border.Class = "ListViewBorder";
-            this.ListViewEx_Files.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_Files.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader1,
-            this.ColumnHeader2});
-            this.ListViewEx_Files.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_Files.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListViewEx_Files.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_Files.FullRowSelect = true;
-            this.ListViewEx_Files.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx_Files.HideSelection = false;
-            this.ListViewEx_Files.Location = new System.Drawing.Point(0, 0);
-            this.ListViewEx_Files.Name = "ListViewEx_Files";
-            this.ListViewEx_Files.Size = new System.Drawing.Size(552, 394);
-            this.ListViewEx_Files.TabIndex = 0;
-            this.ListViewEx_Files.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_Files.View = System.Windows.Forms.View.Details;
-            // 
-            // ColumnHeader1
-            // 
-            this.ColumnHeader1.Text = "Datei";
-            this.ColumnHeader1.Width = 150;
-            // 
-            // ColumnHeader2
-            // 
-            this.ColumnHeader2.Text = "Ort";
-            this.ColumnHeader2.Width = 360;
             // 
             // SuperTabItem_Pkg_Extensions
             // 
@@ -247,6 +234,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonControl_Main.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
             this.RibbonControl_Main.Location = new System.Drawing.Point(5, 1);
             this.RibbonControl_Main.Name = "RibbonControl_Main";
+            this.RibbonControl_Main.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.RibbonControl_Main.Size = new System.Drawing.Size(640, 154);
             this.RibbonControl_Main.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RibbonControl_Main.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
@@ -275,10 +263,10 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonPanel1.Controls.Add(this.RibbonBar1);
             this.RibbonPanel1.Controls.Add(this.RibbonBar3);
             this.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RibbonPanel1.Location = new System.Drawing.Point(0, 55);
+            this.RibbonPanel1.Location = new System.Drawing.Point(0, 56);
             this.RibbonPanel1.Name = "RibbonPanel1";
-            this.RibbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 2);
-            this.RibbonPanel1.Size = new System.Drawing.Size(640, 99);
+            this.RibbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.RibbonPanel1.Size = new System.Drawing.Size(640, 95);
             // 
             // 
             // 
@@ -313,7 +301,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonBar_Pkg_Erweiterungen.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.RibbonBar_Pkg_Erweiterungen.Location = new System.Drawing.Point(510, 0);
             this.RibbonBar_Pkg_Erweiterungen.Name = "RibbonBar_Pkg_Erweiterungen";
-            this.RibbonBar_Pkg_Erweiterungen.Size = new System.Drawing.Size(144, 97);
+            this.RibbonBar_Pkg_Erweiterungen.Size = new System.Drawing.Size(144, 92);
             this.RibbonBar_Pkg_Erweiterungen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RibbonBar_Pkg_Erweiterungen.TabIndex = 3;
             this.RibbonBar_Pkg_Erweiterungen.Text = "Erweiterungen";
@@ -366,7 +354,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonBar_Pkg_Dateien.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.RibbonBar_Pkg_Dateien.Location = new System.Drawing.Point(381, 0);
             this.RibbonBar_Pkg_Dateien.Name = "RibbonBar_Pkg_Dateien";
-            this.RibbonBar_Pkg_Dateien.Size = new System.Drawing.Size(129, 97);
+            this.RibbonBar_Pkg_Dateien.Size = new System.Drawing.Size(129, 92);
             this.RibbonBar_Pkg_Dateien.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RibbonBar_Pkg_Dateien.TabIndex = 2;
             this.RibbonBar_Pkg_Dateien.Text = "Dateien";
@@ -419,7 +407,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonBar1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.RibbonBar1.Location = new System.Drawing.Point(233, 0);
             this.RibbonBar1.Name = "RibbonBar1";
-            this.RibbonBar1.Size = new System.Drawing.Size(148, 97);
+            this.RibbonBar1.Size = new System.Drawing.Size(148, 92);
             this.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RibbonBar1.TabIndex = 0;
             this.RibbonBar1.Text = "Paket";
@@ -474,7 +462,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonBar3.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.RibbonBar3.Location = new System.Drawing.Point(3, 0);
             this.RibbonBar3.Name = "RibbonBar3";
-            this.RibbonBar3.Size = new System.Drawing.Size(230, 97);
+            this.RibbonBar3.Size = new System.Drawing.Size(230, 92);
             this.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RibbonBar3.TabIndex = 1;
             this.RibbonBar3.Text = "Vorlage";
@@ -534,23 +522,53 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonTabItem_Packaging.Panel = this.RibbonPanel1;
             this.RibbonTabItem_Packaging.Text = "Paketierung";
             // 
-            // circularProgress1
+            // advTree_Extensions
             // 
-            this.circularProgress1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.circularProgress1.BackColor = System.Drawing.Color.Transparent;
+            this.advTree_Extensions.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTree_Extensions.BackColor = System.Drawing.SystemColors.Window;
             // 
             // 
             // 
-            this.circularProgress1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.circularProgress1.Location = new System.Drawing.Point(239, 160);
-            this.circularProgress1.Name = "circularProgress1";
-            this.circularProgress1.ProgressBarType = DevComponents.DotNetBar.eCircularProgressType.Dot;
-            this.circularProgress1.SetVisibleStateOnStart = true;
-            this.circularProgress1.SetVisibleStateOnStop = true;
-            this.circularProgress1.Size = new System.Drawing.Size(75, 75);
-            this.circularProgress1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
-            this.circularProgress1.TabIndex = 6;
-            this.circularProgress1.Visible = false;
+            this.advTree_Extensions.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree_Extensions.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree_Extensions.Columns.Add(this.columnHeader3);
+            this.advTree_Extensions.Columns.Add(this.columnHeader4);
+            this.advTree_Extensions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advTree_Extensions.DragDropEnabled = false;
+            this.advTree_Extensions.ExpandWidth = 0;
+            this.advTree_Extensions.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_Extensions.Location = new System.Drawing.Point(0, 0);
+            this.advTree_Extensions.Name = "advTree_Extensions";
+            this.advTree_Extensions.NodesConnector = this.nodeConnector2;
+            this.advTree_Extensions.NodeStyle = this.elementStyle2;
+            this.advTree_Extensions.PathSeparator = ";";
+            this.advTree_Extensions.Size = new System.Drawing.Size(552, 394);
+            this.advTree_Extensions.Styles.Add(this.elementStyle2);
+            this.advTree_Extensions.TabIndex = 1;
+            this.advTree_Extensions.Text = "advTree2";
+            // 
+            // nodeConnector2
+            // 
+            this.nodeConnector2.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle2
+            // 
+            this.elementStyle2.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle2.Name = "elementStyle2";
+            this.elementStyle2.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Name = "columnHeader3";
+            this.columnHeader3.Text = "Datei";
+            this.columnHeader3.Width.Absolute = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Name = "columnHeader4";
+            this.columnHeader4.StretchToFill = true;
+            this.columnHeader4.Text = "Ort";
+            this.columnHeader4.Width.Absolute = 150;
             // 
             // PackageCreationDialog
             // 
@@ -574,6 +592,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.RibbonControl_Main.ResumeLayout(false);
             this.RibbonControl_Main.PerformLayout();
             this.RibbonPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_Extensions)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -635,8 +654,6 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
 
 
 
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_Files;
-
 
         private DevComponents.AdvTree.AdvTree AdvTree1;
 
@@ -688,14 +705,15 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         private DevComponents.DotNetBar.ButtonItem ButtonItem_Pkg_NewTemplate;
 
 
-        private ColumnHeader ColumnHeader1;
-
-
-        private ColumnHeader ColumnHeader2;
 
 
         private DevComponents.DotNetBar.ButtonItem ButtonItem_Pkg_RemoveFileFolder;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_UploadPackage;
         private DevComponents.DotNetBar.Controls.CircularProgress circularProgress1;
+        private DevComponents.AdvTree.AdvTree advTree_Extensions;
+        private DevComponents.AdvTree.ColumnHeader columnHeader3;
+        private DevComponents.AdvTree.ColumnHeader columnHeader4;
+        private DevComponents.AdvTree.NodeConnector nodeConnector2;
+        private DevComponents.DotNetBar.ElementStyle elementStyle2;
     }
 }

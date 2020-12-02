@@ -131,21 +131,23 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
 
         private void ShowPackageExtensions()
         {
-            ListViewEx_Files.BeginUpdate();
-            ListViewEx_Files.Items.Clear();
+            advTree_Extensions.BeginUpdate();
+            advTree_Extensions.Nodes.Clear();
+
             foreach (string fAddOn in packageManager.GetAllUpdateInstallerÁddOn())
             {
-                var item = new ListViewItem(new[] { Path.GetFileName(fAddOn), Path.GetDirectoryName(fAddOn) }) { Tag = fAddOn };
-                ListViewEx_Files.Items.Add(item);
+                var item = new Node(Path.GetFileName(fAddOn)) { Tag = fAddOn };
+                item.Cells.Add(new Cell(Path.GetDirectoryName(fAddOn)));
+                advTree_Extensions.Nodes.Add(item);
             }
 
-            ListViewEx_Files.EndUpdate();
+            advTree_Extensions.EndUpdate();
         }
 
         private IEnumerable<string> GetSelectedUpdateInstallAddOns()
         {
             var list = new List<string>();
-            foreach (ListViewItem item in ListViewEx_Files.SelectedItems)
+            foreach (Node item in advTree_Extensions.SelectedNodes)
                 list.Add(Conversions.ToString(item.Tag));
             return list;
         }
