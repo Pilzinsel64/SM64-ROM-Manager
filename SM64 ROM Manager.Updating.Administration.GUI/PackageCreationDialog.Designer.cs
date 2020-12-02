@@ -111,7 +111,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.SuperTabControl1.ReorderTabsEnabled = true;
             this.SuperTabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.SuperTabControl1.SelectedTabIndex = 0;
-            this.SuperTabControl1.Size = new System.Drawing.Size(648, 394);
+            this.SuperTabControl1.Size = new System.Drawing.Size(632, 355);
             this.SuperTabControl1.TabAlignment = DevComponents.DotNetBar.eTabStripAlignment.Left;
             this.SuperTabControl1.TabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuperTabControl1.TabIndex = 1;
@@ -575,7 +575,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 550);
+            this.Size = new System.Drawing.Size(650, 550);
             this.Controls.Add(this.SuperTabControl1);
             this.Controls.Add(this.RibbonControl_Main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

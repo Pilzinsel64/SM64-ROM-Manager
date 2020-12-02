@@ -14,13 +14,19 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
     /// </summary>
     static class Program
     {
+        static Program()
+        {
+            Pilz.Cryptography.AESStringCrypter.DefaultKey = "iZbNfbTQgBVfg+UoRWBBaTeJa0wvLLtSoLljUHTOtAA=";
+            Pilz.Cryptography.AESStringCrypter.DefaultIV = "5meO/fPEWftScQ9+3wKT8Q==";
+        }
+
         [STAThread]
         static void Main(string[] args)
         {
-            SetDefaultControlFont();
             Application.SetHighDpiMode(HighDpiMode.DpiUnaware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            SetDefaultControlFont();
             Application.Run(new UpdateManagerWindow());
         }
 
