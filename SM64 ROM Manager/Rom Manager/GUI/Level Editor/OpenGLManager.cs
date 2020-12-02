@@ -481,19 +481,19 @@ namespace SM64_ROM_Manager.LevelEditor
                         movedCam = true;
                         break;
                     case object _ when state.IsKeyDown(Key.A):
-                        Camera.UpdateCameraOffsetDirectly(-moveSpeed, 0, ref camMtx);
-                        movedCam = true;
-                        break;
-                    case object _ when state.IsKeyDown(Key.D):
                         Camera.UpdateCameraOffsetDirectly(moveSpeed, 0, ref camMtx);
                         movedCam = true;
                         break;
+                    case object _ when state.IsKeyDown(Key.D):
+                        Camera.UpdateCameraOffsetDirectly(-moveSpeed, 0, ref camMtx);
+                        movedCam = true;
+                        break;
                     case object _ when state.IsKeyDown(Key.E):
-                        Camera.UpdateCameraOffsetDirectly(0, -moveSpeed, ref camMtx);
+                        Camera.UpdateCameraOffsetDirectly(0, moveSpeed, ref camMtx);
                         movedCam = true;
                         break;
                     case object _ when state.IsKeyDown(Key.Q):
-                        Camera.UpdateCameraOffsetDirectly(0, moveSpeed, ref camMtx);
+                        Camera.UpdateCameraOffsetDirectly(0, -moveSpeed, ref camMtx);
                         movedCam = true;
                         break;
                 }
