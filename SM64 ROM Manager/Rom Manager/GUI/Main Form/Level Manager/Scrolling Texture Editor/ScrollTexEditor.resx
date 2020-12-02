@@ -125,71 +125,80 @@
   <data name="SplitContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="ColumnHeader_Number.Text" xml:space="preserve">
+  <metadata name="columnHeader_Number.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="columnHeader_Number.Text" xml:space="preserve">
     <value>#</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ColumnHeader_Number.Width" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="columnHeader_MaterialName.Text" xml:space="preserve">
+  <metadata name="columnHeader_Material.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 17</value>
+  </metadata>
+  <data name="columnHeader_Material.Text" xml:space="preserve">
     <value>Material</value>
   </data>
-  <data name="columnHeader_MaterialName.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="ColumnHeader_Behavior.Text" xml:space="preserve">
+  <metadata name="columnHeader_Behavior.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>293, 17</value>
+  </metadata>
+  <data name="columnHeader_Behavior.Text" xml:space="preserve">
     <value>Behavior</value>
   </data>
-  <data name="ColumnHeader_Behavior.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="ColumnHeader_Type.Text" xml:space="preserve">
+  <metadata name="columnHeader_Type.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>431, 17</value>
+  </metadata>
+  <data name="columnHeader_Type.Text" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="ColumnHeader_Type.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="ColumnHeader_Duration.Text" xml:space="preserve">
+  <metadata name="columnHeader_Duration.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>569, 17</value>
+  </metadata>
+  <data name="columnHeader_Duration.Text" xml:space="preserve">
     <value>Duration</value>
   </data>
-  <data name="ColumnHeader_Speed.Text" xml:space="preserve">
+  <metadata name="columnHeader_Speed.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>707, 17</value>
+  </metadata>
+  <data name="columnHeader_Speed.Text" xml:space="preserve">
     <value>Speed</value>
   </data>
-  <data name="ColumnHeader_VertexPointer.Text" xml:space="preserve">
+  <metadata name="columnHeader_VertexPointer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <data name="columnHeader_VertexPointer.Text" xml:space="preserve">
     <value>Vertex Pointer</value>
   </data>
-  <data name="ColumnHeader_VertexPointer.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="ColumnHeader_Vertices.Text" xml:space="preserve">
+  <metadata name="columnHeader_Vertices.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 56</value>
+  </metadata>
+  <data name="columnHeader_Vertices.Text" xml:space="preserve">
     <value>Vertices</value>
   </data>
-  <data name="ColumnHeader_Vertices.Width" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="ListViewEx_LM_ScrollTexList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="advTree_ScrollTexList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="ListViewEx_LM_ScrollTexList.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="advTree_ScrollTexList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
   </data>
-  <data name="ListViewEx_LM_ScrollTexList.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="advTree_ScrollTexList.Size" type="System.Drawing.Size, System.Drawing">
     <value>583, 609</value>
   </data>
-  <data name="ListViewEx_LM_ScrollTexList.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="advTree_ScrollTexList.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;ListViewEx_LM_ScrollTexList.Name" xml:space="preserve">
-    <value>ListViewEx_LM_ScrollTexList</value>
+  <data name="advTree_ScrollTexList.Text" xml:space="preserve">
+    <value>advTree1</value>
   </data>
-  <data name="&gt;&gt;ListViewEx_LM_ScrollTexList.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;advTree_ScrollTexList.Name" xml:space="preserve">
+    <value>advTree_ScrollTexList</value>
   </data>
-  <data name="&gt;&gt;ListViewEx_LM_ScrollTexList.Parent" xml:space="preserve">
+  <data name="&gt;&gt;advTree_ScrollTexList.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;advTree_ScrollTexList.Parent" xml:space="preserve">
     <value>SplitContainer1.Panel1</value>
   </data>
-  <data name="&gt;&gt;ListViewEx_LM_ScrollTexList.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;advTree_ScrollTexList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="bar1.AccessibleDescription" xml:space="preserve">
@@ -2190,54 +2199,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Texture Animation Editor</value>
   </data>
-  <data name="&gt;&gt;ColumnHeader_Number.Name" xml:space="preserve">
-    <value>ColumnHeader_Number</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Number.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader_MaterialName.Name" xml:space="preserve">
-    <value>columnHeader_MaterialName</value>
-  </data>
-  <data name="&gt;&gt;columnHeader_MaterialName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Behavior.Name" xml:space="preserve">
-    <value>ColumnHeader_Behavior</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Behavior.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Type.Name" xml:space="preserve">
-    <value>ColumnHeader_Type</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Type.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Duration.Name" xml:space="preserve">
-    <value>ColumnHeader_Duration</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Duration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Speed.Name" xml:space="preserve">
-    <value>ColumnHeader_Speed</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Speed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_VertexPointer.Name" xml:space="preserve">
-    <value>ColumnHeader_VertexPointer</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_VertexPointer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Vertices.Name" xml:space="preserve">
-    <value>ColumnHeader_Vertices</value>
-  </data>
-  <data name="&gt;&gt;ColumnHeader_Vertices.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ButtonItem_AddNew.Name" xml:space="preserve">
     <value>ButtonItem_AddNew</value>
   </data>
@@ -2273,6 +2234,66 @@
   </data>
   <data name="&gt;&gt;CheckBoxItem_ViewMode_Expert.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.CheckBoxItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
+    <value>nodeConnector1</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
+    <value>elementStyle1</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Number.Name" xml:space="preserve">
+    <value>columnHeader_Number</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Number.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Material.Name" xml:space="preserve">
+    <value>columnHeader_Material</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Material.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Behavior.Name" xml:space="preserve">
+    <value>columnHeader_Behavior</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Behavior.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Type.Name" xml:space="preserve">
+    <value>columnHeader_Type</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Type.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Duration.Name" xml:space="preserve">
+    <value>columnHeader_Duration</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Duration.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Speed.Name" xml:space="preserve">
+    <value>columnHeader_Speed</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Speed.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_VertexPointer.Name" xml:space="preserve">
+    <value>columnHeader_VertexPointer</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_VertexPointer.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Vertices.Name" xml:space="preserve">
+    <value>columnHeader_Vertices</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Vertices.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ScrollTexEditor</value>

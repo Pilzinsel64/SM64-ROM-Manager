@@ -603,28 +603,31 @@
   <data name="LayoutControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
-  <data name="ListViewEx_EmbeddedFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="AdvTree_EmbeddedFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="ListViewEx_EmbeddedFiles.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AdvTree_EmbeddedFiles.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 32</value>
   </data>
-  <data name="ListViewEx_EmbeddedFiles.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AdvTree_EmbeddedFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>365, 123</value>
   </data>
-  <data name="ListViewEx_EmbeddedFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="AdvTree_EmbeddedFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
-  <data name="&gt;&gt;ListViewEx_EmbeddedFiles.Name" xml:space="preserve">
-    <value>ListViewEx_EmbeddedFiles</value>
+  <data name="AdvTree_EmbeddedFiles.Text" xml:space="preserve">
+    <value>advTree1</value>
   </data>
-  <data name="&gt;&gt;ListViewEx_EmbeddedFiles.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;AdvTree_EmbeddedFiles.Name" xml:space="preserve">
+    <value>AdvTree_EmbeddedFiles</value>
   </data>
-  <data name="&gt;&gt;ListViewEx_EmbeddedFiles.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AdvTree_EmbeddedFiles.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_EmbeddedFiles.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="&gt;&gt;ListViewEx_EmbeddedFiles.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AdvTree_EmbeddedFiles.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -2953,6 +2956,18 @@
   </data>
   <data name="&gt;&gt;ButtonItem_ShowObjectCatalog.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
+    <value>nodeConnector1</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
+    <value>elementStyle1</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TweakScriptEditor</value>

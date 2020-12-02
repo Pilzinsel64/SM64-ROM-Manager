@@ -20,8 +20,8 @@
     <Company>Pilzinsel64</Company>
     <Product>SM64 ROM Manager</Product>
     <Copyright>Copyright © Pilzinsel64 2017 - 2020</Copyright>
-    <AssemblyVersion>1.11.7.0</AssemblyVersion>
-    <FileVersion>1.11.7.0</FileVersion>
+    <AssemblyVersion>1.11.8.0</AssemblyVersion>
+    <FileVersion>1.11.8.0</FileVersion>
     <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
     <WarningLevel>1</WarningLevel>
     <DefineTrace>true</DefineTrace>
@@ -111,7 +111,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>false</GenerateManifests>
-    <Version>1.11.7.0</Version>
+    <Version>1.11.8.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
@@ -141,6 +141,11 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Rom Manager\Language Resources\Custom Object Manager\**" />
+    <EmbeddedResource Remove="Rom Manager\Language Resources\Custom Object Manager\**" />
+    <None Remove="Rom Manager\Language Resources\Custom Object Manager\**" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.664.37" />
@@ -435,13 +440,6 @@
       <DependentUpon>Tab_General.cs</DependentUpon>
     </Compile>
     <Compile Update="Rom Manager\GUI\Main Form\Tab_General.cs">
-      <SubType>UserControl</SubType>
-      <SubType>Designer</SubType>
-    </Compile>
-    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManager.Designer.cs">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManager.cs">
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
@@ -876,12 +874,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_General.resx">
       <DependentUpon>Tab_General.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManager.de.resx">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManager.resx">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.resx">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>

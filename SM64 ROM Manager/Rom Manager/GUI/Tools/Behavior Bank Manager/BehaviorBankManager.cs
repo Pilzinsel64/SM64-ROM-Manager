@@ -365,34 +365,34 @@ namespace SM64_ROM_Manager
 
         private void LoadCustomAsmLinkOptionsList()
         {
-            ListViewEx_CustomAsmFunctions.BeginUpdate();
-            ListViewEx_CustomAsmFunctions.Items.Clear();
+            advTree_CustomAsmFunctions.BeginUpdate();
+            advTree_CustomAsmFunctions.Nodes.Clear();
 
             foreach (var link in curBehav.Config.CustomAsmLinks)
-                ListViewEx_CustomAsmFunctions.Items.Add(GetCustomAsmLinkOptionsItem(link));
+                advTree_CustomAsmFunctions.Nodes.Add(GetCustomAsmLinkOptionsItem(link));
 
-            ListViewEx_CustomAsmFunctions.EndUpdate();
+            advTree_CustomAsmFunctions.EndUpdate();
 
             curAsmLinkOption = null;
             LoadCustomAsmLinkOptions();
         }
 
-        private ListViewItem GetCustomAsmLinkOptionsItem(CustomAsmAreaLinkOptions link)
+        private Node GetCustomAsmLinkOptionsItem(CustomAsmAreaLinkOptions link)
         {
-            var item = new ListViewItem
+            var item = new Node
             {
                 Tag = link
             };
-            item.SubItems.Add(new ListViewItem.ListViewSubItem());
+            item.Cells.Add(new Cell());
             UpdateCustomAsmLinkOptionsItem(item);
             return item;
         }
 
-        private ListViewItem FindCustomAsmLinkOptionsItem(CustomAsmAreaLinkOptions link)
+        private Node FindCustomAsmLinkOptionsItem(CustomAsmAreaLinkOptions link)
         {
-            ListViewItem item = null;
+            Node item = null;
 
-            foreach (ListViewItem iitem in ListViewEx_CustomAsmFunctions.Items)
+            foreach (Node iitem in advTree_CustomAsmFunctions.Nodes)
             {
                 if (iitem.Tag == link)
                     item = iitem;
@@ -406,12 +406,12 @@ namespace SM64_ROM_Manager
             UpdateCustomAsmLinkOptionsItem(FindCustomAsmLinkOptionsItem(link));
         }
 
-        private void UpdateCustomAsmLinkOptionsItem(ListViewItem item)
+        private void UpdateCustomAsmLinkOptionsItem(Node item)
         {
             if (item?.Tag is CustomAsmAreaLinkOptions link)
             {
-                item.SubItems[0].Text = link.CustomAsm.Config.Name;
-                item.SubItems[1].Text = link.Loop.ToString();
+                item.Cells[0].Text = link.CustomAsm.Config.Name;
+                item.Cells[1].Text = link.Loop.ToString();
             }
         }
 
@@ -452,10 +452,9 @@ namespace SM64_ROM_Manager
 
                 // Add item
                 var item = GetCustomAsmLinkOptionsItem(link);
-                ListViewEx_CustomAsmFunctions.Items.Add(item);
-                foreach (ListViewItem selitem in ListViewEx_CustomAsmFunctions.SelectedItems)
-                    selitem.Selected = false;
-                item.Selected = true;
+                advTree_CustomAsmFunctions.Nodes.Add(item);
+                advTree_CustomAsmFunctions.SelectedNodes.Clear();
+                advTree_CustomAsmFunctions.SelectedNodes.Add(item);
                 item.EnsureVisible();
             }
         }
@@ -465,7 +464,7 @@ namespace SM64_ROM_Manager
             // Remove item
             var item = FindCustomAsmLinkOptionsItem(link);
             if (item is object)
-                ListViewEx_CustomAsmFunctions.Items.Remove(item);
+                advTree_CustomAsmFunctions.Nodes.Remove(item);
 
             // Remove link options
             curBehav?.Config.CustomAsmLinks.RemoveIfContains(link);
@@ -554,17 +553,6 @@ namespace SM64_ROM_Manager
             rommgr.AfterRomSave -= Rommgr_AfterRomSave;
         }
 
-        private void ListViewEx_CustomAsmFunctions_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selItems = ListViewEx_CustomAsmFunctions.SelectedItems;
-            if (selItems.Count > 0)
-                curAsmLinkOption = selItems[0].Tag as CustomAsmAreaLinkOptions;
-            else
-                curAsmLinkOption = null;
-
-            LoadCustomAsmLinkOptions();
-        }
-
         private void ButtonX_AddCustomAsmFunction_Click(object sender, EventArgs e)
         {
             var selector = new CustomAsmCodeSelector(rommgr);
@@ -594,6 +582,12 @@ namespace SM64_ROM_Manager
                 DisableGlobalBehaviorBank();
                 Close();
             }
+        }
+
+        private void advTree_CustomAsmFunctions_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            curAsmLinkOption = advTree_CustomAsmFunctions.SelectedNode?.Tag as CustomAsmAreaLinkOptions;
+            LoadCustomAsmLinkOptions();
         }
     }
 }

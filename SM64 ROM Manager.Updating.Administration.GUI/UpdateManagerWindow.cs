@@ -125,38 +125,32 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
 
         private async Task LoadPackageList()
         {
-            ListViewItem firstItem = null;
-
             ProgressControls(true);
-            ListViewEx_Packages.BeginUpdate();
-            ListViewEx_Packages.Items.Clear();
+            advTree_Packages.BeginUpdate();
+            advTree_Packages.Nodes.Clear();
 
             foreach (var pkgVersion in await manager.GetUpdatePackagesList())
             {
                 var name = manager.GetPackageDescription(pkgVersion).name;
-                var item = new ListViewItem(new string[]
-                {
-                    string.IsNullOrEmpty(name) ? "<Kein Titel>" : name,
-                    pkgVersion.Version.ToString(),
-                    pkgVersion.Channel.ToString(),
-                    pkgVersion.Build.ToString(),
-                    "Ja"
-                })
+                var item = new Node
                 {
                     Tag = pkgVersion
                 };
 
-                ListViewEx_Packages.Items.Add(item);
+                item.Text = string.IsNullOrEmpty(name) ? "<Kein Titel>" : name;
+                item.Cells.Add(new Cell(pkgVersion.Version.ToString()));
+                item.Cells.Add(new Cell(pkgVersion.Channel.ToString()));
+                item.Cells.Add(new Cell(pkgVersion.Build.ToString()));
+                item.Cells.Add(new Cell("Ja"));
 
-                if (firstItem == null)
-                    firstItem = item;
+                advTree_Packages.Nodes.Add(item);
             }
 
-            ListViewEx_Packages.EndUpdate();
+            advTree_Packages.EndUpdate();
             ProgressControls(false);
 
-            if (firstItem is object)
-                firstItem.Selected = true;
+            if (advTree_Packages.HasChildren)
+                advTree_Packages.SelectedNode = advTree_Packages.Nodes[0];
         }
 
         private void LoadUpdateInstallerInfos()
@@ -166,11 +160,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
 
         private ApplicationVersion GetSelectedPackageVersion()
         {
-            var items = ListViewEx_Packages.SelectedItems;
-            if (items.Count > 0)
-                return (ApplicationVersion)items[0].Tag;
-            else
-                return null;
+            return advTree_Packages.SelectedNode?.Tag as ApplicationVersion;
         }
 
         private async Task<bool> UploadPackage(string filePath)
@@ -362,13 +352,6 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             manager.UpdateInfo.UpdateInstallerLink = TextBoxX_UpdateInstallerDownloadUrl.Text.Trim();
         }
 
-        private void ListViewEx_Packages_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var anySelected = ListViewEx_Packages.SelectedItems.Count > 0;
-            ribbonBar_Discord.Enabled = anySelected;
-            ribbonBar_PackageManagement.Enabled = anySelected;
-        }
-
         private void ButtonItem_PostMsgInDiscord_Click(object sender, EventArgs e)
         {
             if (discordBot == null)
@@ -451,6 +434,13 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             var frm = new ProxyConfigEditor(General.CurProject.ProxyConfig);
             if (frm.ShowDialog(this) == DialogResult.OK)
                 General.SetProxyConfig();
+        }
+
+        private void advTree_Packages_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            var anySelected = advTree_Packages.SelectedNode is object;
+            ribbonBar_Discord.Enabled = anySelected;
+            ribbonBar_PackageManagement.Enabled = anySelected;
         }
     }
 }

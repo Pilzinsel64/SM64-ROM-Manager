@@ -41,6 +41,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TextBoxX_ScriptName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.CheckBoxX_TweakScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxX_DLL = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.checkBoxX_PPFPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.checkBoxX_IPSPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.checkBoxX_BPSPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
@@ -57,7 +58,6 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TextBoxX_ReferenceName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.LayoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.ListViewEx_EmbeddedFiles = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonX_AddEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_RemoveEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
@@ -83,7 +83,9 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonItem_CheckForErrors = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_ShowObjectCatalog = new DevComponents.DotNetBar.ButtonItem();
             this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
-            this.checkBoxX_DLL = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.AdvTree_EmbeddedFiles = new DevComponents.AdvTree.AdvTree();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
@@ -95,6 +97,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvTree_EmbeddedFiles)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxX_ScriptDescription
@@ -156,6 +159,19 @@ namespace SM64_ROM_Manager.PatchScripts
             this.Panel1.Controls.Add(this.CheckBoxX_TweakScript);
             resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
+            // 
+            // checkBoxX_DLL
+            // 
+            // 
+            // 
+            // 
+            this.checkBoxX_DLL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_DLL.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_DLL.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_DLL, "checkBoxX_DLL");
+            this.checkBoxX_DLL.Name = "checkBoxX_DLL";
+            this.checkBoxX_DLL.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_DLL.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
             // 
             // checkBoxX_PPFPatch
             // 
@@ -353,24 +369,10 @@ namespace SM64_ROM_Manager.PatchScripts
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.ListViewEx_EmbeddedFiles);
+            this.panel5.Controls.Add(this.AdvTree_EmbeddedFiles);
             this.panel5.Controls.Add(this.tableLayoutPanel1);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
-            // 
-            // ListViewEx_EmbeddedFiles
-            // 
-            resources.ApplyResources(this.ListViewEx_EmbeddedFiles, "ListViewEx_EmbeddedFiles");
-            // 
-            // 
-            // 
-            this.ListViewEx_EmbeddedFiles.Border.Class = "ListViewBorder";
-            this.ListViewEx_EmbeddedFiles.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_EmbeddedFiles.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_EmbeddedFiles.HideSelection = false;
-            this.ListViewEx_EmbeddedFiles.Name = "ListViewEx_EmbeddedFiles";
-            this.ListViewEx_EmbeddedFiles.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_EmbeddedFiles.View = System.Windows.Forms.View.List;
             // 
             // tableLayoutPanel1
             // 
@@ -606,18 +608,36 @@ namespace SM64_ROM_Manager.PatchScripts
             this.contextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.contextMenuBar1.TabStop = false;
             // 
-            // checkBoxX_DLL
+            // AdvTree_EmbeddedFiles
+            // 
+            this.AdvTree_EmbeddedFiles.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            resources.ApplyResources(this.AdvTree_EmbeddedFiles, "AdvTree_EmbeddedFiles");
+            this.AdvTree_EmbeddedFiles.BackColor = System.Drawing.SystemColors.Window;
             // 
             // 
             // 
+            this.AdvTree_EmbeddedFiles.BackgroundStyle.Class = "TreeBorderKey";
+            this.AdvTree_EmbeddedFiles.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AdvTree_EmbeddedFiles.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.AdvTree_EmbeddedFiles.Name = "AdvTree_EmbeddedFiles";
+            this.AdvTree_EmbeddedFiles.DragDropEnabled = false;
+            this.AdvTree_EmbeddedFiles.ExpandWidth = 0;
+            this.AdvTree_EmbeddedFiles.MultiSelect = false;
+            this.AdvTree_EmbeddedFiles.NodesConnector = this.nodeConnector1;
+            this.AdvTree_EmbeddedFiles.NodeStyle = this.elementStyle1;
+            this.AdvTree_EmbeddedFiles.PathSeparator = ";";
+            this.AdvTree_EmbeddedFiles.Styles.Add(this.elementStyle1);
+            this.AdvTree_EmbeddedFiles.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_EmbeddedFiles_AfterNodeSelect);
             // 
-            this.checkBoxX_DLL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX_DLL.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX_DLL.FocusCuesEnabled = false;
-            resources.ApplyResources(this.checkBoxX_DLL, "checkBoxX_DLL");
-            this.checkBoxX_DLL.Name = "checkBoxX_DLL";
-            this.checkBoxX_DLL.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBoxX_DLL.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // TweakScriptEditor
             // 
@@ -642,6 +662,7 @@ namespace SM64_ROM_Manager.PatchScripts
             this.Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvTree_EmbeddedFiles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -711,7 +732,6 @@ namespace SM64_ROM_Manager.PatchScripts
         private DevComponents.DotNetBar.Controls.CheckBoxX CheckBoxX_ArmipsScript;
         private DevComponents.DotNetBar.ContextMenuBar contextMenuBar1;
         private Panel panel5;
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_EmbeddedFiles;
         private TableLayoutPanel tableLayoutPanel1;
         private DevComponents.DotNetBar.ButtonX ButtonX_AddEmbeddedFile;
         private DevComponents.DotNetBar.ButtonX ButtonX_RemoveEmbeddedFile;
@@ -724,5 +744,8 @@ namespace SM64_ROM_Manager.PatchScripts
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_IPSPatch;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_BPSPatch;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_DLL;
+        private DevComponents.AdvTree.AdvTree AdvTree_EmbeddedFiles;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
     }
 }
