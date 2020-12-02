@@ -49,8 +49,8 @@ using OpenTK.Windowing.Common;
 using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
 using KeyEventArgs = System.Windows.Forms.KeyEventArgs;
 using Cursor = System.Windows.Forms.Cursor;
-using System.Windows.Input;
 using System.Threading;
+using OpenTK3.Input;
 
 namespace SM64_ROM_Manager.LevelEditor
 {
@@ -59,7 +59,6 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal Level CLevel { get; set; } = null;
         internal DateTime LastKeyLeaveTimer { get; set; } = DateTime.Now;
-        internal List<Keys> PressedKeys { get; private set; } = new List<Keys>();
         internal AdvTree SelectedList { get; set; }
         internal byte AreaIdToLoad { get; set; } = 1;
         internal byte LevelID { get; set; } = 0;
@@ -181,7 +180,8 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             get
             {
-                return PressedKeys.Contains(Keys.ControlKey);
+                var state = Keyboard.GetState();
+                return state.IsKeyDown(Key.ControlLeft) || state.IsKeyDown(Key.ControlRight);
             }
         }
 
@@ -189,7 +189,8 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             get
             {
-                return PressedKeys.Contains(Keys.ShiftKey);
+                var state = Keyboard.GetState();
+                return state.IsKeyDown(Key.ShiftLeft) || state.IsKeyDown(Key.ShiftRight);
             }
         }
 

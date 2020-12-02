@@ -18,6 +18,8 @@ using System.Linq;
 using OpenTK.Mathematics;
 using System.Windows.Forms.Integration;
 using OpenTK.Wpf;
+using Keyboard = OpenTK3.Input.Keyboard;
+using Key = OpenTK3.Input.Key;
 using System.Windows.Input;
 
 namespace SM64_ROM_Manager.LevelEditor
@@ -443,21 +445,11 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void ModelPreview_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if (!Main.PressedKeys.Contains(e.KeyCode))
-            {
-                Main.PressedKeys.Add(e.KeyCode);
-                Application.DoEvents();
-            }
         }
 
         private void ModelPreview_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             Main.LastKeyLeaveTimer = DateTime.Now;
-            if (Main.PressedKeys.Contains(e.KeyCode))
-            {
-                Main.PressedKeys.Remove(e.KeyCode);
-                Application.DoEvents();
-            }
         }
 
         private void CompositionTarget_Rendering(object sender, System.Timers.ElapsedEventArgs e)
@@ -473,39 +465,37 @@ namespace SM64_ROM_Manager.LevelEditor
             bool allowCamMove = !(isMouseDown && Main.IsShiftPressed);
             bool movedCam = false;
 
-            foreach (Keys k in Main.PressedKeys.ToArray())
+            if (allowCamMove)
             {
-                if (allowCamMove)
+                var state = Keyboard.GetState();
+                switch (true)
                 {
-                    switch (k)
-                    {
-                        case Keys.W:
-                            Camera.UpdateCameraMatrixWithScrollWheel(moveSpeed, ref camMtx);
-                            savedCamPos = Camera.Position;
-                            movedCam = true;
-                            break;
-                        case Keys.S:
-                            Camera.UpdateCameraMatrixWithScrollWheel(-moveSpeed, ref camMtx);
-                            savedCamPos = Camera.Position;
-                            movedCam = true;
-                            break;
-                        case Keys.A:
-                            Camera.UpdateCameraOffsetDirectly(-moveSpeed, 0, ref camMtx);
-                            movedCam = true;
-                            break;
-                        case Keys.D:
-                            Camera.UpdateCameraOffsetDirectly(moveSpeed, 0, ref camMtx);
-                            movedCam = true;
-                            break;
-                        case Keys.E:
-                            Camera.UpdateCameraOffsetDirectly(0, -moveSpeed, ref camMtx);
-                            movedCam = true;
-                            break;
-                        case Keys.Q:
-                            Camera.UpdateCameraOffsetDirectly(0, moveSpeed, ref camMtx);
-                            movedCam = true;
-                            break;
-                    }
+                    case object _ when state.IsKeyDown(Key.W):
+                        Camera.UpdateCameraMatrixWithScrollWheel(moveSpeed, ref camMtx);
+                        savedCamPos = Camera.Position;
+                        movedCam = true;
+                        break;
+                    case object _ when state.IsKeyDown(Key.S):
+                        Camera.UpdateCameraMatrixWithScrollWheel(-moveSpeed, ref camMtx);
+                        savedCamPos = Camera.Position;
+                        movedCam = true;
+                        break;
+                    case object _ when state.IsKeyDown(Key.A):
+                        Camera.UpdateCameraOffsetDirectly(-moveSpeed, 0, ref camMtx);
+                        movedCam = true;
+                        break;
+                    case object _ when state.IsKeyDown(Key.D):
+                        Camera.UpdateCameraOffsetDirectly(moveSpeed, 0, ref camMtx);
+                        movedCam = true;
+                        break;
+                    case object _ when state.IsKeyDown(Key.E):
+                        Camera.UpdateCameraOffsetDirectly(0, -moveSpeed, ref camMtx);
+                        movedCam = true;
+                        break;
+                    case object _ when state.IsKeyDown(Key.Q):
+                        Camera.UpdateCameraOffsetDirectly(0, moveSpeed, ref camMtx);
+                        movedCam = true;
+                        break;
                 }
             }
 

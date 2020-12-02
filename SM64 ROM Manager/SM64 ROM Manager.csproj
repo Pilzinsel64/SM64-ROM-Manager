@@ -210,6 +210,9 @@
     <Reference Include="HexEditExample">
       <HintPath>..\Shared Libs\HexEditExample.dll</HintPath>
     </Reference>
+    <Reference Include="OpenTK3">
+      <HintPath>..\Shared Libs\OpenTK3.dll</HintPath>
+    </Reference>
     <Reference Include="Pilz.Collections">
       <HintPath>..\Shared Libs\Pilz.Collections.dll</HintPath>
     </Reference>
