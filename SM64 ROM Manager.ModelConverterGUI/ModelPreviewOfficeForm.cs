@@ -32,7 +32,6 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             ModelPreview.Scaling = scaling;
             ModelPreview.Size = ModelPreview.ClientSize;
             ModelPreview.Show();
-            Shown += ModelPreview.HandlesOnShown;
             Activated += ModelPreview.HandlesOnActivated;
             Deactivate += ModelPreview.HandlesOnDeactivate;
             // AddHandler ModelPreview.Paint, Sub(sender, e) e.Graphics.DrawString("Hello World", Font, New SolidBrush(Color.Green), New PointF(10.0F, 10.0F))
@@ -111,14 +110,9 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private void ModelPreviewOfficeForm_Shown(object sender, EventArgs e)
         {
+            ModelPreview.HandlesOnShown(sender, e);
             ModelPreview.RenderModel(ModelPreview.AddModel(modelToRender));
             ModelPreview.UpdateView();
-
-            // Show Model Infos
-            // pc.PaintingObjects.Add(poModelInfo)
-            // ModelPreview.GLControl.Controls.Add(pc)
-            // poModelInfo.FitSizeToText()
-            // pc.Refresh()
         }
 
         private string GetModelInfoAsString()

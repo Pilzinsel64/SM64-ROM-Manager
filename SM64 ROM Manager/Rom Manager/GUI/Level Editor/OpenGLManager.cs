@@ -132,15 +132,16 @@ namespace SM64_ROM_Manager.LevelEditor
 
         public OpenGLManager(Form targetForm, Control targetControl)
         {
-            GLControl1 = new GLWpfControl();
             CameraPrivate = new Camera();
-            RenderTimer = new System.Timers.Timer(20);
             Main = (Form_AreaEditor)targetForm;
             TargetControl = targetControl;
+
             Main.KeyUp += ModelPreview_KeyUp;
             Main.KeyDown += ModelPreview_KeyDown;
+
             InitializeGLControl();
 
+            RenderTimer = new System.Timers.Timer(20);
             RenderTimer.SynchronizingObject = null;
             RenderTimer.Start();
         }
@@ -223,7 +224,6 @@ namespace SM64_ROM_Manager.LevelEditor
             GLControlHost.Size = new Size(880, 538);
             GLControlHost.TabIndex = 0;
             GLControlHost.TabStop = false;
-            //GLControl1.VSync = true;
             GLControlHost.Dock = DockStyle.Fill;
             GLControlHost.Enabled = false;
 
@@ -239,8 +239,6 @@ namespace SM64_ROM_Manager.LevelEditor
 
             var controlSettings = new GLWpfControlSettings()
             {
-                //MajorVersion = 4,
-                //MinorVersion = 3,
                 RenderContinuously = false,
                 GraphicsProfile = OpenTK.Windowing.Common.ContextProfile.Compatability
             };
