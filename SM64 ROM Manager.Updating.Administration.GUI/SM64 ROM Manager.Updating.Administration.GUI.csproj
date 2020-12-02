@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <StartupObject>SM64_ROM_Manager.Updating.Administration.GUI.My.MyApplication</StartupObject>
+    <StartupObject>SM64_ROM_Manager.Updating.Administration.GUI.Program</StartupObject>
     <RootNamespace>SM64_ROM_Manager.Updating.Administration.GUI</RootNamespace>
     <MyType>WindowsForms</MyType>
     <TargetFramework>net5.0-windows</TargetFramework>
@@ -26,6 +26,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <DefineDebug>true</DefineDebug>
     <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DefineDebug>false</DefineDebug>
@@ -77,6 +78,9 @@
     <Reference Include="DevComponents.DotNetBar.Layout.Design">
       <HintPath>..\Shared Libs\DotNetBarNew\DevComponents.DotNetBar.Layout.Design.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Pilz">
+      <HintPath>..\Shared Libs\Pilz.dll</HintPath>
     </Reference>
     <Reference Include="Pilz.Cryptography">
       <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
@@ -133,10 +137,6 @@
     <Compile Update="PackageCreationDialog.Designer.cs">
       <DependentUpon>PackageCreationDialog.cs</DependentUpon>
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="My Project\Application.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -213,10 +213,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="My Project\Application.myapp">
-      <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.cs</LastGenOutput>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>SM64_ROM_Manager.Updating.Administration.GUI.My</CustomToolNamespace>

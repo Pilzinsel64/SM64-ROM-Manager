@@ -38,6 +38,11 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="T:SM64_ROM_Manager.Updating.Administration.GUI.Program">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
         <member name="T:SM64_ROM_Manager.Updating.Administration.GUI.My.Resources.Resources">
             <summary>
               Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.

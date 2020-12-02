@@ -15,17 +15,17 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
 
         private void ButtonX_OpenUpdateInfoManager_Click(object sender, EventArgs e)
         {
-            My.MyProject.Forms.UpdateServerInfoEditor.Show();
+            //My.MyProject.Forms.UpdateServerInfoEditor.Show();
         }
 
         private void ButtonX_OpenUpdatePackageEditor_Click(object sender, EventArgs e)
         {
-            My.MyProject.Forms.PackageCreationDialog.Show();
+            //My.MyProject.Forms.PackageCreationDialog.Show();
         }
 
         private void ButtonX_Einstellungen_Click(object sender, EventArgs e)
         {
-            My.MyProject.Forms.UpdateServerInfoEditor.ShowDialog();
+            //My.MyProject.Forms.UpdateServerInfoEditor.ShowDialog();
             General.CurProject.Save(curProjectFilePath);
         }
 

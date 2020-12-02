@@ -65,7 +65,8 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         {
             var oldProject = General.CurProject;
             General.CurProject = new UpdateProject();
-            if (My.MyProject.Forms.UpdateServerInfoEditor.ShowDialog(this) == DialogResult.OK)
+            var infoeditor = new UpdateServerInfoEditor();
+            if (infoeditor.ShowDialog(this) == DialogResult.OK)
             {
                 curProjectFilePath = filePath;
                 SaveProject(curProjectFilePath);
@@ -107,7 +108,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
                 else
                     hasError = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 hasError = true;
             }
@@ -291,7 +292,8 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
 
         private async void ButtonItem_ProjectOptions_Click(object sender, EventArgs e)
         {
-            My.MyProject.Forms.UpdateServerInfoEditor.ShowDialog(this);
+            var info = new UpdateServerInfoEditor();
+            info.ShowDialog(this);
             await LoadManager();
         }
 
