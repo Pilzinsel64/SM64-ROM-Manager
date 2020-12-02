@@ -444,14 +444,20 @@ namespace SM64_ROM_Manager.LevelEditor
         private void ModelPreview_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (!Main.PressedKeys.Contains(e.KeyCode))
+            {
                 Main.PressedKeys.Add(e.KeyCode);
+                Application.DoEvents();
+            }
         }
 
         private void ModelPreview_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             Main.LastKeyLeaveTimer = DateTime.Now;
             if (Main.PressedKeys.Contains(e.KeyCode))
+            {
                 Main.PressedKeys.Remove(e.KeyCode);
+                Application.DoEvents();
+            }
         }
 
         private void CompositionTarget_Rendering(object sender, System.Timers.ElapsedEventArgs e)
