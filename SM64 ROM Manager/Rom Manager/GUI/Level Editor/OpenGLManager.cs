@@ -621,6 +621,11 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             GLControlHost.Invoke(new Action(() => Invalidate()));
         }
+
+        internal void StopTimer()
+        {
+            RenderTimer.Stop();
+        }
     }
 
     public enum ModelDrawMod

@@ -609,6 +609,9 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void Form_AreaEditor_Closing(object sender, CancelEventArgs e)
         {
+            // Stop render timer
+            ogl.StopTimer();
+
             // Stop Circular Progress, otherwise it will crash
             CircularProgress1.Stop();
 
