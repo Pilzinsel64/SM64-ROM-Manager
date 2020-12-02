@@ -36,6 +36,22 @@
             this.panel_SideMenu = new System.Windows.Forms.Panel();
             this.panel_Tools = new System.Windows.Forms.Panel();
             this.TabControl_AreaProperties = new DevComponents.DotNetBar.TabControl();
+            this.TabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
+            this.advTree_SpecialBoxes = new DevComponents.AdvTree.AdvTree();
+            this.columnHeader1 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader8 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader9 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader10 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader11 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader12 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader13 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader14 = new DevComponents.AdvTree.ColumnHeader();
+            this.nodeConnector2 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
+            this.Button_LM_RemoveSpecial = new DevComponents.DotNetBar.ButtonX();
+            this.Button_LM_AddSpecial = new DevComponents.DotNetBar.ButtonX();
+            this.Button_LM_EditSpecial = new DevComponents.DotNetBar.ButtonX();
+            this.TabItem6 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
             this.buttonX_EditCameraFrustum = new DevComponents.DotNetBar.ButtonX();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
@@ -60,11 +76,6 @@
             this.ComboBox_LM_CameraPreset = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.ColorPickerButton_LM_BackgroundColor = new DevComponents.DotNetBar.ColorPickerButton();
             this.TabItem4 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.TabControlPanel6 = new DevComponents.DotNetBar.TabControlPanel();
-            this.Button_LM_RemoveSpecial = new DevComponents.DotNetBar.ButtonX();
-            this.Button_LM_AddSpecial = new DevComponents.DotNetBar.ButtonX();
-            this.Button_LM_EditSpecial = new DevComponents.DotNetBar.ButtonX();
-            this.TabItem6 = new DevComponents.DotNetBar.TabItem(this.components);
             this.TabControlPanel5 = new DevComponents.DotNetBar.TabControlPanel();
             this.Line2 = new DevComponents.DotNetBar.Controls.Line();
             this.line4 = new DevComponents.DotNetBar.Controls.Line();
@@ -133,24 +144,14 @@
             this.ButtonItem_AreaTools_ChangeAreaID = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_EditAreaLevelScript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_EditGeolayoutScript = new DevComponents.DotNetBar.ButtonItem();
-            this.advTree_SpecialBoxes = new DevComponents.AdvTree.AdvTree();
-            this.nodeConnector2 = new DevComponents.AdvTree.NodeConnector();
-            this.elementStyle2 = new DevComponents.DotNetBar.ElementStyle();
-            this.columnHeader1 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader8 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader9 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader10 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader11 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader12 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader13 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader14 = new DevComponents.AdvTree.ColumnHeader();
             ((System.ComponentModel.ISupportInitialize)(this.LevelsTree)).BeginInit();
             this.panel_SideMenu.SuspendLayout();
             this.panel_Tools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_AreaProperties)).BeginInit();
             this.TabControl_AreaProperties.SuspendLayout();
-            this.TabControlPanel4.SuspendLayout();
             this.TabControlPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_SpecialBoxes)).BeginInit();
+            this.TabControlPanel4.SuspendLayout();
             this.TabControlPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Level)).BeginInit();
             this.TabControl_LM_Level.SuspendLayout();
@@ -160,7 +161,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionAreaID)).BeginInit();
             this.TabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advTree_SpecialBoxes)).BeginInit();
             this.SuspendLayout();
             // 
             // LevelsTree
@@ -225,6 +225,160 @@
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem4);
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem5);
             this.TabControl_AreaProperties.Tabs.Add(this.TabItem6);
+            // 
+            // TabControlPanel6
+            // 
+            this.TabControlPanel6.Controls.Add(this.advTree_SpecialBoxes);
+            this.TabControlPanel6.Controls.Add(this.Button_LM_RemoveSpecial);
+            this.TabControlPanel6.Controls.Add(this.Button_LM_AddSpecial);
+            this.TabControlPanel6.Controls.Add(this.Button_LM_EditSpecial);
+            this.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
+            this.TabControlPanel6.Name = "TabControlPanel6";
+            this.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.TabControlPanel6.Style.GradientAngle = 90;
+            this.TabControlPanel6.TabItem = this.TabItem6;
+            // 
+            // advTree_SpecialBoxes
+            // 
+            this.advTree_SpecialBoxes.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            resources.ApplyResources(this.advTree_SpecialBoxes, "advTree_SpecialBoxes");
+            this.advTree_SpecialBoxes.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTree_SpecialBoxes.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree_SpecialBoxes.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader1);
+            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader8);
+            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader9);
+            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader10);
+            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader11);
+            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader12);
+            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader13);
+            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader14);
+            this.advTree_SpecialBoxes.DragDropEnabled = false;
+            this.advTree_SpecialBoxes.ExpandWidth = 0;
+            this.advTree_SpecialBoxes.GridRowLines = true;
+            this.advTree_SpecialBoxes.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_SpecialBoxes.Name = "advTree_SpecialBoxes";
+            this.advTree_SpecialBoxes.NodesConnector = this.nodeConnector2;
+            this.advTree_SpecialBoxes.NodeStyle = this.elementStyle2;
+            this.advTree_SpecialBoxes.PathSeparator = ";";
+            this.advTree_SpecialBoxes.Styles.Add(this.elementStyle2);
+            this.advTree_SpecialBoxes.Tag = "5;33";
+            this.advTree_SpecialBoxes.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_SpecialBoxes_AfterNodeSelect);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Name = "columnHeader1";
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
+            this.columnHeader1.Width.Absolute = 20;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Name = "columnHeader8";
+            resources.ApplyResources(this.columnHeader8, "columnHeader8");
+            this.columnHeader8.Width.Absolute = 70;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Name = "columnHeader9";
+            resources.ApplyResources(this.columnHeader9, "columnHeader9");
+            this.columnHeader9.Width.Absolute = 50;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Name = "columnHeader10";
+            resources.ApplyResources(this.columnHeader10, "columnHeader10");
+            this.columnHeader10.Width.Absolute = 50;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Name = "columnHeader11";
+            resources.ApplyResources(this.columnHeader11, "columnHeader11");
+            this.columnHeader11.Width.Absolute = 50;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Name = "columnHeader12";
+            resources.ApplyResources(this.columnHeader12, "columnHeader12");
+            this.columnHeader12.Width.Absolute = 50;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Name = "columnHeader13";
+            resources.ApplyResources(this.columnHeader13, "columnHeader13");
+            this.columnHeader13.Width.Absolute = 50;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Name = "columnHeader14";
+            resources.ApplyResources(this.columnHeader14, "columnHeader14");
+            this.columnHeader14.Width.Absolute = 75;
+            // 
+            // nodeConnector2
+            // 
+            this.nodeConnector2.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle2
+            // 
+            this.elementStyle2.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle2.Name = "elementStyle2";
+            this.elementStyle2.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // Button_LM_RemoveSpecial
+            // 
+            this.Button_LM_RemoveSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.Button_LM_RemoveSpecial, "Button_LM_RemoveSpecial");
+            this.Button_LM_RemoveSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.Button_LM_RemoveSpecial.FocusCuesEnabled = false;
+            this.Button_LM_RemoveSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
+            this.Button_LM_RemoveSpecial.Name = "Button_LM_RemoveSpecial";
+            this.Button_LM_RemoveSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_LM_RemoveSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Button_LM_RemoveSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.Button_LM_RemoveSpecial.SymbolSize = 12F;
+            this.Button_LM_RemoveSpecial.Click += new System.EventHandler(this.Button_LM_RemoveSpecial_Click);
+            // 
+            // Button_LM_AddSpecial
+            // 
+            this.Button_LM_AddSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.Button_LM_AddSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.Button_LM_AddSpecial.FocusCuesEnabled = false;
+            this.Button_LM_AddSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            resources.ApplyResources(this.Button_LM_AddSpecial, "Button_LM_AddSpecial");
+            this.Button_LM_AddSpecial.Name = "Button_LM_AddSpecial";
+            this.Button_LM_AddSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_LM_AddSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.Button_LM_AddSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.Button_LM_AddSpecial.SymbolSize = 12F;
+            this.Button_LM_AddSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
+            // 
+            // Button_LM_EditSpecial
+            // 
+            this.Button_LM_EditSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.Button_LM_EditSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            resources.ApplyResources(this.Button_LM_EditSpecial, "Button_LM_EditSpecial");
+            this.Button_LM_EditSpecial.FocusCuesEnabled = false;
+            this.Button_LM_EditSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
+            this.Button_LM_EditSpecial.Name = "Button_LM_EditSpecial";
+            this.Button_LM_EditSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.Button_LM_EditSpecial.SymbolColor = System.Drawing.Color.Goldenrod;
+            this.Button_LM_EditSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.Button_LM_EditSpecial.SymbolSize = 12F;
+            this.Button_LM_EditSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
+            // 
+            // TabItem6
+            // 
+            this.TabItem6.AttachedControl = this.TabControlPanel6;
+            this.TabItem6.Name = "TabItem6";
+            resources.ApplyResources(this.TabItem6, "TabItem6");
             // 
             // TabControlPanel4
             // 
@@ -563,72 +717,6 @@
             this.TabItem4.AttachedControl = this.TabControlPanel4;
             this.TabItem4.Name = "TabItem4";
             resources.ApplyResources(this.TabItem4, "TabItem4");
-            // 
-            // TabControlPanel6
-            // 
-            this.TabControlPanel6.Controls.Add(this.advTree_SpecialBoxes);
-            this.TabControlPanel6.Controls.Add(this.Button_LM_RemoveSpecial);
-            this.TabControlPanel6.Controls.Add(this.Button_LM_AddSpecial);
-            this.TabControlPanel6.Controls.Add(this.Button_LM_EditSpecial);
-            this.TabControlPanel6.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.TabControlPanel6, "TabControlPanel6");
-            this.TabControlPanel6.Name = "TabControlPanel6";
-            this.TabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
-            this.TabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel6.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
-            this.TabControlPanel6.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.TabControlPanel6.Style.GradientAngle = 90;
-            this.TabControlPanel6.TabItem = this.TabItem6;
-            // 
-            // Button_LM_RemoveSpecial
-            // 
-            this.Button_LM_RemoveSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            resources.ApplyResources(this.Button_LM_RemoveSpecial, "Button_LM_RemoveSpecial");
-            this.Button_LM_RemoveSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.Button_LM_RemoveSpecial.FocusCuesEnabled = false;
-            this.Button_LM_RemoveSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_sign_16px;
-            this.Button_LM_RemoveSpecial.Name = "Button_LM_RemoveSpecial";
-            this.Button_LM_RemoveSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_LM_RemoveSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Button_LM_RemoveSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.Button_LM_RemoveSpecial.SymbolSize = 12F;
-            this.Button_LM_RemoveSpecial.Click += new System.EventHandler(this.Button_LM_RemoveSpecial_Click);
-            // 
-            // Button_LM_AddSpecial
-            // 
-            this.Button_LM_AddSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.Button_LM_AddSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.Button_LM_AddSpecial.FocusCuesEnabled = false;
-            this.Button_LM_AddSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
-            resources.ApplyResources(this.Button_LM_AddSpecial, "Button_LM_AddSpecial");
-            this.Button_LM_AddSpecial.Name = "Button_LM_AddSpecial";
-            this.Button_LM_AddSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_LM_AddSpecial.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
-            this.Button_LM_AddSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.Button_LM_AddSpecial.SymbolSize = 12F;
-            this.Button_LM_AddSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
-            // 
-            // Button_LM_EditSpecial
-            // 
-            this.Button_LM_EditSpecial.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.Button_LM_EditSpecial.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            resources.ApplyResources(this.Button_LM_EditSpecial, "Button_LM_EditSpecial");
-            this.Button_LM_EditSpecial.FocusCuesEnabled = false;
-            this.Button_LM_EditSpecial.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_edit_16px;
-            this.Button_LM_EditSpecial.Name = "Button_LM_EditSpecial";
-            this.Button_LM_EditSpecial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.Button_LM_EditSpecial.SymbolColor = System.Drawing.Color.Goldenrod;
-            this.Button_LM_EditSpecial.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            this.Button_LM_EditSpecial.SymbolSize = 12F;
-            this.Button_LM_EditSpecial.Click += new System.EventHandler(this.Button_LM_AddEditSpecial_Click);
-            // 
-            // TabItem6
-            // 
-            this.TabItem6.AttachedControl = this.TabControlPanel6;
-            this.TabItem6.Name = "TabItem6";
-            resources.ApplyResources(this.TabItem6, "TabItem6");
             // 
             // TabControlPanel5
             // 
@@ -1406,93 +1494,6 @@
             resources.ApplyResources(this.ButtonItem_AreaTools_EditGeolayoutScript, "ButtonItem_AreaTools_EditGeolayoutScript");
             this.ButtonItem_AreaTools_EditGeolayoutScript.Click += new System.EventHandler(this.ButtonItem2_EditGeolayoutScript_Click);
             // 
-            // advTree_SpecialBoxes
-            // 
-            this.advTree_SpecialBoxes.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
-            resources.ApplyResources(this.advTree_SpecialBoxes, "advTree_SpecialBoxes");
-            this.advTree_SpecialBoxes.BackColor = System.Drawing.SystemColors.Window;
-            // 
-            // 
-            // 
-            this.advTree_SpecialBoxes.BackgroundStyle.Class = "TreeBorderKey";
-            this.advTree_SpecialBoxes.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader1);
-            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader8);
-            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader9);
-            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader10);
-            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader11);
-            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader12);
-            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader13);
-            this.advTree_SpecialBoxes.Columns.Add(this.columnHeader14);
-            this.advTree_SpecialBoxes.DragDropEnabled = false;
-            this.advTree_SpecialBoxes.ExpandWidth = 0;
-            this.advTree_SpecialBoxes.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.advTree_SpecialBoxes.Name = "advTree_SpecialBoxes";
-            this.advTree_SpecialBoxes.NodesConnector = this.nodeConnector2;
-            this.advTree_SpecialBoxes.NodeStyle = this.elementStyle2;
-            this.advTree_SpecialBoxes.PathSeparator = ";";
-            this.advTree_SpecialBoxes.Styles.Add(this.elementStyle2);
-            this.advTree_SpecialBoxes.Tag = "5;33";
-            this.advTree_SpecialBoxes.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_SpecialBoxes_AfterNodeSelect);
-            // 
-            // nodeConnector2
-            // 
-            this.nodeConnector2.LineColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // elementStyle2
-            // 
-            this.elementStyle2.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.elementStyle2.Name = "elementStyle2";
-            this.elementStyle2.TextColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Name = "columnHeader1";
-            resources.ApplyResources(this.columnHeader1, "columnHeader1");
-            this.columnHeader1.Width.Absolute = 20;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Name = "columnHeader8";
-            resources.ApplyResources(this.columnHeader8, "columnHeader8");
-            this.columnHeader8.Width.Absolute = 70;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Name = "columnHeader9";
-            resources.ApplyResources(this.columnHeader9, "columnHeader9");
-            this.columnHeader9.Width.Absolute = 50;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Name = "columnHeader10";
-            resources.ApplyResources(this.columnHeader10, "columnHeader10");
-            this.columnHeader10.Width.Absolute = 50;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Name = "columnHeader11";
-            resources.ApplyResources(this.columnHeader11, "columnHeader11");
-            this.columnHeader11.Width.Absolute = 50;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Name = "columnHeader12";
-            resources.ApplyResources(this.columnHeader12, "columnHeader12");
-            this.columnHeader12.Width.Absolute = 50;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Name = "columnHeader13";
-            resources.ApplyResources(this.columnHeader13, "columnHeader13");
-            this.columnHeader13.Width.Absolute = 50;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Name = "columnHeader14";
-            resources.ApplyResources(this.columnHeader14, "columnHeader14");
-            this.columnHeader14.Width.Absolute = 75;
-            // 
             // Tab_LevelManagerV2
             // 
             resources.ApplyResources(this, "$this");
@@ -1506,8 +1507,9 @@
             this.panel_Tools.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_AreaProperties)).EndInit();
             this.TabControl_AreaProperties.ResumeLayout(false);
-            this.TabControlPanel4.ResumeLayout(false);
             this.TabControlPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_SpecialBoxes)).EndInit();
+            this.TabControlPanel4.ResumeLayout(false);
             this.TabControlPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TabControl_LM_Level)).EndInit();
             this.TabControl_LM_Level.ResumeLayout(false);
@@ -1517,7 +1519,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionAreaID)).EndInit();
             this.TabControlPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advTree_SpecialBoxes)).EndInit();
             this.ResumeLayout(false);
 
         }
