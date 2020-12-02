@@ -539,6 +539,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.advTree_Extensions.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.advTree_Extensions.Location = new System.Drawing.Point(0, 0);
             this.advTree_Extensions.Name = "advTree_Extensions";
+            this.advTree_Extensions.MultiSelect = true;
             this.advTree_Extensions.NodesConnector = this.nodeConnector2;
             this.advTree_Extensions.NodeStyle = this.elementStyle2;
             this.advTree_Extensions.PathSeparator = ";";
