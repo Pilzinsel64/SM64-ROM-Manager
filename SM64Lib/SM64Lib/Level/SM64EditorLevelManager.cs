@@ -99,8 +99,8 @@ namespace SM64Lib.Levels
                         {
                             if (clNormal3DObject.GetSegBehaviorAddr(c) == (long)0x13003420)
                             {
+                                tArea.ScrollingTextures.Add(new ScrolTex.ManagedScrollingTexture(c));
                             }
-                            // tArea.ScrollingTextures.Add(New ManagedScrollingTexture(c))
                             else
                             {
                                 tArea.Objects.Add(c);
