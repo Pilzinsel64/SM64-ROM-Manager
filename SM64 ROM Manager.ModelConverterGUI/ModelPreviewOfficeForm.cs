@@ -43,33 +43,35 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             ModelPreview.Camera.NeedSelectedObject += Camera_NeedSelectedObject;
 
             // Create Model Infos Panel (Temporary)
-            ModelPreview.GLControl.Paint += (sender, e) => { if (modelToRender is object) {
-                    e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-                    e.Graphics.DrawString(GetModelInfoAsString(),
-                        new Font(FontFamily.GenericSerif, 10),
-                        new SolidBrush(Color.Green), new System.Drawing.Point(10, 10));
-                } };
+            //ModelPreview.GLControl.Paint += (sender, e) => { if (modelToRender is object) {
+            //        e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            //        e.Graphics.DrawString(GetModelInfoAsString(),
+            //            new Font(FontFamily.GenericSerif, 10),
+            //            new SolidBrush(Color.Green), new System.Drawing.Point(10, 10));
+            //    } };
 
             // Create Model Infos Panel
-            // poModelInfo = New PaintingObject With {
-            // .Type = PaintingObjectType.Text,
-            // .TextFont = New Font(Control.DefaultFont.FontFamily, 10),
-            // .TextColor = Color.Green,
-            // .EnableFill = False,
-            // .EnableOutline = False,
-            // .Text = GetModelInfoAsString(),
-            // .HorizontalTextAlignment = StringAlignment.Near,
-            // .Location = PointF.Empty
-            // }
-            // pc = New PaintingControl With {
-            // .BackColor = Color.Transparent,
-            // .VisibleForMouseEvents = False,
-            // .AutoSingleSelection = False,
-            // .AutoAreaSelection = False,
-            // .AutoMoveObjects = False,
-            // .AutoMultiselection = False,
-            // .AutoRemoveSelection = False
-            // }
+            //var poModelInfo = new PaintingObject() {
+            //    Type = PaintingObjectType.Text,
+            //    TextFont = new Font(Control.DefaultFont.FontFamily, 10),
+            //    TextColor = Color.Green,
+            //    EnableFill = false,
+            //    EnableOutline = false,
+            //    Text = GetModelInfoAsString(),
+            //    HorizontalTextAlignment = StringAlignment.Near,
+            //    Location = PointF.Empty
+            //};
+            //var pc = new PaintingControl() {
+            //    BackColor = Color.Transparent,
+            //    VisibleForMouseEvents = false,
+            //    AutoSingleSelection = false,
+            //    AutoAreaSelection = false,
+            //    AutoMoveObjects = false,
+            //    AutoMultiselection = false,
+            //    AutoRemoveSelection = false
+            //};
+            //pc.PaintingObjects.Add(poModelInfo);
+            //ModelPreview.Controls.Add(pc);
 
             // Set clear color
             ModelPreview.ClearColor = Settings.StyleManager.AlwaysKeepBlueColors ? Color.CornflowerBlue : base.BackColor;
