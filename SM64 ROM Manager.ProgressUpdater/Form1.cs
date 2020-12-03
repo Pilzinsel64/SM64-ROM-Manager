@@ -7,6 +7,7 @@ using global::DevComponents.DotNetBar;
 using global::Newtonsoft.Json.Linq;
 using global::WebDav;
 using System.Drawing;
+using Pilz.Cryptography;
 
 namespace SM64_ROM_Manager.ProgressUpdater
 {
@@ -19,7 +20,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
 
         // F i e l d s
 
-        private readonly drsPwEnc.drsPwEnc crypter = new drsPwEnc.drsPwEnc();
+        private readonly AESStringCrypter crypter = new AESStringCrypter("l9dut1bpaKS6AeKtehtye7mi9VNTL0YHkOYXBbxjRJg=", "lIEtsn6fyqZvP0D2yY8Dig==");
         private Settings settings = new Settings();
         private WebDavMgr wdmgr = null;
         private DiscordMgr dmgr = null;
@@ -65,7 +66,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
                 dir.Create();
             }
 
-            string raw = crypter.EncryptData(obj.ToString());
+            string raw = crypter.Encrypt(obj.ToString());
             File.WriteAllText(confFile, raw);
         }
 
@@ -76,7 +77,7 @@ namespace SM64_ROM_Manager.ProgressUpdater
             if (File.Exists(confFile))
             {
                 string raw = File.ReadAllText(confFile);
-                var obj = JObject.Parse(crypter.DecryptData(raw));
+                var obj = JObject.Parse(crypter.Decrypt(raw));
                 settings = obj.ToObject<Settings>();
                 LoadTextBoxes();
                 LoadWebDavMgr();

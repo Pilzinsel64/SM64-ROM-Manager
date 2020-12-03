@@ -73,6 +73,9 @@
     <Reference Include="HtmlRenderer.WinForms">
       <HintPath>..\Shared Libs\HtmlRenderer\HtmlRenderer.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="Pilz.Cryptography">
+      <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
