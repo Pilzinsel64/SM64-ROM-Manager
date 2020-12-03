@@ -425,7 +425,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         private void glControl1_MouseMove(object sender, System.Windows.Input.MouseEventArgs e)
         {
-            if (isMouseDown && e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 var pos = e.GetPosition(GLControl1);
                 if (Main.IsShiftPressed)

@@ -43,7 +43,12 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             ModelPreview.Camera.NeedSelectedObject += Camera_NeedSelectedObject;
 
             // Create Model Infos Panel (Temporary)
-            ModelPreview.GLControl.Paint += (sender, e) => { if (modelToRender is object) { e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias; e.Graphics.DrawString(GetModelInfoAsString(), new Font(FontFamily.GenericSerif, 10), new SolidBrush(Color.Green), new System.Drawing.Point(10, 10)); } };
+            ModelPreview.GLControl.Paint += (sender, e) => { if (modelToRender is object) {
+                    e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                    e.Graphics.DrawString(GetModelInfoAsString(),
+                        new Font(FontFamily.GenericSerif, 10),
+                        new SolidBrush(Color.Green), new System.Drawing.Point(10, 10));
+                } };
 
             // Create Model Infos Panel
             // poModelInfo = New PaintingObject With {
@@ -112,6 +117,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         {
             ModelPreview.HandlesOnShown(sender, e);
             ModelPreview.RenderModel(ModelPreview.AddModel(modelToRender));
+            Application.DoEvents();
             ModelPreview.UpdateView();
         }
 
