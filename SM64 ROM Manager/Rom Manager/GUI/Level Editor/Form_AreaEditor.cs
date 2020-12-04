@@ -2792,7 +2792,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 var removedCmds = new Dictionary<int, LevelscriptCommand>();
                 var dicGroups = new Dictionary<Node, Node>();
                 var selNodes = advTree_Warps.SelectedNodes;
-
+                
                 foreach (Node n in selNodes)
                 {
                     if (n.Parent != nWarpsForGame)
