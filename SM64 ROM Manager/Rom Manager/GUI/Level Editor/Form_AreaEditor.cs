@@ -2814,7 +2814,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 foreach (KeyValuePair<int, LevelscriptCommand> kvp in removedCmds.OrderBy(n => n.Key))
                     CArea.Warps.Remove(kvp.Value);
                 foreach (KeyValuePair<int, Node> kvp in removedlvis.OrderBy(n => n.Key))
-                    advTree_Warps.Nodes.Remove(kvp.Value);
+                    kvp.Value.Remove();
 
                 // Store History Point
                 this.StoreHistoryPoint(AreaEditorHistoryFunctions.Methodes["InsertWarps"], AreaEditorHistoryFunctions.Methodes["RemoveAtWarps"], new object[] { CArea, ManagedWarps, advTree_Warps.Nodes, removedWarps, removedlvis, removedCmds, dicGroups });

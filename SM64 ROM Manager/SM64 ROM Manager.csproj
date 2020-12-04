@@ -19,9 +19,9 @@
     <AssemblyTitle>SM64 ROM Manager</AssemblyTitle>
     <Company>Pilzinsel64</Company>
     <Product>SM64 ROM Manager</Product>
-    <Copyright>Copyright © Pilzinsel64 2017 - 2020</Copyright>
-    <AssemblyVersion>1.11.8.0</AssemblyVersion>
-    <FileVersion>1.11.8.0</FileVersion>
+    <Copyright>Copyright © Pilzinsel64 2017 - 2021</Copyright>
+    <AssemblyVersion>1.11.9.0</AssemblyVersion>
+    <FileVersion>1.11.9.0</FileVersion>
     <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
     <WarningLevel>1</WarningLevel>
     <DefineTrace>true</DefineTrace>
@@ -112,7 +112,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>false</GenerateManifests>
-    <Version>1.11.8.0</Version>
+    <Version>1.11.9.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
