@@ -34,7 +34,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         {
             var settingsType = typeof(Control);
             var defaultFontField = settingsType.GetField("s_defaultFont", BindingFlags.Static | BindingFlags.NonPublic);
-            defaultFontField.SetValue(null, new System.Drawing.Font(RuntimeInformationsEx.OSType == OSType.Windows ? "Microsoft Sans Serif" : "Segoe UI", 8.25F));
+            defaultFontField.SetValue(null, new System.Drawing.Font(RuntimeInformationsEx.RealOSType == OSType.Windows ? "Microsoft Sans Serif" : "Segoe UI", 8.25F));
         }
     }
 }
