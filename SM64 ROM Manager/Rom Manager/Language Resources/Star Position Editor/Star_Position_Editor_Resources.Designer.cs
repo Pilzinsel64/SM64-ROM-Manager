@@ -39,7 +39,7 @@ namespace SM64_ROM_Manager.My.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom Manager.Language_Resources.Star_Position_Editor.Star_Position" +
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom_Manager.Language_Resources.Star_Position_Editor.Star_Position" +
                             "_Editor_Resources", typeof(Star_Position_Editor_Resources).Assembly);
                     resourceMan = temp;
                 }
