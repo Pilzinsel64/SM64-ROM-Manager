@@ -17,5 +17,5 @@ Now you should be able to compile the source code without problems for private u
 
 ## Requiements
  - Visual Studio 2019 or newer
- - .Net Framework 4.7.2
+ - .Net Framework 4.8
  - Internet connection (for restoring NuGet packages)
