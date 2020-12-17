@@ -10,6 +10,6 @@ namespace SM64Lib.Configuration
     public class PatchingConfig
     {
         public EmbeddedFilesContainer TweakBackups { get; } = new EmbeddedFilesContainer();
-        public bool Patched2DCamera { get; set; } = true;
+        public bool Patched2DCamera { get; set; } = false;
     }
 }

@@ -11,12 +11,12 @@
       "AllowRevert": false
     },
     {
-      "Name": "50#w#y#WiiVC Improvements",
-      "Script": "108694: 80 40 20 00\r\n1202F34: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\n1203468: 10 00 00 11 00 00 00 00 8F BE 00 1C 03 E0 00 08 27 BD 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3C 08 80 34 91 0A BA CB 00 0A 59 80 00 0A 51 00 00 4A 10 20 00 4B 10 20 00 00 00 00 AF C2 00 00 8F C2 00 00 03 C0 E8 21 8F BE 00 1C 03 E0 00 08 27 BD 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\n",
+      "Name": "12#r#y#Revert 2D Camera patch",
+      "Script": "CD168: 3C 0E 80 36 8D CE 11 60 8D CF 00 68 85 F8 01 B0 17 00 00 12 00 00 00 00 3C 01 44 7A 44 81 30 00 C5 C4 01 5C 46 06 20 3C 00 00 00 00 45 00 00 16 00 00 00 00 3C 19 80 36 8F 39 11 58 C5 CA 00 A8 44 80 90 00 C7 28 00 A8 46 0A 44 01 46 12 80 3C 00 00 00 00 45 00 00 0C 00 00 00 00 3C 08 80 36 8D 08 11 60 8D 09 00 68 85 2A 01 B0\n3314: 8F AE 00 20 E5 C4 00 04 44 80 30 00 8F AF 00 20 E5 E6 00 08 8F B8 00 20 87 19 00 00 2B 21 FF F9 10 20 00 08 00 00 00 00 8F A8 00 20 85 09 00 00 25 2A 00 06 44 8A 40 00 00 00 00 00 46 80 42 A0 E5 0A 00 04 8F AB 00 20 85 6C 00 00 29 81 00 08 14 20 00 08 00 00 00 00 8F AD 00 20 85 AE 00 00 25 CF FF FA 44 8F 80 00 00 00 00 00 46 80 84 A0 E5 B2 00 04 8F B8 00 20 87 19 00 02 2B 21 FF F9 10 20 00 08 00 00 00 00 8F A9 00 20 85 2A 00 02 25 48 00 06 44 88 20 00 00 00 00 00 46 80 21 A0 E5 26 00 08 8F AB 00 20 85 6C 00 02 29 81 00 08 14 20 00 08 00 00 00 00 8F AE 00 20 85 CF 00 02 25 ED FF FA 44 8D 40 00 00 00 00 00 46 80 42 A0 E5 CA 00 08 8F B8 00 20 C7 10 00 04 C7 04 00 08 46 10 84 82 00 00 00 00 46 04 21 82 0C 0C 8E 94 46 06 93 00 8F B9 00 20 E7 20 00 0C 8F AA 00 20 3C 01 42 80 44 81 50 00 C5 48 00 0C 46 08 50 3C 00 00 00 00 45 00 00 15 00 00 00 00 8F A8 00 20 3C 01 42 80 44 81 80 00 C5 04 00 0C C5 06 00 04 46 04 84 83 46 12 32 02 E5 08 00 04 8F A9 00 20 3C 01 42 80 44 81 50 00 C5 30 00 0C C5 26 00 08 46 10 51 03 46 04 34 82 E5 32 00 08 3C 01 42 80\n3C588: 27 BD FF D0 AF BF 00 14 AF A4 00 30 3C 0E 80 34 85 CE C7 5A A7 AE 00 1A 8F A4 00 30 0C 0A 2E 71 24 05 00 00 3C 0F 80 33 8D EF D5 E4 95 F8 00 12 33 19 00 01 13 20 00 08 00 00 00 00 3C 08 80 34 85 08 C7 78 3C 01 80 34 25 09 20 00 A4 29 C7 78 0C 0A 2E 2E 00 00 00 00 3C 0A 80 33 8D 4A D5 E4 95 4B 00 12 31 6C 00 02 11 80 00 08 00 00 00 00 3C 0D 80 34 85 AD C7 78 3C 01 80 34 25 AE E0 00 A4 2E C7 78 0C 0A 2E 2E 00 00 00 00 3C 01 43 C8 44 81 60 00 0C 0A 04 62 24 05 09 00 8F AF 00 30 27 A6 00 24 01 E0 20 25 0C 0A 02 5C 25 E5 00 04 8F B8 00 30 A7 02 00 3A 27 B9 00 24 C7 24 00 00 8F A8 00 30 E5 04 00 10 27 A9 00 24 C5 26 00 08 8F AA 00 30 E5 46 00 18 3C 0B 80 34 85 6B C7 5A 87 AC 00 1A 3C 01 80 34 01 6C 68 23 A4 2D C7 5C 27 AE 00 24 8D C5 00 04 0C 09 FF FE 8F A4 00 30 10 00 00 01 00 00 00 00 8F BF 00 14 27 BD 00 30",
       "Type": "TweakScript",
-      "Description": "It changes jump for cmd17 ptr, pads function at 1202F34 with 00s instead of 01s, fixes water crash on vc.",
+      "Description": "This script reverts the 2D camera codes from the SM64_ROM_Manager.ppf. It was easier adding this script instead of recreating the patch.",
       "References": [],
-      "ID": "6FE446C00D81189B41D4C0E71A9274A9",
+      "ID": "E2E0A9CCB47AC4B4899576B2150115E3",
       "AllowRevert": false
     },
     {
@@ -26,6 +26,15 @@
       "Description": "This is requied to get custom background pointer to work.",
       "References": [],
       "ID": "E2E0A9CCB47AC4B4899576B2150115E3",
+      "AllowRevert": false
+    },
+    {
+      "Name": "20#r#y#Open fs",
+      "Script": "Imports Microsoft.VisualBasic\r\nImports System\r\nImports System.Collections.Generic\r\nImports System.IO\r\nImports System.Linq\r\nImports System.Windows.Forms\r\nImports SM64Lib\r\n\r\nModule Script\r\n\r\n    Sub Main(params as IReadOnlyDictionary(Of String, Object))\r\n        General.PatchClass.Open(params(\"romfile\"), false)\r\n    End Sub\r\n\r\nEnd Module\r\n",
+      "Type": "VisualBasic",
+      "Description": "",
+      "References": [],
+      "ID": "8A150DFDC8906CC74A54B915752D260E",
       "AllowRevert": false
     },
     {
@@ -56,21 +65,21 @@
       "AllowRevert": false
     },
     {
-      "Name": "20#r#y#Open fs",
-      "Script": "Imports Microsoft.VisualBasic\r\nImports System\r\nImports System.Collections.Generic\r\nImports System.IO\r\nImports System.Linq\r\nImports System.Windows.Forms\r\nImports SM64Lib\r\n\r\nModule Script\r\n\r\n    Sub Main(params as IReadOnlyDictionary(Of String, Object))\r\n        General.PatchClass.Open(params(\"romfile\"), false)\r\n    End Sub\r\n\r\nEnd Module\r\n",
-      "Type": "VisualBasic",
-      "Description": "",
-      "References": [],
-      "ID": "8A150DFDC8906CC74A54B915752D260E",
-      "AllowRevert": false
-    },
-    {
       "Name": "30#r#y#Close fs",
       "Script": "Imports Microsoft.VisualBasic\r\nImports System\r\nImports System.Collections.Generic\r\nImports System.IO\r\nImports System.Linq\r\nImports System.Windows.Forms\r\nImports SM64Lib\r\n\r\nModule Script\r\n\r\n    Sub Main(params as IReadOnlyDictionary(Of String, Object))\r\n        General.PatchClass.Close()\r\n    End Sub\r\n\r\nEnd Module\r\n",
       "Type": "VisualBasic",
       "Description": "",
       "References": [],
       "ID": "FC223C1C86F409F33C45202115BAAD0C",
+      "AllowRevert": false
+    },
+    {
+      "Name": "50#w#y#WiiVC Improvements",
+      "Script": "108694: 80 40 20 00\r\n1202F34: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\n1203468: 10 00 00 11 00 00 00 00 8F BE 00 1C 03 E0 00 08 27 BD 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3C 08 80 34 91 0A BA CB 00 0A 59 80 00 0A 51 00 00 4A 10 20 00 4B 10 20 00 00 00 00 AF C2 00 00 8F C2 00 00 03 C0 E8 21 8F BE 00 1C 03 E0 00 08 27 BD 00 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\n",
+      "Type": "TweakScript",
+      "Description": "It changes jump for cmd17 ptr, pads function at 1202F34 with 00s instead of 01s, fixes water crash on vc.",
+      "References": [],
+      "ID": "6FE446C00D81189B41D4C0E71A9274A9",
       "AllowRevert": false
     }
   ],
