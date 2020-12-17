@@ -1110,7 +1110,7 @@ namespace SM64_ROM_Manager
         {
             Controls_HandleToSaveAreaSettings();
 
-            if (sender == CheckBoxX_LM_Enable2DCamera && !Controller.CanUse2DCamera())
+            if (sender == CheckBoxX_LM_Enable2DCamera && CheckBoxX_LM_Enable2DCamera.Value && !Controller.CanUse2DCamera())
                 MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_No2DCameraPatched, Form_Main_Resources.MsgBox_No2DCameraPatched_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void LM_OpenAreaEditor(object sender, EventArgs e) => LM_OpenAreaEditor();
