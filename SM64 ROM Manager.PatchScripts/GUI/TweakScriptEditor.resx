@@ -637,10 +637,10 @@
     <value>True</value>
   </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="ButtonX_AddEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 3</value>
+    <value>296, 3</value>
   </data>
   <data name="ButtonX_AddEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -664,7 +664,7 @@
     <value>Bottom, Left</value>
   </data>
   <data name="ButtonX_RemoveEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 3</value>
+    <value>322, 3</value>
   </data>
   <data name="ButtonX_RemoveEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 20</value>
@@ -683,6 +683,27 @@
   </data>
   <data name="&gt;&gt;ButtonX_RemoveEmbeddedFile.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="buttonX_ExportEmbeddedFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 3</value>
+  </data>
+  <data name="buttonX_ExportEmbeddedFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="buttonX_ExportEmbeddedFile.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;buttonX_ExportEmbeddedFile.Name" xml:space="preserve">
+    <value>buttonX_ExportEmbeddedFile</value>
+  </data>
+  <data name="&gt;&gt;buttonX_ExportEmbeddedFile.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonX_ExportEmbeddedFile.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;buttonX_ExportEmbeddedFile.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 3</value>
@@ -709,7 +730,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonX_AddEmbeddedFile" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonX_RemoveEmbeddedFile" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,26,Absolute,26" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonX_AddEmbeddedFile" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonX_RemoveEmbeddedFile" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="buttonX_ExportEmbeddedFile" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,26,Absolute,26,Absolute,26" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 496</value>
@@ -2855,6 +2876,18 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Tweak Script Editor</value>
   </data>
+  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
+    <value>nodeConnector1</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
+    <value>elementStyle1</value>
+  </data>
+  <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;LayoutControlItem1.Name" xml:space="preserve">
     <value>LayoutControlItem1</value>
   </data>
@@ -2956,18 +2989,6 @@
   </data>
   <data name="&gt;&gt;ButtonItem_ShowObjectCatalog.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
-    <value>nodeConnector1</value>
-  </data>
-  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
-    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
-    <value>elementStyle1</value>
-  </data>
-  <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TweakScriptEditor</value>

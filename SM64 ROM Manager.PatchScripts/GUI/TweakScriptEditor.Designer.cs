@@ -58,9 +58,13 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TextBoxX_ReferenceName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.LayoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.AdvTree_EmbeddedFiles = new DevComponents.AdvTree.AdvTree();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonX_AddEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_RemoveEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX_ExportEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
             this.panel6 = new System.Windows.Forms.Panel();
             this.CheckBoxX_AllowRevert = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.LayoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
@@ -83,21 +87,18 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonItem_CheckForErrors = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_ShowObjectCatalog = new DevComponents.DotNetBar.ButtonItem();
             this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
-            this.AdvTree_EmbeddedFiles = new DevComponents.AdvTree.AdvTree();
-            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
-            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
             this.TableLayoutPanel2.SuspendLayout();
             this.LayoutControl1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvTree_EmbeddedFiles)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AdvTree_EmbeddedFiles)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxX_ScriptDescription
@@ -374,11 +375,42 @@ namespace SM64_ROM_Manager.PatchScripts
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
+            // AdvTree_EmbeddedFiles
+            // 
+            this.AdvTree_EmbeddedFiles.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            resources.ApplyResources(this.AdvTree_EmbeddedFiles, "AdvTree_EmbeddedFiles");
+            this.AdvTree_EmbeddedFiles.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.AdvTree_EmbeddedFiles.BackgroundStyle.Class = "TreeBorderKey";
+            this.AdvTree_EmbeddedFiles.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AdvTree_EmbeddedFiles.DragDropEnabled = false;
+            this.AdvTree_EmbeddedFiles.ExpandWidth = 0;
+            this.AdvTree_EmbeddedFiles.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.AdvTree_EmbeddedFiles.Name = "AdvTree_EmbeddedFiles";
+            this.AdvTree_EmbeddedFiles.NodesConnector = this.nodeConnector1;
+            this.AdvTree_EmbeddedFiles.NodeStyle = this.elementStyle1;
+            this.AdvTree_EmbeddedFiles.PathSeparator = ";";
+            this.AdvTree_EmbeddedFiles.Styles.Add(this.elementStyle1);
+            this.AdvTree_EmbeddedFiles.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_EmbeddedFiles_AfterNodeSelect);
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.ButtonX_AddEmbeddedFile, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ButtonX_RemoveEmbeddedFile, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonX_ExportEmbeddedFile, 3, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // ButtonX_AddEmbeddedFile
@@ -404,6 +436,18 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonX_RemoveEmbeddedFile.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_RemoveEmbeddedFile.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonX_RemoveEmbeddedFile.Click += new System.EventHandler(this.ButtonX_RemoveEmbeddedFile_Click);
+            // 
+            // buttonX_ExportEmbeddedFile
+            // 
+            this.buttonX_ExportEmbeddedFile.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX_ExportEmbeddedFile.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX_ExportEmbeddedFile.FocusCuesEnabled = false;
+            this.buttonX_ExportEmbeddedFile.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_export_16px;
+            resources.ApplyResources(this.buttonX_ExportEmbeddedFile, "buttonX_ExportEmbeddedFile");
+            this.buttonX_ExportEmbeddedFile.Name = "buttonX_ExportEmbeddedFile";
+            this.buttonX_ExportEmbeddedFile.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX_ExportEmbeddedFile.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.buttonX_ExportEmbeddedFile.Click += new System.EventHandler(this.ButtonX_ExportEmbeddedFile_Click);
             // 
             // panel6
             // 
@@ -608,37 +652,6 @@ namespace SM64_ROM_Manager.PatchScripts
             this.contextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.contextMenuBar1.TabStop = false;
             // 
-            // AdvTree_EmbeddedFiles
-            // 
-            this.AdvTree_EmbeddedFiles.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
-            resources.ApplyResources(this.AdvTree_EmbeddedFiles, "AdvTree_EmbeddedFiles");
-            this.AdvTree_EmbeddedFiles.BackColor = System.Drawing.SystemColors.Window;
-            // 
-            // 
-            // 
-            this.AdvTree_EmbeddedFiles.BackgroundStyle.Class = "TreeBorderKey";
-            this.AdvTree_EmbeddedFiles.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AdvTree_EmbeddedFiles.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.AdvTree_EmbeddedFiles.Name = "AdvTree_EmbeddedFiles";
-            this.AdvTree_EmbeddedFiles.DragDropEnabled = false;
-            this.AdvTree_EmbeddedFiles.ExpandWidth = 0;
-            this.AdvTree_EmbeddedFiles.MultiSelect = false;
-            this.AdvTree_EmbeddedFiles.NodesConnector = this.nodeConnector1;
-            this.AdvTree_EmbeddedFiles.NodeStyle = this.elementStyle1;
-            this.AdvTree_EmbeddedFiles.PathSeparator = ";";
-            this.AdvTree_EmbeddedFiles.Styles.Add(this.elementStyle1);
-            this.AdvTree_EmbeddedFiles.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_EmbeddedFiles_AfterNodeSelect);
-            // 
-            // nodeConnector1
-            // 
-            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
-            // 
-            // elementStyle1
-            // 
-            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.elementStyle1.Name = "elementStyle1";
-            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
-            // 
             // TweakScriptEditor
             // 
             resources.ApplyResources(this, "$this");
@@ -657,12 +670,12 @@ namespace SM64_ROM_Manager.PatchScripts
             this.LayoutControl1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvTree_EmbeddedFiles)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AdvTree_EmbeddedFiles)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -747,5 +760,6 @@ namespace SM64_ROM_Manager.PatchScripts
         private DevComponents.AdvTree.AdvTree AdvTree_EmbeddedFiles;
         private DevComponents.AdvTree.NodeConnector nodeConnector1;
         private DevComponents.DotNetBar.ElementStyle elementStyle1;
+        private DevComponents.DotNetBar.ButtonX buttonX_ExportEmbeddedFile;
     }
 }
