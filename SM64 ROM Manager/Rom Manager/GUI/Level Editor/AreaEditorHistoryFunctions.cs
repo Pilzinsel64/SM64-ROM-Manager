@@ -69,7 +69,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 area.Objects.RemoveAt(kvp.Key);
         }
 
-        public static void AddWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, IEnumerable<IManagedLevelscriptCommand> objs, NodeCollection lvic, IEnumerable<Node> lvis, Dictionary<Node, ListViewGroup> lviGroups)
+        public static void AddWarps(LevelArea area, List<IManagedLevelscriptCommand> objList, IEnumerable<IManagedLevelscriptCommand> objs, NodeCollection lvic, IEnumerable<Node> lvis, Dictionary<Node, Node> lviGroups)
         {
             for (int i = 0, loopTo = objs.Count() - 1; i <= loopTo; i++)
             {

@@ -298,7 +298,7 @@ namespace SM64_ROM_Manager
 
         private void Controller_LevelAreaAdded(LevelAreaEventArgs e)
         {
-            AddAreaToList(e.LevelIndex, Conversions.ToByte(e.AreaIndex));
+            AddAreaToList(e.LevelIndex, Conversions.ToByte(e.AreaID));
         }
 
         private void Controller_LevelAreaRemoved(LevelAreaEventArgs e)
@@ -542,10 +542,9 @@ namespace SM64_ROM_Manager
             n.EnsureVisible();
         }
 
-        private void AddAreaToList(int levelIndex, byte areaIndex)
+        private void AddAreaToList(int levelIndex, byte areaID)
         {
-            var id = Controller.GetLevelAreaID(levelIndex, areaIndex);
-            var n = new Node(Form_Main_Resources.Text_Area + " " + areaIndex.ToString())
+            var n = new Node(Form_Main_Resources.Text_Area + " " + areaID.ToString())
             {
                 Tag = 1
             };
