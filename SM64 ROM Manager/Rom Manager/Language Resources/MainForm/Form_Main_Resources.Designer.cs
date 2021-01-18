@@ -19,7 +19,7 @@ namespace SM64_ROM_Manager.My.Resources {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Form_Main_Resources {
@@ -562,6 +562,15 @@ namespace SM64_ROM_Manager.My.Resources {
         public static string Notify_ShouldLoadRomFirst {
             get {
                 return ResourceManager.GetString("Notify_ShouldLoadRomFirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Open with SM64 ROM Manager ähnelt.
+        /// </summary>
+        public static string OpenWithContextMenuEntry {
+            get {
+                return ResourceManager.GetString("OpenWithContextMenuEntry", resourceCulture);
             }
         }
         

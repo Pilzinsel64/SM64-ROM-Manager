@@ -1372,6 +1372,11 @@
               Sucht eine lokalisierte Zeichenfolge, die You must open a ROM first! ähnelt.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.OpenWithContextMenuEntry">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Open with SM64 ROM Manager ähnelt.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_BobOmb">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die Bob-Omb ähnelt.

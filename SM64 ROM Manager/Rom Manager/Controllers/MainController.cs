@@ -312,6 +312,9 @@ namespace SM64_ROM_Manager
 
             // Enable Auto-Save for Settings
             Settings.AutoSave = true;
+
+            // Fix open with context menu entry
+            General.FixOpenWithContextMenuEntry();
         }
 
         // P a t c h C l a s s   E v e n t s

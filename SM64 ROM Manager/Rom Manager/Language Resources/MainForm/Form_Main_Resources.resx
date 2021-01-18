@@ -286,6 +286,9 @@
   <data name="Notify_ShouldLoadRomFirst" xml:space="preserve">
     <value>You must open a ROM first!</value>
   </data>
+  <data name="OpenWithContextMenuEntry" xml:space="preserve">
+    <value>Open with SM64 ROM Manager</value>
+  </data>
   <data name="SoundEffect_BobOmb" xml:space="preserve">
     <value>Bob-Omb</value>
   </data>

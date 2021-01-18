@@ -18,7 +18,7 @@ namespace SM64_ROM_Manager
             this.FormClosed += Form_Settings_FormClosed;
             InitializeComponent();
             base.UpdateAmbientColors();
-            SuperTooltip1.SetSuperTooltip(PictureBox_Warning, new SuperTooltipInfo("Warning", "", "Some changes will completly affect only after a restart of the programm.", null, null, eTooltipColor.System, true, false, default));
+
             foreach (var lm in Publics.Publics.GetAllLoaderModules())
             {
                 var item = new ComboItem()
@@ -231,6 +231,8 @@ namespace SM64_ROM_Manager
                     comboBoxEx_RecalcChecksumBehavior.SelectedIndex = 2;
                     break;
             }
+
+            SwitchButton_EnableOpenWith.Value = General.CheckForOpenWithContextMenuEntry();
 
             finishedLoading = true;
         }
@@ -453,6 +455,17 @@ namespace SM64_ROM_Manager
         private void ButtonX6_Click(object sender, EventArgs e)
         {
             ButtonX6.Enabled = false;
+        }
+
+        private void SwitchButton_EnableOpenWith_ValueChanged(object sender, EventArgs e)
+        {
+            if (finishedLoading)
+            {
+                if (SwitchButton_EnableOpenWith.Value)
+                    General.AddOpenWithContextMenuEntry();
+                else
+                    General.RemoveOpenWithContextMenuEntry();
+            }
         }
     }
 }

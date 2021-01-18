@@ -34,6 +34,7 @@ namespace SM64_ROM_Manager.Publics
         //[DllImport("user32.dll", EntryPoint = "SetProcessDPIAware")]
         //public static extern void SetDPIAware();
 
+        private static string pMyExecuteablePath = string.Empty;
         private static string pMyDataPath = string.Empty;
         private static string pMyToolsPath = string.Empty;
         private static string pMyTweaksPath = string.Empty;
@@ -48,6 +49,16 @@ namespace SM64_ROM_Manager.Publics
         static General()
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+        }
+
+        public static string MyExecuteablePath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(pMyExecuteablePath))
+                    pMyExecuteablePath = Assembly.GetEntryAssembly().Location;
+                return pMyExecuteablePath;
+            }
         }
 
         public static string MyDataPath
