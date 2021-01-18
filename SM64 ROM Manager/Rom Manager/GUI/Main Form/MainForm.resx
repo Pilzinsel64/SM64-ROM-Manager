@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;ButtonItem16.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;TabControlPanel1.Parent" xml:space="preserve">
+    <value>TabControl1</value>
   </data>
   <data name="&gt;&gt;labelItem4.Name" xml:space="preserve">
     <value>labelItem4</value>
@@ -143,6 +143,9 @@
   <data name="&gt;&gt;ButtonItem6.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;ButtonItem25.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;TabItem_General.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
@@ -155,14 +158,11 @@
   <data name="ButtonItem13.Text" xml:space="preserve">
     <value>Star Position Editor</value>
   </data>
-  <data name="RibbonControl1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 3</value>
-  </data>
   <data name="ButtonItem_GlobalBehaviorBank.Text" xml:space="preserve">
     <value>Global Behavior Bank</value>
   </data>
-  <data name="Bar2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>694, 24</value>
+  <data name="tabMusicManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;ButtonItem_LaunchROM.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
@@ -176,17 +176,14 @@
   <data name="&gt;&gt;TabControlPanel3.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="TabControlPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="ButtonItem3.Text" xml:space="preserve">
+    <value>Open ROM</value>
   </data>
   <data name="&gt;&gt;TabItem_LevelManager.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="ButtonItem14.Text" xml:space="preserve">
     <value>Item Box Content Editor</value>
-  </data>
-  <data name="RibbonControl1.SystemText.QatPlaceBelowRibbonText" xml:space="preserve">
-    <value>&amp;Place Quick Access Toolbar below the Ribbon</value>
   </data>
   <data name="&gt;&gt;ButtonItem_CommunityHelpDocument.Name" xml:space="preserve">
     <value>ButtonItem_CommunityHelpDocument</value>
@@ -201,8 +198,8 @@
   <data name="ButtonItem7.Text" xml:space="preserve">
     <value>Modules</value>
   </data>
-  <data name="ButtonItem6.Text" xml:space="preserve">
-    <value>Close</value>
+  <data name="&gt;&gt;tabLevelManager.Name" xml:space="preserve">
+    <value>tabLevelManager</value>
   </data>
   <data name="TabControlPanel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>694, 546</value>
@@ -222,14 +219,8 @@
   <data name="TabItem_MusicManager.Text" xml:space="preserve">
     <value>Music Table</value>
   </data>
-  <data name="tabMusicManager.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
   <data name="ButtonItem18.Text" xml:space="preserve">
     <value>Global Model Bank</value>
-  </data>
-  <data name="Bar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 628</value>
   </data>
   <data name="&gt;&gt;ButtonItem25.Name" xml:space="preserve">
     <value>ButtonItem25</value>
@@ -246,11 +237,8 @@
   <data name="TabControlPanel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>694, 546</value>
   </data>
-  <data name="TabControlPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RibbonControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="ButtonItem_CustomObjects.Text" xml:space="preserve">
+    <value>Custom Objects</value>
   </data>
   <data name="&gt;&gt;LabelItem2.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.LabelItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
@@ -261,14 +249,17 @@
   <data name="RibbonControl1.SystemText.QatDialogCancelButton" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="RibbonControl1.SystemText.QatCustomizeMenuLabel" xml:space="preserve">
-    <value>&lt;b&gt;Customize Quick Access Toolbar&lt;/b&gt;</value>
+  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tabTextManager.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;LabelItem1.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.LabelItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;buttonItem_OpenRomInHexEditor.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="ButtonItem_M64ToMidiConverter.Text" xml:space="preserve">
     <value>M64 to MIDI Converter</value>
@@ -294,8 +285,8 @@
   <data name="ButtonItem21.Text" xml:space="preserve">
     <value>Submit Translation</value>
   </data>
-  <data name="ButtonItem_CustomObjects.Text" xml:space="preserve">
-    <value>Custom Objects</value>
+  <data name="RibbonControl1.SystemText.QatDialogRemoveButton" xml:space="preserve">
+    <value>&amp;Remove</value>
   </data>
   <data name="&gt;&gt;ButtonItem14.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
@@ -304,16 +295,19 @@
     <value>ButtonItem_Bar_Plugins</value>
   </data>
   <data name="&gt;&gt;tabGeneral.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Tab_General, SM64 ROM Manager, Version=1.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>SM64_ROM_Manager.Tab_General, SM64 ROM Manager, Version=1.11.9.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem22.Name" xml:space="preserve">
     <value>ButtonItem22</value>
   </data>
-  <data name="tabGeneral.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;TabItem_LevelManager.Name" xml:space="preserve">
+    <value>TabItem_LevelManager</value>
   </data>
   <data name="&gt;&gt;ButtonItem10.Name" xml:space="preserve">
     <value>ButtonItem10</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem11.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem14.Name" xml:space="preserve">
     <value>ButtonItem14</value>
@@ -2181,17 +2175,14 @@
         +QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="tabMusicManager.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="&gt;&gt;LabelItem_OtherInfoText.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="Bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
+  <data name="TabControlPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="ButtonItem22.Text" xml:space="preserve">
-    <value>More</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem21.Name" xml:space="preserve">
-    <value>ButtonItem21</value>
+  <data name="&gt;&gt;ButtonItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_ModelImporter.Name" xml:space="preserve">
     <value>ButtonItem_ModelImporter</value>
@@ -2208,11 +2199,8 @@
   <data name="&gt;&gt;ButtonItem11.Name" xml:space="preserve">
     <value>ButtonItem11</value>
   </data>
-  <data name="tabTextManager.Size" type="System.Drawing.Size, System.Drawing">
-    <value>694, 546</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_TextureEditor.Name" xml:space="preserve">
-    <value>ButtonItem_TextureEditor</value>
+  <data name="&gt;&gt;LabelItem1.Name" xml:space="preserve">
+    <value>LabelItem1</value>
   </data>
   <data name="Bar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -2223,11 +2211,11 @@
   <data name="&gt;&gt;tabGeneral.Name" xml:space="preserve">
     <value>tabGeneral</value>
   </data>
+  <data name="Bar2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>694, 26</value>
+  </data>
   <data name="&gt;&gt;ButtonItem_HudOptions.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem558.Name" xml:space="preserve">
-    <value>ButtonItem558</value>
   </data>
   <data name="tabLevelManager.Size" type="System.Drawing.Size, System.Drawing">
     <value>694, 546</value>
@@ -2235,8 +2223,11 @@
   <data name="&gt;&gt;ButtonItem_ModelImporter.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="TabControlPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="TabControlPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>694, 546</value>
+  </data>
+  <data name="ButtonItem29.Text" xml:space="preserve">
+    <value>Updates</value>
   </data>
   <data name="Bar2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -2253,8 +2244,8 @@
   <data name="TabControlPanel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 27</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_CustomObjects.Name" xml:space="preserve">
-    <value>ButtonItem_CustomObjects</value>
+  <data name="TabControlPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;tabTextManager.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -2262,14 +2253,14 @@
   <data name="ButtonItem_HudOptions.Text" xml:space="preserve">
     <value>HUD Options</value>
   </data>
-  <data name="RibbonControl1.SystemText.QatDialogPlacementCheckbox" xml:space="preserve">
-    <value>&amp;Place Quick Access Toolbar below the Ribbon</value>
+  <data name="TabControlPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
   </data>
   <data name="ButtonItem4.Text" xml:space="preserve">
     <value>Manage Object Bank Data</value>
   </data>
   <data name="&gt;&gt;tabLevelManager.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Tab_LevelManager, SM64 ROM Manager, Version=1.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>SM64_ROM_Manager.Tab_LevelManagerV2, SM64 ROM Manager, Version=1.11.9.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="ButtonItem30.Text" xml:space="preserve">
     <value>About</value>
@@ -2289,11 +2280,11 @@
   <data name="tabGeneral.Size" type="System.Drawing.Size, System.Drawing">
     <value>694, 546</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_M64ToMidiConverter.Name" xml:space="preserve">
-    <value>ButtonItem_M64ToMidiConverter</value>
+  <data name="&gt;&gt;ButtonItem_CustomObjects.Name" xml:space="preserve">
+    <value>ButtonItem_CustomObjects</value>
   </data>
-  <data name="RibbonControl1.SystemText.QatAddItemText" xml:space="preserve">
-    <value>&amp;Add to Quick Access Toolbar</value>
+  <data name="ButtonItem_SaveRom.Text" xml:space="preserve">
+    <value>Save ROM</value>
   </data>
   <data name="&gt;&gt;tabGeneral.Parent" xml:space="preserve">
     <value>TabControlPanel1</value>
@@ -2334,8 +2325,11 @@
   <data name="&gt;&gt;ButtonItem20.Name" xml:space="preserve">
     <value>ButtonItem20</value>
   </data>
-  <data name="RibbonControl1.SystemText.QatPlaceAboveRibbonText" xml:space="preserve">
-    <value>&amp;Place Quick Access Toolbar above the Ribbon</value>
+  <data name="buttonItem_OpenRomInHexEditor.Text" xml:space="preserve">
+    <value>Open ROM in Hex Editor</value>
+  </data>
+  <data name="ButtonItem8.Text" xml:space="preserve">
+    <value>Level Manager</value>
   </data>
   <data name="&gt;&gt;TabItem_MusicManager.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
@@ -2349,17 +2343,17 @@
   <data name="Bar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>686, 20</value>
   </data>
+  <data name="Bar2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
   <data name="&gt;&gt;ButtonItem29.Name" xml:space="preserve">
     <value>ButtonItem29</value>
   </data>
   <data name="tabMusicManager.Size" type="System.Drawing.Size, System.Drawing">
     <value>694, 546</value>
   </data>
-  <data name="&gt;&gt;ButtonItem30.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;tabMusicManager.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Tab_MusicManager, SM64 ROM Manager, Version=1.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>SM64_ROM_Manager.Tab_MusicManager, SM64 ROM Manager, Version=1.11.9.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="Bar1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2376,17 +2370,14 @@
   <data name="&gt;&gt;ButtonItem8.Name" xml:space="preserve">
     <value>ButtonItem8</value>
   </data>
-  <data name="Bar2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="ButtonItem6.AlternateShortCutText" xml:space="preserve">
     <value>Alt+F4</value>
   </data>
-  <data name="TabControlPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
+  <data name="Bar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 628</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -2397,8 +2388,8 @@
   <data name="&gt;&gt;ButtonItem30.Name" xml:space="preserve">
     <value>ButtonItem30</value>
   </data>
-  <data name="&gt;&gt;ButtonItem9.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ButtonItem_M64ToMidiConverter.Name" xml:space="preserve">
+    <value>ButtonItem_M64ToMidiConverter</value>
   </data>
   <data name="&gt;&gt;TabControlPanel2.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -2412,8 +2403,8 @@
   <data name="&gt;&gt;tabTextManager.Parent" xml:space="preserve">
     <value>TabControlPanel3</value>
   </data>
-  <data name="TabControlPanel4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
+  <data name="ButtonItem_TrajectoryEditor.Text" xml:space="preserve">
+    <value>Trajectory Editor</value>
   </data>
   <data name="RibbonControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -2424,11 +2415,8 @@
   <data name="ButtonItem_GlobalAsmCodes.Text" xml:space="preserve">
     <value>Global ASM Codes</value>
   </data>
-  <data name="&gt;&gt;LabelItem_OtherInfoText.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ButtonItem_TrajectoryEditor.Text" xml:space="preserve">
-    <value>Trajectory Editor</value>
+  <data name="TabControlPanel4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
   </data>
   <data name="&gt;&gt;ButtonItem18.Name" xml:space="preserve">
     <value>ButtonItem18</value>
@@ -2439,7 +2427,7 @@
   <data name="&gt;&gt;ButtonItem9.Name" xml:space="preserve">
     <value>ButtonItem9</value>
   </data>
-  <data name="&gt;&gt;ButtonItem3.Type" xml:space="preserve">
+  <data name="&gt;&gt;ButtonItem16.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tabLevelManager.Parent" xml:space="preserve">
@@ -2448,17 +2436,20 @@
   <data name="ButtonItem24.Text" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="ButtonItem558.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
   <data name="RibbonControl1.SystemText.QatRemoveItemText" xml:space="preserve">
     <value>&amp;Remove from Quick Access Toolbar</value>
   </data>
-  <data name="ButtonItem_SaveRom.Text" xml:space="preserve">
-    <value>Save ROM</value>
+  <data name="&gt;&gt;ButtonItem_QuestionsAndAnswers.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="RibbonControl1.SystemText.QatDialogCaption" xml:space="preserve">
-    <value>Customize Quick Access Toolbar</value>
+  <data name="Bar2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="ButtonItem5.Text" xml:space="preserve">
-    <value>Style Manager</value>
+  <data name="&gt;&gt;ButtonItem_HudOptions.Name" xml:space="preserve">
+    <value>ButtonItem_HudOptions</value>
   </data>
   <data name="&gt;&gt;Bar2.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2478,11 +2469,11 @@
   <data name="ButtonItem_Supporter.Text" xml:space="preserve">
     <value>Supporter</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_PublicHelpChat.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;TabControlPanel2.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_TextureEditor.Name" xml:space="preserve">
+    <value>ButtonItem_TextureEditor</value>
   </data>
   <data name="RibbonControl1.Text" xml:space="preserve">
     <value>RibbonControl1</value>
@@ -2495,6 +2486,9 @@
   </data>
   <data name="&gt;&gt;Bar1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="ButtonItem_PublicHelpChat.Text" xml:space="preserve">
+    <value>Public help chat</value>
   </data>
   <data name="ButtonItem16.Text" xml:space="preserve">
     <value>Coin Properties</value>
@@ -2514,8 +2508,8 @@
   <data name="ButtonItem_FeatureRequest.Text" xml:space="preserve">
     <value>Request a new feature</value>
   </data>
-  <data name="&gt;&gt;ButtonItem1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="RibbonControl1.SystemText.QatDialogPlacementCheckbox" xml:space="preserve">
+    <value>&amp;Place Quick Access Toolbar below the Ribbon</value>
   </data>
   <data name="&gt;&gt;ButtonItem_TrajectoryEditor.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
@@ -4697,20 +4691,17 @@
   <data name="TabControlPanel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 27</value>
   </data>
-  <data name="&gt;&gt;TabItem_General.Name" xml:space="preserve">
-    <value>TabItem_General</value>
-  </data>
   <data name="&gt;&gt;ButtonItem12.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TabItem_TextManager.Name" xml:space="preserve">
     <value>TabItem_TextManager</value>
   </data>
-  <data name="&gt;&gt;LabelItem1.Name" xml:space="preserve">
-    <value>LabelItem1</value>
+  <data name="RibbonControl1.SystemText.QatDialogCaption" xml:space="preserve">
+    <value>Customize Quick Access Toolbar</value>
   </data>
-  <data name="ButtonItem_PublicHelpChat.Text" xml:space="preserve">
-    <value>Public help chat</value>
+  <data name="RibbonControl1.SystemText.QatPlaceBelowRibbonText" xml:space="preserve">
+    <value>&amp;Place Quick Access Toolbar below the Ribbon</value>
   </data>
   <data name="&gt;&gt;tabMusicManager.Parent" xml:space="preserve">
     <value>TabControlPanel4</value>
@@ -4718,14 +4709,17 @@
   <data name="ButtonItem12.Text" xml:space="preserve">
     <value>Tools</value>
   </data>
+  <data name="ButtonItem1.Text" xml:space="preserve">
+    <value>Text Converter</value>
+  </data>
   <data name="tabLevelManager.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;ButtonItem_Supporter.Name" xml:space="preserve">
     <value>ButtonItem_Supporter</value>
   </data>
-  <data name="ButtonItem29.Text" xml:space="preserve">
-    <value>Updates</value>
+  <data name="&gt;&gt;ButtonItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="Bar2.AccessibleName" xml:space="preserve">
     <value>DotNetBar Bar</value>
@@ -4742,6 +4736,9 @@
   <data name="ButtonItem_BugReport.Text" xml:space="preserve">
     <value>Report a bug</value>
   </data>
+  <data name="&gt;&gt;ButtonItem20.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
     <value>Panel1</value>
   </data>
@@ -4750,6 +4747,9 @@
   </data>
   <data name="&gt;&gt;TabControlPanel4.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="RibbonControl1.SystemText.QatCustomizeMenuLabel" xml:space="preserve">
+    <value>&lt;b&gt;Customize Quick Access Toolbar&lt;/b&gt;</value>
   </data>
   <data name="TabControlPanel3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
@@ -4769,8 +4769,8 @@
   <data name="RibbonControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>686, 30</value>
   </data>
-  <data name="&gt;&gt;TabItem_LevelManager.Name" xml:space="preserve">
-    <value>TabItem_LevelManager</value>
+  <data name="&gt;&gt;ButtonItem_PublicHelpChat.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 31</value>
@@ -4778,20 +4778,17 @@
   <data name="RibbonControl1.SystemText.MaximizeRibbonText" xml:space="preserve">
     <value>&amp;Maximize the Ribbon</value>
   </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="tabGeneral.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;ButtonItem_GlobalBehaviorBank.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="RibbonControl1.SystemText.QatDialogRemoveButton" xml:space="preserve">
-    <value>&amp;Remove</value>
+  <data name="&gt;&gt;ButtonItem9.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;TabItem_General.Name" xml:space="preserve">
+    <value>TabItem_General</value>
   </data>
   <data name="&gt;&gt;ButtonItem24.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
@@ -4800,22 +4797,22 @@
     <value>ButtonItem4</value>
   </data>
   <data name="&gt;&gt;tabTextManager.Type" xml:space="preserve">
-    <value>SM64_ROM_Manager.Tab_TextManager, SM64 ROM Manager, Version=1.11.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>SM64_ROM_Manager.Tab_TextManager, SM64 ROM Manager, Version=1.11.9.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonItem1.Text" xml:space="preserve">
-    <value>Text Converter</value>
+  <data name="&gt;&gt;buttonItem_OpenRomInHexEditor.Name" xml:space="preserve">
+    <value>buttonItem_OpenRomInHexEditor</value>
   </data>
   <data name="&gt;&gt;ButtonItem_LaunchROM.Name" xml:space="preserve">
     <value>ButtonItem_LaunchROM</value>
   </data>
-  <data name="ButtonItem558.Text" xml:space="preserve">
-    <value>Options</value>
+  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;TabControlPanel3.Name" xml:space="preserve">
     <value>TabControlPanel3</value>
   </data>
-  <data name="TabControlPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>694, 546</value>
+  <data name="RibbonControl1.SystemText.QatPlaceAboveRibbonText" xml:space="preserve">
+    <value>&amp;Place Quick Access Toolbar above the Ribbon</value>
   </data>
   <data name="ButtonItem_CommunityHelpDocument.Text" xml:space="preserve">
     <value>Community Help Document</value>
@@ -4859,17 +4856,14 @@
   <data name="&gt;&gt;ButtonItem558.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;tabLevelManager.Name" xml:space="preserve">
-    <value>tabLevelManager</value>
+  <data name="tabGeneral.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="ButtonItem8.Text" xml:space="preserve">
-    <value>Level Manager</value>
+  <data name="tabTextManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>694, 546</value>
   </data>
   <data name="&gt;&gt;ButtonItem5.Name" xml:space="preserve">
     <value>ButtonItem5</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_HudOptions.Name" xml:space="preserve">
-    <value>ButtonItem_HudOptions</value>
   </data>
   <data name="ButtonItem9.Text" xml:space="preserve">
     <value>Apply PPF Patch</value>
@@ -4910,6 +4904,9 @@
   <data name="&gt;&gt;TabControlPanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ButtonItem22.Text" xml:space="preserve">
+    <value>More</value>
+  </data>
   <data name="&gt;&gt;RibbonControl1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -4928,8 +4925,8 @@
   <data name="&gt;&gt;ButtonItem6.Name" xml:space="preserve">
     <value>ButtonItem6</value>
   </data>
-  <data name="Bar2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
+  <data name="Bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
   <data name="&gt;&gt;ButtonItem_GlobalAsmCodes.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
@@ -4937,8 +4934,8 @@
   <data name="&gt;&gt;ButtonItem17.Name" xml:space="preserve">
     <value>ButtonItem17</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_QuestionsAndAnswers.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="ButtonItem6.Text" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="&gt;&gt;Bar1.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
@@ -4946,11 +4943,11 @@
   <data name="Bar2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="ButtonItem3.Text" xml:space="preserve">
-    <value>Open ROM</value>
+  <data name="&gt;&gt;ButtonItem21.Name" xml:space="preserve">
+    <value>ButtonItem21</value>
   </data>
-  <data name="&gt;&gt;ButtonItem20.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="TabControlPanel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="ButtonItem25.Text" xml:space="preserve">
     <value>Settings</value>
@@ -4979,14 +4976,17 @@
   <data name="RibbonControl1.SystemText.MinimizeRibbonText" xml:space="preserve">
     <value>Mi&amp;nimize the Ribbon</value>
   </data>
+  <data name="tabMusicManager.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="&gt;&gt;ButtonItem_QuestionsAndAnswers.Name" xml:space="preserve">
     <value>ButtonItem_QuestionsAndAnswers</value>
   </data>
   <data name="&gt;&gt;ButtonItem7.Name" xml:space="preserve">
     <value>ButtonItem7</value>
   </data>
-  <data name="&gt;&gt;TabControlPanel1.Parent" xml:space="preserve">
-    <value>TabControl1</value>
+  <data name="&gt;&gt;ButtonItem558.Name" xml:space="preserve">
+    <value>ButtonItem558</value>
   </data>
   <data name="tabTextManager.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -5000,13 +5000,19 @@
   <data name="&gt;&gt;ButtonItem_GlobalBehaviorBank.Name" xml:space="preserve">
     <value>ButtonItem_GlobalBehaviorBank</value>
   </data>
-  <data name="&gt;&gt;ButtonItem11.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;RibbonControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ButtonItem5.Text" xml:space="preserve">
+    <value>Style Manager</value>
   </data>
   <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ButtonItem25.Type" xml:space="preserve">
+  <data name="RibbonControl1.SystemText.QatAddItemText" xml:space="preserve">
+    <value>&amp;Add to Quick Access Toolbar</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem30.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;ButtonItem_M64ToMidiConverter.Type" xml:space="preserve">

@@ -311,6 +311,16 @@
             Defines an uniquie ID to identify this tweak (e.g. for undo patch).
             </summary>
         </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.Official">
+            <summary>
+            Defines if the tweak is official and secure.
+            </summary>
+        </member>
+        <member name="P:SM64Lib.Patching.PatchProfile.Recommended">
+            <summary>
+            Defines if the tweak is recommended for every common SM64 ROM Hack.
+            </summary>
+        </member>
         <member name="T:SM64Lib.Patching.PatchScript">
             <summary>
             A Profile containing a script and some descriptions.

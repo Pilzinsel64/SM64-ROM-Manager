@@ -116,7 +116,6 @@ namespace SM64_ROM_Manager
         public static void OpenHexEditor(ref byte[] buffer)
         {
             var mode = GetCurrentHexEditMode();
-            string exeFile = Settings.General.HexEditMode.CustomPath;
             switch (mode)
             {
                 case HexEditModes.BuildInHexEditor:
@@ -139,11 +138,7 @@ namespace SM64_ROM_Manager
                         fs.Close();
 
                         // Start Hex Editor and wait while running
-                        var p = new Process();
-                        p.StartInfo.FileName = exeFile;
-                        p.StartInfo.Arguments = $"\"{tempFile}\"";
-                        p.Start();
-                        p.WaitForExit();
+                        OpenHexEditor(tempFile);
 
                         // Read content of temp file to command
                         fs = new FileStream(tempFile, FileMode.Open, FileAccess.Read);
@@ -156,6 +151,20 @@ namespace SM64_ROM_Manager
                         break;
                     }
             }
+        }
+
+        public static void OpenHexEditor(string filePath)
+        {
+            var p = new Process();
+            p.StartInfo.FileName = Settings.General.HexEditMode.CustomPath;
+            p.StartInfo.Arguments = $"\"{filePath}\"";
+            p.Start();
+            p.WaitForExit();
+        }
+
+        public static Task OpenHexEditorAsync(string filePath)
+        {
+            return Task.Run(new Action(() => OpenHexEditor(filePath)));
         }
 
         public static string GetKeyForConvertAreaModel(string romGameName, short curLevelID, byte curAreaID)

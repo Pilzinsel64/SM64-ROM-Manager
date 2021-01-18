@@ -85,6 +85,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_TextureEditor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem12 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem23 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem_OpenRomInHexEditor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_Bar_Plugins = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem20 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem558 = new DevComponents.DotNetBar.ButtonItem();
@@ -153,10 +154,9 @@ namespace SM64_ROM_Manager
             this.TabControlPanel1.Controls.Add(this.tabGeneral);
             this.TabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.TabControlPanel1.Name = "TabControlPanel1";
-            this.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.TabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel1.Style.GradientAngle = 90;
@@ -181,10 +181,9 @@ namespace SM64_ROM_Manager
             this.TabControlPanel4.Controls.Add(this.tabMusicManager);
             this.TabControlPanel4.DisabledBackColor = System.Drawing.Color.Empty;
             this.TabControlPanel4.Name = "TabControlPanel4";
-            this.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel4.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.TabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel4.Style.GradientAngle = 90;
@@ -209,10 +208,9 @@ namespace SM64_ROM_Manager
             this.TabControlPanel3.Controls.Add(this.tabTextManager);
             this.TabControlPanel3.DisabledBackColor = System.Drawing.Color.Empty;
             this.TabControlPanel3.Name = "TabControlPanel3";
-            this.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel3.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.TabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel3.Style.GradientAngle = 90;
@@ -237,10 +235,9 @@ namespace SM64_ROM_Manager
             this.TabControlPanel2.Controls.Add(this.tabLevelManager);
             this.TabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.TabControlPanel2.Name = "TabControlPanel2";
-            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(210)))), ((int)(((byte)(255)))));
+            this.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(165)))), ((int)(((byte)(199)))));
+            this.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.TabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
             | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.TabControlPanel2.Style.GradientAngle = 90;
@@ -539,7 +536,9 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.ButtonItem12, "ButtonItem12");
             this.ButtonItem12.Name = "ButtonItem12";
             this.ButtonItem12.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.ButtonItem23});
+            this.ButtonItem23,
+            this.buttonItem_OpenRomInHexEditor});
+            this.ButtonItem12.PopupOpen += new DevComponents.DotNetBar.DotNetBarManager.PopupOpenEventHandler(this.ButtonItem12_PopupOpen);
             // 
             // ButtonItem23
             // 
@@ -547,6 +546,13 @@ namespace SM64_ROM_Manager
             this.ButtonItem23.Name = "ButtonItem23";
             this.ButtonItem23.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F9);
             this.ButtonItem23.Click += new System.EventHandler(this.ButtonItem23_Click);
+            // 
+            // buttonItem_OpenRomInHexEditor
+            // 
+            resources.ApplyResources(this.buttonItem_OpenRomInHexEditor, "buttonItem_OpenRomInHexEditor");
+            this.buttonItem_OpenRomInHexEditor.Name = "buttonItem_OpenRomInHexEditor";
+            this.buttonItem_OpenRomInHexEditor.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlH);
+            this.buttonItem_OpenRomInHexEditor.Click += new System.EventHandler(this.ButtonItem_OpenRomInHexEditor_Click);
             // 
             // ButtonItem_Bar_Plugins
             // 
@@ -896,5 +902,6 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonItem ButtonItem_CommunityHelpDocument;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_QuestionsAndAnswers;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_PublicHelpChat;
+        private DevComponents.DotNetBar.ButtonItem buttonItem_OpenRomInHexEditor;
     }
 }

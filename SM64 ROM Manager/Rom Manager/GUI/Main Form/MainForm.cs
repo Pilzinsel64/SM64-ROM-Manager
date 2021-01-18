@@ -756,5 +756,15 @@ namespace SM64_ROM_Manager
         {
             Controller.OpenPublicHelpChat();
         }
+
+        private async void ButtonItem_OpenRomInHexEditor_Click(object sender, EventArgs e)
+        {
+            await Controller.OpenRomInHexEditorAsync();
+        }
+
+        private void ButtonItem12_PopupOpen(object sender, PopupOpenEventArgs e)
+        {
+            buttonItem_OpenRomInHexEditor.Visible = Controller.IsHexEditorSettedUp();
+        }
     }
 }

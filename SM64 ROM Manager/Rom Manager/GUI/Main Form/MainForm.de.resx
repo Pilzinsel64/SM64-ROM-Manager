@@ -2376,6 +2376,9 @@
   <data name="ButtonItem23.Text" xml:space="preserve">
     <value>Prüfsumme neu berechnen</value>
   </data>
+  <data name="buttonItem_OpenRomInHexEditor.Text" xml:space="preserve">
+    <value>ROM in Hex Editor öffnen</value>
+  </data>
   <data name="ButtonItem20.Text" xml:space="preserve">
     <value>Erweiterungen verwalten</value>
   </data>

@@ -1092,6 +1092,17 @@ namespace SM64_ROM_Manager
             Publics.Publics.OpenBrowser(new Uri(WebLinks.PublicHelpChat), false, new Size(1200, 800));
         }
 
+        public async Task OpenRomInHexEditorAsync()
+        {
+            if (RomManager is object)
+                await General.OpenHexEditorAsync(RomManager.RomFile);
+        }
+
+        public bool IsHexEditorSettedUp()
+        {
+            return Settings.General.HexEditMode.Mode == HexEditModes.CustomHexEditor && File.Exists(Settings.General.HexEditMode.CustomPath);
+        }
+
         private void RomWatcher_Changed(object sender, FileSystemEventArgs e)
         {
             if (RomManager is object && (RomManager.RomFile ?? "") == (e.FullPath ?? "") && hasRomChanged != 2)
