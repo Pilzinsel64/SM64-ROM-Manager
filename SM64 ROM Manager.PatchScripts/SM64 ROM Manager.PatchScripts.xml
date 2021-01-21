@@ -298,6 +298,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_good_quality_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_open_folder_16px_1">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -319,6 +324,21 @@
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_search_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_sheriff_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_star_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.PatchScripts.MyIcons.icons8_star_filled_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>

@@ -15,6 +15,7 @@ using static Microsoft.VisualBasic.CompilerServices.LikeOperator;
 using SM64Lib.Patching;
 using DevComponents.DotNetBar.Controls;
 using SM64_ROM_Manager.PatchScripts.LangRes;
+using Pilz.Cryptography;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -22,6 +23,12 @@ namespace SM64_ROM_Manager.PatchScripts
     {
 
         // C o n s t r u c t o r
+
+        static TweakViewer()
+        {
+            // Resolve custom image sources
+            DevComponents.DotNetBar.TextMarkup.MarkupSettings.ResolveImage += MarkupSettings_ResolveImage;
+        }
 
         public TweakViewer(SM64Lib.RomManager rommgr)
         {
@@ -34,8 +41,22 @@ namespace SM64_ROM_Manager.PatchScripts
             this.rommgr = rommgr;
         }
 
+        private static void MarkupSettings_ResolveImage(object sender, DevComponents.DotNetBar.TextMarkup.ResolveImageEventArgs e)
+        {
+            if (e.Key == imgSrc_OfficialFlag)
+            {
+                e.ResolvedImage = MyIcons.icons8_sheriff_16px;
+                e.Handled = true;
+            }
+            else if (e.Key == imgSrc_RecommendedFlag)
+            {
+                e.ResolvedImage = MyIcons.icons8_good_quality_16px;
+                e.Handled = true;
+            }
+        }
+
         // E v e n t s
-        
+
         public static event TweakBeforeApplyEventHandler TweakBeforeApply;
         public delegate void TweakBeforeApplyEventHandler();
 
@@ -46,6 +67,9 @@ namespace SM64_ROM_Manager.PatchScripts
         public delegate void TweakFailedApplyEventHandler();
 
         // F i e l d s
+
+        private static readonly string imgSrc_OfficialFlag = new UniquieID<TweakViewer>(true);
+        private static readonly string imgSrc_RecommendedFlag = new UniquieID<TweakViewer>(true);
 
         private List<PatchProfile> myPatchs = new List<PatchProfile>();
         private SM64Lib.RomManager rommgr;
@@ -306,13 +330,22 @@ namespace SM64_ROM_Manager.PatchScripts
 
         private ButtonItem GetButtonItemFromPatch(PatchProfile patch)
         {
+            var baseText = $"{patch.Name} ";
+            if (patch.Official)
+                baseText += $"<img src=\"{imgSrc_OfficialFlag}\"/>";
+            if (patch.Recommended)
+                baseText += $"<img src=\"{imgSrc_RecommendedFlag}\"/>";
+            baseText = baseText.Trim();
+
             var btnItem = new ButtonItem()
             {
-                Text = patch.Name,
+                Text = baseText,
                 Tag = patch,
                 ForeColor = GetTweakColor(patch)
             };
+
             btnItem.MouseUp += ItemListBox1_ItemMouseClick;
+
             return btnItem;
         }
 
