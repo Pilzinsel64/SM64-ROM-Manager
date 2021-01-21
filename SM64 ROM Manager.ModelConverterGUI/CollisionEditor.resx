@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="TextBoxX_ColParam2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 140</value>
+    <value>163, 387</value>
   </data>
   <data name="TextBoxX_ColParam2.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -142,16 +142,16 @@
     <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TextBoxX_ColParam2.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;TextBoxX_ColParam2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>1</value>
   </data>
   <data name="TextBoxX_ColParam1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="TextBoxX_ColParam1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 114</value>
+    <value>163, 361</value>
   </data>
   <data name="TextBoxX_ColParam1.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -169,19 +169,19 @@
     <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TextBoxX_ColParam1.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;TextBoxX_ColParam1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="LabelX_ColParamsTipp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Right</value>
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="LabelX_ColParamsTipp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 166</value>
+    <value>3, 413</value>
   </data>
   <data name="LabelX_ColParamsTipp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 0</value>
+    <value>205, 42</value>
   </data>
   <data name="LabelX_ColParamsTipp.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
@@ -199,19 +199,16 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_ColParamsTipp.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;LabelX_ColParamsTipp.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="LabelX_Param2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>0</value>
   </data>
   <data name="LabelX_Param2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 140</value>
+    <value>3, 387</value>
   </data>
   <data name="LabelX_Param2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 20</value>
+    <value>154, 20</value>
   </data>
   <data name="LabelX_Param2.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
@@ -229,19 +226,16 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_Param2.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;LabelX_Param2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="LabelX_Param1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>3</value>
   </data>
   <data name="LabelX_Param1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 114</value>
+    <value>3, 361</value>
   </data>
   <data name="LabelX_Param1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 20</value>
+    <value>154, 20</value>
   </data>
   <data name="LabelX_Param1.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
@@ -259,7 +253,7 @@
     <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;LabelX_Param1.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;LabelX_Param1.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -268,7 +262,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="Button_SaveColsettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>542, 467</value>
+    <value>553, 467</value>
   </data>
   <data name="Button_SaveColsettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>135, 23</value>
@@ -292,7 +286,7 @@
     <value>Panel2</value>
   </data>
   <data name="&gt;&gt;Button_SaveColsettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="LabelX48.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -316,82 +310,13 @@
     <value>Panel2</value>
   </data>
   <data name="&gt;&gt;LabelX48.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ComboBox_ColType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="ComboBox_ColType.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBox_ColType.IntegralHeight" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ComboBox_ColType.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ComboBox_ColType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 29</value>
-  </data>
-  <data name="ComboBox_ColType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 21</value>
-  </data>
-  <data name="ComboBox_ColType.TabIndex" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="ComboBox_ColType.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_ColType.Name" xml:space="preserve">
-    <value>ComboBox_ColType</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_ColType.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_ColType.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;ComboBox_ColType.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="LabelX_CollisionType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="LabelX_CollisionType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="LabelX_CollisionType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 23</value>
-  </data>
-  <data name="LabelX_CollisionType.TabIndex" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="LabelX_CollisionType.Text" xml:space="preserve">
-    <value>Collision-Type:</value>
-  </data>
-  <data name="LabelX_CollisionType.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;LabelX_CollisionType.Name" xml:space="preserve">
-    <value>LabelX_CollisionType</value>
-  </data>
-  <data name="&gt;&gt;LabelX_CollisionType.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX_CollisionType.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LabelX_CollisionType.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="CheckBoxX1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>3</value>
   </data>
   <data name="CheckBoxX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 56</value>
+    <value>3, 303</value>
   </data>
   <data name="CheckBoxX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 23</value>
+    <value>154, 23</value>
   </data>
   <data name="CheckBoxX1.TabIndex" type="System.Int32, mscorlib">
     <value>114</value>
@@ -406,16 +331,16 @@
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX1.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;CheckBoxX1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="TextBoxX1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="TextBoxX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 57</value>
+    <value>163, 304</value>
   </data>
   <data name="TextBoxX1.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -430,10 +355,10 @@
     <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;TextBoxX1.Parent" xml:space="preserve">
-    <value>Panel1</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;TextBoxX1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <metadata name="SuperTooltip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -441,65 +366,11 @@
   <data name="SuperTooltip1.DefaultTooltipSettings" xml:space="preserve">
     <value />
   </data>
-  <data name="PictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>466, 254</value>
-  </data>
-  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 207</value>
-  </data>
-  <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>116</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
-    <value>PictureBox1</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
-    <value>Panel2</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="Panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>466, 3</value>
-  </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 245</value>
-  </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>119</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
-    <value>Panel2</value>
-  </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="CheckBoxX_IsNonSolid.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
   <data name="CheckBoxX_IsNonSolid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>466, 88</value>
+    <value>3, 332</value>
   </data>
   <data name="CheckBoxX_IsNonSolid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 23</value>
+    <value>205, 23</value>
   </data>
   <data name="CheckBoxX_IsNonSolid.TabIndex" type="System.Int32, mscorlib">
     <value>120</value>
@@ -514,10 +385,10 @@
     <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_IsNonSolid.Parent" xml:space="preserve">
-    <value>Panel2</value>
+    <value>panel3</value>
   </data>
   <data name="&gt;&gt;CheckBoxX_IsNonSolid.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="CircularProgress1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -544,7 +415,124 @@
     <value>Panel2</value>
   </data>
   <data name="&gt;&gt;CircularProgress1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
+  </data>
+  <data name="panel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="TextBoxX_SearchColTypes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="TextBoxX_SearchColTypes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 29</value>
+  </data>
+  <data name="TextBoxX_SearchColTypes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 20</value>
+  </data>
+  <data name="TextBoxX_SearchColTypes.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="TextBoxX_SearchColTypes.WatermarkText" xml:space="preserve">
+    <value>Search for collision types ...</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_SearchColTypes.Name" xml:space="preserve">
+    <value>TextBoxX_SearchColTypes</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_SearchColTypes.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_SearchColTypes.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_SearchColTypes.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="AdvTree_ColTypes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <metadata name="columnHeader_ColID.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>145, 17</value>
+  </metadata>
+  <metadata name="columnHeader_ColTypeName.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>283, 17</value>
+  </metadata>
+  <data name="columnHeader_ColTypeName.Text" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="AdvTree_ColTypes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 55</value>
+  </data>
+  <data name="AdvTree_ColTypes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 242</value>
+  </data>
+  <data name="AdvTree_ColTypes.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="AdvTree_ColTypes.Text" xml:space="preserve">
+    <value>advTree2</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_ColTypes.Name" xml:space="preserve">
+    <value>AdvTree_ColTypes</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_ColTypes.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_ColTypes.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_ColTypes.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelX1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="labelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 23</value>
+  </data>
+  <data name="labelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>Collision-Type:</value>
+  </data>
+  <data name="labelX1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Name" xml:space="preserve">
+    <value>labelX1</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;labelX1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>477, 3</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 458</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="advTree1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -553,7 +541,7 @@
     <value>3, 32</value>
   </data>
   <data name="advTree1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>457, 458</value>
+    <value>468, 458</value>
   </data>
   <data name="advTree1.TabIndex" type="System.Int32, mscorlib">
     <value>124</value>
@@ -571,7 +559,7 @@
     <value>Panel2</value>
   </data>
   <data name="&gt;&gt;advTree1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -580,7 +568,7 @@
     <value>0, 0</value>
   </data>
   <data name="Panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>680, 493</value>
+    <value>691, 493</value>
   </data>
   <data name="Panel2.TabIndex" type="System.Int32, mscorlib">
     <value>124</value>
@@ -604,7 +592,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>680, 493</value>
+    <value>691, 493</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2474,6 +2462,30 @@
   </data>
   <data name="&gt;&gt;SuperTooltip1.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.SuperTooltip, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_ColID.Name" xml:space="preserve">
+    <value>columnHeader_ColID</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_ColID.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_ColTypeName.Name" xml:space="preserve">
+    <value>columnHeader_ColTypeName</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_ColTypeName.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector2.Name" xml:space="preserve">
+    <value>nodeConnector2</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector2.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;elementStyle2.Name" xml:space="preserve">
+    <value>elementStyle2</value>
+  </data>
+  <data name="&gt;&gt;elementStyle2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
     <value>nodeConnector1</value>

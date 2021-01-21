@@ -25,11 +25,8 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             InitializeComponent();
             obj3d = obj;
             Button_SaveColsettings.Visible = true;
-            LabelX_CollisionType.Visible = true;
             LabelX_Param1.Visible = true;
             LabelX_Param2.Visible = true;
-            ComboBox_ColType.Visible = true;
-            ComboBox_ColType.Enabled = true;
             TextBoxX_ColParam1.Visible = true;
             TextBoxX_ColParam2.Visible = true;
             TextBoxX_ColParam1.Enabled = true;
@@ -45,7 +42,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         }
 
         private static readonly Size imageSize = new Size(64, 64);
-        private static List<ComboItem> terrainTypesComboItems = new List<ComboItem>();
+        private static List<Node> terrainTypesComboItems = new List<Node>();
         private static bool loadingTerrainTypesComboItems = false;
         private bool LoadingColItemSettings = false;
         private Object3D obj3d = null;
@@ -115,10 +112,15 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private async Task LoadFloorTypes()
         {
             await Task.Run(WaitForFloorTypes);
-            ComboBox_ColType.Items.Clear();
-            ComboBox_ColType.SuspendLayout();
-            ComboBox_ColType.Items.AddRange(terrainTypesComboItems.ToArray());
-            ComboBox_ColType.ResumeLayout();
+            
+            AdvTree_ColTypes.BeginUpdate();
+            AdvTree_ColTypes.Nodes.Clear();
+
+            var myNodes = terrainTypesComboItems.Select(n => n.Copy()).ToList();
+            myNodes.ForEach(n => SetToolTip(n));
+            AdvTree_ColTypes.Nodes.AddRange(myNodes.ToArray());
+
+            AdvTree_ColTypes.EndUpdate();
         }
 
         private void WaitForFloorTypes()
@@ -175,13 +177,14 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                         byte typeByte;
                         if (!string.IsNullOrEmpty(typeHex) && !string.IsNullOrEmpty(title))
                         {
-                            var item = new ComboItem();
+                            var item = new Node();
 
                             // Convert hex string to byte
                             typeByte = Conversions.ToByte("&H" + typeHex);
 
                             // Set infos to the item
-                            item.Text = $"{typeByte.ToString("X2")}: {title}";
+                            item.Text = typeByte.ToString("X2");
+                            item.Cells.Add(new Cell(title));
                             item.Tag = new object[] { typeByte, title, string.Empty, string.Empty };
 
                             // Add item to list
@@ -200,7 +203,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                         {
                             if (byte.TryParse(typeDec, out typeByte))
                             {
-                                var item = new ComboItem();
+                                var item = new Node();
                                 string desc;
                                 string notes;
 
@@ -209,7 +212,8 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                                 notes = Conversions.ToString(ws.Cells[i, 7].Value);
 
                                 // Set infos to the item
-                                item.Text = $"{typeByte.ToString("X2")}: {title}";
+                                item.Text = typeByte.ToString("X2");
+                                item.Cells.Add(new Cell(title));
                                 item.Tag = new object[] { typeByte, title, desc, notes };
 
                                 // Add item to list
@@ -234,55 +238,29 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 KeyValuePair<string, Material> mat = (KeyValuePair<string, Material>)curItem.Tag;
                 var curEntry = CollisionSettings.GetEntry(mat.Key);
                 bool found = false;
+
+                // Reset search
+                TextBoxX_SearchColTypes.Text = string.Empty;
+
                 LoadingColItemSettings = true;
-                foreach (ComboItem item in ComboBox_ColType.Items)
+
+                foreach (Node item in AdvTree_ColTypes.Nodes)
                 {
                     if (!found && (byte)((object[])item.Tag)[0] == curEntry.CollisionType)
-                    {
-                        ComboBox_ColType.SelectedItem = item;
+                     {
+                        AdvTree_ColTypes.SelectedNode = item;
+                        item.EnsureVisible();
                         found = true;
                     }
                 }
+
                 CheckBoxX_IsNonSolid.Checked = curEntry.IsNonSolid;
                 CheckBoxX1.Checked = !found;
                 TextBoxX1.Text = TextValueConverter.TextFromValue(curEntry.CollisionType);
                 TextBoxX_ColParam1.Text = TextValueConverter.TextFromValue(curEntry.CollisionParam1);
                 TextBoxX_ColParam2.Text = TextValueConverter.TextFromValue(curEntry.CollisionParam2);
-                if (curItem.ImageIndex > -1)
-                {
-                    Image realImg;
-                    if (realTextures.ContainsKey(curItem.Image))
-                    {
-                        realImg = realTextures[curItem.Image];
-                    }
-                    else
-                    {
-                        realImg = curItem.Image;
-                    }
-
-                    PictureBox1.Image = realImg;
-                }
-                else
-                {
-                    PictureBox1.Image = null;
-                }
 
                 LoadingColItemSettings = false;
-            }
-        }
-
-        private void ComboBox_CI_ColType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboItem selItem = (ComboItem)ComboBox_ColType.SelectedItem;
-            if (selItem?.Tag is object)
-            {
-                byte id = (byte)((object[])selItem.Tag)[0];
-                this.SetParamTipp(id);
-                SetToolTip((object[])selItem.Tag);
-                if (!LoadingColItemSettings)
-                {
-                    this.UpdateTextureListItemSettings(id);
-                }
             }
         }
 
@@ -290,19 +268,19 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         {
             byte id = Conversions.ToByte(TextValueConverter.ValueFromText(TextBoxX1.Text));
             SetParamTipp(id);
-            SuperTooltip1.SetSuperTooltip(ComboBox_ColType, null);
             if (!LoadingColItemSettings)
             {
                 UpdateTextureListItemSettings(id);
             }
         }
 
-        private void SetToolTip(object[] data)
+        private void SetToolTip(Node n)
         {
+            var data = (object[])n.Tag;
             var info = new SuperTooltipInfo();
             info.HeaderText = $"{TextValueConverter.TextFromValue(Conversions.ToLong(data[0]))}: {data[1]}";
             info.BodyText = $"<u>Description:</u>{data[2]}<br/><br/><u>Notes:</u>{data[3]}";
-            SuperTooltip1.SetSuperTooltip(ComboBox_ColType, info);
+            SuperTooltip1.SetSuperTooltip(n, info);
         }
 
         private void SetParamTipp(byte id)
@@ -391,30 +369,82 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 }
             }
         }
+        private void LoadColTypeProps()
+        {
+            Node selItem = AdvTree_ColTypes.SelectedNode;
+            if (selItem?.Tag is object)
+            {
+                byte id = (byte)((object[])selItem.Tag)[0];
+                this.SetParamTipp(id);
+                if (!LoadingColItemSettings)
+                {
+                    this.UpdateTextureListItemSettings(id);
+                }
+            }
+        }
 
         private void CheckBoxX1_CheckedChanging(object sender, EventArgs e)
         {
             TextBoxX1.Enabled = CheckBoxX1.Checked;
-            ComboBox_ColType.Enabled = !CheckBoxX1.Checked;
+            AdvTree_ColTypes.Enabled = !CheckBoxX1.Checked;
+            TextBoxX_SearchColTypes.Enabled = !CheckBoxX1.Checked;
+
             if (CheckBoxX1.Checked)
-            {
                 TextBoxX1_TextChanged(TextBoxX1, new EventArgs());
-            }
             else
-            {
-                ComboBox_CI_ColType_SelectedIndexChanged(ComboBox_ColType, new EventArgs());
-            }
+                LoadColTypeProps();
         }
 
         private void ButtonItem_IsNonSolid_CheckedChanged(object sender, EventArgs e)
         {
-            Panel1.Enabled = !CheckBoxX_IsNonSolid.Checked;
+            panel3.Enabled = !CheckBoxX_IsNonSolid.Checked;
             if (!LoadingColItemSettings)
             {
-                ComboItem selItem = (ComboItem)ComboBox_ColType.SelectedItem;
+                Node selItem = AdvTree_ColTypes.SelectedNode;
                 byte id = (byte)((object[])selItem.Tag)[0];
                 this.UpdateTextureListItemSettings(id);
             }
+        }
+
+        private void AdvTree_ColTypes_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            LoadColTypeProps();
+        }
+
+        private void TextBoxX_SearchColTypes_TextChanged(object sender, EventArgs e)
+        {
+            AdvTree_ColTypes.BeginUpdate();
+
+            var plainSearchText = TextBoxX_SearchColTypes.Text.Trim();
+
+            if (string.IsNullOrEmpty(plainSearchText))
+            {
+                foreach (Node node in AdvTree_ColTypes.Nodes)
+                    node.Visible = true;
+            }
+            else
+            {
+                var searchText = $"*{plainSearchText}*";
+                foreach (Node node in AdvTree_ColTypes.Nodes)
+                {
+                    var data = (object[])node.Tag;
+                    var wholeText = $"{(string)data[1]} {(string)data[2]} {(string)data[3]}";
+                    node.Visible = LikeOperator.LikeString(wholeText, searchText, Microsoft.VisualBasic.CompareMethod.Text);
+                }
+            }
+
+            AdvTree_ColTypes.EndUpdate();
+            AdvTree_ColTypes.Refresh();
+        }
+
+        private void TextBoxX_ColParam1_TextChanged(object sender, EventArgs e)
+        {
+            LoadColTypeProps();
+        }
+
+        private void TextBoxX_ColParam2_TextChanged(object sender, EventArgs e)
+        {
+            LoadColTypeProps();
         }
     }
 }
