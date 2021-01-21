@@ -1,0 +1,21 @@
+{
+  "Name": "Wallkicks Offer More Leniency",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "28A53: 08\n28ABB: 08",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Wallkicks have more time to be excecuted normally without changing any of their mechanics. 08 frames instead of 05 frames, first frame will still act as it did prior. Thanks someone2639 for help.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}
