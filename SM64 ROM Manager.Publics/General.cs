@@ -278,7 +278,7 @@ namespace SM64_ROM_Manager.Publics
             }
 
             // Set settings file path
-            Settings.SettingsConfigFilePath = Path.Combine(MyAppDataPath, "Settings.json"); ;
+            Settings.SettingsConfigFilePath = Path.Combine(MyAppDataPath, "Settings.json");
 
             // Set scale per control
             Dpi.RecordScalePerControl = true;
