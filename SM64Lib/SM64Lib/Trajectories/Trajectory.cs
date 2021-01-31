@@ -23,9 +23,9 @@ namespace SM64Lib.Trajectorys
             {
                 var point = Points[i];
                 data.Write(i);
-                data.Write(Conversions.ToShort(point.X));
-                data.Write(Conversions.ToShort(point.Y));
-                data.Write(Conversions.ToShort(point.Z));
+                data.Write((short)(point.X));
+                data.Write((short)(point.Y));
+                data.Write((short)(point.Z));
             }
 
             data.Write(0xFFFFFFFF);

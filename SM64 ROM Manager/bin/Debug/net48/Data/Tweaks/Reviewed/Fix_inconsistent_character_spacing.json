@@ -1,0 +1,22 @@
+{
+  "Name": "Fix inconsistent character spacing",
+  "Scripts": [
+    {
+      "Name": "Fix inconsistent spacing",
+      "Script": "EC370: 06 06\r\nEC377: 06\r\nEC3AB: 06\r\nEC464: 06\r\nEC462: 04",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": "740DED338DCC95C4AAD84DD7CE2AEAA4",
+      "AllowRevert": false
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.11.10.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Fixes the inconsistent spacing around the 0, 1, 7, x, ? and ! characters, that causes them to have a bigger empty space around them than other letters and numbers.\r\nTweak by biobak.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": "5C9A953E7CD08D32844406D916ED81DF"
+}

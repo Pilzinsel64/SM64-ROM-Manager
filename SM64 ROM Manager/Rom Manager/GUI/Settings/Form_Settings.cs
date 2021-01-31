@@ -48,6 +48,9 @@ namespace SM64_ROM_Manager
                     ComboBoxEx_Language.Items.Add(new ComboItem() { Text = cult.NativeName, Tag = cult });
                 }
             }
+            // Add english as long as it has no native translation, because it's the default
+            var cultEnglish = new CultureInfo("en");
+            ComboBoxEx_Language.Items.Add(new ComboItem() { Text = cultEnglish.NativeName, Tag = cultEnglish });
         }
 
         private bool finishedLoading = false;
