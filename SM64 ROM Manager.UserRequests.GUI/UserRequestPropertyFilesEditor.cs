@@ -66,17 +66,19 @@ namespace SM64_ROM_Manager.UserRequests.GUI
         {
             var ofd_AddUSerRequestFiles = new OpenFileDialog() { Multiselect = true };
             if (ofd_AddUSerRequestFiles.ShowDialog() == DialogResult.OK)
+                AddFiles(ofd_AddUSerRequestFiles.FileNames);
+        }
+
+        public void AddFiles(string[] filePaths)
+        {
+            foreach (string f in filePaths)
             {
-                foreach (string f in ofd_AddUSerRequestFiles.FileNames)
+                var fi = new FileInfo(f);
+                if (!files.Contains(f))
                 {
-                    var fi = new FileInfo(f);
-                    if (!files.Contains(f))
-                    {
-                        files.Add(f);
-                    }
+                    files.Add(f);
                 }
             }
-
             WriteFiles();
             RefreshList();
         }

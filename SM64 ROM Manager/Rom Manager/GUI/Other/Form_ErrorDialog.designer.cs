@@ -37,253 +37,140 @@ namespace SM64_ROM_Manager
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ErrorDialog));
-            _LabelX1 = new DevComponents.DotNetBar.LabelX();
-            _TextBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            _ButtonX2 = new DevComponents.DotNetBar.ButtonX();
-            _Panel1 = new Panel();
-            _ButtonX3 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX3.Click += new EventHandler(ButtonX3_Click);
-            _ButtonX1 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX1.Click += new EventHandler(ButtonX1_Click);
-            _Panel1.SuspendLayout();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ErrorDialog));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ButtonX_CloseProgram = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_IgnoreErrorMessage = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_UploadErrorDiagnostic = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX_ExportErrorDiagnostic = new DevComponents.DotNetBar.ButtonX();
+            this.labelX_FeatureDescription = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // LabelX1
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.ButtonX_CloseProgram);
+            this.panel1.Controls.Add(this.ButtonX_IgnoreErrorMessage);
+            this.panel1.Controls.Add(this.ButtonX_UploadErrorDiagnostic);
+            this.panel1.Controls.Add(this.ButtonX_ExportErrorDiagnostic);
+            this.panel1.Controls.Add(this.labelX_FeatureDescription);
+            this.panel1.Controls.Add(this.labelX2);
+            this.panel1.Controls.Add(this.labelX1);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.ForeColor = System.Drawing.Color.Black;
+            this.panel1.Name = "panel1";
+            // 
+            // ButtonX_CloseProgram
+            // 
+            this.ButtonX_CloseProgram.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_CloseProgram.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_CloseProgram.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_close_window_32px;
+            this.ButtonX_CloseProgram.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            resources.ApplyResources(this.ButtonX_CloseProgram, "ButtonX_CloseProgram");
+            this.ButtonX_CloseProgram.Name = "ButtonX_CloseProgram";
+            this.ButtonX_CloseProgram.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_CloseProgram.Click += new System.EventHandler(this.ButtonX_CloseProgram_Click);
+            this.ButtonX_CloseProgram.MouseEnter += new System.EventHandler(this.ButtonX_CloseProgram_MouseEnter);
+            this.ButtonX_CloseProgram.MouseLeave += new System.EventHandler(this.ButtonX_ExportErrorDiagnostic_MouseLeave);
+            // 
+            // ButtonX_IgnoreErrorMessage
+            // 
+            this.ButtonX_IgnoreErrorMessage.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_IgnoreErrorMessage.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_IgnoreErrorMessage.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_ostrich_head_in_sand_32px;
+            this.ButtonX_IgnoreErrorMessage.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            resources.ApplyResources(this.ButtonX_IgnoreErrorMessage, "ButtonX_IgnoreErrorMessage");
+            this.ButtonX_IgnoreErrorMessage.Name = "ButtonX_IgnoreErrorMessage";
+            this.ButtonX_IgnoreErrorMessage.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_IgnoreErrorMessage.Click += new System.EventHandler(this.ButtonX_IgnoreErrorMessage_Click);
+            this.ButtonX_IgnoreErrorMessage.MouseEnter += new System.EventHandler(this.ButtonX_IgnoreErrorMessage_MouseEnter);
+            this.ButtonX_IgnoreErrorMessage.MouseLeave += new System.EventHandler(this.ButtonX_ExportErrorDiagnostic_MouseLeave);
+            // 
+            // ButtonX_UploadErrorDiagnostic
+            // 
+            this.ButtonX_UploadErrorDiagnostic.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_UploadErrorDiagnostic.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_UploadErrorDiagnostic.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_upload_32px;
+            this.ButtonX_UploadErrorDiagnostic.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            resources.ApplyResources(this.ButtonX_UploadErrorDiagnostic, "ButtonX_UploadErrorDiagnostic");
+            this.ButtonX_UploadErrorDiagnostic.Name = "ButtonX_UploadErrorDiagnostic";
+            this.ButtonX_UploadErrorDiagnostic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_UploadErrorDiagnostic.Click += new System.EventHandler(this.ButtonX_UploadErrorDiagnostic_Click);
+            this.ButtonX_UploadErrorDiagnostic.MouseEnter += new System.EventHandler(this.ButtonX_UploadErrorDiagnostic_MouseEnter);
+            this.ButtonX_UploadErrorDiagnostic.MouseLeave += new System.EventHandler(this.ButtonX_ExportErrorDiagnostic_MouseLeave);
+            // 
+            // ButtonX_ExportErrorDiagnostic
+            // 
+            this.ButtonX_ExportErrorDiagnostic.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_ExportErrorDiagnostic.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_ExportErrorDiagnostic.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_32px;
+            this.ButtonX_ExportErrorDiagnostic.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            resources.ApplyResources(this.ButtonX_ExportErrorDiagnostic, "ButtonX_ExportErrorDiagnostic");
+            this.ButtonX_ExportErrorDiagnostic.Name = "ButtonX_ExportErrorDiagnostic";
+            this.ButtonX_ExportErrorDiagnostic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_ExportErrorDiagnostic.Click += new System.EventHandler(this.ButtonX_ExportErrorDiagnostic_Click);
+            this.ButtonX_ExportErrorDiagnostic.MouseEnter += new System.EventHandler(this.ButtonX_ExportErrorDiagnostic_MouseEnter);
+            this.ButtonX_ExportErrorDiagnostic.MouseLeave += new System.EventHandler(this.ButtonX_ExportErrorDiagnostic_MouseLeave);
+            // 
+            // labelX_FeatureDescription
             // 
             // 
             // 
             // 
-            _LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            resources.ApplyResources(_LabelX1, "LabelX1");
-            _LabelX1.Name = "LabelX1";
+            this.labelX_FeatureDescription.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX_FeatureDescription.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.labelX_FeatureDescription, "labelX_FeatureDescription");
+            this.labelX_FeatureDescription.Name = "labelX_FeatureDescription";
+            this.labelX_FeatureDescription.WordWrap = true;
             // 
-            // TextBoxX1
-            // 
-            _TextBoxX1.BackColor = Color.White;
+            // labelX2
             // 
             // 
             // 
-            _TextBoxX1.Border.Class = "TextBoxBorder";
-            _TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _TextBoxX1.DisabledBackColor = Color.White;
-            _TextBoxX1.ForeColor = Color.Black;
-            resources.ApplyResources(_TextBoxX1, "TextBoxX1");
-            _TextBoxX1.Name = "TextBoxX1";
-            _TextBoxX1.PreventEnterBeep = true;
-            _TextBoxX1.ReadOnly = true;
             // 
-            // ButtonX2
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.labelX2, "labelX2");
+            this.labelX2.Name = "labelX2";
+            this.labelX2.WordWrap = true;
             // 
-            _ButtonX2.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX2.DialogResult = DialogResult.OK;
-            _ButtonX2.FocusCuesEnabled = false;
-            _ButtonX2.Image = My.Resources.MyIcons.icons8_forward_16px;
-            resources.ApplyResources(_ButtonX2, "ButtonX2");
-            _ButtonX2.Name = "ButtonX2";
-            _ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // labelX1
             // 
-            // Panel1
             // 
-            _Panel1.BackColor = Color.Transparent;
-            _Panel1.Controls.Add(_LabelX1);
-            _Panel1.Controls.Add(_ButtonX3);
-            _Panel1.Controls.Add(_TextBoxX1);
-            _Panel1.Controls.Add(_ButtonX2);
-            _Panel1.Controls.Add(_ButtonX1);
-            resources.ApplyResources(_Panel1, "Panel1");
-            _Panel1.Name = "Panel1";
             // 
-            // ButtonX3
             // 
-            _ButtonX3.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX3.FocusCuesEnabled = false;
-            _ButtonX3.Image = My.Resources.MyIcons.icons8_copy_16px;
-            resources.ApplyResources(_ButtonX3, "ButtonX3");
-            _ButtonX3.Name = "ButtonX3";
-            _ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX3.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX3.SymbolSize = 12.0F;
-            // 
-            // ButtonX1
-            // 
-            _ButtonX1.AccessibleRole = AccessibleRole.PushButton;
-            _ButtonX1.BackColor = Color.White;
-            _ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX1.DialogResult = DialogResult.Cancel;
-            _ButtonX1.FocusCuesEnabled = false;
-            _ButtonX1.Image = My.Resources.MyIcons.icons8_delete_sign_16px;
-            resources.ApplyResources(_ButtonX1, "ButtonX1");
-            _ButtonX1.Name = "ButtonX1";
-            _ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX1.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(150)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)));
-            _ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX1.SymbolSize = 12.0F;
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.labelX1, "labelX1");
+            this.labelX1.Name = "labelX1";
             // 
             // Form_ErrorDialog
             // 
-            AutoScaleMode = AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
-            ControlBox = false;
-            Controls.Add(_Panel1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "Form_ErrorDialog";
-            TopLeftCornerSize = 0;
-            TopRightCornerSize = 0;
-            _Panel1.ResumeLayout(false);
-            ResumeLayout(false);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Form_ErrorDialog";
+            this.TopLeftCornerSize = 0;
+            this.TopRightCornerSize = 0;
+            this.panel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
-        private DevComponents.DotNetBar.LabelX _LabelX1;
-
-        internal DevComponents.DotNetBar.LabelX LabelX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX1 != null)
-                {
-                }
-
-                _LabelX1 = value;
-                if (_LabelX1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.Controls.TextBoxX _TextBoxX1;
-
-        internal DevComponents.DotNetBar.Controls.TextBoxX TextBoxX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _TextBoxX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_TextBoxX1 != null)
-                {
-                }
-
-                _TextBoxX1 = value;
-                if (_TextBoxX1 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX2;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX2 != null)
-                {
-                }
-
-                _ButtonX2 = value;
-                if (_ButtonX2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX1;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX1 != null)
-                {
-                    _ButtonX1.Click -= ButtonX1_Click;
-                }
-
-                _ButtonX1 = value;
-                if (_ButtonX1 != null)
-                {
-                    _ButtonX1.Click += ButtonX1_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX3;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX3 != null)
-                {
-                    _ButtonX3.Click -= ButtonX3_Click;
-                }
-
-                _ButtonX3 = value;
-                if (_ButtonX3 != null)
-                {
-                    _ButtonX3.Click += ButtonX3_Click;
-                }
-            }
-        }
-
-        private Panel _Panel1;
-
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
+        private Panel panel1;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.LabelX labelX_FeatureDescription;
+        private DevComponents.DotNetBar.ButtonX ButtonX_CloseProgram;
+        private DevComponents.DotNetBar.ButtonX ButtonX_IgnoreErrorMessage;
+        private DevComponents.DotNetBar.ButtonX ButtonX_UploadErrorDiagnostic;
+        private DevComponents.DotNetBar.ButtonX ButtonX_ExportErrorDiagnostic;
     }
 }

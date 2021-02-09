@@ -22,6 +22,9 @@ using Z.Collections.Extensions;
 using Z.Core.Extensions;
 using Microsoft.Win32;
 using System.Reflection;
+using SM64_ROM_Manager.Rom_Manager.Modules;
+using SM64_ROM_Manager.UserRequests.GUI;
+using SM64_ROM_Manager.UserRequests;
 
 namespace SM64_ROM_Manager
 {
@@ -50,6 +53,100 @@ namespace SM64_ROM_Manager
         public static BehaviorInfoList BehaviorInfosCustom { get; private set; } = new BehaviorInfoList();
         public static PatchClass PatchClass { get; private set; } = new PatchClass();
         public static bool HasToolkitInit { get; set; } = false;
+
+        public static void ExportDiagnosticsProtocol(IWin32Window owner, Exception currentException)
+        {
+            var sfd_SaveDiagnosticProtocol = new System.Windows.Forms.SaveFileDialog
+            {
+                Filter = "Error diagnostic file (*.edpf)|*.edpf"
+            };
+            if (sfd_SaveDiagnosticProtocol.ShowDialog(owner) == DialogResult.OK)
+                ExportDiagnosticsProtocol(sfd_SaveDiagnosticProtocol.FileName, currentException);
+        }
+
+        public static void ExportDiagnosticsProtocol(string outputPath, Exception currentException)
+        {
+            var protocol = new DiagnosticProtocol();
+            protocol.CollectData(currentException);
+            protocol.SaveProtocolFile(outputPath);
+        }
+
+        public static void UploadDiagnosticsProtocol(IWin32Window owner, Exception currentException)
+        {
+            // Get temp for diagnostics file path
+            var tempFile = Path.GetTempFileName();
+            File.Delete(tempFile);
+
+            // Save temp diagnostics file
+            ExportDiagnosticsProtocol(tempFile, currentException);
+
+            // Load and prepair user request
+            var request = UserRequestLayout.LoadFrom(Path.Combine(Publics.General.MyUserRequestsPath, "BugReport.json"));
+            foreach (UserRequestProperty prop in request.Properties)
+            {
+                switch (prop.Name)
+                {
+                    case "Attachments":
+                        prop.Value = UserRequestManager.TranslateFilesArrayToString(new string[] { tempFile });
+                        break;
+                    case "Version":
+                        prop.Value = GetApplicationVersionText();
+                        break;
+                }
+            }
+
+            // Let the user fill and send the request
+            var frm = new UserRequestDialog(request);
+            frm.ShowDialog(owner);
+
+            // Delete the temp diagnostics file
+            File.Delete(tempFile);
+        }
+
+        public static string GetApplicationVersionText()
+        {
+            var appversion = new Version(Application.ProductVersion);
+            string versionText = $"v{appversion.ToString(appversion.Revision != 0 ? 4 : (appversion.Build != 0 ? 3 : 2))}";
+
+            if (!string.IsNullOrEmpty(Resources.DevelopmentStage))
+            {
+                bool addDevelopmentalNumber = true;
+                var switchExpr = Resources.DevelopmentStage;
+                switch (switchExpr)
+                {
+                    case var @case when @case == Conversions.ToString(3):
+                        {
+                            versionText += " Alpha";
+                            break;
+                        }
+
+                    case var case1 when case1 == Conversions.ToString(2):
+                        {
+                            versionText += " Beta";
+                            break;
+                        }
+
+                    case var case2 when case2 == Conversions.ToString(1):
+                        {
+                            versionText += " RC";
+                            break;
+                        }
+
+                    case var case3 when case3 == Conversions.ToString(0):
+                        {
+                            addDevelopmentalNumber = false;
+                            break;
+                        }
+                }
+
+                if (addDevelopmentalNumber)
+                {
+                    versionText += " " + Resources.DevelopmentBuild;
+                }
+            }
+
+            return versionText;
+        }
 
         public static void UpdateChecksum(string Romfile)
         {

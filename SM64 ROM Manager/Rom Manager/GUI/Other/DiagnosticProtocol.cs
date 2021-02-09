@@ -49,8 +49,9 @@ namespace SM64_ROM_Manager.Rom_Manager.Modules
 			}
 
 			//Get random temp directory path
-			tempPath = Path.GetTempFileName();
-			File.Delete(tempPath);
+			var tempFile = Path.GetTempFileName();
+			tempPath = Path.Combine(Path.GetDirectoryName(tempFile), Path.GetFileNameWithoutExtension(tempFile));
+			File.Delete(tempFile);
 			Directory.CreateDirectory(tempPath);
 
 			//Copy ROMs with config
@@ -84,13 +85,13 @@ namespace SM64_ROM_Manager.Rom_Manager.Modules
 			}
 
 			//Pack to file
-			ZipFile.CreateFromDirectory(tempPath, tempPath);
+			ZipFile.CreateFromDirectory(tempPath, tempFile);
 
 			//Copy to output path
-			File.Copy(tempPath, outputPath);
+			File.Copy(tempFile, outputPath);
 
 			//Delete temp files
-			File.Delete(tempPath);
+			File.Delete(tempFile);
 			Directory.Delete(tempPath, true);
 		}
 	}

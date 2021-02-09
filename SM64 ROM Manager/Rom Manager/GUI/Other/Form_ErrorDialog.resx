@@ -118,166 +118,202 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="ButtonX_CloseProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 84</value>
   </data>
-  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 23</value>
+  <data name="ButtonX_CloseProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 86</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="LabelX1.Text" xml:space="preserve">
-    <value>&lt;div align="center"&gt;&lt;b&gt;&lt;font size="14"&gt;An unknown error occurred&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
-    <value>LabelX1</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
-  </data>
-  <data name="TextBoxX1.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TextBoxX1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Both</value>
-  </data>
-  <data name="TextBoxX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 232</value>
-  </data>
-  <data name="TextBoxX1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="TextBoxX1.WordWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX1.Name" xml:space="preserve">
-    <value>TextBoxX1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX1.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ButtonX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 270</value>
-  </data>
-  <data name="ButtonX2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 23</value>
-  </data>
-  <data name="ButtonX2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="ButtonX2.Text" xml:space="preserve">
-    <value>Ignore</value>
-  </data>
-  <data name="&gt;&gt;ButtonX2.Name" xml:space="preserve">
-    <value>ButtonX2</value>
-  </data>
-  <data name="&gt;&gt;ButtonX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX2.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX2.ZOrder" xml:space="preserve">
+  <data name="ButtonX_CloseProgram.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="ButtonX3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 270</value>
+  <data name="ButtonX_CloseProgram.Text" xml:space="preserve">
+    <value>Close the application</value>
   </data>
-  <data name="ButtonX3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+  <data name="&gt;&gt;ButtonX_CloseProgram.Name" xml:space="preserve">
+    <value>ButtonX_CloseProgram</value>
   </data>
-  <data name="ButtonX3.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="&gt;&gt;ButtonX_CloseProgram.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonX3.Text" xml:space="preserve">
-    <value>Copy Text</value>
+  <data name="&gt;&gt;ButtonX_CloseProgram.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;ButtonX3.Name" xml:space="preserve">
-    <value>ButtonX3</value>
+  <data name="&gt;&gt;ButtonX_CloseProgram.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;ButtonX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <data name="ButtonX_IgnoreErrorMessage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 84</value>
   </data>
-  <data name="&gt;&gt;ButtonX3.Parent" xml:space="preserve">
-    <value>Panel1</value>
+  <data name="ButtonX_IgnoreErrorMessage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 86</value>
   </data>
-  <data name="&gt;&gt;ButtonX3.ZOrder" xml:space="preserve">
+  <data name="ButtonX_IgnoreErrorMessage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ButtonX_IgnoreErrorMessage.Text" xml:space="preserve">
+    <value>Ignore error message</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_IgnoreErrorMessage.Name" xml:space="preserve">
+    <value>ButtonX_IgnoreErrorMessage</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_IgnoreErrorMessage.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_IgnoreErrorMessage.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_IgnoreErrorMessage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ButtonX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 270</value>
+  <data name="ButtonX_UploadErrorDiagnostic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>104, 84</value>
   </data>
-  <data name="ButtonX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 23</value>
+  <data name="ButtonX_UploadErrorDiagnostic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 86</value>
   </data>
-  <data name="ButtonX1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="ButtonX_UploadErrorDiagnostic.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="ButtonX1.Text" xml:space="preserve">
-    <value>Exit</value>
+  <data name="ButtonX_UploadErrorDiagnostic.Text" xml:space="preserve">
+    <value>Upload error diagnostic</value>
   </data>
-  <data name="&gt;&gt;ButtonX1.Name" xml:space="preserve">
-    <value>ButtonX1</value>
+  <data name="&gt;&gt;ButtonX_UploadErrorDiagnostic.Name" xml:space="preserve">
+    <value>ButtonX_UploadErrorDiagnostic</value>
   </data>
-  <data name="&gt;&gt;ButtonX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ButtonX_UploadErrorDiagnostic.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonX1.Parent" xml:space="preserve">
-    <value>Panel1</value>
+  <data name="&gt;&gt;ButtonX_UploadErrorDiagnostic.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;ButtonX1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ButtonX_UploadErrorDiagnostic.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ButtonX_ExportErrorDiagnostic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 84</value>
+  </data>
+  <data name="ButtonX_ExportErrorDiagnostic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 86</value>
+  </data>
+  <data name="ButtonX_ExportErrorDiagnostic.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ButtonX_ExportErrorDiagnostic.Text" xml:space="preserve">
+    <value>Export error diagnostic</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_ExportErrorDiagnostic.Name" xml:space="preserve">
+    <value>ButtonX_ExportErrorDiagnostic</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_ExportErrorDiagnostic.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_ExportErrorDiagnostic.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_ExportErrorDiagnostic.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelX_FeatureDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 176</value>
+  </data>
+  <data name="labelX_FeatureDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 102</value>
+  </data>
+  <data name="labelX_FeatureDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelX_FeatureDescription.Name" xml:space="preserve">
+    <value>labelX_FeatureDescription</value>
+  </data>
+  <data name="&gt;&gt;labelX_FeatureDescription.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX_FeatureDescription.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;labelX_FeatureDescription.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="labelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="labelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 46</value>
+  </data>
+  <data name="labelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelX2.Text" xml:space="preserve">
+    <value>An error occurred while the program was running that was not handled and was therefore probably unexpected. You still have a few options to choose from before the program ends. </value>
+  </data>
+  <data name="&gt;&gt;labelX2.Name" xml:space="preserve">
+    <value>labelX2</value>
+  </data>
+  <data name="&gt;&gt;labelX2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;labelX2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="labelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>398, 23</value>
+  </data>
+  <data name="labelX1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>&lt;div align="center"&gt;&lt;b&gt;&lt;font size="14"&gt;An unhandled exception has occurred! &lt;/font&gt;&lt;/b&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Name" xml:space="preserve">
+    <value>labelX1</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelX1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;labelX1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 296</value>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>404, 281</value>
   </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>361, 296</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>404, 281</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -289,6 +325,6 @@
     <value>Form_ErrorDialog</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

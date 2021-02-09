@@ -555,6 +555,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomObjectsManagerLangRes.resx</DependentUpon>
     </Compile>
+    <Compile Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorDialogLangRes.resx</DependentUpon>
+    </Compile>
     <Compile Update="Rom Manager\Language Resources\MainForm\Form_Main_Resources.de.Designer.cs">
       <DependentUpon>Form_Main_Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -977,6 +982,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <LastGenOutput>ErrorDialogLangRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\Language Resources\Global\Global_Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>

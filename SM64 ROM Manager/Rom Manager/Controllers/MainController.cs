@@ -853,6 +853,7 @@ namespace SM64_ROM_Manager
             return true;
         }
 
+        
         // T o o l s
 
         public void OpenTweakViewer()
@@ -924,6 +925,7 @@ namespace SM64_ROM_Manager
 
         public void OpenSettings()
         {
+            throw new Exception();
             var frm = new SM64_ROM_Manager.Form_Settings();
             frm.ShowDialog();
         }
