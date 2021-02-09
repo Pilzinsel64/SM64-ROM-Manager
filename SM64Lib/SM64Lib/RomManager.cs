@@ -963,7 +963,7 @@ namespace SM64Lib
         /// Check, if the ROM is a valid SM64 ROM.
         /// </summary>
         /// <returns></returns>
-        public bool CheckROM()
+        public bool CheckROM(bool doNotHandleVanillaRom = false)
         {
             var fi = new FileInfo(RomFile);
             long filelength = fi.Length;
@@ -974,9 +974,14 @@ namespace SM64Lib
 
             if (filelength == 8 * 1024 * 1024)
             {
-                CreateROM();
-                PrepairROM();
-                IsNewROM = true;
+                if (doNotHandleVanillaRom)
+                    return false;
+                else
+                {
+                    CreateROM();
+                    PrepairROM();
+                    IsNewROM = true;
+                }
             }
 
             var br = new BinaryRom(this, FileAccess.Read);
