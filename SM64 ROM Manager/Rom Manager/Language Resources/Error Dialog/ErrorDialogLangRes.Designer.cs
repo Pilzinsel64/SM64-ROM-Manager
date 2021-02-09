@@ -22,7 +22,7 @@ namespace SM64_ROM_Manager.My.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ErrorDialogLangRes {
+    public class ErrorDialogLangRes {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SM64_ROM_Manager.My.Resources {
         ///   Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom_Manager.Language_Resources.Error_Dialog.ErrorDialogLangRes", typeof(ErrorDialogLangRes).Assembly);
@@ -51,7 +51,7 @@ namespace SM64_ROM_Manager.My.Resources {
         ///   Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die &lt;u&gt;Feature description:&lt;/u&gt;&lt;br/&gt;{0} ähnelt.
         /// </summary>
-        internal static string FeatureDescription_BaseText {
+        public static string FeatureDescription_BaseText {
             get {
                 return ResourceManager.GetString("FeatureDescription_BaseText", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Exits the program and discards all unsaved changes. &lt;b&gt;This option is highly RECOMMENDED!&lt;/b&gt; ähnelt.
         /// </summary>
-        internal static string FeatureDescription_CloseProgram {
+        public static string FeatureDescription_CloseProgram {
             get {
                 return ResourceManager.GetString("FeatureDescription_CloseProgram", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Saves some useful diagnostic data as a file in a location of your choosing. Please send this diagnostic file to the developer to help fix this error and, if necessary, to get help yourself. If you have activated the recording of extended diagnostic data, these will be included. ähnelt.
         /// </summary>
-        internal static string FeatureDescription_ExportErrorDiagnostic {
+        public static string FeatureDescription_ExportErrorDiagnostic {
             get {
                 return ResourceManager.GetString("FeatureDescription_ExportErrorDiagnostic", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ignore this error message (if the main program has&apos;t already been terminated by the error) and continues execution. &lt;b&gt;This option is expressly NOT recommended and should only be used if you know what you are doing!&lt;/b&gt; Possible consequences would be subsequent errors that lead to &lt;b&gt;new error messages&lt;/b&gt; or even &lt;b&gt;large data loss (e.g. in the ROM)&lt;/b&gt;. ähnelt.
         /// </summary>
-        internal static string FeatureDescription_IgnoreErrorMessage {
+        public static string FeatureDescription_IgnoreErrorMessage {
             get {
                 return ResourceManager.GetString("FeatureDescription_IgnoreErrorMessage", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die No description available. ähnelt.
         /// </summary>
-        internal static string FeatureDescription_NoDescription {
+        public static string FeatureDescription_NoDescription {
             get {
                 return ResourceManager.GetString("FeatureDescription_NoDescription", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Saves some useful diagnostic data as a file and attaches the file to a new user request. You can fill some other informations and send the request directly to the developer. If you have activated the recording of extended diagnostic data, these will be included. ähnelt.
         /// </summary>
-        internal static string FeatureDescription_UploadErrorDiagnostic {
+        public static string FeatureDescription_UploadErrorDiagnostic {
             get {
                 return ResourceManager.GetString("FeatureDescription_UploadErrorDiagnostic", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die &lt;u&gt;Are you sure&lt;/u&gt; to ignore this error message?&lt;br/&gt;This continues the execution of the main application. &lt;b&gt;This option is expressly NOT recommended and should only be used if you know what you are doing!&lt;/b&gt; Possible consequences would be subsequent errors that lead to &lt;b&gt;new error messages&lt;/b&gt; or even &lt;b&gt;large data loss in the project&lt;/b&gt;. ähnelt.
         /// </summary>
-        internal static string MsgBox_SureToIgnore {
+        public static string MsgBox_SureToIgnore {
             get {
                 return ResourceManager.GetString("MsgBox_SureToIgnore", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Ignore error message ähnelt.
         /// </summary>
-        internal static string MsgBox_SureToIgnore_Title {
+        public static string MsgBox_SureToIgnore_Title {
             get {
                 return ResourceManager.GetString("MsgBox_SureToIgnore_Title", resourceCulture);
             }
