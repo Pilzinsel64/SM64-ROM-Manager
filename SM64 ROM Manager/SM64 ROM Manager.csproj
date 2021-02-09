@@ -555,6 +555,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomObjectsManagerLangRes.resx</DependentUpon>
     </Compile>
+    <Compile Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes - Kopieren.Designer.cs">
+      <DependentUpon>ErrorDialogLangRes.Designer.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -982,6 +987,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.de.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <LastGenOutput>ErrorDialogLangRes.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.resx">
       <Generator>ResXFileCodeGenerator</Generator>

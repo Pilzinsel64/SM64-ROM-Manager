@@ -106,7 +106,7 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Saves some useful diagnostic data as a file and attaches the file to a new user request. You can fill some other informations and send the request directly to the developer. If you have activated the recording of extended diagnostic data, these will be included. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Saves some useful diagnostic data as a file and attaches the file to a new user request. You can fill some other informations and send the request directly to the developer. Please send this diagnostic file to the developer to help fix this error and, if necessary, to get help yourself. If you have activated the recording of extended diagnostic data, these will be included. ähnelt.
         /// </summary>
         internal static string FeatureDescription_UploadErrorDiagnostic {
             get {

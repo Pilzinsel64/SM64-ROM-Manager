@@ -51,6 +51,7 @@ namespace SM64_ROM_Manager
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.ButtonX_CloseProgram);
             this.panel1.Controls.Add(this.ButtonX_IgnoreErrorMessage);
@@ -59,17 +60,16 @@ namespace SM64_ROM_Manager
             this.panel1.Controls.Add(this.labelX_FeatureDescription);
             this.panel1.Controls.Add(this.labelX2);
             this.panel1.Controls.Add(this.labelX1);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Name = "panel1";
             // 
             // ButtonX_CloseProgram
             // 
+            resources.ApplyResources(this.ButtonX_CloseProgram, "ButtonX_CloseProgram");
             this.ButtonX_CloseProgram.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_CloseProgram.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_CloseProgram.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_close_window_32px;
             this.ButtonX_CloseProgram.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            resources.ApplyResources(this.ButtonX_CloseProgram, "ButtonX_CloseProgram");
             this.ButtonX_CloseProgram.Name = "ButtonX_CloseProgram";
             this.ButtonX_CloseProgram.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_CloseProgram.Click += new System.EventHandler(this.ButtonX_CloseProgram_Click);
@@ -78,11 +78,11 @@ namespace SM64_ROM_Manager
             // 
             // ButtonX_IgnoreErrorMessage
             // 
+            resources.ApplyResources(this.ButtonX_IgnoreErrorMessage, "ButtonX_IgnoreErrorMessage");
             this.ButtonX_IgnoreErrorMessage.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_IgnoreErrorMessage.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_IgnoreErrorMessage.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_ostrich_head_in_sand_32px;
             this.ButtonX_IgnoreErrorMessage.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            resources.ApplyResources(this.ButtonX_IgnoreErrorMessage, "ButtonX_IgnoreErrorMessage");
             this.ButtonX_IgnoreErrorMessage.Name = "ButtonX_IgnoreErrorMessage";
             this.ButtonX_IgnoreErrorMessage.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_IgnoreErrorMessage.Click += new System.EventHandler(this.ButtonX_IgnoreErrorMessage_Click);
@@ -91,11 +91,11 @@ namespace SM64_ROM_Manager
             // 
             // ButtonX_UploadErrorDiagnostic
             // 
+            resources.ApplyResources(this.ButtonX_UploadErrorDiagnostic, "ButtonX_UploadErrorDiagnostic");
             this.ButtonX_UploadErrorDiagnostic.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_UploadErrorDiagnostic.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_UploadErrorDiagnostic.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_upload_32px;
             this.ButtonX_UploadErrorDiagnostic.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            resources.ApplyResources(this.ButtonX_UploadErrorDiagnostic, "ButtonX_UploadErrorDiagnostic");
             this.ButtonX_UploadErrorDiagnostic.Name = "ButtonX_UploadErrorDiagnostic";
             this.ButtonX_UploadErrorDiagnostic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_UploadErrorDiagnostic.Click += new System.EventHandler(this.ButtonX_UploadErrorDiagnostic_Click);
@@ -104,11 +104,11 @@ namespace SM64_ROM_Manager
             // 
             // ButtonX_ExportErrorDiagnostic
             // 
+            resources.ApplyResources(this.ButtonX_ExportErrorDiagnostic, "ButtonX_ExportErrorDiagnostic");
             this.ButtonX_ExportErrorDiagnostic.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.ButtonX_ExportErrorDiagnostic.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.ButtonX_ExportErrorDiagnostic.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_32px;
             this.ButtonX_ExportErrorDiagnostic.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            resources.ApplyResources(this.ButtonX_ExportErrorDiagnostic, "ButtonX_ExportErrorDiagnostic");
             this.ButtonX_ExportErrorDiagnostic.Name = "ButtonX_ExportErrorDiagnostic";
             this.ButtonX_ExportErrorDiagnostic.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_ExportErrorDiagnostic.Click += new System.EventHandler(this.ButtonX_ExportErrorDiagnostic_Click);
@@ -117,43 +117,43 @@ namespace SM64_ROM_Manager
             // 
             // labelX_FeatureDescription
             // 
+            resources.ApplyResources(this.labelX_FeatureDescription, "labelX_FeatureDescription");
             // 
             // 
             // 
             this.labelX_FeatureDescription.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX_FeatureDescription.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.labelX_FeatureDescription, "labelX_FeatureDescription");
             this.labelX_FeatureDescription.Name = "labelX_FeatureDescription";
             this.labelX_FeatureDescription.WordWrap = true;
             // 
             // labelX2
             // 
+            resources.ApplyResources(this.labelX2, "labelX2");
             // 
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.labelX2, "labelX2");
             this.labelX2.Name = "labelX2";
             this.labelX2.WordWrap = true;
             // 
             // labelX1
             // 
+            resources.ApplyResources(this.labelX1, "labelX1");
             // 
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.ForeColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.labelX1, "labelX1");
             this.labelX1.Name = "labelX1";
             // 
             // Form_ErrorDialog
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_ErrorDialog";

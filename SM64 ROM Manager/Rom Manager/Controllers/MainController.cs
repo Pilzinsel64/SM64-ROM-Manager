@@ -925,7 +925,6 @@ namespace SM64_ROM_Manager
 
         public void OpenSettings()
         {
-            throw new Exception();
             var frm = new SM64_ROM_Manager.Form_Settings();
             frm.ShowDialog();
         }

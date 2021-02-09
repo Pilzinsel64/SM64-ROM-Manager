@@ -118,27 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="FeatureDescription_BaseText" xml:space="preserve">
-    <value>&lt;u&gt;Feature description:&lt;/u&gt;&lt;br/&gt;{0}</value>
+    <value>&lt;u&gt;Funktionsbeschreibung:&lt;/u&gt;&lt;br/&gt;{0}</value>
   </data>
   <data name="FeatureDescription_CloseProgram" xml:space="preserve">
-    <value>Exits the program and discards all unsaved changes. &lt;b&gt;This option is highly RECOMMENDED!&lt;/b&gt;</value>
+    <value>Beendet das Programm und verwirft alle ungespeicherten Änderungen. &lt;b&gt;Diese Option wird ausdrücklich EMPFOHLEN!&lt;/b&gt;</value>
   </data>
   <data name="FeatureDescription_ExportErrorDiagnostic" xml:space="preserve">
-    <value>Saves some useful diagnostic data as a file in a location of your choosing. Please send this diagnostic file to the developer to help fix this error and, if necessary, to get help yourself. If you have activated the recording of extended diagnostic data, these will be included.</value>
+    <value>Speichert einige hilfreiche Diagnosedaten als eine Datei an einem von Dir ausgewählten Ort. Bitte sende diese Diagnosedatei an den Entwickler, um zu helfen diesen Fehler zu beheben und ggf. selbst hilfe zu bekommen. Falls Du die Erfassung von erweiterten Diagnosedaten aktiviert hast, werden diese mit inkludiert.</value>
   </data>
   <data name="FeatureDescription_IgnoreErrorMessage" xml:space="preserve">
-    <value>Ignore this error message (if the main program has't already been terminated by the error) and continues execution. &lt;b&gt;This option is expressly NOT recommended and should only be used if you know what you are doing!&lt;/b&gt; Possible consequences would be subsequent errors that lead to &lt;b&gt;new error messages&lt;/b&gt; or even &lt;b&gt;large data loss (e.g. in the ROM)&lt;/b&gt;.</value>
+    <value>Ignoriert diese Fehlermeldung (falls das Hauptprogramm nicht bereits durch den Fehler beendet wurde) und setzt die Ausführung fort. &lt;b&gt;Diese Option wird ausdrücklich NICHT empfohlen und sollte nur angewant werden, wenn man weiß, was man tut!&lt;/b&gt; Mögliche Folgen wären Folgefehler, die wieder zu &lt;b&gt;neuen Fehlermeldungen&lt;/b&gt; oder sogar zu &lt;b&gt;großem Datenverlust&lt;/b&gt; führen könnten.</value>
   </data>
   <data name="FeatureDescription_NoDescription" xml:space="preserve">
-    <value>No description available.</value>
+    <value>Keine Beschreibung vorhanden.</value>
   </data>
   <data name="FeatureDescription_UploadErrorDiagnostic" xml:space="preserve">
-    <value>Saves some useful diagnostic data as a file and attaches the file to a new user request. You can fill some other informations and send the request directly to the developer. If you have activated the recording of extended diagnostic data, these will be included.</value>
+    <value>Speichert einige hilfreiche Diagnosedaten als eine Datei und bereitet einen Fehlerbericht vor, den Du kurz bearbeiten und abschicken kannst. Falls Du die Erfassung von erweiterten Diagnosedaten aktiviert hast, werden diese mit inkludiert.</value>
   </data>
   <data name="MsgBox_SureToIgnore" xml:space="preserve">
-    <value>&lt;u&gt;Are you sure&lt;/u&gt; to ignore this error message?&lt;br/&gt;This continues the execution of the main application. &lt;b&gt;This option is expressly NOT recommended and should only be used if you know what you are doing!&lt;/b&gt; Possible consequences would be subsequent errors that lead to &lt;b&gt;new error messages&lt;/b&gt; or even &lt;b&gt;large data loss in the project&lt;/b&gt;.</value>
+    <value>Soll die Fehlermeldung &lt;u&gt;wirklich&lt;/u&gt; ignoriert werden?&lt;br/&gt;Hierdurch wird die Ausfürhung der Hauptanwendung fortgesetzt. &lt;b&gt;Diese Option wird ausdrücklich NICHT empfohlen und sollte nur angewant werden, wenn man weiß, was man tut!&lt;/b&gt; Mögliche Folgen wären Folgefehler, die wieder zu &lt;b&gt;neuen Fehlermeldungen&lt;/b&gt; oder sogar zu &lt;b&gt;großem Datenverlust&lt;/b&gt; führen könnten.</value>
   </data>
   <data name="MsgBox_SureToIgnore_Title" xml:space="preserve">
-    <value>Ignore error message</value>
+    <value>Fehlermeldung ignorieren</value>
   </data>
 </root>
