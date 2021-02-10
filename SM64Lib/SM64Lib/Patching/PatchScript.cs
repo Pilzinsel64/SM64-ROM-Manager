@@ -63,6 +63,14 @@ namespace SM64Lib.Patching
         /// </summary>
         [JsonConverter(typeof(UniquiIDStringJsonConverter<PatchProfile>))]
         public UniquieID<PatchProfile> ID { get; set; } = new UniquieID<PatchProfile>();
+        /// <summary>
+        /// Defines if the tweak is official and secure.
+        /// </summary>
+        public bool Official { get; set; } = false;
+        /// <summary>
+        /// Defines if the tweak is recommended for every common SM64 ROM Hack.
+        /// </summary>
+        public bool Recommended { get; set; } = false;
     }
 
     /// <summary>

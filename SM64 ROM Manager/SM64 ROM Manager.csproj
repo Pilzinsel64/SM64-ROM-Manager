@@ -20,8 +20,8 @@
     <Company>Pilzinsel64</Company>
     <Product>SM64 ROM Manager</Product>
     <Copyright>Copyright © Pilzinsel64 2017 - 2021</Copyright>
-    <AssemblyVersion>1.11.9.0</AssemblyVersion>
-    <FileVersion>1.11.9.0</FileVersion>
+    <AssemblyVersion>1.12.0.0</AssemblyVersion>
+    <FileVersion>1.12.0.0</FileVersion>
     <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
     <WarningLevel>1</WarningLevel>
     <DefineTrace>true</DefineTrace>
@@ -112,7 +112,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>false</GenerateManifests>
-    <Version>1.11.9.0</Version>
+    <Version>1.12.0.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
@@ -571,6 +571,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomObjectsManagerLangRes.resx</DependentUpon>
     </Compile>
+    <Compile Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes - Kopieren.Designer.cs">
+      <DependentUpon>ErrorDialogLangRes.Designer.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorDialogLangRes.resx</DependentUpon>
+    </Compile>
     <Compile Update="Rom Manager\Language Resources\MainForm\Form_Main_Resources.de.Designer.cs">
       <DependentUpon>Form_Main_Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -993,6 +1003,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CustomObjectsManagerLangRes.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.de.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <LastGenOutput>ErrorDialogLangRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\Language Resources\Global\Global_Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>

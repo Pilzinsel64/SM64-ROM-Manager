@@ -39,7 +39,7 @@ namespace SM64_ROM_Manager.My.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom Manager.Language_Resources.Plugin_Installer.Plugin_Installer_" +
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom_Manager.Language_Resources.Plugin_Installer.Plugin_Installer_" +
                             "Resources", typeof(Plugin_Installer_Resources).Assembly);
                     resourceMan = temp;
                 }

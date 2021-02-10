@@ -98,7 +98,7 @@ namespace SM64_ROM_Manager
         {
             var mgr = new RomManager(openrompath, lvlmgr);
             Publics.Publics.LoadLegacyObjectBankData(mgr);
-            if (mgr.CheckROM())
+            if (mgr.CheckROM(true))
             {
                 openrom = mgr;
                 LabelX_Romfile.Text = System.IO.Path.GetFileName(mgr.RomFile);

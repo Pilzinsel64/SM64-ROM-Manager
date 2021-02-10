@@ -328,6 +328,7 @@ namespace SM64_ROM_Manager
             Controller.CheckCommandLineArgs();
             Controller.LoadPlugins();
             AddMyPluginCommands();
+            General.AskForCollectingDiagnosticData(this, true);
             Controller.CheckToOpenThankYouPage();
             if (Settings.Network.AutoUpdates && Controller.UpdateCheckIsDue())
             {
@@ -373,46 +374,8 @@ namespace SM64_ROM_Manager
 
         private void RefreshAppTitel()
         {
-            var appversion = new Version(Application.ProductVersion);
             string romPathExt = !string.IsNullOrEmpty(Controller.Romfile) ? $" - \"{Path.GetFileName(Controller.Romfile)}\"" : "";
-            string versionText = $"v{appversion.ToString(appversion.Revision != 0 ? 4 : (appversion.Build != 0 ? 3 : 2))}";
-            if (!string.IsNullOrEmpty(Resources.DevelopmentStage))
-            {
-                bool addDevelopmentalNumber = true;
-                var switchExpr = Resources.DevelopmentStage;
-                switch (switchExpr)
-                {
-                    case var @case when @case == Conversions.ToString(3):
-                        {
-                            versionText += " Alpha";
-                            break;
-                        }
-
-                    case var case1 when case1 == Conversions.ToString(2):
-                        {
-                            versionText += " Beta";
-                            break;
-                        }
-
-                    case var case2 when case2 == Conversions.ToString(1):
-                        {
-                            versionText += " RC";
-                            break;
-                        }
-
-                    case var case3 when case3 == Conversions.ToString(0):
-                        {
-                            addDevelopmentalNumber = false;
-                            break;
-                        }
-                }
-
-                if (addDevelopmentalNumber)
-                {
-                    versionText += " " + Resources.DevelopmentBuild;
-                }
-            }
-
+            string versionText = General.GetApplicationVersionText();
             base.Text = $"{Application.ProductName} ({versionText}){romPathExt}";
         }
 
@@ -755,6 +718,21 @@ namespace SM64_ROM_Manager
         private void ButtonItem_PublicHelpChat_Click(object sender, EventArgs e)
         {
             Controller.OpenPublicHelpChat();
+        }
+
+        private async void ButtonItem_OpenRomInHexEditor_Click(object sender, EventArgs e)
+        {
+            await Controller.OpenRomInHexEditorAsync();
+        }
+
+        private void ButtonItem12_PopupOpen(object sender, PopupOpenEventArgs e)
+        {
+            buttonItem_OpenRomInHexEditor.Visible = Controller.IsHexEditorSettedUp();
+        }
+
+        private void ButtonItem_ConfigureDiagnosticData_Click(object sender, EventArgs e)
+        {
+            General.AskForCollectingDiagnosticData(this, false);
         }
     }
 }

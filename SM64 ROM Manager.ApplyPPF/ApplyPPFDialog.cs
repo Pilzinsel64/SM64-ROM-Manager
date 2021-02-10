@@ -19,7 +19,7 @@ namespace SM64_ROM_Manager.ApplyPPF
         {
             if (Assembly.GetExecutingAssembly() == Assembly.GetEntryAssembly())
             {
-                Settings.SettingsConfigFilePath = Path.Combine(General.MyDataPath, "Settings.json");
+                Settings.SettingsConfigFilePath = Path.Combine(General.MyAppDataPath, "Settings.json");
                 StyleManager.Style = eStyle.Metro;
                 StyleManager.MetroColorGeneratorParameters = Settings.StyleManager.MetroColorParams;
             }

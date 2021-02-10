@@ -65,6 +65,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_checked_checkbox_32px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_checkmark_14px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -81,6 +86,11 @@
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_chevron_up_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_close_window_32px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
@@ -330,6 +340,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_ostrich_head_in_sand_32px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_package_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -430,6 +445,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_sonometer_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_split_vertical_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -480,12 +500,22 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_unchecked_checkbox_32px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_undo_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_upload_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_upload_32px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
@@ -629,12 +659,12 @@
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentBuild">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die 1 ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die 2 ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die 0 ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die 2 ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.MoveCameraCross">
@@ -1014,6 +1044,62 @@
               Sucht eine lokalisierte Zeichenfolge, die New Object ähnelt.
             </summary>
         </member>
+        <member name="T:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.FeatureDescription_BaseText">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die &lt;u&gt;Feature description:&lt;/u&gt;&lt;br/&gt;{0} ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.FeatureDescription_CloseProgram">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Exits the program and discards all unsaved changes. &lt;b&gt;This option is highly RECOMMENDED!&lt;/b&gt; ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.FeatureDescription_ExportErrorDiagnostic">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Saves some useful diagnostic data as a file in a location of your choosing. Please send this diagnostic file to the developer to help fix this error and, if necessary, to get help yourself. If you have activated the recording of extended diagnostic data, these will be included. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.FeatureDescription_IgnoreErrorMessage">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Ignore this error message (if the main program has&apos;t already been terminated by the error) and continues execution. &lt;b&gt;This option is expressly NOT recommended and should only be used if you know what you are doing!&lt;/b&gt; Possible consequences would be subsequent errors that lead to &lt;b&gt;new error messages&lt;/b&gt; or even &lt;b&gt;large data loss (e.g. in the ROM)&lt;/b&gt;. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.FeatureDescription_NoDescription">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die No description available. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.FeatureDescription_UploadErrorDiagnostic">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Saves some useful diagnostic data as a file and attaches the file to a new user request. You can fill some other informations and send the request directly to the developer. If you have activated the recording of extended diagnostic data, these will be included. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.MsgBox_SureToIgnore">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die &lt;u&gt;Are you sure&lt;/u&gt; to ignore this error message?&lt;br/&gt;This continues the execution of the main application. &lt;b&gt;This option is expressly NOT recommended and should only be used if you know what you are doing!&lt;/b&gt; Possible consequences would be subsequent errors that lead to &lt;b&gt;new error messages&lt;/b&gt; or even &lt;b&gt;large data loss in the project&lt;/b&gt;. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.ErrorDialogLangRes.MsgBox_SureToIgnore_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Ignore error message ähnelt.
+            </summary>
+        </member>
         <member name="T:SM64_ROM_Manager.My.Resources.Global_Resources">
             <summary>
               Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
@@ -1129,6 +1215,41 @@
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_Warps">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die All Warps ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnAllowExtendedSystemInformations">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Allow identification of specific system information that may be part of the problem.&lt;br/&gt;For example, the installation path, the type of connection to the network and the type of Windows installation. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnCurrentlyOpenRom">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Attach the ROM that was opened at the time of the error,&lt;br/&gt;to find errors that only occur with your ROM. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnCurrentRomManagerConfig">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Attach the configuration files of your SM64 ROM Manager installation,&lt;br/&gt;to find out errors related to your installation. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnNewText">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die &lt;b&gt;NEW:&lt;/b&gt; ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Header">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Allow acquisition of diagnostic data? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Text">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die To improve and simplify the error diagnosis in the event of a program crash or data loss, optional data about the work on the SM64 ROM Manager are very helpful. We ask you to allow this to be determined, so that in the event of an error, we can find out the cause and remedy it as quickly as possible. All diagnostic data are stored locally on your computer/laptop for a maximum of 24 hours. In the event of an error, this data will be packed and saved at your request so that you can send the &quot;diagnosis file&quot; t [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Acquisition of diagnostic data ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_BankSizeChangedSuccess">
@@ -1370,6 +1491,11 @@
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.Notify_ShouldLoadRomFirst">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die You must open a ROM first! ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.OpenWithContextMenuEntry">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Open with SM64 ROM Manager ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.SoundEffect_BobOmb">

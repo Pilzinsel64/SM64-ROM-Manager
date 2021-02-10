@@ -23,11 +23,11 @@ namespace SM64_ROM_Manager.My
         {
             if (!Debugger.IsAttached)
             {
-                var exception = e.Exception.Demystify();
                 var frm = new Form_ErrorDialog();
-                frm.ErrorText = exception.Message + Constants.vbNewLine + Constants.vbNewLine + exception.StackTrace;
+                frm.CurrentException = e.Exception;
                 frm.ShowDialog();
                 e.ExitApplication = frm.ExitApplicaiton;
+                frm.Dispose();
             }
         }
     }

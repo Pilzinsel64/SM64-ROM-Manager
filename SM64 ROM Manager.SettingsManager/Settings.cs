@@ -6,17 +6,23 @@ namespace SM64_ROM_Manager.SettingsManager
 {
     public class Settings
     {
+        private static string settingsFilePath = string.Empty;
         private static bool enableAutoSave = false;
         private static SettingsManager<SettingsStruc> managerInstance;
+        private static bool hasInstance = false;
 
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         public static SettingsStruc Instance
         {
             get
             {
-                if (managerInstance is null)
+                if (string.IsNullOrEmpty(settingsFilePath))
+                    throw new FileNotFoundException("Settings file not setted up!");
+
+                if (!hasInstance)
                 {
-                    managerInstance = new SettingsManager<SettingsStruc>(Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), @"Data\Settings.json"), enableAutoSave);
+                    managerInstance = new SettingsManager<SettingsStruc>(settingsFilePath, enableAutoSave);
+                    hasInstance = true;
                 }
 
                 return managerInstance.Instance;
@@ -53,12 +59,15 @@ namespace SM64_ROM_Manager.SettingsManager
         {
             get
             {
-                return Instance.SettingsManager.ConfigFilePath;
+                return hasInstance ? Instance.SettingsManager.ConfigFilePath : settingsFilePath;
             }
 
             set
             {
-                Instance.SettingsManager.ConfigFilePath = value;
+                if (hasInstance)
+                    Instance.SettingsManager.ConfigFilePath = value;
+                else
+                    settingsFilePath = value;
             }
         }
 
@@ -155,6 +164,11 @@ namespace SM64_ROM_Manager.SettingsManager
         public static LevelManagerSettingsStruc LevelManager
         {
             get => Instance.LevelManager;
+        }
+
+        public static DiagnosticDataStruc DiagnosticData
+        {
+            get => Instance.DiagnosticData;
         }
 
     }

@@ -208,6 +208,20 @@ namespace SM64_ROM_Manager.PatchScripts
             }
         }
 
+        private async void ExportEmbeddedFile(string fileName, string filePath)
+        {
+            if (!string.IsNullOrEmpty(fileName))
+            {
+                var s = (MemoryStream)await filesContainer.GetStreamAsync(fileName);
+                var fs = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite);
+                s.Position = 0;
+                await s.CopyToAsync(fs);
+                await fs.FlushAsync();
+                fs.Close();
+                s.Close();
+            }
+        }
+
         private string GetSelectedEmbeddedFile()
         {
             var fileName = string.Empty;
@@ -799,6 +813,26 @@ End Module
         private void AdvTree_EmbeddedFiles_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
         {
 
+        }
+
+        private void ButtonX_ExportEmbeddedFile_Click(object sender, EventArgs e)
+        {
+            var fileName = GetSelectedEmbeddedFile();
+            var ext = Path.GetExtension(fileName);
+
+            if (string.IsNullOrEmpty(ext))
+                ext = "All files|*";
+            else
+                ext = $"*{ext}|*{ext}";
+
+            var sfd_ExportEmbeddedFile = new SaveFileDialog()
+            {
+                Filter = ext,
+                FileName = fileName
+            };
+
+            if (sfd_ExportEmbeddedFile.ShowDialog(this) == DialogResult.OK)
+                ExportEmbeddedFile(fileName, sfd_ExportEmbeddedFile.FileName);
         }
     }
 }

@@ -35,7 +35,10 @@ namespace SM64_ROM_Manager.Publics
         //[DllImport("user32.dll", EntryPoint = "SetProcessDPIAware")]
         //public static extern void SetDPIAware();
 
+        private static string pMyExecuteablePath = string.Empty;
+        private static string pMyAppDataPath = string.Empty;
         private static string pMyDataPath = string.Empty;
+        private static string pMyAppPath = string.Empty;
         private static string pMyToolsPath = string.Empty;
         private static string pMyTweaksPath = string.Empty;
         private static string pMyCustomObjectsPath = string.Empty;
@@ -53,16 +56,54 @@ namespace SM64_ROM_Manager.Publics
             //ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
         }
 
+        public static string MyAppDataPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(pMyAppDataPath))
+                {
+                    pMyAppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SM64 ROM Manager");
+                    if (!Directory.Exists(pMyAppDataPath))
+                        Directory.CreateDirectory(pMyAppDataPath);
+                }
+
+                return pMyAppDataPath;
+            }
+        }
+
+        public static string MyExecuteablePath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(pMyExecuteablePath))
+                    pMyExecuteablePath = Assembly.GetEntryAssembly().Location;
+                return pMyExecuteablePath;
+            }
+        }
+
         public static string MyDataPath
         {
             get
             {
                 if (string.IsNullOrEmpty(pMyDataPath))
                 {
-                    pMyDataPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "Data");
+                    pMyDataPath = Path.Combine(MyAppPath, "Data");
                 }
 
                 return pMyDataPath;
+            }
+        }
+
+        public static string MyAppPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(pMyAppPath))
+                {
+                    pMyAppPath = Path.GetDirectoryName(Application.ExecutablePath);
+                }
+
+                return pMyAppPath;
             }
         }
 
@@ -260,7 +301,17 @@ namespace SM64_ROM_Manager.Publics
             if (RuntimeInformationsEx.RealOSType != OSType.Windows)
                 SetServerCertificateValidationCallback();
 
-            Settings.SettingsConfigFilePath = Path.Combine(MyDataPath, "Settings.json");
+            // Check and move settings file from old path
+            // TODO: Remove in v1.13
+            {
+                var newSettingsPath = Path.Combine(MyAppDataPath, "Settings.json");
+                var oldSettingsPath = Path.Combine(MyDataPath, "Settings.json");
+                if (!File.Exists(newSettingsPath) && File.Exists(oldSettingsPath))
+                    File.Move(oldSettingsPath, newSettingsPath);
+            }
+
+            // Set settings file path
+            Settings.SettingsConfigFilePath = Path.Combine(MyAppDataPath, "Settings.json");
 
             // Set scale per control
             Dpi.RecordScalePerControl = true;

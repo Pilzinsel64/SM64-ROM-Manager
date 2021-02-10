@@ -113,6 +113,26 @@ namespace SM64_ROM_Manager.PatchScripts {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_export_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_export_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_good_quality_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_good_quality_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_open_folder_16px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_open_folder_16px_1", resourceCulture);
@@ -156,6 +176,36 @@ namespace SM64_ROM_Manager.PatchScripts {
         internal static System.Drawing.Bitmap icons8_search_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_search_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sheriff_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_sheriff_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_star_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_star_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_star_filled_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_star_filled_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

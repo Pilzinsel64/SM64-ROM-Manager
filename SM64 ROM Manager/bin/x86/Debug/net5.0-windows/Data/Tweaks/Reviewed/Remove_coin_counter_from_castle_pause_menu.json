@@ -1,0 +1,22 @@
+{
+  "Name": "Remove coin high score from castle pause menu",
+  "Scripts": [
+    {
+      "Name": "Remove coin high score from castle pause menu",
+      "Script": "9717F: E3\r\n971AB: 19\r\n971AE: 99 9A\r\n97263: E7\r\n9735B: AF\r\n97953: FA\r\n9795A: 00 FA\r\n97993: FA\r\n9799A: 00 FA\r\n\r\n975E6: FF FB\r\n975EE: 00 0D",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": "0A2EBDCF79E818D01D5A8EAD520D1567",
+      "AllowRevert": true
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.11.10.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Removes the coin high score from the castle pause menu.\r\nMoves the 100-coin star icon to under the course number.\r\nTweak by biobak.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": "CB79B352E17FD8FEABBD9E0245A3EDCE"
+}

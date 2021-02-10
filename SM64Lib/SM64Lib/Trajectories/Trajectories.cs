@@ -40,13 +40,13 @@ namespace SM64Lib.Trajectorys
                         data.Position = 0xCCA6E;
                         data.Write(ramAddr >> 16);
                         data.Position = 0xCCA76;
-                        data.Write(Conversions.ToUShort(ramAddr & 0xFFFF));
+                        data.Write((ushort)(ramAddr & 0xFFFF));
                         break;
                     case TrajectoryName.SnowmansBottom:
                         data.Position = 0xABC9E;
-                        data.Write(Conversions.ToUShort(ramAddr >> 16));
+                        data.Write((ushort)(ramAddr >> 16));
                         data.Position = 0xABCA6;
-                        data.Write(Conversions.ToUShort(ramAddr & 0xFFFF));
+                        data.Write((ushort)(ramAddr & 0xFFFF));
                         break;
                     case TrajectoryName.PlatformOnTracksBehavior_BParam2_00:
                         data.Position = 0xED9DC + 0 * 4;
@@ -117,8 +117,8 @@ namespace SM64Lib.Trajectorys
                         continue;
                 }
 
-                traj.Write(data, Conversions.ToUInteger(curPos));
-                curPos = Conversions.ToInteger(data.Position);
+                traj.Write(data, (uint)(curPos));
+                curPos = (int)(data.Position);
             }
 
             // Mips the Rabbit
@@ -128,15 +128,15 @@ namespace SM64Lib.Trajectorys
                 data.Position = 0xB3816;
                 data.Write(0x8040);
                 data.Position += 6;
-                data.Write(Conversions.ToUShort(curPos - romstartAddr + ramStartAddr & 0xFFFF));
+                data.Write((ushort)(curPos - romstartAddr + ramStartAddr & 0xFFFF));
                 foreach (Trajectory traj in mipsTrajects)
                 {
-                    traj.Write(data, Conversions.ToUInteger(curPos));
-                    curPos = Conversions.ToInteger(data.Position);
+                    traj.Write(data, (uint)(curPos));
+                    curPos = (int)(data.Position);
                 }
 
                 data.Position = 0xB371E;
-                data.Write(Conversions.ToUShort(mipsTrajects.Length));
+                data.Write((ushort)(mipsTrajects.Length));
             }
         }
 
@@ -154,7 +154,7 @@ namespace SM64Lib.Trajectorys
                 {
                     var trajectory = new Trajectory();
                     trajectory.Name = name;
-                    trajectory.Read(data, Conversions.ToUInteger(data.Position));
+                    trajectory.Read(data, (uint)(data.Position));
                     Add(trajectory);
                 }
             }

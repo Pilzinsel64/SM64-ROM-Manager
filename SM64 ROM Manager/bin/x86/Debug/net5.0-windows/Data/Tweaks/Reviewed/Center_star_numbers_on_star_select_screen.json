@@ -1,0 +1,22 @@
+{
+  "Name": "Center star numbers on star select screen",
+  "Scripts": [
+    {
+      "Name": "Center numbers above stars",
+      "Script": "22795B: 8D",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": "32AB6889C058D16555AE4F8B29397105",
+      "AllowRevert": true
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.11.10.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Fixes the infuriatingly off-center numbers above the stars on the star select screen, tweak by biobak",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": "C5AFECF6BB5369E507ACD02AADA60EDE"
+}

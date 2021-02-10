@@ -129,14 +129,17 @@
   <data name="LabelX48.Text" xml:space="preserve">
     <value>Texturen:</value>
   </data>
-  <data name="LabelX_CollisionType.Text" xml:space="preserve">
-    <value>Kollisiontyp:</value>
-  </data>
   <data name="CheckBoxX1.Text" xml:space="preserve">
     <value>Benutzerdefiniert</value>
   </data>
   <data name="CheckBoxX_IsNonSolid.Text" xml:space="preserve">
     <value>Ist nicht solide</value>
+  </data>
+  <data name="TextBoxX_SearchColTypes.WatermarkText" xml:space="preserve">
+    <value>Suche nach Kollisionstypen ...</value>
+  </data>
+  <data name="labelX1.Text" xml:space="preserve">
+    <value>Kollisionstyp:</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1995,5 +1998,9 @@
         MDEtMDU6MDDkOlH3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEyLTExLTIwVDA5OjAzOjUzLTA2OjAwpVUc
         +QAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
 </root>

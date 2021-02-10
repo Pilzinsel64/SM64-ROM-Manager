@@ -159,6 +159,8 @@ namespace SM64Lib
         /// <param name="levelManager">The ROM that will be opened.</param>
         public RomManager(string FileName, ILevelManager levelManager)
         {
+            RomManagerInstances.RegisterRomManager(this);
+
             CustomModelConfig.RequestModel += CustomModelConfig_RequestModel;
             BehaviorConfig.RequestBehavior += BehaviorConfig_RequestBehavior;
 
@@ -176,6 +178,11 @@ namespace SM64Lib
             SetSegBank(0x2, 0x803156, 0); // Text Table??
             LoadRomConfig();
             LoadDictionaryUpdatePatches();
+        }
+
+        ~RomManager()
+        {
+            RomManagerInstances.UnregisterRomManager(this);
         }
 
         // O t h e r   E v e n t s
@@ -956,7 +963,7 @@ namespace SM64Lib
         /// Check, if the ROM is a valid SM64 ROM.
         /// </summary>
         /// <returns></returns>
-        public bool CheckROM()
+        public bool CheckROM(bool doNotHandleVanillaRom = false)
         {
             var fi = new FileInfo(RomFile);
             long filelength = fi.Length;
@@ -967,9 +974,14 @@ namespace SM64Lib
 
             if (filelength == 8 * 1024 * 1024)
             {
-                CreateROM();
-                PrepairROM();
-                IsNewROM = true;
+                if (doNotHandleVanillaRom)
+                    return false;
+                else
+                {
+                    CreateROM();
+                    PrepairROM();
+                    IsNewROM = true;
+                }
             }
 
             var br = new BinaryRom(this, FileAccess.Read);
