@@ -16,6 +16,6 @@ Let me explain how to compile the source code.
 Now you should be able to compile the source code without problems for private use.
 
 ## Requiements
- - Visual Studio 2019 or newer
- - .Net Framework 4.8
+ - Visual Studio 2019 v16.9 or newer
+ - .Net 5.0
  - Internet connection (for restoring NuGet packages)
