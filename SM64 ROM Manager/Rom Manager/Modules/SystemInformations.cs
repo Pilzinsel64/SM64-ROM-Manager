@@ -1,12 +1,13 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using SM64_ROM_Manager.SettingsManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SM64_ROM_Manager.Rom_Manager.Modules
+namespace SM64_ROM_Manager
 {
     class SystemInformations
     {
@@ -19,18 +20,23 @@ namespace SM64_ROM_Manager.Rom_Manager.Modules
         public string Username { get; set; }
         [JsonConverter(typeof(VersionConverter))]
         public Version Version { get; set; }
-
+        public string InstallationPath { get; set; }
 
         public void CollectInformations()
         {
             Is64BitOS = Environment.Is64BitOperatingSystem;
             Is64BitProcess = Environment.Is64BitProcess;
-            MachineName = Environment.MachineName;
             OSVersion = Environment.OSVersion;
             ProcessorCount = Environment.ProcessorCount;
-            UserDomainName = Environment.UserDomainName;
-            Username = Environment.UserName;
             Version = Environment.Version;
+
+            if (Settings.DiagnosticData.AllowExtendedSystemInformations.GetValueOrDefault())
+            {
+                UserDomainName = Environment.UserDomainName;
+                Username = Environment.UserName;
+                MachineName = Environment.MachineName;
+                InstallationPath = Publics.General.MyDataPath;
+            }
         }
     }
 }

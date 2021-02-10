@@ -22,9 +22,9 @@ using Z.Collections.Extensions;
 using Z.Core.Extensions;
 using Microsoft.Win32;
 using System.Reflection;
-using SM64_ROM_Manager.Rom_Manager.Modules;
 using SM64_ROM_Manager.UserRequests.GUI;
 using SM64_ROM_Manager.UserRequests;
+using System.Drawing;
 
 namespace SM64_ROM_Manager
 {
@@ -53,6 +53,67 @@ namespace SM64_ROM_Manager
         public static BehaviorInfoList BehaviorInfosCustom { get; private set; } = new BehaviorInfoList();
         public static PatchClass PatchClass { get; private set; } = new PatchClass();
         public static bool HasToolkitInit { get; set; } = false;
+
+        public static void AskForCollectingDiagnosticData(IWin32Window owner, bool showOnlyIfMissingValues)
+        {
+            var nulls = 0;
+
+            Image getBtnImage(bool? valy)
+            {
+                if (valy.GetValueOrDefault(true))
+                    return MyIcons.icons8_checked_checkbox_32px;
+                else
+                    return MyIcons.icons8_unchecked_checkbox_32px;
+            }
+
+            if (!showOnlyIfMissingValues)
+            {
+                foreach (string key in DiagnosticDataStruc.Keys)
+                {
+                    if (Settings.DiagnosticData.GetValue(key) == null)
+                        nulls += 1;
+                }
+            }
+
+            if (!showOnlyIfMissingValues || nulls > 0)
+            {
+                var commands = new List<Command>();
+                foreach (string key in DiagnosticDataStruc.Keys)
+                {
+                    var val = Settings.DiagnosticData.GetValue(key);
+                    if (val == null)
+                        Settings.DiagnosticData.SetValue(key, true);
+                    var btn = new Command
+                    {
+                        Name = "btn_" + key
+                    };
+                    btn.Text = val == null ? Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnNewText : string.Empty;
+                    btn.Text += Form_Main_Resources.ResourceManager.GetString("MsgBox_AllowCollectingDiagnosticData_Btn" + key);
+                    btn.Image = getBtnImage(val);
+                    btn.Executed += (btnx, __) =>
+                    {
+                        var btnxx = ((ButtonItem)btnx).Command;
+                        var keyx = btnxx.Name.Substring(4);
+                        var valx = !Settings.DiagnosticData.GetValue(keyx).GetValueOrDefault(true);
+                        Settings.DiagnosticData.SetValue(keyx, valx);
+                        btnxx.Image = getBtnImage(valx);
+                    };
+                    commands.Add(btn);
+                }
+
+                var info = new TaskDialogInfo()
+                {
+                    Text = Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Text,
+                    Title = Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Title,
+                    Header = Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Header,
+                    FormCloseEnabled = false,
+                    TaskDialogIcon = eTaskDialogIcon.Information2,
+                    DialogButtons = eTaskDialogButton.Ok
+                };
+                info.Buttons = commands.ToArray();
+                TaskDialog.Show(owner, info);
+            }
+        }
 
         public static void ExportDiagnosticsProtocol(IWin32Window owner, Exception currentException)
         {

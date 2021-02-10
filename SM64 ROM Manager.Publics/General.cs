@@ -37,6 +37,7 @@ namespace SM64_ROM_Manager.Publics
         private static string pMyExecuteablePath = string.Empty;
         private static string pMyAppDataPath = string.Empty;
         private static string pMyDataPath = string.Empty;
+        private static string pMyAppPath = string.Empty;
         private static string pMyToolsPath = string.Empty;
         private static string pMyTweaksPath = string.Empty;
         private static string pMyCustomObjectsPath = string.Empty;
@@ -83,10 +84,23 @@ namespace SM64_ROM_Manager.Publics
             {
                 if (string.IsNullOrEmpty(pMyDataPath))
                 {
-                    pMyDataPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "Data");
+                    pMyDataPath = Path.Combine(MyAppPath, "Data");
                 }
 
                 return pMyDataPath;
+            }
+        }
+
+        public static string MyAppPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(pMyAppPath))
+                {
+                    pMyAppPath = Path.GetDirectoryName(Application.ExecutablePath);
+                }
+
+                return pMyAppPath;
             }
         }
 

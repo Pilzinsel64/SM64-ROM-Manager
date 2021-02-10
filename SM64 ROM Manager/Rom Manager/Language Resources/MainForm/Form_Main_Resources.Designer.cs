@@ -133,6 +133,69 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Allow identification of specific system information that may be part of the problem.&lt;br/&gt;For example, the installation path, the type of connection to the network and the type of Windows installation. ähnelt.
+        /// </summary>
+        public static string MsgBox_AllowCollectingDiagnosticData_BtnAllowExtendedSystemInformations {
+            get {
+                return ResourceManager.GetString("MsgBox_AllowCollectingDiagnosticData_BtnAllowExtendedSystemInformations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attach the ROM that was opened at the time of the error,&lt;br/&gt;to find errors that only occur with your ROM. ähnelt.
+        /// </summary>
+        public static string MsgBox_AllowCollectingDiagnosticData_BtnCurrentlyOpenRom {
+            get {
+                return ResourceManager.GetString("MsgBox_AllowCollectingDiagnosticData_BtnCurrentlyOpenRom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Attach the configuration files of your SM64 ROM Manager installation,&lt;br/&gt;to find out errors related to your installation. ähnelt.
+        /// </summary>
+        public static string MsgBox_AllowCollectingDiagnosticData_BtnCurrentRomManagerConfig {
+            get {
+                return ResourceManager.GetString("MsgBox_AllowCollectingDiagnosticData_BtnCurrentRomManagerConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die &lt;b&gt;NEW:&lt;/b&gt; ähnelt.
+        /// </summary>
+        public static string MsgBox_AllowCollectingDiagnosticData_BtnNewText {
+            get {
+                return ResourceManager.GetString("MsgBox_AllowCollectingDiagnosticData_BtnNewText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Allow acquisition of diagnostic data? ähnelt.
+        /// </summary>
+        public static string MsgBox_AllowCollectingDiagnosticData_Header {
+            get {
+                return ResourceManager.GetString("MsgBox_AllowCollectingDiagnosticData_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die To improve and simplify the error diagnosis in the event of a program crash or data loss, optional data about the work on the SM64 ROM Manager are very helpful. We ask you to allow this to be determined, so that in the event of an error, we can find out the cause and remedy it as quickly as possible. All diagnostic data are stored locally on your computer/laptop for a maximum of 24 hours. In the event of an error, this data will be packed and saved at your request so that you can send the &quot;diagnosis file&quot; t [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+        /// </summary>
+        public static string MsgBox_AllowCollectingDiagnosticData_Text {
+            get {
+                return ResourceManager.GetString("MsgBox_AllowCollectingDiagnosticData_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Acquisition of diagnostic data ähnelt.
+        /// </summary>
+        public static string MsgBox_AllowCollectingDiagnosticData_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_AllowCollectingDiagnosticData_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Successfully changed the size of bank 0x19. ähnelt.
         /// </summary>
         public static string MsgBox_BankSizeChangedSuccess {

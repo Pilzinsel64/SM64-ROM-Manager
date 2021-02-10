@@ -852,7 +852,6 @@ namespace SM64_ROM_Manager
                 return RomManager.ProgramVersion > GetNewRomVersion();
             return true;
         }
-
         
         // T o o l s
 

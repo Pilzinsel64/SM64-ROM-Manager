@@ -65,6 +65,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_checked_checkbox_32px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_checkmark_14px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -440,6 +445,11 @@
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_sonometer_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_split_vertical_16px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
@@ -486,6 +496,11 @@
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_translation_16px">
+            <summary>
+              Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.MyIcons.icons8_unchecked_checkbox_32px">
             <summary>
               Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
             </summary>
@@ -644,7 +659,7 @@
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentBuild">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die 1 ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die 2 ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage">
@@ -1200,6 +1215,41 @@
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.FileDialog_ExportLevelOrArea_CbMode_Warps">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die All Warps ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnAllowExtendedSystemInformations">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Allow identification of specific system information that may be part of the problem.&lt;br/&gt;For example, the installation path, the type of connection to the network and the type of Windows installation. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnCurrentlyOpenRom">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Attach the ROM that was opened at the time of the error,&lt;br/&gt;to find errors that only occur with your ROM. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnCurrentRomManagerConfig">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Attach the configuration files of your SM64 ROM Manager installation,&lt;br/&gt;to find out errors related to your installation. ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_BtnNewText">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die &lt;b&gt;NEW:&lt;/b&gt; ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Header">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Allow acquisition of diagnostic data? ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Text">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die To improve and simplify the error diagnosis in the event of a program crash or data loss, optional data about the work on the SM64 ROM Manager are very helpful. We ask you to allow this to be determined, so that in the event of an error, we can find out the cause and remedy it as quickly as possible. All diagnostic data are stored locally on your computer/laptop for a maximum of 24 hours. In the event of an error, this data will be packed and saved at your request so that you can send the &quot;diagnosis file&quot; t [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_AllowCollectingDiagnosticData_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Acquisition of diagnostic data ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Form_Main_Resources.MsgBox_BankSizeChangedSuccess">

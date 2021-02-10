@@ -328,6 +328,7 @@ namespace SM64_ROM_Manager
             Controller.CheckCommandLineArgs();
             Controller.LoadPlugins();
             AddMyPluginCommands();
+            General.AskForCollectingDiagnosticData(this, true);
             Controller.CheckToOpenThankYouPage();
             if (Settings.Network.AutoUpdates && Controller.UpdateCheckIsDue())
             {
@@ -727,6 +728,11 @@ namespace SM64_ROM_Manager
         private void ButtonItem12_PopupOpen(object sender, PopupOpenEventArgs e)
         {
             buttonItem_OpenRomInHexEditor.Visible = Controller.IsHexEditorSettedUp();
+        }
+
+        private void ButtonItem_ConfigureDiagnosticData_Click(object sender, EventArgs e)
+        {
+            General.AskForCollectingDiagnosticData(this, false);
         }
     }
 }

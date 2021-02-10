@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using SM64_ROM_Manager.SettingsManager;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SM64_ROM_Manager.Rom_Manager.Modules
+namespace SM64_ROM_Manager
 {
     class DiagnosticProtocol
     {
@@ -55,19 +56,23 @@ namespace SM64_ROM_Manager.Rom_Manager.Modules
 			Directory.CreateDirectory(tempPath);
 
 			//Copy ROMs with config
-			foreach (SM64Lib.RomManager romManager in SM64Lib.RomManagerInstances.CurrentInstances)
+			if (Settings.DiagnosticData.AllowCurrentlyOpenRom.GetValueOrDefault())
             {
-				var romFile = romManager.RomFile;
-				copyFile(romFile, Path.GetFileName(romFile));
-				var configFile = romManager.GetRomConfigFilePath();
-				copyFile(configFile, Path.GetFileName(configFile));
-            }
+				foreach (SM64Lib.RomManager romManager in SM64Lib.RomManagerInstances.CurrentInstances)
+				{
+					var romFile = romManager.RomFile;
+					copyFile(romFile, Path.GetFileName(romFile));
+					var configFile = romManager.GetRomConfigFilePath();
+					copyFile(configFile, Path.GetFileName(configFile));
+				}
+			}
 
 			//Copy settings file
-			copyFile(SettingsManager.Settings.SettingsConfigFilePath, "Settings.json");
+			if (Settings.DiagnosticData.AllowCurrentRomManagerConfig.GetValueOrDefault())
+				copyFile(Settings.SettingsConfigFilePath, "Settings.json");
 
-            //Save this file
-            try
+			//Save this file
+			try
 			{
 				string protocolFile = Path.Combine(tempPath, "Protocol.json");
 				File.WriteAllText(protocolFile, JObject.FromObject(this).ToString());

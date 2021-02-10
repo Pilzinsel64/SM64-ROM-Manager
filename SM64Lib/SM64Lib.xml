@@ -552,7 +552,7 @@
             Loads the Music from the ROM.
             </summary>
         </member>
-        <member name="M:SM64Lib.RomManager.CheckROM">
+        <member name="M:SM64Lib.RomManager.CheckROM(System.Boolean)">
             <summary>
             Check, if the ROM is a valid SM64 ROM.
             </summary>

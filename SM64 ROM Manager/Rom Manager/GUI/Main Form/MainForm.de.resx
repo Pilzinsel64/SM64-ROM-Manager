@@ -2385,6 +2385,9 @@
   <data name="ButtonItem25.Text" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
+  <data name="ButtonItem_ConfigureDiagnosticData.Text" xml:space="preserve">
+    <value>Diagnosedaten konfigurieren</value>
+  </data>
   <data name="ButtonItem5.Text" xml:space="preserve">
     <value>Stylemanager</value>
   </data>

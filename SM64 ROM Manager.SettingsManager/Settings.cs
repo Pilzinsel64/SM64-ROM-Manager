@@ -166,5 +166,10 @@ namespace SM64_ROM_Manager.SettingsManager
             get => Instance.LevelManager;
         }
 
+        public static DiagnosticDataStruc DiagnosticData
+        {
+            get => Instance.DiagnosticData;
+        }
+
     }
 }

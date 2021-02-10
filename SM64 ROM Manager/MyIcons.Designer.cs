@@ -153,6 +153,16 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_checked_checkbox_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_checked_checkbox_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_checkmark_14px {
             get {
                 object obj = ResourceManager.GetObject("icons8_checkmark_14px", resourceCulture);
@@ -903,6 +913,16 @@ namespace SM64_ROM_Manager.My.Resources {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_sonometer_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_sonometer_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_split_vertical_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_split_vertical_16px", resourceCulture);
@@ -996,6 +1016,16 @@ namespace SM64_ROM_Manager.My.Resources {
         public static System.Drawing.Bitmap icons8_translation_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_translation_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_unchecked_checkbox_32px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_unchecked_checkbox_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
