@@ -66,7 +66,7 @@ namespace SM64_ROM_Manager
                     return MyIcons.icons8_unchecked_checkbox_32px;
             }
 
-            if (!showOnlyIfMissingValues)
+            if (showOnlyIfMissingValues)
             {
                 foreach (string key in DiagnosticDataStruc.Keys)
                 {
@@ -75,7 +75,7 @@ namespace SM64_ROM_Manager
                 }
             }
 
-            if (!showOnlyIfMissingValues || nulls > 0)
+            if (nulls > 0 || !showOnlyIfMissingValues)
             {
                 var commands = new List<Command>();
                 foreach (string key in DiagnosticDataStruc.Keys)
