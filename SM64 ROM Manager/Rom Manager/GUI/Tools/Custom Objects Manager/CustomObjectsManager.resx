@@ -180,11 +180,23 @@
   <data name="ButtonItem_NewObject.Text" xml:space="preserve">
     <value>New Object</value>
   </data>
+  <data name="ButtonItem_ImportFromFile.Text" xml:space="preserve">
+    <value>Import from file ...</value>
+  </data>
+  <data name="ButtonItem_ImportFromDatabase.Text" xml:space="preserve">
+    <value>Import from Database ...</value>
+  </data>
   <data name="buttonItem4.Text" xml:space="preserve">
     <value>Import</value>
   </data>
   <data name="ButtonItem_DeleteObject.Text" xml:space="preserve">
     <value>Delete Object</value>
+  </data>
+  <data name="ButtonItem_ExportToFile.Text" xml:space="preserve">
+    <value>Export to file ...</value>
+  </data>
+  <data name="ButtonItem_UploadToDatabase.Text" xml:space="preserve">
+    <value>Upload to Database ...</value>
   </data>
   <data name="buttonItem_Export.Text" xml:space="preserve">
     <value>Export</value>
@@ -209,18 +221,6 @@
   </data>
   <data name="&gt;&gt;bar1.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="ButtonItem_ImportFromFile.Text" xml:space="preserve">
-    <value>Import from file ...</value>
-  </data>
-  <data name="ButtonItem_ImportFromDatabase.Text" xml:space="preserve">
-    <value>Import from Database ...</value>
-  </data>
-  <data name="ButtonItem_ExportToFile.Text" xml:space="preserve">
-    <value>Export to file ...</value>
-  </data>
-  <data name="ButtonItem_UploadToDatabase.Text" xml:space="preserve">
-    <value>Upload to Database ...</value>
   </data>
   <data name="CheckBoxX_BehavCustom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -603,6 +603,12 @@
   <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 24</value>
   </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="layoutControlItem16.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
   <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 387</value>
   </data>
@@ -620,12 +626,6 @@
   </data>
   <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="layoutControlItem16.Text" xml:space="preserve">
-    <value>Description:</value>
   </data>
   <data name="layoutGroup2.Text" xml:space="preserve">
     <value>Behavior:</value>

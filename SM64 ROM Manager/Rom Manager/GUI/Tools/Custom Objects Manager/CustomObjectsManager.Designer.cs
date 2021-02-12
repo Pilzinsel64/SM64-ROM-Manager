@@ -102,7 +102,7 @@ namespace SM64_ROM_Manager
             resources.ApplyResources(this.AdvTree_Objs, "AdvTree_Objs");
             this.AdvTree_Objs.DragDropEnabled = false;
             this.AdvTree_Objs.DragDropNodeCopyEnabled = false;
-            this.AdvTree_Objs.ExpandWidth = 0;
+            this.AdvTree_Objs.ExpandWidth = 2;
             this.AdvTree_Objs.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.AdvTree_Objs.MultiSelect = true;
             this.AdvTree_Objs.Name = "AdvTree_Objs";
