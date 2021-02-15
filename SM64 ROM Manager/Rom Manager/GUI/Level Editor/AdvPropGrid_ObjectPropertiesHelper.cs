@@ -478,31 +478,31 @@ namespace SM64_ROM_Manager.LevelEditor
                         e.TypedValue = false;
                     break;
                 case var case1 when case1 == typeof(byte):
-                    e.TypedValue = Conversions.ToByte(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    e.TypedValue = (byte)TextValueConverter.ValueFromText(e.StringValue.Trim());
                     break;
                 case var case2 when case2 == typeof(sbyte):
-                    e.TypedValue = Conversions.ToSByte(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    e.TypedValue = (sbyte)TextValueConverter.ValueFromText(e.StringValue.Trim());
                     break;
                 case var case3 when case3 == typeof(short):
-                    e.TypedValue = Conversions.ToShort(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    e.TypedValue = (short)TextValueConverter.ValueFromText(e.StringValue.Trim());
                     break;
                 case var case4 when case4 == typeof(ushort):
-                    e.TypedValue = Conversions.ToUShort(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    e.TypedValue = (ushort)TextValueConverter.ValueFromText(e.StringValue.Trim());
                     break;
                 case var case5 when case5 == typeof(int):
-                    e.TypedValue = Conversions.ToInteger(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    e.TypedValue = (int)TextValueConverter.ValueFromText(e.StringValue.Trim());
                     break;
                 case var case6 when case6 == typeof(uint):
-                    e.TypedValue = Conversions.ToUInteger(TextValueConverter.ValueFromText(e.StringValue.Trim()));
+                    e.TypedValue = (uint)TextValueConverter.ValueFromText(e.StringValue.Trim());
                     break;
                 case var case7 when case7 == typeof(float):
-                    e.TypedValue = Conversions.ToSingle(e.StringValue.Trim());
+                    e.TypedValue = Convert.ToSingle(e.StringValue.Trim());
                     break;
                 case var case8 when case8 == typeof(double):
-                    e.TypedValue = Conversions.ToDouble(e.StringValue.Trim());
+                    e.TypedValue = Convert.ToDouble(e.StringValue.Trim());
                     break;
                 case var case9 when case9 == typeof(decimal):
-                    e.TypedValue = Conversions.ToDecimal(e.StringValue.Trim());
+                    e.TypedValue = Convert.ToDecimal(e.StringValue.Trim());
                     break;
                 default:
                     isConverted = false;
