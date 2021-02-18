@@ -3373,5 +3373,12 @@ namespace SM64_ROM_Manager.LevelEditor
                 PanelDockContainer10.DockContainerItem.Selected = true;
             }
         }
+
+        private void ButtonItem_CopyPositionForStarPosEditor_Click(object sender, EventArgs e)
+        {
+            var obj = SelectedObject;
+            if (obj is object)
+                Clipboard.SetData(nameof(System.Numerics.Vector3), JObject.FromObject(obj.Position).ToString());
+        }
     }
 }

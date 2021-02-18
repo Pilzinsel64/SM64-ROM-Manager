@@ -123,4 +123,10 @@
   <data name="MsgBox_Done_Title" xml:space="preserve">
     <value>Done</value>
   </data>
+  <data name="MsgBox_NoPositionInClipboard" xml:space="preserve">
+    <value>There is no position in the clipboard. You can copy the position of an object in the Level Editor: Right-Click the object -&gt; Advanced -&gt; Copy Position for Star Position Editor#</value>
+  </data>
+  <data name="MsgBox_NoPositionInClipboard_Title" xml:space="preserve">
+    <value>No position in clipboard</value>
+  </data>
 </root>

@@ -123,4 +123,10 @@
   <data name="MsgBox_Done_Title" xml:space="preserve">
     <value>Fertig</value>
   </data>
+  <data name="MsgBox_NoPositionInClipboard" xml:space="preserve">
+    <value>Es befindet sich aktuell keine Position in der Zwischenablage. Du kannst die Position eines Objektes im Level Editor kopieren, mit folgendem Weg: Rechtsklick auf das Objekt -&gt; Erweitert -&gt; Position für Stern Positions-Editor kopieren</value>
+  </data>
+  <data name="MsgBox_NoPositionInClipboard_Title" xml:space="preserve">
+    <value>Keine Position in der Zwischenablage</value>
+  </data>
 </root>
