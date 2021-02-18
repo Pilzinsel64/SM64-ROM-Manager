@@ -19,7 +19,7 @@ namespace SM64_ROM_Manager.My.Resources {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Star_Position_Editor_Resources {
@@ -39,8 +39,8 @@ namespace SM64_ROM_Manager.My.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom_Manager.Language_Resources.Star_Position_Editor.Star_Position" +
-                            "_Editor_Resources", typeof(Star_Position_Editor_Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SM64_ROM_Manager.Rom_Manager.Language_Resources.Star_Position_Editor.Star_Positio" +
+                            "n_Editor_Resources", typeof(Star_Position_Editor_Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -76,6 +76,24 @@ namespace SM64_ROM_Manager.My.Resources {
         internal static string MsgBox_Done_Title {
             get {
                 return ResourceManager.GetString("MsgBox_Done_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die There is no position in the clipboard. You can copy the position of an object in the Level Editor: Right-Click the object -&gt; Advanced -&gt; Copy Position for Star Position Editor# ähnelt.
+        /// </summary>
+        internal static string MsgBox_NoPositionInClipboard {
+            get {
+                return ResourceManager.GetString("MsgBox_NoPositionInClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die No position in clipboard ähnelt.
+        /// </summary>
+        internal static string MsgBox_NoPositionInClipboard_Title {
+            get {
+                return ResourceManager.GetString("MsgBox_NoPositionInClipboard_Title", resourceCulture);
             }
         }
     }

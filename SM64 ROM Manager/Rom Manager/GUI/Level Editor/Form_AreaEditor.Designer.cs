@@ -163,6 +163,8 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem33 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem64 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem65 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CopyPositionForStarPosEditor = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem68 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem1_CM_Warps = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem6 = new DevComponents.DotNetBar.ButtonItem();
@@ -1609,7 +1611,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.ButtonItem33,
             this.ButtonItem64,
             this.ButtonItem65,
-            this.ButtonItem68});
+            this.buttonItem10});
             resources.ApplyResources(this.ButtonItem_CM_Objects, "ButtonItem_CM_Objects");
             // 
             // ButtonItem9
@@ -1664,10 +1666,26 @@ namespace SM64_ROM_Manager.LevelEditor
             resources.ApplyResources(this.ButtonItem65, "ButtonItem65");
             this.ButtonItem65.Click += new System.EventHandler(this.RemoveSelectedObjects);
             // 
+            // buttonItem10
+            // 
+            this.buttonItem10.BeginGroup = true;
+            this.buttonItem10.Name = "buttonItem10";
+            this.buttonItem10.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_CopyPositionForStarPosEditor,
+            this.ButtonItem68});
+            resources.ApplyResources(this.buttonItem10, "buttonItem10");
+            // 
+            // ButtonItem_CopyPositionForStarPosEditor
+            // 
+            this.ButtonItem_CopyPositionForStarPosEditor.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_copy_16px;
+            this.ButtonItem_CopyPositionForStarPosEditor.Name = "ButtonItem_CopyPositionForStarPosEditor";
+            resources.ApplyResources(this.ButtonItem_CopyPositionForStarPosEditor, "ButtonItem_CopyPositionForStarPosEditor");
+            this.ButtonItem_CopyPositionForStarPosEditor.Click += new System.EventHandler(this.ButtonItem_CopyPositionForStarPosEditor_Click);
+            // 
             // ButtonItem68
             // 
-            this.ButtonItem68.BeginGroup = true;
             this.ButtonItem68.GlobalItem = false;
+            this.ButtonItem68.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
             this.ButtonItem68.Name = "ButtonItem68";
             resources.ApplyResources(this.ButtonItem68, "ButtonItem68");
             this.ButtonItem68.Click += new System.EventHandler(this.ButtonItem23_Click);
@@ -4001,6 +4019,8 @@ namespace SM64_ROM_Manager.LevelEditor
         private DevComponents.DotNetBar.ElementStyle elementStyle2;
         internal DevComponents.AdvTree.AdvTree advTree_Objects;
         internal DevComponents.AdvTree.AdvTree advTree_Warps;
+        private DevComponents.DotNetBar.ButtonItem buttonItem10;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CopyPositionForStarPosEditor;
     }
 
 }

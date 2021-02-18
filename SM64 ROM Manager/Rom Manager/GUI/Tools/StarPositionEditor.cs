@@ -6,6 +6,8 @@ using Microsoft.VisualBasic.CompilerServices;
 using global::SM64_ROM_Manager.My.Resources;
 using global::SM64Lib;
 using global::SM64Lib.Objects;
+using System.Numerics;
+using Newtonsoft.Json.Linq;
 
 namespace SM64_ROM_Manager
 {
@@ -45,9 +47,9 @@ namespace SM64_ROM_Manager
 
         #region Funktionen
 
-        private System.Numerics.Vector3 GetPosition()
+        private Vector3 GetPosition()
         {
-            return new System.Numerics.Vector3(IntegerInput_X.Value, IntegerInput_Y.Value, IntegerInput_z.Value);
+            return new Vector3(IntegerInput_X.Value, IntegerInput_Y.Value, IntegerInput_z.Value);
         }
 
         private void LoadList()
@@ -105,5 +107,19 @@ namespace SM64_ROM_Manager
         }
 
         #endregion
+
+        private void ButtonX_PastePosition_Click(object sender, EventArgs e)
+        {
+            var dataKey = nameof(Vector3);
+            if (Clipboard.ContainsData(dataKey))
+            {
+                var pos = JObject.Parse((string)Clipboard.GetData(dataKey)).ToObject<Vector3>();
+                IntegerInput_X.Value = (int)pos.X;
+                IntegerInput_Y.Value = (int)pos.Y;
+                IntegerInput_z.Value = (int)pos.Z;
+            }
+            else
+                MessageBoxEx.Show(this, Star_Position_Editor_Resources.MsgBox_NoPositionInClipboard, Star_Position_Editor_Resources.MsgBox_NoPositionInClipboard_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

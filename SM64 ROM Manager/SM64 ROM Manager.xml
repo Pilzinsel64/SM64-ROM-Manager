@@ -1654,6 +1654,16 @@
               Sucht eine lokalisierte Zeichenfolge, die Done ähnelt.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Star_Position_Editor_Resources.MsgBox_NoPositionInClipboard">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die There is no position in the clipboard. You can copy the position of an object in the Level Editor: Right-Click the object -&gt; Advanced -&gt; Copy Position for Star Position Editor# ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.My.Resources.Star_Position_Editor_Resources.MsgBox_NoPositionInClipboard_Title">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die No position in clipboard ähnelt.
+            </summary>
+        </member>
         <member name="T:SM64_ROM_Manager.My.Resources.TextProfileEditorLangRes">
             <summary>
               Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.

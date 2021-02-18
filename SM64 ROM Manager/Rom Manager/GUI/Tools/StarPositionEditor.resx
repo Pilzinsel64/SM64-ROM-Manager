@@ -118,261 +118,285 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LabelX5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 87</value>
+  <data name="ButtonX_PastePosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 58</value>
   </data>
-  <data name="LabelX5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 20</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LabelX5.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="LabelX5.Text" xml:space="preserve">
-    <value>Z:</value>
-  </data>
-  <data name="&gt;&gt;LabelX5.Name" xml:space="preserve">
-    <value>LabelX5</value>
-  </data>
-  <data name="&gt;&gt;LabelX5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX5.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LabelX5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LabelX4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 87</value>
-  </data>
-  <data name="LabelX4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 20</value>
-  </data>
-  <data name="LabelX4.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="LabelX4.Text" xml:space="preserve">
-    <value>Y:</value>
-  </data>
-  <data name="&gt;&gt;LabelX4.Name" xml:space="preserve">
-    <value>LabelX4</value>
-  </data>
-  <data name="&gt;&gt;LabelX4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX4.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LabelX4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="LabelX3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 87</value>
-  </data>
-  <data name="LabelX3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 20</value>
-  </data>
-  <data name="LabelX3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="LabelX3.Text" xml:space="preserve">
-    <value>X:</value>
-  </data>
-  <data name="&gt;&gt;LabelX3.Name" xml:space="preserve">
-    <value>LabelX3</value>
-  </data>
-  <data name="&gt;&gt;LabelX3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX3.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LabelX3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ButtonX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>152, 3</value>
-  </data>
-  <data name="ButtonX1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ButtonX_PastePosition.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 23</value>
   </data>
-  <data name="ButtonX1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ButtonX_PastePosition.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="ButtonX1.Text" xml:space="preserve">
-    <value>Save New Position</value>
+  <data name="ButtonX_PastePosition.Text" xml:space="preserve">
+    <value>Paste position</value>
   </data>
-  <data name="&gt;&gt;ButtonX1.Name" xml:space="preserve">
-    <value>ButtonX1</value>
+  <data name="&gt;&gt;ButtonX_PastePosition.Name" xml:space="preserve">
+    <value>ButtonX_PastePosition</value>
   </data>
-  <data name="&gt;&gt;ButtonX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ButtonX_PastePosition.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;ButtonX1.Parent" xml:space="preserve">
-    <value>Panel1</value>
+  <data name="&gt;&gt;ButtonX_PastePosition.Parent" xml:space="preserve">
+    <value>_Panel1</value>
   </data>
-  <data name="&gt;&gt;ButtonX1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="LabelX2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 58</value>
-  </data>
-  <data name="LabelX2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
-  </data>
-  <data name="LabelX2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="LabelX2.Text" xml:space="preserve">
-    <value>New Position:</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Name" xml:space="preserve">
-    <value>LabelX2</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LabelX2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="IntegerInput_z.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 87</value>
-  </data>
-  <data name="IntegerInput_z.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="IntegerInput_z.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_z.Name" xml:space="preserve">
-    <value>IntegerInput_z</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_z.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_z.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_z.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="IntegerInput_Y.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 87</value>
-  </data>
-  <data name="IntegerInput_Y.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="IntegerInput_Y.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_Y.Name" xml:space="preserve">
-    <value>IntegerInput_Y</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_Y.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_Y.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_Y.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="IntegerInput_X.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 87</value>
-  </data>
-  <data name="IntegerInput_X.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
-  </data>
-  <data name="IntegerInput_X.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_X.Name" xml:space="preserve">
-    <value>IntegerInput_X</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_X.Type" xml:space="preserve">
-    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_X.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;IntegerInput_X.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="ComboBoxEx1.ItemHeight" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="ComboBoxEx1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 32</value>
-  </data>
-  <data name="ComboBoxEx1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 21</value>
-  </data>
-  <data name="ComboBoxEx1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx1.Name" xml:space="preserve">
-    <value>ComboBoxEx1</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx1.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxEx1.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="LabelX1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="LabelX1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 23</value>
-  </data>
-  <data name="LabelX1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;ButtonX_PastePosition.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="LabelX1.Text" xml:space="preserve">
-    <value>Star:</value>
+  <data name="_LabelX5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>211, 87</value>
   </data>
-  <data name="&gt;&gt;LabelX1.Name" xml:space="preserve">
-    <value>LabelX1</value>
+  <data name="_LabelX5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
   </data>
-  <data name="&gt;&gt;LabelX1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.Parent" xml:space="preserve">
-    <value>Panel1</value>
-  </data>
-  <data name="&gt;&gt;LabelX1.ZOrder" xml:space="preserve">
+  <data name="_LabelX5.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="_LabelX5.Text" xml:space="preserve">
+    <value>Z:</value>
   </data>
-  <data name="Panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;_LabelX5.Name" xml:space="preserve">
+    <value>_LabelX5</value>
   </data>
-  <data name="Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>312, 111</value>
+  <data name="&gt;&gt;_LabelX5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="Panel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;_LabelX5.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_LabelX5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_LabelX4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 87</value>
+  </data>
+  <data name="_LabelX4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="_LabelX4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="_LabelX4.Text" xml:space="preserve">
+    <value>Y:</value>
+  </data>
+  <data name="&gt;&gt;_LabelX4.Name" xml:space="preserve">
+    <value>_LabelX4</value>
+  </data>
+  <data name="&gt;&gt;_LabelX4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_LabelX4.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_LabelX4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_LabelX3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
+  </data>
+  <data name="_LabelX3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="_LabelX3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="_LabelX3.Text" xml:space="preserve">
+    <value>X:</value>
+  </data>
+  <data name="&gt;&gt;_LabelX3.Name" xml:space="preserve">
+    <value>_LabelX3</value>
+  </data>
+  <data name="&gt;&gt;_LabelX3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_LabelX3.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_LabelX3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="_ButtonX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>152, 3</value>
+  </data>
+  <data name="_ButtonX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 23</value>
+  </data>
+  <data name="_ButtonX1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="_ButtonX1.Text" xml:space="preserve">
+    <value>Save New Position</value>
+  </data>
+  <data name="&gt;&gt;_ButtonX1.Name" xml:space="preserve">
+    <value>_ButtonX1</value>
+  </data>
+  <data name="&gt;&gt;_ButtonX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_ButtonX1.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_ButtonX1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_LabelX2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="_LabelX2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="_LabelX2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="_LabelX2.Text" xml:space="preserve">
+    <value>New Position:</value>
+  </data>
+  <data name="&gt;&gt;_LabelX2.Name" xml:space="preserve">
+    <value>_LabelX2</value>
+  </data>
+  <data name="&gt;&gt;_LabelX2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_LabelX2.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_LabelX2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="_IntegerInput_z.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 87</value>
+  </data>
+  <data name="_IntegerInput_z.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="_IntegerInput_z.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_z.Name" xml:space="preserve">
+    <value>_IntegerInput_z</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_z.Type" xml:space="preserve">
+    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_z.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_z.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="_IntegerInput_Y.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 87</value>
+  </data>
+  <data name="_IntegerInput_Y.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="_IntegerInput_Y.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_Y.Name" xml:space="preserve">
+    <value>_IntegerInput_Y</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_Y.Type" xml:space="preserve">
+    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_Y.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_Y.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="_IntegerInput_X.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 87</value>
+  </data>
+  <data name="_IntegerInput_X.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="_IntegerInput_X.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_X.Name" xml:space="preserve">
+    <value>_IntegerInput_X</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_X.Type" xml:space="preserve">
+    <value>DevComponents.Editors.IntegerInput, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_X.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_IntegerInput_X.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="_ComboBoxEx1.ItemHeight" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="_ComboBoxEx1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="_ComboBoxEx1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 21</value>
+  </data>
+  <data name="_ComboBoxEx1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;_ComboBoxEx1.Name" xml:space="preserve">
+    <value>_ComboBoxEx1</value>
+  </data>
+  <data name="&gt;&gt;_ComboBoxEx1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.ComboBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_ComboBoxEx1.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_ComboBoxEx1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="_LabelX1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="_LabelX1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 23</value>
+  </data>
+  <data name="_LabelX1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;Panel1.Name" xml:space="preserve">
-    <value>Panel1</value>
+  <data name="_LabelX1.Text" xml:space="preserve">
+    <value>Star:</value>
   </data>
-  <data name="&gt;&gt;Panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;_LabelX1.Name" xml:space="preserve">
+    <value>_LabelX1</value>
+  </data>
+  <data name="&gt;&gt;_LabelX1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;_LabelX1.Parent" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_LabelX1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="_Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 111</value>
+  </data>
+  <data name="_Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_Panel1.Name" xml:space="preserve">
+    <value>_Panel1</value>
+  </data>
+  <data name="&gt;&gt;_Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Panel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_Panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -2090,6 +2114,6 @@
     <value>StarPositionEditor</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.35, Culture=neutral, PublicKeyToken=null</value>
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
