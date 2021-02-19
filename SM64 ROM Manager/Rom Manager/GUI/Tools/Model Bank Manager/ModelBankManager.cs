@@ -70,7 +70,7 @@ namespace SM64_ROM_Manager
 
         private string TextForButtonItem(CustomModel obj)
         {
-            string txt = $"Model-ID: {TextValueConverter.TextFromValue(obj.ModelID, charCount: 3)}";
+            string txt = $"{TextValueConverter.TextFromValue(obj.ModelID, charCount: 3)}";
             if (!string.IsNullOrEmpty(obj.Config.Name))
             {
                 txt += $" - {obj.Config.Name}";

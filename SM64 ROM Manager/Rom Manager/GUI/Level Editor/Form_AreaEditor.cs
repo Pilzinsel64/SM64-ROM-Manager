@@ -584,7 +584,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void ButtonX_KeepOnGround_CheckedChanged(object sender, EventArgs e)
         {
-            if (Conversions.ToBoolean(((ButtonX)sender).Checked))
+            if (((ButtonX)sender).Checked)
             {
                 foreach (ButtonX btn in new[] { ButtonX_KeepOnGround, ButtonX_KeepOnTop, ButtonX_KeepOnButtom })
                 {
@@ -855,7 +855,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     case GeolayoutCommandTypes.LoadDisplaylistWithOffset:
                         {
                             byte geolayer = cgLoadDisplayListWithOffset.GetDrawingLayer(ref gmd);
-                            int segAddr = Conversions.ToInteger(cgLoadDisplayListWithOffset.GetSegGeopointer(ref gmd));
+                            int segAddr = (int)cgLoadDisplayListWithOffset.GetSegGeopointer(ref gmd);
                             var localOffset = cgLoadDisplayListWithOffset.GetOffset(ref gmd);
                             if (segAddr > 0)
                             {
@@ -924,7 +924,7 @@ namespace SM64_ROM_Manager.LevelEditor
         private static Levelscript ParseLevelscriptCommandGetLevelscriptToJump(SM64Lib.RomManager Rommgr, LevelscriptCommand cmd)
         {
             int bankAddr = clJumpToSegAddr.GetSegJumpAddr(cmd);
-            byte segID = Conversions.ToByte(bankAddr >> 24);
+            byte segID = (byte)(bankAddr >> 24);
             var seg = Rommgr.GetSegBank(segID);
             var scrpt = new Levelscript();
             if (segID != 0 && seg is object)
@@ -959,7 +959,7 @@ namespace SM64_ROM_Manager.LevelEditor
                         {
                             byte modelID = clLoadPolygonWithGeo.GetModelID(cmd);
                             int segPointer = clLoadPolygonWithGeo.GetSegAddress(cmd);
-                            byte segID = Conversions.ToByte(segPointer >> 24);
+                            byte segID = (byte)(segPointer >> 24);
                             AddObjectCombosToMyObjectCombos(modelID);
                             if (!KnownModelIDs.Contains(modelID))
                                 KnownModelIDs.Add(modelID);
@@ -978,7 +978,7 @@ namespace SM64_ROM_Manager.LevelEditor
                             byte modelID = clLoadPolygonWithGeo.GetModelID(cmd);
                             int segPointer = clLoadPolygonWithGeo.GetSegAddress(cmd);
                             int layer = clLoadPolygonWithoutGeo.GetDrawingLayer(cmd);
-                            byte segID = Conversions.ToByte(segPointer >> 24);
+                            byte segID = (byte)(segPointer >> 24);
                             AddObjectCombosToMyObjectCombos(modelID);
                             if (!KnownModelIDs.Contains(modelID))
                                 KnownModelIDs.Add(modelID);
@@ -986,7 +986,7 @@ namespace SM64_ROM_Manager.LevelEditor
                             if (segID != 0 && seg is object)
                             {
                                 var mdl = new Object3D();
-                                await LoadDisplaylist(new Geopointer(Conversions.ToByte(layer), segPointer), mdl);
+                                await LoadDisplaylist(new Geopointer((byte)layer, segPointer), mdl);
                                 var rndr = new Renderer(mdl);
                                 ObjectModels.AddOrUpdate(modelID, rndr);
                             }
@@ -1449,7 +1449,7 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 ComboBoxItem_Area.Items.Add(new ComboItem() { Text = $"Area {a.AreaID}", Tag = a });
                 if (a.AreaID == AreaIdToLoad)
-                    indexToSelect = Conversions.ToByte(CLevel.Areas.IndexOf(a));
+                    indexToSelect = (byte)CLevel.Areas.IndexOf(a);
             }
 
             isLoadingAreaIDs = false;
@@ -1628,8 +1628,8 @@ namespace SM64_ROM_Manager.LevelEditor
             {
                 ManagedInstantWarp warp = (ManagedInstantWarp)iwarp;
                 lvi.Cells[0].Text = string.Empty;
-                lvi.Cells[1].Text = Conversions.ToString(TextValueConverter.ValueFromText(Conversions.ToString(warp.CollisionType)));
-                lvi.Cells[2].Text = Conversions.ToString(TextValueConverter.ValueFromText(Conversions.ToString(warp.DestAreaID)));
+                lvi.Cells[1].Text = Convert.ToString(TextValueConverter.ValueFromText(Convert.ToString(warp.CollisionType)));
+                lvi.Cells[2].Text = Convert.ToString(TextValueConverter.ValueFromText(Convert.ToString(warp.DestAreaID)));
                 lvi.Cells[3].Text = string.Empty;
             }
         }
@@ -1921,7 +1921,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void ButtonItem_ImportModel_Click(object sender, EventArgs e)
         {
-            maps.ImportAreaModel(sender == ButtonItem_ImportModel || sender == ButtonItem_ImportVisualMap, sender == ButtonItem_ImportModel || sender == ButtonItem_ImportCollision || sender == ButtonItem85, General.GetKeyForConvertAreaModel(Rommgr.GameName, Conversions.ToShort(CLevel.LevelID), CArea.AreaID));
+            maps.ImportAreaModel(sender == ButtonItem_ImportModel || sender == ButtonItem_ImportVisualMap, sender == ButtonItem_ImportModel || sender == ButtonItem_ImportCollision || sender == ButtonItem85, General.GetKeyForConvertAreaModel(Rommgr.GameName, (short)CLevel.LevelID, CArea.AreaID));
         }
 
         internal void ButtonItem_AddArea_Click(object sender, EventArgs e)
@@ -1931,7 +1931,7 @@ namespace SM64_ROM_Manager.LevelEditor
             if (newID.isAnyFree)
             {
                 var tArea = new RMLevelArea((byte)newID.newID);
-                var res = PublicFunctions.GetModelViaModelConverter(false, false, inputsKey: General.GetKeyForConvertAreaModel(Rommgr.GameName, Conversions.ToShort(CLevel.LevelID), (byte)newID.newID));
+                var res = PublicFunctions.GetModelViaModelConverter(false, false, inputsKey: General.GetKeyForConvertAreaModel(Rommgr.GameName, (short)CLevel.LevelID, (byte)newID.newID));
                 if (res is object)
                 {
                     tArea.AreaModel = res?.mdl;
@@ -2016,7 +2016,7 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             var cmd2D = CLevel.GetDefaultPositionCmd();
             clDefaultPosition.SetPosition(cmd2D, pos);
-            clDefaultPosition.SetRotation(cmd2D, Conversions.ToShort(rotY));
+            clDefaultPosition.SetRotation(cmd2D, (short)rotY);
             clDefaultPosition.SetAreaID(cmd2D, CArea.AreaID);
         }
 
@@ -2237,7 +2237,7 @@ namespace SM64_ROM_Manager.LevelEditor
                     }
             }
 
-            ButtonX_CamMode.Text = Conversions.ToString(((BaseItem)sender).Text);
+            ButtonX_CamMode.Text = Convert.ToString(((BaseItem)sender).Text);
         }
 
         internal void Slider_CamMoveSpeed_ValueChanged(object sender, EventArgs e)
@@ -2254,12 +2254,12 @@ namespace SM64_ROM_Manager.LevelEditor
 
         internal void ButtonX_SetObjMoveSpeed(object sender, EventArgs e)
         {
-            Slider_ObjMoveSpeed.Value = Conversions.ToInteger(((ButtonX)sender).Text.Replace("%", ""));
+            Slider_ObjMoveSpeed.Value = Convert.ToInt32(((ButtonX)sender).Text.Replace("%", ""));
         }
 
         internal void ButtonX_SetCamMoveSpeed(object sender, EventArgs e)
         {
-            Slider_CamMoveSpeed.Value = Conversions.ToInteger(((ButtonX)sender).Text.Replace("%", ""));
+            Slider_CamMoveSpeed.Value = Convert.ToInt32(((ButtonX)sender).Text.Replace("%", ""));
         }
 
         internal void KeepObjectsOnGround()
@@ -2642,7 +2642,7 @@ namespace SM64_ROM_Manager.LevelEditor
                             {
                                 foreach (LevelscriptCommand obj in area.Objects)
                                 {
-                                    int behavID = Conversions.ToInteger(clNormal3DObject.GetSegBehaviorAddr(obj));
+                                    int behavID = (int)(clNormal3DObject.GetSegBehaviorAddr(obj));
                                     if (myWarpObjCombos.Where(n => n.BehaviorAddress == behavID).Count() > 0 && clNormal3DObject.GetParams(obj).BParam2 == warp.DestWarpID)
                                         found += 1;
                                 }
@@ -2832,7 +2832,7 @@ namespace SM64_ROM_Manager.LevelEditor
                 bool err = false;
                 if (warp is ManagedWarp)
                 {
-                    lid = Conversions.ToShort(CLevel.LevelID);
+                    lid = (short)CLevel.LevelID;
                     aid = CArea.AreaID;
                     wid = ((ManagedWarp)warp).WarpID;
                 }
@@ -2985,11 +2985,11 @@ namespace SM64_ROM_Manager.LevelEditor
         {
             var input = new ValueInputDialog() { Text = "Remove faces" };
             input.InfoLabel.Text = "Collision type:";
-            input.ValueTextBox.Text = Conversions.ToString(0);
+            input.ValueTextBox.Text = Convert.ToString(0);
             if (input.ShowDialog() == DialogResult.OK)
             {
-                short typ = Conversions.ToShort(TextValueConverter.ValueFromText(input.ValueTextBox.Text));
-                RemoveCollisionTrianglesWithCollisionType(Conversions.ToByte(typ));
+                short typ = (short)TextValueConverter.ValueFromText(input.ValueTextBox.Text);
+                RemoveCollisionTrianglesWithCollisionType((byte)typ);
             }
         }
 
@@ -2998,7 +2998,7 @@ namespace SM64_ROM_Manager.LevelEditor
             var input = new Form_SetUpPoint("Death Floor Height", false, true, false, 0, 0, 0);
             if (input.ShowDialog() == DialogResult.OK)
             {
-                short height = Conversions.ToShort(input.IntegerInput_Y.Value);
+                short height = (short)input.IntegerInput_Y.Value;
                 AddDeathFloorAt(height, vanillaBounds);
             }
         }
@@ -3207,11 +3207,11 @@ namespace SM64_ROM_Manager.LevelEditor
                     var m = new Material();
                     int segAddr = Convert.ToInt32(jt.FromSegmentAddress, 16);
                     SegmentedBank seg = null;
-                    var bmp = new Bitmap(Conversions.ToInteger(jt.Width), Conversions.ToInteger(jt.Height));
+                    var bmp = new Bitmap(Convert.ToInt32(jt.Width), Convert.ToInt32(jt.Height));
                     N64Codec texFormat = (N64Codec)Enum.Parse(typeof(N64Codec), jt.Format, true);
                     int bytesCount = N64Graphics.PixelsToBytes(texFormat, bmp.Width * bmp.Height);
                     int loadLvlscript = string.IsNullOrEmpty(jt.LoadLvlscript) ? -1 : Convert.ToInt32(jt.LoadLvlscript, 16);
-                    byte bankID = Conversions.ToByte(segAddr >> 24);
+                    byte bankID = (byte)(segAddr >> 24);
 
                     // Get segmented
                     if (loadLvlscript > -1)
@@ -3382,6 +3382,13 @@ namespace SM64_ROM_Manager.LevelEditor
                 ShowWarpProterties();
                 PanelDockContainer10.DockContainerItem.Selected = true;
             }
+        }
+
+        private void ButtonItem_CopyPositionForStarPosEditor_Click(object sender, EventArgs e)
+        {
+            var obj = SelectedObject;
+            if (obj is object)
+                Clipboard.SetData(nameof(System.Numerics.Vector3), JObject.FromObject(obj.Position).ToString());
         }
     }
 }

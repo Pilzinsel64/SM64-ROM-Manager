@@ -719,10 +719,10 @@
     <Compile Update="Rom Manager\GUI\Tools\Form_SM64TextConverter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="WebLinks.Designer.cs">
+    <Compile Update="WebLinks - Kopieren.Designer.cs">
+      <DependentUpon>WebLinks.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>WebLinks.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -1105,6 +1105,9 @@
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TextProfileEditorLangRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="WebLinks.de.resx">
+      <Generator></Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="WebLinks.resx">
       <Generator>ResXFileCodeGenerator</Generator>
