@@ -1,4 +1,6 @@
-﻿using SM64Lib;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using SM64Lib;
 using System;
 
 namespace SM64_ROM_Manager.SettingsManager
@@ -12,6 +14,8 @@ namespace SM64_ROM_Manager.SettingsManager
         public HexEditModeStruc HexEditMode { get; set; }
         public string Language { get; set; }
         public NotificationMode RomChangedNotification { get; set; }
+        [JsonConverter(typeof(VersionConverter))]
+        [JsonProperty(nameof(LastThankYouPageSeen) + "2")]
         public Version LastThankYouPageSeen { get; set; }
         public RecalcChecksumBehavior RecalcChecksumBehavior { get; set; }
         public bool UseInternalBrowser { get; set; }
@@ -20,7 +24,7 @@ namespace SM64_ROM_Manager.SettingsManager
         public void ResetValues()
         {
             IntegerValueMode = 0;
-            EmulatorPath = "";
+            EmulatorPath = string.Empty;
             ActionIfUpdatePatches = System.Windows.Forms.DialogResult.None;
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             if (HexEditMode is null)
