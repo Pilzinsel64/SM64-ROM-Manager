@@ -2353,7 +2353,7 @@
     <value>Erweitert</value>
   </data>
   <data name="ButtonItem_CopyPositionForStarPosEditor.Text" xml:space="preserve">
-    <value>Position für Stern-Positions-Editor kopieren</value>
+    <value>Position für Sternpositionseditor kopieren</value>
   </data>
   <data name="ButtonItem68.Text" xml:space="preserve">
     <value>Objekt-Modell exportieren</value>
