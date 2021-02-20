@@ -71,7 +71,7 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die 4 ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die 5 ähnelt.
         /// </summary>
         internal static string DevelopmentBuild {
             get {
