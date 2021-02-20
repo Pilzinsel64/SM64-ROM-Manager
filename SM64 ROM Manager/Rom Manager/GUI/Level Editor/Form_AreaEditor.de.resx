@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Zu Level</value>
+  </data>
+  <data name="ColumnHeader5.Text" xml:space="preserve">
+    <value>Bereich</value>
+  </data>
+  <data name="ColumnHeader6.Text" xml:space="preserve">
+    <value>Zu Warp-ID</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Combo-Name</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RibbonBar29.Location" type="System.Drawing.Point, System.Drawing">
     <value>1107, 0</value>
@@ -209,10 +221,26 @@
     <value>Objekt hinzufügen</value>
   </data>
   <data name="RibbonBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 92</value>
+    <value>195, 84</value>
   </data>
   <data name="RibbonBar1.Text" xml:space="preserve">
     <value>Objekte hinzufügen</value>
+  </data>
+  <data name="ButtonItem_GeolayoutScriptDumps.Text" xml:space="preserve">
+    <value>Skript-Dumps anzeigen</value>
+  </data>
+  <data name="ribbonBar13.Text" xml:space="preserve">
+    <value>Script-Dumps</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RibbonPanel7.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="CheckBoxItem_PerspectiveMode.Text" xml:space="preserve">
+    <value>Perspektiven-Modus</value>
+  </data>
+  <data name="CheckBoxItem_OrthoMode.Text" xml:space="preserve">
+    <value>Ortho-Modus</value>
   </data>
   <data name="RibbonBar23.Text" xml:space="preserve">
     <value>Kamera</value>
@@ -250,8 +278,23 @@
   <data name="RibbonBar19.Text" xml:space="preserve">
     <value>Modelle</value>
   </data>
-  <data name="ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Text" xml:space="preserve">
-    <value>Todesboden mit erweiterten Grenzen hinzufügen</value>
+  <data name="ButtonItem47.Text" xml:space="preserve">
+    <value>Importieren</value>
+  </data>
+  <data name="ButtonItem53.Text" xml:space="preserve">
+    <value>Exportieren</value>
+  </data>
+  <data name="RibbonBar6.Text" xml:space="preserve">
+    <value>Modell</value>
+  </data>
+  <data name="ButtonItem_AddArea.Text" xml:space="preserve">
+    <value>Bereich hinzufügen</value>
+  </data>
+  <data name="ButtonItem_RemoveArea.Text" xml:space="preserve">
+    <value>Aktuellen Bereich löschen</value>
+  </data>
+  <data name="ButtonItem8.Text" xml:space="preserve">
+    <value>Todesboden hinzufügen</value>
   </data>
   <data name="ButtonItem4.Text" xml:space="preserve">
     <value>Alle Todesböden entfernen</value>
@@ -273,27 +316,6 @@
   </data>
   <data name="RibbonBar17.Text" xml:space="preserve">
     <value>Modell</value>
-  </data>
-  <data name="ButtonItem_GeolayoutScriptDumps.Text" xml:space="preserve">
-    <value>Skript-Dumps anzeigen</value>
-  </data>
-  <data name="ribbonBar13.Text" xml:space="preserve">
-    <value>Script-Dumps</value>
-  </data>
-  <data name="ButtonItem47.Text" xml:space="preserve">
-    <value>Importieren</value>
-  </data>
-  <data name="ButtonItem53.Text" xml:space="preserve">
-    <value>Exportieren</value>
-  </data>
-  <data name="RibbonBar6.Text" xml:space="preserve">
-    <value>Modell</value>
-  </data>
-  <data name="ButtonItem_AddArea.Text" xml:space="preserve">
-    <value>Bereich hinzufügen</value>
-  </data>
-  <data name="ButtonItem_RemoveArea.Text" xml:space="preserve">
-    <value>Aktuellen Bereich löschen</value>
   </data>
   <data name="ButtonItem_CopyWarpCmdAsHex.Text" xml:space="preserve">
     <value>Kopiere Command als Hex-Array</value>
@@ -2230,16 +2252,6 @@
   <data name="Slider_CamMoveSpeed.Text" xml:space="preserve">
     <value>Kamerabewegung: 100%</value>
   </data>
-  <data name="ButtonX6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE/t
-        UL2OAVEUvq0l2S38FIuH4B0kEjNjJfMgEsHcaeZ5NCIzd5JZi4IGqxIq0XsKzncdBfFXi6+Z3O/vnDPi
-        DSGq7aBoSdUtNaI4U3cBH/yG9AuasGTwZ0q1Nx01MDz/Q5M3AJ28Q/b3NWm3+p9EzDQp1cT2RgktXAA8
-        dPgMqabIsURneN0v01X/x5JgfFmCtcHzkPlZ+ARaL0m3LbWJ1rPrnRh4fPE+hsMFhunANfx4UZqMK570
-        C7PlqghvlJedMMXW2zBafp4CW13iqB2XbSqu/82Wx6g1wyxCCNMPW5uyl2HpeVhulMPtKGPqNSHEAasp
-        ijn/xHVXAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="PanelEx4.Location" type="System.Drawing.Point, System.Drawing">
     <value>846, 3</value>
   </data>
@@ -2284,16 +2296,6 @@
   </data>
   <data name="Slider_ObjMoveSpeed.Text" xml:space="preserve">
     <value>Objektbewegung: 100%</value>
-  </data>
-  <data name="ButtonX2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAPVJREFUOE/t
-        UL2OAVEUvq0l2S38FIuH4B0kEjNjJfMgEsHcaeZ5NCIzd5JZi4IGqxIq0XsKzncdBfFXi6+Z3O/vnDPi
-        DSGq7aBoSdUtNaI4U3cBH/yG9AuasGTwZ0q1Nx01MDz/Q5M3AJ28Q/b3NWm3+p9EzDQp1cT2RgktXAA8
-        dPgMqabIsURneN0v01X/x5JgfFmCtcHzkPlZ+ARaL0m3LbWJ1rPrnRh4fPE+hsMFhunANfx4UZqMK570
-        C7PlqghvlJedMMXW2zBafp4CW13iqB2XbSqu/82Wx6g1wyxCCNMPW5uyl2HpeVhulMPtKGPqNSHEAasp
-        ijn/xHVXAAAAAElFTkSuQmCC
-</value>
   </data>
   <data name="PictureBox_CamCntrWheel.Location" type="System.Drawing.Point, System.Drawing">
     <value>656, 3</value>
@@ -2349,12 +2351,6 @@
   <data name="ButtonItem65.Text" xml:space="preserve">
     <value>Entfernen</value>
   </data>
-  <data name="buttonItem10.Text" xml:space="preserve">
-    <value>Erweitert</value>
-  </data>
-  <data name="ButtonItem_CopyPositionForStarPosEditor.Text" xml:space="preserve">
-    <value>Position für Stern-Positions-Editor kopieren</value>
-  </data>
   <data name="ButtonItem68.Text" xml:space="preserve">
     <value>Objekt-Modell exportieren</value>
   </data>
@@ -2375,9 +2371,6 @@
   </data>
   <data name="ButtonItem26.Text" xml:space="preserve">
     <value>Gehe zu Eckpunkt 3</value>
-  </data>
-  <data name="ButtonItem_ButtonItem_AddDeathFloor.Text" xml:space="preserve">
-    <value>Todesboden hinzufügen</value>
   </data>
   <data name="ButtonItem_ImportModel.Text" xml:space="preserve">
     <value>Modell importieren</value>
@@ -2402,5 +2395,11 @@
   </data>
   <data name="ButtonItem3.Text" xml:space="preserve">
     <value>Level-Editor beenden</value>
+  </data>
+  <data name="ButtonItem_ButtonItem_AddDeathFloor.Text" xml:space="preserve">
+    <value>Todesboden hinzufügen</value>
+  </data>
+  <data name="ButtonItem_ButtonItem_AddDeathFloorWithExtBounds.Text" xml:space="preserve">
+    <value>Todesboden mit erweiterten Grenzen hinzufügen</value>
   </data>
 </root>
