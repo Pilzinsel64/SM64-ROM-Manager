@@ -397,7 +397,14 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private void ButtonItem_IsNonSolid_CheckedChanged(object sender, EventArgs e)
         {
-            panel3.Enabled = !CheckBoxX_IsNonSolid.Checked;
+            var panel3Enabled = !CheckBoxX_IsNonSolid.Checked;
+
+            foreach (Control c in panel3.Controls)
+            {
+                if (c != CheckBoxX_IsNonSolid)
+                    c.Enabled = panel3Enabled;
+            }
+
             if (!LoadingColItemSettings)
             {
                 Node selItem = AdvTree_ColTypes.SelectedNode;
