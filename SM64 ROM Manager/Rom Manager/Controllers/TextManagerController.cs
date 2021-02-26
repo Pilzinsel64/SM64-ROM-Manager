@@ -73,7 +73,7 @@ namespace SM64_ROM_Manager
         private string dialogNamesFilePath = string.Empty;
         private bool forceUppercaseForActAndLevelNames = true;
         private bool autoDetectStartEndQuotationMarks = true;
-        private bool autoFocusEditTextBox = true;
+        private bool autoFocusEditTextBox = false;
         private List<RomManager> knownRomManagers = new List<RomManager>();
         private TextProfileInfo myDefaultTextProfileInfo = null;
 
