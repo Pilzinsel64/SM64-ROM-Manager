@@ -1050,23 +1050,23 @@ namespace SM64_ROM_Manager
 
         public void OpenFeatureRequestDialog(bool online)
         {
-            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "FeatureRequest.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS");
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "FeatureRequest.json"), WebLinks.FeatureRequestForm, WebLinks.FeatureRequestFormInternal);
         }
 
         public void OpenBugReportDialog(bool online)
         {
-            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "BugReport.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH");
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "BugReport.json"), WebLinks.BugReportForm, WebLinks.BugReportFormInternal);
         }
 
         public void OpenTranslationSubmition(bool online)
         {
-            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "SubmitTranslation.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma");
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "SubmitTranslation.json"), WebLinks.TranslationSubmitionForm, WebLinks.TranslationSubmitionFormInternal);
         }
 
-        private void OpenUserRequestDialog(bool online, string requestFilePath, string onlineUrl)
+        private void OpenUserRequestDialog(bool online, string requestFilePath, string onlineUrl, string internalUrl)
         {
             if (online)
-                Publics.Publics.OpenBrowser(new Uri(onlineUrl), true, new Size(800, 700));
+                Publics.Publics.OpenBrowser(new Uri(onlineUrl), new Uri(internalUrl), true, new Size(800, 700));
             else
             {
                 var frm = new UserRequestDialog(UserRequestLayout.LoadFrom(requestFilePath));

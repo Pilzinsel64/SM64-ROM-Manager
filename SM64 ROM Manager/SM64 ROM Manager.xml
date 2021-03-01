@@ -2152,9 +2152,29 @@
               Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
+        <member name="P:SM64_ROM_Manager.WebLinks.BugReportForm">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.WebLinks.BugReportFormInternal">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH?hide-sidebars ähnelt.
+            </summary>
+        </member>
         <member name="P:SM64_ROM_Manager.WebLinks.CommunityHelpDocument">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die https://docs.google.com/document/d/1pSYR91UiMVKnP3PyvJiCdwRF5wNS_nZzMe-r2WPQUJk ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.WebLinks.FeatureRequestForm">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.WebLinks.FeatureRequestFormInternal">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS?hide-sidebars ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.WebLinks.PublicHelpChat">
@@ -2170,6 +2190,16 @@
         <member name="P:SM64_ROM_Manager.WebLinks.ThankYouPage">
             <summary>
               Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/thank-you/ ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.WebLinks.TranslationSubmitionForm">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.WebLinks.TranslationSubmitionFormInternal">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma?hide-sidebars ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.WebLinks.UpdateUrl">

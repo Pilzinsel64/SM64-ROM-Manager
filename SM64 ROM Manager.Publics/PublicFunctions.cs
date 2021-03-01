@@ -257,9 +257,14 @@ namespace SM64_ROM_Manager.Publics
 
         public static void OpenBrowser(Uri uri, bool maximized = false, Size? windowSize = null)
         {
+            OpenBrowser(uri, null, maximized, windowSize);
+        }
+
+        public static void OpenBrowser(Uri uri, Uri uriInternal, bool maximized = false, Size? windowSize = null)
+        {
             if (Settings.General.UseInternalBrowser)
             {
-                var frm = new WebViewer(uri);
+                var frm = new WebViewer(uriInternal ?? uri);
 
                 if (maximized)
                     frm.WindowState = FormWindowState.Maximized;
