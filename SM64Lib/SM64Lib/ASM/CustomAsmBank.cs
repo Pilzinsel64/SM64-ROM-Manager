@@ -25,7 +25,7 @@ namespace SM64Lib.ASM
             Areas.Clear();
 
             bool canLoadArea(CustomAsmAreaConfig areaConfig) =>
-                areaConfig.RomAddress != -1 && areaConfig.Length > 0;
+                areaConfig.RomAddress != -1;
 
             if (Config.Areas.Where(n => canLoadArea(n)).Any())
             {
