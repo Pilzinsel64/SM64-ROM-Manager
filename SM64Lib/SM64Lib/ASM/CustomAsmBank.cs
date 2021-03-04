@@ -58,8 +58,7 @@ namespace SM64Lib.ASM
                 data.Close();
             }
 
-            Config.Areas.Clear();
-            Config.Areas.AddRange(Areas.Select(n => n.Config));
+            UpdateAreaConfigCollection();
             Config.Length = curRomAddr - startAddr;
         }
 
@@ -73,6 +72,12 @@ namespace SM64Lib.ASM
                     curRomAddr += area.UpdateAddresses(curRomAddr, Config);
                 Config.Length = curRomAddr - startAddr;
             }
+        }
+
+        public void UpdateAreaConfigCollection()
+        {
+            Config.Areas.Clear();
+            Config.Areas.AddRange(Areas.Select(n => n.Config));
         }
     }
 }

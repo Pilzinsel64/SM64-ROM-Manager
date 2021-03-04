@@ -10,12 +10,24 @@ namespace SM64Lib.ASM
 {
     public class CustomAsmArea
     {
-        public CustomAsmAreaConfig Config { get; }
         public byte[] AreaBytes { get; set; }
+
+        [JsonProperty(nameof(Config))]
+        private CustomAsmAreaConfig config;
+
+        [JsonIgnore]
+        public CustomAsmAreaConfig Config
+        {
+            get
+            {
+                if (config == null)
+                    config = new CustomAsmAreaConfig();
+                return config;
+            }
+        }
 
         [JsonConstructor]
         private CustomAsmArea(JsonConstructorAttribute emptyObject)
-            : this(false)
         {
         }
 
@@ -25,7 +37,7 @@ namespace SM64Lib.ASM
         }
 
         private CustomAsmArea(bool createEmptyAreaBytesArray)
-            : this(new CustomAsmAreaConfig(), createEmptyAreaBytesArray)
+            : this(null, createEmptyAreaBytesArray)
         {
         }
 
@@ -36,7 +48,7 @@ namespace SM64Lib.ASM
 
         private CustomAsmArea(CustomAsmAreaConfig config, bool createEmptyAreaBytesArray)
         {
-            Config = config;
+            this.config = config;
 
             if (createEmptyAreaBytesArray)
                 AreaBytes = new byte[] { };
