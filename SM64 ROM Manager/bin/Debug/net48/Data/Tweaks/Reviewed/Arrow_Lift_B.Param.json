@@ -1,0 +1,21 @@
+{
+  "Name": "Arrow Lift B.Param",
+  "Scripts": [
+    {
+      "Name": "Apply Arrow Lift Bparam",
+      "Script": "B1A88: 8D 01 01 88\r\nB1AB0: 44 81 20 00 46 80 21 20\r\nb1af4: E5 84 00 F4",
+      "Type": "TweakScript",
+      "Description": "Bparam equals arrow lift displacement",
+      "References": [],
+      "ID": "042E8DFA15F1C2BBA39ACD225E00C1E7"
+    }
+  ],
+  "Version": "1.0.0.0",
+  "MinVersion": "1.9.18.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Arrow Lifts use their Bparam to determine how far they move.",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": "603EDC1ECA391CDF31838264E4111180"
+}
