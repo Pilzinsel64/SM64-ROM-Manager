@@ -664,7 +664,7 @@
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.DevelopmentStage">
             <summary>
-              Sucht eine lokalisierte Zeichenfolge, die 1 ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die 0 ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.My.Resources.Resources.MoveCameraCross">

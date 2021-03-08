@@ -25,7 +25,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private Object3D obj3d = null;
         private bool loadingtexItemSettings = false;
         private bool hasInit = false;
-        private List<int> colorImages = new List<int>();
+        private List<Image> colorImages = new();
         private TextureFormatSettings _TextureFormatSettings = null;
         private readonly Dictionary<Image, Image> realTextures = new Dictionary<Image, Image>();
 
@@ -137,7 +137,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 {
                     Image img = GetImageFromColor((Color)mat.Value.Color, imageSize);
                     item.Image = img;
-                    colorImages.Add(item.ImageIndex);
+                    colorImages.Add(item.Image);
                 }
 
                 if (firstItem is null)
@@ -203,7 +203,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                     }
                 }
 
-                if (curItem.ImageIndex > -1)
+                if (curItem.Image is object)
                 {
                     Image realImg;
                     if (realTextures.ContainsKey(curItem.Image))
@@ -252,7 +252,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                     }
                 }
 
-                bool enTexTools = !colorImages.Contains(curItem.ImageIndex);
+                bool enTexTools = !colorImages.Contains(curItem.Image);
                 CheckBoxX_EnableTextureAnimation.Enabled = enTexTools;
                 CheckBoxX_EnableMirrorS.Enabled = enTexTools;
                 CheckBoxX_EnableClampS.Enabled = enTexTools;
