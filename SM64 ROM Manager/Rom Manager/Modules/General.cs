@@ -353,33 +353,45 @@ namespace SM64_ROM_Manager
 
         private static void AddOpenWithContextMenuEntry(bool onlyAddIfExists)
         {
-            RegistryKey getSubKey(RegistryKey key, string keyName)
+            try
             {
-                if (onlyAddIfExists)
-                    return key.OpenSubKey(keyName, true);
-                else
-                    return key.CreateSubKey(keyName, true);
-            }
+                RegistryKey getSubKey(RegistryKey key, string keyName)
+                {
+                    if (onlyAddIfExists)
+                        return key.OpenSubKey(keyName, true);
+                    else
+                        return key.CreateSubKey(keyName, true);
+                }
 
-            var key = getSubKey(Registry.CurrentUser, $"Software\\Classes\\{GetZ64FileClassesRoot()}\\shell\\SM64ROMManager");
-            if (key is object)
+                var key = getSubKey(Registry.CurrentUser, $"Software\\Classes\\{GetZ64FileClassesRoot()}\\shell\\SM64ROMManager");
+                if (key is object)
+                {
+                    key.SetValue(string.Empty, Form_Main_Resources.OpenWithContextMenuEntry);
+                    key.SetValue("icon", $"\"{Publics.General.MyExecuteablePath}\"");
+                    var commandKey = key.CreateSubKey("command", true);
+                    commandKey.SetValue(string.Empty, $"\"{Publics.General.MyExecuteablePath}\" \"%1\"");
+                }
+            }
+            catch (Exception)
             {
-                key.SetValue(string.Empty, Form_Main_Resources.OpenWithContextMenuEntry);
-                key.SetValue("icon", $"\"{Publics.General.MyExecuteablePath}\"");
-                var commandKey = key.CreateSubKey("command", true);
-                commandKey.SetValue(string.Empty, $"\"{Publics.General.MyExecuteablePath}\" \"%1\"");
             }
         }
 
         public static void RemoveOpenWithContextMenuEntry()
         {
-            var key = Registry.CurrentUser.OpenSubKey($"Software\\Classes\\{GetZ64FileClassesRoot()}\\shell", true);
-            key?.DeleteSubKeyTree("SM64ROMManager");
+            try
+            {
+                var key = Registry.CurrentUser.OpenSubKey($"Software\\Classes\\{GetZ64FileClassesRoot()}\\shell", true);
+                key?.DeleteSubKeyTree("SM64ROMManager");
+            }
+            catch(Exception)
+            {
+            }
         }
 
         private static string GetZ64FileClassesRoot()
         {
-            return (string)Registry.ClassesRoot.OpenSubKey(".z64", false).GetValue(string.Empty);
+            return (string)Registry.ClassesRoot.OpenSubKey(".z64", false)?.GetValue(string.Empty);
         }
 
         public static string GetKeyForConvertAreaModel(string romGameName, short curLevelID, byte curAreaID)
