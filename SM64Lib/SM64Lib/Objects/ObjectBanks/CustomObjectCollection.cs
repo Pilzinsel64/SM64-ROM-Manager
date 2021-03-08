@@ -109,7 +109,10 @@ namespace SM64Lib.Objects.ObjectBanks
                             import.DestBehaviorBank.Behaviors.Add(behav);
 
                             if (behav.Config.CustomAsmLinks.Any())
+                            {
                                 import.DestCustomAsmBank.Areas.AddRangeIfNotContains(behav.Config.CustomAsmLinks.Select(n => n.CustomAsm).ToArray());
+                                import.DestCustomAsmBank.UpdateAreaConfigCollection();
+                            }
 
                             behav.ParseScript();
                             cobj.BehaviorProps.BehaviorAddress = -1;

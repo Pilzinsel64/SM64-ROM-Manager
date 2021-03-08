@@ -1,4 +1,5 @@
-﻿using SM64Lib.Data;
+﻿using Newtonsoft.Json;
+using SM64Lib.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,48 @@ namespace SM64Lib.ASM
 {
     public class CustomAsmArea
     {
-        public CustomAsmAreaConfig Config { get; }
-        public byte[] AreaBytes { get; set; } = new byte[] { };
+        public byte[] AreaBytes { get; set; }
 
-        public CustomAsmArea() : this(new CustomAsmAreaConfig())
+        [JsonProperty(nameof(Config))]
+        private CustomAsmAreaConfig config;
+
+        [JsonIgnore]
+        public CustomAsmAreaConfig Config
+        {
+            get
+            {
+                if (config == null)
+                    config = new CustomAsmAreaConfig();
+                return config;
+            }
+        }
+
+        [JsonConstructor]
+        private CustomAsmArea(JsonConstructorAttribute emptyObject)
+        {
+        }
+
+        public CustomAsmArea()
+            : this(true)
+        {
+        }
+
+        private CustomAsmArea(bool createEmptyAreaBytesArray)
+            : this(null, createEmptyAreaBytesArray)
         {
         }
 
         public CustomAsmArea(CustomAsmAreaConfig config)
+            : this(config, false)
         {
-            Config = config;
+        }
+
+        private CustomAsmArea(CustomAsmAreaConfig config, bool createEmptyAreaBytesArray)
+        {
+            this.config = config;
+
+            if (createEmptyAreaBytesArray)
+                AreaBytes = new byte[] { };
         }
 
         public void Load(BinaryData data, CustomAsmBankConfig bankConfig)

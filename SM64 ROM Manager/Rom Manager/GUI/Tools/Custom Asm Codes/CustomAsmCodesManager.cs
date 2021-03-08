@@ -137,6 +137,7 @@ namespace SM64_ROM_Manager
             // Add Area
             asmBank.Areas.Add(asm);
             asmBank.UpdateAddresses();
+            asmBank.UpdateAreaConfigCollection();
 
             // Add Node
             var n = GetNode(asm);
@@ -152,6 +153,7 @@ namespace SM64_ROM_Manager
                 n.Remove();
                 asmBank.Areas.Remove(asm);
                 asmBank.UpdateAddresses();
+                asmBank.UpdateAreaConfigCollection();
                 UpdateAsmList();
             }
         }

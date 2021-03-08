@@ -1,5 +1,5 @@
 {
-  "Name": "Skip Mario Screen (Console Compatible)",
+  "Name": "Skip Mario Screen (Console Friendly but Crash on Save&Quit)",
   "Scripts": [
     {
       "Name": "",
@@ -13,7 +13,7 @@
   "Version": "2.0.0.0",
   "MinVersion": "1.0.0.0",
   "MaxVersion": "0.0.0.0",
-  "Description": "Skip the screen which displays Mario's face and the title in the background. Also applies to the screen displayed after losing all lives. (New Console friendly version from aglab2)",
+  "Description": "THIS WILL CRASH ON SAVE & QUIT!! Skip the screen which displays Mario's face and the title in the background. Also applies to the screen displayed after losing all lives. (New Console friendly version from aglab2)",
   "EmbeddedFiles": {
     "CompressedFiles": {}
   },

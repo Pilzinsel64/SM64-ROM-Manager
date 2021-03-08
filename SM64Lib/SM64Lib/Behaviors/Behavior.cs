@@ -122,7 +122,7 @@ namespace SM64Lib.Behaviors
                     case BehaviorscriptCommandTypes.x0C_CallFunction:
                         var ptr = BehaviorscriptCommandFunctions.X0C.GetAsmPointer(cmd);
                         if (dicCustomAsmFuncs.ContainsKey(ptr))
-                            knownCustomAsmCommands.Add(dicCustomAsmFuncs[ptr].CustomAsm, cmd);
+                            knownCustomAsmCommands.AddOrUpdate(dicCustomAsmFuncs[ptr].CustomAsm, cmd);
                         break;
                 }
             }

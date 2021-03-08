@@ -40,8 +40,10 @@ namespace SM64Lib.Objects.ObjectBanks
 
             rommgr.CustomObjects.CustomObjects.RemoveRangeIfContains(refObjs);
             rommgr.GlobalBehaviorBank.Behaviors.RemoveRangeIfContains(refBehavs);
-            rommgr.GlobalCustomAsmBank.Areas.RemoveRangeIfContains(refAsmAreas);
             rommgr.GlobalModelBank.Models.RemoveRangeIfContains(refMdls);
+            rommgr.GlobalCustomAsmBank.Areas.RemoveRangeIfContains(refAsmAreas);
+            rommgr.GlobalCustomAsmBank.UpdateAreaConfigCollection();
+            rommgr.GlobalCustomAsmBank.UpdateAddresses();
 
             foreach (var lvl in rommgr.Levels)
             {
