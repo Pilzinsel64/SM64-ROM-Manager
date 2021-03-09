@@ -494,9 +494,16 @@ namespace SM64_ROM_Manager
                     ContextMenu = ButtonItem_CM_Area
                 };
 
+                n.NodeDoubleClick += Node_Area_NodeDoubleClick;
+
                 // Add item
                 nLevel.Nodes.Add(n);
             }
+        }
+
+        private void Node_Area_NodeDoubleClick(object sender, EventArgs e)
+        {
+            LM_OpenAreaEditor();
         }
 
         private string GetLevelDisplayName(ushort lvlID)
