@@ -1311,5 +1311,30 @@ namespace SM64_ROM_Manager
                 hasInitCMArea = true;
             }
         }
+
+        private void ButtonItem_LevelTools_CopyRomAddress_Click(object sender, EventArgs e)
+        {
+            Controller.CopyLevelLastRomOffset(CurrentLevelIndex);
+        }
+
+        private void buttonItem1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonItem_LevelTools_ChangeLevelID_Click(object sender, EventArgs e)
+        {
+            Controller.ChangeLevelID(CurrentLevelIndex);
+        }
+
+        private void ButtonItem_LevelTools_ChangeLevelName_Click(object sender, EventArgs e)
+        {
+            Controller.ChangeLevelCustomName(CurrentLevelIndex);
+        }
+
+        private void ButtonItem_LevelTools_ChangeSizeOfBank0x19_Click(object sender, EventArgs e)
+        {
+            Controller.SetLevelBank0x19Length(CurrentLevelIndex);
+        }
     }
 }
