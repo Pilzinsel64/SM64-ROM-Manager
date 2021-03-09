@@ -2212,36 +2212,6 @@
   <data name="ButtonItem_ExportLevelArea.Text" xml:space="preserve">
     <value>Export</value>
   </data>
-  <data name="labelItem3.Text" xml:space="preserve">
-    <value>Level</value>
-  </data>
-  <data name="ButtonItem_LevelTools_ChangeLevelID.Text" xml:space="preserve">
-    <value>Change Level ID</value>
-  </data>
-  <data name="ButtonItem_LevelTools_ChangeLevelName.Text" xml:space="preserve">
-    <value>Change Level Name</value>
-  </data>
-  <data name="ButtonItem_LevelTools_ChangeSizeOfBank0x19.Text" xml:space="preserve">
-    <value>Change Size of Bank 0x19</value>
-  </data>
-  <data name="ButtonItem_LevelTools_EditLevelscript.Text" xml:space="preserve">
-    <value>Edit Level Script</value>
-  </data>
-  <data name="ButtonItem_LevelTools_CopyRomAddress.Text" xml:space="preserve">
-    <value>Copy ROM Address</value>
-  </data>
-  <data name="labelItem4.Text" xml:space="preserve">
-    <value>Area</value>
-  </data>
-  <data name="ButtonItem_AreaTools_ChangeAreaID.Text" xml:space="preserve">
-    <value>Change Area ID</value>
-  </data>
-  <data name="ButtonItem_AreaTools_EditAreaLevelScript.Text" xml:space="preserve">
-    <value>Edit Level Script</value>
-  </data>
-  <data name="ButtonItem_AreaTools_EditGeolayoutScript.Text" xml:space="preserve">
-    <value>Edit Geo Layout Script</value>
-  </data>
   <data name="buttonItem1.Text" xml:space="preserve">
     <value>More</value>
   </data>
@@ -2284,6 +2254,36 @@
   <data name="ButtonItem_AreaTools_ImportArea.Text" xml:space="preserve">
     <value>Import Area</value>
   </data>
+  <data name="labelItem3.Text" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="ButtonItem_LevelTools_ChangeLevelID.Text" xml:space="preserve">
+    <value>Change Level ID</value>
+  </data>
+  <data name="ButtonItem_LevelTools_ChangeLevelName.Text" xml:space="preserve">
+    <value>Change Level Name</value>
+  </data>
+  <data name="ButtonItem_LevelTools_ChangeSizeOfBank0x19.Text" xml:space="preserve">
+    <value>Change Size of Bank 0x19</value>
+  </data>
+  <data name="ButtonItem_LevelTools_EditLevelscript.Text" xml:space="preserve">
+    <value>Edit Level Script</value>
+  </data>
+  <data name="ButtonItem_LevelTools_CopyRomAddress.Text" xml:space="preserve">
+    <value>Copy ROM Address</value>
+  </data>
+  <data name="labelItem4.Text" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="ButtonItem_AreaTools_ChangeAreaID.Text" xml:space="preserve">
+    <value>Change Area ID</value>
+  </data>
+  <data name="ButtonItem_AreaTools_EditAreaLevelScript.Text" xml:space="preserve">
+    <value>Edit Level Script</value>
+  </data>
+  <data name="ButtonItem_AreaTools_EditGeolayoutScript.Text" xml:space="preserve">
+    <value>Edit Geo Layout Script</value>
+  </data>
   <data name="contextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
@@ -2293,11 +2293,14 @@
   <data name="ButtonItem_CM_Area.Text" xml:space="preserve">
     <value>ButtonItem_CM_Area</value>
   </data>
+  <data name="ButtonItem_CM_CustomLevels.Text" xml:space="preserve">
+    <value>ButtonItem_CM_CustomLevels</value>
+  </data>
   <data name="contextMenuBar1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 101</value>
   </data>
   <data name="contextMenuBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 47</value>
+    <value>190, 69</value>
   </data>
   <data name="contextMenuBar1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2594,6 +2597,12 @@
     <value>ButtonItem_CM_Area</value>
   </data>
   <data name="&gt;&gt;ButtonItem_CM_Area.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_CustomLevels.Name" xml:space="preserve">
+    <value>ButtonItem_CM_CustomLevels</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_CustomLevels.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

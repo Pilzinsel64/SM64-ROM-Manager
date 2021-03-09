@@ -147,6 +147,7 @@
             this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
             this.ButtonItem_CM_Level = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_CM_Area = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CM_CustomLevels = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.LevelsTree)).BeginInit();
             this.panel_SideMenu.SuspendLayout();
             this.panel_Tools.SuspendLayout();
@@ -1401,7 +1402,6 @@
             this.ButtonItem_AreaTools_EditAreaLevelScript,
             this.ButtonItem_AreaTools_EditGeolayoutScript});
             resources.ApplyResources(this.buttonItem1, "buttonItem1");
-            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click_1);
             // 
             // labelItem3
             // 
@@ -1506,7 +1506,8 @@
             this.contextMenuBar1.IsMaximized = false;
             this.contextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ButtonItem_CM_Level,
-            this.ButtonItem_CM_Area});
+            this.ButtonItem_CM_Area,
+            this.ButtonItem_CM_CustomLevels});
             this.contextMenuBar1.Name = "contextMenuBar1";
             this.contextMenuBar1.Stretch = true;
             this.contextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1524,7 +1525,14 @@
             this.ButtonItem_CM_Area.AutoExpandOnClick = true;
             this.ButtonItem_CM_Area.Name = "ButtonItem_CM_Area";
             resources.ApplyResources(this.ButtonItem_CM_Area, "ButtonItem_CM_Area");
-            this.ButtonItem_CM_Area.Click += new System.EventHandler(this.ButtonItem_CM_Area_Click);
+            this.ButtonItem_CM_Area.PopupOpen += new DevComponents.DotNetBar.DotNetBarManager.PopupOpenEventHandler(this.ButtonItem_CM_Area_PopupOpen);
+            // 
+            // ButtonItem_CM_CustomLevels
+            // 
+            this.ButtonItem_CM_CustomLevels.AutoExpandOnClick = true;
+            this.ButtonItem_CM_CustomLevels.Name = "ButtonItem_CM_CustomLevels";
+            resources.ApplyResources(this.ButtonItem_CM_CustomLevels, "ButtonItem_CM_CustomLevels");
+            this.ButtonItem_CM_CustomLevels.PopupOpen += new DevComponents.DotNetBar.DotNetBarManager.PopupOpenEventHandler(this.ButtonItem_CM_CustomLevels_PopupOpen);
             // 
             // Tab_LevelManagerV2
             // 
@@ -1676,5 +1684,6 @@
         private DevComponents.DotNetBar.ContextMenuBar contextMenuBar1;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Level;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Area;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_CustomLevels;
     }
 }
