@@ -33,6 +33,8 @@ namespace SM64_ROM_Manager
         private bool savingRom = false;
         private bool loadingArea = false;
         private bool loadingLevel = false;
+        private bool hasInitCMLevel = false;
+        private bool hasInitCMArea = false;
 
         Node nCustomLevels;
         Node nVanillaLevels;
@@ -69,7 +71,7 @@ namespace SM64_ROM_Manager
             };
             nVanillaLevels = new Node("Vanilla Levels")
             {
-                Expanded = true
+                Expanded = true,
             };
             LevelsTree.Nodes.AddRange(new[] { nCustomLevels/*, nVanillaLevels*/ });
 
@@ -464,7 +466,8 @@ namespace SM64_ROM_Manager
             {
                 var n = new Node(GetLevelDisplayName(lvlID))
                 {
-                    Tag = 0
+                    Tag = 0,
+                    ContextMenu = ButtonItem_CM_Level
                 };
 
                 // Load areas
@@ -485,7 +488,8 @@ namespace SM64_ROM_Manager
             {
                 var n = new Node(Form_Main_Resources.Text_Area + " " + areaID.ToString())
                 {
-                    Tag = 1
+                    Tag = 1,
+                    ContextMenu = ButtonItem_CM_Area
                 };
 
                 // Add item
@@ -1274,6 +1278,38 @@ namespace SM64_ROM_Manager
             bool isNull = CurrentSpecialBoxIndex == -1;
             Button_LM_EditSpecial.Enabled = !isNull;
             Button_LM_RemoveSpecial.Enabled = !isNull;
+        }
+
+        private void ButtonItem_CM_Level_PopupOpen(object sender, PopupOpenEventArgs e)
+        {
+            if (!hasInitCMLevel)
+            {
+                ButtonItem_CM_Level.SubItems.AddRange(new BaseItem[] {
+                    (BaseItem)ButtonItem_LevelTools_AddLevel.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_ChangeLevelID.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_ChangeLevelName.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_ChangeSizeOfBank0x19.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_EditLevelscript.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_CopyRomAddress.Clone()
+                });
+                ButtonItem_CM_Level.SubItems[1].BeginGroup = true;
+                hasInitCMLevel = true;
+            }
+        }
+
+        private void ButtonItem_CM_Area_Click(object sender, EventArgs e)
+        {
+            if (!hasInitCMArea)
+            {
+                ButtonItem_CM_Area.SubItems.AddRange(new BaseItem[] {
+                    (BaseItem)ButtonItem_AreaTools_AddArea.Clone(),
+                    (BaseItem)ButtonItem_AreaTools_ChangeAreaID.Clone(),
+                    (BaseItem)ButtonItem_AreaTools_EditAreaLevelScript.Clone(),
+                    (BaseItem)ButtonItem_AreaTools_EditGeolayoutScript.Clone()
+                });
+                ButtonItem_CM_Level.SubItems[1].BeginGroup = true;
+                hasInitCMArea = true;
+            }
         }
     }
 }

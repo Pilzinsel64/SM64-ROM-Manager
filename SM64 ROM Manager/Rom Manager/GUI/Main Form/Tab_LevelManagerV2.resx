@@ -169,10 +169,121 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel_SideMenu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TabControl_AreaProperties.Name" xml:space="preserve">
+    <value>TabControl_AreaProperties</value>
+  </data>
+  <data name="&gt;&gt;TabControl_AreaProperties.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControl_AreaProperties.Parent" xml:space="preserve">
+    <value>panel_Tools</value>
+  </data>
+  <data name="&gt;&gt;TabControl_AreaProperties.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Name" xml:space="preserve">
+    <value>TabControl_LM_Level</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Parent" xml:space="preserve">
+    <value>panel_Tools</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel_Tools.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel_Tools.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 25</value>
+  </data>
+  <data name="panel_Tools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 521</value>
+  </data>
+  <data name="panel_Tools.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel_Tools.Name" xml:space="preserve">
+    <value>panel_Tools</value>
+  </data>
+  <data name="&gt;&gt;panel_Tools.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel_Tools.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel_Tools.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="TabControl_AreaProperties.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel4.Name" xml:space="preserve">
+    <value>TabControlPanel4</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel4.Parent" xml:space="preserve">
+    <value>TabControl_AreaProperties</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel6.Name" xml:space="preserve">
+    <value>TabControlPanel6</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel6.Parent" xml:space="preserve">
+    <value>TabControl_AreaProperties</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel5.Name" xml:space="preserve">
+    <value>TabControlPanel5</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel5.Parent" xml:space="preserve">
+    <value>TabControl_AreaProperties</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel5.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="TabControl_AreaProperties.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-4, 271</value>
+  </data>
+  <data name="TabControl_AreaProperties.Size" type="System.Drawing.Size, System.Drawing">
+    <value>502, 234</value>
+  </data>
+  <data name="TabControl_AreaProperties.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="TabControl_AreaProperties.Text" xml:space="preserve">
+    <value>TabControl2</value>
+  </data>
+  <data name="TabControl_AreaProperties.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TabControl_AreaProperties.Name" xml:space="preserve">
+    <value>TabControl_AreaProperties</value>
+  </data>
+  <data name="&gt;&gt;TabControl_AreaProperties.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControl_AreaProperties.Parent" xml:space="preserve">
+    <value>panel_Tools</value>
+  </data>
+  <data name="&gt;&gt;TabControl_AreaProperties.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="advTree_SpecialBoxes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -358,7 +469,7 @@
     <value>TabControl_AreaProperties</value>
   </data>
   <data name="&gt;&gt;TabControlPanel6.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="TabControlPanel4.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -482,12 +593,6 @@
   </data>
   <data name="ComboBoxEx_LM_AreaBG.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="ComboItem12.Text" xml:space="preserve">
-    <value>Level Background</value>
-  </data>
-  <data name="ComboItem13.Text" xml:space="preserve">
-    <value>Color</value>
   </data>
   <data name="ComboBoxEx_LM_AreaBG.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 108</value>
@@ -1001,7 +1106,13 @@
     <value>TabControl_AreaProperties</value>
   </data>
   <data name="&gt;&gt;TabControlPanel4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
+  </data>
+  <data name="ComboItem12.Text" xml:space="preserve">
+    <value>Level Background</value>
+  </data>
+  <data name="ComboItem13.Text" xml:space="preserve">
+    <value>Color</value>
   </data>
   <data name="Line2.Location" type="System.Drawing.Point, System.Drawing">
     <value>237, 4</value>
@@ -1348,35 +1459,59 @@
   <data name="&gt;&gt;TabControlPanel5.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="TabControl_AreaProperties.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-4, 271</value>
-  </data>
-  <data name="TabControl_AreaProperties.Size" type="System.Drawing.Size, System.Drawing">
-    <value>502, 234</value>
-  </data>
-  <data name="TabControl_AreaProperties.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
-  </data>
-  <data name="TabControl_AreaProperties.Text" xml:space="preserve">
-    <value>TabControl2</value>
-  </data>
-  <data name="TabControl_AreaProperties.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TabControl_AreaProperties.Name" xml:space="preserve">
-    <value>TabControl_AreaProperties</value>
-  </data>
-  <data name="&gt;&gt;TabControl_AreaProperties.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabControl_AreaProperties.Parent" xml:space="preserve">
-    <value>panel_Tools</value>
-  </data>
-  <data name="&gt;&gt;TabControl_AreaProperties.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="TabControl_LM_Level.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel_LevelProperties.Name" xml:space="preserve">
+    <value>TabControlPanel_LevelProperties</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel_LevelProperties.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel_LevelProperties.Parent" xml:space="preserve">
+    <value>TabControl_LM_Level</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel_LevelProperties.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel2.Name" xml:space="preserve">
+    <value>TabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel2.Parent" xml:space="preserve">
+    <value>TabControl_LM_Level</value>
+  </data>
+  <data name="&gt;&gt;TabControlPanel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TabControl_LM_Level.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-4, -10</value>
+  </data>
+  <data name="TabControl_LM_Level.Size" type="System.Drawing.Size, System.Drawing">
+    <value>502, 300</value>
+  </data>
+  <data name="TabControl_LM_Level.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="TabControl_LM_Level.Text" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="TabControl_LM_Level.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Name" xml:space="preserve">
+    <value>TabControl_LM_Level</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.Parent" xml:space="preserve">
+    <value>panel_Tools</value>
+  </data>
+  <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="LabelX_TargetLevel.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 4</value>
@@ -1455,15 +1590,6 @@
   </data>
   <data name="ComboBoxEx_LM_BGMode.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
-  </data>
-  <data name="ComboItem1.Text" xml:space="preserve">
-    <value>Original Image</value>
-  </data>
-  <data name="ComboItem2.Text" xml:space="preserve">
-    <value>Custom Image</value>
-  </data>
-  <data name="ComboItem3.Text" xml:space="preserve">
-    <value>No Image</value>
   </data>
   <data name="ComboBoxEx_LM_BGMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 108</value>
@@ -1861,6 +1987,15 @@
   <data name="&gt;&gt;TabControlPanel_LevelProperties.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>Original Image</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Custom Image</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>No Image</value>
+  </data>
   <data name="ButtonX_ManageLocalObjects.Location" type="System.Drawing.Point, System.Drawing">
     <value>219, 28</value>
   </data>
@@ -2053,57 +2188,6 @@
   <data name="&gt;&gt;TabControlPanel2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="TabControl_LM_Level.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-4, -10</value>
-  </data>
-  <data name="TabControl_LM_Level.Size" type="System.Drawing.Size, System.Drawing">
-    <value>502, 300</value>
-  </data>
-  <data name="TabControl_LM_Level.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="TabControl_LM_Level.Text" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="TabControl_LM_Level.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TabControl_LM_Level.Name" xml:space="preserve">
-    <value>TabControl_LM_Level</value>
-  </data>
-  <data name="&gt;&gt;TabControl_LM_Level.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabControl_LM_Level.Parent" xml:space="preserve">
-    <value>panel_Tools</value>
-  </data>
-  <data name="&gt;&gt;TabControl_LM_Level.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel_Tools.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panel_Tools.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 25</value>
-  </data>
-  <data name="panel_Tools.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 521</value>
-  </data>
-  <data name="panel_Tools.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panel_Tools.Name" xml:space="preserve">
-    <value>panel_Tools</value>
-  </data>
-  <data name="&gt;&gt;panel_Tools.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel_Tools.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel_Tools.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="bar1.AccessibleDescription" xml:space="preserve">
     <value>DotNetBar Bar (bar1)</value>
   </data>
@@ -2115,6 +2199,42 @@
   </data>
   <data name="bar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="buttonItem2.Text" xml:space="preserve">
+    <value>Add Level/Area</value>
+  </data>
+  <data name="ButtonItem_OpenLevelEditor.Text" xml:space="preserve">
+    <value>Level Editor</value>
+  </data>
+  <data name="ButtonItem_RemoveItem.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ButtonItem_ExportLevelArea.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="buttonItem1.Text" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="bar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="bar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>694, 25</value>
+  </data>
+  <data name="bar1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
+    <value>bar1</value>
+  </data>
+  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bar1.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="labelItem1.Text" xml:space="preserve">
     <value>Level</value>
@@ -2133,18 +2253,6 @@
   </data>
   <data name="ButtonItem_AreaTools_ImportArea.Text" xml:space="preserve">
     <value>Import Area</value>
-  </data>
-  <data name="buttonItem2.Text" xml:space="preserve">
-    <value>Add Level/Area</value>
-  </data>
-  <data name="ButtonItem_OpenLevelEditor.Text" xml:space="preserve">
-    <value>Level Editor</value>
-  </data>
-  <data name="ButtonItem_RemoveItem.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="ButtonItem_ExportLevelArea.Text" xml:space="preserve">
-    <value>Export</value>
   </data>
   <data name="labelItem3.Text" xml:space="preserve">
     <value>Level</value>
@@ -2176,29 +2284,38 @@
   <data name="ButtonItem_AreaTools_EditGeolayoutScript.Text" xml:space="preserve">
     <value>Edit Geo Layout Script</value>
   </data>
-  <data name="buttonItem1.Text" xml:space="preserve">
-    <value>More</value>
+  <data name="contextMenuBar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
-  <data name="bar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="ButtonItem_CM_Level.Text" xml:space="preserve">
+    <value>ButtonItem_CM_Level</value>
   </data>
-  <data name="bar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>694, 25</value>
+  <data name="ButtonItem_CM_Area.Text" xml:space="preserve">
+    <value>ButtonItem_CM_Area</value>
   </data>
-  <data name="bar1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="contextMenuBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 101</value>
   </data>
-  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
-    <value>bar1</value>
+  <data name="contextMenuBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 47</value>
   </data>
-  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="contextMenuBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;bar1.Parent" xml:space="preserve">
+  <data name="contextMenuBar1.Text" xml:space="preserve">
+    <value>contextMenuBar1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuBar1.Name" xml:space="preserve">
+    <value>contextMenuBar1</value>
+  </data>
+  <data name="&gt;&gt;contextMenuBar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ContextMenuBar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;contextMenuBar1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;bar1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;contextMenuBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2465,6 +2582,18 @@
     <value>ButtonItem_AreaTools_EditGeolayoutScript</value>
   </data>
   <data name="&gt;&gt;ButtonItem_AreaTools_EditGeolayoutScript.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Level.Name" xml:space="preserve">
+    <value>ButtonItem_CM_Level</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Level.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Area.Name" xml:space="preserve">
+    <value>ButtonItem_CM_Area</value>
+  </data>
+  <data name="&gt;&gt;ButtonItem_CM_Area.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

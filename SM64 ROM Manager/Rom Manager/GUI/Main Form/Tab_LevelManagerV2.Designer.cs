@@ -144,6 +144,9 @@
             this.ButtonItem_AreaTools_ChangeAreaID = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_EditAreaLevelScript = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_AreaTools_EditGeolayoutScript = new DevComponents.DotNetBar.ButtonItem();
+            this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
+            this.ButtonItem_CM_Level = new DevComponents.DotNetBar.ButtonItem();
+            this.ButtonItem_CM_Area = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.LevelsTree)).BeginInit();
             this.panel_SideMenu.SuspendLayout();
             this.panel_Tools.SuspendLayout();
@@ -161,6 +164,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionAreaID)).BeginInit();
             this.TabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // LevelsTree
@@ -213,8 +217,8 @@
             resources.ApplyResources(this.TabControl_AreaProperties, "TabControl_AreaProperties");
             this.TabControl_AreaProperties.BackColor = System.Drawing.Color.Transparent;
             this.TabControl_AreaProperties.CanReorderTabs = false;
-            this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel6);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel4);
+            this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel6);
             this.TabControl_AreaProperties.Controls.Add(this.TabControlPanel5);
             this.TabControl_AreaProperties.ForeColor = System.Drawing.Color.Black;
             this.TabControl_AreaProperties.Name = "TabControl_AreaProperties";
@@ -1494,10 +1498,38 @@
             resources.ApplyResources(this.ButtonItem_AreaTools_EditGeolayoutScript, "ButtonItem_AreaTools_EditGeolayoutScript");
             this.ButtonItem_AreaTools_EditGeolayoutScript.Click += new System.EventHandler(this.ButtonItem2_EditGeolayoutScript_Click);
             // 
+            // contextMenuBar1
+            // 
+            this.contextMenuBar1.AntiAlias = true;
+            resources.ApplyResources(this.contextMenuBar1, "contextMenuBar1");
+            this.contextMenuBar1.IsMaximized = false;
+            this.contextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.ButtonItem_CM_Level,
+            this.ButtonItem_CM_Area});
+            this.contextMenuBar1.Name = "contextMenuBar1";
+            this.contextMenuBar1.Stretch = true;
+            this.contextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.contextMenuBar1.TabStop = false;
+            // 
+            // ButtonItem_CM_Level
+            // 
+            this.ButtonItem_CM_Level.AutoExpandOnClick = true;
+            this.ButtonItem_CM_Level.Name = "ButtonItem_CM_Level";
+            resources.ApplyResources(this.ButtonItem_CM_Level, "ButtonItem_CM_Level");
+            this.ButtonItem_CM_Level.PopupOpen += new DevComponents.DotNetBar.DotNetBarManager.PopupOpenEventHandler(this.ButtonItem_CM_Level_PopupOpen);
+            // 
+            // ButtonItem_CM_Area
+            // 
+            this.ButtonItem_CM_Area.AutoExpandOnClick = true;
+            this.ButtonItem_CM_Area.Name = "ButtonItem_CM_Area";
+            resources.ApplyResources(this.ButtonItem_CM_Area, "ButtonItem_CM_Area");
+            this.ButtonItem_CM_Area.Click += new System.EventHandler(this.ButtonItem_CM_Area_Click);
+            // 
             // Tab_LevelManagerV2
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.contextMenuBar1);
             this.Controls.Add(this.panel_Tools);
             this.Controls.Add(this.panel_SideMenu);
             this.Controls.Add(this.bar1);
@@ -1519,6 +1551,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NUD_LM_DefaultPositionAreaID)).EndInit();
             this.TabControlPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1639,5 +1672,8 @@
         private DevComponents.AdvTree.ColumnHeader columnHeader14;
         private DevComponents.AdvTree.NodeConnector nodeConnector2;
         private DevComponents.DotNetBar.ElementStyle elementStyle2;
+        private DevComponents.DotNetBar.ContextMenuBar contextMenuBar1;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Level;
+        private DevComponents.DotNetBar.ButtonItem ButtonItem_CM_Area;
     }
 }
