@@ -1300,7 +1300,8 @@ namespace SM64_ROM_Manager
             if (!hasInitCMCustomLevels)
             {
                 ButtonItem_CM_CustomLevels.SubItems.AddRange(new BaseItem[] {
-                    (BaseItem)ButtonItem_LevelTools_AddLevel.Clone()
+                    (BaseItem)ButtonItem_LevelTools_AddLevel.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_ImportLevel.Clone()
                 });
                 hasInitCMCustomLevels = true;
             }
@@ -1312,7 +1313,9 @@ namespace SM64_ROM_Manager
             {
                 ButtonItem_CM_Level.SubItems.AddRange(new BaseItem[] {
                     (BaseItem)ButtonItem_LevelTools_AddLevel.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_ImportLevel.Clone(),
                     (BaseItem)ButtonItem_AreaTools_AddArea.Clone(),
+                    (BaseItem)ButtonItem_AreaTools_ImportArea.Clone(),
                     (BaseItem)ButtonItem_LevelTools_ChangeLevelID.Clone(),
                     (BaseItem)ButtonItem_LevelTools_ChangeLevelName.Clone(),
                     (BaseItem)ButtonItem_LevelTools_ChangeSizeOfBank0x19.Clone(),
@@ -1320,6 +1323,7 @@ namespace SM64_ROM_Manager
                     (BaseItem)ButtonItem_LevelTools_CopyRomAddress.Clone()
                 });
                 ButtonItem_CM_Level.SubItems[2].BeginGroup = true;
+                ButtonItem_CM_Level.SubItems[4].BeginGroup = true;
                 hasInitCMLevel = true;
             }
         }
