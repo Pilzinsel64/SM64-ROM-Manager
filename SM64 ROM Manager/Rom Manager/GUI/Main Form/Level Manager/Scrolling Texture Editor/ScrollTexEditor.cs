@@ -10,6 +10,7 @@ using global::SM64Lib.Levels.ScrolTex;
 using global::SM64Lib.TextValueConverter;
 using System.Linq;
 using Z.Core.Extensions;
+using DevComponents.AdvTree;
 
 namespace SM64_ROM_Manager
 {
@@ -22,6 +23,7 @@ namespace SM64_ROM_Manager
         private bool simplifiedView = true;
         private readonly LevelArea cArea;
         private readonly LevelAreaConfig areaConfig;
+        private readonly List<Node> allNodes = new List<Node>();
 
         private PropertySettings propSettings_VertexPointer = new PropertySettings(nameof(ScrollTexPropertyClass.VertexPointer)) { Visible = false };
         private PropertySettings propSettings_FacesCount = new PropertySettings(nameof(ScrollTexPropertyClass.FacesCount)) { Visible = false };
@@ -178,20 +180,22 @@ namespace SM64_ROM_Manager
 
         private void LoadScrollTexts()
         {
-            ListViewEx_LM_ScrollTexList.BeginUpdate();
+            advTree_ScrollTexList.BeginUpdate();
 
             // Remove current items & groups & columns
-            ListViewEx_LM_ScrollTexList.Clear();
+            allNodes.Clear();
+            advTree_ScrollTexList.Nodes.Clear();
+            advTree_ScrollTexList.Columns.Clear();
 
             // Add columns
-            ListViewEx_LM_ScrollTexList.Columns.Add(ColumnHeader_Number);
-            if (simplifiedView) ListViewEx_LM_ScrollTexList.Columns.Add(columnHeader_MaterialName);
-            ListViewEx_LM_ScrollTexList.Columns.Add(ColumnHeader_Behavior);
-            ListViewEx_LM_ScrollTexList.Columns.Add(ColumnHeader_Type);
-            ListViewEx_LM_ScrollTexList.Columns.Add(ColumnHeader_Duration);
-            ListViewEx_LM_ScrollTexList.Columns.Add(ColumnHeader_Speed);
-            if (!simplifiedView) ListViewEx_LM_ScrollTexList.Columns.Add(ColumnHeader_VertexPointer);
-            ListViewEx_LM_ScrollTexList.Columns.Add(ColumnHeader_Vertices);
+            advTree_ScrollTexList.Columns.Add(columnHeader_Number);
+            if (simplifiedView) advTree_ScrollTexList.Columns.Add(columnHeader_Material);
+            advTree_ScrollTexList.Columns.Add(columnHeader_Behavior);
+            advTree_ScrollTexList.Columns.Add(columnHeader_Type);
+            advTree_ScrollTexList.Columns.Add(columnHeader_Duration);
+            advTree_ScrollTexList.Columns.Add(columnHeader_Speed);
+            if (!simplifiedView) advTree_ScrollTexList.Columns.Add(columnHeader_VertexPointer);
+            advTree_ScrollTexList.Columns.Add(columnHeader_Vertices);
 
             // Add new items
             if (simplifiedView)
@@ -216,11 +220,11 @@ namespace SM64_ROM_Manager
             // Update new items
             UpdateAllListViewItems();
 
-            ListViewEx_LM_ScrollTexList.EndUpdate();
+            advTree_ScrollTexList.EndUpdate();
 
             // Select first item
-            if (ListViewEx_LM_ScrollTexList.Items.Count > 0)
-                ListViewEx_LM_ScrollTexList.Items[0].Selected = true;
+            if (allNodes.Count > 0)
+                advTree_ScrollTexList.SelectedNode = allNodes[0];
         }
 
         private void AddListViewItem(ManagedScrollingTexture scrollTex)
@@ -228,22 +232,22 @@ namespace SM64_ROM_Manager
 
         private void AddListViewItem(ManagedScrollingTexture[] scrollTex)
         {
-            var lvi = new ListViewItem();
+            var lvi = new Node();
             lvi.Tag = scrollTex.Select(n => new ScrollTexPropertyClass(n)).ToArray();
 
             for (int i = 1; i <= 7; i++)
-                lvi.SubItems.Add(new ListViewItem.ListViewSubItem());
+                lvi.Cells.Add(new Cell());
 
-            ListViewEx_LM_ScrollTexList.Items.Add(lvi);
+            allNodes.Add(lvi);
         }
 
         private void UpdateAllListViewItems()
         {
             int counter = 1;
 
-            ListViewEx_LM_ScrollTexList.BeginUpdate();
+            advTree_ScrollTexList.BeginUpdate();
 
-            foreach (ListViewItem item in ListViewEx_LM_ScrollTexList.Items)
+            foreach (Node item in allNodes)
             {
                 var scrollTexes = (ScrollTexPropertyClass[])item.Tag;
                 var scrollTex = scrollTexes.First();
@@ -251,48 +255,48 @@ namespace SM64_ROM_Manager
 
                 if (!simplifiedView)
                     SetLvGroup(item, scrollTex.GroupID);
+                else
+                    advTree_ScrollTexList.Nodes.Add(item);
 
-                item.SubItems[sii++].Text = Conversions.ToString(counter);
+                item.Cells[sii++].Text = Conversions.ToString(counter);
 
                 if (simplifiedView)
-                    item.SubItems[sii++].Text = GetMaterialName(scrollTex.GroupID);
+                    item.Cells[sii++].Text = GetMaterialName(scrollTex.GroupID);
 
-                item.SubItems[sii++].Text = scrollTex.Behavior.ToString();
-                item.SubItems[sii++].Text = scrollTex.Type.ToString();
-                item.SubItems[sii++].Text = Conversions.ToString(scrollTex.CycleDuration);
-                item.SubItems[sii++].Text = Conversions.ToString(scrollTex.ScrollingSpeed);
+                item.Cells[sii++].Text = scrollTex.Behavior.ToString();
+                item.Cells[sii++].Text = scrollTex.Type.ToString();
+                item.Cells[sii++].Text = Conversions.ToString(scrollTex.CycleDuration);
+                item.Cells[sii++].Text = Conversions.ToString(scrollTex.ScrollingSpeed);
 
                 if (!simplifiedView)
-                    item.SubItems[sii++].Text = Conversions.ToString(TextValueConverter.ValueFromText(Conversions.ToString(scrollTex.VertexPointer)));
+                    item.Cells[sii++].Text = Conversions.ToString(TextValueConverter.ValueFromText(Conversions.ToString(scrollTex.VertexPointer)));
 
-                item.SubItems[sii++].Text = Conversions.ToString(scrollTexes.Sum(n => n.FacesCount));
+                item.Cells[sii++].Text = Conversions.ToString(scrollTexes.Sum(n => n.FacesCount));
 
                 counter += 1;
             }
 
-            ListViewEx_LM_ScrollTexList.EndUpdate();
+            advTree_ScrollTexList.EndUpdate();
         }
 
-        private void SetLvGroup(ListViewItem item, short groupID)
+        private void SetLvGroup(Node item, short groupID)
         {
-            ListViewGroup lvg = null;
-            foreach (ListViewGroup lvgg in ListViewEx_LM_ScrollTexList.Groups)
-            {
-                if (lvg is null && Conversions.ToBoolean(Operators.ConditionalCompareObjectEqual(lvgg.Tag, groupID, false)))
-                    lvg = lvgg;
-            }
+            var groupName = "lvg_" + groupID;
+            Node lvg = advTree_ScrollTexList.FindNodeByName(groupName);
 
             if (lvg is null)
             {
-                lvg = new ListViewGroup()
+                lvg = new Node
                 {
-                    Tag = groupID,
-                    Header = $"Group {groupID} - {GetMaterialName(groupID)}"
+                    Name = groupName,
+                    Text = $"Group {groupID} - {GetMaterialName(groupID)}",
+                    Selectable = false,
+                    Expanded = true
                 };
-                ListViewEx_LM_ScrollTexList.Groups.Add(lvg);
+                advTree_ScrollTexList.Nodes.Add(lvg);
             }
 
-            item.Group = lvg;
+            lvg.Nodes.Add(item);
         }
 
         private string GetMaterialName(short groupID)
@@ -302,31 +306,22 @@ namespace SM64_ROM_Manager
             return texName;
         }
 
-        private void ListViewEx_LM_ScrollTexList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var objs = new List<ScrollTexPropertyClass>();
-
-            foreach (ListViewItem item in ListViewEx_LM_ScrollTexList.SelectedItems)
-                objs.AddRange((ScrollTexPropertyClass[])item.Tag);
-
-            AdvPropertyGrid1.SuspendLayout();
-            AdvPropertyGrid1.SelectedObjects = objs.ToArray();
-            AdvPropertyGrid1.ResumeLayout();
-        }
-
         private void ButtonItem43_Click(object sender, EventArgs e)
         {
-            var itemsToRemove = new List<ListViewItem>();
+            var itemsToRemove = new List<Node>();
 
-            foreach (ListViewItem item in ListViewEx_LM_ScrollTexList.SelectedItems)
+            foreach (Node item in advTree_ScrollTexList.SelectedNodes)
             {
                 ScrollTexPropertyClass[] scrollTex = (ScrollTexPropertyClass[])item.Tag;
                 scrollTex.ForEach(n => cArea.ScrollingTextures.Remove(n.ScrollingTexture));
                 itemsToRemove.Add(item);
             }
 
-            foreach (ListViewItem item in itemsToRemove)
-                ListViewEx_LM_ScrollTexList.Items.Remove(item);
+            foreach (Node item in itemsToRemove)
+            {
+                allNodes.Remove(item);
+                item.Remove();
+            }
 
             ScrollTexRemoved?.Invoke(this, new EventArgs());
         }
@@ -359,6 +354,18 @@ namespace SM64_ROM_Manager
         {
             // Commit unsaved changed of property grid
             AdvPropertyGrid1.CommitEdit();
+        }
+
+        private void AdvTree_ScrollTexList_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            var objs = new List<ScrollTexPropertyClass>();
+
+            foreach (Node item in advTree_ScrollTexList.SelectedNodes)
+                objs.AddRange((ScrollTexPropertyClass[])item.Tag);
+
+            AdvPropertyGrid1.SuspendLayout();
+            AdvPropertyGrid1.SelectedObjects = objs.ToArray();
+            AdvPropertyGrid1.ResumeLayout();
         }
     }
 }

@@ -39,12 +39,6 @@ namespace SM64_ROM_Manager
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemBoxContentEditor));
             this.Panel1 = new System.Windows.Forms.Panel();
-            this.ListViewEx1 = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ColumnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Bar1 = new DevComponents.DotNetBar.Bar();
             this.ButtonItem_SaveRom = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem6 = new DevComponents.DotNetBar.ButtonItem();
@@ -54,65 +48,28 @@ namespace SM64_ROM_Manager
             this.ButtonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.AdvPropertyGrid1 = new DevComponents.DotNetBar.AdvPropertyGrid();
+            this.columnHeader10 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader9 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader8 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader7 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader6 = new DevComponents.AdvTree.ColumnHeader();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
+            this.advTree1 = new DevComponents.AdvTree.AdvTree();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvPropertyGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.Panel1.Controls.Add(this.ListViewEx1);
+            this.Panel1.Controls.Add(this.advTree1);
             this.Panel1.Controls.Add(this.Bar1);
             this.Panel1.Controls.Add(this.AdvPropertyGrid1);
             resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
-            // 
-            // ListViewEx1
-            // 
-            this.ListViewEx1.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx1.Border.Class = "ListViewBorder";
-            this.ListViewEx1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ColumnHeader1,
-            this.ColumnHeader2,
-            this.ColumnHeader3,
-            this.ColumnHeader4,
-            this.ColumnHeader5});
-            this.ListViewEx1.DisabledBackColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.ListViewEx1, "ListViewEx1");
-            this.ListViewEx1.FocusCuesEnabled = false;
-            this.ListViewEx1.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx1.FullRowSelect = true;
-            this.ListViewEx1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.ListViewEx1.HideSelection = false;
-            this.ListViewEx1.Name = "ListViewEx1";
-            this.ListViewEx1.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx1.View = System.Windows.Forms.View.Details;
-            this.ListViewEx1.SelectedIndexChanged += new System.EventHandler(this.ListViewEx1_SelectedIndexChanged);
-            // 
-            // ColumnHeader1
-            // 
-            resources.ApplyResources(this.ColumnHeader1, "ColumnHeader1");
-            // 
-            // ColumnHeader2
-            // 
-            resources.ApplyResources(this.ColumnHeader2, "ColumnHeader2");
-            // 
-            // ColumnHeader3
-            // 
-            resources.ApplyResources(this.ColumnHeader3, "ColumnHeader3");
-            // 
-            // ColumnHeader4
-            // 
-            resources.ApplyResources(this.ColumnHeader4, "ColumnHeader4");
-            // 
-            // ColumnHeader5
-            // 
-            resources.ApplyResources(this.ColumnHeader5, "ColumnHeader5");
             // 
             // Bar1
             // 
@@ -217,6 +174,72 @@ namespace SM64_ROM_Manager
             this.AdvPropertyGrid1.Name = "AdvPropertyGrid1";
             this.AdvPropertyGrid1.PropertyValueChanged += new System.ComponentModel.PropertyChangedEventHandler(this.AdvPropertyGrid1_PropertyValueChanged);
             // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Name = "columnHeader10";
+            resources.ApplyResources(this.columnHeader10, "columnHeader10");
+            this.columnHeader10.Width.Absolute = 80;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Name = "columnHeader9";
+            resources.ApplyResources(this.columnHeader9, "columnHeader9");
+            this.columnHeader9.Width.Absolute = 80;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Name = "columnHeader8";
+            resources.ApplyResources(this.columnHeader8, "columnHeader8");
+            this.columnHeader8.Width.Absolute = 150;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Name = "columnHeader7";
+            resources.ApplyResources(this.columnHeader7, "columnHeader7");
+            this.columnHeader7.Width.Absolute = 60;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Name = "columnHeader6";
+            resources.ApplyResources(this.columnHeader6, "columnHeader6");
+            this.columnHeader6.Width.Absolute = 40;
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // advTree1
+            // 
+            this.advTree1.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTree1.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTree1.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree1.Columns.Add(this.columnHeader6);
+            this.advTree1.Columns.Add(this.columnHeader7);
+            this.advTree1.Columns.Add(this.columnHeader8);
+            this.advTree1.Columns.Add(this.columnHeader9);
+            this.advTree1.Columns.Add(this.columnHeader10);
+            resources.ApplyResources(this.advTree1, "advTree1");
+            this.advTree1.DragDropEnabled = false;
+            this.advTree1.ExpandWidth = 0;
+            this.advTree1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree1.MultiSelect = true;
+            this.advTree1.Name = "advTree1";
+            this.advTree1.NodesConnector = this.nodeConnector1;
+            this.advTree1.NodeStyle = this.elementStyle1;
+            this.advTree1.PathSeparator = ";";
+            this.advTree1.Styles.Add(this.elementStyle1);
+            this.advTree1.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTree1_AfterNodeSelect);
+            // 
             // ItemBoxContentEditor
             // 
             resources.ApplyResources(this, "$this");
@@ -229,27 +252,16 @@ namespace SM64_ROM_Manager
             this.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AdvPropertyGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree1)).EndInit();
             this.ResumeLayout(false);
 
         }
-
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx1;
 
         private DevComponents.DotNetBar.Bar Bar1;
 
         private DevComponents.DotNetBar.ButtonItem ButtonItem1;
 
         private DevComponents.DotNetBar.AdvPropertyGrid AdvPropertyGrid1;
-
-        private ColumnHeader ColumnHeader1;
-
-        private ColumnHeader ColumnHeader2;
-
-        private ColumnHeader ColumnHeader3;
-
-        private ColumnHeader ColumnHeader4;
-
-        private ColumnHeader ColumnHeader5;
 
         private DevComponents.DotNetBar.ButtonItem ButtonItem2;
 
@@ -264,6 +276,13 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonItem ButtonItem_SaveRom;
 
         private DevComponents.DotNetBar.ButtonItem ButtonItem6;
-
+        private DevComponents.AdvTree.AdvTree advTree1;
+        private DevComponents.AdvTree.ColumnHeader columnHeader6;
+        private DevComponents.AdvTree.ColumnHeader columnHeader7;
+        private DevComponents.AdvTree.ColumnHeader columnHeader8;
+        private DevComponents.AdvTree.ColumnHeader columnHeader9;
+        private DevComponents.AdvTree.ColumnHeader columnHeader10;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
     }
 }

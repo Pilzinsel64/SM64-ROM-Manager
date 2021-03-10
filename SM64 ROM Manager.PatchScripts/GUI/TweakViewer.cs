@@ -15,6 +15,7 @@ using static Microsoft.VisualBasic.CompilerServices.LikeOperator;
 using SM64Lib.Patching;
 using DevComponents.DotNetBar.Controls;
 using SM64_ROM_Manager.PatchScripts.LangRes;
+using Pilz.Cryptography;
 
 namespace SM64_ROM_Manager.PatchScripts
 {
@@ -22,6 +23,12 @@ namespace SM64_ROM_Manager.PatchScripts
     {
 
         // C o n s t r u c t o r
+
+        static TweakViewer()
+        {
+            // Resolve custom image sources
+            DevComponents.DotNetBar.TextMarkup.MarkupSettings.ResolveImage += MarkupSettings_ResolveImage;
+        }
 
         public TweakViewer(SM64Lib.RomManager rommgr)
         {
@@ -35,7 +42,7 @@ namespace SM64_ROM_Manager.PatchScripts
         }
 
         // E v e n t s
-        
+
         public static event TweakBeforeApplyEventHandler TweakBeforeApply;
         public delegate void TweakBeforeApplyEventHandler();
 
@@ -47,10 +54,31 @@ namespace SM64_ROM_Manager.PatchScripts
 
         // F i e l d s
 
+        private static readonly string imgSrc_OfficialFlag = new UniquieID<TweakViewer>(true);
+        private static readonly string imgSrc_RecommendedFlag = new UniquieID<TweakViewer>(true);
+        private bool showOnlyOfficialTweaks = false;
+        private bool showOnlyRecommendedTweaks = false;
+        private string currentFilter = string.Empty;
         private List<PatchProfile> myPatchs = new List<PatchProfile>();
         private SM64Lib.RomManager rommgr;
         private IEnumerable<TweakDatabaseSyncFile> syncFiles = new TweakDatabaseSyncFile[] { };
         private TweakDatabaseManager dbmgr = new TweakDatabaseManager(TweakDatabasePreferences.Load(Path.Combine(General.MyDataPath, "Other\\Tweak Database Preferences.json")));
+
+        // R e s o l v e   c u s t o m   i m a g e   s o u r c e s
+
+        private static void MarkupSettings_ResolveImage(object sender, DevComponents.DotNetBar.TextMarkup.ResolveImageEventArgs e)
+        {
+            if (e.Key == imgSrc_OfficialFlag)
+            {
+                e.ResolvedImage = MyIcons.icons8_sheriff_16px;
+                e.Handled = true;
+            }
+            else if (e.Key == imgSrc_RecommendedFlag)
+            {
+                e.ResolvedImage = MyIcons.icons8_good_quality_16px;
+                e.Handled = true;
+            }
+        }
 
         // F e a t u r e s
 
@@ -155,15 +183,15 @@ namespace SM64_ROM_Manager.PatchScripts
             CircularProgress1.Stop();
         }
 
-        private void LoadTweakList(string Filter = "")
+        private void LoadTweakList()
         {
-            bool enableFilter = !string.IsNullOrEmpty(Filter.Trim());
-            Filter = $"*{Filter}*";
+            bool enableFilter = !string.IsNullOrEmpty(currentFilter.Trim());
+            var filter = $"*{currentFilter}*";
             ItemListBox1.Items.Clear();
 
             foreach (PatchProfile patch in myPatchs)
             {
-                if (!enableFilter || LikeString(patch.Name, Filter, CompareMethod.Text) || patch.Scripts.Where(n => LikeString(n.Name, Filter, CompareMethod.Text)).Any())
+                if ((!enableFilter || LikeString(patch.Name, filter, CompareMethod.Text) || patch.Scripts.Where(n => LikeString(n.Name, filter, CompareMethod.Text)).Any()) && (!showOnlyOfficialTweaks || patch.Official) && (!showOnlyRecommendedTweaks || patch.Recommended))
                 {
                     var btnItem = GetButtonItemFromPatch(patch);
                     ItemListBox1.Items.Add(btnItem);
@@ -197,6 +225,8 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             LabelX_PatchName.Text = patch.Name;
             labelX_Version.Text = $"Version {patch.Version}";
+            labelX_OfficialFlag.Enabled = patch.Official;
+            labelX_RecommendedFlag.Enabled = patch.Recommended;
 
             if (!string.IsNullOrEmpty(LabelX_Description.Text))
             {
@@ -306,13 +336,22 @@ namespace SM64_ROM_Manager.PatchScripts
 
         private ButtonItem GetButtonItemFromPatch(PatchProfile patch)
         {
+            var baseText = $"{patch.Name} ";
+            if (patch.Official)
+                baseText += $"<img src=\"{imgSrc_OfficialFlag}\"/>";
+            if (patch.Recommended)
+                baseText += $"<img src=\"{imgSrc_RecommendedFlag}\"/>";
+            baseText = baseText.Trim();
+
             var btnItem = new ButtonItem()
             {
-                Text = patch.Name,
+                Text = baseText,
                 Tag = patch,
                 ForeColor = GetTweakColor(patch)
             };
+
             btnItem.MouseUp += ItemListBox1_ItemMouseClick;
+
             return btnItem;
         }
 
@@ -624,7 +663,8 @@ namespace SM64_ROM_Manager.PatchScripts
 
         private void ButtonX7_Click(object sender, EventArgs e)
         {
-            LoadTweakList(TextBoxX1.Text);
+            currentFilter = TextBoxX1.Text;
+            LoadTweakList();
         }
 
         private void TextBoxX1_KeyDown(object sender, KeyEventArgs e)
@@ -686,6 +726,18 @@ namespace SM64_ROM_Manager.PatchScripts
         {
             if (MessageBoxEx.Show(this, TweaksGUILangRes.MsgBox_RevertScript, TweaksGUILangRes.MsgBox_RevertScript_Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 ApplyUndoPatch(GetSelectedScript(), rommgr);
+        }
+
+        private void ButtonItem_ShowOnlyOfficialTweaks_Click(object sender, EventArgs e)
+        {
+            showOnlyOfficialTweaks = ButtonItem_ShowOnlyOfficialTweaks.Checked;
+            LoadTweakList();
+        }
+
+        private void ButtonItem_ShowOnlyRecommendedTweaks_Click(object sender, EventArgs e)
+        {
+            showOnlyRecommendedTweaks = ButtonItem_ShowOnlyRecommendedTweaks.Checked;
+            LoadTweakList();
         }
     }
 }

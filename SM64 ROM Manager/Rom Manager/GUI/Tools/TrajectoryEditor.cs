@@ -12,6 +12,8 @@ using global::SM64Lib;
 using global::SM64Lib.Trajectorys;
 using Z.Collections.Extensions;
 using Z.Core.Extensions;
+using DevComponents.AdvTree;
+using ColumnHeader = DevComponents.AdvTree.ColumnHeader;
 
 namespace SM64_ROM_Manager
 {
@@ -22,8 +24,6 @@ namespace SM64_ROM_Manager
             base.Shown += TrajectoryEditor_Shown;
             InitializeComponent();
             base.UpdateAmbientColors();
-            foreach (ColumnHeader c in ListViewEx1.Columns)
-                c.TextAlign = HorizontalAlignment.Center;
             this.rommgr = rommgr;
         }
 
@@ -174,21 +174,23 @@ namespace SM64_ROM_Manager
 
         private void LoadTrajectory(Trajectory trac)
         {
-            ListViewEx1.SuspendLayout();
-            ListViewEx1.Items.Clear();
+            advTree1.BeginUpdate();
+            advTree1.Nodes.Clear();
+
             foreach (Vector3 v in trac.Points)
             {
-                var lvi = new ListViewItem(new string[] { "", v.X.ToString(), v.Y.ToString(), v.Z.ToString() });
+                var lvi = new Node(string.Empty);
+                lvi.Cells.Add(new Cell(v.X.ToString()));
+                lvi.Cells.Add(new Cell(v.Y.ToString()));
+                lvi.Cells.Add(new Cell(v.Z.ToString()));
                 lvi.Tag = v;
-                ListViewEx1.Items.Add(lvi);
+                advTree1.Nodes.Add(lvi);
             }
 
-            if (ListViewEx1.Items.Count > 0)
-            {
-                ListViewEx1.Items[0].Selected = true;
-            }
+            if (advTree1.Nodes.Count > 0)
+                advTree1.SelectedNode = advTree1.Nodes[0];
 
-            ListViewEx1.ResumeLayout();
+            advTree1.EndUpdate();
         }
 
         private void LoadNodeData(Vector3 v)
@@ -205,13 +207,13 @@ namespace SM64_ROM_Manager
             if (!loadingNodeData)
             {
                 var v = new Vector3(IntegerInput1.Value, IntegerInput2.Value, IntegerInput3.Value);
-                foreach (ListViewItem item in ListViewEx1.SelectedItems)
+                foreach (Node n in advTree1.SelectedNodes)
                 {
-                    SelectedTrajectory.Points[item.Index] = v;
-                    item.Tag = v;
-                    item.SubItems[1].Text = Conversions.ToString(v.X);
-                    item.SubItems[2].Text = Conversions.ToString(v.Y);
-                    item.SubItems[3].Text = Conversions.ToString(v.Z);
+                    SelectedTrajectory.Points[n.Index] = v;
+                    n.Tag = v;
+                    n.Cells[1].Text = Conversions.ToString(v.X);
+                    n.Cells[2].Text = Conversions.ToString(v.Y);
+                    n.Cells[3].Text = Conversions.ToString(v.Z);
                 }
             }
         }
@@ -222,11 +224,14 @@ namespace SM64_ROM_Manager
             {
                 var v = Vector3.Zero;
                 SelectedTrajectory.Points.Add(v);
-                var lvi = new ListViewItem(new string[] { "", v.X.ToString(), v.Y.ToString(), v.Z.ToString() });
+                var lvi = new Node(string.Empty);
+                lvi.Cells.Add(new Cell(v.X.ToString()));
+                lvi.Cells.Add(new Cell(v.Y.ToString()));
+                lvi.Cells.Add(new Cell(v.Z.ToString()));
                 lvi.Tag = v;
-                ListViewEx1.Items.Add(lvi);
+                advTree1.Nodes.Add(lvi);
                 lvi.EnsureVisible();
-                lvi.Selected = true;
+                advTree1.SelectedNode = lvi;
             }
         }
 
@@ -234,12 +239,10 @@ namespace SM64_ROM_Manager
         {
             if (SelectedTrajectory is object)
             {
-                var indicies = new int[ListViewEx1.SelectedItems.Count];
-                ListViewEx1.SelectedIndices.CopyTo(indicies, 0);
-                foreach (int index in indicies.OrderByDescending(n => n))
+                foreach (Node n in advTree1.SelectedNodes.ToArray())
                 {
-                    SelectedTrajectory.Points.RemoveAt(index);
-                    ListViewEx1.Items.RemoveAt(index);
+                    SelectedTrajectory.Points.RemoveAt(n.Index);
+                    n.Remove();
                 }
             }
         }
@@ -258,23 +261,22 @@ namespace SM64_ROM_Manager
         {
             if (additor != 0 && SelectedTrajectory is object)
             {
-                ListViewEx1.SuspendLayout();
-                var indicies = new int[ListViewEx1.SelectedIndices.Count];
-                ListViewEx1.SelectedIndices.CopyTo(indicies, 0);
-                foreach (int index in additor < 0 ? indicies.OrderByDescending(n => n) : indicies.OrderBy(n => n))
+                advTree1.BeginUpdate();
+                foreach (Node n in advTree1.SelectedNodes.ToArray())
                 {
-                    int newIndex = index + additor;
-                    if (newIndex >= 0 && newIndex < ListViewEx1.Items.Count)
+                    int nodeIndex = n.Index;
+                    int newIndex = nodeIndex + additor;
+                    if (newIndex >= 0 && newIndex < SelectedTrajectory.Points.Count)
                     {
-                        var item = ListViewEx1.Items[index];
-                        ListViewEx1.Items.RemoveAt(index);
-                        SelectedTrajectory.Points.RemoveAt(index);
-                        ListViewEx1.Items.Insert(newIndex, item);
-                        SelectedTrajectory.Points.Insert(newIndex, (Vector3)item.Tag);
+                        SelectedTrajectory.Points.RemoveAt(nodeIndex);
+                        SelectedTrajectory.Points.Insert(newIndex, (Vector3)n.Tag);
+                        n.Remove();
+                        advTree1.Nodes.Insert(newIndex, n);
+                        advTree1.SelectedNode = n;
                     }
                 }
 
-                ListViewEx1.ResumeLayout();
+                advTree1.EndUpdate();
             }
         }
 
@@ -326,12 +328,10 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private void ListViewEx1_SelectedIndexChanged(object sender, EventArgs e)
+        private void advTree1_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
         {
-            if (ListViewEx1.SelectedIndices.Count > 0)
-            {
-                LoadNodeData((Vector3)ListViewEx1.SelectedItems[0].Tag);
-            }
+            if (advTree1.SelectedNode is object)
+                LoadNodeData((Vector3)advTree1.SelectedNode.Tag);
         }
     }
 }

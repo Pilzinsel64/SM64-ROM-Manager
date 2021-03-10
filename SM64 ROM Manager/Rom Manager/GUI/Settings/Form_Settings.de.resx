@@ -144,6 +144,15 @@
   <data name="LabelX6.Text" xml:space="preserve">
     <value>Standart Kameramodus:</value>
   </data>
+  <data name="SwitchButton_EnableOpenWith.OffText" xml:space="preserve">
+    <value>Deaktiviert</value>
+  </data>
+  <data name="SwitchButton_EnableOpenWith.OnText" xml:space="preserve">
+    <value>Aktiviert</value>
+  </data>
+  <data name="labelX22.Text" xml:space="preserve">
+    <value>"Öffnen mit"-Dateikontextmenüeinintrag für .z64-Dateien</value>
+  </data>
   <data name="labelX21.Text" xml:space="preserve">
     <value>Öffne Dankes-Seite nach Aktuallisierungen:</value>
   </data>
@@ -195,6 +204,9 @@
   <data name="ComboItem3.Text" xml:space="preserve">
     <value>Nein</value>
   </data>
+  <data name="TabItem3.Text" xml:space="preserve">
+    <value>Levelmanager</value>
+  </data>
   <data name="labelX23.Text" xml:space="preserve">
     <value>Editor-Textbox automatisch fokusieren</value>
   </data>
@@ -242,9 +254,6 @@
   </data>
   <data name="TabItem8.Text" xml:space="preserve">
     <value>Netzwerk</value>
-  </data>
-  <data name="TabItem3.Text" xml:space="preserve">
-    <value>Levelmanager</value>
   </data>
   <data name="TabItem2.Text" xml:space="preserve">
     <value>Bereichseditor</value>

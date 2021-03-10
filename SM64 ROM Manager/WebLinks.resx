@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BugReportForm" xml:space="preserve">
+    <value>https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH</value>
+  </data>
+  <data name="BugReportFormInternal" xml:space="preserve">
+    <value>https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH?hide-sidebars</value>
+  </data>
   <data name="CommunityHelpDocument" xml:space="preserve">
     <value>https://docs.google.com/document/d/1pSYR91UiMVKnP3PyvJiCdwRF5wNS_nZzMe-r2WPQUJk</value>
+  </data>
+  <data name="FeatureRequestForm" xml:space="preserve">
+    <value>https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS</value>
+  </data>
+  <data name="FeatureRequestFormInternal" xml:space="preserve">
+    <value>https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS?hide-sidebars</value>
   </data>
   <data name="PublicHelpChat" xml:space="preserve">
     <value>https://cloud.pilzinsel64.com/call/q4cuy7fx</value>
@@ -128,6 +140,12 @@
   </data>
   <data name="ThankYouPage" xml:space="preserve">
     <value>https://pilzinsel64.com/thank-you/</value>
+  </data>
+  <data name="TranslationSubmitionForm" xml:space="preserve">
+    <value>https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma</value>
+  </data>
+  <data name="TranslationSubmitionFormInternal" xml:space="preserve">
+    <value>https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma?hide-sidebars</value>
   </data>
   <data name="UpdateUrl" xml:space="preserve">
     <value>https://cloud.pilzinsel64.com/s/sm64rm-allupdatepackages/download?path=%2F&amp;files=CurrentUpdates.json</value>

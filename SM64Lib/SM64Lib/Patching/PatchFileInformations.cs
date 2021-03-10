@@ -11,6 +11,8 @@ namespace SM64Lib.Patching
     public class PatchFileInformations
     {
         public string PatchFileName { get; set; }
+        public string ClassPath { get; set; }
+        public string MethodName { get; set; }
 
         public void Set(PatchScript script)
         {
@@ -19,7 +21,14 @@ namespace SM64Lib.Patching
 
         public static PatchFileInformations Get(PatchScript script)
         {
-            return JObject.Parse(script.Script).ToObject<PatchFileInformations>();
+            try
+            {
+                return JObject.Parse(script.Script).ToObject<PatchFileInformations>();
+            }
+            catch(Exception)
+            {
+                return new PatchFileInformations();
+            }
         }
     }
 }

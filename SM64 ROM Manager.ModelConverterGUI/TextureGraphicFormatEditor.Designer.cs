@@ -36,7 +36,6 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextureGraphicFormatEditor));
-            this.ListViewEx1 = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.Button_SaveColsettings = new DevComponents.DotNetBar.ButtonX();
             this.ComboBox_ColType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -57,6 +56,9 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             this.LabelX6 = new DevComponents.DotNetBar.LabelX();
             this.LabelX7 = new DevComponents.DotNetBar.LabelX();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.advTree1 = new DevComponents.AdvTree.AdvTree();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.panel_MatOptions = new System.Windows.Forms.Panel();
             this.LabelX_CollisionType = new DevComponents.DotNetBar.LabelX();
             this.CheckBoxX_EnableTwoSidedFaces = new DevComponents.DotNetBar.Controls.CheckBoxX();
@@ -66,27 +68,10 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             this.ButtonItem1 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree1)).BeginInit();
             this.panel_MatOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ListViewEx1
-            // 
-            resources.ApplyResources(this.ListViewEx1, "ListViewEx1");
-            this.ListViewEx1.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.ListViewEx1.Border.Class = "ListViewBorder";
-            this.ListViewEx1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx1.FocusCuesEnabled = false;
-            this.ListViewEx1.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx1.FullRowSelect = true;
-            this.ListViewEx1.HideSelection = false;
-            this.ListViewEx1.Name = "ListViewEx1";
-            this.ListViewEx1.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx1.SelectedIndexChanged += new System.EventHandler(this.ListBoxAdv_CI_Textures_ItemClick);
             // 
             // PictureBox1
             // 
@@ -294,13 +279,44 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.advTree1);
             this.Panel1.Controls.Add(this.panel_MatOptions);
             this.Panel1.Controls.Add(this.checkBoxX_Include);
             this.Panel1.Controls.Add(this.Button_SaveColsettings);
             this.Panel1.Controls.Add(this.PictureBox1);
-            this.Panel1.Controls.Add(this.ListViewEx1);
             resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
+            // 
+            // advTree1
+            // 
+            this.advTree1.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            resources.ApplyResources(this.advTree1, "advTree1");
+            this.advTree1.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTree1.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree1.Name = "advTree1";
+            this.advTree1.NodesConnector = this.nodeConnector1;
+            this.advTree1.DragDropEnabled = false;
+            this.advTree1.MultiSelect = true;
+            this.advTree1.NodeStyle = this.elementStyle1;
+            this.advTree1.PathSeparator = ";";
+            this.advTree1.Styles.Add(this.elementStyle1);
+            this.advTree1.View = DevComponents.AdvTree.eView.Tile;
+            this.advTree1.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTree1_AfterNodeSelect);
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // panel_MatOptions
             // 
@@ -400,13 +416,12 @@ namespace SM64_ROM_Manager.ModelConverterGUI
             this.TopRightCornerSize = 0;
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTree1)).EndInit();
             this.panel_MatOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ContextMenuBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
-
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx1;
 
 
 
@@ -482,5 +497,8 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private DevComponents.DotNetBar.Controls.CheckBoxX CheckBoxX_EnableTwoSidedFaces;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_Include;
         private System.Windows.Forms.Panel panel_MatOptions;
+        private DevComponents.AdvTree.AdvTree advTree1;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
     }
 }

@@ -37,936 +37,408 @@ namespace SM64_ROM_Manager
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(TrajectoryEditor));
-            _ListViewEx1 = new DevComponents.DotNetBar.Controls.ListViewEx();
-            _ListViewEx1.SelectedIndexChanged += new EventHandler(ListViewEx1_SelectedIndexChanged);
-            _ColumnHeader1 = new ColumnHeader();
-            _ColumnHeader2 = new ColumnHeader();
-            _ColumnHeader3 = new ColumnHeader();
-            _ColumnHeader4 = new ColumnHeader();
-            _ComboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            _ComboBoxEx1.SelectedIndexChanged += new EventHandler(ComboBoxEx1_SelectedIndexChanged);
-            _IntegerInput1 = new DevComponents.Editors.IntegerInput();
-            _IntegerInput1.ValueChanged += new EventHandler(IntegerInput1_ValueChanged);
-            _IntegerInput2 = new DevComponents.Editors.IntegerInput();
-            _IntegerInput2.ValueChanged += new EventHandler(IntegerInput1_ValueChanged);
-            _IntegerInput3 = new DevComponents.Editors.IntegerInput();
-            _IntegerInput3.ValueChanged += new EventHandler(IntegerInput1_ValueChanged);
-            _LabelX2 = new DevComponents.DotNetBar.LabelX();
-            _LabelX3 = new DevComponents.DotNetBar.LabelX();
-            _ButtonX1 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX1.Click += new EventHandler(ButtonX1_Click);
-            _ButtonX2 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX2.Click += new EventHandler(ButtonX2_Click);
-            _ButtonX3 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX3.Click += new EventHandler(ButtonX3_Click);
-            _ButtonX4 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX4.Click += new EventHandler(ButtonX4_Click);
-            _LabelX4 = new DevComponents.DotNetBar.LabelX();
-            _LabelX5 = new DevComponents.DotNetBar.LabelX();
-            _LabelX6 = new DevComponents.DotNetBar.LabelX();
-            _LabelX7 = new DevComponents.DotNetBar.LabelX();
-            _ButtonX5 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX5.Click += new EventHandler(ButtonX5_Click);
-            _ButtonX6 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX6.Click += new EventHandler(ButtonX6_Click);
-            _ButtonX7 = new DevComponents.DotNetBar.ButtonX();
-            _ButtonX7.Click += new EventHandler(ButtonX7_Click);
-            _ButtonX8 = new DevComponents.DotNetBar.ButtonX();
-            _Panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput3).BeginInit();
-            _Panel1.SuspendLayout();
-            SuspendLayout();
-            // 
-            // ListViewEx1
-            // 
-            resources.ApplyResources(_ListViewEx1, "ListViewEx1");
-            _ListViewEx1.BackColor = Color.White;
-            // 
-            // 
-            // 
-            _ListViewEx1.Border.Class = "ListViewBorder";
-            _ListViewEx1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _ListViewEx1.Columns.AddRange(new ColumnHeader[] { _ColumnHeader1, _ColumnHeader2, _ColumnHeader3, _ColumnHeader4 });
-            _ListViewEx1.DisabledBackColor = Color.Empty;
-            _ListViewEx1.FocusCuesEnabled = false;
-            _ListViewEx1.ForeColor = Color.Black;
-            _ListViewEx1.FullRowSelect = true;
-            _ListViewEx1.HeaderStyle = ColumnHeaderStyle.Nonclickable;
-            _ListViewEx1.HideSelection = false;
-            _ListViewEx1.MultiSelect = false;
-            _ListViewEx1.Name = "ListViewEx1";
-            _ListViewEx1.UseCompatibleStateImageBehavior = false;
-            _ListViewEx1.View = View.Details;
-            // 
-            // ColumnHeader1
-            // 
-            resources.ApplyResources(_ColumnHeader1, "ColumnHeader1");
-            // 
-            // ColumnHeader2
-            // 
-            resources.ApplyResources(_ColumnHeader2, "ColumnHeader2");
-            // 
-            // ColumnHeader3
-            // 
-            resources.ApplyResources(_ColumnHeader3, "ColumnHeader3");
-            // 
-            // ColumnHeader4
-            // 
-            resources.ApplyResources(_ColumnHeader4, "ColumnHeader4");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrajectoryEditor));
+            this.ComboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.IntegerInput1 = new DevComponents.Editors.IntegerInput();
+            this.IntegerInput2 = new DevComponents.Editors.IntegerInput();
+            this.IntegerInput3 = new DevComponents.Editors.IntegerInput();
+            this.LabelX2 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX3 = new DevComponents.DotNetBar.LabelX();
+            this.ButtonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.LabelX4 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX5 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX6 = new DevComponents.DotNetBar.LabelX();
+            this.LabelX7 = new DevComponents.DotNetBar.LabelX();
+            this.ButtonX5 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX6 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX7 = new DevComponents.DotNetBar.ButtonX();
+            this.ButtonX8 = new DevComponents.DotNetBar.ButtonX();
+            this.Panel1 = new System.Windows.Forms.Panel();
+            this.advTree1 = new DevComponents.AdvTree.AdvTree();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
+            this.columnHeader5 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader6 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader7 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader8 = new DevComponents.AdvTree.ColumnHeader();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput3)).BeginInit();
+            this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree1)).BeginInit();
+            this.SuspendLayout();
             // 
             // ComboBoxEx1
             // 
-            resources.ApplyResources(_ComboBoxEx1, "ComboBoxEx1");
-            _ComboBoxEx1.DisplayMember = "Text";
-            _ComboBoxEx1.DrawMode = DrawMode.OwnerDrawFixed;
-            _ComboBoxEx1.DropDownStyle = ComboBoxStyle.DropDownList;
-            _ComboBoxEx1.DropDownWidth = 250;
-            _ComboBoxEx1.ForeColor = Color.Black;
-            _ComboBoxEx1.FormattingEnabled = true;
-            _ComboBoxEx1.Name = "ComboBoxEx1";
-            _ComboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            resources.ApplyResources(this.ComboBoxEx1, "ComboBoxEx1");
+            this.ComboBoxEx1.DisplayMember = "Text";
+            this.ComboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxEx1.DropDownWidth = 250;
+            this.ComboBoxEx1.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxEx1.FormattingEnabled = true;
+            this.ComboBoxEx1.Name = "ComboBoxEx1";
+            this.ComboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ComboBoxEx1.SelectedIndexChanged += new System.EventHandler(this.ComboBoxEx1_SelectedIndexChanged);
             // 
             // IntegerInput1
             // 
-            resources.ApplyResources(_IntegerInput1, "IntegerInput1");
+            resources.ApplyResources(this.IntegerInput1, "IntegerInput1");
             // 
             // 
             // 
-            _IntegerInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            _IntegerInput1.MaxValue = 65535;
-            _IntegerInput1.MinValue = -65535;
-            _IntegerInput1.Name = "IntegerInput1";
-            _IntegerInput1.ShowUpDown = true;
+            this.IntegerInput1.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.IntegerInput1.MaxValue = 65535;
+            this.IntegerInput1.MinValue = -65535;
+            this.IntegerInput1.Name = "IntegerInput1";
+            this.IntegerInput1.ShowUpDown = true;
+            this.IntegerInput1.ValueChanged += new System.EventHandler(this.IntegerInput1_ValueChanged);
             // 
             // IntegerInput2
             // 
-            resources.ApplyResources(_IntegerInput2, "IntegerInput2");
+            resources.ApplyResources(this.IntegerInput2, "IntegerInput2");
             // 
             // 
             // 
-            _IntegerInput2.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput2.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            _IntegerInput2.MaxValue = 65535;
-            _IntegerInput2.MinValue = -65535;
-            _IntegerInput2.Name = "IntegerInput2";
-            _IntegerInput2.ShowUpDown = true;
+            this.IntegerInput2.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput2.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.IntegerInput2.MaxValue = 65535;
+            this.IntegerInput2.MinValue = -65535;
+            this.IntegerInput2.Name = "IntegerInput2";
+            this.IntegerInput2.ShowUpDown = true;
+            this.IntegerInput2.ValueChanged += new System.EventHandler(this.IntegerInput1_ValueChanged);
             // 
             // IntegerInput3
             // 
-            resources.ApplyResources(_IntegerInput3, "IntegerInput3");
+            resources.ApplyResources(this.IntegerInput3, "IntegerInput3");
             // 
             // 
             // 
-            _IntegerInput3.BackgroundStyle.Class = "DateTimeInputBackground";
-            _IntegerInput3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _IntegerInput3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            _IntegerInput3.MaxValue = 65535;
-            _IntegerInput3.MinValue = -65535;
-            _IntegerInput3.Name = "IntegerInput3";
-            _IntegerInput3.ShowUpDown = true;
+            this.IntegerInput3.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput3.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.IntegerInput3.MaxValue = 65535;
+            this.IntegerInput3.MinValue = -65535;
+            this.IntegerInput3.Name = "IntegerInput3";
+            this.IntegerInput3.ShowUpDown = true;
+            this.IntegerInput3.ValueChanged += new System.EventHandler(this.IntegerInput1_ValueChanged);
             // 
             // LabelX2
             // 
-            resources.ApplyResources(_LabelX2, "LabelX2");
-            _LabelX2.BackColor = Color.Transparent;
+            resources.ApplyResources(this.LabelX2, "LabelX2");
+            this.LabelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX2.Name = "LabelX2";
-            _LabelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX2.Name = "LabelX2";
+            this.LabelX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // LabelX3
             // 
-            resources.ApplyResources(_LabelX3, "LabelX3");
-            _LabelX3.BackColor = Color.Transparent;
+            resources.ApplyResources(this.LabelX3, "LabelX3");
+            this.LabelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX3.Name = "LabelX3";
-            _LabelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX3.Name = "LabelX3";
+            this.LabelX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
             // ButtonX1
             // 
-            _ButtonX1.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(_ButtonX1, "ButtonX1");
-            _ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX1.FocusCuesEnabled = false;
-            _ButtonX1.Image = My.Resources.MyIcons.icons8_add_subnode_16px;
-            _ButtonX1.Name = "ButtonX1";
-            _ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX1.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX1.SymbolSize = 12.0F;
+            this.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX1, "ButtonX1");
+            this.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX1.FocusCuesEnabled = false;
+            this.ButtonX1.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_add_subnode_16px;
+            this.ButtonX1.Name = "ButtonX1";
+            this.ButtonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX1.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.ButtonX1.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX1.SymbolSize = 12F;
+            this.ButtonX1.Click += new System.EventHandler(this.ButtonX1_Click);
             // 
             // ButtonX2
             // 
-            _ButtonX2.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(_ButtonX2, "ButtonX2");
-            _ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX2.FocusCuesEnabled = false;
-            _ButtonX2.Image = My.Resources.MyIcons.icons8_delete_subnode_16px;
-            _ButtonX2.Name = "ButtonX2";
-            _ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX2.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(150)), Conversions.ToInteger(Conversions.ToByte(0)), Conversions.ToInteger(Conversions.ToByte(0)));
-            _ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX2.SymbolSize = 12.0F;
+            this.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX2, "ButtonX2");
+            this.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX2.FocusCuesEnabled = false;
+            this.ButtonX2.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_delete_subnode_16px;
+            this.ButtonX2.Name = "ButtonX2";
+            this.ButtonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX2.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ButtonX2.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX2.SymbolSize = 12F;
+            this.ButtonX2.Click += new System.EventHandler(this.ButtonX2_Click);
             // 
             // ButtonX3
             // 
-            _ButtonX3.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(_ButtonX3, "ButtonX3");
-            _ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX3.FocusCuesEnabled = false;
-            _ButtonX3.Image = My.Resources.MyIcons.icons8_export_16px;
-            _ButtonX3.Name = "ButtonX3";
-            _ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX3, "ButtonX3");
+            this.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX3.FocusCuesEnabled = false;
+            this.ButtonX3.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_export_16px;
+            this.ButtonX3.Name = "ButtonX3";
+            this.ButtonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX3.Click += new System.EventHandler(this.ButtonX3_Click);
             // 
             // ButtonX4
             // 
-            _ButtonX4.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(_ButtonX4, "ButtonX4");
-            _ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX4.FocusCuesEnabled = false;
-            _ButtonX4.Image = My.Resources.MyIcons.icons8_import_16px;
-            _ButtonX4.Name = "ButtonX4";
-            _ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX4, "ButtonX4");
+            this.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX4.FocusCuesEnabled = false;
+            this.ButtonX4.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_import_16px;
+            this.ButtonX4.Name = "ButtonX4";
+            this.ButtonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX4.Click += new System.EventHandler(this.ButtonX4_Click);
             // 
             // LabelX4
             // 
-            resources.ApplyResources(_LabelX4, "LabelX4");
-            _LabelX4.BackColor = Color.Transparent;
+            resources.ApplyResources(this.LabelX4, "LabelX4");
+            this.LabelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX4.Name = "LabelX4";
+            this.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX4.Name = "LabelX4";
             // 
             // LabelX5
             // 
-            resources.ApplyResources(_LabelX5, "LabelX5");
-            _LabelX5.BackColor = Color.Transparent;
+            resources.ApplyResources(this.LabelX5, "LabelX5");
+            this.LabelX5.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX5.Name = "LabelX5";
+            this.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX5.Name = "LabelX5";
             // 
             // LabelX6
             // 
-            resources.ApplyResources(_LabelX6, "LabelX6");
-            _LabelX6.BackColor = Color.Transparent;
+            resources.ApplyResources(this.LabelX6, "LabelX6");
+            this.LabelX6.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX6.Name = "LabelX6";
+            this.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX6.Name = "LabelX6";
             // 
             // LabelX7
             // 
-            resources.ApplyResources(_LabelX7, "LabelX7");
-            _LabelX7.BackColor = Color.Transparent;
+            resources.ApplyResources(this.LabelX7, "LabelX7");
+            this.LabelX7.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
-            _LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            _LabelX7.Name = "LabelX7";
+            this.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LabelX7.Name = "LabelX7";
             // 
             // ButtonX5
             // 
-            _ButtonX5.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(_ButtonX5, "ButtonX5");
-            _ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX5.FocusCuesEnabled = false;
-            _ButtonX5.Image = My.Resources.MyIcons.icons8_save_16px;
-            _ButtonX5.Name = "ButtonX5";
-            _ButtonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX5, "ButtonX5");
+            this.ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX5.FocusCuesEnabled = false;
+            this.ButtonX5.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_save_16px;
+            this.ButtonX5.Name = "ButtonX5";
+            this.ButtonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX5.Click += new System.EventHandler(this.ButtonX5_Click);
             // 
             // ButtonX6
             // 
-            _ButtonX6.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(_ButtonX6, "ButtonX6");
-            _ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX6.FocusCuesEnabled = false;
-            _ButtonX6.Image = My.Resources.MyIcons.icons8_move_node_up_16px;
-            _ButtonX6.Name = "ButtonX6";
-            _ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX6.SymbolSize = 12.0F;
+            this.ButtonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX6, "ButtonX6");
+            this.ButtonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX6.FocusCuesEnabled = false;
+            this.ButtonX6.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_move_node_up_16px;
+            this.ButtonX6.Name = "ButtonX6";
+            this.ButtonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX6.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX6.SymbolSize = 12F;
+            this.ButtonX6.Click += new System.EventHandler(this.ButtonX6_Click);
             // 
             // ButtonX7
             // 
-            _ButtonX7.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(_ButtonX7, "ButtonX7");
-            _ButtonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX7.FocusCuesEnabled = false;
-            _ButtonX7.Image = My.Resources.MyIcons.icons8_move_node_down_16px;
-            _ButtonX7.Name = "ButtonX7";
-            _ButtonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX7.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX7.SymbolSize = 12.0F;
+            this.ButtonX7.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX7, "ButtonX7");
+            this.ButtonX7.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX7.FocusCuesEnabled = false;
+            this.ButtonX7.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_move_node_down_16px;
+            this.ButtonX7.Name = "ButtonX7";
+            this.ButtonX7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX7.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX7.SymbolSize = 12F;
+            this.ButtonX7.Click += new System.EventHandler(this.ButtonX7_Click);
             // 
             // ButtonX8
             // 
-            _ButtonX8.AccessibleRole = AccessibleRole.PushButton;
-            resources.ApplyResources(_ButtonX8, "ButtonX8");
-            _ButtonX8.AutoExpandOnClick = true;
-            _ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            _ButtonX8.FocusCuesEnabled = false;
-            _ButtonX8.Image = My.Resources.MyIcons.icons8_plus_math_16px;
-            _ButtonX8.Name = "ButtonX8";
-            _ButtonX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            _ButtonX8.SymbolColor = Color.FromArgb(Conversions.ToInteger(Conversions.ToByte(82)), Conversions.ToInteger(Conversions.ToByte(124)), Conversions.ToInteger(Conversions.ToByte(64)));
-            _ButtonX8.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
-            _ButtonX8.SymbolSize = 12.0F;
+            this.ButtonX8.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            resources.ApplyResources(this.ButtonX8, "ButtonX8");
+            this.ButtonX8.AutoExpandOnClick = true;
+            this.ButtonX8.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX8.FocusCuesEnabled = false;
+            this.ButtonX8.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_plus_math_16px;
+            this.ButtonX8.Name = "ButtonX8";
+            this.ButtonX8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX8.SymbolColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(124)))), ((int)(((byte)(64)))));
+            this.ButtonX8.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.ButtonX8.SymbolSize = 12F;
             // 
             // Panel1
             // 
-            _Panel1.BackColor = Color.Transparent;
-            _Panel1.Controls.Add(_ButtonX8);
-            _Panel1.Controls.Add(_ListViewEx1);
-            _Panel1.Controls.Add(_ButtonX6);
-            _Panel1.Controls.Add(_ComboBoxEx1);
-            _Panel1.Controls.Add(_ButtonX7);
-            _Panel1.Controls.Add(_LabelX4);
-            _Panel1.Controls.Add(_ButtonX5);
-            _Panel1.Controls.Add(_ButtonX3);
-            _Panel1.Controls.Add(_LabelX7);
-            _Panel1.Controls.Add(_ButtonX2);
-            _Panel1.Controls.Add(_IntegerInput3);
-            _Panel1.Controls.Add(_IntegerInput2);
-            _Panel1.Controls.Add(_LabelX5);
-            _Panel1.Controls.Add(_LabelX6);
-            _Panel1.Controls.Add(_LabelX3);
-            _Panel1.Controls.Add(_LabelX2);
-            _Panel1.Controls.Add(_ButtonX4);
-            _Panel1.Controls.Add(_ButtonX1);
-            _Panel1.Controls.Add(_IntegerInput1);
-            resources.ApplyResources(_Panel1, "Panel1");
-            _Panel1.Name = "Panel1";
+            this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.advTree1);
+            this.Panel1.Controls.Add(this.ButtonX8);
+            this.Panel1.Controls.Add(this.ButtonX6);
+            this.Panel1.Controls.Add(this.ComboBoxEx1);
+            this.Panel1.Controls.Add(this.ButtonX7);
+            this.Panel1.Controls.Add(this.LabelX4);
+            this.Panel1.Controls.Add(this.ButtonX5);
+            this.Panel1.Controls.Add(this.ButtonX3);
+            this.Panel1.Controls.Add(this.LabelX7);
+            this.Panel1.Controls.Add(this.ButtonX2);
+            this.Panel1.Controls.Add(this.IntegerInput3);
+            this.Panel1.Controls.Add(this.IntegerInput2);
+            this.Panel1.Controls.Add(this.LabelX5);
+            this.Panel1.Controls.Add(this.LabelX6);
+            this.Panel1.Controls.Add(this.LabelX3);
+            this.Panel1.Controls.Add(this.LabelX2);
+            this.Panel1.Controls.Add(this.ButtonX4);
+            this.Panel1.Controls.Add(this.ButtonX1);
+            this.Panel1.Controls.Add(this.IntegerInput1);
+            resources.ApplyResources(this.Panel1, "Panel1");
+            this.Panel1.Name = "Panel1";
+            // 
+            // advTree1
+            // 
+            this.advTree1.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            resources.ApplyResources(this.advTree1, "advTree1");
+            this.advTree1.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.advTree1.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree1.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.advTree1.Columns.Add(this.columnHeader5);
+            this.advTree1.Columns.Add(this.columnHeader6);
+            this.advTree1.Columns.Add(this.columnHeader7);
+            this.advTree1.Columns.Add(this.columnHeader8);
+            this.advTree1.DragDropEnabled = false;
+            this.advTree1.ExpandWidth = 0;
+            this.advTree1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree1.MultiSelect = true;
+            this.advTree1.Name = "advTree1";
+            this.advTree1.NodesConnector = this.nodeConnector1;
+            this.advTree1.NodeStyle = this.elementStyle1;
+            this.advTree1.PathSeparator = ";";
+            this.advTree1.Styles.Add(this.elementStyle1);
+            this.advTree1.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTree1_AfterNodeSelect);
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Name = "columnHeader5";
+            resources.ApplyResources(this.columnHeader5, "columnHeader5");
+            this.columnHeader5.Visible = false;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Name = "columnHeader6";
+            resources.ApplyResources(this.columnHeader6, "columnHeader6");
+            this.columnHeader6.Width.Absolute = 80;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Name = "columnHeader7";
+            resources.ApplyResources(this.columnHeader7, "columnHeader7");
+            this.columnHeader7.Width.Absolute = 80;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Name = "columnHeader8";
+            resources.ApplyResources(this.columnHeader8, "columnHeader8");
+            this.columnHeader8.Width.Absolute = 80;
             // 
             // TrajectoryEditor
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(_Panel1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            Name = "TrajectoryEditor";
-            TopLeftCornerSize = 0;
-            TopRightCornerSize = 0;
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)_IntegerInput3).EndInit();
-            _Panel1.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "TrajectoryEditor";
+            this.TopLeftCornerSize = 0;
+            this.TopRightCornerSize = 0;
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput3)).EndInit();
+            this.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTree1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
-        private DevComponents.DotNetBar.Controls.ListViewEx _ListViewEx1;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx1;
 
-        internal DevComponents.DotNetBar.Controls.ListViewEx ListViewEx1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ListViewEx1;
-            }
+        private DevComponents.Editors.IntegerInput IntegerInput1;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ListViewEx1 != null)
-                {
-                    _ListViewEx1.SelectedIndexChanged -= ListViewEx1_SelectedIndexChanged;
-                }
+        private DevComponents.Editors.IntegerInput IntegerInput2;
 
-                _ListViewEx1 = value;
-                if (_ListViewEx1 != null)
-                {
-                    _ListViewEx1.SelectedIndexChanged += ListViewEx1_SelectedIndexChanged;
-                }
-            }
-        }
+        private DevComponents.Editors.IntegerInput IntegerInput3;
 
-        private ColumnHeader _ColumnHeader1;
+        private DevComponents.DotNetBar.LabelX LabelX2;
 
-        internal ColumnHeader ColumnHeader1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ColumnHeader1;
-            }
+        private DevComponents.DotNetBar.LabelX LabelX3;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ColumnHeader1 != null)
-                {
-                }
+        private DevComponents.DotNetBar.ButtonX ButtonX1;
 
-                _ColumnHeader1 = value;
-                if (_ColumnHeader1 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.ButtonX ButtonX2;
 
-        private ColumnHeader _ColumnHeader2;
+        private DevComponents.DotNetBar.ButtonX ButtonX3;
 
-        internal ColumnHeader ColumnHeader2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ColumnHeader2;
-            }
+        private DevComponents.DotNetBar.ButtonX ButtonX4;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ColumnHeader2 != null)
-                {
-                }
+        private DevComponents.DotNetBar.LabelX LabelX4;
 
-                _ColumnHeader2 = value;
-                if (_ColumnHeader2 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.LabelX LabelX5;
 
-        private ColumnHeader _ColumnHeader3;
+        private DevComponents.DotNetBar.LabelX LabelX6;
 
-        internal ColumnHeader ColumnHeader3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ColumnHeader3;
-            }
+        private DevComponents.DotNetBar.LabelX LabelX7;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ColumnHeader3 != null)
-                {
-                }
+        private DevComponents.DotNetBar.ButtonX ButtonX5;
 
-                _ColumnHeader3 = value;
-                if (_ColumnHeader3 != null)
-                {
-                }
-            }
-        }
+        private DevComponents.DotNetBar.ButtonX ButtonX6;
 
-        private DevComponents.DotNetBar.Controls.ComboBoxEx _ComboBoxEx1;
+        private DevComponents.DotNetBar.ButtonX ButtonX7;
 
-        internal DevComponents.DotNetBar.Controls.ComboBoxEx ComboBoxEx1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ComboBoxEx1;
-            }
+        private DevComponents.DotNetBar.ButtonX ButtonX8;
 
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ComboBoxEx1 != null)
-                {
-                    _ComboBoxEx1.SelectedIndexChanged -= ComboBoxEx1_SelectedIndexChanged;
-                }
-
-                _ComboBoxEx1 = value;
-                if (_ComboBoxEx1 != null)
-                {
-                    _ComboBoxEx1.SelectedIndexChanged += ComboBoxEx1_SelectedIndexChanged;
-                }
-            }
-        }
-
-        private DevComponents.Editors.IntegerInput _IntegerInput1;
-
-        internal DevComponents.Editors.IntegerInput IntegerInput1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_IntegerInput1 != null)
-                {
-                    _IntegerInput1.ValueChanged -= IntegerInput1_ValueChanged;
-                }
-
-                _IntegerInput1 = value;
-                if (_IntegerInput1 != null)
-                {
-                    _IntegerInput1.ValueChanged += IntegerInput1_ValueChanged;
-                }
-            }
-        }
-
-        private DevComponents.Editors.IntegerInput _IntegerInput2;
-
-        internal DevComponents.Editors.IntegerInput IntegerInput2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_IntegerInput2 != null)
-                {
-                    _IntegerInput2.ValueChanged -= IntegerInput1_ValueChanged;
-                }
-
-                _IntegerInput2 = value;
-                if (_IntegerInput2 != null)
-                {
-                    _IntegerInput2.ValueChanged += IntegerInput1_ValueChanged;
-                }
-            }
-        }
-
-        private DevComponents.Editors.IntegerInput _IntegerInput3;
-
-        internal DevComponents.Editors.IntegerInput IntegerInput3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _IntegerInput3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_IntegerInput3 != null)
-                {
-                    _IntegerInput3.ValueChanged -= IntegerInput1_ValueChanged;
-                }
-
-                _IntegerInput3 = value;
-                if (_IntegerInput3 != null)
-                {
-                    _IntegerInput3.ValueChanged += IntegerInput1_ValueChanged;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX2;
-
-        internal DevComponents.DotNetBar.LabelX LabelX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX2 != null)
-                {
-                }
-
-                _LabelX2 = value;
-                if (_LabelX2 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX3;
-
-        internal DevComponents.DotNetBar.LabelX LabelX3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX3 != null)
-                {
-                }
-
-                _LabelX3 = value;
-                if (_LabelX3 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX1;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX1 != null)
-                {
-                    _ButtonX1.Click -= ButtonX1_Click;
-                }
-
-                _ButtonX1 = value;
-                if (_ButtonX1 != null)
-                {
-                    _ButtonX1.Click += ButtonX1_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX2;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX2
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX2;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX2 != null)
-                {
-                    _ButtonX2.Click -= ButtonX2_Click;
-                }
-
-                _ButtonX2 = value;
-                if (_ButtonX2 != null)
-                {
-                    _ButtonX2.Click += ButtonX2_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX3;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX3
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX3;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX3 != null)
-                {
-                    _ButtonX3.Click -= ButtonX3_Click;
-                }
-
-                _ButtonX3 = value;
-                if (_ButtonX3 != null)
-                {
-                    _ButtonX3.Click += ButtonX3_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX4;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX4 != null)
-                {
-                    _ButtonX4.Click -= ButtonX4_Click;
-                }
-
-                _ButtonX4 = value;
-                if (_ButtonX4 != null)
-                {
-                    _ButtonX4.Click += ButtonX4_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX4;
-
-        internal DevComponents.DotNetBar.LabelX LabelX4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX4 != null)
-                {
-                }
-
-                _LabelX4 = value;
-                if (_LabelX4 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX5;
-
-        internal DevComponents.DotNetBar.LabelX LabelX5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX5 != null)
-                {
-                }
-
-                _LabelX5 = value;
-                if (_LabelX5 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX6;
-
-        internal DevComponents.DotNetBar.LabelX LabelX6
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX6;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX6 != null)
-                {
-                }
-
-                _LabelX6 = value;
-                if (_LabelX6 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.LabelX _LabelX7;
-
-        internal DevComponents.DotNetBar.LabelX LabelX7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _LabelX7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_LabelX7 != null)
-                {
-                }
-
-                _LabelX7 = value;
-                if (_LabelX7 != null)
-                {
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX5;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX5
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX5;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX5 != null)
-                {
-                    _ButtonX5.Click -= ButtonX5_Click;
-                }
-
-                _ButtonX5 = value;
-                if (_ButtonX5 != null)
-                {
-                    _ButtonX5.Click += ButtonX5_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX6;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX6
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX6;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX6 != null)
-                {
-                    _ButtonX6.Click -= ButtonX6_Click;
-                }
-
-                _ButtonX6 = value;
-                if (_ButtonX6 != null)
-                {
-                    _ButtonX6.Click += ButtonX6_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX7;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX7
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX7;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX7 != null)
-                {
-                    _ButtonX7.Click -= ButtonX7_Click;
-                }
-
-                _ButtonX7 = value;
-                if (_ButtonX7 != null)
-                {
-                    _ButtonX7.Click += ButtonX7_Click;
-                }
-            }
-        }
-
-        private DevComponents.DotNetBar.ButtonX _ButtonX8;
-
-        internal DevComponents.DotNetBar.ButtonX ButtonX8
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ButtonX8;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ButtonX8 != null)
-                {
-                }
-
-                _ButtonX8 = value;
-                if (_ButtonX8 != null)
-                {
-                }
-            }
-        }
-
-        private ColumnHeader _ColumnHeader4;
-
-        internal ColumnHeader ColumnHeader4
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _ColumnHeader4;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_ColumnHeader4 != null)
-                {
-                }
-
-                _ColumnHeader4 = value;
-                if (_ColumnHeader4 != null)
-                {
-                }
-            }
-        }
-
-        private Panel _Panel1;
-
-        internal Panel Panel1
-        {
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            get
-            {
-                return _Panel1;
-            }
-
-            [MethodImpl(MethodImplOptions.Synchronized)]
-            set
-            {
-                if (_Panel1 != null)
-                {
-                }
-
-                _Panel1 = value;
-                if (_Panel1 != null)
-                {
-                }
-            }
-        }
+        private Panel Panel1;
+        private DevComponents.AdvTree.AdvTree advTree1;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
+        private DevComponents.AdvTree.ColumnHeader columnHeader5;
+        private DevComponents.AdvTree.ColumnHeader columnHeader6;
+        private DevComponents.AdvTree.ColumnHeader columnHeader7;
+        private DevComponents.AdvTree.ColumnHeader columnHeader8;
     }
 }

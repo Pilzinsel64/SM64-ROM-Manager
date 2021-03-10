@@ -117,194 +117,512 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
-    <value>layoutControlItem7</value>
+  <data name="bar1.AccessibleDescription" xml:space="preserve">
+    <value>DotNetBar Bar (bar1)</value>
+  </data>
+  <data name="bar1.AccessibleName" xml:space="preserve">
+    <value>DotNetBar Bar</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ButtonX_LoopCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
-  <data name="&gt;&gt;AdvTree_Behaviors.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
-  <data name="TabItem_BehavScript.Text" xml:space="preserve">
-    <value>Script</value>
+  <data name="ButtonItem_NewBehav.Text" xml:space="preserve">
+    <value>New Behavior</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
-    <value>layoutControlItem8</value>
+  <data name="ButtonItem_RemoveBehav.Text" xml:space="preserve">
+    <value>Remove Behavior</value>
   </data>
-  <data name="&gt;&gt;tabControlPanel2.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="ButtonItem_Advanced.Text" xml:space="preserve">
+    <value>Advanced</value>
   </data>
-  <data name="layoutControlItem8.Text" xml:space="preserve">
-    <value>Parameter Infos:</value>
+  <data name="bar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
-  <data name="ButtonX_EditParamInfos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
-    <value>layoutControlItem6</value>
-  </data>
-  <data name="&gt;&gt;RichTextBoxEx_Script.Name" xml:space="preserve">
-    <value>RichTextBoxEx_Script</value>
-  </data>
-  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
-    <value>columnHeader3</value>
+  <data name="bar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBoxX_BehavColPtr.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="TabItem_BehavProps.Text" xml:space="preserve">
-    <value>Properties</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveBehav.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_NewBehav.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="bar1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="ButtonX_LoopCustomAsmFunction.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
+    <value>bar1</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ListViewEx_CustomAsmFunctions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 215</value>
+  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
-    <value>nodeConnector1</value>
+  <data name="&gt;&gt;bar1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
-    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;bar1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;ButtonItem_Advanced.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="TextBoxX_BehavName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 4</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanel2.Parent" xml:space="preserve">
-    <value>TabControl_Behav</value>
-  </data>
-  <data name="RichTextBoxEx_Script.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
-    <value>columnHeader1</value>
-  </data>
-  <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_DisableGlobaleBehaviorBank.Name" xml:space="preserve">
-    <value>ButtonItem_DisableGlobaleBehaviorBank</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
-    <value>layoutControlItem5</value>
-  </data>
-  <data name="checkBoxX_BehavEnableColPtr.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TextBoxX_BehavName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;RichTextBoxEx_Script.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.RichTextBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ButtonX_SaveScript.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="AdvTree_Behaviors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;AdvTree_Behaviors.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 411</value>
+  <data name="labelItem1.Text" xml:space="preserve">
+    <value>Template</value>
   </data>
   <data name="ButtonItem_NewBehav_SolidObject.Text" xml:space="preserve">
     <value>Solid Object</value>
   </data>
-  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Name" xml:space="preserve">
-    <value>ButtonX_LoopCustomAsmFunction</value>
+  <data name="ButtonItem_DisableGlobaleBehaviorBank.Text" xml:space="preserve">
+    <value>Disable Global Behavior Bank</value>
   </data>
-  <data name="&gt;&gt;ButtonX_EditParamInfos.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <metadata name="columnHeader1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Name</value>
   </data>
-  <data name="tabControlPanel1.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <metadata name="columnHeader2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>155, 17</value>
+  </metadata>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Address</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
-    <value>layoutControlItem3</value>
+  <data name="AdvTree_Behaviors.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="TextBoxX_BehavName.ButtonCustom.Text" xml:space="preserve">
-    <value />
+  <data name="AdvTree_Behaviors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Behavior Bank Manager</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ButtonX_EditParamInfos.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 20</value>
-  </data>
-  <data name="AdvTree_Behaviors.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_BehavName.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;layoutSpacerItem1.Name" xml:space="preserve">
-    <value>layoutSpacerItem1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;customValidator2.Name" xml:space="preserve">
-    <value>customValidator2</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;AdvTree_Behaviors.Name" xml:space="preserve">
-    <value>AdvTree_Behaviors</value>
+  <data name="AdvTree_Behaviors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 387</value>
   </data>
   <data name="AdvTree_Behaviors.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
-    <value>columnHeader4</value>
+  <data name="&gt;&gt;AdvTree_Behaviors.Name" xml:space="preserve">
+    <value>AdvTree_Behaviors</value>
   </data>
-  <data name="customValidator2.ErrorMessage" xml:space="preserve">
-    <value>Your error message here.</value>
+  <data name="&gt;&gt;AdvTree_Behaviors.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Behaviors.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AdvTree_Behaviors.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextBoxX_BehavName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 4</value>
+  </data>
+  <data name="TextBoxX_BehavName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="TextBoxX_BehavName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 20</value>
+  </data>
+  <data name="TextBoxX_BehavName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_BehavName.Name" xml:space="preserve">
+    <value>TextBoxX_BehavName</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_BehavName.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_BehavName.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;TextBoxX_BehavName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textBoxX_BehavColPtr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 32</value>
+  </data>
+  <data name="textBoxX_BehavColPtr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="textBoxX_BehavColPtr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 20</value>
+  </data>
+  <data name="textBoxX_BehavColPtr.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBoxX_BehavColPtr.Name" xml:space="preserve">
+    <value>textBoxX_BehavColPtr</value>
+  </data>
+  <data name="&gt;&gt;textBoxX_BehavColPtr.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textBoxX_BehavColPtr.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;textBoxX_BehavColPtr.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="checkBoxX_BehavEnableColPtr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 32</value>
+  </data>
+  <data name="checkBoxX_BehavEnableColPtr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="checkBoxX_BehavEnableColPtr.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 20</value>
   </data>
+  <data name="checkBoxX_BehavEnableColPtr.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="checkBoxX_BehavEnableColPtr.Text" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.Name" xml:space="preserve">
+    <value>checkBoxX_BehavEnableColPtr</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 126</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 23</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ButtonX_AddCustomAsmFunction.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Name" xml:space="preserve">
+    <value>ButtonX_AddCustomAsmFunction</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 157</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 23</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ButtonX_RemoveCustomAsmFunction.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Name" xml:space="preserve">
+    <value>ButtonX_RemoveCustomAsmFunction</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>270, 188</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 23</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="ButtonX_LoopCustomAsmFunction.Text" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Name" xml:space="preserve">
+    <value>ButtonX_LoopCustomAsmFunction</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 60</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 23</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ButtonX_EditParamInfos.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditParamInfos.Name" xml:space="preserve">
+    <value>ButtonX_EditParamInfos</value>
+  </data>
   <data name="&gt;&gt;ButtonX_EditParamInfos.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonItem_Advanced.Text" xml:space="preserve">
-    <value>Advanced</value>
+  <data name="&gt;&gt;ButtonX_EditParamInfos.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_EditParamInfos.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="columnHeader3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>440, 17</value>
+  </metadata>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <metadata name="columnHeader4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>578, 17</value>
+  </metadata>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Loop</value>
+  </data>
+  <data name="advTree_CustomAsmFunctions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 139</value>
+  </data>
+  <data name="advTree_CustomAsmFunctions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="advTree_CustomAsmFunctions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 215</value>
+  </data>
+  <data name="advTree_CustomAsmFunctions.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="advTree_CustomAsmFunctions.Text" xml:space="preserve">
+    <value>advTree1</value>
+  </data>
+  <data name="&gt;&gt;advTree_CustomAsmFunctions.Name" xml:space="preserve">
+    <value>advTree_CustomAsmFunctions</value>
+  </data>
+  <data name="&gt;&gt;advTree_CustomAsmFunctions.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;advTree_CustomAsmFunctions.Parent" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;advTree_CustomAsmFunctions.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="layoutControlItem1.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="layoutControlItem2.Text" xml:space="preserve">
+    <value>Collision Pointer:</value>
+  </data>
+  <data name="layoutControlItem8.Text" xml:space="preserve">
+    <value>Parameter Infos:</value>
+  </data>
+  <data name="layoutControlItem4.Text" xml:space="preserve">
+    <value>Custom ASM Functions:</value>
+  </data>
+  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 358</value>
+  </data>
+  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
+    <value>layoutControl1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
+    <value>tabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;layoutControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabControlPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControlPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="tabControlPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="tabControlPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 360</value>
+  </data>
+  <data name="tabControlPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabItem_BehavProps.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel1.Name" xml:space="preserve">
+    <value>tabControlPanel1</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel1.Parent" xml:space="preserve">
+    <value>TabControl_Behav</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ButtonX_SaveScript.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="ButtonX_SaveScript.Location" type="System.Drawing.Point, System.Drawing">
+    <value>308, 1</value>
+  </data>
+  <data name="ButtonX_SaveScript.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="ButtonX_SaveScript.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ButtonX_SaveScript.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SaveScript.Name" xml:space="preserve">
+    <value>ButtonX_SaveScript</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SaveScript.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SaveScript.Parent" xml:space="preserve">
+    <value>tabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;ButtonX_SaveScript.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RichTextBoxEx_Script.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="RichTextBoxEx_Script.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 8.25pt</value>
+  </data>
+  <data name="RichTextBoxEx_Script.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="RichTextBoxEx_Script.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 358</value>
+  </data>
+  <data name="RichTextBoxEx_Script.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RichTextBoxEx_Script.Name" xml:space="preserve">
+    <value>RichTextBoxEx_Script</value>
+  </data>
+  <data name="&gt;&gt;RichTextBoxEx_Script.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Controls.RichTextBoxEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;RichTextBoxEx_Script.Parent" xml:space="preserve">
+    <value>tabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;RichTextBoxEx_Script.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControlPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControlPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="tabControlPanel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="tabControlPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 360</value>
+  </data>
+  <data name="tabControlPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="TabItem_BehavScript.Text" xml:space="preserve">
+    <value>Script</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel2.Name" xml:space="preserve">
+    <value>tabControlPanel2</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel2.Parent" xml:space="preserve">
+    <value>TabControl_Behav</value>
+  </data>
+  <data name="&gt;&gt;tabControlPanel2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TabControl_Behav.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControl_Behav.Location" type="System.Drawing.Point, System.Drawing">
+    <value>400, 24</value>
+  </data>
+  <data name="TabControl_Behav.Size" type="System.Drawing.Size, System.Drawing">
+    <value>384, 387</value>
+  </data>
+  <data name="TabControl_Behav.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Behav.Name" xml:space="preserve">
+    <value>TabControl_Behav</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Behav.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Behav.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Behav.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="customValidator1.ErrorMessage" xml:space="preserve">
+    <value>Your error message here.</value>
+  </data>
+  <data name="customValidator2.ErrorMessage" xml:space="preserve">
+    <value>Your error message here.</value>
+  </data>
+  <metadata name="highlighter_Script.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>293, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 411</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -401,659 +719,202 @@
         //8AAP//AAD//wAA//8AAP//AAD//wAA//+AAf//
 </value>
   </data>
-  <data name="RichTextBoxEx_Script.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
-  </data>
-  <data name="RichTextBoxEx_Script.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 358</value>
-  </data>
-  <data name="ButtonX_SaveScript.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>Loop</value>
-  </data>
-  <data name="&gt;&gt;layoutSpacerItem2.Name" xml:space="preserve">
-    <value>layoutSpacerItem2</value>
-  </data>
-  <data name="resource.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;RichTextBoxEx_Script.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="TabControl_Behav.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;layoutSpacerItem1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="tabControlPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;layoutSpacerItem3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="layoutControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 358</value>
-  </data>
-  <data name="checkBoxX_BehavEnableColPtr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Name" xml:space="preserve">
-    <value>ButtonX_AddCustomAsmFunction</value>
-  </data>
-  <data name="&gt;&gt;layoutSpacerItem2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ButtonItem_DisableGlobaleBehaviorBank.Text" xml:space="preserve">
-    <value>Disable Global Behavior Bank</value>
-  </data>
-  <data name="ButtonX_SaveScript.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="layoutControlItem2.Text" xml:space="preserve">
-    <value>Collision Pointer:</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Address</value>
-  </data>
-  <data name="bar1.AccessibleDescription" xml:space="preserve">
-    <value>DotNetBar Bar (bar1)</value>
-  </data>
-  <data name="ButtonX_LoopCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 188</value>
-  </data>
-  <assembly alias="DevComponents.DotNetBar2" name="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null" />
-  <data name="$this.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_RemoveBehav.Name" xml:space="preserve">
-    <value>ButtonItem_RemoveBehav</value>
-  </data>
-  <data name="ButtonItem_RemoveBehav.Text" xml:space="preserve">
-    <value>Remove Behavior</value>
-  </data>
-  <data name="&gt;&gt;bar1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
-    <value>layoutControlItem4</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="bar1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Behav.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="bar1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_BehavName.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;highlighter_Script.Name" xml:space="preserve">
-    <value>highlighter_Script</value>
-  </data>
-  <data name="ListViewEx_CustomAsmFunctions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabItem_BehavProps.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabItem_BehavScript.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="checkBoxX_BehavEnableColPtr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 32</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>BehaviorBankManager</value>
-  </data>
-  <data name="customValidator1.ErrorMessage" xml:space="preserve">
-    <value>Your error message here.</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanel2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBoxX_BehavColPtr.Name" xml:space="preserve">
-    <value>textBoxX_BehavColPtr</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_BehavName.Name" xml:space="preserve">
-    <value>TextBoxX_BehavName</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Name" xml:space="preserve">
-    <value>ButtonX_RemoveCustomAsmFunction</value>
-  </data>
-  <data name="tabControlPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 360</value>
-  </data>
-  <data name="ButtonX_LoopCustomAsmFunction.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="layoutControl1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="tabControlPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 360</value>
-  </data>
-  <data name="ButtonX_EditParamInfos.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_CustomAsmFunctions.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;labelItem1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.LabelItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="labelItem1.Text" xml:space="preserve">
-    <value>Template</value>
-  </data>
-  <data name="tabControlPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_NewBehav_SolidObject.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ButtonX_SaveScript.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanel1.Parent" xml:space="preserve">
-    <value>TabControl_Behav</value>
-  </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
-    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_SaveScript.Parent" xml:space="preserve">
-    <value>tabControlPanel2</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom2.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_CustomAsmFunctions.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.ListViewEx, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TextBoxX_BehavName.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;ButtonX_SaveScript.Name" xml:space="preserve">
-    <value>ButtonX_SaveScript</value>
-  </data>
-  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;ButtonX_EditParamInfos.Name" xml:space="preserve">
-    <value>ButtonX_EditParamInfos</value>
-  </data>
-  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
-    <value>columnHeader2</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="bar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 24</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_CustomAsmFunctions.Name" xml:space="preserve">
-    <value>ListViewEx_CustomAsmFunctions</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 126</value>
-  </data>
-  <data name="&gt;&gt;textBoxX_BehavColPtr.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_NewBehav_SolidObject.Name" xml:space="preserve">
-    <value>ButtonItem_NewBehav_SolidObject</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_DisableGlobaleBehaviorBank.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ListViewEx_CustomAsmFunctions.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;highlighter_Script.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Validator.Highlighter, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;textBoxX_BehavColPtr.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.TextBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="tabControlPanel2.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="TabControl_Behav.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 24</value>
-  </data>
-  <data name="&gt;&gt;layoutGroup1.Name" xml:space="preserve">
-    <value>layoutGroup1</value>
-  </data>
-  <data name="RichTextBoxEx_Script.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="ButtonItem_NewBehav.Text" xml:space="preserve">
-    <value>New Behavior</value>
-  </data>
-  <data name="RichTextBoxEx_Script.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Behavior Bank Manager</value>
   </data>
   <data name="&gt;&gt;ButtonItem_NewBehav.Name" xml:space="preserve">
     <value>ButtonItem_NewBehav</value>
   </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="tabControlPanel2.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Name" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="ButtonX_LoopCustomAsmFunction.Text" xml:space="preserve">
-    <value>Loop</value>
-  </data>
-  <data name="&gt;&gt;RichTextBoxEx_Script.Parent" xml:space="preserve">
-    <value>tabControlPanel2</value>
-  </data>
-  <data name="TabControl_Behav.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;layoutSpacerItem3.Name" xml:space="preserve">
-    <value>layoutSpacerItem3</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 32</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_AddCustomAsmFunction.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
-    <value>layoutControlItem1</value>
-  </data>
-  <data name="TextBoxX_BehavName.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="layoutControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxX_BehavName.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ListViewEx_CustomAsmFunctions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 139</value>
-  </data>
-  <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.Name" xml:space="preserve">
-    <value>checkBoxX_BehavEnableColPtr</value>
-  </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
-    <value>elementStyle1</value>
-  </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_LoopCustomAsmFunction.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 157</value>
-  </data>
-  <data name="&gt;&gt;bar1.Name" xml:space="preserve">
-    <value>bar1</value>
-  </data>
-  <data name="ButtonX_SaveScript.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;tabControlPanel1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanel1.Name" xml:space="preserve">
-    <value>tabControlPanel1</value>
-  </data>
-  <data name="layoutControlItem1.Text" xml:space="preserve">
-    <value>Name:</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_SaveScript.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="bar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="checkBoxX_BehavEnableColPtr.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ButtonX_LoopCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControl, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="tabControlPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom.DisplayPosition" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;TabControl_Behav.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Behav.Name" xml:space="preserve">
-    <value>TabControl_Behav</value>
-  </data>
-  <data name="checkBoxX_BehavEnableColPtr.Text" xml:space="preserve">
-    <value>Enable</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ButtonX_EditParamInfos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 60</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_EditParamInfos.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="bar1.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;tabControlPanel2.Name" xml:space="preserve">
-    <value>tabControlPanel2</value>
-  </data>
-  <data name="tabControlPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;TabControl_Behav.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="layoutControlItem4.Text" xml:space="preserve">
-    <value>Custom ASM Functions:</value>
-  </data>
-  <data name="tabControlPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ButtonX_SaveScript.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;customValidator1.Name" xml:space="preserve">
-    <value>customValidator1</value>
-  </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="ButtonX_AddCustomAsmFunction.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ButtonX_LoopCustomAsmFunction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
-  </data>
-  <data name="AdvTree_Behaviors.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="TabControl_Behav.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TabControl_Behav.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 387</value>
-  </data>
-  <data name="ListViewEx_CustomAsmFunctions.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;TabItem_BehavScript.Name" xml:space="preserve">
-    <value>TabItem_BehavScript</value>
-  </data>
-  <data name="AdvTree_Behaviors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 387</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="layoutControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="$this.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;bar1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBoxX_BehavColPtr.Parent" xml:space="preserve">
-    <value>layoutControl1</value>
-  </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="ButtonX_SaveScript.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 1</value>
-  </data>
-  <data name="TextBoxX_BehavName.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RichTextBoxEx_Script.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="TabControl_Behav.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="layoutControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;ButtonItem_Advanced.Name" xml:space="preserve">
-    <value>ButtonItem_Advanced</value>
-  </data>
-  <data name="tabControlPanel1.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;ButtonItem_NewBehav.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;labelItem1.Name" xml:space="preserve">
     <value>labelItem1</value>
   </data>
-  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;labelItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.LabelItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ButtonX_RemoveCustomAsmFunction.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
+  <data name="&gt;&gt;ButtonItem_NewBehav_SolidObject.Name" xml:space="preserve">
+    <value>ButtonItem_NewBehav_SolidObject</value>
   </data>
-  <data name="ButtonX_EditParamInfos.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
+  <data name="&gt;&gt;ButtonItem_NewBehav_SolidObject.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="AdvTree_Behaviors.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
+  <data name="&gt;&gt;ButtonItem_RemoveBehav.Name" xml:space="preserve">
+    <value>ButtonItem_RemoveBehav</value>
   </data>
-  <data name="&gt;&gt;customValidator2.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Validator.CustomValidator, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ButtonItem_RemoveBehav.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="TextBoxX_BehavName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 20</value>
+  <data name="&gt;&gt;ButtonItem_Advanced.Name" xml:space="preserve">
+    <value>ButtonItem_Advanced</value>
   </data>
-  <data name="&gt;&gt;checkBoxX_BehavEnableColPtr.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Controls.CheckBoxX, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;ButtonItem_Advanced.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="tabControlPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
+  <data name="&gt;&gt;ButtonItem_DisableGlobaleBehaviorBank.Name" xml:space="preserve">
+    <value>ButtonItem_DisableGlobaleBehaviorBank</value>
   </data>
-  <data name="textBoxX_BehavColPtr.ButtonCustom.Tooltip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;ButtonItem_DisableGlobaleBehaviorBank.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="ListViewEx_CustomAsmFunctions.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
   </data>
-  <data name="tabControlPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;AdvTree_Behaviors.Type" xml:space="preserve">
-    <value>DevComponents.AdvTree.AdvTree, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bar1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;layoutControl1.Parent" xml:space="preserve">
-    <value>tabControlPanel1</value>
-  </data>
-  <data name="tabControlPanel2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
-    <value>layoutControlItem2</value>
-  </data>
-  <data name="TextBoxX_BehavName.ButtonCustom2.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;TabItem_BehavProps.Name" xml:space="preserve">
-    <value>TabItem_BehavProps</value>
-  </data>
-  <data name="ButtonX_LoopCustomAsmFunction.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="layoutControl1.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ButtonX_EditParamInfos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="bar1.AccessibleName" xml:space="preserve">
-    <value>DotNetBar Bar</value>
-  </data>
-  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ListViewEx_CustomAsmFunctions.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
-  </data>
-  <data name="ButtonX_EditParamInfos.HighlightOnFocus" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Name</value>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
   </data>
   <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
     <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="textBoxX_BehavColPtr.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
+  <data name="&gt;&gt;nodeConnector1.Name" xml:space="preserve">
+    <value>nodeConnector1</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;nodeConnector1.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="RichTextBoxEx_Script.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 8.25pt</value>
-  </data>
-  <data name="resource.Tooltip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;customValidator1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Validator.CustomValidator, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;layoutGroup1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.Layout.LayoutGroup, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;elementStyle1.Name" xml:space="preserve">
+    <value>elementStyle1</value>
   </data>
   <data name="&gt;&gt;elementStyle1.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="checkBoxX_BehavEnableColPtr.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;layoutControlItem1.Name" xml:space="preserve">
+    <value>layoutControlItem1</value>
   </data>
-  <data name="ButtonX_SaveScript.HighlightColor" type="DevComponents.DotNetBar.Validator.eHighlightColor, DevComponents.DotNetBar2">
-    <value>None</value>
+  <data name="&gt;&gt;layoutControlItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="bar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="&gt;&gt;layoutControlItem2.Name" xml:space="preserve">
+    <value>layoutControlItem2</value>
   </data>
-  <data name="&gt;&gt;ButtonX_RemoveCustomAsmFunction.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;layoutControlItem2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <metadata name="columnHeader1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="columnHeader2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>155, 17</value>
-  </metadata>
-  <metadata name="highlighter_Script.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>293, 17</value>
-  </metadata>
+  <data name="&gt;&gt;layoutControlItem3.Name" xml:space="preserve">
+    <value>layoutControlItem3</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem2.Name" xml:space="preserve">
+    <value>layoutSpacerItem2</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Name" xml:space="preserve">
+    <value>layoutControlItem8</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem8.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem3.Name" xml:space="preserve">
+    <value>layoutSpacerItem3</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem3.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem1.Name" xml:space="preserve">
+    <value>layoutSpacerItem1</value>
+  </data>
+  <data name="&gt;&gt;layoutSpacerItem1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutSpacerItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutGroup1.Name" xml:space="preserve">
+    <value>layoutGroup1</value>
+  </data>
+  <data name="&gt;&gt;layoutGroup1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutGroup, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Name" xml:space="preserve">
+    <value>layoutControlItem5</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem5.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Name" xml:space="preserve">
+    <value>layoutControlItem6</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem6.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Name" xml:space="preserve">
+    <value>layoutControlItem7</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem7.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabItem_BehavProps.Name" xml:space="preserve">
+    <value>TabItem_BehavProps</value>
+  </data>
+  <data name="&gt;&gt;TabItem_BehavProps.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;TabItem_BehavScript.Name" xml:space="preserve">
+    <value>TabItem_BehavScript</value>
+  </data>
+  <data name="&gt;&gt;TabItem_BehavScript.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;customValidator1.Name" xml:space="preserve">
+    <value>customValidator1</value>
+  </data>
+  <data name="&gt;&gt;customValidator1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Validator.CustomValidator, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;customValidator2.Name" xml:space="preserve">
+    <value>customValidator2</value>
+  </data>
+  <data name="&gt;&gt;customValidator2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Validator.CustomValidator, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;highlighter_Script.Name" xml:space="preserve">
+    <value>highlighter_Script</value>
+  </data>
+  <data name="&gt;&gt;highlighter_Script.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Validator.Highlighter, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector2.Name" xml:space="preserve">
+    <value>nodeConnector2</value>
+  </data>
+  <data name="&gt;&gt;nodeConnector2.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.NodeConnector, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;elementStyle2.Name" xml:space="preserve">
+    <value>elementStyle2</value>
+  </data>
+  <data name="&gt;&gt;elementStyle2.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ElementStyle, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Name" xml:space="preserve">
+    <value>layoutControlItem4</value>
+  </data>
+  <data name="&gt;&gt;layoutControlItem4.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.Layout.LayoutControlItem, DevComponents.DotNetBar.Layout, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
+    <value>columnHeader4</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+    <value>DevComponents.AdvTree.ColumnHeader, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>BehaviorBankManager</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.OfficeForm, DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

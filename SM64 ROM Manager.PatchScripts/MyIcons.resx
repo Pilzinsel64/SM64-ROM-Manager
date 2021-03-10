@@ -133,6 +133,12 @@
   <data name="icons8_edit_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8_edit_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8_export_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_export_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_good_quality_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_good_quality_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8_open_folder_16px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8_open_folder_16px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +153,15 @@
   </data>
   <data name="icons8_search_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8_search_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_sheriff_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_sheriff_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_star_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_star_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_star_filled_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8_star_filled_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_triggering_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8_triggering_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

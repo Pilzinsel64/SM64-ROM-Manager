@@ -19,7 +19,7 @@ namespace SM64_ROM_Manager.PatchScripts {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class MyIcons {
@@ -113,6 +113,26 @@ namespace SM64_ROM_Manager.PatchScripts {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_export_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_export_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_good_quality_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_good_quality_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_open_folder_16px_1 {
             get {
                 object obj = ResourceManager.GetObject("icons8_open_folder_16px_1", resourceCulture);
@@ -156,6 +176,36 @@ namespace SM64_ROM_Manager.PatchScripts {
         internal static System.Drawing.Bitmap icons8_search_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_search_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sheriff_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_sheriff_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_star_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_star_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_star_filled_16px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_star_filled_16px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

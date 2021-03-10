@@ -55,15 +55,7 @@ namespace SM64_ROM_Manager
 
         private ItemBoxContentEntry SelectedEntry
         {
-            get
-            {
-                if (ListViewEx1.SelectedIndices.Count > 0)
-                {
-                    return (ItemBoxContentEntry)ListViewEx1.SelectedItems[0].Tag;
-                }
-
-                return null;
-            }
+            get => advTree1.SelectedNode?.Tag as ItemBoxContentEntry;
         }
 
         private void UpdateBParamNames()
@@ -129,24 +121,6 @@ namespace SM64_ROM_Manager
             tblMgr.Write(romMgr);
         }
 
-        private void ListViewEx1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var list = new List<ItemBoxContentEntry>();
-            foreach (ListViewItem lvi in ListViewEx1.SelectedItems)
-            {
-                if (lvi.Tag is ItemBoxContentEntry)
-                {
-                    list.Add((ItemBoxContentEntry)lvi.Tag);
-                }
-            }
-
-            AdvPropertyGrid1.SuspendLayout();
-            AdvPropertyGrid1.SelectedObjects = list.ToArray();
-            UpdateBParamNames();
-            AdvPropertyGrid1.RefreshPropertyValues();
-            AdvPropertyGrid1.ResumeLayout();
-        }
-
         private void AdvPropertyGrid1_PropertyValueChanged(object sender, PropertyChangedEventArgs e)
         {
             if ((e.PropertyName ?? "") == "BehavAddress")
@@ -154,7 +128,7 @@ namespace SM64_ROM_Manager
                 UpdateBParamNames();
             }
 
-            foreach (ListViewItem lvi in ListViewEx1.SelectedItems)
+            foreach (Node lvi in advTree1.SelectedNodes)
                 UpdateLvi(lvi);
         }
 
@@ -181,42 +155,52 @@ namespace SM64_ROM_Manager
         /* TODO ERROR: Skipped RegionDirectiveTrivia */
         private void LoadList()
         {
-            ListViewEx1.SuspendLayout();
-            ListViewEx1.Items.Clear();
+            advTree1.BeginUpdate();
+            advTree1.Nodes.Clear();
             foreach (ItemBoxContentEntry content in tblMgr.ContentTable)
                 AddLviFromContent(content);
-            ListViewEx1.ResumeLayout();
+            advTree1.EndUpdate();
         }
 
-        private ListViewItem AddLviFromContent(ItemBoxContentEntry content)
+        private Node AddLviFromContent(ItemBoxContentEntry content)
         {
-            var item = new ListViewItem() { Tag = content };
-            for (int i = item.SubItems.Count; i <= 4; i++)
-                item.SubItems.Add(new ListViewItem.ListViewSubItem());
+            var item = new Node { Tag = content };
+            for (int i = item.Cells.Count; i <= 4; i++)
+                item.Cells.Add(new Cell());
             UpdateLvi(item);
-            ListViewEx1.Items.Add(item);
+            advTree1.Nodes.Add(item);
             return item;
         }
 
-        public void UpdateLvi(ListViewItem lvi)
+        public void UpdateLvi(Node lvi)
         {
             if (lvi.Tag is ItemBoxContentEntry)
             {
                 ItemBoxContentEntry content = (ItemBoxContentEntry)lvi.Tag;
-                lvi.SubItems[0].Text = Conversions.ToString(content.ID);
-                lvi.SubItems[1].Text = Conversions.ToString(content.ModelID);
-                lvi.SubItems[2].Text = Conversions.ToString(content.BehavAddress);
-                lvi.SubItems[3].Text = Conversions.ToString(content.BParam1);
-                lvi.SubItems[4].Text = Conversions.ToString(content.BParam2);
+                lvi.Cells[0].Text = Conversions.ToString(content.ID);
+                lvi.Cells[1].Text = Conversions.ToString(content.ModelID);
+                lvi.Cells[2].Text = Conversions.ToString(content.BehavAddress);
+                lvi.Cells[3].Text = Conversions.ToString(content.BParam1);
+                lvi.Cells[4].Text = Conversions.ToString(content.BParam2);
             }
         }
 
-        private void SelectLvis(ListViewItem[] items)
+        private void SelectLvis(Node[] items)
         {
-            ListViewEx1.SuspendLayout();
-            foreach (ListViewItem item in ListViewEx1.Items)
-                item.Selected = items.Contains(item);
-            ListViewEx1.ResumeLayout();
+            advTree1.BeginUpdate();
+
+            foreach (Node item in advTree1.Nodes)
+            {
+                if (items.Contains(item))
+                {
+                    if (!advTree1.SelectedNodes.Contains(item))
+                        advTree1.SelectedNodes.Add(item);
+                }
+                else if (advTree1.SelectedNodes.Contains(item))
+                    advTree1.SelectedNodes.Remove(item);
+            }
+
+            advTree1.EndUpdate();
         }
 
         private void AddContent()
@@ -229,15 +213,14 @@ namespace SM64_ROM_Manager
 
         private void RemoveContent()
         {
-            var items = ListViewEx1.SelectedItems;
-            foreach (ListViewItem lvi in items)
+            foreach (Node lvi in advTree1.SelectedNodes.ToArray())
             {
                 if (lvi.Tag is ItemBoxContentEntry)
                 {
                     tblMgr.ContentTable.Remove((ItemBoxContentEntry)lvi.Tag);
                 }
 
-                ListViewEx1.Items.Remove(lvi);
+                advTree1.Nodes.Remove(lvi);
             }
         }
 
@@ -274,6 +257,24 @@ namespace SM64_ROM_Manager
         {
             // Commit unsaved changed of property grid
             AdvPropertyGrid1.CommitEdit();
+        }
+
+        private void advTree1_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            var list = new List<ItemBoxContentEntry>();
+            foreach (Node lvi in advTree1.SelectedNodes)
+            {
+                if (lvi.Tag is ItemBoxContentEntry)
+                {
+                    list.Add((ItemBoxContentEntry)lvi.Tag);
+                }
+            }
+
+            AdvPropertyGrid1.SuspendLayout();
+            AdvPropertyGrid1.SelectedObjects = list.ToArray();
+            UpdateBParamNames();
+            AdvPropertyGrid1.RefreshPropertyValues();
+            AdvPropertyGrid1.ResumeLayout();
         }
 
         /* TODO ERROR: Skipped EndRegionDirectiveTrivia */

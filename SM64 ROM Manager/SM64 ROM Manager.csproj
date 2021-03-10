@@ -20,8 +20,8 @@
     <Company>Pilzinsel64</Company>
     <Product>SM64 ROM Manager</Product>
     <Copyright>Copyright © Pilzinsel64 2017 - 2021</Copyright>
-    <AssemblyVersion>1.11.15.0</AssemblyVersion>
-    <FileVersion>1.11.15.0</FileVersion>
+    <AssemblyVersion>1.12.1.0</AssemblyVersion>
+    <FileVersion>1.12.1.0</FileVersion>
     <DocumentationFile>SM64 ROM Manager.xml</DocumentationFile>
     <WarningLevel>1</WarningLevel>
     <DefineTrace>true</DefineTrace>
@@ -99,7 +99,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>false</GenerateManifests>
-    <Version>1.11.15.0</Version>
+    <Version>1.12.1.0</Version>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RelMono|AnyCPU'">
@@ -129,6 +129,7 @@
     <None Remove="Rom Manager\Language Resources\Custom Object Manager\**" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4" />
     <PackageReference Include="System.DirectoryServices" Version="5.0.0" />
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
@@ -430,13 +431,6 @@
       <SubType>UserControl</SubType>
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManager.Designer.cs">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManager.cs">
-      <SubType>UserControl</SubType>
-      <SubType>Designer</SubType>
-    </Compile>
     <Compile Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.Designer.cs">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
     </Compile>
@@ -560,6 +554,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CustomObjectsManagerLangRes.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes - Kopieren.Designer.cs">
+      <DependentUpon>ErrorDialogLangRes.Designer.cs</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorDialogLangRes.resx</DependentUpon>
     </Compile>
     <Compile Update="Rom Manager\Language Resources\MainForm\Form_Main_Resources.de.Designer.cs">
       <DependentUpon>Form_Main_Resources.de.resx</DependentUpon>
@@ -698,6 +702,11 @@
     </Compile>
     <Compile Update="Rom Manager\GUI\Tools\Form_SM64TextConverter.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WebLinks - Kopieren.Designer.cs">
+      <DependentUpon>WebLinks.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="WebLinks.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -869,12 +878,6 @@
     <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_General.resx">
       <DependentUpon>Tab_General.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManager.de.resx">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManager.resx">
-      <DependentUpon>Tab_LevelManager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\GUI\Main Form\Tab_LevelManagerV2.resx">
       <DependentUpon>Tab_LevelManagerV2.cs</DependentUpon>
     </EmbeddedResource>
@@ -990,6 +993,15 @@
       <LastGenOutput>CustomObjectsManagerLangRes.Designer.cs</LastGenOutput>
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
     </EmbeddedResource>
+    <EmbeddedResource Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.de.resx">
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Rom Manager\Language Resources\Error Dialog\ErrorDialogLangRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
+      <LastGenOutput>ErrorDialogLangRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\Language Resources\Global\Global_Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Global_Resources.de.Designer.cs</LastGenOutput>
@@ -1082,6 +1094,9 @@
       <CustomToolNamespace>SM64_ROM_Manager.My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TextProfileEditorLangRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="WebLinks.de.resx">
+      <Generator></Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="WebLinks.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1244,14 +1259,11 @@
   <ItemGroup>
     <PackageReference Include="Ben.Demystifier" Version="0.1.6" />
     <PackageReference Include="FCTB" Version="2.16.24" />
-    <PackageReference Include="ini-parser" Version="2.5.2" />
     <PackageReference Include="Microsoft.Bcl" Version="1.1.10" />
     <PackageReference Include="Microsoft.Bcl.Async" Version="1.0.168" />
     <PackageReference Include="Microsoft.Bcl.Build" Version="1.0.21" />
     <PackageReference Include="Microsoft.Toolkit.Forms.UI.Controls.WebView" Version="6.1.2" />
     <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.1" />
-    <PackageReference Include="Microsoft.WindowsAPICodePack-Core" Version="1.1.0.2" />
-    <PackageReference Include="Microsoft.WindowsAPICodePack-Shell" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="OpenTK" Version="3.3.1" />
     <PackageReference Include="OpenTK.GLControl" Version="3.1.0" />

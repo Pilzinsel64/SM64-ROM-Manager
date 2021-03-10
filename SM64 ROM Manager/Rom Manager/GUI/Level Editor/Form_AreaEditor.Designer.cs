@@ -1187,6 +1187,7 @@ namespace SM64_ROM_Manager.LevelEditor
             this.advTree_Objects.Columns.Add(this.columnHeader_ObjectNumber);
             this.advTree_Objects.Columns.Add(this.columnHeader_ComboName);
             this.advTree_Objects.DragDropEnabled = false;
+            this.advTree_Objects.ExpandWidth = 2;
             this.advTree_Objects.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
             this.advTree_Objects.MultiSelect = true;
             this.advTree_Objects.MultiSelectRule = DevComponents.AdvTree.eMultiSelectRule.AnyNode;

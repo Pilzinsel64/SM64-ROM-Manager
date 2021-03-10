@@ -126,6 +126,12 @@
   <data name="ButtonX8.Text" xml:space="preserve">
     <value>Ausführen</value>
   </data>
+  <data name="labelX_OfficialFlag.SuperTooltip2" xml:space="preserve">
+    <value>Das "Offiziell"-Label sagt dir, dass dieser Tweak sicher ist und wird für gewöhnlich nichts kaputt machen (bspw. Konsolenkompatiblität).</value>
+  </data>
+  <data name="labelX_RecommendedFlag.SuperTooltip2" xml:space="preserve">
+    <value>Das "Empfohlen"-Label sagt dir, dass dieser Tweak für jeden gängigen SM64 ROM Hack empfohlen wird für mehr Qualität bspw.</value>
+  </data>
   <data name="ButtonX7.Text" xml:space="preserve">
     <value>Suchen</value>
   </data>
@@ -2042,5 +2048,11 @@
   </data>
   <data name="WarningBox_UpgradeLegacyTweaks.Text" xml:space="preserve">
     <value>&lt;b&gt;Einige Tweaks nutzen ein altes Dateiformat.&lt;/b&gt; Klicke &lt;i&gt;Konvertieren&lt;/i&gt; um alte XML-Tweaks ins JSON-Fromat zu konvertieren für bessere Kompatibilität.</value>
+  </data>
+  <data name="ButtonItem_ShowOnlyOfficialTweaks.Text" xml:space="preserve">
+    <value>Nur offizielle Tweaks anzeigen</value>
+  </data>
+  <data name="ButtonItem_ShowOnlyRecommendedTweaks.Text" xml:space="preserve">
+    <value>Nur empfohlene Tweaks anzeigen</value>
   </data>
 </root>

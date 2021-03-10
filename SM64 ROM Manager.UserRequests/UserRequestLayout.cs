@@ -10,9 +10,9 @@ namespace SM64_ROM_Manager.UserRequests
         // F i e l d s
 
         [JsonProperty]
-        internal string Name { get; set; }
+        public string Name { get; set; }
         [JsonProperty]
-        internal UserRequestProperty[] Properties { get; set; }
+        public UserRequestProperty[] Properties { get; set; }
         [JsonProperty]
         internal UserRequestUploadSettings UploadSettings { get; set; }
 

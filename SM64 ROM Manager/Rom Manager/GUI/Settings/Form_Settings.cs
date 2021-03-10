@@ -18,7 +18,7 @@ namespace SM64_ROM_Manager
             this.FormClosed += Form_Settings_FormClosed;
             InitializeComponent();
             base.UpdateAmbientColors();
-            SuperTooltip1.SetSuperTooltip(PictureBox_Warning, new SuperTooltipInfo("Warning", "", "Some changes will completly affect only after a restart of the programm.", null, null, eTooltipColor.System, true, false, default));
+
             foreach (var lm in Publics.Publics.GetAllLoaderModules())
             {
                 var item = new ComboItem()
@@ -84,7 +84,6 @@ namespace SM64_ROM_Manager
             comboBoxEx_DefaultObjMoveMode.SelectedIndex = Settings.AreaEditor.EnableSlideMovementByDefaultForObjects ? 1 : 0;
             switchButton_UseInternalBrowser.Value = Settings.General.UseInternalBrowser;
             switchButton_ThankYouPageAfterUpdates.Value = Settings.General.OpenThankYouFormAfterUpdates;
-            switchButton_EnableNewLevelManagerGUI.Value = Settings.LevelManager.UseNewGUI;
 
             var curLoaderModule = Publics.Publics.GetLoaderModuleFromID(Settings.FileParser.FileLoaderModule);
             foreach (ComboItem item in ComboBoxEx_LoaderModule.Items)
@@ -236,6 +235,8 @@ namespace SM64_ROM_Manager
                     break;
             }
 
+            SwitchButton_EnableOpenWith.Value = General.CheckForOpenWithContextMenuEntry();
+
             finishedLoading = true;
         }
 
@@ -256,7 +257,6 @@ namespace SM64_ROM_Manager
             Settings.Network.ProxyUsername = TextBoxX_ProxyUsr.Text.Trim();
             Settings.Network.ProxyPasswordEncrypted = string.IsNullOrEmpty(TextBoxX_ProxyPwd.Text) ? string.Empty : crypter.EncryptData(TextBoxX_ProxyPwd.Text);
             Settings.General.OpenThankYouFormAfterUpdates = switchButton_ThankYouPageAfterUpdates.Value;
-            Settings.LevelManager.UseNewGUI = switchButton_EnableNewLevelManagerGUI.Value;
 
             var switchExpr = ComboBoxEx1.SelectedIndex;
             switch (switchExpr)
@@ -458,6 +458,17 @@ namespace SM64_ROM_Manager
         private void ButtonX6_Click(object sender, EventArgs e)
         {
             ButtonX6.Enabled = false;
+        }
+
+        private void SwitchButton_EnableOpenWith_ValueChanged(object sender, EventArgs e)
+        {
+            if (finishedLoading)
+            {
+                if (SwitchButton_EnableOpenWith.Value)
+                    General.AddOpenWithContextMenuEntry();
+                else
+                    General.RemoveOpenWithContextMenuEntry();
+            }
         }
     }
 }

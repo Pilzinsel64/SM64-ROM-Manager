@@ -141,6 +141,27 @@
   <data name="FileDialog_ExportLevelOrArea_CbMode_Warps" xml:space="preserve">
     <value>Alle Warps</value>
   </data>
+  <data name="MsgBox_AllowCollectingDiagnosticData_BtnAllowExtendedSystemInformations" xml:space="preserve">
+    <value>Erlaube die Ermittlung von speziellen Systeminformationen, die ein Teil des Problems sein können.&lt;br/&gt;Bspw. der Installationspfad, die Art der Verbindung mit dem Netzwerk und Art der Windows-Installation.</value>
+  </data>
+  <data name="MsgBox_AllowCollectingDiagnosticData_BtnCurrentlyOpenRom" xml:space="preserve">
+    <value>Hänge die zum Zeitpunkt des Fehlers geöffnete ROM mit an,&lt;br/&gt;um auch Fehler zu finden, die nur mit Deiner ROM auftreten.</value>
+  </data>
+  <data name="MsgBox_AllowCollectingDiagnosticData_BtnCurrentRomManagerConfig" xml:space="preserve">
+    <value>Hänge die Konfigurationsdateien deiner SM64 ROM Manager-Installation mit an,&lt;br/&gt;um Fehler, die mit deiner Installation zusammenhängen, herauszufinden.</value>
+  </data>
+  <data name="MsgBox_AllowCollectingDiagnosticData_BtnNewText" xml:space="preserve">
+    <value>&lt;b&gt;NEU:&lt;/b&gt;</value>
+  </data>
+  <data name="MsgBox_AllowCollectingDiagnosticData_Header" xml:space="preserve">
+    <value>Erfassung von Diagnosedaten erlauben?</value>
+  </data>
+  <data name="MsgBox_AllowCollectingDiagnosticData_Text" xml:space="preserve">
+    <value>Zur Verbesserung und Vereinfachung der Fehlerdiagnose im Falle eines Programmabsturzes oder Datenverlustes sind optionale Daten über die Arbeiten am SM64 ROM Manager sehr hilfreich. Wir bitten Dich die Ermittlung dieser zu erlauben, um im Fall eines Fehlers möglichst schnell die Ursache herausfinden und beheben zu können. Alle Diagnosedaten werden maximal 24 Stunden lokal auf Deinem Rechner/Laptop zwischengespeichert. Diese Daten werden im Falle eines Fehlers auf Deinen Wunsch hin gepackt und abgespeichert, sodass Du die "Diagnose-Datei" an den Entwickler übermitteln kannst. Sie werden zu KEINEM Zeitpunkt innerhalb des SM64 ROM Managers automatisch an fremde Personen oder Servern übermittelt. Sie bleiben ausschließlich lokal, bis die exportierte Diagnose-Datei per Hand an die Entwickler gesendet wurde. Bitte erlaube die Ermittlung von Diagnose-Daten, um ein Stück zur Verbesserung der Software beizutragen. Hier kannst du einzeln die Erfassung bestimmter Daten erlauben oder verbieten. Du kannst deine Entscheidung jederzeit untern den Einstellungen ändern. Bestätige deine Entscheidung mit OK.</value>
+  </data>
+  <data name="MsgBox_AllowCollectingDiagnosticData_Title" xml:space="preserve">
+    <value>Erfassung von Diagnosedaten</value>
+  </data>
   <data name="MsgBox_BankSizeChangedSuccess" xml:space="preserve">
     <value>Die Größe der Bank 0x19 wurde erforlgriech geändert.</value>
   </data>
@@ -285,6 +306,9 @@
   </data>
   <data name="Notify_ShouldLoadRomFirst" xml:space="preserve">
     <value>Du musst zuerst eine ROM laden.</value>
+  </data>
+  <data name="OpenWithContextMenuEntry" xml:space="preserve">
+    <value>Mit SM64 ROM Manager öffnen</value>
   </data>
   <data name="SoundEffect_BobOmb" xml:space="preserve">
     <value>Bob-Omb</value>

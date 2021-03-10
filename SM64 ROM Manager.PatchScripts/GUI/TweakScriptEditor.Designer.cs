@@ -41,10 +41,15 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TextBoxX_ScriptName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.CheckBoxX_TweakScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxX_DLL = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX_PPFPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX_IPSPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX_BPSPatch = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.CheckBoxX_ArmipsScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.CheckBoxX_CSharpScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.CheckBoxX_VBScript = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.Panel2 = new System.Windows.Forms.Panel();
+            this.itemPanel_SelectEmbeddedFile = new DevComponents.DotNetBar.ItemPanel();
             this.ItemListBox1 = new SM64_ROM_Manager.Publics.Controls.ItemListBox();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.TableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,10 +58,13 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TextBoxX_ReferenceName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.LayoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.ListViewEx_EmbeddedFiles = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.AdvTree_EmbeddedFiles = new DevComponents.AdvTree.AdvTree();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ButtonX_AddEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
             this.ButtonX_RemoveEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX_ExportEmbeddedFile = new DevComponents.DotNetBar.ButtonX();
             this.panel6 = new System.Windows.Forms.Panel();
             this.CheckBoxX_AllowRevert = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.LayoutControlItem1 = new DevComponents.DotNetBar.Layout.LayoutControlItem();
@@ -80,10 +88,12 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonItem_ShowObjectCatalog = new DevComponents.DotNetBar.ButtonItem();
             this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
             this.Panel1.SuspendLayout();
+            this.Panel2.SuspendLayout();
             this.Panel3.SuspendLayout();
             this.TableLayoutPanel2.SuspendLayout();
             this.LayoutControl1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvTree_EmbeddedFiles)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.Panel4.SuspendLayout();
@@ -140,12 +150,68 @@ namespace SM64_ROM_Manager.PatchScripts
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.Panel1.Controls.Add(this.checkBoxX_DLL);
+            this.Panel1.Controls.Add(this.checkBoxX_PPFPatch);
+            this.Panel1.Controls.Add(this.checkBoxX_IPSPatch);
+            this.Panel1.Controls.Add(this.checkBoxX_BPSPatch);
             this.Panel1.Controls.Add(this.CheckBoxX_ArmipsScript);
             this.Panel1.Controls.Add(this.CheckBoxX_CSharpScript);
             this.Panel1.Controls.Add(this.CheckBoxX_VBScript);
             this.Panel1.Controls.Add(this.CheckBoxX_TweakScript);
             resources.ApplyResources(this.Panel1, "Panel1");
             this.Panel1.Name = "Panel1";
+            // 
+            // checkBoxX_DLL
+            // 
+            // 
+            // 
+            // 
+            this.checkBoxX_DLL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_DLL.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_DLL.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_DLL, "checkBoxX_DLL");
+            this.checkBoxX_DLL.Name = "checkBoxX_DLL";
+            this.checkBoxX_DLL.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_DLL.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
+            // 
+            // checkBoxX_PPFPatch
+            // 
+            // 
+            // 
+            // 
+            this.checkBoxX_PPFPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_PPFPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_PPFPatch.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_PPFPatch, "checkBoxX_PPFPatch");
+            this.checkBoxX_PPFPatch.Name = "checkBoxX_PPFPatch";
+            this.checkBoxX_PPFPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_PPFPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
+            // 
+            // checkBoxX_IPSPatch
+            // 
+            // 
+            // 
+            // 
+            this.checkBoxX_IPSPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_IPSPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_IPSPatch.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_IPSPatch, "checkBoxX_IPSPatch");
+            this.checkBoxX_IPSPatch.Name = "checkBoxX_IPSPatch";
+            this.checkBoxX_IPSPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_IPSPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
+            // 
+            // checkBoxX_BPSPatch
+            // 
+            // 
+            // 
+            // 
+            this.checkBoxX_BPSPatch.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX_BPSPatch.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.checkBoxX_BPSPatch.FocusCuesEnabled = false;
+            resources.ApplyResources(this.checkBoxX_BPSPatch, "checkBoxX_BPSPatch");
+            this.checkBoxX_BPSPatch.Name = "checkBoxX_BPSPatch";
+            this.checkBoxX_BPSPatch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX_BPSPatch.CheckedChanged += new System.EventHandler(this.CheckBoxX_ScriptChange_CheckedChanged);
             // 
             // CheckBoxX_ArmipsScript
             // 
@@ -189,7 +255,24 @@ namespace SM64_ROM_Manager.PatchScripts
             // Panel2
             // 
             resources.ApplyResources(this.Panel2, "Panel2");
+            this.Panel2.Controls.Add(this.itemPanel_SelectEmbeddedFile);
             this.Panel2.Name = "Panel2";
+            // 
+            // itemPanel_SelectEmbeddedFile
+            // 
+            // 
+            // 
+            // 
+            this.itemPanel_SelectEmbeddedFile.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel_SelectEmbeddedFile.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel_SelectEmbeddedFile.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.itemPanel_SelectEmbeddedFile, "itemPanel_SelectEmbeddedFile");
+            this.itemPanel_SelectEmbeddedFile.DragDropSupport = true;
+            this.itemPanel_SelectEmbeddedFile.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
+            this.itemPanel_SelectEmbeddedFile.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.itemPanel_SelectEmbeddedFile.Name = "itemPanel_SelectEmbeddedFile";
+            this.itemPanel_SelectEmbeddedFile.ReserveLeftSpace = false;
+            this.itemPanel_SelectEmbeddedFile.ItemClick += new System.EventHandler(this.ItemPanel_SelectEmbeddedFile_ItemClick);
             // 
             // ItemListBox1
             // 
@@ -287,30 +370,47 @@ namespace SM64_ROM_Manager.PatchScripts
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.ListViewEx_EmbeddedFiles);
+            this.panel5.Controls.Add(this.AdvTree_EmbeddedFiles);
             this.panel5.Controls.Add(this.tableLayoutPanel1);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
-            // ListViewEx_EmbeddedFiles
+            // AdvTree_EmbeddedFiles
             // 
-            resources.ApplyResources(this.ListViewEx_EmbeddedFiles, "ListViewEx_EmbeddedFiles");
+            this.AdvTree_EmbeddedFiles.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            resources.ApplyResources(this.AdvTree_EmbeddedFiles, "AdvTree_EmbeddedFiles");
+            this.AdvTree_EmbeddedFiles.BackColor = System.Drawing.SystemColors.Window;
             // 
             // 
             // 
-            this.ListViewEx_EmbeddedFiles.Border.Class = "ListViewBorder";
-            this.ListViewEx_EmbeddedFiles.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_EmbeddedFiles.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_EmbeddedFiles.HideSelection = false;
-            this.ListViewEx_EmbeddedFiles.Name = "ListViewEx_EmbeddedFiles";
-            this.ListViewEx_EmbeddedFiles.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_EmbeddedFiles.View = System.Windows.Forms.View.List;
+            this.AdvTree_EmbeddedFiles.BackgroundStyle.Class = "TreeBorderKey";
+            this.AdvTree_EmbeddedFiles.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AdvTree_EmbeddedFiles.DragDropEnabled = false;
+            this.AdvTree_EmbeddedFiles.ExpandWidth = 0;
+            this.AdvTree_EmbeddedFiles.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.AdvTree_EmbeddedFiles.Name = "AdvTree_EmbeddedFiles";
+            this.AdvTree_EmbeddedFiles.NodesConnector = this.nodeConnector1;
+            this.AdvTree_EmbeddedFiles.NodeStyle = this.elementStyle1;
+            this.AdvTree_EmbeddedFiles.PathSeparator = ";";
+            this.AdvTree_EmbeddedFiles.Styles.Add(this.elementStyle1);
+            this.AdvTree_EmbeddedFiles.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.AdvTree_EmbeddedFiles_AfterNodeSelect);
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.ButtonX_AddEmbeddedFile, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ButtonX_RemoveEmbeddedFile, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonX_ExportEmbeddedFile, 3, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // ButtonX_AddEmbeddedFile
@@ -336,6 +436,18 @@ namespace SM64_ROM_Manager.PatchScripts
             this.ButtonX_RemoveEmbeddedFile.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ButtonX_RemoveEmbeddedFile.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.ButtonX_RemoveEmbeddedFile.Click += new System.EventHandler(this.ButtonX_RemoveEmbeddedFile_Click);
+            // 
+            // buttonX_ExportEmbeddedFile
+            // 
+            this.buttonX_ExportEmbeddedFile.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX_ExportEmbeddedFile.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX_ExportEmbeddedFile.FocusCuesEnabled = false;
+            this.buttonX_ExportEmbeddedFile.Image = global::SM64_ROM_Manager.PatchScripts.MyIcons.icons8_export_16px;
+            resources.ApplyResources(this.buttonX_ExportEmbeddedFile, "buttonX_ExportEmbeddedFile");
+            this.buttonX_ExportEmbeddedFile.Name = "buttonX_ExportEmbeddedFile";
+            this.buttonX_ExportEmbeddedFile.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX_ExportEmbeddedFile.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
+            this.buttonX_ExportEmbeddedFile.Click += new System.EventHandler(this.ButtonX_ExportEmbeddedFile_Click);
             // 
             // panel6
             // 
@@ -381,7 +493,7 @@ namespace SM64_ROM_Manager.PatchScripts
             // LayoutControlItem3
             // 
             this.LayoutControlItem3.Control = this.Panel1;
-            this.LayoutControlItem3.Height = 48;
+            this.LayoutControlItem3.Height = 77;
             this.LayoutControlItem3.MinSize = new System.Drawing.Size(64, 18);
             this.LayoutControlItem3.Name = "LayoutControlItem3";
             resources.ApplyResources(this.LayoutControlItem3, "LayoutControlItem3");
@@ -551,12 +663,14 @@ namespace SM64_ROM_Manager.PatchScripts
             this.TopLeftCornerSize = 0;
             this.TopRightCornerSize = 0;
             this.Panel1.ResumeLayout(false);
+            this.Panel2.ResumeLayout(false);
             this.Panel3.ResumeLayout(false);
             this.Panel3.PerformLayout();
             this.TableLayoutPanel2.ResumeLayout(false);
             this.LayoutControl1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvTree_EmbeddedFiles)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
@@ -631,7 +745,6 @@ namespace SM64_ROM_Manager.PatchScripts
         private DevComponents.DotNetBar.Controls.CheckBoxX CheckBoxX_ArmipsScript;
         private DevComponents.DotNetBar.ContextMenuBar contextMenuBar1;
         private Panel panel5;
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_EmbeddedFiles;
         private TableLayoutPanel tableLayoutPanel1;
         private DevComponents.DotNetBar.ButtonX ButtonX_AddEmbeddedFile;
         private DevComponents.DotNetBar.ButtonX ButtonX_RemoveEmbeddedFile;
@@ -639,5 +752,14 @@ namespace SM64_ROM_Manager.PatchScripts
         private Panel panel6;
         private DevComponents.DotNetBar.Controls.CheckBoxX CheckBoxX_AllowRevert;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem6;
+        private DevComponents.DotNetBar.ItemPanel itemPanel_SelectEmbeddedFile;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_PPFPatch;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_IPSPatch;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_BPSPatch;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX_DLL;
+        private DevComponents.AdvTree.AdvTree AdvTree_EmbeddedFiles;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
+        private DevComponents.DotNetBar.ButtonX buttonX_ExportEmbeddedFile;
     }
 }

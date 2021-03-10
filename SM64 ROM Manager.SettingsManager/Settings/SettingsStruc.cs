@@ -15,6 +15,7 @@ namespace SM64_ROM_Manager.SettingsManager
         public NetworkSettingsStruc Network { get; set; }
         public WindowSettingsStruc WindowSettings { get; set; }
         public LevelManagerSettingsStruc LevelManager { get; set; }
+        public DiagnosticDataStruc DiagnosticData { get; set; }
 
         public override void ResetValues()
         {
@@ -51,6 +52,9 @@ namespace SM64_ROM_Manager.SettingsManager
             if (LevelManager is null)
                 LevelManager = new LevelManagerSettingsStruc();
             LevelManager.ResetValues();
+            if (DiagnosticData is null)
+                DiagnosticData = new DiagnosticDataStruc();
+            DiagnosticData.ResetValues();
         }
     }
 }

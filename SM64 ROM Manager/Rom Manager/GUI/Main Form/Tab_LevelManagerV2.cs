@@ -33,6 +33,9 @@ namespace SM64_ROM_Manager
         private bool savingRom = false;
         private bool loadingArea = false;
         private bool loadingLevel = false;
+        private bool hasInitCMLevel = false;
+        private bool hasInitCMArea = false;
+        private bool hasInitCMCustomLevels = false;
 
         Node nCustomLevels;
         Node nVanillaLevels;
@@ -65,11 +68,12 @@ namespace SM64_ROM_Manager
             // Init nodes
             nCustomLevels = new Node("Custom Levels")
             {
-                Expanded = true
+                Expanded = true,
+                ContextMenu = ButtonItem_CM_CustomLevels
             };
             nVanillaLevels = new Node("Vanilla Levels")
             {
-                Expanded = true
+                Expanded = true,
             };
             LevelsTree.Nodes.AddRange(new[] { nCustomLevels/*, nVanillaLevels*/ });
 
@@ -202,10 +206,9 @@ namespace SM64_ROM_Manager
         {
             get
             {
-                var indicies = ListViewEx_LM_Specials.SelectedIndices;
-                if (indicies.Count > 0)
+                if (advTree_SpecialBoxes.SelectedNode is object)
                 {
-                    return indicies[0];
+                    return advTree_SpecialBoxes.SelectedNode.Index;
                 }
                 else
                 {
@@ -376,12 +379,12 @@ namespace SM64_ROM_Manager
 
         private void AddSpecialItemToList(int levelIndex, int areaIndex, int itemIndex, bool refreshAndVisible)
         {
-            var lvi = new ListViewItem();
+            var lvi = new Node();
             for (int i = 0; i <= 7; i++)
-                lvi.SubItems.Add(new ListViewItem.ListViewSubItem());
-            lvi.Text = Conversions.ToString(ListViewEx_LM_Specials.Items.Count + 1);
+                lvi.Cells.Add(new Cell());
+            lvi.Text = Conversions.ToString(advTree_SpecialBoxes.Nodes.Count + 1);
             SetSpecialBoxDataToItem(levelIndex, areaIndex, itemIndex, lvi);
-            ListViewEx_LM_Specials.Items.Add(lvi);
+            advTree_SpecialBoxes.Nodes.Add(lvi);
             if (refreshAndVisible)
             {
                 lvi.EnsureVisible();
@@ -390,7 +393,7 @@ namespace SM64_ROM_Manager
 
         private void UpdateSpecialBoxItem(SpecialItemEventArgs e)
         {
-            foreach (ListViewItem lvi in ListViewEx_LM_Specials.Items)
+            foreach (Node lvi in advTree_SpecialBoxes.Nodes)
             {
                 if ((int)lvi.Tag == e.ItemIndex)
                 {
@@ -401,8 +404,8 @@ namespace SM64_ROM_Manager
 
         private void RemoveSpecialItemFromList(int itemIndex)
         {
-            var toRemove = new List<ListViewItem>();
-            foreach (ListViewItem lvi in ListViewEx_LM_Specials.Items)
+            var toRemove = new List<Node>();
+            foreach (Node lvi in advTree_SpecialBoxes.Nodes)
             {
                 if ((int)lvi.Tag == itemIndex)
                     toRemove.Add(lvi);
@@ -410,20 +413,20 @@ namespace SM64_ROM_Manager
                     lvi.Tag = (int)lvi.Tag - 1;
             }
 
-            toRemove.ForEach(n => ListViewEx_LM_Specials.Items.Remove(n));
+            toRemove.ForEach(n => advTree_SpecialBoxes.Nodes.Remove(n));
         }
 
-        private void SetSpecialBoxDataToItem(int levelIndex, int areaIndex, int itemIndex, ListViewItem lvi)
+        private void SetSpecialBoxDataToItem(int levelIndex, int areaIndex, int itemIndex, Node lvi)
         {
             var sd = Controller.GetSpecialBoxInfos(levelIndex, areaIndex, itemIndex);
             lvi.Tag = itemIndex;
-            lvi.SubItems[1].Text = sd.boxType.ToString();
-            lvi.SubItems[2].Text = Conversions.ToString(sd.x1);
-            lvi.SubItems[3].Text = Conversions.ToString(sd.z1);
-            lvi.SubItems[4].Text = Conversions.ToString(sd.x2);
-            lvi.SubItems[5].Text = Conversions.ToString(sd.z2);
-            lvi.SubItems[6].Text = Conversions.ToString(sd.y);
-            lvi.SubItems[7].Text = sd.boxType == SpecialBoxType.Water ? sd.invisibleWater ? Form_Main_Resources.Text_Invisible : sd.waterType.ToString() : "-";
+            lvi.Cells[1].Text = sd.boxType.ToString();
+            lvi.Cells[2].Text = Conversions.ToString(sd.x1);
+            lvi.Cells[3].Text = Conversions.ToString(sd.z1);
+            lvi.Cells[4].Text = Conversions.ToString(sd.x2);
+            lvi.Cells[5].Text = Conversions.ToString(sd.z2);
+            lvi.Cells[6].Text = Conversions.ToString(sd.y);
+            lvi.Cells[7].Text = sd.boxType == SpecialBoxType.Water ? sd.invisibleWater ? Form_Main_Resources.Text_Invisible : sd.waterType.ToString() : "-";
         }
 
         internal void LoadObjectBankListBoxEntries()
@@ -465,7 +468,8 @@ namespace SM64_ROM_Manager
             {
                 var n = new Node(GetLevelDisplayName(lvlID))
                 {
-                    Tag = 0
+                    Tag = 0,
+                    ContextMenu = ButtonItem_CM_Level
                 };
 
                 // Load areas
@@ -486,12 +490,20 @@ namespace SM64_ROM_Manager
             {
                 var n = new Node(Form_Main_Resources.Text_Area + " " + areaID.ToString())
                 {
-                    Tag = 1
+                    Tag = 1,
+                    ContextMenu = ButtonItem_CM_Area
                 };
+
+                n.NodeDoubleClick += Node_Area_NodeDoubleClick;
 
                 // Add item
                 nLevel.Nodes.Add(n);
             }
+        }
+
+        private void Node_Area_NodeDoubleClick(object sender, EventArgs e)
+        {
+            LM_OpenAreaEditor();
         }
 
         private string GetLevelDisplayName(ushort lvlID)
@@ -640,16 +652,15 @@ namespace SM64_ROM_Manager
 
         private void UpdateSpecialItemsList()
         {
-            ListViewEx_LM_Specials.SuspendLayout();
+            advTree_SpecialBoxes.BeginUpdate();
 
             // Clear everything
-            ListViewEx_LM_Specials.Items.Clear();
+            advTree_SpecialBoxes.Nodes.Clear();
 
             // List all special boxes
             for (int sbIndex = 0, loopTo = Controller.GetSpecialBoxesCount(CurrentLevelIndex, CurrentAreaIndex) - 1; sbIndex <= loopTo; sbIndex++)
                 AddSpecialItemToList(CurrentLevelIndex, CurrentAreaIndex, sbIndex, false);
-            ListViewEx_LM_Specials.ResumeLayout();
-            ListViewEx_LM_Specials.Refresh();
+            advTree_SpecialBoxes.EndUpdate();
         }
 
         private void RemoveLevelFromList(int levelIndex)
@@ -963,13 +974,6 @@ namespace SM64_ROM_Manager
             }
         }
 
-        private void ListViewEx_LM_Specials_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            bool isNull = CurrentSpecialBoxIndex == -1;
-            Button_LM_EditSpecial.Enabled = !isNull;
-            Button_LM_RemoveSpecial.Enabled = !isNull;
-        }
-
         private void ComboBox_LM_CameraPreset_SelectedIndexChanged(object sender, EventArgs e)
         {
             bool IsE = Controller.DoesCameraPresetProvide2DCamera((SM64Lib.Geolayout.CameraPresets)(ComboBox_LM_CameraPreset.SelectedIndex + 1));
@@ -1119,7 +1123,7 @@ namespace SM64_ROM_Manager
         {
             Controls_HandleToSaveAreaSettings();
 
-            if (sender == CheckBoxX_LM_Enable2DCamera && !Controller.CanUse2DCamera())
+            if (sender == CheckBoxX_LM_Enable2DCamera && CheckBoxX_LM_Enable2DCamera.Value && !Controller.CanUse2DCamera())
                 MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_No2DCameraPatched, Form_Main_Resources.MsgBox_No2DCameraPatched_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void LM_OpenAreaEditor(object sender, EventArgs e) => LM_OpenAreaEditor();
@@ -1145,13 +1149,16 @@ namespace SM64_ROM_Manager
 
         private void ButtonItem_ChangeAreaID_Click(object sender, EventArgs e)
         {
-            var input = new ValueInputDialog();
-            input.ValueTextBox.Text = TextValueConverter.TextFromValue(Controller.GetLevelAreaID(CurrentLevelIndex, CurrentAreaIndex));
-
-            if (input.ShowDialog() == DialogResult.OK)
+            if (CurrentAreaIndex != -1)
             {
-                if (!Controller.ChangeAreaID(CurrentLevelIndex, CurrentAreaIndex, (byte)TextValueConverter.ValueFromText(input.ValueTextBox.Text)))
-                    MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_ChangeAreaID, Form_Main_Resources.MsgBox_ChangeAreaID_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                var input = new ValueInputDialog();
+                input.ValueTextBox.Text = TextValueConverter.TextFromValue(Controller.GetLevelAreaID(CurrentLevelIndex, CurrentAreaIndex));
+
+                if (input.ShowDialog() == DialogResult.OK)
+                {
+                    if (!Controller.ChangeAreaID(CurrentLevelIndex, CurrentAreaIndex, (byte)TextValueConverter.ValueFromText(input.ValueTextBox.Text)))
+                        MessageBoxEx.Show(this, Form_Main_Resources.MsgBox_ChangeAreaID, Form_Main_Resources.MsgBox_ChangeAreaID_Title, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -1205,14 +1212,17 @@ namespace SM64_ROM_Manager
         private void LoadCurrentSelection(bool forceLoadingNothing = false)
         {
             bool menuItemsEnabled = false;
+            bool allowOpenLevelEditor = false;
             
             if (!forceLoadingNothing)
             {
                 var indices = CurrentIndicies;
+                var hasLevel = indices.levelIndex != -1;
+                var hasArea = indices.areaIndex != -1;
 
                 panel_Tools.SuspendLayout();
 
-                if (indices.areaIndex != -1 && indices.levelIndex != -1)
+                if (hasArea && hasLevel)
                 {
                     LoadAreaSettings(indices.levelIndex, indices.areaIndex);
                     EnableTabControl(TabControl_AreaProperties);
@@ -1225,9 +1235,12 @@ namespace SM64_ROM_Manager
                     EnableTabControl(isNull ? null : TabControl_LM_Level);
                     menuItemsEnabled = !isNull;
                 }
+
+                if (hasLevel)
+                    allowOpenLevelEditor = Controller.GetLevelAreasCount(indices.levelIndex) > 0;
             }
 
-            ButtonItem_OpenLevelEditor.Enabled = menuItemsEnabled;
+            ButtonItem_OpenLevelEditor.Enabled = allowOpenLevelEditor;
             ButtonItem_RemoveItem.Enabled = menuItemsEnabled;
             ButtonItem_ExportLevelArea.Enabled = menuItemsEnabled;
             buttonItem1.Enabled = menuItemsEnabled;
@@ -1273,6 +1286,77 @@ namespace SM64_ROM_Manager
             var cameraFrustum = Controller.GetLevelAreaCameraFrustum(CurrentLevelIndex, CurrentAreaIndex);
             var dialog = new CameraFrustumDialog(cameraFrustum);
             dialog.ShowDialog(this);
+        }
+
+        private void AdvTree_SpecialBoxes_AfterNodeSelect(object sender, AdvTreeNodeEventArgs e)
+        {
+            bool isNull = CurrentSpecialBoxIndex == -1;
+            Button_LM_EditSpecial.Enabled = !isNull;
+            Button_LM_RemoveSpecial.Enabled = !isNull;
+        }
+
+        private void ButtonItem_CM_CustomLevels_PopupOpen(object sender, PopupOpenEventArgs e)
+        {
+            if (!hasInitCMCustomLevels)
+            {
+                ButtonItem_CM_CustomLevels.SubItems.AddRange(new BaseItem[] {
+                    (BaseItem)ButtonItem_LevelTools_AddLevel.Clone()
+                });
+                hasInitCMCustomLevels = true;
+            }
+        }
+
+        private void ButtonItem_CM_Level_PopupOpen(object sender, PopupOpenEventArgs e)
+        {
+            if (!hasInitCMLevel)
+            {
+                ButtonItem_CM_Level.SubItems.AddRange(new BaseItem[] {
+                    (BaseItem)ButtonItem_LevelTools_AddLevel.Clone(),
+                    (BaseItem)ButtonItem_AreaTools_AddArea.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_ChangeLevelID.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_ChangeLevelName.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_ChangeSizeOfBank0x19.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_EditLevelscript.Clone(),
+                    (BaseItem)ButtonItem_LevelTools_CopyRomAddress.Clone()
+                });
+                ButtonItem_CM_Level.SubItems[2].BeginGroup = true;
+                hasInitCMLevel = true;
+            }
+        }
+
+        private void ButtonItem_CM_Area_PopupOpen(object sender, PopupOpenEventArgs e)
+        {
+            if (!hasInitCMArea)
+            {
+                ButtonItem_CM_Area.SubItems.AddRange(new BaseItem[] {
+                    (BaseItem)ButtonItem_OpenLevelEditor.Clone(),
+                    (BaseItem)ButtonItem_AreaTools_ChangeAreaID.Clone(),
+                    (BaseItem)ButtonItem_AreaTools_EditAreaLevelScript.Clone(),
+                    (BaseItem)ButtonItem_AreaTools_EditGeolayoutScript.Clone()
+                });
+                ButtonItem_CM_Area.SubItems[1].BeginGroup = true;
+                hasInitCMArea = true;
+            }
+        }
+
+        private void ButtonItem_LevelTools_CopyRomAddress_Click(object sender, EventArgs e)
+        {
+            Controller.CopyLevelLastRomOffset(CurrentLevelIndex);
+        }
+
+        private void ButtonItem_LevelTools_ChangeLevelID_Click(object sender, EventArgs e)
+        {
+            Controller.ChangeLevelID(CurrentLevelIndex);
+        }
+
+        private void ButtonItem_LevelTools_ChangeLevelName_Click(object sender, EventArgs e)
+        {
+            Controller.ChangeLevelCustomName(CurrentLevelIndex);
+        }
+
+        private void ButtonItem_LevelTools_ChangeSizeOfBank0x19_Click(object sender, EventArgs e)
+        {
+            Controller.SetLevelBank0x19Length(CurrentLevelIndex);
         }
     }
 }

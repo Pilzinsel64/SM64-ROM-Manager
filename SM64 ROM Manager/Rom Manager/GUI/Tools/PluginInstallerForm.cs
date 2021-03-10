@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using DevComponents.AdvTree;
 using global::DevComponents.DotNetBar;
 using global::Microsoft.WindowsAPICodePack.Dialogs;
 using global::SM64_ROM_Manager.My.Resources;
@@ -25,68 +26,75 @@ namespace SM64_ROM_Manager
             base.UpdateAmbientColors();
         }
 
+        // C o n s t a n t s
+
+        private const string LVG_INSTALLED = "Lvg_Installed";
+        private const string LVG_REMOVED = "Lvg_Removed";
+
         // M e m b e r s
 
         private static List<PluginInstaller.PluginInfo> removedPlugins = new List<PluginInstaller.PluginInfo>();
+        private readonly List<Node> allItems = new List<Node>();
 
         // F e a t u r e s
 
         private void LoadAllPlugins()
         {
-            ListViewEx_Plugins.SuspendLayout();
+            advTree1.BeginUpdate();
             LoadInstalledPlugins();
             LoadRemovedPlugins();
-            ListViewEx_Plugins.ResumeLayout();
+            advTree1.EndUpdate();
         }
 
         private void LoadInstalledPlugins()
         {
-            this.LoadPlugins(ListViewEx_Plugins.Groups["Lvg_Installed"], PluginInstaller.GetAllPlugins().Where(n => !removedPlugins.Where(b => b.Plugin == n.Plugin).Any()));
+            LoadPlugins(advTree1.FindNodeByName(LVG_INSTALLED), PluginInstaller.GetAllPlugins().Where(n => !removedPlugins.Where(b => b.Plugin == n.Plugin).Any()));
         }
 
         private void LoadRemovedPlugins()
         {
-            LoadPlugins(ListViewEx_Plugins.Groups["Lvg_Removed"], removedPlugins);
+            LoadPlugins(advTree1.FindNodeByName(LVG_REMOVED), removedPlugins);
         }
 
-        private void LoadPlugins(ListViewGroup lvg, IEnumerable<PluginInstaller.PluginInfo> plugins)
+        private void LoadPlugins(Node lvg, IEnumerable<PluginInstaller.PluginInfo> plugins)
         {
-            ListViewEx_Plugins.SuspendLayout();
-            var itemsToRemove = new List<ListViewItem>();
-            foreach (ListViewItem item in ListViewEx_Plugins.Items)
+            var itemsToRemove = new List<Node>();
+            advTree1.BeginUpdate();
+
+            foreach (Node item in lvg.Nodes)
+                itemsToRemove.Add(item);
+
+            foreach (Node item in itemsToRemove)
             {
-                if (item.Group == lvg)
-                {
-                    itemsToRemove.Add(item);
-                }
+                item.Remove();
+                allItems.Remove(item);
             }
 
-            foreach (ListViewItem item in itemsToRemove)
-                ListViewEx_Plugins.Items.Remove(item);
             foreach (PluginInstaller.PluginInfo p in plugins)
-                ListViewEx_Plugins.Items.Add(GetListViewItem(p, lvg));
-            ListViewEx_Plugins.ResumeLayout();
+                allItems.Add(GetListViewItem(p, lvg));
+
+            advTree1.EndUpdate();
         }
 
-        private ListViewItem GetListViewItem(PluginInstaller.PluginInfo p, ListViewGroup lvg)
+        private Node GetListViewItem(PluginInstaller.PluginInfo p, Node lvg)
         {
-            var lvi = new ListViewItem()
+            var lvi = new Node
             {
                 Tag = p,
-                Text = p.Name,
-                Group = lvg
+                Text = p.Name
             };
-            lvi.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = p.Version.ToString() });
-            lvi.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = p.Developer });
-            lvi.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = p.Location });
+            lvi.Cells.Add(new Cell { Text = p.Version.ToString() });
+            lvi.Cells.Add(new Cell { Text = p.Developer });
+            lvi.Cells.Add(new Cell { Text = p.Location });
+            lvg.Nodes.Add(lvi);
             return lvi;
         }
 
         private IEnumerable<PluginInstaller.PluginInfo> GetSelectedPlugins()
         {
-            var items = ListViewEx_Plugins.SelectedItems;
+            var items = advTree1.SelectedNodes;
             var plugins = new List<PluginInstaller.PluginInfo>();
-            foreach (ListViewItem item in items)
+            foreach (Node item in items)
             {
                 if (item.Tag is PluginInstaller.PluginInfo)
                 {
@@ -163,7 +171,6 @@ namespace SM64_ROM_Manager
 
         private void PluginInstallerForm_Load(object sender, EventArgs e)
         {
-            ListViewEx_Plugins.ResetHeaderHandler();
         }
 
         private void PluginInstallerForm_Shown(object sender, EventArgs e)
@@ -201,6 +208,11 @@ namespace SM64_ROM_Manager
         private void ButtonItem_Directory_Click(object sender, EventArgs e)
         {
             InstallPlugin(string.Empty, string.Empty, true);
+        }
+
+        private void advTree1_AfterNodeSelect(object sender, DevComponents.AdvTree.AdvTreeNodeEventArgs e)
+        {
+
         }
     }
 }

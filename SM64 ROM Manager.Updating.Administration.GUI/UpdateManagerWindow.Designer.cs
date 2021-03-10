@@ -42,12 +42,14 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.SuperTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.circularProgress1 = new DevComponents.DotNetBar.Controls.CircularProgress();
-            this.ListViewEx_Packages = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.columnHeader_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_Version = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_Channel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_Build = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_IsPublic = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.advTree_Packages = new DevComponents.AdvTree.AdvTree();
+            this.columnHeader1 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader2 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader3 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader4 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader5 = new DevComponents.AdvTree.ColumnHeader();
+            this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
+            this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.SuperTabItem_Packages = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.layoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
@@ -85,6 +87,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             ((System.ComponentModel.ISupportInitialize)(this.SuperTabControl1)).BeginInit();
             this.SuperTabControl1.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_Packages)).BeginInit();
             this.superTabControlPanel2.SuspendLayout();
             this.layoutControl1.SuspendLayout();
             this.RibbonControl_Main.SuspendLayout();
@@ -135,7 +138,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             // superTabControlPanel1
             // 
             this.superTabControlPanel1.Controls.Add(this.circularProgress1);
-            this.superTabControlPanel1.Controls.Add(this.ListViewEx_Packages);
+            this.superTabControlPanel1.Controls.Add(this.advTree_Packages);
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel1.Location = new System.Drawing.Point(100, 0);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
@@ -161,58 +164,75 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             this.circularProgress1.TabIndex = 5;
             this.circularProgress1.Visible = false;
             // 
-            // ListViewEx_Packages
+            // advTree_Packages
             // 
-            this.ListViewEx_Packages.BackColor = System.Drawing.Color.White;
+            this.advTree_Packages.AccessibleRole = System.Windows.Forms.AccessibleRole.Outline;
+            this.advTree_Packages.BackColor = System.Drawing.SystemColors.Window;
             // 
             // 
             // 
-            this.ListViewEx_Packages.Border.Class = "ListViewBorder";
-            this.ListViewEx_Packages.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ListViewEx_Packages.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader_Name,
-            this.columnHeader_Version,
-            this.columnHeader_Channel,
-            this.columnHeader_Build,
-            this.columnHeader_IsPublic});
-            this.ListViewEx_Packages.DisabledBackColor = System.Drawing.Color.Empty;
-            this.ListViewEx_Packages.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListViewEx_Packages.ForeColor = System.Drawing.Color.Black;
-            this.ListViewEx_Packages.FullRowSelect = true;
-            this.ListViewEx_Packages.GridLines = true;
-            this.ListViewEx_Packages.HideSelection = false;
-            this.ListViewEx_Packages.Location = new System.Drawing.Point(0, 0);
-            this.ListViewEx_Packages.Name = "ListViewEx_Packages";
-            this.ListViewEx_Packages.Size = new System.Drawing.Size(548, 394);
-            this.ListViewEx_Packages.TabIndex = 0;
-            this.ListViewEx_Packages.UseCompatibleStateImageBehavior = false;
-            this.ListViewEx_Packages.View = System.Windows.Forms.View.Details;
-            this.ListViewEx_Packages.SelectedIndexChanged += new System.EventHandler(this.ListViewEx_Packages_SelectedIndexChanged);
+            this.advTree_Packages.BackgroundStyle.Class = "TreeBorderKey";
+            this.advTree_Packages.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.advTree_Packages.Columns.Add(this.columnHeader1);
+            this.advTree_Packages.Columns.Add(this.columnHeader2);
+            this.advTree_Packages.Columns.Add(this.columnHeader3);
+            this.advTree_Packages.Columns.Add(this.columnHeader4);
+            this.advTree_Packages.Columns.Add(this.columnHeader5);
+            this.advTree_Packages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advTree_Packages.DragDropEnabled = false;
+            this.advTree_Packages.ExpandWidth = 0;
+            this.advTree_Packages.GridRowLines = true;
+            this.advTree_Packages.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
+            this.advTree_Packages.Location = new System.Drawing.Point(0, 0);
+            this.advTree_Packages.Name = "advTree_Packages";
+            this.advTree_Packages.NodesConnector = this.nodeConnector1;
+            this.advTree_Packages.NodeStyle = this.elementStyle1;
+            this.advTree_Packages.PathSeparator = ";";
+            this.advTree_Packages.Size = new System.Drawing.Size(548, 394);
+            this.advTree_Packages.Styles.Add(this.elementStyle1);
+            this.advTree_Packages.TabIndex = 6;
+            this.advTree_Packages.Text = "advTree1";
+            this.advTree_Packages.AfterNodeSelect += new DevComponents.AdvTree.AdvTreeNodeEventHandler(this.advTree_Packages_AfterNodeSelect);
             // 
-            // columnHeader_Name
+            // columnHeader1
             // 
-            this.columnHeader_Name.Text = "Name";
-            this.columnHeader_Name.Width = 160;
+            this.columnHeader1.Name = "columnHeader1";
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width.Absolute = 160;
             // 
-            // columnHeader_Version
+            // columnHeader2
             // 
-            this.columnHeader_Version.Text = "Version";
-            this.columnHeader_Version.Width = 100;
+            this.columnHeader2.Name = "columnHeader2";
+            this.columnHeader2.Text = "Version";
+            this.columnHeader2.Width.Absolute = 100;
             // 
-            // columnHeader_Channel
+            // columnHeader3
             // 
-            this.columnHeader_Channel.Text = "Kanal";
-            this.columnHeader_Channel.Width = 100;
+            this.columnHeader3.Name = "columnHeader3";
+            this.columnHeader3.Text = "Kanal";
+            this.columnHeader3.Width.Absolute = 100;
             // 
-            // columnHeader_Build
+            // columnHeader4
             // 
-            this.columnHeader_Build.Text = "Build";
-            this.columnHeader_Build.Width = 80;
+            this.columnHeader4.Name = "columnHeader4";
+            this.columnHeader4.Text = "Build";
+            this.columnHeader4.Width.Absolute = 80;
             // 
-            // columnHeader_IsPublic
+            // columnHeader5
             // 
-            this.columnHeader_IsPublic.Text = "Öffentlich";
-            this.columnHeader_IsPublic.Width = 80;
+            this.columnHeader5.Name = "columnHeader5";
+            this.columnHeader5.Text = "Öffentlich";
+            this.columnHeader5.Width.Absolute = 80;
+            // 
+            // nodeConnector1
+            // 
+            this.nodeConnector1.LineColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // elementStyle1
+            // 
+            this.elementStyle1.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.elementStyle1.Name = "elementStyle1";
+            this.elementStyle1.TextColor = System.Drawing.SystemColors.ControlText;
             // 
             // SuperTabItem_Packages
             // 
@@ -788,6 +808,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
             ((System.ComponentModel.ISupportInitialize)(this.SuperTabControl1)).EndInit();
             this.SuperTabControl1.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.advTree_Packages)).EndInit();
             this.superTabControlPanel2.ResumeLayout(false);
             this.layoutControl1.ResumeLayout(false);
             this.RibbonControl_Main.ResumeLayout(false);
@@ -883,13 +904,7 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         private DevComponents.DotNetBar.Layout.LayoutControl layoutControl1;
         private DevComponents.DotNetBar.Controls.TextBoxX TextBoxX_UpdateInstallerDownloadUrl;
         private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem1;
-        private DevComponents.DotNetBar.Controls.ListViewEx ListViewEx_Packages;
-        private ColumnHeader columnHeader_Version;
-        private ColumnHeader columnHeader_Channel;
-        private ColumnHeader columnHeader_Build;
-        private ColumnHeader columnHeader_IsPublic;
         private DevComponents.DotNetBar.StyleManager StyleManager1;
-        private ColumnHeader columnHeader_Name;
         private DevComponents.DotNetBar.RibbonBar ribbonBar_Discord;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_PostMsgInDiscord;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ChangeVersion;
@@ -897,5 +912,13 @@ namespace SM64_ROM_Manager.Updating.Administration.GUI
         private DevComponents.DotNetBar.Controls.CircularProgress circularProgress1;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_BotSettings;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ProxyConfig;
+        private DevComponents.AdvTree.AdvTree advTree_Packages;
+        private DevComponents.AdvTree.NodeConnector nodeConnector1;
+        private DevComponents.DotNetBar.ElementStyle elementStyle1;
+        private DevComponents.AdvTree.ColumnHeader columnHeader1;
+        private DevComponents.AdvTree.ColumnHeader columnHeader2;
+        private DevComponents.AdvTree.ColumnHeader columnHeader3;
+        private DevComponents.AdvTree.ColumnHeader columnHeader4;
+        private DevComponents.AdvTree.ColumnHeader columnHeader5;
     }
 }

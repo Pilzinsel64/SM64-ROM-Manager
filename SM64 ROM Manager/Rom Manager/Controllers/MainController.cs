@@ -312,6 +312,9 @@ namespace SM64_ROM_Manager
 
             // Enable Auto-Save for Settings
             Settings.AutoSave = true;
+
+            // Fix open with context menu entry
+            General.FixOpenWithContextMenuEntry();
         }
 
         // P a t c h C l a s s   E v e n t s
@@ -849,7 +852,7 @@ namespace SM64_ROM_Manager
                 return RomManager.ProgramVersion > GetNewRomVersion();
             return true;
         }
-
+        
         // T o o l s
 
         public void OpenTweakViewer()
@@ -1047,23 +1050,23 @@ namespace SM64_ROM_Manager
 
         public void OpenFeatureRequestDialog(bool online)
         {
-            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "FeatureRequest.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS");
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "FeatureRequest.json"), WebLinks.FeatureRequestForm, WebLinks.FeatureRequestFormInternal);
         }
 
         public void OpenBugReportDialog(bool online)
         {
-            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "BugReport.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH");
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "BugReport.json"), WebLinks.BugReportForm, WebLinks.BugReportFormInternal);
         }
 
         public void OpenTranslationSubmition(bool online)
         {
-            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "SubmitTranslation.json"), "https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma");
+            OpenUserRequestDialog(online, Path.Combine(Publics.General.MyUserRequestsPath, "SubmitTranslation.json"), WebLinks.TranslationSubmitionForm, WebLinks.TranslationSubmitionFormInternal);
         }
 
-        private void OpenUserRequestDialog(bool online, string requestFilePath, string onlineUrl)
+        private void OpenUserRequestDialog(bool online, string requestFilePath, string onlineUrl, string internalUrl)
         {
             if (online)
-                Publics.Publics.OpenBrowser(new Uri(onlineUrl), true, new Size(800, 700));
+                Publics.Publics.OpenBrowser(new Uri(onlineUrl), new Uri(internalUrl), true, new Size(800, 700));
             else
             {
                 var frm = new UserRequestDialog(UserRequestLayout.LoadFrom(requestFilePath));
@@ -1090,6 +1093,17 @@ namespace SM64_ROM_Manager
         {
             MessageBoxEx.Show(mainForm, Form_Main_Resources.MsgBox_OpenPublicHelpChat, Form_Main_Resources.MsgBox_OpenPublicHelpChat_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Publics.Publics.OpenBrowser(new Uri(WebLinks.PublicHelpChat), false, new Size(1200, 800));
+        }
+
+        public async Task OpenRomInHexEditorAsync()
+        {
+            if (RomManager is object)
+                await General.OpenHexEditorAsync(RomManager.RomFile);
+        }
+
+        public bool IsHexEditorSettedUp()
+        {
+            return Settings.General.HexEditMode.Mode == HexEditModes.CustomHexEditor && File.Exists(Settings.General.HexEditMode.CustomPath);
         }
 
         private void RomWatcher_Changed(object sender, FileSystemEventArgs e)
