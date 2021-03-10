@@ -1329,6 +1329,7 @@ namespace SM64_ROM_Manager
             if (!hasInitCMArea)
             {
                 ButtonItem_CM_Area.SubItems.AddRange(new BaseItem[] {
+                    (BaseItem)ButtonItem_OpenLevelEditor.Clone(),
                     (BaseItem)ButtonItem_AreaTools_ChangeAreaID.Clone(),
                     (BaseItem)ButtonItem_AreaTools_EditAreaLevelScript.Clone(),
                     (BaseItem)ButtonItem_AreaTools_EditGeolayoutScript.Clone()
