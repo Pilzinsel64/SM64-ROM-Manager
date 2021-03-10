@@ -1212,14 +1212,17 @@ namespace SM64_ROM_Manager
         private void LoadCurrentSelection(bool forceLoadingNothing = false)
         {
             bool menuItemsEnabled = false;
+            bool allowOpenLevelEditor = false;
             
             if (!forceLoadingNothing)
             {
                 var indices = CurrentIndicies;
+                var hasLevel = indices.levelIndex != -1;
+                var hasArea = indices.areaIndex != -1;
 
                 panel_Tools.SuspendLayout();
 
-                if (indices.areaIndex != -1 && indices.levelIndex != -1)
+                if (hasArea && hasLevel)
                 {
                     LoadAreaSettings(indices.levelIndex, indices.areaIndex);
                     EnableTabControl(TabControl_AreaProperties);
@@ -1232,9 +1235,12 @@ namespace SM64_ROM_Manager
                     EnableTabControl(isNull ? null : TabControl_LM_Level);
                     menuItemsEnabled = !isNull;
                 }
+
+                if (hasLevel)
+                    allowOpenLevelEditor = Controller.GetLevelAreasCount(indices.levelIndex) > 0;
             }
 
-            ButtonItem_OpenLevelEditor.Enabled = menuItemsEnabled;
+            ButtonItem_OpenLevelEditor.Enabled = allowOpenLevelEditor;
             ButtonItem_RemoveItem.Enabled = menuItemsEnabled;
             ButtonItem_ExportLevelArea.Enabled = menuItemsEnabled;
             buttonItem1.Enabled = menuItemsEnabled;
