@@ -15,6 +15,7 @@ using Z.Collections.Extensions;
 using Z.Core.Extensions;
 using System.Diagnostics;
 using Timer = System.Timers.Timer;
+using SM64_ROM_Manager.Plugins;
 
 namespace SM64_ROM_Manager
 {
@@ -342,7 +343,7 @@ namespace SM64_ROM_Manager
         {
             Pilz.Reflection.PluginSystem.PluginFunction lastFunc = null;
             bool isFirst = true;
-            foreach (Pilz.Reflection.PluginSystem.PluginFunction func in Publics.General.PluginManager.GetFunctions("pluginmenu", "pluginmenur"))
+            foreach (Pilz.Reflection.PluginSystem.PluginFunction func in Publics.General.PluginManager.GetFunctions(FunctionCodes.PluginMenu, FunctionCodes.PluginMenuR))
             {
                 var btn = new ButtonItem();
                 if (lastFunc != func)

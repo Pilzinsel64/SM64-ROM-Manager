@@ -17,6 +17,7 @@ using System.Drawing;
 using System.Diagnostics;
 using SM64Lib;
 using System.IO;
+using SM64_ROM_Manager.Plugins;
 
 namespace SM64_ROM_Manager.Publics
 {
@@ -135,7 +136,7 @@ namespace SM64_ROM_Manager.Publics
         {
             var dic = new Dictionary<string, string>();
             p.Invoke(dic);
-            var convMethod = p.Plugin.GetFunctions("loadermoduleload").FirstOrDefault(n => Operators.ConditionalCompareObjectEqual(n.Params[0], p.Params[0], false));
+            var convMethod = p.Plugin.GetFunctions(FunctionCodes.FileLoaderModule_Load).FirstOrDefault(n => Operators.ConditionalCompareObjectEqual(n.Params[0], p.Params[0], false));
             return new File3DLoaderModule(Conversions.ToString(p.Params[0]), (File3DLoaderModule.LoaderAction)Delegate.CreateDelegate(typeof(File3DLoaderModule.LoaderAction), convMethod.Method), dic);
         }
 
@@ -143,7 +144,7 @@ namespace SM64_ROM_Manager.Publics
         {
             var dic = new Dictionary<string, string>();
             p.Invoke(dic);
-            var convMethod = p.Plugin.GetFunctions("loadermoduleexport").FirstOrDefault(n => Operators.ConditionalCompareObjectEqual(n.Params[0], p.Params[0], false));
+            var convMethod = p.Plugin.GetFunctions(FunctionCodes.FileLoaderModule_Export).FirstOrDefault(n => Operators.ConditionalCompareObjectEqual(n.Params[0], p.Params[0], false));
             return new File3DLoaderModule(Conversions.ToString(p.Params[0]), (File3DLoaderModule.ExporterAction)Delegate.CreateDelegate(typeof(File3DLoaderModule.ExporterAction), convMethod.Method), dic);
         }
 
@@ -153,7 +154,7 @@ namespace SM64_ROM_Manager.Publics
             {
                 allLoaderModules = new List<File3DLoaderModule>();
                 allLoaderModules.AddRange(File3DLoaderModule.LoaderModules);
-                foreach (var p in General.PluginManager.GetFunctions("loadermoduleimpformats"))
+                foreach (var p in General.PluginManager.GetFunctions(FunctionCodes.FileLoaderModule_GetImportFormats))
                     allLoaderModules.Add(GetFileLoaderModuleFromP(p));
             }
 
@@ -166,7 +167,7 @@ namespace SM64_ROM_Manager.Publics
             {
                 allExporterModules = new List<File3DLoaderModule>();
                 allExporterModules.AddRange(File3DLoaderModule.ExporterModules);
-                foreach (var p in General.PluginManager.GetFunctions("loadermoduleexpformats"))
+                foreach (var p in General.PluginManager.GetFunctions(FunctionCodes.FileLoaderModule_GetExportFormats))
                     allExporterModules.Add(GetFileExporterModuleFromP(p));
             }
 

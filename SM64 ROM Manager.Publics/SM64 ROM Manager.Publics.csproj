@@ -181,6 +181,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SM64 ROM Manager.Plugins\SM64 ROM Manager.Plugins.csproj" />
     <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj" />
     <ProjectReference Include="..\SM64Lib.TextValueConverter\SM64Lib.TextValueConverter.csproj" />
     <ProjectReference Include="..\SM64Lib\SM64Lib.csproj" />
