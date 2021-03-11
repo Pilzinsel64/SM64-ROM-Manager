@@ -69,6 +69,12 @@ Pilz.UI
  </summary>
  <returns></returns>
 </member>
+<member name="M:Pilz.UI.PaintingControl.WndProc(System.Windows.Forms.Message@)">
+ <summary>
+ Sorg dafür, dass Events durch dieses Control durchdringen zum Parnet-Control.
+ </summary>
+ <param name="m"></param>
+</member>
 <member name="P:Pilz.UI.PaintingObjectLayering.ObjectList">
  <summary>
  Get the current object list from the painting object.
@@ -129,12 +135,6 @@ Pilz.UI
  <summary>
  Order all objects using the conditions. If no conditions are setted, this method will do nothing.
  </summary>
-</member>
-<member name="M:Pilz.UI.PaintingControl.WndProc(System.Windows.Forms.Message@)">
- <summary>
- Sorg dafür, dass Events durch dieses Control durchdringen zum Parnet-Control.
- </summary>
- <param name="m"></param>
 </member>
 </members>
 </doc>
