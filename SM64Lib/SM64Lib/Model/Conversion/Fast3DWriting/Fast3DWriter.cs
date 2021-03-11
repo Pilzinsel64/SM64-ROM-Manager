@@ -170,6 +170,7 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             public bool EnableClampS { get; set; } = false;
             public bool EnableClampT { get; set; } = false;
             public bool EnableCrystalEffect { get; set; } = false;
+            public int TransparencyLimit { get; set; } = 0;
         }
 
         private class FinalVertexData
@@ -695,13 +696,46 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
             mat.Type = MaterialType.TextureSolid;
 
             // Check for alpha and transparency
-            for (int y = 0, loopTo = bmp.Height - 1; y <= loopTo; y++)
             {
-                for (int x = 0, loopTo1 = bmp.Width - 1; x <= loopTo1; x++)
+                var transparentPixels = 0;
+                var setAsAlpha = false;
+                var setAsTransparent = false;
+
+                // Check textures
+                for (int y = 0, loopTo = bmp.Height - 1; y <= loopTo; y++)
                 {
-                    var pix = bmp.GetPixel(x, y);
-                    var switchExpr = mat.TexType;
-                    switch (switchExpr)
+                    for (int x = 0, loopTo1 = bmp.Width - 1; x <= loopTo1; x++)
+                    {
+                        var pix = bmp.GetPixel(x, y);
+                        switch (mat.TexType)
+                        {
+                            case N64Codec.RGBA16:
+                            case N64Codec.RGBA32:
+                            case N64Codec.IA4:
+                            case N64Codec.IA8:
+                            case N64Codec.IA16:
+                            case N64Codec.CI4:
+                            case N64Codec.CI8:
+                                if (pix.A == 0)
+                                    setAsAlpha = true;
+                                else if (pix.A < 0xFF)
+                                    transparentPixels++;
+                                break;
+                            case N64Codec.I4:
+                            case N64Codec.I8:
+                                if (pix.A < 0xFF || mat.EnableAlphaMask)
+                                    transparentPixels++;
+                                break;
+                        }
+                    }
+                }
+
+                // Set as transparent if reached the limit
+                var transparentPixelsPercent = mat.TexWidth * mat.TexHeight / transparentPixels;
+                var reachedTransparentLimit = transparentPixelsPercent > mat.TransparencyLimit;
+                if (reachedTransparentLimit)
+                {
+                    switch (mat.TexType)
                     {
                         case N64Codec.RGBA16:
                         case N64Codec.RGBA32:
@@ -710,47 +744,25 @@ namespace SM64Lib.Model.Conversion.Fast3DWriting
                         case N64Codec.IA16:
                         case N64Codec.CI4:
                         case N64Codec.CI8:
-                            {
-                                if (pix.A == 0 && !mat.HasTransparency)
-                                {
-                                    mat.HasTextureAlpha = true;
-                                    mat.Type = MaterialType.TextureAlpha;
-                                }
-                                else if (pix.A < 0xFF)
-                                {
-                                    mat.Type = MaterialType.TextureTransparent;
-                                    mat.HasTransparency = true;
-                                }
-
-                                break;
-                            }
-
-                        // If pix.A = 0 Then
-                        // mat.hasTextureAlpha = True
-                        // mat.type = MaterialType.TextureAlpha
-                        // mat.HasTransparency = False
-                        // ElseIf pix.A < &HFF OrElse mat.opacity < &HFF Then
-                        // If mat.Type <> MaterialType.TextureAlpha Then
-                        // If mat.Opacity = &HFF Then
-                        // mat.Opacity = (CInt(mat.Opacity) * pix.A) And &HFF
-                        // End If
-                        // mat.Type = MaterialType.TextureTransparent
-                        // mat.HasTransparency = True
-                        // End If
-                        // End If
-
+                            if (reachedTransparentLimit)
+                                setAsTransparent = true;
+                            break;
                         case N64Codec.I4:
                         case N64Codec.I8:
-                            {
-                                if (pix.A < 0xFF || mat.EnableAlphaMask)
-                                {
-                                    mat.Type = MaterialType.TextureTransparent;
-                                    mat.HasTransparency = true;
-                                }
-
-                                break;
-                            }
+                            if (reachedTransparentLimit || mat.EnableAlphaMask)
+                                setAsTransparent = true;
+                            break;
                     }
+                }
+                if (setAsTransparent)
+                {
+                    mat.Type = MaterialType.TextureTransparent;
+                    mat.HasTransparency = true;
+                }
+                else if (setAsAlpha)
+                {
+                    mat.HasTextureAlpha = true;
+                    mat.Type = MaterialType.TextureAlpha;
                 }
             }
 
