@@ -3,6 +3,7 @@
     public class HexEditModeStruc
     {
         public HexEditModes Mode { get; set; }
+        public string PluginCode { get; set; }
         public string CustomPath { get; set; }
 
         public void ResetValues()

@@ -25,6 +25,7 @@ using System.Reflection;
 using SM64_ROM_Manager.UserRequests.GUI;
 using SM64_ROM_Manager.UserRequests;
 using System.Drawing;
+using SM64_ROM_Manager.Plugins;
 
 namespace SM64_ROM_Manager
 {
@@ -264,56 +265,82 @@ namespace SM64_ROM_Manager
             data.Write(buffer);
         }
 
-        public static HexEditModes GetCurrentHexEditMode()
+        private static string GetHexEditorPath()
         {
-            var mode = Settings.General.HexEditMode.Mode;
-            
-            if (mode == HexEditModes.CustomHexEditor && !File.Exists(Settings.General.HexEditMode.CustomPath))
-                mode = HexEditModes.None;
+            var mode = Settings.General.HexEditMode;
+            var noHexEditor = false;
+            var customPath = string.Empty;
 
-            return mode;
+            if (mode.Mode == HexEditModes.None)
+                noHexEditor = true;
+            else
+            {
+                if (mode.Mode == HexEditModes.CustomHexEditor)
+                    customPath = mode.CustomPath;
+                else if (mode.Mode == HexEditModes.Plugin)
+                {
+                    var funcs = Publics.General.PluginManager.GetFunctions(FunctionCodes.GetHexEditorInstallationStatus);
+                    foreach (var func in funcs)
+                    {
+                        if (string.IsNullOrEmpty(customPath) && func.Params[0] == mode.PluginCode)
+                        {
+                            var res = (HexEditorStatus)func.InvokeGet();
+                            if (res.IsInstalled)
+                                customPath = res.ExecutablePath;
+                        }
+                    }
+                }
+            }
+
+            if (noHexEditor || !File.Exists(customPath))
+            {
+                NoHexEditorSettedUp?.Invoke();
+                customPath = null;
+            }
+
+            return customPath;
         }
 
         public static void OpenHexEditor(ref byte[] buffer)
         {
-            var mode = GetCurrentHexEditMode();
-            switch (mode)
+            var customPath = GetHexEditorPath();
+
+            if (!string.IsNullOrEmpty(customPath))
             {
-                case HexEditModes.None:
-                    NoHexEditorSettedUp?.Invoke();
-                    break;
+                // Create temp file
+                string tempFile = Path.GetTempFileName();
 
-                case HexEditModes.CustomHexEditor:
-                    {
-                        // Create temp file
-                        string tempFile = Path.GetTempFileName();
+                // Write content of command to temp file
+                var fs = new FileStream(tempFile, FileMode.Open, FileAccess.ReadWrite);
+                fs.Write(buffer, 0, buffer.Length);
+                fs.Flush();
+                fs.Close();
 
-                        // Write content of command to temp file
-                        var fs = new FileStream(tempFile, FileMode.Open, FileAccess.ReadWrite);
-                        fs.Write(buffer, 0, buffer.Length);
-                        fs.Flush();
-                        fs.Close();
+                // Start Hex Editor and wait while running
+                OpenHexEditor(tempFile);
 
-                        // Start Hex Editor and wait while running
-                        OpenHexEditor(tempFile);
+                // Read content of temp file to command
+                fs = new FileStream(tempFile, FileMode.Open, FileAccess.Read);
+                buffer = new byte[(int)(fs.Length - 1) + 1];
+                fs.Read(buffer, 0, buffer.Length);
+                fs.Close();
 
-                        // Read content of temp file to command
-                        fs = new FileStream(tempFile, FileMode.Open, FileAccess.Read);
-                        buffer = new byte[(int)(fs.Length - 1) + 1];
-                        fs.Read(buffer, 0, buffer.Length);
-                        fs.Close();
-
-                        // Remove temp file
-                        File.Delete(tempFile);
-                        break;
-                    }
+                // Remove temp file
+                File.Delete(tempFile);
             }
         }
 
         public static void OpenHexEditor(string filePath)
         {
+            var customPath = GetHexEditorPath();
+            if (!string.IsNullOrEmpty(customPath))
+                OpenHexEditor(filePath, customPath);
+        }
+
+        private static void OpenHexEditor(string filePath, string exeFile)
+        {
             var p = new Process();
-            p.StartInfo.FileName = Settings.General.HexEditMode.CustomPath;
+            p.StartInfo.FileName = exeFile;
             p.StartInfo.Arguments = $"\"{filePath}\"";
             p.Start();
             p.WaitForExit();

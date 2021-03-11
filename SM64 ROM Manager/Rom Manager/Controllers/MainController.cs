@@ -323,7 +323,7 @@ namespace SM64_ROM_Manager
 
         private void General_NoHexEditorSettedUp()
         {
-            MessageBoxEx.Show(mainForm, "", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBoxEx.Show(Form_Main_Resources.MsgBox_NoHexEditorSettedUp, Form_Main_Resources.MsgBox_NoHexEditorSettedUp_Titel, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         // P a t c h C l a s s   E v e n t s

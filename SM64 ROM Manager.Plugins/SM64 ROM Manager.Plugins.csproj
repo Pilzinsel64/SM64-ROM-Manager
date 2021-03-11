@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>SM64_ROM_Manager.Plugins</RootNamespace>
+  </PropertyGroup>
+
+</Project>

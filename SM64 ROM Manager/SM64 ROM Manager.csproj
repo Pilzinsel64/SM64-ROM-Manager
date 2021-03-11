@@ -1234,6 +1234,7 @@
     <ProjectReference Include="..\SM64 ROM Manager.ModelConverterGUI\SM64 ROM Manager.ModelConverterGUI.csproj" />
     <ProjectReference Include="..\SM64 ROM Manager.ModelImporterGUI\SM64 ROM Manager.ModelImporterGUI.csproj" />
     <ProjectReference Include="..\SM64 ROM Manager.PatchScripts\SM64 ROM Manager.PatchScripts.csproj" />
+    <ProjectReference Include="..\SM64 ROM Manager.Plugins\SM64 ROM Manager.Plugins.csproj" />
     <ProjectReference Include="..\SM64 ROM Manager.Publics\SM64 ROM Manager.Publics.csproj" />
     <ProjectReference Include="..\SM64 ROM Manager.SettingsManager\SM64 ROM Manager.SettingsManager.csproj" />
     <ProjectReference Include="..\SM64 ROM Manager.Updating.Client.GUI\SM64 ROM Manager.Updating.Client.GUI.csproj" />

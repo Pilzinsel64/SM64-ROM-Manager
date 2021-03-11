@@ -3,6 +3,7 @@
     public enum HexEditModes
     {
         None,
-        CustomHexEditor
+        CustomHexEditor,
+        Plugin
     }
 }

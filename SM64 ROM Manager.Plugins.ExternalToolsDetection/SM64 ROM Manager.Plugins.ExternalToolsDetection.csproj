@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>SM64_ROM_Manager.Plugins.ExternalToolsDetection</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SM64 ROM Manager.Plugins\SM64 ROM Manager.Plugins.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Pilz.Reflection.PluginSystem">
+      <HintPath>..\Shared Libs\Pilz.Reflection.PluginSystem.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

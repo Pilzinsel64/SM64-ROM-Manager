@@ -6,6 +6,7 @@ using global::DevComponents.DotNetBar;
 using global::DevComponents.Editors;
 using global::Pilz.S3DFileParser;
 using global::SM64_ROM_Manager.SettingsManager;
+using SM64_ROM_Manager.Plugins;
 
 namespace SM64_ROM_Manager
 {
@@ -112,15 +113,38 @@ namespace SM64_ROM_Manager
                     break;
             }
 
-            var switchExpr1 = Settings.General.HexEditMode.Mode;
-            switch (switchExpr1)
             {
-                case HexEditModes.None:
+                ComboBoxEx_HexEditorMode.Items.Clear();
+                ComboBoxEx_HexEditorMode.Items.Add(new ComboItem("None") { Tag = HexEditModes.None });
+                ComboBoxEx_HexEditorMode.Items.Add(new ComboItem("Custom Path") { Tag = HexEditModes.CustomHexEditor });
+
+                foreach (var func in Publics.General.PluginManager.GetFunctions(FunctionCodes.GetHexEditorInstallationStatus))
+                {
+                    var status = (HexEditorStatus)func.InvokeGet();
+                    if (status.IsInstalled)
+                        ComboBoxEx_HexEditorMode.Items.Add(new ComboItem((string)func.Params[1]) { Tag = func.Params[0] });
+                }
+
+                var switchExpr1 = Settings.General.HexEditMode.Mode;
+                switch (switchExpr1)
+                {
+                    case HexEditModes.None:
+                        ComboBoxEx_HexEditorMode.SelectedIndex = 0;
+                        break;
+                    case HexEditModes.CustomHexEditor:
+                        ComboBoxEx_HexEditorMode.SelectedIndex = 1;
+                        break;
+                    case HexEditModes.Plugin:
+                        foreach (ComboItem item in ComboBoxEx_HexEditorMode.Items)
+                        {
+                            if (item.Tag is string && (string)item.Tag == Settings.General.HexEditMode.PluginCode)
+                                ComboBoxEx_HexEditorMode.SelectedItem = item;
+                        }
+                        break;
+                }
+
+                if (ComboBoxEx_HexEditorMode.SelectedIndex == -1)
                     ComboBoxEx_HexEditorMode.SelectedIndex = 0;
-                    break;
-                case HexEditModes.CustomHexEditor:
-                    ComboBoxEx_HexEditorMode.SelectedIndex = 1;
-                    break;
             }
 
             foreach (ComboItem item in ComboBoxEx_Language.Items)
@@ -225,17 +249,29 @@ namespace SM64_ROM_Manager
                     break;
             }
 
-            var switchExpr1 = ComboBoxEx_HexEditorMode.SelectedIndex;
-            switch (switchExpr1)
             {
-                case 0:
-                    Settings.General.HexEditMode.Mode = HexEditModes.None;
+                var selItem = (ComboItem)ComboBoxEx_HexEditorMode.SelectedItem;
+                if (selItem.Tag is HexEditModes)
+                {
+                    switch ((HexEditModes)selItem.Tag)
+                    {
+                        case HexEditModes.None:
+                            Settings.General.HexEditMode.Mode = HexEditModes.None;
+                            Settings.General.HexEditMode.CustomPath = string.Empty;
+                            break;
+                        case HexEditModes.CustomHexEditor:
+                            Settings.General.HexEditMode.Mode = HexEditModes.CustomHexEditor;
+                            Settings.General.HexEditMode.CustomPath = TextBoxX_HexEditorCustomPath.Text.Trim();
+                            break;
+                    }
+                    Settings.General.HexEditMode.PluginCode = string.Empty;
+                }
+                else if (selItem.Tag is string)
+                {
+                    Settings.General.HexEditMode.Mode = HexEditModes.Plugin;
                     Settings.General.HexEditMode.CustomPath = string.Empty;
-                    break;
-                case 1:
-                    Settings.General.HexEditMode.Mode = HexEditModes.CustomHexEditor;
-                    Settings.General.HexEditMode.CustomPath = TextBoxX_HexEditorCustomPath.Text.Trim();
-                    break;
+                    Settings.General.HexEditMode.PluginCode = (string)selItem.Tag;
+                }
             }
 
             var switchExpr2 = ComboBoxEx_AutoScaleMode.SelectedIndex;
