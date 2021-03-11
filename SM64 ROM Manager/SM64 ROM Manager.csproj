@@ -196,6 +196,9 @@
     <Reference Include="Pilz.Cryptography">
       <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="Pilz.Drawing">
+      <HintPath>..\Shared Libs\Pilz.Drawing.dll</HintPath>
+    </Reference>
     <Reference Include="Pilz.Drawing.Drawing3D.OpenGLFactory">
       <HintPath>..\Shared Libs\Pilz.Drawing.Drawing3D.OpenGLFactory.dll</HintPath>
     </Reference>
@@ -1096,7 +1099,7 @@
       <LastGenOutput>TextProfileEditorLangRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="WebLinks.de.resx">
-      <Generator></Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="WebLinks.resx">
       <Generator>ResXFileCodeGenerator</Generator>
