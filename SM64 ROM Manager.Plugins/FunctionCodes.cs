@@ -13,5 +13,6 @@ namespace SM64_ROM_Manager.Plugins
         public const string FileLoaderModule_Export = "loadermoduleexport";
         public const string FileLoaderModule_GetImportFormats = "loadermoduleimpformats";
         public const string FileLoaderModule_GetExportFormats = "loadermoduleexport";
+        public const string ImportLevels_GetLevelManager = "levelmanager.importlevels.getilevelmanager";
     }
 }

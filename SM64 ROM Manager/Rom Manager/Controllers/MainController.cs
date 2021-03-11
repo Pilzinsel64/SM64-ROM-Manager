@@ -41,6 +41,7 @@ using SM64Lib.Objects.ObjectBanks.Data;
 using System.IO.Compression;
 using SM64_ROM_Manager.Publics;
 using SM64Lib.Levels.Script;
+using SM64_ROM_Manager.Plugins;
 
 namespace SM64_ROM_Manager
 {
@@ -1980,7 +1981,7 @@ namespace SM64_ROM_Manager
         {
             bool addAreasOnly = destLevel is object;
             var addedFuncs = new List<PluginFunction>();
-            var allFuncs = Publics.General.PluginManager.GetFunctions("levelmanager.importlevels.getilevelmanager");
+            var allFuncs = Publics.General.PluginManager.GetFunctions(FunctionCodes.ImportLevels_GetLevelManager);
             var cofd = new CommonOpenFileDialog();
             cofd.Filters.Add(new CommonFileDialogFilter("SM64 ROMs, Level Exports", "*.z64;*.lvl64"));
             var cb = new CommonFileDialogComboBox();
