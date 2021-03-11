@@ -282,15 +282,6 @@ namespace SM64_ROM_Manager.Publics
             if (RuntimeInformationsEx.RealOSType != OSType.Windows)
                 SetServerCertificateValidationCallback();
 
-            // Check and move settings file from old path
-            // TODO: Remove in v1.13
-            {
-                var newSettingsPath = Path.Combine(MyAppDataPath, "Settings.json");
-                var oldSettingsPath = Path.Combine(MyDataPath, "Settings.json");
-                if (!File.Exists(newSettingsPath) && File.Exists(oldSettingsPath))
-                    File.Move(oldSettingsPath, newSettingsPath);
-            }
-
             // Set settings file path
             Settings.SettingsConfigFilePath = Path.Combine(MyAppDataPath, "Settings.json");
 
