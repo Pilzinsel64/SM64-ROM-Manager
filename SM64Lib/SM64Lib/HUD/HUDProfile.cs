@@ -11,14 +11,8 @@ namespace SM64Lib.HUD
 {
     public class HUDProfile
     {
-        public HUDGroup RootGroup { get; } = new HUDGroup();
-
-        [JsonIgnore]
-        public string ProfileName
-        {
-            get => RootGroup.Name;
-            set => RootGroup.Name = value;
-        }
+        public string ProfileName { get; set; }
+        public List<HUDGroup> Groups { get; } = new();
 
         public void SaveAs(string filePath)
         {

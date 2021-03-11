@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,12 +17,12 @@ namespace SM64Lib.HUD
         [JsonProperty]
         public bool CanSetText { get; private set; }
         [JsonProperty]
-        public int? SizeXPosition { get; private set; }
+        public Size? LocationRomPosition { get; private set; }
         [JsonProperty]
-        public int? SizeYPosition { get; private set; }
+        public int? VisibleRomPosition { get; private set; }
         [JsonProperty]
-        public int? VisiblePosition { get; private set; }
+        public int? TextRomPosition { get; private set; }
         [JsonProperty]
-        public int? TextPosition { get; private set; }
+        public Size? ItemSize { get; private set; }
     }
 }
