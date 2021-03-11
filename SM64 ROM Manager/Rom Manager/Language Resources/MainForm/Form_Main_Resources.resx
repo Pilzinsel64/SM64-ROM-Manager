@@ -244,6 +244,12 @@
   <data name="MsgBox_No2DCameraPatched_Title" xml:space="preserve">
     <value>2D Camera functionallity not activated</value>
   </data>
+  <data name="MsgBox_NoHexEditorSettedUp" xml:space="preserve">
+    <value>You need to setup an external hex editor first. In Main Window: Options-&gt;Settings-&gt;External Tools</value>
+  </data>
+  <data name="MsgBox_NoHexEditorSettedUp_Titel" xml:space="preserve">
+    <value>No Hex Editor found.</value>
+  </data>
   <data name="MsgBox_OpenPublicHelpChat" xml:space="preserve">
     <value>After the help chat has opened, please don't forget to change your default name "Guest" to a custom one, so the chat partner can identify you better and seperate from other users.</value>
   </data>

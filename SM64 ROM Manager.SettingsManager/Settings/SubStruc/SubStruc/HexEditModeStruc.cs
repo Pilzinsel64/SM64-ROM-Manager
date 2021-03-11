@@ -1,5 +1,4 @@
-﻿
-namespace SM64_ROM_Manager.SettingsManager
+﻿namespace SM64_ROM_Manager.SettingsManager
 {
     public class HexEditModeStruc
     {
@@ -8,7 +7,7 @@ namespace SM64_ROM_Manager.SettingsManager
 
         public void ResetValues()
         {
-            Mode = HexEditModes.BuildInHexEditor;
+            Mode = HexEditModes.None;
             CustomPath = string.Empty;
         }
     }

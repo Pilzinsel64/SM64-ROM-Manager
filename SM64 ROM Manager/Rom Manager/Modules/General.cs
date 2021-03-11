@@ -33,6 +33,8 @@ namespace SM64_ROM_Manager
 
         public delegate void LoadedAreaVisualMapDisplayListsEventHandler(DisplayList[] dls);
         public static event LoadedAreaVisualMapDisplayListsEventHandler LoadedAreaVisualMapDisplayLists;
+        
+        public static event Action NoHexEditorSettedUp;
 
         private static bool hasLoadedObjectCombos = false;
         private static bool hasLoadedBehaviorInfos = false;
@@ -265,10 +267,9 @@ namespace SM64_ROM_Manager
         public static HexEditModes GetCurrentHexEditMode()
         {
             var mode = Settings.General.HexEditMode.Mode;
+            
             if (mode == HexEditModes.CustomHexEditor && !File.Exists(Settings.General.HexEditMode.CustomPath))
-            {
-                mode = HexEditModes.BuildInHexEditor;
-            }
+                mode = HexEditModes.None;
 
             return mode;
         }
@@ -278,13 +279,9 @@ namespace SM64_ROM_Manager
             var mode = GetCurrentHexEditMode();
             switch (mode)
             {
-                case HexEditModes.BuildInHexEditor:
-                    {
-                        var editor = new HexEditor(buffer);
-                        editor.ShowDialog();
-                        buffer = editor.GetData();
-                        break;
-                    }
+                case HexEditModes.None:
+                    NoHexEditorSettedUp?.Invoke();
+                    break;
 
                 case HexEditModes.CustomHexEditor:
                     {

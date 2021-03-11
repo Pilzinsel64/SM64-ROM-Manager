@@ -271,26 +271,8 @@ namespace SM64_ROM_Manager
 
         private void AddCmd(Node nCmds)
         {
-            var bytesStartCount = default(int);
+            var bytesStartCount = 0;
             bool allowOpenHexEditor = true;
-
-            // Set start bytes count
-            if (General.GetCurrentHexEditMode() == HexEditModes.BuildInHexEditor)
-            {
-                var valueInputDialog = new ValueInputDialog();
-                valueInputDialog.InfoLabel.Text = "Count of Bytes";
-                valueInputDialog.ValueTextBox.Text = Conversions.ToString(8);
-                if (valueInputDialog.ShowDialog() == DialogResult.OK)
-                {
-                    bytesStartCount = TextValueConverter.ValueFromText(valueInputDialog.ValueTextBox.Text);
-                }
-
-                allowOpenHexEditor = bytesStartCount > 0;
-            }
-            else
-            {
-                bytesStartCount = 0;
-            }
 
             // Create Buffer
             var cmdBuf = new byte[bytesStartCount];

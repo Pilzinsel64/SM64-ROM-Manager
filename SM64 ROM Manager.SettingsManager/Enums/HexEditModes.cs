@@ -1,9 +1,8 @@
-﻿
-namespace SM64_ROM_Manager.SettingsManager
+﻿namespace SM64_ROM_Manager.SettingsManager
 {
     public enum HexEditModes
     {
-        BuildInHexEditor,
+        None,
         CustomHexEditor
     }
 }

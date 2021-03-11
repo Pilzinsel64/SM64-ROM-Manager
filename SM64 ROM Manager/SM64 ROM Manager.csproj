@@ -467,12 +467,6 @@
     <Compile Update="Rom Manager\GUI\Tools\Custom Objects Manager\CustomObjectsManager.Designer.cs">
       <DependentUpon>CustomObjectsManager.cs</DependentUpon>
     </Compile>
-    <Compile Update="Rom Manager\GUI\Tools\HexEditor.Designer.cs">
-      <DependentUpon>HexEditor.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Rom Manager\GUI\Tools\HexEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsForm.Designer.cs">
       <DependentUpon>HUDOptionsForm.cs</DependentUpon>
     </Compile>
@@ -916,9 +910,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\GUI\Tools\Form_SM64TextConverter.de.resx">
       <DependentUpon>Form_SM64TextConverter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Rom Manager\GUI\Tools\HexEditor.resx">
-      <DependentUpon>HexEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Update="Rom Manager\GUI\Tools\HUDOptions\HUDOptionsForm.resx">
       <DependentUpon>HUDOptionsForm.cs</DependentUpon>

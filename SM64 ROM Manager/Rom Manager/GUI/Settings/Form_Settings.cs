@@ -128,7 +128,7 @@ namespace SM64_ROM_Manager
             var switchExpr1 = Settings.General.HexEditMode.Mode;
             switch (switchExpr1)
             {
-                case HexEditModes.BuildInHexEditor:
+                case HexEditModes.None:
                     {
                         ComboBoxEx_HexEditorMode.SelectedIndex = 0;
                         break;
@@ -285,7 +285,7 @@ namespace SM64_ROM_Manager
             {
                 case 0:
                     {
-                        Settings.General.HexEditMode.Mode = HexEditModes.BuildInHexEditor;
+                        Settings.General.HexEditMode.Mode = HexEditModes.None;
                         Settings.General.HexEditMode.CustomPath = string.Empty;
                         break;
                     }

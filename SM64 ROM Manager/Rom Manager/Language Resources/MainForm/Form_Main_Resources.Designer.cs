@@ -440,6 +440,24 @@ namespace SM64_ROM_Manager.My.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die You need to setup an external hex editor first. In Main Window: Options-&gt;Settings-&gt;External Tools ähnelt.
+        /// </summary>
+        public static string MsgBox_NoHexEditorSettedUp {
+            get {
+                return ResourceManager.GetString("MsgBox_NoHexEditorSettedUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die No Hex Editor found. ähnelt.
+        /// </summary>
+        public static string MsgBox_NoHexEditorSettedUp_Titel {
+            get {
+                return ResourceManager.GetString("MsgBox_NoHexEditorSettedUp_Titel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die After the help chat has opened, please don&apos;t forget to change your default name &quot;Guest&quot; to a custom one, so the chat partner can identify you better and seperate from other users. ähnelt.
         /// </summary>
         public static string MsgBox_OpenPublicHelpChat {

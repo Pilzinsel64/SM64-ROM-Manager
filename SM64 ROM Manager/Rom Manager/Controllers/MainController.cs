@@ -280,6 +280,8 @@ namespace SM64_ROM_Manager
             this.TextManagerController.SettingStatusText += text => this.StatusText = text;
             this.TextManagerController.RequestStatusText += e => e.Value = this.StatusText;
             this.TextManagerController.ErrorBecauseNoRomLoaded += () => ErrorBecauseNoRomLoaded?.Invoke();
+
+            General.NoHexEditorSettedUp += General_NoHexEditorSettedUp;
         }
 
         public MainController(MainForm mainForm) : this()
@@ -315,6 +317,13 @@ namespace SM64_ROM_Manager
 
             // Fix open with context menu entry
             General.FixOpenWithContextMenuEntry();
+        }
+
+        // O t h e r   E v e n t s
+
+        private void General_NoHexEditorSettedUp()
+        {
+            MessageBoxEx.Show(mainForm, "", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         // P a t c h C l a s s   E v e n t s
