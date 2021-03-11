@@ -19,7 +19,7 @@ namespace SM64_ROM_Manager {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class WebLinks {
@@ -61,11 +61,47 @@ namespace SM64_ROM_Manager {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH ähnelt.
+        /// </summary>
+        internal static string BugReportForm {
+            get {
+                return ResourceManager.GetString("BugReportForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/ofHSSw92E5sMBPqH?hide-sidebars ähnelt.
+        /// </summary>
+        internal static string BugReportFormInternal {
+            get {
+                return ResourceManager.GetString("BugReportFormInternal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die https://docs.google.com/document/d/1pSYR91UiMVKnP3PyvJiCdwRF5wNS_nZzMe-r2WPQUJk ähnelt.
         /// </summary>
         internal static string CommunityHelpDocument {
             get {
                 return ResourceManager.GetString("CommunityHelpDocument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS ähnelt.
+        /// </summary>
+        internal static string FeatureRequestForm {
+            get {
+                return ResourceManager.GetString("FeatureRequestForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/TxpHfJw9iwD6E7aS?hide-sidebars ähnelt.
+        /// </summary>
+        internal static string FeatureRequestFormInternal {
+            get {
+                return ResourceManager.GetString("FeatureRequestFormInternal", resourceCulture);
             }
         }
         
@@ -93,6 +129,24 @@ namespace SM64_ROM_Manager {
         internal static string ThankYouPage {
             get {
                 return ResourceManager.GetString("ThankYouPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma ähnelt.
+        /// </summary>
+        internal static string TranslationSubmitionForm {
+            get {
+                return ResourceManager.GetString("TranslationSubmitionForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die https://pilzinsel64.com/pilzcloud/apps/forms/kjDNcW6ww4H8z2Ma?hide-sidebars ähnelt.
+        /// </summary>
+        internal static string TranslationSubmitionFormInternal {
+            get {
+                return ResourceManager.GetString("TranslationSubmitionFormInternal", resourceCulture);
             }
         }
         

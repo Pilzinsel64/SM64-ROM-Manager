@@ -496,7 +496,7 @@ namespace SM64_ROM_Manager
             if (IsAnyTextItemSelected())
             {
                 ShowTextItemData();
-                if (Settings.TextManager.AutoFocusEditorTextBox)
+                if (TMController.AutoFocusEditTextBox)
                     TextBoxX_TM_TextEditor.Focus();
             }
         }

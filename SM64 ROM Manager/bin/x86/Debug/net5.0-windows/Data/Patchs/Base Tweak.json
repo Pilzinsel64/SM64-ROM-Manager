@@ -7,7 +7,6 @@
       "Type": "PPF",
       "Description": "This includes some requied changes that will be applied using a PPF patch.",
       "References": [],
-      "ID": "2E70F1FB7E2F2D10C8D2E73552736406",
       "AllowRevert": false
     },
     {
@@ -25,7 +24,6 @@
       "Type": "TweakScript",
       "Description": "This is requied to get custom background pointer to work.",
       "References": [],
-      "ID": "E2E0A9CCB47AC4B4899576B2150115E3",
       "AllowRevert": false
     },
     {
@@ -34,7 +32,6 @@
       "Type": "VisualBasic",
       "Description": "",
       "References": [],
-      "ID": "8A150DFDC8906CC74A54B915752D260E",
       "AllowRevert": false
     },
     {
@@ -43,7 +40,6 @@
       "Type": "VisualBasic",
       "Description": "Enables customizing the act selector, so enable or disable it for any level.",
       "References": [],
-      "ID": "491278C682D927F314BC00B4B1D39446",
       "AllowRevert": false
     },
     {
@@ -52,7 +48,6 @@
       "Type": "VisualBasic",
       "Description": "",
       "References": [],
-      "ID": "DA38A11DBA918B9F2D82AD5BD704DA37",
       "AllowRevert": false
     },
     {
@@ -61,7 +56,6 @@
       "Type": "VisualBasic",
       "Description": "Restores the checksum check to remove the error messages in Project64 on starting the ROM.",
       "References": [],
-      "ID": "2C1A9E3033449021C95CE8EE429E11A2",
       "AllowRevert": false
     },
     {
@@ -70,7 +64,6 @@
       "Type": "VisualBasic",
       "Description": "",
       "References": [],
-      "ID": "FC223C1C86F409F33C45202115BAAD0C",
       "AllowRevert": false
     },
     {
@@ -79,7 +72,14 @@
       "Type": "TweakScript",
       "Description": "It changes jump for cmd17 ptr, pads function at 1202F34 with 00s instead of 01s, fixes water crash on vc.",
       "References": [],
-      "ID": "6FE446C00D81189B41D4C0E71A9274A9",
+      "AllowRevert": false
+    },
+    {
+      "Name": "51#w#y#Fix the 'decal bug'",
+      "Script": "F71D6: 47 80",
+      "Type": "TweakScript",
+      "Description": "It changes jump for cmd17 ptr, pads function at 1202F34 with 00s instead of 01s, fixes water crash on vc.",
+      "References": [],
       "AllowRevert": false
     }
   ],

@@ -46,7 +46,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
         private static bool loadingTerrainTypesComboItems = false;
         private bool LoadingColItemSettings = false;
         private Object3D obj3d = null;
-        private List<int> colorImages = new List<int>();
+        private List<Image> colorImages = new();
         private readonly Dictionary<Image, Image> realTextures = new Dictionary<Image, Image>();
 
         public SM64Lib.Model.Collision.CollisionSettings CollisionSettings { get; set; } = null;
@@ -84,7 +84,7 @@ namespace SM64_ROM_Manager.ModelConverterGUI
                 {
                     Image img = GetImageFromColor((Color)mat.Value.Color, imageSize);
                     item.Image = img;
-                    colorImages.Add(item.ImageIndex);
+                    colorImages.Add(item.Image);
                 }
 
                 if (firstItem is null)
@@ -397,7 +397,14 @@ namespace SM64_ROM_Manager.ModelConverterGUI
 
         private void ButtonItem_IsNonSolid_CheckedChanged(object sender, EventArgs e)
         {
-            panel3.Enabled = !CheckBoxX_IsNonSolid.Checked;
+            var panel3Enabled = !CheckBoxX_IsNonSolid.Checked;
+
+            foreach (Control c in panel3.Controls)
+            {
+                if (c != CheckBoxX_IsNonSolid)
+                    c.Enabled = panel3Enabled;
+            }
+
             if (!LoadingColItemSettings)
             {
                 Node selItem = AdvTree_ColTypes.SelectedNode;

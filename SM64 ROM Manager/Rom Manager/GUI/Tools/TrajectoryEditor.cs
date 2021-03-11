@@ -63,13 +63,16 @@ namespace SM64_ROM_Manager
             General.PatchClass.UpdateChecksum(rommgr.RomFile);
         }
 
-        private void LoadTrajectoriesList()
+        private void LoadTrajectoriesList(Trajectory tracToSelect = null)
         {
             ComboBoxEx1.SuspendLayout();
             ButtonX8.SuspendLayout();
             ComboBoxEx1.Items.Clear();
             ButtonX8.SubItems.Clear();
+
             var namesWeHad = new List<TrajectoryName>() { TrajectoryName.None };
+            ComboItem itemToSelect = null;
+
             foreach (Trajectory trac in trajectories)
             {
                 var ci = new ComboItem();
@@ -80,6 +83,8 @@ namespace SM64_ROM_Manager
                 ComboBoxEx1.Items.Add(ci);
                 if (!namesWeHad.Contains(trac.Name))
                     namesWeHad.Add(trac.Name);
+                if (itemToSelect == null && trac == tracToSelect)
+                    itemToSelect = ci;
             }
 
             foreach (TrajectoryName name in Enum.GetValues(typeof(TrajectoryName)))
@@ -94,9 +99,13 @@ namespace SM64_ROM_Manager
                 }
             }
 
-            if (ComboBoxEx1.Items.Count > 0)
+            if (itemToSelect != null)
+                ComboBoxEx1.SelectedItem = itemToSelect;
+            else if (ComboBoxEx1.Items.Count > 0)
                 ComboBoxEx1.SelectedIndex = 0;
+
             ButtonX8.Enabled = ButtonX8.SubItems.Count > 0;
+
             ComboBoxEx1.ResumeLayout();
             ButtonX8.ResumeLayout();
         }
@@ -152,7 +161,7 @@ namespace SM64_ROM_Manager
             var trac = new Trajectory();
             trac.Name = name;
             trajectories.Add(trac);
-            LoadTrajectoriesList();
+            LoadTrajectoriesList(trac);
         }
 
         private void ComboBoxEx1_SelectedIndexChanged(object sender, EventArgs e)

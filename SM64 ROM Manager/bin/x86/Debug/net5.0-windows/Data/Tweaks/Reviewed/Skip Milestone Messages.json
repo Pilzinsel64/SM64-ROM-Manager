@@ -1,0 +1,21 @@
+{
+  "Name": "Skip Milestone Messages",
+  "Scripts": [
+    {
+      "Name": "",
+      "Script": "122B0: 03 E0 00 08 00 00 10 00",
+      "Type": "TweakScript",
+      "Description": "",
+      "References": [],
+      "ID": null
+    }
+  ],
+  "Version": "2.0.0.0",
+  "MinVersion": "1.0.0.0",
+  "MaxVersion": "0.0.0.0",
+  "Description": "Skip the Milestone messages displayed after collecting specific numbers of stars. New code by Falcobuster, from Bowser's Blueprints",
+  "EmbeddedFiles": {
+    "CompressedFiles": {}
+  },
+  "ID": null
+}

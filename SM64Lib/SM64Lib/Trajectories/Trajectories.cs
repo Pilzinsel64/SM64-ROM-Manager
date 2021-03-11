@@ -38,7 +38,7 @@ namespace SM64Lib.Trajectorys
                         break;
                     case TrajectoryName.RacingPenguin:
                         data.Position = 0xCCA6E;
-                        data.Write(ramAddr >> 16);
+                        data.Write((ushort)(ramAddr >> 16));
                         data.Position = 0xCCA76;
                         data.Write((ushort)(ramAddr & 0xFFFF));
                         break;
@@ -123,20 +123,20 @@ namespace SM64Lib.Trajectorys
 
             // Mips the Rabbit
             var mipsTrajects = this.Where(n => n.Name == TrajectoryName.MipsTheRabbit).ToArray();
-            if (mipsTrajects.Length > 0)
+            if (mipsTrajects.Any())
             {
                 data.Position = 0xB3816;
-                data.Write(0x8040);
+                data.Write((ushort)0x8040);
                 data.Position += 6;
                 data.Write((ushort)(curPos - romstartAddr + ramStartAddr & 0xFFFF));
                 foreach (Trajectory traj in mipsTrajects)
                 {
-                    traj.Write(data, (uint)(curPos));
-                    curPos = (int)(data.Position);
+                    traj.Write(data, (uint)curPos);
+                    curPos = (int)data.Position;
                 }
 
                 data.Position = 0xB371E;
-                data.Write((ushort)(mipsTrajects.Length));
+                data.Write((ushort)mipsTrajects.Length);
             }
         }
 
@@ -237,7 +237,7 @@ namespace SM64Lib.Trajectorys
 
             // Mips the Rabbit
             data.Position = 0xB3816;
-            addr = data.ReadUInt16();
+            addr = data.ReadUInt16() << 16;
             data.Position += 6;
             addr = addr | data.ReadUInt16();
             data.Position = 0xB371E;

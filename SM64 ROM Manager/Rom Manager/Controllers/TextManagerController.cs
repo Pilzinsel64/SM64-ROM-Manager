@@ -73,6 +73,7 @@ namespace SM64_ROM_Manager
         private string dialogNamesFilePath = string.Empty;
         private bool forceUppercaseForActAndLevelNames = true;
         private bool autoDetectStartEndQuotationMarks = true;
+        private bool autoFocusEditTextBox = false;
         private List<RomManager> knownRomManagers = new List<RomManager>();
         private TextProfileInfo myDefaultTextProfileInfo = null;
 
@@ -114,6 +115,24 @@ namespace SM64_ROM_Manager
                     SettingsManager.Settings.TextManager.AutoDetectStartEndQuotationMarks = value;
                 else
                     autoDetectStartEndQuotationMarks = value;
+            }
+        }
+
+        public bool AutoFocusEditTextBox
+        {
+            get
+            {
+                if (UseSettingsForOptions)
+                    return SettingsManager.Settings.TextManager.AutoFocusEditorTextBox;
+                else
+                    return autoFocusEditTextBox;
+            }
+            set
+            {
+                if (UseSettingsForOptions)
+                    SettingsManager.Settings.TextManager.AutoFocusEditorTextBox = value;
+                else
+                    autoFocusEditTextBox = value;
             }
         }
 

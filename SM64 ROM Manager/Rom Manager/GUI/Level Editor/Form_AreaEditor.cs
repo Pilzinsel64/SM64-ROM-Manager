@@ -2753,7 +2753,7 @@ namespace SM64_ROM_Manager.LevelEditor
 
                     case LevelscriptCommandTypes.InstantWarp:
                         {
-                            newWarp = new LevelscriptCommand(new byte[] { 0x28, 0xC, 0x1B, CArea.AreaID, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 });
+                            newWarp = new LevelscriptCommand(new byte[] { 0x28, 0xC, 0x0, CArea.AreaID, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 });
                             newManagedWarp = new ManagedInstantWarp(newWarp);
                             parent = nInstantWarps;
                             break;
