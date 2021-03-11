@@ -73,7 +73,6 @@ namespace SM64_ROM_Manager
             SwitchButton_SearchUpdates.Value = Settings.Network.AutoUpdates;
             ComboBox_DefaultValueType.SelectedIndex = Settings.General.IntegerValueMode;
             ComboBox_AreaEditor_DefaultCameraMode.SelectedIndex = (int)Settings.AreaEditor.DefaultCameraMode;
-            //ComboBox_AreaEditor_DefaultWindowMode.SelectedIndex = Settings.AreaEditor.DefaultWindowMode == FormWindowState.Maximized ? 1 : 0;
             TextBoxX_HexEditorCustomPath.Text = Settings.General.HexEditMode.CustomPath;
             SwitchButton_UseLegacyCollisionDescriptions.Value = Settings.ModelConverter.UseLegacyCollisionDescriptions;
             SwitchButton_TMForceUppercase.Value = Settings.TextManager.ForceUpperCaseForActAndLevelNames;
@@ -89,56 +88,39 @@ namespace SM64_ROM_Manager
             foreach (ComboItem item in ComboBoxEx_LoaderModule.Items)
             {
                 if (item.Tag == curLoaderModule)
-                {
                     ComboBoxEx_LoaderModule.SelectedItem = item;
-                }
             }
 
             var curExporterModule = Publics.Publics.GetExporterModuleFromID(Settings.FileParser.FileExporterModule);
             foreach (ComboItem item in ComboBoxEx_ExporterModule.Items)
             {
                 if (item.Tag == curExporterModule)
-                {
                     ComboBoxEx_ExporterModule.SelectedItem = item;
-                }
             }
 
             var switchExpr = Settings.General.ActionIfUpdatePatches;
             switch (switchExpr)
             {
                 case DialogResult.None:
-                    {
-                        ComboBoxEx1.SelectedIndex = 0;
-                        break;
-                    }
-
+                    ComboBoxEx1.SelectedIndex = 0;
+                    break;
                 case DialogResult.Yes:
-                    {
-                        ComboBoxEx1.SelectedIndex = 1;
-                        break;
-                    }
-
+                    ComboBoxEx1.SelectedIndex = 1;
+                    break;
                 case DialogResult.No:
-                    {
-                        ComboBoxEx1.SelectedIndex = 2;
-                        break;
-                    }
+                    ComboBoxEx1.SelectedIndex = 2;
+                    break;
             }
 
             var switchExpr1 = Settings.General.HexEditMode.Mode;
             switch (switchExpr1)
             {
                 case HexEditModes.None:
-                    {
-                        ComboBoxEx_HexEditorMode.SelectedIndex = 0;
-                        break;
-                    }
-
+                    ComboBoxEx_HexEditorMode.SelectedIndex = 0;
+                    break;
                 case HexEditModes.CustomHexEditor:
-                    {
-                        ComboBoxEx_HexEditorMode.SelectedIndex = 1;
-                        break;
-                    }
+                    ComboBoxEx_HexEditorMode.SelectedIndex = 1;
+                    break;
             }
 
             foreach (ComboItem item in ComboBoxEx_Language.Items)
@@ -146,80 +128,52 @@ namespace SM64_ROM_Manager
                 if (item.Tag is null)
                 {
                     if (string.IsNullOrEmpty(Settings.General.Language))
-                    {
                         ComboBoxEx_Language.SelectedIndex = 0;
-                    }
                 }
                 else if ((((CultureInfo)item.Tag).Name ?? "") == (Settings.General.Language ?? ""))
-                {
                     ComboBoxEx_Language.SelectedItem = item;
-                }
             }
 
             var switchExpr2 = Settings.General.AutoScaleMode;
             switch (switchExpr2)
             {
                 case AutoScaleMode.None:
-                    {
-                        ComboBoxEx_AutoScaleMode.SelectedIndex = 0;
-                        break;
-                    }
-
+                    ComboBoxEx_AutoScaleMode.SelectedIndex = 0;
+                    break;
                 case AutoScaleMode.Dpi:
-                    {
-                        ComboBoxEx_AutoScaleMode.SelectedIndex = 1;
-                        break;
-                    }
-
+                    ComboBoxEx_AutoScaleMode.SelectedIndex = 1;
+                    break;
                 case AutoScaleMode.Font:
-                    {
-                        ComboBoxEx_AutoScaleMode.SelectedIndex = 2;
-                        break;
-                    }
+                    ComboBoxEx_AutoScaleMode.SelectedIndex = 2;
+                    break;
             }
 
             var switchExpr3 = Settings.General.RomChangedNotification;
             switch (switchExpr3)
             {
                 case NotificationMode.Off:
-                    {
-                        ComboBoxEx_NotifyOnRomChanges.SelectedIndex = 0;
-                        break;
-                    }
-
+                    ComboBoxEx_NotifyOnRomChanges.SelectedIndex = 0;
+                    break;
                 case NotificationMode.Infobox:
-                    {
-                        ComboBoxEx_NotifyOnRomChanges.SelectedIndex = 1;
-                        break;
-                    }
-
+                    ComboBoxEx_NotifyOnRomChanges.SelectedIndex = 1;
+                    break;
                 case NotificationMode.Popup:
-                    {
-                        ComboBoxEx_NotifyOnRomChanges.SelectedIndex = 2;
-                        break;
-                    }
+                    ComboBoxEx_NotifyOnRomChanges.SelectedIndex = 2;
+                    break;
             }
 
             var switchExpr4 = Settings.Network.MinimumUpdateChannel;
             switch (switchExpr4)
             {
                 case Updating.Channels.Alpha:
-                    {
-                        ComboBoxEx_UpdateLevel.SelectedIndex = 2;
-                        break;
-                    }
-
+                    ComboBoxEx_UpdateLevel.SelectedIndex = 2;
+                    break;
                 case Updating.Channels.Beta:
-                    {
-                        ComboBoxEx_UpdateLevel.SelectedIndex = 1;
-                        break;
-                    }
-
+                    ComboBoxEx_UpdateLevel.SelectedIndex = 1;
+                    break;
                 case Updating.Channels.Stable:
-                    {
-                        ComboBoxEx_UpdateLevel.SelectedIndex = 0;
-                        break;
-                    }
+                    ComboBoxEx_UpdateLevel.SelectedIndex = 0;
+                    break;
             }
 
             switch (Settings.General.RecalcChecksumBehavior)
@@ -246,7 +200,6 @@ namespace SM64_ROM_Manager
             Settings.General.IntegerValueMode = ComboBox_DefaultValueType.SelectedIndex;
             Settings.Network.AutoUpdates = SwitchButton_SearchUpdates.Value;
             Settings.AreaEditor.DefaultCameraMode = (Pilz.Drawing.Drawing3D.OpenGLFactory.CameraN.CameraMode)ComboBox_AreaEditor_DefaultCameraMode.SelectedIndex;
-            //Settings.AreaEditor.DefaultWindowMode = ComboBox_AreaEditor_DefaultWindowMode.SelectedIndex == 1 ? FormWindowState.Maximized : FormWindowState.Normal;
             Settings.AreaEditor.EnableSlideMovementByDefaultForObjects = comboBoxEx_DefaultObjMoveMode.SelectedIndex == 1;
             Settings.FileParser.FileLoaderModule = Publics.Publics.GetLoaderIDFromModule((File3DLoaderModule)((ComboItem)ComboBoxEx_LoaderModule.SelectedItem).Tag);
             Settings.FileParser.FileExporterModule = Publics.Publics.GetExporterIDFromModule((File3DLoaderModule)((ComboItem)ComboBoxEx_ExporterModule.SelectedItem).Tag);
@@ -262,106 +215,69 @@ namespace SM64_ROM_Manager
             switch (switchExpr)
             {
                 case 0:
-                    {
-                        Settings.General.ActionIfUpdatePatches = DialogResult.None;
-                        break;
-                    }
-
+                    Settings.General.ActionIfUpdatePatches = DialogResult.None;
+                    break;
                 case 1:
-                    {
-                        Settings.General.ActionIfUpdatePatches = DialogResult.Yes;
-                        break;
-                    }
-
+                    Settings.General.ActionIfUpdatePatches = DialogResult.Yes;
+                    break;
                 case 2:
-                    {
-                        Settings.General.ActionIfUpdatePatches = DialogResult.No;
-                        break;
-                    }
+                    Settings.General.ActionIfUpdatePatches = DialogResult.No;
+                    break;
             }
 
             var switchExpr1 = ComboBoxEx_HexEditorMode.SelectedIndex;
             switch (switchExpr1)
             {
                 case 0:
-                    {
-                        Settings.General.HexEditMode.Mode = HexEditModes.None;
-                        Settings.General.HexEditMode.CustomPath = string.Empty;
-                        break;
-                    }
-
+                    Settings.General.HexEditMode.Mode = HexEditModes.None;
+                    Settings.General.HexEditMode.CustomPath = string.Empty;
+                    break;
                 case 1:
-                    {
-                        Settings.General.HexEditMode.Mode = HexEditModes.CustomHexEditor;
-                        Settings.General.HexEditMode.CustomPath = TextBoxX_HexEditorCustomPath.Text.Trim();
-                        break;
-                    }
+                    Settings.General.HexEditMode.Mode = HexEditModes.CustomHexEditor;
+                    Settings.General.HexEditMode.CustomPath = TextBoxX_HexEditorCustomPath.Text.Trim();
+                    break;
             }
 
             var switchExpr2 = ComboBoxEx_AutoScaleMode.SelectedIndex;
             switch (switchExpr2)
             {
                 case 0:
-                    {
-                        Settings.General.AutoScaleMode = AutoScaleMode.None;
-                        break;
-                    }
-
+                    Settings.General.AutoScaleMode = AutoScaleMode.None;
+                    break;
                 case 1:
-                    {
-                        Settings.General.AutoScaleMode = AutoScaleMode.Dpi;
-                        break;
-                    }
-
+                    Settings.General.AutoScaleMode = AutoScaleMode.Dpi;
+                    break;
                 case 2:
-                    {
-                        Settings.General.AutoScaleMode = AutoScaleMode.Font;
-                        break;
-                    }
+                    Settings.General.AutoScaleMode = AutoScaleMode.Font;
+                    break;
             }
 
             var switchExpr3 = ComboBoxEx_NotifyOnRomChanges.SelectedIndex;
             switch (switchExpr3)
             {
                 case 0:
-                    {
-                        Settings.General.RomChangedNotification = NotificationMode.Off;
-                        break;
-                    }
-
+                    Settings.General.RomChangedNotification = NotificationMode.Off;
+                    break;
                 case 1:
-                    {
-                        Settings.General.RomChangedNotification = NotificationMode.Infobox;
-                        break;
-                    }
-
+                    Settings.General.RomChangedNotification = NotificationMode.Infobox;
+                    break;
                 case 2:
-                    {
-                        Settings.General.RomChangedNotification = NotificationMode.Popup;
-                        break;
-                    }
+                    Settings.General.RomChangedNotification = NotificationMode.Popup;
+                    break;
             }
 
             var switchExpr4 = ComboBoxEx_UpdateLevel.SelectedIndex;
             switch (switchExpr4)
             {
                 case 0:
-                    {
-                        Settings.Network.MinimumUpdateChannel = Updating.Channels.Stable;
-                        break;
-                    }
-
+                    Settings.Network.MinimumUpdateChannel = Updating.Channels.Stable;
+                    break;
                 case 1:
-                    {
-                        Settings.Network.MinimumUpdateChannel = Updating.Channels.Beta;
-                        break;
-                    }
-
+                    Settings.Network.MinimumUpdateChannel = Updating.Channels.Beta;
+                    break;
                 case 2:
-                    {
-                        Settings.Network.MinimumUpdateChannel = Updating.Channels.Alpha;
-                        break;
-                    }
+                    Settings.Network.MinimumUpdateChannel = Updating.Channels.Alpha;
+                    break;
             }
 
             switch (comboBoxEx_RecalcChecksumBehavior.SelectedIndex)
@@ -439,9 +355,7 @@ namespace SM64_ROM_Manager
         {
             var ofd = new OpenFileDialog() { Filter = "Executeables (*.exe)|*.exe", Title = titel };
             if (ofd.ShowDialog() == DialogResult.OK)
-            {
                 dest.Text = ofd.FileName;
-            }
         }
 
         private void ComboBoxEx_Language_SelectedIndexChanged(object sender, EventArgs e)
