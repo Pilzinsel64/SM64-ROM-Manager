@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace SM64Lib.HUD
 {
-    public class HUDGroup
+    public class HUDGroup : HUDElement
     {
-        public string Name { get; set; }
+        [JsonIgnore]
+        public new HUDGroupInfo DataInfo => (HUDGroupInfo)base.DataInfo;
         public List<HUDItem> Items { get; } = new();
 
         [JsonIgnore]
@@ -57,14 +58,22 @@ namespace SM64Lib.HUD
             get => !Items.Where(n => !n.DataInfo.CanSetLocation).Any();
         }
 
-        public void LoadData(BinaryData data)
+        public HUDGroup(HUDGroupInfo dataInfo) :
+            base(dataInfo)
+        { }
+
+        public override void LoadData(BinaryData data)
         {
+            base.LoadData(data);
+
             foreach (var item in Items)
                 item.LoadData(data);
         }
 
-        public void SaveData(BinaryData data)
+        public override void SaveData(BinaryData data)
         {
+            base.SaveData(data);
+
             foreach (var item in Items)
                 item.SaveData(data);
         }

@@ -23,28 +23,33 @@
         </member>
         <member name="T:SM64_ROM_Manager.Publics.My.Resources.FileDialogFilters">
             <summary>
-            Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Publics.My.Resources.FileDialogFilters.ResourceManager">
             <summary>
-            Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Publics.My.Resources.FileDialogFilters.Culture">
             <summary>
-            Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
-            Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Publics.My.Resources.FileDialogFilters.FilterPictureFormats_All">
             <summary>
-            Sucht eine lokalisierte Zeichenfolge, die All supported formats|*.emf;*.bmp;*.gif;*.icon;*.jpg;*.jpeg;*.png;*.tiff;*.wmf ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die All supported formats|*.emf;*.bmp;*.gif;*.icon;*.jpg;*.jpeg;*.png;*.tiff;*.wmf ähnelt.
             </summary>
         </member>
         <member name="P:SM64_ROM_Manager.Publics.My.Resources.FileDialogFilters.FilterPictureFormats_Single">
             <summary>
-            Sucht eine lokalisierte Zeichenfolge, die Portable Network Graphic (*.png)|*.png|Tagged Image File (*.tiff)|*.tiff|Windows Metafile (*.wmf)|*.wmf|Enhanced Windows Metafile (*.emf)|*.emf|Bitmap (*.bmp)|*.bmp|GIF (*.gif)|*.gif|Icon (*.ico)|*.icon|Joint Photographic Experts Group (*.jpg)|*.jpg ähnelt.
+              Sucht eine lokalisierte Zeichenfolge, die Portable Network Graphic (*.png)|*.png|Tagged Image File (*.tiff)|*.tiff|Windows Metafile (*.wmf)|*.wmf|Enhanced Windows Metafile (*.emf)|*.emf|Bitmap (*.bmp)|*.bmp|GIF (*.gif)|*.gif|Icon (*.ico)|*.icon|Joint Photographic Experts Group (*.jpg)|*.jpg ähnelt.
+            </summary>
+        </member>
+        <member name="P:SM64_ROM_Manager.Publics.My.Resources.FileDialogFilters.JsonFiles">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die JSON files (*.json)|*.json ähnelt.
             </summary>
         </member>
         <member name="T:SM64_ROM_Manager.Publics.My.Resources.Resources">

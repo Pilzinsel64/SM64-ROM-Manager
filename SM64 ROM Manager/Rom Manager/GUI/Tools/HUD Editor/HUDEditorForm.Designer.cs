@@ -31,12 +31,15 @@ namespace SM64_ROM_Manager
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HUDEditorForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.integerInput2 = new DevComponents.Editors.IntegerInput();
-            this.integerInput1 = new DevComponents.Editors.IntegerInput();
-            this.checkBoxX1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.layoutControl1 = new DevComponents.DotNetBar.Layout.LayoutControl();
+            this.IntegerInput_LocationX = new DevComponents.Editors.IntegerInput();
+            this.IntegerInput_LocationY = new DevComponents.Editors.IntegerInput();
+            this.CheckBoxX_Visible = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.ButtonX_SnapToGrid = new DevComponents.DotNetBar.ButtonX();
+            this.layoutControlItem_LocationX = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem_LocationY = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem_Visible = new DevComponents.DotNetBar.Layout.LayoutControlItem();
+            this.layoutControlItem_SnapToGrid = new DevComponents.DotNetBar.Layout.LayoutControlItem();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.ButtonItem_LoadProfile = new DevComponents.DotNetBar.ButtonItem();
             this.ButtonItem_PredefinedProfiles = new DevComponents.DotNetBar.ButtonItem();
@@ -48,101 +51,138 @@ namespace SM64_ROM_Manager
             this.ButtonItem_SimplyfiedMode = new DevComponents.DotNetBar.ButtonItem();
             this.paintingControl1 = new Pilz.UI.PaintingControl();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_LocationX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_LocationY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.labelX2);
-            this.panel1.Controls.Add(this.labelX1);
-            this.panel1.Controls.Add(this.integerInput2);
-            this.panel1.Controls.Add(this.integerInput1);
-            this.panel1.Controls.Add(this.checkBoxX1);
-            this.panel1.Controls.Add(this.buttonX1);
+            this.panel1.Controls.Add(this.layoutControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(526, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 483);
             this.panel1.TabIndex = 1;
             // 
-            // labelX2
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.IntegerInput_LocationX);
+            this.layoutControl1.Controls.Add(this.IntegerInput_LocationY);
+            this.layoutControl1.Controls.Add(this.CheckBoxX_Visible);
+            this.layoutControl1.Controls.Add(this.ButtonX_SnapToGrid);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            // 
+            // 
+            // 
+            this.layoutControl1.RootGroup.Items.AddRange(new DevComponents.DotNetBar.Layout.LayoutItemBase[] {
+            this.layoutControlItem_LocationX,
+            this.layoutControlItem_LocationY,
+            this.layoutControlItem_Visible,
+            this.layoutControlItem_SnapToGrid});
+            this.layoutControl1.Size = new System.Drawing.Size(200, 483);
+            this.layoutControl1.TabIndex = 4;
+            // 
+            // IntegerInput_LocationX
             // 
             // 
             // 
             // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(3, 32);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(27, 23);
-            this.labelX2.TabIndex = 3;
-            this.labelX2.Text = "Y:";
+            this.IntegerInput_LocationX.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput_LocationX.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput_LocationX.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.IntegerInput_LocationX.Location = new System.Drawing.Point(68, 4);
+            this.IntegerInput_LocationX.Margin = new System.Windows.Forms.Padding(0);
+            this.IntegerInput_LocationX.Name = "IntegerInput_LocationX";
+            this.IntegerInput_LocationX.ShowUpDown = true;
+            this.IntegerInput_LocationX.Size = new System.Drawing.Size(128, 20);
+            this.IntegerInput_LocationX.TabIndex = 0;
+            this.IntegerInput_LocationX.ValueChanged += new System.EventHandler(this.IntegerInput_Location_ValueChanged);
             // 
-            // labelX1
-            // 
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(3, 3);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(27, 23);
-            this.labelX1.TabIndex = 3;
-            this.labelX1.Text = "X:";
-            // 
-            // integerInput2
+            // IntegerInput_LocationY
             // 
             // 
             // 
             // 
-            this.integerInput2.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.integerInput2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.integerInput2.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.integerInput2.Location = new System.Drawing.Point(36, 33);
-            this.integerInput2.Name = "integerInput2";
-            this.integerInput2.ShowUpDown = true;
-            this.integerInput2.Size = new System.Drawing.Size(161, 20);
-            this.integerInput2.TabIndex = 2;
+            this.IntegerInput_LocationY.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IntegerInput_LocationY.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IntegerInput_LocationY.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.IntegerInput_LocationY.Location = new System.Drawing.Point(68, 32);
+            this.IntegerInput_LocationY.Margin = new System.Windows.Forms.Padding(0);
+            this.IntegerInput_LocationY.Name = "IntegerInput_LocationY";
+            this.IntegerInput_LocationY.ShowUpDown = true;
+            this.IntegerInput_LocationY.Size = new System.Drawing.Size(128, 20);
+            this.IntegerInput_LocationY.TabIndex = 1;
+            this.IntegerInput_LocationY.ValueChanged += new System.EventHandler(this.IntegerInput_Location_ValueChanged);
             // 
-            // integerInput1
-            // 
-            // 
-            // 
-            // 
-            this.integerInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.integerInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.integerInput1.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.integerInput1.Location = new System.Drawing.Point(36, 4);
-            this.integerInput1.Name = "integerInput1";
-            this.integerInput1.ShowUpDown = true;
-            this.integerInput1.Size = new System.Drawing.Size(161, 20);
-            this.integerInput1.TabIndex = 2;
-            // 
-            // checkBoxX1
+            // CheckBoxX_Visible
             // 
             // 
             // 
             // 
-            this.checkBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX1.Location = new System.Drawing.Point(3, 98);
-            this.checkBoxX1.Name = "checkBoxX1";
-            this.checkBoxX1.Size = new System.Drawing.Size(100, 23);
-            this.checkBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBoxX1.TabIndex = 1;
-            this.checkBoxX1.Text = "Visible";
+            this.CheckBoxX_Visible.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.CheckBoxX_Visible.Location = new System.Drawing.Point(68, 60);
+            this.CheckBoxX_Visible.Margin = new System.Windows.Forms.Padding(0);
+            this.CheckBoxX_Visible.Name = "CheckBoxX_Visible";
+            this.CheckBoxX_Visible.Size = new System.Drawing.Size(128, 23);
+            this.CheckBoxX_Visible.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.CheckBoxX_Visible.TabIndex = 2;
+            this.CheckBoxX_Visible.CheckedChanged += new System.EventHandler(this.CheckBoxX_Visible_CheckedChanged);
             // 
-            // buttonX1
+            // ButtonX_SnapToGrid
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(122, 154);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(75, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 0;
-            this.buttonX1.Text = "Snap to Grid";
+            this.ButtonX_SnapToGrid.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.ButtonX_SnapToGrid.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.ButtonX_SnapToGrid.Location = new System.Drawing.Point(4, 91);
+            this.ButtonX_SnapToGrid.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonX_SnapToGrid.Name = "ButtonX_SnapToGrid";
+            this.ButtonX_SnapToGrid.Size = new System.Drawing.Size(103, 23);
+            this.ButtonX_SnapToGrid.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ButtonX_SnapToGrid.TabIndex = 3;
+            this.ButtonX_SnapToGrid.Text = "Snap to Grid";
+            this.ButtonX_SnapToGrid.Click += new System.EventHandler(this.ButtonX_SnapToGrid_Click);
+            // 
+            // layoutControlItem_LocationX
+            // 
+            this.layoutControlItem_LocationX.Control = this.IntegerInput_LocationX;
+            this.layoutControlItem_LocationX.Height = 28;
+            this.layoutControlItem_LocationX.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem_LocationX.Name = "layoutControlItem_LocationX";
+            this.layoutControlItem_LocationX.Text = "Location X:";
+            this.layoutControlItem_LocationX.Width = 100;
+            this.layoutControlItem_LocationX.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem_LocationY
+            // 
+            this.layoutControlItem_LocationY.Control = this.IntegerInput_LocationY;
+            this.layoutControlItem_LocationY.Height = 28;
+            this.layoutControlItem_LocationY.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem_LocationY.Name = "layoutControlItem_LocationY";
+            this.layoutControlItem_LocationY.Text = "Location Y:";
+            this.layoutControlItem_LocationY.Width = 100;
+            this.layoutControlItem_LocationY.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem_Visible
+            // 
+            this.layoutControlItem_Visible.Control = this.CheckBoxX_Visible;
+            this.layoutControlItem_Visible.Height = 31;
+            this.layoutControlItem_Visible.MinSize = new System.Drawing.Size(64, 18);
+            this.layoutControlItem_Visible.Name = "layoutControlItem_Visible";
+            this.layoutControlItem_Visible.Text = "Visible:";
+            this.layoutControlItem_Visible.Width = 100;
+            this.layoutControlItem_Visible.WidthType = DevComponents.DotNetBar.Layout.eLayoutSizeType.Percent;
+            // 
+            // layoutControlItem_SnapToGrid
+            // 
+            this.layoutControlItem_SnapToGrid.Control = this.ButtonX_SnapToGrid;
+            this.layoutControlItem_SnapToGrid.Height = 31;
+            this.layoutControlItem_SnapToGrid.MinSize = new System.Drawing.Size(32, 20);
+            this.layoutControlItem_SnapToGrid.Name = "layoutControlItem_SnapToGrid";
+            this.layoutControlItem_SnapToGrid.Width = 111;
             // 
             // bar1
             // 
@@ -189,6 +229,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_LoadFromFile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_open_folder_16px;
             this.ButtonItem_LoadFromFile.Name = "ButtonItem_LoadFromFile";
             this.ButtonItem_LoadFromFile.Text = "Load from file ...";
+            this.ButtonItem_LoadFromFile.Click += new System.EventHandler(this.ButtonItem_LoadFromFile_Click);
             // 
             // ButtonItem_SaveProfile
             // 
@@ -196,6 +237,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_SaveProfile.Image = global::SM64_ROM_Manager.My.Resources.MyIcons.icons8_save_16px;
             this.ButtonItem_SaveProfile.Name = "ButtonItem_SaveProfile";
             this.ButtonItem_SaveProfile.Text = "Save profile";
+            this.ButtonItem_SaveProfile.Click += new System.EventHandler(this.ButtonItem_SaveProfile_Click);
             // 
             // ButtonItem_Options
             // 
@@ -214,6 +256,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_ShowGrid.Checked = true;
             this.ButtonItem_ShowGrid.Name = "ButtonItem_ShowGrid";
             this.ButtonItem_ShowGrid.Text = "Show Grid";
+            this.ButtonItem_ShowGrid.CheckedChanged += new System.EventHandler(this.ButtonItem_ShowGrid_CheckedChanged);
             // 
             // ButtonItem_AutoSnapToGrid
             // 
@@ -221,6 +264,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_AutoSnapToGrid.Checked = true;
             this.ButtonItem_AutoSnapToGrid.Name = "ButtonItem_AutoSnapToGrid";
             this.ButtonItem_AutoSnapToGrid.Text = "Auto snap to Grid";
+            this.ButtonItem_AutoSnapToGrid.CheckedChanged += new System.EventHandler(this.ButtonItem_AutoSnapToGrid_CheckedChanged);
             // 
             // ButtonItem_SimplyfiedMode
             // 
@@ -228,6 +272,7 @@ namespace SM64_ROM_Manager
             this.ButtonItem_SimplyfiedMode.Checked = true;
             this.ButtonItem_SimplyfiedMode.Name = "ButtonItem_SimplyfiedMode";
             this.ButtonItem_SimplyfiedMode.Text = "Simplyfied mode";
+            this.ButtonItem_SimplyfiedMode.CheckedChanged += new System.EventHandler(this.ButtonItem_SimplyfiedMode_CheckedChanged);
             // 
             // paintingControl1
             // 
@@ -252,6 +297,7 @@ namespace SM64_ROM_Manager
             this.paintingControl1.TabIndex = 0;
             this.paintingControl1.VisibleForMouseEvents = true;
             this.paintingControl1.ZoomFactor = new System.Drawing.SizeF(1.5F, 1.5F);
+            this.paintingControl1.SelectionChanged += new Pilz.UI.PaintingControl.SelectionChangedEventHandler(this.PaintingControl1_SelectionChanged);
             // 
             // HUDEditorForm
             // 
@@ -265,9 +311,11 @@ namespace SM64_ROM_Manager
             this.Name = "HUDEditorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HUD Editor";
+            this.Shown += new System.EventHandler(this.HUDEditorForm_Shown);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.integerInput1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_LocationX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.IntegerInput_LocationY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.ResumeLayout(false);
 
@@ -283,14 +331,17 @@ namespace SM64_ROM_Manager
         private DevComponents.DotNetBar.ButtonItem ButtonItem_Options;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_ShowGrid;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_AutoSnapToGrid;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
-        private DevComponents.Editors.IntegerInput integerInput2;
-        private DevComponents.Editors.IntegerInput integerInput1;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.ButtonX ButtonX_SnapToGrid;
+        private DevComponents.DotNetBar.Controls.CheckBoxX CheckBoxX_Visible;
+        private DevComponents.Editors.IntegerInput IntegerInput_LocationY;
+        private DevComponents.Editors.IntegerInput IntegerInput_LocationX;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_SimplyfiedMode;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_PredefinedProfiles;
         private DevComponents.DotNetBar.ButtonItem ButtonItem_LoadFromFile;
+        private DevComponents.DotNetBar.Layout.LayoutControl layoutControl1;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem_LocationX;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem_LocationY;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem_Visible;
+        private DevComponents.DotNetBar.Layout.LayoutControlItem layoutControlItem_SnapToGrid;
     }
 }

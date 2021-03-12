@@ -17,12 +17,14 @@ namespace SM64Lib.HUD
 
         public void SaveAs(string filePath)
         {
-            File.WriteAllText(filePath, JObject.FromObject(this).ToString());
+            var serializer = Json.JsonHelper.CreateJsonSerializer(rememberTypeNames: true);
+            File.WriteAllText(filePath, JObject.FromObject(this, serializer).ToString());
         }
 
         public static HUDProfile LoadFrom(string filePath)
         {
-            return JObject.Parse(File.ReadAllText(filePath)).ToObject<HUDProfile>();
+            var serializer = Json.JsonHelper.CreateJsonSerializer(rememberTypeNames:true);
+            return (HUDProfile)JObject.Parse(File.ReadAllText(filePath)).ToObject(typeof(HUDProfile), serializer);
         }
 
         public void LoadData(BinaryData data)

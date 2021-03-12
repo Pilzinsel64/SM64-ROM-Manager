@@ -23,7 +23,10 @@ namespace SM64_ROM_Manager
         private readonly RomManager romManager;
         private bool simplyfiedMode = false;
         private HUDProfile curProfile = null;
+        private HUDElement curElement = null;
         private readonly List<HUDProfile> predefinedProfiles = new();
+        private bool finishedInit = false;
+        private bool loadingItemData = false;
 
         // C o n s t r u c t o r
 
@@ -32,6 +35,7 @@ namespace SM64_ROM_Manager
             this.romManager = romManager;
             InitializeComponent();
             UpdateAmbientColors();
+            finishedInit = true;
         }
 
         // F e a t u r e s
@@ -60,6 +64,9 @@ namespace SM64_ROM_Manager
                     Text = profile.ProfileName,
                     Tag = profile
                 };
+
+                item.Click += ButtonItem_PredefinedProfile_Click;
+
                 ButtonItem_PredefinedProfiles.SubItems.Add(item);
             }
         }
@@ -105,6 +112,61 @@ namespace SM64_ROM_Manager
 
             // Update checksum
             SM64Lib.General.PatchClass.UpdateChecksum(romManager.RomFile);
+        }
+
+        private void ShowItemData(HUDItem item)
+        {
+            var isNotNull = item is object;
+            layoutControl1.Enabled = isNotNull;
+
+            if (isNotNull)
+            {
+                var hasLocation = item.Location.HasValue;
+                var hasVisible = item.Visible.HasValue;
+                loadingItemData = true;
+
+                if (hasLocation)
+                {
+                    IntegerInput_LocationX.Value = item.Location.Value.X;
+                    IntegerInput_LocationY.Value = item.Location.Value.Y;
+                    IntegerInput_LocationX.Enabled = item.DataInfo.CanSetLocation;
+                    IntegerInput_LocationY.Enabled = item.DataInfo.CanSetLocation;
+                }
+
+                if (hasVisible)
+                {
+                    CheckBoxX_Visible.Checked = item.Visible.Value;
+                    CheckBoxX_Visible.Enabled = item.DataInfo.CanSetVisible;
+                }
+
+                layoutControlItem_LocationX.Visible = hasLocation;
+                layoutControlItem_LocationY.Visible = hasLocation;
+                layoutControlItem_Visible.Visible = hasVisible;
+                layoutControlItem_SnapToGrid.Visible = item.DataInfo.CanSetLocation;
+                layoutControl1.Refresh();
+
+                loadingItemData = false;
+            }
+        }
+
+        private void TakeoverItemLocation(HUDElement item, Point location)
+        {
+            if (item is HUDItem hudItem && hudItem.DataInfo.CanSetLocation)
+                hudItem.Location = location;
+            else if (item is HUDGroup hudGroup)
+                hudGroup.Location = location;
+        }
+
+        private void TakeoverItemVisible(HUDElement item, bool value)
+        {
+            if (item.DataInfo.CanSetVisible)
+                item.Visible = value;
+        }
+
+        private void ResetItemLocation(HUDItem item)
+        {
+            if (item.DataInfo.CanSetLocation && item.DataInfo.LocationDefaultValue.HasValue)
+                item.Location = item.DataInfo.LocationDefaultValue;
         }
 
         // P a i n t i n g O b j e c t s
@@ -167,6 +229,19 @@ namespace SM64_ROM_Manager
             paintingControl1.ResumeDrawing();
         }
 
+        private PaintingObject FindPaintingObject(HUDElement item)
+        {
+            PaintingObject found = null;
+
+            foreach (var po in paintingControl1.PaintingObjects)
+            {
+                if (found == null && po.Tag == item)
+                    found = po;
+            }
+
+            return found;
+        }
+
         private PaintingObject GetBasePaintingObject(object obj)
         {
             var po = new PaintingObject
@@ -184,6 +259,12 @@ namespace SM64_ROM_Manager
             return po;
         }
 
+        private void FindAndUpdatePaintingObject(HUDElement element)
+        {
+            var po = FindPaintingObject(curElement);
+            UpdatePaintingObject(po, element);
+        }
+
         private void UpdatePaintingObject(PaintingObject po)
         {
             if (po.Tag is HUDItem)
@@ -199,18 +280,26 @@ namespace SM64_ROM_Manager
             return po;
         }
 
-        private void UpdatePaintingObject(PaintingObject po, HUDItem item)
+        private void UpdatePaintingObject(PaintingObject po, HUDElement item)
         {
-            po.Location = item.Location.Value;
-            po.HardcodedLocation = item.DataInfo.CanSetLocation;
-            po.Size = item.DataInfo.ItemSize.Value;
+            if (item is HUDItem hudItem)
+            {
+                po.Location = hudItem.Location.Value;
+                po.HardcodedLocation = hudItem.DataInfo.CanSetLocation;
+                po.Size = hudItem.DataInfo.ItemSize.Value;
 
-            // Check for symbol and set image
-            //if ()
-            //{
-            //    // ...
-            //    po.Type |= PaintingObjectType.Picture;
-            //}
+                // Check for symbol and set image
+                //if ()
+                //{
+                //    // ...
+                //    po.Type |= PaintingObjectType.Picture;
+                //}
+            }
+
+            if (item.Visible ?? true)
+                po.OutlineDashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            else
+                po.OutlineDashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
         }
 
         private PaintingObject GetPaintingObject(HUDGroup group)
@@ -227,6 +316,13 @@ namespace SM64_ROM_Manager
             po.Size = group.Size;
         }
 
+        private void UpdateSelectedPaintingObjects()
+        {
+            foreach (var po in paintingControl1.SelectedObjects)
+                UpdatePaintingObject(po);
+            paintingControl1.Refresh();
+        }
+
         private void PrepairPaintingControlsForSimplyfiedMode(IEnumerable<PaintingObject> pos, bool simplyfiedMode)
         {
             foreach (var po in pos)
@@ -238,7 +334,96 @@ namespace SM64_ROM_Manager
             }
         }
 
-        // G U I
+        private void SnapToGrid(PaintingObject po)
+        {
+            po.ArrangeToGrid();
 
+            if (po.Tag is HUDItem)
+                TakeoverItemLocation((HUDItem)po.Tag, new Point((int)po.X, (int)po.Y));
+        }
+
+        // G U I   -   F o r m
+
+        private void HUDEditorForm_Shown(object sender, EventArgs e)
+        {
+            LoadPredefinedProfilesList();
+        }
+
+        // G U I   -   M e n u
+
+        private void ButtonItem_PredefinedProfile_Click(object sender, EventArgs e)
+        {
+            var item = sender as ButtonItem;
+            if (item?.Tag is HUDProfile)
+                LoadProfile((HUDProfile)item.Tag);
+        }
+
+        private void ButtonItem_SaveProfile_Click(object sender, EventArgs e)
+        {
+            if (curProfile is object)
+                SaveData(curProfile);
+        }
+
+        private void ButtonItem_LoadFromFile_Click(object sender, EventArgs e)
+        {
+            LoadProfileFromFile();
+        }
+
+        private void ButtonItem_ShowGrid_CheckedChanged(object sender, EventArgs e)
+        {
+            paintingControl1.GridVisible = ButtonItem_ShowGrid.Checked;
+        }
+
+        private void ButtonItem_AutoSnapToGrid_CheckedChanged(object sender, EventArgs e)
+        {
+            paintingControl1.GridEnabled = ButtonItem_AutoSnapToGrid.Checked;
+        }
+
+        private void ButtonItem_SimplyfiedMode_CheckedChanged(object sender, EventArgs e)
+        {
+            simplyfiedMode = ButtonItem_SimplyfiedMode.Checked;
+            if (finishedInit && curProfile is object)
+                LoadPaintingObjects(curProfile);
+        }
+
+        // G U I   -   E d i t o r s
+
+        private bool CanTakeoverItemData()
+        {
+            return !loadingItemData && curElement is object;
+        }
+
+        private void IntegerInput_Location_ValueChanged(object sender, EventArgs e)
+        {
+            if (CanTakeoverItemData())
+            {
+                TakeoverItemLocation(curElement, new Point(IntegerInput_LocationX.Value, IntegerInput_LocationY.Value));
+                FindAndUpdatePaintingObject(curElement);
+            }
+        }
+
+        private void CheckBoxX_Visible_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CanTakeoverItemData())
+            {
+                TakeoverItemVisible(curElement, CheckBoxX_Visible.Checked);
+                FindAndUpdatePaintingObject(curElement);
+            }
+        }
+
+        private void ButtonX_SnapToGrid_Click(object sender, EventArgs e)
+        {
+            foreach (var po in paintingControl1.SelectedObjects)
+                SnapToGrid(po);
+        }
+
+        // G U I   -   P a i n t i n g C o n t r o l
+
+        private void PaintingControl1_SelectionChanged(object sender, PaintingObjectEventArgs e)
+        {
+            var po = paintingControl1.SelectedObjects?.FirstOrDefault();
+            var item = po?.Tag as HUDItem;
+            ShowItemData(item);
+        }
     }
 }
