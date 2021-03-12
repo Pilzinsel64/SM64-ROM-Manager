@@ -114,35 +114,49 @@ namespace SM64_ROM_Manager
             SM64Lib.General.PatchClass.UpdateChecksum(romManager.RomFile);
         }
 
-        private void ShowItemData(HUDItem item)
+        private void ShowItemData(HUDElement element)
         {
-            var isNotNull = item is object;
+            var isNotNull = element is object;
             layoutControl1.Enabled = isNotNull;
 
             if (isNotNull)
             {
-                var hasLocation = item.Location.HasValue;
-                var hasVisible = item.Visible.HasValue;
+                Point? itemLocation = null;
+                bool canSetLocation = false;
+
+                if (element is HUDItem item)
+                {
+                    itemLocation = item.Location;
+                    canSetLocation = item.DataInfo.CanSetLocation;
+                }
+                else if (element is HUDGroup group)
+                {
+                    itemLocation = group.Location;
+                    canSetLocation = group.CanSetLocation;
+                }
+
+                var hasLocation = itemLocation.HasValue;
+                var hasVisible = element.Visible.HasValue;
                 loadingItemData = true;
 
                 if (hasLocation)
                 {
-                    IntegerInput_LocationX.Value = item.Location.Value.X;
-                    IntegerInput_LocationY.Value = item.Location.Value.Y;
-                    IntegerInput_LocationX.Enabled = item.DataInfo.CanSetLocation;
-                    IntegerInput_LocationY.Enabled = item.DataInfo.CanSetLocation;
+                    IntegerInput_LocationX.Value = itemLocation.Value.X;
+                    IntegerInput_LocationY.Value = itemLocation.Value.Y;
+                    IntegerInput_LocationX.Enabled = canSetLocation;
+                    IntegerInput_LocationY.Enabled = canSetLocation;
                 }
 
                 if (hasVisible)
                 {
-                    CheckBoxX_Visible.Checked = item.Visible.Value;
-                    CheckBoxX_Visible.Enabled = item.DataInfo.CanSetVisible;
+                    CheckBoxX_Visible.Checked = element.Visible.Value;
+                    CheckBoxX_Visible.Enabled = element.DataInfo.CanSetVisible;
                 }
 
                 layoutControlItem_LocationX.Visible = hasLocation;
                 layoutControlItem_LocationY.Visible = hasLocation;
                 layoutControlItem_Visible.Visible = hasVisible;
-                layoutControlItem_SnapToGrid.Visible = item.DataInfo.CanSetLocation;
+                layoutControlItem_SnapToGrid.Visible = canSetLocation;
                 layoutControl1.Refresh();
 
                 loadingItemData = false;
@@ -255,8 +269,20 @@ namespace SM64_ROM_Manager
                 HardcodedSize = true,
                 EnableResize = false
             };
+
+            po.Moved += Po_Moved;
             
             return po;
+        }
+
+        private void Po_Moved(PaintingObject sender, EventArgs e)
+        {
+            if (sender.Tag is HUDElement element)
+            {
+                TakeoverItemLocation(element, new Point((int)sender.X, (int)sender.Y));
+                if (element == curElement)
+                    ShowItemData(curElement);
+            }
         }
 
         private void FindAndUpdatePaintingObject(HUDElement element)
