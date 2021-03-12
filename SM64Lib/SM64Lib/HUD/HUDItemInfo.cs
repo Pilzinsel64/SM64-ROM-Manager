@@ -15,14 +15,12 @@ namespace SM64Lib.HUD
         [JsonProperty]
         public bool CanSetLocation { get; private set; }
         [JsonProperty]
-        public bool CanSetText { get; private set; }
-        [JsonProperty]
-        public Size? LocationRomPosition { get; private set; }
+        public Point? LocationRomPosition { get; private set; }
         [JsonProperty]
         public int? VisibleRomPosition { get; private set; }
         [JsonProperty]
-        public int? TextRomPosition { get; private set; }
-        [JsonProperty]
         public Size? ItemSize { get; private set; }
+        [JsonProperty]
+        public Point? LocationDefaultValue { get; private set; }
     }
 }

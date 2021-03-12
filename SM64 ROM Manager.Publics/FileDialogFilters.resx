@@ -123,4 +123,7 @@
   <data name="FilterPictureFormats_Single" xml:space="preserve">
     <value>Portable Network Graphic (*.png)|*.png|Tagged Image File (*.tiff)|*.tiff|Windows Metafile (*.wmf)|*.wmf|Enhanced Windows Metafile (*.emf)|*.emf|Bitmap (*.bmp)|*.bmp|GIF (*.gif)|*.gif|Icon (*.ico)|*.icon|Joint Photographic Experts Group (*.jpg)|*.jpg</value>
   </data>
+  <data name="JsonFiles" xml:space="preserve">
+    <value>JSON files (*.json)|*.json</value>
+  </data>
 </root>

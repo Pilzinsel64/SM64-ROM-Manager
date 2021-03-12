@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SM64Lib.Data;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -54,6 +55,18 @@ namespace SM64Lib.HUD
         public bool CanSetLocation
         {
             get => !Items.Where(n => !n.DataInfo.CanSetLocation).Any();
+        }
+
+        public void LoadData(BinaryData data)
+        {
+            foreach (var item in Items)
+                item.LoadData(data);
+        }
+
+        public void SaveData(BinaryData data)
+        {
+            foreach (var item in Items)
+                item.SaveData(data);
         }
 
     }

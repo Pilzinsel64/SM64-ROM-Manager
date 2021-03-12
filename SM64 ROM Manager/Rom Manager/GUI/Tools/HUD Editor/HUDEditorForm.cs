@@ -1,11 +1,14 @@
 ﻿using DevComponents.DotNetBar;
 using Pilz.UI;
+using SM64_ROM_Manager.Publics.My.Resources;
+using SM64Lib;
 using SM64Lib.HUD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,16 +20,92 @@ namespace SM64_ROM_Manager
     {
         // F i e l d s
 
+        private readonly RomManager romManager;
         private bool simplyfiedMode = false;
+        private HUDProfile curProfile = null;
+        private readonly List<HUDProfile> predefinedProfiles = new();
 
         // C o n s t r u c t o r
 
-        public HUDEditorForm()
+        public HUDEditorForm(RomManager romManager)
         {
+            this.romManager = romManager;
             InitializeComponent();
+            UpdateAmbientColors();
         }
 
         // F e a t u r e s
+
+        private void LoadPredefinedProfilesList()
+        {
+            predefinedProfiles.Clear();
+
+            foreach (var filePath in Directory.GetFiles(Publics.General.MyHUDProfilesPath))
+            {
+                var profile = HUDProfile.LoadFrom(filePath);
+                predefinedProfiles.Add(profile);
+            }
+
+            LoadPredefinedProfilesListToGUI();
+        }
+
+        private void LoadPredefinedProfilesListToGUI()
+        {
+            ButtonItem_PredefinedProfiles.SubItems.Clear();
+
+            foreach (var profile in predefinedProfiles)
+            {
+                var item = new ButtonItem
+                {
+                    Text = profile.ProfileName,
+                    Tag = profile
+                };
+                ButtonItem_PredefinedProfiles.SubItems.Add(item);
+            }
+        }
+
+        private void LoadProfile(HUDProfile profile)
+        {
+            curProfile = profile;
+            LoadData(profile);
+            LoadPaintingObjects(profile);
+        }
+
+        private void LoadProfileFromFile()
+        {
+            var ofd_LoadHUDProfileFromFile = new OpenFileDialog
+            {
+                Filter = FileDialogFilters.JsonFiles
+            };
+            if (ofd_LoadHUDProfileFromFile.ShowDialog(this) == DialogResult.OK)
+            {
+                var profile = HUDProfile.LoadFrom(ofd_LoadHUDProfileFromFile.FileName);
+                LoadProfile(profile);
+            }
+        }
+
+        private void UnloadCurrentProfile()
+        {
+            curProfile = null;
+            paintingControl1.PaintingObjects.Clear();
+        }
+
+        private void LoadData(HUDProfile profile)
+        {
+            var data = romManager.GetBinaryRom(FileAccess.Read);
+            profile.LoadData(data);
+            data.Close();
+        }
+
+        private void SaveData(HUDProfile profile)
+        {
+            var data = romManager.GetBinaryRom(FileAccess.ReadWrite);
+            profile.SaveData(data);
+            data.Close();
+
+            // Update checksum
+            SM64Lib.General.PatchClass.UpdateChecksum(romManager.RomFile);
+        }
 
         // P a i n t i n g O b j e c t s
 
@@ -126,19 +205,12 @@ namespace SM64_ROM_Manager
             po.HardcodedLocation = item.DataInfo.CanSetLocation;
             po.Size = item.DataInfo.ItemSize.Value;
 
-            // Check for text and set text
-            if (item.DataInfo.CanSetText || !string.IsNullOrEmpty(item.Text))
-            {
-                po.Text = item.Text;
-                po.Type |= PaintingObjectType.Text;
-            }
-
             // Check for symbol and set image
-            if (false)
-            {
-                // ...
-                po.Type |= PaintingObjectType.Picture;
-            }
+            //if ()
+            //{
+            //    // ...
+            //    po.Type |= PaintingObjectType.Picture;
+            //}
         }
 
         private PaintingObject GetPaintingObject(HUDGroup group)
