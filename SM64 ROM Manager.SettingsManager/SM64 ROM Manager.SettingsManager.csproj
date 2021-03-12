@@ -51,6 +51,9 @@
     <Reference Include="Pilz.Configuration">
       <HintPath>..\Shared Libs\Pilz.Configuration.dll</HintPath>
     </Reference>
+    <Reference Include="Pilz.Cryptography">
+      <HintPath>..\Shared Libs\Pilz.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="Pilz.Drawing.Drawing3D.OpenGLFactory">
       <HintPath>..\Shared Libs\Pilz.Drawing.Drawing3D.OpenGLFactory.dll</HintPath>
     </Reference>

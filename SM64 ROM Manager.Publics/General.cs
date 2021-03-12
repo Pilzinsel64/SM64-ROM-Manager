@@ -41,6 +41,7 @@ namespace SM64_ROM_Manager.Publics
         private static string pMyToolsPath = string.Empty;
         private static string pMyTweaksPath = string.Empty;
         private static string pMyCustomObjectsPath = string.Empty;
+        private static string pMyHUDProfilesPath = string.Empty;
         private static string pMyPluginsPath = string.Empty;
         private static string pMyUserRequestsPath = string.Empty;
         private static string pMyImporterPresetsPath = string.Empty;
@@ -140,6 +141,16 @@ namespace SM64_ROM_Manager.Publics
                 }
 
                 return pMyCustomObjectsPath;
+            }
+        }
+
+        public static string MyHUDProfilesPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(pMyHUDProfilesPath))
+                    pMyHUDProfilesPath = Path.Combine(MyDataPath, "HUD Profiles");
+                return pMyHUDProfilesPath;
             }
         }
 
@@ -267,14 +278,10 @@ namespace SM64_ROM_Manager.Publics
 
         public static void SetDefaultProxyAuthentification()
         {
-            if (!string.IsNullOrEmpty(Settings.Network.ProxyUsername) || !string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted))
-            {
-                WebRequest.DefaultWebProxy.Credentials = new NetworkCredential(Settings.Network.ProxyUsername, string.IsNullOrEmpty(Settings.Network.ProxyPasswordEncrypted) ? string.Empty : crypter.DecryptData(Settings.Network.ProxyPasswordEncrypted));
-            }
+            if (!string.IsNullOrEmpty(Settings.Network.ProxyUsername) || !string.IsNullOrEmpty(Settings.Network.ProxyPassword))
+                WebRequest.DefaultWebProxy.Credentials = new NetworkCredential(Settings.Network.ProxyUsername, Settings.Network.ProxyPassword);
             else
-            {
                 WebRequest.DefaultWebProxy.Credentials = null;
-            }
         }
 
         public static void DoDefaultInitsAfterApplicationStartup()
