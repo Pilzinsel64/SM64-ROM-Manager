@@ -525,6 +525,15 @@
   <data name="comboBoxEx_RecalcChecksumBehavior.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="comboItem15.Text" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="comboItem16.Text" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="comboItem17.Text" xml:space="preserve">
+    <value>If needed (Auto)</value>
+  </data>
   <data name="comboBoxEx_RecalcChecksumBehavior.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 145</value>
   </data>
@@ -576,6 +585,15 @@
   <data name="ComboBoxEx_NotifyOnRomChanges.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="ComboItem4.Text" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="ComboItem5.Text" xml:space="preserve">
+    <value>Infobox</value>
+  </data>
+  <data name="ComboItem11.Text" xml:space="preserve">
+    <value>Popup</value>
+  </data>
   <data name="ComboBoxEx_NotifyOnRomChanges.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 117</value>
   </data>
@@ -602,6 +620,9 @@
   </data>
   <data name="ComboBoxEx_Language.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="ComboItem_AutoLang.Text" xml:space="preserve">
+    <value>Auto</value>
   </data>
   <data name="ComboBoxEx_Language.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 89</value>
@@ -677,6 +698,15 @@
   </data>
   <data name="ComboBoxEx_AutoScaleMode.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="ComboItem6.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ComboItem9.Text" xml:space="preserve">
+    <value>Dpi</value>
+  </data>
+  <data name="ComboItem10.Text" xml:space="preserve">
+    <value>Font</value>
   </data>
   <data name="ComboBoxEx_AutoScaleMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 61</value>
@@ -755,6 +785,15 @@
   </data>
   <data name="ComboBoxEx1.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="ComboItem1.Text" xml:space="preserve">
+    <value>None (Ask)</value>
+  </data>
+  <data name="ComboItem2.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ComboItem3.Text" xml:space="preserve">
+    <value>No</value>
   </data>
   <data name="ComboBoxEx1.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 33</value>
@@ -1293,6 +1332,15 @@
   <data name="ComboBoxEx_UpdateLevel.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="ComboItem12.Text" xml:space="preserve">
+    <value>Stable</value>
+  </data>
+  <data name="ComboItem13.Text" xml:space="preserve">
+    <value>Beta</value>
+  </data>
+  <data name="ComboItem14.Text" xml:space="preserve">
+    <value>Alpha</value>
+  </data>
   <data name="ComboBoxEx_UpdateLevel.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 34</value>
   </data>
@@ -1349,6 +1397,12 @@
   </data>
   <data name="comboBoxEx_DefaultObjMoveMode.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="comboItem18.Text" xml:space="preserve">
+    <value>Precise</value>
+  </data>
+  <data name="comboItem19.Text" xml:space="preserve">
+    <value>Slide</value>
   </data>
   <data name="comboBoxEx_DefaultObjMoveMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>507, 60</value>
@@ -1695,6 +1749,12 @@
   <data name="ComboBoxEx_HexEditorMode.ItemHeight" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
+  <data name="ComboItem7.Text" xml:space="preserve">
+    <value>Built-in</value>
+  </data>
+  <data name="ComboItem8.Text" xml:space="preserve">
+    <value>Custom</value>
+  </data>
   <data name="ComboBoxEx_HexEditorMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>499, 59</value>
   </data>
@@ -1793,66 +1853,6 @@
   </data>
   <data name="&gt;&gt;TabControl2.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="comboItem15.Text" xml:space="preserve">
-    <value>Never</value>
-  </data>
-  <data name="comboItem16.Text" xml:space="preserve">
-    <value>Always</value>
-  </data>
-  <data name="comboItem17.Text" xml:space="preserve">
-    <value>If nedded (Auto)</value>
-  </data>
-  <data name="ComboItem4.Text" xml:space="preserve">
-    <value>Off</value>
-  </data>
-  <data name="ComboItem5.Text" xml:space="preserve">
-    <value>Infobox</value>
-  </data>
-  <data name="ComboItem11.Text" xml:space="preserve">
-    <value>Popup</value>
-  </data>
-  <data name="ComboItem_AutoLang.Text" xml:space="preserve">
-    <value>Auto</value>
-  </data>
-  <data name="ComboItem6.Text" xml:space="preserve">
-    <value>None</value>
-  </data>
-  <data name="ComboItem9.Text" xml:space="preserve">
-    <value>Dpi</value>
-  </data>
-  <data name="ComboItem10.Text" xml:space="preserve">
-    <value>Font</value>
-  </data>
-  <data name="ComboItem1.Text" xml:space="preserve">
-    <value>None (Ask)</value>
-  </data>
-  <data name="ComboItem2.Text" xml:space="preserve">
-    <value>Yes</value>
-  </data>
-  <data name="ComboItem3.Text" xml:space="preserve">
-    <value>No</value>
-  </data>
-  <data name="ComboItem12.Text" xml:space="preserve">
-    <value>Stable</value>
-  </data>
-  <data name="ComboItem13.Text" xml:space="preserve">
-    <value>Beta</value>
-  </data>
-  <data name="ComboItem14.Text" xml:space="preserve">
-    <value>Alpha</value>
-  </data>
-  <data name="comboItem18.Text" xml:space="preserve">
-    <value>Precise</value>
-  </data>
-  <data name="comboItem19.Text" xml:space="preserve">
-    <value>Slide</value>
-  </data>
-  <data name="ComboItem7.Text" xml:space="preserve">
-    <value>Built-in</value>
-  </data>
-  <data name="ComboItem8.Text" xml:space="preserve">
-    <value>Custom</value>
   </data>
   <data name="PictureBox_Warning.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
